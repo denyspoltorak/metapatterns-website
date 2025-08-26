@@ -1,0 +1,7 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Architectural Metapatterns'
+theme = 'hugo-book'
+
+[params]
+  BookToC = true
