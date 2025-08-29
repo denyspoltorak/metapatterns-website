@@ -3,5 +3,21 @@ languageCode = 'en-us'
 title = 'Architectural Metapatterns'
 theme = 'hugo-book'
 
+enableRobotsTXT = true
+printPathWarnings = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+
 [params]
   BookToC = true
+  BookSection = '/'
+
+[imaging]
+  anchor = "Center"
+  hint = "drawing"
+  quality = 100
