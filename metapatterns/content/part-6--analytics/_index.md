@@ -22,7 +22,7 @@ Other smaller topics that I was able to look into made the following chapters:
 
 <nav>
 
-| \<\< [Part 5\. Implementation Metapatterns]({{< relref "../part-5--implementation-metapatterns/_index.md" >}}) | ^ [Table of Contents]({{< relref "../_index.md" >}}) ^ | [Comparison of architectural patterns]({{< relref "../part-6--analytics/comparison-of-architectural-patterns.md" >}}) \>\> |
+| \<\< [Mesh]({{< relref "../part-5--implementation-metapatterns/mesh.md" >}}) | ^ [Table of Contents]({{< relref "../_index.md" >}}) ^ | [Comparison of architectural patterns]({{< relref "../part-6--analytics/comparison-of-architectural-patterns.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

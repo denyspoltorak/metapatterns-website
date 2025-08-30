@@ -50,7 +50,7 @@ A *Mesh* consists of intercommunicating shards, each of which may host an applic
 
 <nav>
 
-| \<\< [Part 4\. Fragmented Metapatterns]({{< relref "../part-4--fragmented-metapatterns/_index.md" >}}) | ^ [Table of Contents]({{< relref "../_index.md" >}}) ^ | [Plugins]({{< relref "../part-5--implementation-metapatterns/plugins.md" >}}) \>\> |
+| \<\< [Hierarchy]({{< relref "../part-4--fragmented-metapatterns/hierarchy.md" >}}) | ^ [Table of Contents]({{< relref "../_index.md" >}}) ^ | [Plugins]({{< relref "../part-5--implementation-metapatterns/plugins.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

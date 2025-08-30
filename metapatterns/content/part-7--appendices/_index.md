@@ -8,7 +8,7 @@ bookCollapseSection = true
 
 <nav>
 
-| \<\< [Part 6\. Analytics]({{< relref "../part-6--analytics/_index.md" >}}) | ^ [Table of Contents]({{< relref "../_index.md" >}}) ^ | [Appendix A\. Acknowledgements\.]({{< relref "../part-7--appendices/appendix-a--acknowledgements.md" >}}) \>\> |
+| \<\< [The heart of software architecture]({{< relref "../part-6--analytics/the-heart-of-software-architecture.md" >}}) | ^ [Table of Contents]({{< relref "../_index.md" >}}) ^ | [Appendix A\. Acknowledgements\.]({{< relref "../part-7--appendices/appendix-a--acknowledgements.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

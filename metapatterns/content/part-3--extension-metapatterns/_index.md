@@ -56,7 +56,7 @@ Several patterns combine the functionality of two or more extension layers\.
 
 <nav>
 
-| \<\< [Part 2\. Basic Metapatterns]({{< relref "../part-2--basic-metapatterns/_index.md" >}}) | ^ [Table of Contents]({{< relref "../_index.md" >}}) ^ | [Middleware]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}) \>\> |
+| \<\< [Pipeline]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}}) | ^ [Table of Contents]({{< relref "../_index.md" >}}) ^ | [Middleware]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

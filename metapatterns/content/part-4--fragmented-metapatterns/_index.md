@@ -60,7 +60,7 @@ Some domains allow for hierarchical composition where the functionality is sprea
 
 <nav>
 
-| \<\< [Part 3\. Extension Metapatterns]({{< relref "../part-3--extension-metapatterns/_index.md" >}}) | ^ [Table of Contents]({{< relref "../_index.md" >}}) ^ | [Layered Services]({{< relref "../part-4--fragmented-metapatterns/layered-services.md" >}}) \>\> |
+| \<\< [Combined Component]({{< relref "../part-3--extension-metapatterns/combined-component.md" >}}) | ^ [Table of Contents]({{< relref "../_index.md" >}}) ^ | [Layered Services]({{< relref "../part-4--fragmented-metapatterns/layered-services.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>
