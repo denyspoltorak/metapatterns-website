@@ -41,7 +41,7 @@ Applicable to:
 | The multiple *Orchestrators* are smaller and more cohesive than the original universal one |  |
 
 
-<ins>References:</ins> The [original article](https://samnewman.io/patterns/architectural/bff/), a [smaller one](https://learn.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends) from Microsoft and an [excerpt](https://microservices.io/patterns/apigateway.html) from \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#lddd" >}})\]\. Here are [reference diagrams](https://github.com/wso2/reference-architecture/blob/master/api-driven-microservice-architecture.md) from WSO2 \(notice multiple *Microgateway* \+ *Integration Microservice* pairs\)\.
+<ins>References:</ins> The [original article](https://samnewman.io/patterns/architectural/bff/), a [smaller one](https://learn.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends) from Microsoft and an [excerpt](https://microservices.io/patterns/apigateway.html) from \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\]\. Here are [reference diagrams](https://github.com/wso2/reference-architecture/blob/master/api-driven-microservice-architecture.md) from WSO2 \(notice multiple *Microgateway* \+ *Integration Microservice* pairs\)\.
 
 If some aspect\(s\) of serving our system’s clients strongly vary by client type \(e\.g\. OLAP vs OLTP, user vs admin, buyer vs seller vs customer support\), it makes sense to use a dedicated component \(the titular *Backend for Frontend* or *BFF*\) per client type to encapsulate the variation\. Protocol variations call for multiple [*Proxies*]({{< relref "../part-3--extension-metapatterns/proxy.md" >}}), workflow variations – for several [*Orchestrators*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}}), both coming together – for [*API Gateways*]({{< relref "../part-3--extension-metapatterns/combined-component.md#api-gateway" >}}) or *Proxy \+ Orchestrator* pairs\. It is even possible to vary the *BFF*’s programming language on a per client basis\. The drawback is that once the clients get their dedicated *BFFs* it becomes hard to share a common functionality between them, unless you are willing to add yet another new utility [*service*]({{< relref "../part-2--basic-metapatterns/services.md" >}}) or [*layer*]({{< relref "../part-2--basic-metapatterns/layers.md" >}}) that can be used by each of them \(and that will strongly smell of [*SOA*]({{< relref "../part-4--fragmented-metapatterns/service-oriented-architecture--soa-.md" >}})\)\.
 
@@ -127,7 +127,7 @@ Clients vary in access mode \(protocol\) and workflow and there is a third\-part
 <img src="/Variants/3/BFF - Event mediators.png" alt="BFF - Event mediators" width=100%/>
 </p>
 
-\[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}})\] mentions that multiple [*Event Mediators*]({{< relref "../part-3--extension-metapatterns/combined-component.md#event-mediator" >}}) may be deployed in [*Event\-Driven Architecture*]({{< relref "../part-2--basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}}) to split the codebase and improve stability\.
+\[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] mentions that multiple [*Event Mediators*]({{< relref "../part-3--extension-metapatterns/combined-component.md#event-mediator" >}}) may be deployed in [*Event\-Driven Architecture*]({{< relref "../part-2--basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}}) to split the codebase and improve stability\.
 
 ## Evolutions
 
@@ -136,7 +136,7 @@ Clients vary in access mode \(protocol\) and workflow and there is a third\-part
 - The *BFF*s can be merged into a single [*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}}) if their functionality becomes mostly identical\.
 - A shared *orchestration* [*layer*]({{< relref "../part-2--basic-metapatterns/layers.md" >}}) with common functionality may be added for use by the *BFF*s\.
 - A layer of *Integration Services* under the *BFF*s simplifies them by providing shared high\-level APIs for the resulting [*Cells*]({{< relref "../part-2--basic-metapatterns/services.md#cell-wso2-definition-service-of-services-domain-uber-definition-cluster" >}})\.
-- [*Sidecars*]({{< relref "../part-3--extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \[[DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddia" >}})\] \(of [*Service Mesh*]({{< relref "../part-5--implementation-metapatterns/mesh.md#service-mesh" >}})\) are a way to share libraries among the *BFF*s\.
+- [*Sidecars*]({{< relref "../part-3--extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \[[DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#dds" >}})\] \(of [*Service Mesh*]({{< relref "../part-5--implementation-metapatterns/mesh.md#service-mesh" >}})\) are a way to share libraries among the *BFF*s\.
 
 
 <p align="center">
@@ -147,7 +147,12 @@ Clients vary in access mode \(protocol\) and workflow and there is a third\-part
 
 *Backends for Frontends* assigns a [*Proxy*]({{< relref "../part-3--extension-metapatterns/proxy.md" >}}) and/or an [*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}}) per each kind of a system’s client to encapsulate client\-specific use cases and protocols\. The drawback is that there is no decent way for sharing functionality between the *BFF*s\.
 
+<nav>
+
 | \<\< [Polyglot Persistence]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md" >}}) | ^ [Part 4\. Fragmented Metapatterns]({{< relref "../part-4--fragmented-metapatterns/_index.md" >}}) ^ | [Service\-Oriented Architecture \(SOA\)]({{< relref "../part-4--fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}) \>\> |
 | --- | --- | --- |
+
+</nav>
+
 
 

@@ -119,7 +119,7 @@ title = "Appendix G. Glossary."
 
 *Operational complexity* – see *integration complexity*\.
 
-*Orchestration* – a kind of *workflow* where a single dedicated *component* \(*Orchestrator*\) makes use of \(usually multiple\) less *abstract components*\. *Facade* \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] is a good example\.
+*Orchestration* – a kind of *workflow* where a single dedicated *component* \(*Orchestrator*\) makes use of \(usually multiple\) less *abstract components*\. *Facade* \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#gof" >}})\] is a good example\.
 
 *Output* – *actions* or data that a *system* produces\.
 
@@ -191,7 +191,12 @@ title = "Appendix G. Glossary."
 
 *Workflow* – a sequence of actions \(*messages* or *method calls*\) required to *implement* a *use case*\.
 
+<nav>
+
 | \<\< [Appendix F\. Format of a metapattern\.]({{< relref "../part-7--appendices/appendix-f--format-of-a-metapattern.md" >}}) | ^ [Part 7\. Appendices]({{< relref "../part-7--appendices/_index.md" >}}) ^ | [Appendix H\. History of changes\.]({{< relref "../part-7--appendices/appendix-h--history-of-changes.md" >}}) \>\> |
 | --- | --- | --- |
+
+</nav>
+
 
 

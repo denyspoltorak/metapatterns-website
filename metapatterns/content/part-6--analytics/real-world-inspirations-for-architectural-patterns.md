@@ -7,7 +7,7 @@ title = "Real-world inspirations for architectural patterns"
 
 As architectural patterns are usually technology\-independent, they must mostly be shaped by the foundational principles of software engineering\. And because the same principles are likely at work at every level of a software system, we may expect similar structures to appear on many levels of software, given similar circumstances – which is not always attainable, for the system\-wide scope \(which means that there are multiple clients and libraries\) and distributed nature \(which deals with faults of individual components\) of many patterns of system architecture don’t have direct counterparts in smaller single\-process software\. Thus we expect to observe a fractal nature for the more generic patterns while narrowly specialized ones are present at only one or two scopes of software design\.
 
-Another thought to consider is that it’s not in human nature to invent something new – we are much more adept in imitating and combining whatever we see around us\. That is why it’s so hard to find a genuine xenopsychology in literature or movies – to the extent that the eponymous Alien is just an overgrown [parasitoid wasp](https://en.wikipedia.org/wiki/Parasitoid_wasp)\. Hence there is another pathway to pursue – identifying the patterns which we know from software engineering in the world around us, as the authors of \[[POSA2]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa1" >}})\] did decades ago\.
+Another thought to consider is that it’s not in human nature to invent something new – we are much more adept in imitating and combining whatever we see around us\. That is why it’s so hard to find a genuine xenopsychology in literature or movies – to the extent that the eponymous Alien is just an overgrown [parasitoid wasp](https://en.wikipedia.org/wiki/Parasitoid_wasp)\. Hence there is another pathway to pursue – identifying the patterns which we know from software engineering in the world around us, as the authors of \[[POSA2]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa2" >}})\] did decades ago\.
 
 Let’s go\!
 
@@ -71,10 +71,10 @@ The basic patterns lay the foundation for any system by paving ways to *divide* 
 
 - We have legs, arms, and other specialized members\.
 - A gadget contains specialized chips for activities it supports\.
-- \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] advocates for an object to incorporate smaller objects \(composition over inheritance\)\.
+- \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#gof" >}})\] advocates for an object to incorporate smaller objects \(composition over inheritance\)\.
 - Applications often delegate parts of their logic to specialized modules or libraries\.
 - An OS dedicates a driver for each piece of hardware installed\. Moreover, it provides many tools to its users – instead of tackling all the user needs within the kernel\.
-- \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md" >}})\] describes the way to subdivide a large system into loosely coupled components\.
+- \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\] describes the way to subdivide a large system into loosely coupled components\.
 
 
 ### Pipeline
@@ -234,7 +234,7 @@ An implementation pattern highlights the peculiar internal arrangements of a com
 [*Hexagonal Architecture*]({{< relref "../part-5--implementation-metapatterns/hexagonal-architecture.md" >}}) protects the internals of a system from its environment:
 
 - A drill or a screwdriver has replaceable bits\.
-- *OS Abstraction Layer* and *Hardware Abstraction Layer* in embedded systems or *Anti\-Corruption Layer* in \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md" >}})\] are all about that\.
+- *OS Abstraction Layer* and *Hardware Abstraction Layer* in embedded systems or *Anti\-Corruption Layer* in \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\] are all about that\.
 
 
 ### Microkernel
@@ -267,7 +267,12 @@ An implementation pattern highlights the peculiar internal arrangements of a com
 
 Architectural patterns have parallels in the natural world, our society and/or different levels of computer hardware and software\. Learning about them helps us feel the driving forces behind patterns and be more flexible and creative in using the patterns we know and devising new ones\.
 
+<nav>
+
 | \<\< [Architecture and product life cycle]({{< relref "../part-6--analytics/architecture-and-product-life-cycle.md" >}}) | ^ [Part 6\. Analytics]({{< relref "../part-6--analytics/_index.md" >}}) ^ | [The heart of software architecture]({{< relref "../part-6--analytics/the-heart-of-software-architecture.md" >}}) \>\> |
 | --- | --- | --- |
+
+</nav>
+
 
 

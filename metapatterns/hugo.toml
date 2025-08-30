@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://metapatterns.io/'
 languageCode = 'en-us'
 title = 'Architectural Metapatterns'
 theme = 'hugo-book'
@@ -16,6 +16,11 @@ printPathWarnings = true
 [params]
   BookToC = true
   BookSection = '/'
+  BookTheme = 'auto'
+
+[author]
+  name = "Denys Poltorak"
+  location = "Ukraine"
 
 [imaging]
   anchor = "Center"

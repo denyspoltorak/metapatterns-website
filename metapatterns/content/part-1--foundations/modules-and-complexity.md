@@ -46,7 +46,7 @@ Here we see how introducing modularity applies the [divide and conquer](https://
 
 In our phonebook example the peculiarities \(including case sensitivity\) of the locale\-aware string comparison and alphabetical sorting of contact names should better be kept behind a simple string comparison interface to relieve the programmer of the phonebook engine of the complexity of supporting foreign languages\.
 
-Modules represent *bounded contexts* \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md" >}})\] – areas of the knowledge about a system that operate distinct sets of terms\. In the case of phonebook the *collation* and *case sensitivity* do not matter for the phonebook engine – they are defined only in the context of language support\. On the other hand, *matching a contact by number* is not defined in the language support module – that term exists only in the phonebook engine\. It is the complexity of the current bounded context that a programmer struggles with\.
+Modules represent *bounded contexts* \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\] – areas of the knowledge about a system that operate distinct sets of terms\. In the case of phonebook the *collation* and *case sensitivity* do not matter for the phonebook engine – they are defined only in the context of language support\. On the other hand, *matching a contact by number* is not defined in the language support module – that term exists only in the phonebook engine\. It is the complexity of the current bounded context that a programmer struggles with\.
 
 Apart from dividing the problem into simpler subproblems, modules open the path to a few extra benefits:
 
@@ -135,7 +135,7 @@ Figure 8: Duplicating an internal module\.
 
 Another bad option is to let the clients that need a module which we encapsulate duplicate it and own the copies as their own submodules\. This relieves us of any shared responsibility, lets us modify and misuse our internals in any way we like, but violates [a couple](https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming)) [of rules](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) of common sense\.
 
-Both approaches, namely keeping all the modules in the global scope and encapsulating utility modules through composition, found their place in history \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}})\]\. [*Service\-Oriented Architecture*]({{< relref "../part-4--fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}) was based on the idea of reuse but fell prey to the complexity of its [*Enterprise Service Bus*]({{< relref "../part-3--extension-metapatterns/combined-component.md#enterprise-service-bus-esb" >}}) which had to account for all the interactions \(API methods\) in the system\. In response, the [*Microservices*]({{< relref "../part-2--basic-metapatterns/services.md#microservices" >}}) approach turned the tide in the opposite direction: its proponents disallowed sharing any resources or code between services to enforce their decoupling\.
+Both approaches, namely keeping all the modules in the global scope and encapsulating utility modules through composition, found their place in history \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\]\. [*Service\-Oriented Architecture*]({{< relref "../part-4--fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}) was based on the idea of reuse but fell prey to the complexity of its [*Enterprise Service Bus*]({{< relref "../part-3--extension-metapatterns/combined-component.md#enterprise-service-bus-esb" >}}) which had to account for all the interactions \(API methods\) in the system\. In response, the [*Microservices*]({{< relref "../part-2--basic-metapatterns/services.md#microservices" >}}) approach turned the tide in the opposite direction: its proponents disallowed sharing any resources or code between services to enforce their decoupling\.
 
 ## Summary
 
@@ -143,7 +143,12 @@ Both approaches, namely keeping all the modules in the global scope and encapsul
 
 Having too many modules causes trouble for the system’s maintainers\. A module may contain other modules\. When a client wants to use a submodule, the wrapping module may extend its interface to forward client’s requests to the submodule or the client may deploy a copy of the submodule for its own use\. Both approaches gave rise to prominent architectures\.
 
+<nav>
+
 | \<\< [Part 1\. Foundations]({{< relref "../part-1--foundations/_index.md" >}}) | ^ [Part 1\. Foundations]({{< relref "../part-1--foundations/_index.md" >}}) ^ | [Forces, asynchronicity, and distribution]({{< relref "../part-1--foundations/forces--asynchronicity--and-distribution.md" >}}) \>\> |
 | --- | --- | --- |
+
+</nav>
+
 
 

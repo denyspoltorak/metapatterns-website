@@ -541,7 +541,12 @@ title = "Appendix I. Index of patterns."
 
 [Write\-Through Cache]({{< relref "../part-3--extension-metapatterns/proxy.md#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}})
 
+<nav>
+
 | \<\< [Appendix H\. History of changes\.]({{< relref "../part-7--appendices/appendix-h--history-of-changes.md" >}}) | ^ [Part 7\. Appendices]({{< relref "../part-7--appendices/_index.md" >}}) ^ |  |
 | --- | --- | --- |
+
+</nav>
+
 
 

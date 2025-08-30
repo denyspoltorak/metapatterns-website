@@ -80,19 +80,19 @@ At the architectural level, control systems are [event\-driven](https://en.wikip
 The following patterns are prominent in control software:
 
 - [*Actors*]({{< relref "../part-2--basic-metapatterns/services.md#actors" >}}) – partitioning the domain into self\-consistent asynchronous entities allows fine control over the order of execution of system activities, provided that we run a [preemptive scheduler](https://micrium.atlassian.net/wiki/spaces/osiiidoc/pages/131347/Preemptive+Scheduling) \(from [POSIX real\-time threads](https://man7.org/linux/man-pages/man7/sched.7.html) or [RTOS](https://en.wikipedia.org/wiki/Real-time_operating_system)\) – we can assign top priority to reading data from communication interfaces \(which would quickly overflow if the data is not retrieved\), make reacting to events a bit less urgent, and still have leftovers of our CPU time for such long\-running tasks as file access or strategic planning\.
-- [*Proactor*]({{< relref "../part-2--basic-metapatterns/monolith.md#proactor-one-thread-many-tasks" >}}) \[[POSA2]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa1" >}}), [POSA4]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa3" >}})\] – almost every component is single\-threaded, reactive, and non\-blocking, which makes the system very responsive\. The downside is being unable to represent a multi\-step scenario as a single function, which is usually unimportant as no predefined scenario ever survives event\-driven reality unshattered\. Following a planned path leads directly to your grave\. Proceed stepwise, checking for dangers every millisecond, being ready to jump away from any approaching trouble\.
-- *Mediator* \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] \(a kind of [*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}})\) – when you rely on information from and manage several devices or interfaces, you need a single entity that knows what is going on, makes informed decisions and dispatches commands to be executed\. It integrates all the lower\-level components into a coherent system\. It is a *Mediator*\.
+- [*Proactor*]({{< relref "../part-2--basic-metapatterns/monolith.md#proactor-one-thread-many-tasks" >}}) \[[POSA2]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa2" >}}), [POSA4]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa4" >}})\] – almost every component is single\-threaded, reactive, and non\-blocking, which makes the system very responsive\. The downside is being unable to represent a multi\-step scenario as a single function, which is usually unimportant as no predefined scenario ever survives event\-driven reality unshattered\. Following a planned path leads directly to your grave\. Proceed stepwise, checking for dangers every millisecond, being ready to jump away from any approaching trouble\.
+- *Mediator* \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#gof" >}})\] \(a kind of [*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}})\) – when you rely on information from and manage several devices or interfaces, you need a single entity that knows what is going on, makes informed decisions and dispatches commands to be executed\. It integrates all the lower\-level components into a coherent system\. It is a *Mediator*\.
 - [*Hexagonal Architecture*]({{< relref "../part-5--implementation-metapatterns/hexagonal-architecture.md" >}}) – hardware components quickly become obsolete, and if you want your software to survive for a decade, you must be able to change them at will\. And if you want to run, test, and debug your code on your desktop, you often need to [stub](https://martinfowler.com/articles/mocksArentStubs.html) or [mock the hardware](https://stackoverflow.com/questions/38745542/unit-testing-application-interface-to-hardware-to-mock-or-not)\.
 - [*Hierarchy*]({{< relref "../part-4--fragmented-metapatterns/hierarchy.md" >}}) – if you manage a variety of interfaces that have the same role \(telephony protocols, account providers, or payment systems\) you want to make them polymorphic towards your main application logic\. In other cases, like [IIoT](https://en.wikipedia.org/wiki/Industrial_internet_of_things), you may need to start reacting immediately with little precision and correct your actions after you have spent more time on better planning, which is achieved through a hierarchy of feedback loops\.
 
 
 ### Implementation
 
-In the code we may \(or may not\) see *State* \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] \(aka *Objects for States* \[[POSA4]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa3" >}})\]\) close to hardware or protocol interfaces, but the higher\-level logic is likely to depend on multiple parameters which would make too many combinations to write down as state classes, thus it tends to be coded as a decision tree instead\.
+In the code we may \(or may not\) see *State* \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#gof" >}})\] \(aka *Objects for States* \[[POSA4]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa4" >}})\]\) close to hardware or protocol interfaces, but the higher\-level logic is likely to depend on multiple parameters which would make too many combinations to write down as state classes, thus it tends to be coded as a decision tree instead\.
 
 System components \(*Actors*\) have private in\-memory data and communicate only by messages\. They are usually single\-threaded and non\-blocking \(*Proactor*\) – this way, the only locks in the system are those protecting the *actors*’ message queues and the global memory manager, which don’t contain anything complicated to block on for a noticeable time\. And as nothing ever blocks, the whole system is extremely responsive\.
 
-Messages may be dispatched through multilevel index arrays or *Visitors* \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\]\. Message queues may be shared \(a queue per thread priority\) or private \(a queue per component\)\. With shared queues the destination of a message must either be resolvable from its type \(when there is a single instance of every kind of system component\) or stored in the message’s header\.
+Messages may be dispatched through multilevel index arrays or *Visitors* \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#gof" >}})\]\. Message queues may be shared \(a queue per thread priority\) or private \(a queue per component\)\. With shared queues the destination of a message must either be resolvable from its type \(when there is a single instance of every kind of system component\) or stored in the message’s header\.
 
 ## Interactive \(soft real\-time, user input\)
 
@@ -134,9 +134,9 @@ You will likely encounter:
 - [*Separated Presentation*]({{< relref "../part-5--implementation-metapatterns/hexagonal-architecture.md#examples--separated-presentation" >}}) – the business logic is unaware of the implementation of the UI layer, though this may not be the case with some games that rely on *game development frameworks*\. This pattern is usually implemented by:
   - [*Model\-View\-Presenter*]({{< relref "../part-5--implementation-metapatterns/hexagonal-architecture.md#model-view-presenter-mvp-model-view-adapter-mva-model-view-viewmodel-mvvm-model-1-mvc1-document-view" >}}) \(MVP\) – two input layers, namely: *view* which receives input and shows output and *presenter* which translates between the business logic, called *model*, and the view\.
   - [*Model\-View\-ViewModel*]({{< relref "../part-5--implementation-metapatterns/hexagonal-architecture.md#model-view-presenter-mvp-model-view-adapter-mva-model-view-viewmodel-mvvm-model-1-mvc1-document-view" >}}) \(MVVM\) also has two layers, but the intermediate *ViewModel* [binds](https://en.wikipedia.org/wiki/Data_binding) to the view and bears its state\.
-  - [*Model\-View\-Controller*]({{< relref "../part-5--implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}}) \(MVC\) \[[POSA1]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#peaa" >}}), [POSA4]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa3" >}})\] separates the input \(*controller*\) from the output \(*view*\)\.
-- *State* \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\], subclassed by \[[POSA4]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa3" >}})\] into *Objects for States*, *Methods for States*, and *Collections for States*, is prominent in games, though it may not always be implemented explicitly\.
-- *Flyweight*, *Command*, *Observer* and many other \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] patterns originated with desktop software and [may often appear](https://gameprogrammingpatterns.com/contents.html) in games\.
+  - [*Model\-View\-Controller*]({{< relref "../part-5--implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}}) \(MVC\) \[[POSA1]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa1" >}}), [POSA4]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa4" >}})\] separates the input \(*controller*\) from the output \(*view*\)\.
+- *State* \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#gof" >}})\], subclassed by \[[POSA4]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa4" >}})\] into *Objects for States*, *Methods for States*, and *Collections for States*, is prominent in games, though it may not always be implemented explicitly\.
+- *Flyweight*, *Command*, *Observer* and many other \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#gof" >}})\] patterns originated with desktop software and [may often appear](https://gameprogrammingpatterns.com/contents.html) in games\.
 
 
 ### Implementation
@@ -158,14 +158,14 @@ A *streaming* system processes a long sequence of similar events or data packets
 - Each party in an audio call or video conference deals with incoming and outgoing media streams\. For example, incoming audio stream processing involves: saving audio packets to a [jitter buffer](https://bloggeek.me/webrtcglossary/jitter-buffer/) to restore their order, [compensation for lost packets](https://en.wikipedia.org/wiki/Packet_loss_concealment), decoding, equalization, and playback\. Outgoing audio passes through the following steps: [echo suppression or cancelation](https://en.wikipedia.org/wiki/Echo_suppression_and_cancellation), noise reduction, equalization, encoding, adding network headers, and sending packets to the network\.
 - An image recognition system applies a [long sequence of transformations](https://keras.io/examples/vision/image_classification_from_scratch/#build-a-model) to every input image\.
 - Hardware often works with streams\. For example, a [CPU instruction pipeline](https://en.wikipedia.org/wiki/Instruction_pipelining) comprises at least: instruction fetching, instruction decoding and register fetching, execution, memory access, and register writeback\. High\-end processors may have up to 20 stages\.
-- Many UNIX command\-line tools process streams of lines of text, allowing for complex text processing by chaining pre\-existing utilities \[[DDIA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\]\.
+- Many UNIX command\-line tools process streams of lines of text, allowing for complex text processing by chaining pre\-existing utilities \[[DDIA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddia" >}})\]\.
 
 
 Streaming usually passes data through a chain of transformations \([*pipeline*]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}})\) which differ in functionality but stay at about the same level of abstractness – there are no managers or hierarchy\. Such a **–**\-shaped structure allows for all the specialized components to deal with their chunks of the stream in parallel, which increases the system’s throughput but suffers from moderate to high latency\.
 
 ### Variants
 
-As stream\-processing [*Pipelines*]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}}) can exploit multiple CPU cores and specialized hardware, they are found everywhere from lowest\-level firmware to large\-scale distributed systems\. \[[DDIA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\] classifies them into:
+As stream\-processing [*Pipelines*]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}}) can exploit multiple CPU cores and specialized hardware, they are found everywhere from lowest\-level firmware to large\-scale distributed systems\. \[[DDIA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddia" >}})\] classifies them into:
 
 - [*Stream processing*]({{< relref "../part-2--basic-metapatterns/pipeline.md#stream-processing-nearline-system" >}}), where the pipeline is always alive waiting for more input to come\.
 - [*Batch processing*]({{< relref "../part-2--basic-metapatterns/pipeline.md#batch-processing-offline-system" >}}), where the pipeline runs till it finishes processing an input file\.
@@ -173,13 +173,13 @@ As stream\-processing [*Pipelines*]({{< relref "../part-2--basic-metapatterns/pi
 
 ### Patterns
 
-- [*Pipes and Filters*]({{< relref "../part-2--basic-metapatterns/pipeline.md#pipes-and-filters-workflow-system" >}}) \[[POSA1]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#peaa" >}}), [POSA4]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa3" >}})\] is *the* stream processing pattern that describes pipelines: the system is built of *filters* \(individual data processing steps\) connected through *pipes* \(data channels\)\.
+- [*Pipes and Filters*]({{< relref "../part-2--basic-metapatterns/pipeline.md#pipes-and-filters-workflow-system" >}}) \[[POSA1]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa1" >}}), [POSA4]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa4" >}})\] is *the* stream processing pattern that describes pipelines: the system is built of *filters* \(individual data processing steps\) connected through *pipes* \(data channels\)\.
 
 
-- [*Choreographed Event\-Driven Architecture*]({{< relref "../part-2--basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}}) \(EDA\) \[[SAP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#sahp" >}}), [FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}}), [DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddia" >}})\] and [*Data Mesh*]({{< relref "../part-2--basic-metapatterns/pipeline.md#data-mesh" >}}) \[[LDDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#gof" >}}), [SAHP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa5" >}})\] are tree\-like pipelines that process streams of domain events or data, correspondingly\.
+- [*Choreographed Event\-Driven Architecture*]({{< relref "../part-2--basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}}) \(EDA\) \[[SAP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#sap" >}}), [FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}}), [DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#dds" >}})\] and [*Data Mesh*]({{< relref "../part-2--basic-metapatterns/pipeline.md#data-mesh" >}}) \[[LDDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#lddd" >}}), [SAHP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#sahp" >}})\] are tree\-like pipelines that process streams of domain events or data, correspondingly\.
 
 
-\[[EIP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#deds" >}})\] is full of patterns for the distributed processing of event streams\.
+\[[EIP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}})\] is full of patterns for the distributed processing of event streams\.
 
 ### Implementation
 
@@ -208,8 +208,8 @@ Some computational systems are single\-use with a hard\-coded task \(calculation
 
 Long\-running programs with user input are probably the most common, ancient, and well\-studied kind of software, which also inspired many design patterns\. Those of special significance are:
 
-- [*Interpreter*]({{< relref "../part-5--implementation-metapatterns/microkernel.md#interpreter-script-domain-specific-language-dsl" >}}) \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] that supports very complex user commands\.
-- *Facade* \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] or [*Process Manager*]({{< relref "../part-3--extension-metapatterns/orchestrator.md#process-manager-orchestrator" >}}) \[[EIP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#deds" >}})\] \(kinds of [*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}})\) that executes a user command as a sequence of calls to lower\-level components\.
+- [*Interpreter*]({{< relref "../part-5--implementation-metapatterns/microkernel.md#interpreter-script-domain-specific-language-dsl" >}}) \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#gof" >}})\] that supports very complex user commands\.
+- *Facade* \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#gof" >}})\] or [*Process Manager*]({{< relref "../part-3--extension-metapatterns/orchestrator.md#process-manager-orchestrator" >}}) \[[EIP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}})\] \(kinds of [*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}})\) that executes a user command as a sequence of calls to lower\-level components\.
 
 
 ### Implementation
@@ -278,7 +278,7 @@ Here we have:
 - A long\-running main application that deals with multiple user requests that often need to be executed quickly, like in *interactive* applications\.
 
 
-\[[DDIA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\] is dedicated to the implementation of databases, which are indeed way more complex and varied than what I outlined above\.
+\[[DDIA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddia" >}})\] is dedicated to the implementation of databases, which are indeed way more complex and varied than what I outlined above\.
 
 ## Summary
 
@@ -292,7 +292,12 @@ We can discern four kinds of systems that differ in their goals, architecture, a
 
 Complex real\-world software usually involves two or three of these approaches\.
 
+<nav>
+
 | \<\< [Forces, asynchronicity, and distribution]({{< relref "../part-1--foundations/forces--asynchronicity--and-distribution.md" >}}) | ^ [Part 1\. Foundations]({{< relref "../part-1--foundations/_index.md" >}}) ^ | [Arranging communication]({{< relref "../part-1--foundations/arranging-communication.md" >}}) \>\> |
 | --- | --- | --- |
+
+</nav>
+
 
 

@@ -102,7 +102,7 @@ Please beware that each of those principles in and of themselves involves decoup
 
 ### Gang of Four patterns
 
-Let’s now discuss something more practical, namely the \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] [patterns](https://en.wikipedia.org/wiki/Design_Patterns#Patterns_by_type) which seem to be ingenious but hacky ways for rearranging the roles in your code\. They override ordinary OOP rules, which is useful when you need extra flexibility\. For example, the *creational patterns* interfere with the normally cohesive *select type – create – initialize – use* sequence of operating an object\.
+Let’s now discuss something more practical, namely the \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#gof" >}})\] [patterns](https://en.wikipedia.org/wiki/Design_Patterns#Patterns_by_type) which seem to be ingenious but hacky ways for rearranging the roles in your code\. They override ordinary OOP rules, which is useful when you need extra flexibility\. For example, the *creational patterns* interfere with the normally cohesive *select type – create – initialize – use* sequence of operating an object\.
 
 Some patterns provide a basic decoupling:
 
@@ -140,7 +140,7 @@ The remaining patterns pick an aspect or two of an object’s behavior and move 
 - *Factory Method* decouples the *initialization* from *type selection* and hides both from the class’s users\.
 
 
-As we see, every \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] pattern boils down to binding \(making *cohesive*\) and/or separating \(*decoupling*\) some kind of functionality or responsibilities\.
+As we see, every \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#gof" >}})\] pattern boils down to binding \(making *cohesive*\) and/or separating \(*decoupling*\) some kind of functionality or responsibilities\.
 
 ### Architectural metapatterns
 
@@ -344,7 +344,12 @@ There is no universal architecture\. No silver bullet pattern\. Patterns are mer
 
 Software architecture lies lifeless in my hands, devoid of its magical colors, *like the dead iguana*\.
 
+<nav>
+
 | \<\< [Real\-world inspirations for architectural patterns]({{< relref "../part-6--analytics/real-world-inspirations-for-architectural-patterns.md" >}}) | ^ [Part 6\. Analytics]({{< relref "../part-6--analytics/_index.md" >}}) ^ | [Part 7\. Appendices]({{< relref "../part-7--appendices/_index.md" >}}) \>\> |
 | --- | --- | --- |
+
+</nav>
+
 
 

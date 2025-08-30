@@ -58,7 +58,12 @@ Some domains allow for hierarchical composition where the functionality is sprea
 
 *<ins>Includes</ins>*: Orchestrator of Orchestrators, Presentation\-Abstraction\-Control \(PAC\) and Hierarchical Model\-View\-Controller \(HMVC\), Bus of Buses, and Cell\-Based \(Microservice\) Architecture \(WSO2 version\) \(Services of Services\)\.
 
+<nav>
+
 | \<\< [Part 3\. Extension Metapatterns]({{< relref "../part-3--extension-metapatterns/_index.md" >}}) | ^ [Table of Contents]({{< relref "../_index.md" >}}) ^ | [Layered Services]({{< relref "../part-4--fragmented-metapatterns/layered-services.md" >}}) \>\> |
 | --- | --- | --- |
+
+</nav>
+
 
 

@@ -12,7 +12,7 @@ The descriptions of most metapatterns follow the same format:
 The structural diagram \(in *abstractness\-subdomain\-sharding* [coordinates]({{< relref "../introduction/metapatterns.md#the-system-of-coordinates" >}})\) of a typical application of the metapattern\. Please note that in practice the number and types of components and their interactions may vary:
 
 - Even though most diagrams show 3 *layers* or *services*, there are many 2\-layered or 4\-layered systems, while the number of services may often be greater than 10\.
-- [*Extension metapatterns*]({{< relref "../part-6--analytics/real-world-inspirations-for-architectural-patterns.md#extension-metapatterns" >}}) add a *layer* \(or a *layer of services*\) to an existing system, which is shown as [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}}), but may instead comprise [*Shards*]({{< relref "../part-2--basic-metapatterns/shards.md" >}}), [*Layers*]({{< relref "../part-2--basic-metapatterns/layers.md" >}}) or even a [*Monolith*]({{< relref "../part-2--basic-metapatterns/monolith.md" >}})\.
+- [*Extension metapatterns*]({{< relref "../part-3--extension-metapatterns/_index.md" >}}) add a *layer* \(or a *layer of services*\) to an existing system, which is shown as [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}}), but may instead comprise [*Shards*]({{< relref "../part-2--basic-metapatterns/shards.md" >}}), [*Layers*]({{< relref "../part-2--basic-metapatterns/layers.md" >}}) or even a [*Monolith*]({{< relref "../part-2--basic-metapatterns/monolith.md" >}})\.
 - Subtypes of [*Hierarchy*]({{< relref "../part-4--fragmented-metapatterns/hierarchy.md" >}}) or [*Mesh*]({{< relref "../part-5--implementation-metapatterns/mesh.md" >}}) differ in their topologies\. Only one is shown\.
 - Components of metapatterns may communicate in various ways that include in\-process calls, RPC, asynchronous messaging or streams\. Only one of them is shown\. Optional communication pathways may appear as dashed arrows\.
 
@@ -25,7 +25,7 @@ Most diagrams feature the following colors:
 - *Data* is gray\. It includes business\-critical in\-memory state \(e\.g\. user’s session\) and persistent storage \(in a database or files\)\.
 
 
-*Use cases* and *domain logic* comprise *business logic* \[[PEAA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\] – the code that makes your software different from whatever else is on the market\. It is this part of the system which your customers pay for, and it usually is much larger than the other parts, which makes business logic the primary focus of development\.
+*Use cases* and *domain logic* comprise *business logic* \[[PEAA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#peaa" >}})\] – the code that makes your software different from whatever else is on the market\. It is this part of the system which your customers pay for, and it usually is much larger than the other parts, which makes business logic the primary focus of development\.
 
 In [*choreographed*]({{< relref "../part-1--foundations/arranging-communication.md#choreography" >}}) systems use cases are defined by the web of communication channels instead of code inside the system’s components\. That is represented by green arrows and overall lack of green areas on corresponding diagrams\.
 
@@ -100,7 +100,12 @@ This covers a brief summary of possible changes to the architecture under review
 - An optional list of metapatterns that the resulting system may evolve into and their benefits in the context of the current evolution\.
 
 
+<nav>
+
 | \<\< [Appendix E\. Evolutions\.]({{< relref "../part-7--appendices/appendix-e--evolutions.md" >}}) | ^ [Part 7\. Appendices]({{< relref "../part-7--appendices/_index.md" >}}) ^ | [Appendix G\. Glossary\.]({{< relref "../part-7--appendices/appendix-g--glossary.md" >}}) \>\> |
 | --- | --- | --- |
+
+</nav>
+
 
 

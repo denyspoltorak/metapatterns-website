@@ -11,13 +11,13 @@ title = "Layers"
 
 *Yet another layer of indirection\.* Don’t mix the business logic and implementation details\.
 
-<ins>Known as:</ins> Layers \[[POSA1]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#peaa" >}}), [POSA4]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa3" >}})\], Layered Architecture \[[SAP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#sahp" >}}), [FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}}), [LDDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#gof" >}})\], Multitier Architecture, and N\-tier Architecture \[[LDDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#gof" >}})\]\.
+<ins>Known as:</ins> Layers \[[POSA1]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa1" >}}), [POSA4]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa4" >}})\], Layered Architecture \[[SAP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#sap" >}}), [FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}}), [LDDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#lddd" >}})\], Multitier Architecture, and N\-tier Architecture \[[LDDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#lddd" >}})\]\.
 
 <ins>Variants:</ins> Open or closed, the number of layers\.
 
 By isolation:
 
-- Synchronous layers / Layered Monolith \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}})\],
+- Synchronous layers / Layered Monolith \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\],
 - Asynchronous layers,
 - A process per layer,
 - Distributed tiers\.
@@ -25,7 +25,7 @@ By isolation:
 
 Examples:
 
-- Domain\-Driven Design \(DDD\) Layers \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md" >}})\],
+- Domain\-Driven Design \(DDD\) Layers \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\],
 - Three\-Tier Architecture,
 - Embedded Systems\.
 
@@ -46,7 +46,7 @@ Examples:
 | Layers with no business logic are reusable |  |
 
 
-<ins>References:</ins> \[[POSA1]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#peaa" >}})\] and \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}})\] discuss layered software in depth; \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md" >}})\] promotes the layered style; most of the architectures in Herberto Graça’s [Software Architecture Chronicles](https://herbertograca.com/2017/07/03/the-software-architecture-chronicles/) are layered\. The Wiki has a reasonably [good article](https://en.wikipedia.org/wiki/Multitier_architecture)\.
+<ins>References:</ins> \[[POSA1]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa1" >}})\] and \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] discuss layered software in depth; \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\] promotes the layered style; most of the architectures in Herberto Graça’s [Software Architecture Chronicles](https://herbertograca.com/2017/07/03/the-software-architecture-chronicles/) are layered\. The Wiki has a reasonably [good article](https://en.wikipedia.org/wiki/Multitier_architecture)\.
 
 *Layering* a system creates interfaces between its levels of abstractness \(high\-level use cases, lower\-level domain logic, infrastructure\) while also retaining monolithic cohesiveness within each of the levels\. That allows both for easy debugging inside each individual layer \(no need to jump into another programming language or re\-attach the debugger to a remote server\) and enough flexibility to have a dedicated development team, tools, deployment, and scaling policies for each\. Though layered code is slightly better than that of [*Monolith*]({{< relref "../part-2--basic-metapatterns/monolith.md" >}}), thanks to the separation of concerns, one of the upper \(business logic\) layers may nonetheless grow too large for efficient development\.
 
@@ -88,7 +88,7 @@ There is a number of optimizations to skip interlayer calls:
 <img src="/Performance/Layers-batching.png" alt="Layers-batching" width=100%/>
 </p>
 
-*Batching*: an upper layer forms a queue of commands and sends it as a single job to the layer below it\. This takes place in drivers for complex low\-level hardware, like printers, or in database access as *stored procedures*\. \[[POSA4]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa3" >}})\] describes the approach as *Combined Method*, *Enumeration Method* and *Batch Method* patterns\. Programming languages and frameworks may implement *foreach* and *map/reduce* which allow for a single command to operate on multiple pieces of data\.
+*Batching*: an upper layer forms a queue of commands and sends it as a single job to the layer below it\. This takes place in drivers for complex low\-level hardware, like printers, or in database access as *stored procedures*\. \[[POSA4]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa4" >}})\] describes the approach as *Combined Method*, *Enumeration Method* and *Batch Method* patterns\. Programming languages and frameworks may implement *foreach* and *map/reduce* which allow for a single command to operate on multiple pieces of data\.
 
 <p align="center">
 <img src="/Performance/Layers-injection.png" alt="Layers-injection" width=100%/>
@@ -104,7 +104,7 @@ Usually an upper layer depends on the *API* \(application programming interface\
 
 Some domains, including embedded systems and telecom, require their lower layers to be polymorphic as they deal with varied hardware or communication protocols\. In that case an upper layer \(e\.g\. OS kernel\) defines a *service provider interface* \(*SPI*\) which is implemented by every variant of the lower layer \(e\.g\. a device driver\)\. That allows for a single implementation of the upper layer to be interoperable with any subclass of the lower layer\. Such an approach enables [*Plugins*]({{< relref "../part-5--implementation-metapatterns/plugins.md" >}}), [*Microkernel*]({{< relref "../part-5--implementation-metapatterns/microkernel.md" >}}), and [*Hexagonal Architecture*]({{< relref "../part-5--implementation-metapatterns/hexagonal-architecture.md" >}})\. 
 
-There may also be an [*Adapter*]({{< relref "../part-3--extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) layer between your system’s SPI and an external API\. It is called *Anticorruption Layer* \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md" >}})\], [*Database Abstraction Layer*](https://en.wikipedia.org/wiki/Database_abstraction_layer) / *Database Access Layer* \[[POSA4]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa3" >}})\] / *Data Mapper* \[[PEAA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\], *OS Abstraction Layer* or *Platform Abstraction Layer / Hardware Abstraction Layer*, depending on what kind of component it adapts\.
+There may also be an [*Adapter*]({{< relref "../part-3--extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) layer between your system’s SPI and an external API\. It is called *Anticorruption Layer* \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\], [*Database Abstraction Layer*](https://en.wikipedia.org/wiki/Database_abstraction_layer) / *Database Access Layer* \[[POSA4]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa4" >}})\] / *Data Mapper* \[[PEAA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#peaa" >}})\], *OS Abstraction Layer* or *Platform Abstraction Layer / Hardware Abstraction Layer*, depending on what kind of component it adapts\.
 
 <p align="center">
 <img src="/Dependencies/Layers-1.png" alt="Layers-1" width=89%/>
@@ -135,7 +135,7 @@ If you ever need to *scale* \(run multiple instances of\) a layer, you may notic
 
 *Layers* are <ins>bad</ins> for:
 
-- *Large projects\.* You are still going to enter *monolithic hell* \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#lddd" >}})\] if you reach 1 000 000 lines of code\.
+- *Large projects\.* You are still going to enter *monolithic hell* \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\] if you reach 1 000 000 lines of code\.
 - *Low\-latency decision making*\. If your business logic needs to be applied in real time, you cannot tolerate the extra latency caused by the interlayer communication\.
 
 
@@ -223,7 +223,7 @@ The notion of layering seems to be so natural to our minds that most known archi
 <img src="/Variants/1/DDD.png" alt="DDD" width=86%/>
 </p>
 
-\[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md" >}})\] recognizes four layers with the upper layers closer to the user:
+\[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\] recognizes four layers with the upper layers closer to the user:
 
 - *Presentation* \(*User Interface*\) – the user\-facing component \(frontend, UI\)\. It should be highly responsive to the user's input\. See [*Separated Presentation*]({{< relref "../part-5--implementation-metapatterns/hexagonal-architecture.md#examples--separated-presentation" >}})\.
 - *Application* \(*Integration*, *Service*\) – the high\-level scenarios which build upon the API of the *domain* layer\. It should be easy to change and to deploy\. See [*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}})\.
@@ -308,7 +308,7 @@ It is also common to:
 
 ### Evolutions that help large projects
 
-The main drawback \(and benefit as well\) of *Layers* is that much or all of the business logic is kept together in one or two components\. That allows for easy debugging and fast development in the initial stages of the project but slows down and complicates work as the project grows in size \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#lddd" >}})\]\. The only way for a growing project to survive and continue evolving at a reasonable speed is to divide its business logic into several smaller, [thus less complex]({{< relref "../part-1--foundations/modules-and-complexity.md" >}}), components that match subdomains \(*bounded contexts* \[[DDD](https://docs.google.com/document/d/1hzBn-RzzNDcArAWcvXaXgw2nl6O_ryDKE51Xve18zOs/edit?pli=1&tab=t.0#bookmark=kix.zhw27orifw3i)\]\)\. There are several options for such a change, with their applicability depending on the domain:
+The main drawback \(and benefit as well\) of *Layers* is that much or all of the business logic is kept together in one or two components\. That allows for easy debugging and fast development in the initial stages of the project but slows down and complicates work as the project grows in size \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\]\. The only way for a growing project to survive and continue evolving at a reasonable speed is to divide its business logic into several smaller, [thus less complex]({{< relref "../part-1--foundations/modules-and-complexity.md" >}}), components that match subdomains \(*bounded contexts* \[[DDD](https://docs.google.com/document/d/1hzBn-RzzNDcArAWcvXaXgw2nl6O_ryDKE51Xve18zOs/edit?pli=1&tab=t.0#bookmark=kix.zhw27orifw3i)\]\)\. There are several options for such a change, with their applicability depending on the domain:
 
 - The middle layer with the main business logic can be divided into [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}}) leaving the upper [*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}}) and lower [*database*]({{< relref "../part-3--extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) layers intact for future evolutions\.
 
@@ -391,7 +391,12 @@ There is one new evolution which modifies the upper \(*orchestration*\) layer:
 
 *Layered architecture* separates the high\-level logic from the low\-level details\. It is superior for medium\-sized projects as it supports rapid development by two or three teams, is flexible enough to resolve conflicting forces, and provides many options for further evolution, which will come in handy when the project grows in size and complexity\.
 
+<nav>
+
 | \<\< [Shards]({{< relref "../part-2--basic-metapatterns/shards.md" >}}) | ^ [Part 2\. Basic Metapatterns]({{< relref "../part-2--basic-metapatterns/_index.md" >}}) ^ | [Services]({{< relref "../part-2--basic-metapatterns/services.md" >}}) \>\> |
 | --- | --- | --- |
+
+</nav>
+
 
 

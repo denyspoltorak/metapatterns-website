@@ -71,7 +71,12 @@ title = "Table of Contents"
 - [Appendix I. Index of patterns.]({{< relref "part-7--appendices/appendix-i--index-of-patterns.md" >}})
 
 
+<nav>
+
 |  |  | [Introduction]({{< relref "introduction/_index.md" >}}) \>\> |
 | --- | --- | --- |
+
+</nav>
+
 
 

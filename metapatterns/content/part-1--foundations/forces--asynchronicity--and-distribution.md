@@ -9,13 +9,13 @@ Many systems rely on asynchronous communication between their components or are 
 
 ## Requirements and forces
 
-Any software is built to meet a set of \(explicit or implicit\) *requirements*\. As a bare minimum, you as a programmer must have at least a vague vision of how your software is expected to operate\. At the most, business analysts bring you volumes of incomprehensible documentation they wrote for the sole purpose of forcing you to practice \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md" >}})\]\.
+Any software is built to meet a set of \(explicit or implicit\) *requirements*\. As a bare minimum, you as a programmer must have at least a vague vision of how your software is expected to operate\. At the most, business analysts bring you volumes of incomprehensible documentation they wrote for the sole purpose of forcing you to practice \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\]\.
 
 Some requirements are *functional*, others are *non\-functional*\.
 
 *Functional requirements* describe what the system must do: a night vision device must be able to represent heat radiation as a video stream; a multiplayer game must create a shared virtual world for users to interact with over a network; a tool for formatting floppies … er, formats floppies\.
 
-[*Non\-functional requirements*](https://en.wikipedia.org/wiki/Non-functional_requirement), also known as *forces*, define expected properties of the system and are known to drive architectural decisions \[[POSA1]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#peaa" >}}), [POSA5]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa4" >}})\]\. They may be formulated or implied: our game should be fast enough and stable enough\. A medical application should be extremely well\-tested\. An online shop should provide an easy way to add new goods\. Notice all those “fast enough”, “stable enough”, “well”, and “easy” terms on the wishlist\. Sometimes they form an [SLA](https://en.wikipedia.org/wiki/Service-level_agreement) with numbers: your service should be available 99\.999% of the time\.
+[*Non\-functional requirements*](https://en.wikipedia.org/wiki/Non-functional_requirement), also known as *forces*, define expected properties of the system and are known to drive architectural decisions \[[POSA1]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa1" >}}), [POSA5]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa5" >}})\]\. They may be formulated or implied: our game should be fast enough and stable enough\. A medical application should be extremely well\-tested\. An online shop should provide an easy way to add new goods\. Notice all those “fast enough”, “stable enough”, “well”, and “easy” terms on the wishlist\. Sometimes they form an [SLA](https://en.wikipedia.org/wiki/Service-level_agreement) with numbers: your service should be available 99\.999% of the time\.
 
 Let’s take an example\.
 
@@ -116,7 +116,12 @@ Any moral? There is one, even a few\.
 - Components that communicate a lot should reside together\. Distributing them may kill performance and even break the consistency of the data\.
 
 
+<nav>
+
 | \<\< [Modules and complexity]({{< relref "../part-1--foundations/modules-and-complexity.md" >}}) | ^ [Part 1\. Foundations]({{< relref "../part-1--foundations/_index.md" >}}) ^ | [Four kinds of software]({{< relref "../part-1--foundations/four-kinds-of-software.md" >}}) \>\> |
 | --- | --- | --- |
+
+</nav>
+
 
 

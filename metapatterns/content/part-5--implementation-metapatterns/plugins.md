@@ -11,7 +11,7 @@ title = "Plugins"
 
 *Overspecialize, and you breed in weakness\.* Customize the system through attachable modules\.
 
-<ins>Known as:</ins> Plug\-In Architecture \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}})\], \(misapplied\) Microkernel \(Architecture\) \[[POSA1]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#peaa" >}}), [POSA4]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa3" >}}), [SAP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#sahp" >}}), [FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}})\], Plugin \[[PEAA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\], Addons, Strategy \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}}), [POSA4]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa3" >}})\], Reflection \[[POSA1]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#peaa" >}}), [POSA4]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa3" >}})\], Aspects, Hooks\.
+<ins>Known as:</ins> Plug\-In Architecture \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\], \(misapplied\) Microkernel \(Architecture\) \[[POSA1]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa1" >}}), [POSA4]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa4" >}}), [SAP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#sap" >}}), [FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\], Plugin \[[PEAA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#peaa" >}})\], Addons, Strategy \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#gof" >}}), [POSA4]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa4" >}})\], Reflection \[[POSA1]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa1" >}}), [POSA4]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa4" >}})\], Aspects, Hooks\.
 
 <ins>Variants:</ins> [*Hexagonal Architecture*]({{< relref "../part-5--implementation-metapatterns/hexagonal-architecture.md" >}}) and [*Microkernel*]({{< relref "../part-5--implementation-metapatterns/microkernel.md" >}}) got dedicated chapters\. Plugins have many variations\.
 
@@ -27,7 +27,7 @@ title = "Plugins"
 | The custom pieces may be written in a different programming language or DSL |  |
 
 
-<ins>References:</ins> \[[SAP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#sahp" >}})\] and \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}})\] [mistakenly]({{< relref "../part-6--analytics/ambiguous-patterns.md#microkernel" >}}) call this pattern *Microkernel* and dedicate chapters to it\.
+<ins>References:</ins> \[[SAP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#sap" >}})\] and \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] [mistakenly]({{< relref "../part-6--analytics/ambiguous-patterns.md#microkernel" >}}) call this pattern *Microkernel* and dedicate chapters to it\.
 
 Most systems require some extent of customizability all the way from the basic codec selection by a video player to the screens full of tools and wizards unlocked once you upgrade your subscription plan\. This is achieved by keeping the *core* functionality separate from its extensions, which are developed by either your team or external enthusiasts to modify behavior of the system\. The cost of flexibility is paid in complexity of design – the need to predict which aspects should be customizable and which APIs are good for known \(and unknown\) uses by the extensions\. Heavy communication between the core and *plugins* negatively impacts performance\.
 
@@ -82,7 +82,7 @@ Each *plugin* depends on the *core*’s *API* \(for *Addons*\) or *SPI* \(for *P
 
 ## Variants
 
-*Plugins* are highly variable and omnipresent if we take *Strategy* \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] for a kind of plugin:
+*Plugins* are highly variable and omnipresent if we take *Strategy* \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#gof" >}})\] for a kind of plugin:
 
 ### By the direction of control
 
@@ -125,8 +125,8 @@ Plugins may be *built in* or selected dynamically:
 
 Plugins come in different sizes:
 
-- Small functions or classes are built into the core\. They seem to implement the *Strategy* \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] / *Plugins* \[[PEAA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\] design patterns\.
-- [*Aspects*](https://en.wikipedia.org/wiki/Aspect_(computer_programming)), such as logging and memory management, pervade a system and are accessed from many places in its code\. *Reflection* \[[POSA1]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#peaa" >}}), [POSA4]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa3" >}})\] probably belongs there\.
+- Small functions or classes are built into the core\. They seem to implement the *Strategy* \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#gof" >}})\] / *Plugins* \[[PEAA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#peaa" >}})\] design patterns\.
+- [*Aspects*](https://en.wikipedia.org/wiki/Aspect_(computer_programming)), such as logging and memory management, pervade a system and are accessed from many places in its code\. *Reflection* \[[POSA1]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa1" >}}), [POSA4]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa4" >}})\] probably belongs there\.
 - Modules are plugged in as separate system components\. This kind of *Plugins* matches the topic of this book and is further developed by [*Hexagonal Architecture*]({{< relref "../part-5--implementation-metapatterns/hexagonal-architecture.md" >}}) and [*Microkernel*]({{< relref "../part-5--implementation-metapatterns/microkernel.md" >}})\.
 
 
@@ -152,7 +152,12 @@ Plugins may be:
 
 *Plugins* allow for customization of a component’s behavior at the cost of increased complexity, poor testability and somewhat reduced performance\.
 
+<nav>
+
 | \<\< [Part 5\. Implementation Metapatterns]({{< relref "../part-5--implementation-metapatterns/_index.md" >}}) | ^ [Part 5\. Implementation Metapatterns]({{< relref "../part-5--implementation-metapatterns/_index.md" >}}) ^ | [Hexagonal Architecture]({{< relref "../part-5--implementation-metapatterns/hexagonal-architecture.md" >}}) \>\> |
 | --- | --- | --- |
+
+</nav>
+
 
 

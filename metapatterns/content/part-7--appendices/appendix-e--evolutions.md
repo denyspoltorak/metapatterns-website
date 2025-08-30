@@ -14,7 +14,7 @@ Duplicate and similar evolutions are omitted, and I did not write any evolutions
 One of the main drawbacks of the monolithic architecture is its lack of scalability – a single running instance of your system may not be enough to serve all its clients no matter how many resources you add in\. If that is the case, you should consider [*Shards*]({{< relref "../part-2--basic-metapatterns/shards.md" >}}) – *multiple instances* of a monolith\. There are following options:
 
 - Self\-managed [*Shards*]({{< relref "../part-2--basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-cells-amazon-definition" >}}) – each instance owns a part of the system’s data and may communicate with all the other instances \(forming a [*Mesh*]({{< relref "../part-5--implementation-metapatterns/mesh.md" >}})\)\.
-- *Shards* with a [*Sharding Poxy*]({{< relref "../part-3--extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) – each instance owns a part of the system’s data and relies on the external component to choose a shard for a client\.
+- *Shards* with a [*Sharding Proxy*]({{< relref "../part-3--extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) – each instance owns a part of the system’s data and relies on the external component to choose a shard for a client\.
 - A [*Pool of stateless instances*]({{< relref "../part-2--basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}}) with a [*Load Balancer*]({{< relref "../part-3--extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) and a [*Shared Database*]({{< relref "../part-3--extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) – any instance can process any request, but the database limits the throughput\.
 - A [*stateful instance per client*]({{< relref "../part-2--basic-metapatterns/shards.md#temporary-state-create-on-demand" >}}) with an external persistent storage – each instance owns the data related to its client and runs in a virtual environment \(i\.e\. web browser or an [actor framework]({{< relref "../part-2--basic-metapatterns/services.md#distributed-runtime-function-as-a-service-faas-including-nanoservices-backend-actors" >}})\)\.
 
@@ -70,7 +70,7 @@ If all the data a user operates on, directly or indirectly, is never accessed by
 
 <ins>Cons</ins>: 
 
-- The *Sharding Proxy* is a single point of failure unless [*replicated*]({{< relref "../part-2--basic-metapatterns/shards.md#persistent-copy-replica" >}}) and increases latency unless deployed as an [*Ambassador*]({{< relref "../part-3--extension-metapatterns/proxy.md#on-the-client-side-ambassador" >}}) \[[DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddia" >}})\]\.
+- The *Sharding Proxy* is a single point of failure unless [*replicated*]({{< relref "../part-2--basic-metapatterns/shards.md#persistent-copy-replica" >}}) and increases latency unless deployed as an [*Ambassador*]({{< relref "../part-3--extension-metapatterns/proxy.md#on-the-client-side-ambassador" >}}) \[[DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#dds" >}})\]\.
 
 
 ### Separate the data layer and add a load balancer
@@ -340,7 +340,7 @@ In addition,
 
 ## Monolith: to Services
 
-The final major drawback of [*Monolith*]({{< relref "../part-2--basic-metapatterns/monolith.md" >}}) is the cohesiveness of its code\. The rapid start of development begets a major obstacle for project growth: every developer needs to know the entire codebase to be productive and changes made by individual developers overlap and may break each other\. Such distress is usually solved by dividing the project into components along *subdomain boundaries* \(which tend to match [*bounded contexts*](https://martinfowler.com/bliki/BoundedContext.html) \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md" >}})\]\)\. However, that requires a lot of work, and good boundaries and APIs are [hard to design](https://martinfowler.com/bliki/MonolithFirst.html)\. Thus many organizations prefer a slower iterative transition\.
+The final major drawback of [*Monolith*]({{< relref "../part-2--basic-metapatterns/monolith.md" >}}) is the cohesiveness of its code\. The rapid start of development begets a major obstacle for project growth: every developer needs to know the entire codebase to be productive and changes made by individual developers overlap and may break each other\. Such distress is usually solved by dividing the project into components along *subdomain boundaries* \(which tend to match [*bounded contexts*](https://martinfowler.com/bliki/BoundedContext.html) \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\]\)\. However, that requires a lot of work, and good boundaries and APIs are [hard to design](https://martinfowler.com/bliki/MonolithFirst.html)\. Thus many organizations prefer a slower iterative transition\.
 
 - A *Monolith* can be split into [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}}) right away\.
 - Or only the new features may be added as new services\.
@@ -664,7 +664,7 @@ Though *Space\-Based Architecture* may provide multiple modes of action, includi
 
 If a subset of the data is accessed by all the shards, that subset can be moved to a dedicated database, which is likely to be fast if only because it is small\. Using a distributed database that keeps its data synchronized on all the shards may be even faster\.
 
-This approach resembles [*Shared Kernel*](https://ddd-practitioners.com/home/glossary/bounded-context/bounded-context-relationship/shared-kernel/) \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md" >}})\]\.
+This approach resembles [*Shared Kernel*](https://ddd-practitioners.com/home/glossary/bounded-context/bounded-context-relationship/shared-kernel/) \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\]\.
 
 <ins>Pros</ins>: 
 
@@ -690,7 +690,7 @@ This approach resembles [*Shared Kernel*](https://ddd-practitioners.com/home/glo
 
 If a part of the domain is too cohesive to be sharded, we can often move it from the main application into a dedicated service\. That way the main application remains sharded while the new service exists as a single instance\. In rare cases there is a chance to re\-shard the new service with a sharding key which is different from the one used for sharding the main application\.
 
-This approach resembles [*Shared Kernel*](https://ddd-practitioners.com/home/glossary/bounded-context/bounded-context-relationship/shared-kernel/) \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md" >}})\]\.
+This approach resembles [*Shared Kernel*](https://ddd-practitioners.com/home/glossary/bounded-context/bounded-context-relationship/shared-kernel/) \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\]\.
 
 <ins>Pros</ins>: 
 
@@ -765,7 +765,7 @@ The client application may know the address of the shard which serves it and con
 
 <ins>Cons</ins>: 
 
-- The extra network hop increases latency unless you deploy the *Sharding Proxy* as an [*Ambassador*]({{< relref "../part-3--extension-metapatterns/proxy.md#on-the-client-side-ambassador" >}}) \[[DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddia" >}})\] co\-located with every client, which brings back the issue of client software updates\.
+- The extra network hop increases latency unless you deploy the *Sharding Proxy* as an [*Ambassador*]({{< relref "../part-3--extension-metapatterns/proxy.md#on-the-client-side-ambassador" >}}) \[[DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#dds" >}})\] co\-located with every client, which brings back the issue of client software updates\.
 - The *Sharding Proxy* is a single point of failure unless [*replicated*]({{< relref "../part-2--basic-metapatterns/shards.md#persistent-copy-replica" >}})\.
 
 
@@ -852,7 +852,7 @@ It is often possible to split a backend into integration \([orchestration]({{< r
 
 ## Layers: help large projects
 
-The main drawback \(and benefit\) of [*Layers*]({{< relref "../part-2--basic-metapatterns/layers.md" >}}) is that much or all of the business logic is kept together in one or two components\. That allows for easy debugging and fast development in the initial stages of the project but slows down and complicates work as the project [grows in size]({{< relref "../part-6--analytics/architecture-and-product-life-cycle.md#youth-development-of-features--fragmented-architectures" >}})\. The only way for a growing project to survive and continue evolving at a reasonable speed is to divide its business logic into several smaller, thus less [complex]({{< relref "../part-1--foundations/modules-and-complexity.md" >}}), components that match subdomains \(*bounded contexts* \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md" >}})\]\)\. There are several options for such a change whose applicability depends on the domain:
+The main drawback \(and benefit\) of [*Layers*]({{< relref "../part-2--basic-metapatterns/layers.md" >}}) is that much or all of the business logic is kept together in one or two components\. That allows for easy debugging and fast development in the initial stages of the project but slows down and complicates work as the project [grows in size]({{< relref "../part-6--analytics/architecture-and-product-life-cycle.md#youth-development-of-features--fragmented-architectures" >}})\. The only way for a growing project to survive and continue evolving at a reasonable speed is to divide its business logic into several smaller, thus less [complex]({{< relref "../part-1--foundations/modules-and-complexity.md" >}}), components that match subdomains \(*bounded contexts* \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\]\)\. There are several options for such a change whose applicability depends on the domain:
 
 - The middle layer with the main business logic can be divided into [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}}) leaving the upper [*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}}) and lower [*database*]({{< relref "../part-3--extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) layers intact for future evolutions\.
 - Sometimes the business logic can be represented as a set of directed graphs which is known as [*Event\-Driven Architecture*]({{< relref "../part-2--basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}})\.
@@ -871,7 +871,7 @@ The main drawback \(and benefit\) of [*Layers*]({{< relref "../part-2--basic-met
 
 <ins>Prerequisite</ins>: the low\-level business logic comprises loosely coupled subdomains\.
 
-It is very common for a system’s domain to consist of weakly interacting *bounded contexts* \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md" >}})\]\. They are integrated through high\-level use cases and/or [relations in data]({{< relref "../part-1--foundations/arranging-communication.md#shared-data" >}})\. For such a system it is relatively easy to divide the domain logic into *Services* while leaving the integration and data layers shared\.
+It is very common for a system’s domain to consist of weakly interacting *bounded contexts* \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\]\. They are integrated through high\-level use cases and/or [relations in data]({{< relref "../part-1--foundations/arranging-communication.md#shared-data" >}})\. For such a system it is relatively easy to divide the domain logic into *Services* while leaving the integration and data layers shared\.
 
 <ins>Pros</ins>: 
 
@@ -1185,7 +1185,7 @@ If you see that several services communicate with each other almost as intensely
 
 If your use cases have too high a latency or you pay too much for CPU and traffic, the issue may originate with the interservice communication and merging the services should help\. No services, no pain\.
 
-Alternatively, as domain knowledge changes \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md" >}})\], you may have to merge much of the code together only to subdivide it later along updated subdomain boundaries\. Which means you face [lots of work for no reason](https://martinfowler.com/bliki/MonolithFirst.html)\.
+Alternatively, as domain knowledge changes \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\], you may have to merge much of the code together only to subdivide it later along updated subdomain boundaries\. Which means you face [lots of work for no reason](https://martinfowler.com/bliki/MonolithFirst.html)\.
 
 <ins>Pros</ins>: 
 
@@ -1208,7 +1208,7 @@ Alternatively, as domain knowledge changes \[[DDD]({{< relref "../part-7--append
 The most common modifications to a [system of *Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}}) involve supplementary system\-wide *layers* which compensate for the inability of the *Services* to share anything among themselves:
 
 - A [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}) knows of all the deployed service [instances]({{< relref "../part-2--basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}})\. It mediates communication between them and may manage their scaling and failure recovery\.
-- [*Sidecars*]({{< relref "../part-3--extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \[[DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddia" >}})\] of a [*Service Mesh*]({{< relref "../part-5--implementation-metapatterns/mesh.md#service-mesh" >}}) make a virtual layer of [shared libraries]({{< relref "../part-6--analytics/comparison-of-architectural-patterns.md#sharing-functionality-or-data-among-services" >}}) for the [*Microservices*]({{< relref "../part-2--basic-metapatterns/services.md#microservices" >}}) it hosts\.
+- [*Sidecars*]({{< relref "../part-3--extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \[[DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#dds" >}})\] of a [*Service Mesh*]({{< relref "../part-5--implementation-metapatterns/mesh.md#service-mesh" >}}) make a virtual layer of [shared libraries]({{< relref "../part-6--analytics/comparison-of-architectural-patterns.md#sharing-functionality-or-data-among-services" >}}) for the [*Microservices*]({{< relref "../part-2--basic-metapatterns/services.md#microservices" >}}) it hosts\.
 - A [*Shared Database*]({{< relref "../part-3--extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) simplifies the initial phases of development and provides data consistency and [interservice communication]({{< relref "../part-1--foundations/arranging-communication.md#shared-data" >}})\.
 - [*Proxies*]({{< relref "../part-3--extension-metapatterns/proxy.md" >}}) stand between the system and its clients and take care of shared aspects that otherwise would need to be implemented by every service\.
 - An [*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}}) is the single place for the high\-level logic of every use case\.
@@ -1267,7 +1267,7 @@ Distributed systems may fail in a zillion ways\. You want to ruminate neither on
 
 <ins>Prerequisite</ins>: service instances are mostly [stateless]({{< relref "../part-2--basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}})\.
 
-The [*Microservices*]({{< relref "../part-2--basic-metapatterns/services.md#microservices" >}}) architecture boasts dynamic scaling under load thanks to its *Mesh*\-based *Middleware*\. It also allows for the services to share libraries in *Sidecars* \[[DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddia" >}})\] – additional containers co\-located with each service instance – to avoid duplication of generic code among the services\.
+The [*Microservices*]({{< relref "../part-2--basic-metapatterns/services.md#microservices" >}}) architecture boasts dynamic scaling under load thanks to its *Mesh*\-based *Middleware*\. It also allows for the services to share libraries in *Sidecars* \[[DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#dds" >}})\] – additional containers co\-located with each service instance – to avoid duplication of generic code among the services\.
 
 <ins>Pros</ins>: 
 
@@ -1392,7 +1392,7 @@ Extract the high\-level business logic from the choreographed services or their 
 
 There are a couple of *Pipeline*\-specific evolutions:
 
-- The first service of the *Pipeline* can be promoted to [*Front Controller*]({{< relref "../part-3--extension-metapatterns/combined-component.md#front-controller" >}}) \[[SAHP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa5" >}})\] which tracks status updates for every request it handles\.
+- The first service of the *Pipeline* can be promoted to [*Front Controller*]({{< relref "../part-3--extension-metapatterns/combined-component.md#front-controller" >}}) \[[SAHP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#sahp" >}})\] which tracks status updates for every request it handles\.
 - Adding an [*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}}) turns a [*Pipeline*]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}}) into [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}})\. As the high\-level business logic moves to the orchestration layer, the services don’t need to interact directly, the interservice communication channels disappear and the system becomes identical to [*Orchestrated Services*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}})\.
 
 
@@ -1543,7 +1543,7 @@ Once a database appears, it is unlikely to go away\. I see the following evoluti
 
 <ins>Prerequisite</ins>: the data is shardable \(consists of independent records\)\.
 
-If your database is overloaded and the data which it contains describes independent entities \(users, companies, sales\) you can deploy multiple instances of the database with subsets of the data distributed among them\. You will need to deploy a *Sharding Proxy* or the services will have to find out which database *shard* to access by themselves, likely through hashing the record’s *primary key* \[[DDIA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\]\. There is also a good chance that several smaller tables will have to be replicated to all the shards or moved to a [dedicated *Shared Database*]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md#private-and-shared-databases" >}}) \(resulting in [*Polyglot Persistence*]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md" >}})\)\.
+If your database is overloaded and the data which it contains describes independent entities \(users, companies, sales\) you can deploy multiple instances of the database with subsets of the data distributed among them\. You will need to deploy a *Sharding Proxy* or the services will have to find out which database *shard* to access by themselves, likely through hashing the record’s *primary key* \[[DDIA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddia" >}})\]\. There is also a good chance that several smaller tables will have to be replicated to all the shards or moved to a [dedicated *Shared Database*]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md#private-and-shared-databases" >}}) \(resulting in [*Polyglot Persistence*]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md" >}})\)\.
 
 Modern distributed databases support sharding out of the box, but an overgrown table may still impact the performance of the database\.
 
@@ -1626,7 +1626,7 @@ If the data clearly follows subdomains, it may be possible to subdivide it accor
 
 <ins>Further steps</ins>:
 
-- [*CQRS Views*]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#lddd" >}})\] or a [*Query Service*]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md#query-service-front-controller-data-warehouse-data-lake-aggregate-data-product-quantum-dpq-of-data-mesh" >}}) \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#lddd" >}})\] help a service access and join data that belongs to other services\.
+- [*CQRS Views*]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\] or a [*Query Service*]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md#query-service-front-controller-data-warehouse-data-lake-aggregate-data-product-quantum-dpq-of-data-mesh" >}}) \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\] help a service access and join data that belongs to other services\.
 
 
 ### Deploy specialized databases
@@ -1654,7 +1654,7 @@ It is very likely that you can either use [*specialized databases*]({{< relref "
 
 - It may take effort to learn the new technologies and use them efficiently\.
 - Someone needs to see to the new database\(s\)\.
-- You’ll likely need to work around *replication lag* \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#lddd" >}})\]\.
+- You’ll likely need to work around *replication lag* \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\]\.
 
 
 ## Proxy:
@@ -1765,7 +1765,7 @@ If the *orchestration* logic mostly follows the subdomains, it may be possible t
 
 <ins>Further steps</ins>:
 
-- [*CQRS Views*]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#lddd" >}})\] or a [*Query Service*]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md#query-service-front-controller-data-warehouse-data-lake-aggregate-data-product-quantum-dpq-of-data-mesh" >}}) \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#lddd" >}})\] help a service access and join data that belongs to other services, further reducing the need for interservice communication\.
+- [*CQRS Views*]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\] or a [*Query Service*]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md#query-service-front-controller-data-warehouse-data-lake-aggregate-data-product-quantum-dpq-of-data-mesh" >}}) \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\] help a service access and join data that belongs to other services, further reducing the need for interservice communication\.
 
 
 ### Subdivide to form Backends for Frontends
@@ -1797,7 +1797,7 @@ When use cases for clients vary, it makes sense for each kind of client to have 
 
 - You may want to add client\-specific [*Proxies*]({{< relref "../part-3--extension-metapatterns/proxy.md" >}}) and, maybe, co\-locate them with the *Orchestrators* to avoid the extra network hop\.
 - Adding another shared [*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}}) below the ones dedicated to clients creates a place for sharing functionality among the *Orchestrators*\.
-- If you are running [*Microservices*]({{< relref "../part-2--basic-metapatterns/services.md#microservices" >}}) over a [*Service Mesh*]({{< relref "../part-5--implementation-metapatterns/mesh.md#service-mesh" >}}), [*Sidecars*]({{< relref "../part-3--extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \[[DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddia" >}})\] may help to share generic code\.
+- If you are running [*Microservices*]({{< relref "../part-2--basic-metapatterns/services.md#microservices" >}}) over a [*Service Mesh*]({{< relref "../part-5--implementation-metapatterns/mesh.md#service-mesh" >}}), [*Sidecars*]({{< relref "../part-3--extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \[[DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#dds" >}})\] may help to share generic code\.
 
 
 ### Add a layer of orchestration
@@ -1875,7 +1875,7 @@ The patterns that involve *orchestration* \([*API Gateway*]({{< relref "../part-
 
 <ins>Patterns</ins>: [Layers]({{< relref "../part-2--basic-metapatterns/layers.md" >}})\.
 
-<ins>Goal</ins>: break out of *vendor lock\-in* \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md" >}})\], gain flexibility\.
+<ins>Goal</ins>: break out of *vendor lock\-in* \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\], gain flexibility\.
 
 <ins>Prerequisite</ins>: you have lots of free time\.
 
@@ -1894,7 +1894,12 @@ If you feel that the *Combined Component* which your system relies on does not c
 - Performance may become worse because there will be more components on the requests’ path and also because the industry\-grade framework that you used could have been highly optimized\.
 
 
+<nav>
+
 | \<\< [Appendix D\. Disclaimer\.]({{< relref "../part-7--appendices/appendix-d--disclaimer.md" >}}) | ^ [Part 7\. Appendices]({{< relref "../part-7--appendices/_index.md" >}}) ^ | [Appendix F\. Format of a metapattern\.]({{< relref "../part-7--appendices/appendix-f--format-of-a-metapattern.md" >}}) \>\> |
 | --- | --- | --- |
+
+</nav>
+
 
 

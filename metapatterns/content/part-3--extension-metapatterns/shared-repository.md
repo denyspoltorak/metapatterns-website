@@ -11,7 +11,7 @@ title = "Shared Repository"
 
 *Knowledge itself is power\.* Sharing data is simple \(& stupid\)\.
 
-<ins>Known as:</ins> Shared Repository \[[POSA4]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa3" >}})\]\.
+<ins>Known as:</ins> Shared Repository \[[POSA4]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa4" >}})\]\.
 
 <ins>Aspects:</ins>
 
@@ -22,13 +22,13 @@ title = "Shared Repository"
 
 <ins>Variants:</ins> 
 
-- Shared Database \[[EIP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#deds" >}})\] / [Integration Database](https://martinfowler.com/bliki/IntegrationDatabase.html) / Data Domain \[[SAHP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa5" >}})\] / Database of Service\-Based Architecture \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}})\], 
-- [Blackboard](https://hillside.net/plop/plop97/Proceedings/lalanda.pdf) \[[POSA1]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#peaa" >}}), [POSA4]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa3" >}})\],
-- Data Grid of [Space\-Based Architecture](https://en.wikipedia.org/wiki/Space-based_architecture) \[[SAP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#sahp" >}}), [FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}})\] / Replicated Cache \[[SAHP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa5" >}})\] / Distributed Cache, 
+- Shared Database \[[EIP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}})\] / [Integration Database](https://martinfowler.com/bliki/IntegrationDatabase.html) / Data Domain \[[SAHP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#sahp" >}})\] / Database of Service\-Based Architecture \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\], 
+- [Blackboard](https://hillside.net/plop/plop97/Proceedings/lalanda.pdf) \[[POSA1]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa1" >}}), [POSA4]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa4" >}})\],
+- Data Grid of [Space\-Based Architecture](https://en.wikipedia.org/wiki/Space-based_architecture) \[[SAP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#sap" >}}), [FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] / Replicated Cache \[[SAHP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#sahp" >}})\] / Distributed Cache, 
 - Shared Memory,
 - Shared File System,
 - \(with a [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}})\) Persistent Event Log / Shared Event Store,
-- \(inexact\) Stamp Coupling \[[SAHP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa5" >}})\]\.
+- \(inexact\) Stamp Coupling \[[SAHP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#sahp" >}})\]\.
 
 
 <ins>Structure:</ins> A layer of data shared among higher\-level components\.
@@ -43,7 +43,7 @@ title = "Shared Repository"
 | Quick start for a project | Limits scalability |
 
 
-<ins>References:</ins> \[[DDIA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\] is all about databases; \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}})\] has chapters on *Service\-Based Architecture* and *Space\-Based Architecture*; \[[DEDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#dds" >}})\] deals with *Shared Event Store\.*
+<ins>References:</ins> \[[DDIA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddia" >}})\] is all about databases; \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] has chapters on *Service\-Based Architecture* and *Space\-Based Architecture*; \[[DEDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#deds" >}})\] deals with *Shared Event Store\.*
 
 A *Shared Repository* builds communication in the system around its data, which is natural for [data\-centric domains]({{< relref "../part-1--foundations/arranging-communication.md#shared-data" >}}) and multiple [instances of a stateless service]({{< relref "../part-2--basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}}) and may often simplify development of a system of [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}}) that need to exchange data\. It covers the following concerns:
 
@@ -56,7 +56,7 @@ The drawbacks are extensive coupling \(it’s hard to alter a thing which is use
 
 ### Performance
 
-A shared database with consistency guarantees \([ACID](https://en.wikipedia.org/wiki/ACID)\) is likely to lower the total resource consumption compared to one database per service \(as the services don’t need to implement and keep updated [*CQRS views*]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) \[[DDIA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddd" >}}), [MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#lddd" >}})\] of other services’ data\) but it increases latency and it may become the system’s performance bottleneck\. Moreover, by using a shared database services lose the ability to choose the database technologies which best fit their tasks and data\.
+A shared database with consistency guarantees \([ACID](https://en.wikipedia.org/wiki/ACID)\) is likely to lower the total resource consumption compared to one database per service \(as the services don’t need to implement and keep updated [*CQRS views*]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) \[[DDIA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddia" >}}), [MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\] of other services’ data\) but it increases latency and it may become the system’s performance bottleneck\. Moreover, by using a shared database services lose the ability to choose the database technologies which best fit their tasks and data\.
 
 Another danger lies with locking records inside the database\. Different services may use different order of tables in transactions, hitting deadlocks in the database engine which show up as transaction timeouts\.
 
@@ -70,7 +70,7 @@ Normally, every service depends on the repository\. If the repository does not p
 <img src="/Dependencies/SharedRepository-1.png" alt="SharedRepository-1" width=100%/>
 </p>
 
-The dependency on repository technology and a data schema is dangerous for long\-running projects as both of them may need to change sooner or later\. Decoupling the code from the data storage is done with [yet another layer of indirection](https://en.wikipedia.org/wiki/Fundamental_theorem_of_software_engineering) which is called a [*Database Abstraction Layer*]({{< relref "../part-3--extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) \(*DAL*\), a *Database Access Layer* \[[POSA4]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa3" >}})\], or a *Data Mapper* \[[PEAA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\]\. The DAL, which translates between the data schema and database’s API on one side and the business logic’s SPI on the other side, may reside inside each service or wrap the database:
+The dependency on repository technology and a data schema is dangerous for long\-running projects as both of them may need to change sooner or later\. Decoupling the code from the data storage is done with [yet another layer of indirection](https://en.wikipedia.org/wiki/Fundamental_theorem_of_software_engineering) which is called a [*Database Abstraction Layer*]({{< relref "../part-3--extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) \(*DAL*\), a *Database Access Layer* \[[POSA4]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa4" >}})\], or a *Data Mapper* \[[PEAA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#peaa" >}})\]\. The DAL, which translates between the data schema and database’s API on one side and the business logic’s SPI on the other side, may reside inside each service or wrap the database:
 
 <p align="center">
 <img src="/Dependencies/SharedRepository-2.png" alt="SharedRepository-2" width=100%/>
@@ -113,7 +113,7 @@ Still, the DAL does not remove shared dependencies and only adds some flexibilit
 
 *Shared Repository* is a sibling of [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}})\. While a *Middleware* assists direct communication between services \(*shared\-nothing* messaging\), a *Shared Repository* grants them indirect communication through access to an external state \(similar to *shared memory*\) which usually stores all the data for the domain\.
 
-A *Shared Repository* may provide a generic interface \(e\.g\. SQL\) or a custom API \(with a domain\-aware [*Adapter*]({{< relref "../part-3--extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) / [*ORM*](https://en.wikipedia.org/wiki/Object–relational_mapping) for the database\)\. The *repository* can be anything ranging from a trivial OS file system or a memory block accessible from all the components to an ordinary database to a [*Mesh*]({{< relref "../part-5--implementation-metapatterns/mesh.md" >}})\-based, distributed [*tuple space*](https://en.wikipedia.org/wiki/Tuple_space):
+A *Shared Repository* may provide a generic interface \(e\.g\. SQL\) or a custom API \(with a domain\-aware [*Adapter*]({{< relref "../part-3--extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) / [*ORM*](https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping) for the database\)\. The *repository* can be anything ranging from a trivial OS file system or a memory block accessible from all the components to an ordinary database to a [*Mesh*]({{< relref "../part-5--implementation-metapatterns/mesh.md" >}})\-based, distributed [*tuple space*](https://en.wikipedia.org/wiki/Tuple_space):
 
 ### Shared Database, Integration Database, Data Domain, Database of Service\-Based Architecture
 
@@ -121,7 +121,7 @@ A *Shared Repository* may provide a generic interface \(e\.g\. SQL\) or a custom
 <img src="/Variants/2/Shared Database.png" alt="Shared Database" width=93%/>
 </p>
 
-*Shared Database* \[[EIP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#deds" >}})\], [*Integration Database*](https://martinfowler.com/bliki/IntegrationDatabase.html)*,* or *Data Domain* \[[SAHP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa5" >}})\] is a single database available to several [services]({{< relref "../part-2--basic-metapatterns/services.md" >}})\. The services may subscribe to data change triggers in the database itself or notify each other directly about domain events\. The latter is often the case with [*Service\-Based Architecture*]({{< relref "../part-2--basic-metapatterns/services.md#service-based-architecture" >}}) \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}})\] which consists of large services dedicated to subdomains\.
+*Shared Database* \[[EIP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}})\], [*Integration Database*](https://martinfowler.com/bliki/IntegrationDatabase.html)*,* or *Data Domain* \[[SAHP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#sahp" >}})\] is a single database available to several [services]({{< relref "../part-2--basic-metapatterns/services.md" >}})\. The services may subscribe to data change triggers in the database itself or notify each other directly about domain events\. The latter is often the case with [*Service\-Based Architecture*]({{< relref "../part-2--basic-metapatterns/services.md#service-based-architecture" >}}) \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] which consists of large services dedicated to subdomains\.
 
 ### Blackboard
 
@@ -129,7 +129,7 @@ A *Shared Repository* may provide a generic interface \(e\.g\. SQL\) or a custom
 <img src="/Variants/2/Blackboard.png" alt="Blackboard" width=100%/>
 </p>
 
-[*Blackboard*](https://hillside.net/plop/plop97/Proceedings/lalanda.pdf) \[[POSA1]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#peaa" >}}), [POSA4]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa3" >}})\] was used for non\-deterministic calculations where several algorithms were concurring and collaborating to gradually build a solution from incomplete inputs\. The *control* \([*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}})\) component schedules the work of several *knowledge sources* \([*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}})\) which encapsulate algorithms for processing the data stored in the *blackboard* \(*Shared Repository*\)\. This approach has likely been superseded by convolutional neural networks\.
+[*Blackboard*](https://hillside.net/plop/plop97/Proceedings/lalanda.pdf) \[[POSA1]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa1" >}}), [POSA4]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa4" >}})\] was used for non\-deterministic calculations where several algorithms were concurring and collaborating to gradually build a solution from incomplete inputs\. The *control* \([*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}})\) component schedules the work of several *knowledge sources* \([*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}})\) which encapsulate algorithms for processing the data stored in the *blackboard* \(*Shared Repository*\)\. This approach has likely been superseded by convolutional neural networks\.
 
 Examples: several use cases are [mentioned on Wikipedia](https://en.wikipedia.org/wiki/Blackboard_system)\.
 
@@ -139,12 +139,12 @@ Examples: several use cases are [mentioned on Wikipedia](https://en.wikipedia.or
 <img src="/Variants/2/Data Grid.png" alt="Data Grid" width=100%/>
 </p>
 
-The [*Space\-Based Architecture*](https://en.wikipedia.org/wiki/Space-based_architecture) \(*SBA*\) \[[SAP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#sahp" >}}), [FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}})\] is a [*Service Mesh*]({{< relref "../part-5--implementation-metapatterns/mesh.md#service-mesh" >}}) \(a [*Mesh*]({{< relref "../part-5--implementation-metapatterns/mesh.md" >}})\-based [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}) with at least one [*Proxy*]({{< relref "../part-3--extension-metapatterns/proxy.md" >}}) per service instance\) which also implements an in\-memory [*tuple space*](https://en.wikipedia.org/wiki/Tuple_space) \(shared dictionary\)\. Although it does not provide a full\-featured database interface it has very good performance, elasticity, and fault tolerance, while some implementations allow for dealing with datasets which are much larger than anything digestible by ordinary databases\. Its drawbacks include write collisions and high operating costs \(huge traffic for data replication and lots of RAM to store the replicas\)\.
+The [*Space\-Based Architecture*](https://en.wikipedia.org/wiki/Space-based_architecture) \(*SBA*\) \[[SAP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#sap" >}}), [FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] is a [*Service Mesh*]({{< relref "../part-5--implementation-metapatterns/mesh.md#service-mesh" >}}) \(a [*Mesh*]({{< relref "../part-5--implementation-metapatterns/mesh.md" >}})\-based [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}) with at least one [*Proxy*]({{< relref "../part-3--extension-metapatterns/proxy.md" >}}) per service instance\) which also implements an in\-memory [*tuple space*](https://en.wikipedia.org/wiki/Tuple_space) \(shared dictionary\)\. Although it does not provide a full\-featured database interface it has very good performance, elasticity, and fault tolerance, while some implementations allow for dealing with datasets which are much larger than anything digestible by ordinary databases\. Its drawbacks include write collisions and high operating costs \(huge traffic for data replication and lots of RAM to store the replicas\)\.
 
 The main components of the architecture are:
 
 - *Processing Units* – the [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}}) with the business logic\. There may be one class of *Processing Units*, making *SBA* look like [*Pool*]({{< relref "../part-2--basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}}) \([*Shards*]({{< relref "../part-2--basic-metapatterns/shards.md" >}})\), or multiple classes, in which case the architecture becomes similar to [*Microservices*]({{< relref "../part-2--basic-metapatterns/services.md#microservices" >}}) with a *Shared Database*\.
-- *Data Grid* \(*Replicated Cache* \[[SAHP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa5" >}})\]\) – a [*Mesh*]({{< relref "../part-5--implementation-metapatterns/mesh.md" >}})\-based in\-memory database\. Each node of the *Data Grid* is co\-located with a single instance of a *Processing Unit*, providing the latter with very fast access to the data\. Changes to the data are replicated across the grid by its virtual *Data Replication Engine* which is usually implemented by every node of the grid\.
+- *Data Grid* \(*Replicated Cache* \[[SAHP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#sahp" >}})\]\) – a [*Mesh*]({{< relref "../part-5--implementation-metapatterns/mesh.md" >}})\-based in\-memory database\. Each node of the *Data Grid* is co\-located with a single instance of a *Processing Unit*, providing the latter with very fast access to the data\. Changes to the data are replicated across the grid by its virtual *Data Replication Engine* which is usually implemented by every node of the grid\.
 - *Persistent Database* – an external database which the *Data Grid* replicates \(caches\)\. Its schema is encapsulated in the *Readers* and *Writers*\.
 - *Data Readers* – components that read any data unavailable in the *Data Grid* from the *Persistent Database*\. Most cases see *Readers* employed upon starting the system to upload the entire contents of the database into the memory of the nodes\.
 - *Data Writers* – components that replicate the changes done in the *Data Grid* to the persistent storage to assure that no updates are lost if the system is shut down\. There can be a pair of *Reader* and *Writer* per class of *Processing Units* \(subdomain\) or a global pair that processes all read and write requests\.
@@ -174,7 +174,7 @@ Several actors \(processes, modules, device drivers\) communicate through one or
 <img src="/Variants/2/Shared files.png" alt="Shared files" width=100%/>
 </p>
 
-As a file system is a kind of shared dictionary, writing and reading files can be used to transfer data between applications\. A [data processing]({{< relref "../part-1--foundations/four-kinds-of-software.md#streaming-continuous-raw-data-input" >}}) [*Pipeline*]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}}) which stores intermediate results in files benefits from the ability to restart its calculation from the last successful step because files are persistent \[[DDIA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\]\.
+As a file system is a kind of shared dictionary, writing and reading files can be used to transfer data between applications\. A [data processing]({{< relref "../part-1--foundations/four-kinds-of-software.md#streaming-continuous-raw-data-input" >}}) [*Pipeline*]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}}) which stores intermediate results in files benefits from the ability to restart its calculation from the last successful step because files are persistent \[[DDIA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddia" >}})\]\.
 
 ### Persistent Event Log, Shared Event Store
 
@@ -192,9 +192,9 @@ More details are [available]({{< relref "../part-3--extension-metapatterns/combi
 <img src="/Variants/2/Stamp Coupling.png" alt="Stamp Coupling" width=96%/>
 </p>
 
-*Stamp Coupling* \[[SAHP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa5" >}})\] happens when a single data structure passes through an entire [*Pipeline*]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}}), with separate fields of the data structure targeting individual processing steps\.
+*Stamp Coupling* \[[SAHP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#sahp" >}})\] happens when a single data structure passes through an entire [*Pipeline*]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}}), with separate fields of the data structure targeting individual processing steps\.
 
-A [*choreographed*]({{< relref "../part-1--foundations/arranging-communication.md#choreography" >}}) system with no shared databases does not provide any way to aggregate the data spread over its multiple services\. If we need to collect everything known about a user or purchase, we pass a query message through the system, and every service appends to it whatever it knows of the subject \(just like post offices add their *stamps* to a letter\)\. The unified message becomes a kind of virtual \(temporary\) *Shared Repository* which the services \(*Content Enrichers* according to \[[EIP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#deds" >}})\]\) write to\. This also manifests in the dependencies: all the services [depend on the format of the query message]({{< relref "../part-1--foundations/arranging-communication.md#dependencies-1" >}}) as they would on the schema of a *Shared Repository*, instead of depending on each other, as is usual with *Pipelines*\.
+A [*choreographed*]({{< relref "../part-1--foundations/arranging-communication.md#choreography" >}}) system with no shared databases does not provide any way to aggregate the data spread over its multiple services\. If we need to collect everything known about a user or purchase, we pass a query message through the system, and every service appends to it whatever it knows of the subject \(just like post offices add their *stamps* to a letter\)\. The unified message becomes a kind of virtual \(temporary\) *Shared Repository* which the services \(*Content Enrichers* according to \[[EIP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}})\]\) write to\. This also manifests in the dependencies: all the services [depend on the format of the query message]({{< relref "../part-1--foundations/arranging-communication.md#dependencies-1" >}}) as they would on the schema of a *Shared Repository*, instead of depending on each other, as is usual with *Pipelines*\.
 
 ## Evolutions
 
@@ -232,7 +232,12 @@ Once a database appears, it is unlikely to go away\. I see the following evoluti
 
 A *Shared Repository* encapsulates a system’s data, allowing for [data\-centric]({{< relref "../part-1--foundations/arranging-communication.md#shared-data" >}}) development and kickstarting [*Service\-Based*]({{< relref "../part-2--basic-metapatterns/services.md#service-based-architecture" >}}) architectures through simplifying interservice interactions\. Its downsides are a frozen data schema and limited performance\.
 
+<nav>
+
 | \<\< [Middleware]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}) | ^ [Part 3\. Extension Metapatterns]({{< relref "../part-3--extension-metapatterns/_index.md" >}}) ^ | [Proxy]({{< relref "../part-3--extension-metapatterns/proxy.md" >}}) \>\> |
 | --- | --- | --- |
+
+</nav>
+
 
 

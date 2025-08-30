@@ -91,7 +91,12 @@ Take [*Saga Execution Component*]({{< relref "../part-3--extension-metapatterns/
 
 It’s that simple and stupid\. We can classify architectural patterns\.
 
+<nav>
+
 | \<\< [Introduction]({{< relref "../introduction/_index.md" >}}) | ^ [Introduction]({{< relref "../introduction/_index.md" >}}) ^ | [Metapatterns]({{< relref "../introduction/metapatterns.md" >}}) \>\> |
 | --- | --- | --- |
+
+</nav>
+
 
 

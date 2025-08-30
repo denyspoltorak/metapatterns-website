@@ -35,7 +35,7 @@ title = "Service-Oriented Architecture (SOA)"
 | Fine\-grained scaling | The teams are highly interdependent |
 
 
-<ins>References:</ins> \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}})\] has a chapter on Orchestration\-Driven \(Enterprise\) Service\-Oriented Architecture\. \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#lddd" >}})\] mentions Distributed Monolith\. There is also much \(though somewhat conflicting\) content over the Web\.
+<ins>References:</ins> \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] has a chapter on Orchestration\-Driven \(Enterprise\) Service\-Oriented Architecture\. \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\] mentions Distributed Monolith\. There is also much \(though somewhat conflicting\) content over the Web\.
 
 *Service\-Oriented Architecture* looks like the application of modular or object\-oriented design followed by distribution of the resulting components over a network\. The system usually contains three \(rarely four\) [*layers*]({{< relref "../part-2--basic-metapatterns/layers.md" >}}) of [*services*]({{< relref "../part-2--basic-metapatterns/services.md" >}}) where every service has access to all the services below it \(and sometimes some within its own layer\)\. The services stay small, but as their number grows it becomes hard to keep in mind all the API methods and contracts available which a high\-level component might use\. Another issue originates from the idea of reusable components – multiple applications, written for different clients with varied workflows, require the same service to behave in \(subtly\) different ways, either causing its API to bloat or else impairing its usability \(which means that a new customized duplicate service will likely be added to the system\)\. Use cases are slow because there is much interservice communication over the network\. Teams are interdependent as any use case involves many services, each owned by a different team\. Testability is poor because there are too many moving \(and being independently updated\!\) parts\. The foundational idea of service reuse failed in practice, but its child architecture, *SOA*, still survives in historical environments\.
 
@@ -144,7 +144,7 @@ It seems that some proponents of [*Nanoservices*]({{< relref "../part-2--basic-m
 <img src="/Evolutions/3/SOA - 1.png" alt="SOA - 1" width=100%/>
 </p>
 
-- Or into [*Sidecars*]({{< relref "../part-3--extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \[[DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddia" >}})\] if you employ a [*Service Mesh*]({{< relref "../part-5--implementation-metapatterns/mesh.md#service-mesh" >}}), resulting in much fewer network hops \(thus lower latency\) in request processing, but retaining the inter\-team dependencies\.
+- Or into [*Sidecars*]({{< relref "../part-3--extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \[[DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#dds" >}})\] if you employ a [*Service Mesh*]({{< relref "../part-5--implementation-metapatterns/mesh.md#service-mesh" >}}), resulting in much fewer network hops \(thus lower latency\) in request processing, but retaining the inter\-team dependencies\.
 
 
 <p align="center">
@@ -167,7 +167,7 @@ Afterwards you may deal with the remaining orchestration\. The idea is to move t
 
 Still another step is unbundling the [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}), which supports multiple protocols via [*Adapters*]({{< relref "../part-3--extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}):
 
-- If you have a [*Service Mesh*]({{< relref "../part-5--implementation-metapatterns/mesh.md#service-mesh" >}}), an *Adapter* may be put to a [*Sidecar*]({{< relref "../part-3--extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \[[DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddia" >}})\]\.
+- If you have a [*Service Mesh*]({{< relref "../part-5--implementation-metapatterns/mesh.md#service-mesh" >}}), an *Adapter* may be put to a [*Sidecar*]({{< relref "../part-3--extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \[[DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#dds" >}})\]\.
 - Otherwise there is an option of a [*hierarchical Middleware*]({{< relref "../part-4--fragmented-metapatterns/hierarchy.md#bottom-up-hierarchy-bus-of-buses-network-of-networks" >}}) \(*Bus of Buses*\) if closely related components share protocols\.
 
 
@@ -179,7 +179,12 @@ In any case, many of the evolutions will likely be very expensive, thus it makes
 
 *Service\-Oriented Architecture* divides each of the *integration*, *domain*, and *utility* layers into shared services\. The extensive fragmentation and reuse degrade performance and speed of development\. Nevertheless, huge projects are known to survive with this architecture\.
 
+<nav>
+
 | \<\< [Backends for Frontends \(BFF\)]({{< relref "../part-4--fragmented-metapatterns/backends-for-frontends--bff-.md" >}}) | ^ [Part 4\. Fragmented Metapatterns]({{< relref "../part-4--fragmented-metapatterns/_index.md" >}}) ^ | [Hierarchy]({{< relref "../part-4--fragmented-metapatterns/hierarchy.md" >}}) \>\> |
 | --- | --- | --- |
+
+</nav>
+
 
 

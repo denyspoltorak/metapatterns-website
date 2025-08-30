@@ -58,7 +58,12 @@ A *Pipeline* is a kind of *Services* with unidirectional flow\. Each service imp
 
 *<ins>Includes</ins>*: Pipes and Filters, Choreographed Event\-Driven Architecture, and Data Mesh\.
 
+<nav>
+
 | \<\< [Part 1\. Foundations]({{< relref "../part-1--foundations/_index.md" >}}) | ^ [Table of Contents]({{< relref "../_index.md" >}}) ^ | [Monolith]({{< relref "../part-2--basic-metapatterns/monolith.md" >}}) \>\> |
 | --- | --- | --- |
+
+</nav>
+
 
 

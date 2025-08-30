@@ -15,7 +15,7 @@ title = "Layered Services"
 
 - [Orchestrated]({{< relref "../part-1--foundations/arranging-communication.md#orchestration" >}}) Three\-Layered Services,
 - \(*Pipelined*\) [Choreographed]({{< relref "../part-1--foundations/arranging-communication.md#choreography" >}}) Two\-Layered Services,
-- \(*Pipelined*\) Command Query Responsibility Segregation \(CQRS\) \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#lddd" >}}), [LDDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#gof" >}})\]\.
+- \(*Pipelined*\) Command Query Responsibility Segregation \(CQRS\) \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}}), [LDDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#lddd" >}})\]\.
 
 
 <ins>Structure:</ins> Subdomain services divided into layers\.
@@ -37,7 +37,7 @@ Remarkable features of *Layered Services* include:
 <img src="/Performance/Layered Services - sharding.png" alt="Layered Services - sharding" width=100%/>
 </p>
 
-- The option to establish additional communication channels between lower layers in order to drive [*CQRS*]({{< relref "#command-query-responsibility-segregation-cqrs" >}}) databases \([read/write replicas]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md#read-only-replica" >}}) of the same database\) or [*CQRS Views*]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) \(cached subsets of data from other services\) \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#lddd" >}})\]\.
+- The option to establish additional communication channels between lower layers in order to drive [*CQRS*]({{< relref "#command-query-responsibility-segregation-cqrs" >}}) databases \([read/write replicas]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md#read-only-replica" >}}) of the same database\) or [*CQRS Views*]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) \(cached subsets of data from other services\) \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\]\.
 
 
 <p align="center">
@@ -54,7 +54,7 @@ Remarkable features of *Layered Services* include:
 <img src="/Variants/3/Three-Layered Services.png" alt="Three-Layered Services" width=100%/>
 </p>
 
-Probably the most common backend architecture has [three layers]({{< relref "../part-2--basic-metapatterns/layers.md#domain-driven-design-ddd-layers" >}}): *application*, *domain*, and *infrastructure* \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md" >}})\]\. The application layer [*orchestrates*]({{< relref "../part-1--foundations/arranging-communication.md#orchestration" >}}) the domain layer\.
+Probably the most common backend architecture has [three layers]({{< relref "../part-2--basic-metapatterns/layers.md#domain-driven-design-ddd-layers" >}}): *application*, *domain*, and *infrastructure* \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\]\. The application layer [*orchestrates*]({{< relref "../part-1--foundations/arranging-communication.md#orchestration" >}}) the domain layer\.
 
 If such an architecture is divided into [services]({{< relref "../part-2--basic-metapatterns/services.md" >}}), each of them receives a part of every layer, including application, which means that now there are as many *Orchestrators* as services\. Each *Orchestrator* implements the API of its service by integrating \(calling or messaging into\) the domain layer of its service and APIs of other services, which makes all the *Orchestrators* interdependent:
 
@@ -91,8 +91,8 @@ The good thing is that the majority of the code belongs to the domain layer whic
 
 or by building derived datasets:
 
-- A [*CQRS View*]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#lddd" >}})\] inside a service aggregates any events from other services which its owner is interested in\.
-- A dedicated [*Query Service*]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md#query-service-front-controller-data-warehouse-data-lake-aggregate-data-product-quantum-dpq-of-data-mesh" >}}) \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#lddd" >}})\] captures the whole system’s state by subscribing to events from all the services\.
+- A [*CQRS View*]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\] inside a service aggregates any events from other services which its owner is interested in\.
+- A dedicated [*Query Service*]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md#query-service-front-controller-data-warehouse-data-lake-aggregate-data-product-quantum-dpq-of-data-mesh" >}}) \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\] captures the whole system’s state by subscribing to events from all the services\.
 
 
 <p align="center">
@@ -140,7 +140,7 @@ If *Choreographed Layered Services* become coupled:
 <img src="/Evolutions/3/Two-Layered Services - 1.png" alt="Two-Layered Services - 1" width=100%/>
 </p>
 
-[*CQRS Views*]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#lddd" >}})\] or [*Query Services*]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md#query-service-front-controller-data-warehouse-data-lake-aggregate-data-product-quantum-dpq-of-data-mesh" >}}) \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#lddd" >}})\] are also an option:
+[*CQRS Views*]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\] or [*Query Services*]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md#query-service-front-controller-data-warehouse-data-lake-aggregate-data-product-quantum-dpq-of-data-mesh" >}}) \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\] are also an option:
 
 <p align="center">
 <img src="/Evolutions/3/Two-Layered Services - 2.png" alt="Two-Layered Services - 2" width=100%/>
@@ -161,7 +161,7 @@ An overgrown service can be:
 <img src="/Variants/3/CQRS.png" alt="CQRS" width=100%/>
 </p>
 
-*Command Query Responsibility Segregation* \(*CQRS*\) \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#lddd" >}}), [LDDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#gof" >}})\] is, essentially, the division of a [layered]({{< relref "../part-2--basic-metapatterns/layers.md" >}}) application or a service into two \(rarely more\) [services]({{< relref "../part-2--basic-metapatterns/services.md" >}}), one of which is responsible for write access \(handling *commands*\) to the domain data while the other\(s\) deal with read access \(*queries*\), thus [creating]({{< relref "../part-6--analytics/comparison-of-architectural-patterns.md#pipelines-in-architectural-patterns" >}}) a data [*pipeline*]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}}) \(see the diagram below\)\. Such an architecture makes sense when the write and read operations don’t rely on a common vision \(*model*\) of the domain, for example, writes are individual changes \([*OLTP*](https://en.wikipedia.org/wiki/Online_transaction_processing)\) that require cross\-checks and validation of input while reads show aggregated data \([*OLAP*](https://en.wikipedia.org/wiki/Online_analytical_processing)\) and may take long time to complete \(meaning that [*forces*]({{< relref "../part-1--foundations/forces--asynchronicity--and-distribution.md" >}}) for the read and write paths differ\)\. If there is nothing to share in the code, why not separate the implementations?
+*Command Query Responsibility Segregation* \(*CQRS*\) \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}}), [LDDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#lddd" >}})\] is, essentially, the division of a [layered]({{< relref "../part-2--basic-metapatterns/layers.md" >}}) application or a service into two \(rarely more\) [services]({{< relref "../part-2--basic-metapatterns/services.md" >}}), one of which is responsible for write access \(handling *commands*\) to the domain data while the other\(s\) deal with read access \(*queries*\), thus [creating]({{< relref "../part-6--analytics/comparison-of-architectural-patterns.md#pipelines-in-architectural-patterns" >}}) a data [*pipeline*]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}}) \(see the diagram below\)\. Such an architecture makes sense when the write and read operations don’t rely on a common vision \(*model*\) of the domain, for example, writes are individual changes \([*OLTP*](https://en.wikipedia.org/wiki/Online_transaction_processing)\) that require cross\-checks and validation of input while reads show aggregated data \([*OLAP*](https://en.wikipedia.org/wiki/Online_analytical_processing)\) and may take long time to complete \(meaning that [*forces*]({{< relref "../part-1--foundations/forces--asynchronicity--and-distribution.md" >}}) for the read and write paths differ\)\. If there is nothing to share in the code, why not separate the implementations?
 
 <p align="center">
 <img src="/Variants/3/CQRS - pipeline view.png" alt="CQRS - pipeline view" width=100%/>
@@ -171,7 +171,7 @@ This separation brings in the pros and cons of [*Services*]({{< relref "../part-
 
 *CQRS* has several variations:
 
-- The database may be shared, commands and queries may use dedicated databases, or the read service may maintain a [*Memory Image*](https://martinfowler.com/bliki/MemoryImage.html) / [*Materialized View*]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md#memory-image-materialized-view" >}}) \[[DDIA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\] fed by events from the write service \(as in other kinds of *Layered Services*\)\.
+- The database may be shared, commands and queries may use dedicated databases, or the read service may maintain a [*Memory Image*](https://martinfowler.com/bliki/MemoryImage.html) / [*Materialized View*]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md#memory-image-materialized-view" >}}) \[[DDIA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddia" >}})\] fed by events from the write service \(as in other kinds of *Layered Services*\)\.
 - Data [replication]({{< relref "../part-2--basic-metapatterns/shards.md#persistent-copy-replica" >}}) may be implemented as a [*pipeline*]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}}) between the databases \(based on nightly snapshots or [log\-based replication](https://www.dremio.com/wiki/log-based-replication/)\) or a [direct event feed](https://martinfowler.com/bliki/EagerReadDerivation.html) from the OLTP code to the OLAP database\.
 
 
@@ -222,7 +222,12 @@ Each backend depends on its database \(its technology and schema\)\. The OLTP to
 - *CQRS* that separates read and write request processing paths\.
 
 
+<nav>
+
 | \<\< [Part 4\. Fragmented Metapatterns]({{< relref "../part-4--fragmented-metapatterns/_index.md" >}}) | ^ [Part 4\. Fragmented Metapatterns]({{< relref "../part-4--fragmented-metapatterns/_index.md" >}}) ^ | [Polyglot Persistence]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md" >}}) \>\> |
 | --- | --- | --- |
+
+</nav>
+
 
 

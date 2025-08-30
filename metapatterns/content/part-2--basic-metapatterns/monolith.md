@@ -20,16 +20,16 @@ Let’s take a look at the simplest possible [metapattern]({{< relref "../introd
 By internal structure:
 
 - True Monolith / [Big Ball of Mud](http://laputan.org/mud/),
-- \(misapplied\) Layered Monolith \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}})\],
-- \(misapplied\) Modular Monolith \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}})\] \(Modulith\),
-- \(inexact\) Plugins \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}})\] and Hexagonal Architecture\.
+- \(misapplied\) Layered Monolith \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\],
+- \(misapplied\) Modular Monolith \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] \(Modulith\),
+- \(inexact\) Plugins \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] and Hexagonal Architecture\.
 
 
 By mode of action:
 
-- [Reactor](https://www.dre.vanderbilt.edu/~schmidt/PDF/reactor-siemens.pdf) \[[POSA2]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa1" >}})\], 
-- [Proactor](https://hillside.net/plop/plop97/Proceedings/pyarali.proactor.pdf) \[[POSA2]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa1" >}})\], 
-- \(inexact\) [Half\-Sync/Half\-Async](https://www.dre.vanderbilt.edu/~schmidt/PDF/PLoP-95.pdf) \[[POSA2]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa1" >}})\],
+- [Reactor](https://www.dre.vanderbilt.edu/~schmidt/PDF/reactor-siemens.pdf) \[[POSA2]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa2" >}})\], 
+- [Proactor](https://hillside.net/plop/plop97/Proceedings/pyarali.proactor.pdf) \[[POSA2]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa2" >}})\], 
+- \(inexact\) [Half\-Sync/Half\-Async](https://www.dre.vanderbilt.edu/~schmidt/PDF/PLoP-95.pdf) \[[POSA2]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa2" >}})\],
 - \(inexact\) [\(Re\)Actor\-with\-Extractors](http://ithare.com/multi-coring-and-non-blocking-instead-of-multi-threading-with-a-script/3/)\.
 
 
@@ -46,9 +46,9 @@ By mode of action:
 | The system’s state is self\-consistent | Any failure crashes the entire system |
 
 
-<ins>References:</ins> [Big Ball of Mud](http://www.laputan.org/mud/) for a philosophical discussion, [my article](https://itnext.io/introduction-to-software-architecture-with-actors-part-2-on-handling-messages-940c62cb06dc) and \[[POSA2]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa1" >}})\] for subtypes of *Monolith*, Martin Fowler’s discussion on [starting development with *Monolith*](https://martinfowler.com/bliki/MonolithFirst.html), \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#lddd" >}})\] for the [definition of *monolithic hell*](https://livebook.manning.com/book/microservices-patterns/chapter-1/25) and a post describing the [first\-hand experience of it](https://news.ycombinator.com/item?id=18442941)\.
+<ins>References:</ins> [Big Ball of Mud](http://www.laputan.org/mud/) for a philosophical discussion, [my article](https://itnext.io/introduction-to-software-architecture-with-actors-part-2-on-handling-messages-940c62cb06dc) and \[[POSA2]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa2" >}})\] for subtypes of *Monolith*, Martin Fowler’s discussion on [starting development with *Monolith*](https://martinfowler.com/bliki/MonolithFirst.html), \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\] for the [definition of *monolithic hell*](https://livebook.manning.com/book/microservices-patterns/chapter-1/25) and a post describing the [first\-hand experience of it](https://news.ycombinator.com/item?id=18442941)\.
 
-We distance ourselves from the [systems architecture’s definition]({{< relref "../part-6--analytics/ambiguous-patterns.md#monolith" >}}) of *Monolith* as a single unit of deployment because our main focus lies with the internal structure of systems\. Instead, we will use the old definition of a *monolithic* application as a cohesive lump of code containing no discernible components \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}}), [POSA1]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#peaa" >}})\]\.
+We distance ourselves from the [systems architecture’s definition]({{< relref "../part-6--analytics/ambiguous-patterns.md#monolith" >}}) of *Monolith* as a single unit of deployment because our main focus lies with the internal structure of systems\. Instead, we will use the old definition of a *monolithic* application as a cohesive lump of code containing no discernible components \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#gof" >}}), [POSA1]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa1" >}})\]\.
 
 A *Monolith* is non\-modular \(not divided by interfaces\) along all the structural dimensions\. Its thorough cohesiveness is both its blessing \(single\-step debugging, system\-wide optimizations\) and its curse \(messy code, no scalability of development and deployment, zero flexibility\)\.
 
@@ -107,9 +107,9 @@ Even though a *Monolith* is a single module, meaning that there are no dependenc
 <img src="/Variants/1/MonolithAsUnzoomed.png" alt="MonolithAsUnzoomed" width=100%/>
 </p>
 
-There is a misunderstanding because *software architecture* inspects the internals of *applications* at the level of *modules* or even classes while *systems architecture* deals with *distributed systems* and operates *deployment units* which tend to incorporate multiple modules or even applications\. Each branch of the architecture [calls]({{< relref "../part-6--analytics/ambiguous-patterns.md#monolith" >}}) its atomic unit a *Monolith*, leading to the term sticking both to a *module that cannot be subdivided*, as in \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] and \[[POSA1]({{< relref "../part-3--extension-metapatterns/shared-repository.md#blackboard" >}})\], and to a *\(sub\)system which must be deployed together*, as in present\-day literature\.
+There is a misunderstanding because *software architecture* inspects the internals of *applications* at the level of *modules* or even classes while *systems architecture* deals with *distributed systems* and operates *deployment units* which tend to incorporate multiple modules or even applications\. Each branch of the architecture [calls]({{< relref "../part-6--analytics/ambiguous-patterns.md#monolith" >}}) its atomic unit a *Monolith*, leading to the term sticking both to a *module that cannot be subdivided*, as in \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#gof" >}})\] and \[[POSA1]({{< relref "../part-3--extension-metapatterns/shared-repository.md#blackboard" >}})\], and to a *\(sub\)system which must be deployed together*, as in present\-day literature\.
 
-As we aspire to build a unified classification for both distributed and local systems, we must treat both kinds of components in the same way, whether they are [distributed services]({{< relref "../part-2--basic-metapatterns/services.md#distributed-services-service-based-architecture-space-based-architecture-microservices" >}}), [co\-located *Actors*]({{< relref "../part-2--basic-metapatterns/services.md#distributed-runtime-function-as-a-service-faas-including-nanoservices-backend-actors" >}}), or [in\-process modules]({{< relref "../part-2--basic-metapatterns/services.md#asynchronous-modules-modular-monolith-modulith-embedded-actors" >}})\. Thus, for the scope of the current book, we will follow the definition of *Monolith* from \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\]: “Tight coupling leads to *monolithic* systems, where you can't change or remove a class without understanding and changing many other classes”\. Still, we need to account for a couple of misnomers from system architecture\.
+As we aspire to build a unified classification for both distributed and local systems, we must treat both kinds of components in the same way, whether they are [distributed services]({{< relref "../part-2--basic-metapatterns/services.md#distributed-services-service-based-architecture-space-based-architecture-microservices" >}}), [co\-located *Actors*]({{< relref "../part-2--basic-metapatterns/services.md#distributed-runtime-function-as-a-service-faas-including-nanoservices-backend-actors" >}}), or [in\-process modules]({{< relref "../part-2--basic-metapatterns/services.md#asynchronous-modules-modular-monolith-modulith-embedded-actors" >}})\. Thus, for the scope of the current book, we will follow the definition of *Monolith* from \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#gof" >}})\]: “Tight coupling leads to *monolithic* systems, where you can't change or remove a class without understanding and changing many other classes”\. Still, we need to account for a couple of misnomers from system architecture\.
 
 ### True Monolith, Big Ball of Mud
 
@@ -125,7 +125,7 @@ A true *Monolith* features [no clear internal structure](http://laputan.org/mud/
 <img src="/Variants/1/Layered Monolith.png" alt="Layered Monolith" width=81%/>
 </p>
 
-When they say [*Layered Monolith*]({{< relref "../part-2--basic-metapatterns/layers.md#synchronous-layers-layered-monolith" >}}) \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}})\], that refers to a non\-distributed application with a layered structure, which is a proper [*Layers*]({{< relref "../part-2--basic-metapatterns/layers.md" >}}) architecture and will be discussed in the corresponding chapter\. It is called a *Monolith* for the [sole reason that it is not distributed]({{< relref "../part-6--analytics/ambiguous-patterns.md#monolith" >}})\. Nevertheless, *Layers* resemble *Monolith* in many aspects, including easy debugging and the risk of outgrowing the comfort zone of developers\.
+When they say [*Layered Monolith*]({{< relref "../part-2--basic-metapatterns/layers.md#synchronous-layers-layered-monolith" >}}) \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\], that refers to a non\-distributed application with a layered structure, which is a proper [*Layers*]({{< relref "../part-2--basic-metapatterns/layers.md" >}}) architecture and will be discussed in the corresponding chapter\. It is called a *Monolith* for the [sole reason that it is not distributed]({{< relref "../part-6--analytics/ambiguous-patterns.md#monolith" >}})\. Nevertheless, *Layers* resemble *Monolith* in many aspects, including easy debugging and the risk of outgrowing the comfort zone of developers\.
 
 ### \(misapplied\) Modular Monolith \(Modulith\)
 
@@ -133,7 +133,7 @@ When they say [*Layered Monolith*]({{< relref "../part-2--basic-metapatterns/lay
 <img src="/Variants/1/Modular Monolith.png" alt="Modular Monolith" width=88%/>
 </p>
 
-A [*Modular Monolith*]({{< relref "../part-2--basic-metapatterns/services.md#asynchronous-modules-modular-monolith-modulith-embedded-actors" >}}) \(*Modulith*\) \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}})\] is a single\-process application subdivided into modules that correspond to subdomains\. If the modules communicate via in\-process messaging, the architecture is nearly identical to coarse\-grained [*Actors*]({{< relref "../part-2--basic-metapatterns/services.md#actors" >}}), thus it is a *Monolith* only in name\. *Modulith* [is a kind of](https://en.wikipedia.org/wiki/Duck_typing) [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}}) – it supports development by multiple teams and the asynchronous variant is hard to debug\. The relation to *Monolith* is mostly limited to the inability to scale individual parts of the system\.
+A [*Modular Monolith*]({{< relref "../part-2--basic-metapatterns/services.md#asynchronous-modules-modular-monolith-modulith-embedded-actors" >}}) \(*Modulith*\) \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] is a single\-process application subdivided into modules that correspond to subdomains\. If the modules communicate via in\-process messaging, the architecture is nearly identical to coarse\-grained [*Actors*]({{< relref "../part-2--basic-metapatterns/services.md#actors" >}}), thus it is a *Monolith* only in name\. *Modulith* [is a kind of](https://en.wikipedia.org/wiki/Duck_typing) [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}}) – it supports development by multiple teams and the asynchronous variant is hard to debug\. The relation to *Monolith* is mostly limited to the inability to scale individual parts of the system\.
 
 ### \(inexact\) Plugins and Hexagonal Architecture
 
@@ -141,7 +141,7 @@ A [*Modular Monolith*]({{< relref "../part-2--basic-metapatterns/services.md#asy
 <img src="/Variants/1/Hexagonal Monolith.png" alt="Hexagonal Monolith" width=91%/>
 </p>
 
-[*Plugins*]({{< relref "../part-5--implementation-metapatterns/plugins.md" >}}) \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}})\] and [*Hexagonal Architecture*]({{< relref "../part-5--implementation-metapatterns/hexagonal-architecture.md" >}}) extend a \(sub\)system with external components\. These architectures can be applied to a *Monolith* without drastically changing its properties – it still remains relatively easy to write and debug but hard to support when outgrown\. Therefore, we will not currently discuss these modifications, mainly because each of them has a dedicated chapter\.
+[*Plugins*]({{< relref "../part-5--implementation-metapatterns/plugins.md" >}}) \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] and [*Hexagonal Architecture*]({{< relref "../part-5--implementation-metapatterns/hexagonal-architecture.md" >}}) extend a \(sub\)system with external components\. These architectures can be applied to a *Monolith* without drastically changing its properties – it still remains relatively easy to write and debug but hard to support when outgrown\. Therefore, we will not currently discuss these modifications, mainly because each of them has a dedicated chapter\.
 
 ## Variants by the mode of action
 
@@ -159,7 +159,7 @@ Any software module reacts to incoming events or data and produces outgoing even
 <img src="/Variants/1/Reactor - Single Thread.png" alt="Reactor - Single Thread" width=99%/>
 </p>
 
-In a [*Reactor*](https://www.dre.vanderbilt.edu/~schmidt/PDF/reactor-siemens.pdf) \[[POSA2]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa1" >}})\] a single thread waits for an incoming event or data packet, processes it with blocking calls to the underlying OS, hardware, and external dependencies and returns the result, rinse and repeat\.
+In a [*Reactor*](https://www.dre.vanderbilt.edu/~schmidt/PDF/reactor-siemens.pdf) \[[POSA2]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa2" >}})\] a single thread waits for an incoming event or data packet, processes it with blocking calls to the underlying OS, hardware, and external dependencies and returns the result, rinse and repeat\.
 
 That makes sense when the module owns and provides access to a hardware component which cannot do several actions at once, for example, a communication bus or a HDD firmware capable of a single read or write at any given moment\.
 
@@ -169,7 +169,7 @@ That makes sense when the module owns and provides access to a hardware componen
 <img src="/Variants/1/Reactor - Multiple Threads.png" alt="Reactor - Multiple Threads" width=99%/>
 </p>
 
-A [*Reactor*](https://www.dre.vanderbilt.edu/~schmidt/PDF/reactor-siemens.pdf) \[[POSA2]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa1" >}})\] may employ multiple threads by having a [*pool*]({{< relref "../part-2--basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}}) of them waiting for a request or data to come\. The incoming event activates a thread, which becomes dedicated to processing it, does several blocking calls and, finally, sends back a response\. When the request processing is complete, the thread returns to the pool of idle threads to wait for the next event to process\.
+A [*Reactor*](https://www.dre.vanderbilt.edu/~schmidt/PDF/reactor-siemens.pdf) \[[POSA2]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa2" >}})\] may employ multiple threads by having a [*pool*]({{< relref "../part-2--basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}}) of them waiting for a request or data to come\. The incoming event activates a thread, which becomes dedicated to processing it, does several blocking calls and, finally, sends back a response\. When the request processing is complete, the thread returns to the pool of idle threads to wait for the next event to process\.
 
 This is the default simple & stupid implementation of backend services\. Its pitfalls include contention for shared resources, deadlocks, and high memory consumption by OS\-level threads\.
 
@@ -179,7 +179,7 @@ This is the default simple & stupid implementation of backend services\. Its pit
 <img src="/Variants/1/Proactor.png" alt="Proactor" width=99%/>
 </p>
 
-In [*Proactor*](https://hillside.net/plop/plop97/Proceedings/pyarali.proactor.pdf) \[[POSA2]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa1" >}})\] a single thread processes all of the incoming events, both from the module’s clients and from the hardware or dependencies it manages\. When an event is received, the thread goes through a short piece of corresponding business logic \(*event handler*\) which usually does one or more non\-blocking actions, such as sending messages to other components, writing to registers of the managed hardware, or initiating an async I/O\. As soon as the event handler returns, the thread becomes ready to process further events\. As the thread never blocks, it is resource\-efficient and serves many interleaved tasks\.
+In [*Proactor*](https://hillside.net/plop/plop97/Proceedings/pyarali.proactor.pdf) \[[POSA2]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa2" >}})\] a single thread processes all of the incoming events, both from the module’s clients and from the hardware or dependencies it manages\. When an event is received, the thread goes through a short piece of corresponding business logic \(*event handler*\) which usually does one or more non\-blocking actions, such as sending messages to other components, writing to registers of the managed hardware, or initiating an async I/O\. As soon as the event handler returns, the thread becomes ready to process further events\. As the thread never blocks, it is resource\-efficient and serves many interleaved tasks\.
 
 This approach is good for real\-time systems where thread synchronization is largely forbidden because of the associated delays and for reactive [control]({{< relref "../part-1--foundations/four-kinds-of-software.md#control-real-time-hardware-input" >}}) applications which mostly adapt to the environment instead of running pre\-programmed scenarios\. The drawback is very poor structure of the code and debuggability as any complex behavior is broken into many independent event handlers\.
 
@@ -189,7 +189,7 @@ This approach is good for real\-time systems where thread synchronization is lar
 <img src="/Variants/1/Half-Sync Half-Async.png" alt="Half-Sync Half-Async" width=99%/>
 </p>
 
-[*Half\-Sync/Half\-Async*](https://www.dre.vanderbilt.edu/~schmidt/PDF/PLoP-95.pdf) \[[POSA2]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa1" >}})\] originally described the interaction between user space and kernel threads in operating systems which is not much different from that behind coroutines and fibers\. A single thread \(or a thread pool with one thread per CPU core\) handles all the incoming events and switches its call stack in the process\.
+[*Half\-Sync/Half\-Async*](https://www.dre.vanderbilt.edu/~schmidt/PDF/PLoP-95.pdf) \[[POSA2]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa2" >}})\] originally described the interaction between user space and kernel threads in operating systems which is not much different from that behind coroutines and fibers\. A single thread \(or a thread pool with one thread per CPU core\) handles all the incoming events and switches its call stack in the process\.
 
 Every incoming request is allocated a call stack which stores the processing state \(local variables and methods called\) of the request\. When it needs to access an external component, the [runtime system](https://en.wikipedia.org/wiki/Runtime_system) saves the request’s stack, does a non\-blocking call, and the execution thread returns to its original stack to wait for any new event to handle while the request processing stack remains frozen until the action it has initiated completes asynchronously\. Then the runtime switches the execution thread back to the stored request’s stack and continues processing the request until it completes and its stack is deleted\.
 
@@ -349,7 +349,12 @@ The last group of evolutions does not really change the monolithic nature of the
 
 A *Monolith* is an unstructured application\. It is the best architecture for rapid prototyping by a small team and it usually grants the best performance to costs ratio\. However, it does not scale, lacks any flexibility and becomes unmanageable as the amount of code grows\.
 
+<nav>
+
 | \<\< [Part 2\. Basic Metapatterns]({{< relref "../part-2--basic-metapatterns/_index.md" >}}) | ^ [Part 2\. Basic Metapatterns]({{< relref "../part-2--basic-metapatterns/_index.md" >}}) ^ | [Shards]({{< relref "../part-2--basic-metapatterns/shards.md" >}}) \>\> |
 | --- | --- | --- |
+
+</nav>
+
 
 

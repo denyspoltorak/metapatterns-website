@@ -20,8 +20,8 @@ title = "Mesh"
 - [Peer\-to\-Peer Networks](https://en.wikipedia.org/wiki/Peer-to-peer),
 - Leaf\-Spine Architecture / [Spine\-Leaf Architecture](https://www.geeksforgeeks.org/spine-leaf-architecture/),
 - Actors,
-- [Service Mesh](https://buoyant.io/service-mesh-manifesto) \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}}), [MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#lddd" >}})\],
-- [Space\-Based Architecture](https://en.wikipedia.org/wiki/Space-based_architecture) \[[SAP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#sahp" >}}), [FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}})\]\.
+- [Service Mesh](https://buoyant.io/service-mesh-manifesto) \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}}), [MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\],
+- [Space\-Based Architecture](https://en.wikipedia.org/wiki/Space-based_architecture) \[[SAP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#sap" >}}), [FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\]\.
 
 
 <ins>Structure:</ins> A system of interconnected [*Shards*]({{< relref "../part-2--basic-metapatterns/shards.md" >}}) which usually make a [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}})\.
@@ -36,7 +36,7 @@ title = "Mesh"
 | Available off the shelf | Unreliable communication must be accounted for in the code |
 
 
-<ins>References:</ins> [Wikipedia](https://en.wikipedia.org/wiki/Network_topology#Classification) and \[[DDIA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\] on topology and protocols\. \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}})\] on *Service Mesh* and *Space\-Based Architecture*\. A [long](https://buoyant.io/service-mesh-manifesto) and [short](https://www.oracle.com/cloud/cloud-native/service-mesh/what-is-a-service-mesh/) article on *Service Mesh*\.
+<ins>References:</ins> [Wikipedia](https://en.wikipedia.org/wiki/Network_topology#Classification) and \[[DDIA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddia" >}})\] on topology and protocols\. \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] on *Service Mesh* and *Space\-Based Architecture*\. A [long](https://buoyant.io/service-mesh-manifesto) and [short](https://www.oracle.com/cloud/cloud-native/service-mesh/what-is-a-service-mesh/) article on *Service Mesh*\.
 
 If a system is required to survive faults, all of its components must be both [*sharded*]({{< relref "../part-2--basic-metapatterns/shards.md" >}}) and interconnected, which makes a *Mesh* – a network of interacting instances \(*nodes*\)\. In most cases the lower layer of a *shard* implements connectivity while the business logic resides in its upper layer\(s\)\. Whilst the connectivity component tends to be identical in every node of a system, the upper components may be identical – forming [*Shards*]({{< relref "../part-2--basic-metapatterns/shards.md" >}}), or different – forming [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}})\.
 
@@ -141,10 +141,10 @@ A system of *Actors* may be classified as a *fully connected Mesh* with the acto
 <img src="/Variants/4/Service Mesh.png" alt="Service Mesh" width=100%/>
 </p>
 
-A [*Service Mesh*](https://buoyant.io/service-mesh-manifesto) \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}}), [MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#lddd" >}})\] is a distributed [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}) for running [*Microservices*]({{< relref "../part-2--basic-metapatterns/services.md#microservices" >}})\. It is a 2\-layer *Mesh* which contains one or few management nodes \(*control plane*\) and many user nodes \(*data plane*\)\. Each data plane node colocates:
+A [*Service Mesh*](https://buoyant.io/service-mesh-manifesto) \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}}), [MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\] is a distributed [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}) for running [*Microservices*]({{< relref "../part-2--basic-metapatterns/services.md#microservices" >}})\. It is a 2\-layer *Mesh* which contains one or few management nodes \(*control plane*\) and many user nodes \(*data plane*\)\. Each data plane node colocates:
 
 - A *mesh engine node* that deals with connectivity,
-- One or more [*Sidecars*]({{< relref "../part-3--extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \[[DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddia" >}})\] \([*Proxies*]({{< relref "../part-3--extension-metapatterns/proxy.md" >}}) where the support of *cross\-cutting concerns* – the identical code for use by every service, e\.g\. logging or encryption – resides\),
+- One or more [*Sidecars*]({{< relref "../part-3--extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \[[DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#dds" >}})\] \([*Proxies*]({{< relref "../part-3--extension-metapatterns/proxy.md" >}}) where the support of *cross\-cutting concerns* – the identical code for use by every service, e\.g\. logging or encryption – resides\),
 - A user *application* \(*microservice*\) that differs from node to node\.
 
 
@@ -160,7 +160,7 @@ Ready\-to\-use *Service Mesh* frameworks are popular with the *Microservices* ar
 <img src="/Variants/4/Space-Based Architecture.png" alt="Space-Based Architecture" width=100%/>
 </p>
 
-[*Space\-Based Architecture*](https://en.wikipedia.org/wiki/Space-based_architecture) \[[SAP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#sahp" >}}), [FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}})\] is a kind of [*Service Mesh*]({{< relref "#service-mesh" >}}) with an integrated [*Shared Repository*]({{< relref "../part-3--extension-metapatterns/shared-repository.md" >}}) \(a [*tuple space*](https://en.wikipedia.org/wiki/Tuple_space) – shared dictionary – called [*Data Grid*]({{< relref "../part-3--extension-metapatterns/shared-repository.md#data-grid-of-space-based-architecture-sba-replicated-cache-distributed-cache" >}})\) and an [*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}}) \(called *Processing Grid*\)\. The user services are called *Processing Units*\. They may be identical \(making [*Shards*]({{< relref "../part-2--basic-metapatterns/shards.md" >}})\) or different \(resulting in [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}})\)\. This architecture is used for:
+[*Space\-Based Architecture*](https://en.wikipedia.org/wiki/Space-based_architecture) \[[SAP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#sap" >}}), [FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] is a kind of [*Service Mesh*]({{< relref "#service-mesh" >}}) with an integrated [*Shared Repository*]({{< relref "../part-3--extension-metapatterns/shared-repository.md" >}}) \(a [*tuple space*](https://en.wikipedia.org/wiki/Tuple_space) – shared dictionary – called [*Data Grid*]({{< relref "../part-3--extension-metapatterns/shared-repository.md#data-grid-of-space-based-architecture-sba-replicated-cache-distributed-cache" >}})\) and an [*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}}) \(called *Processing Grid*\)\. The user services are called *Processing Units*\. They may be identical \(making [*Shards*]({{< relref "../part-2--basic-metapatterns/shards.md" >}})\) or different \(resulting in [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}})\)\. This architecture is used for:
 
 - Highly scalable systems with relatively small datasets in which case the entire database contents are replicated in the memory of each node\. This works around the throughput and latency limits of a normal database\.
 - Huge datasets, with each node owning a part of the total data\. This hacks around the storage capacity and latency limits of a database which may even be kept out of the loop, leaving the *Mesh* as the only data storage\.
@@ -181,7 +181,12 @@ The in\-memory data in the nodes is usually loaded from a *Persistent Database* 
 
 *Mesh* is a layer of intercommunicating instances of an infrastructure component that makes a foundation for running custom services in a distributed environment\. This architecture is famous for its scalability and fault tolerance but is too complex to implement in\-house and may incur performance, administration and development overhead\.
 
+<nav>
+
 | \<\< [Microkernel]({{< relref "../part-5--implementation-metapatterns/microkernel.md" >}}) | ^ [Part 5\. Implementation Metapatterns]({{< relref "../part-5--implementation-metapatterns/_index.md" >}}) ^ | [Part 6\. Analytics]({{< relref "../part-6--analytics/_index.md" >}}) \>\> |
 | --- | --- | --- |
+
+</nav>
+
 
 

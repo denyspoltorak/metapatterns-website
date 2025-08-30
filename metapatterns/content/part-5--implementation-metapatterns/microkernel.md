@@ -11,7 +11,7 @@ title = "Microkernel"
 
 *Communism\.* Share resources among consumers\.
 
-<ins>Known as:</ins> Microkernel \[[POSA1]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#peaa" >}}), [POSA4]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa3" >}}) but [not]({{< relref "../part-6--analytics/ambiguous-patterns.md#microkernel" >}}) [SAP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#sahp" >}}) and [FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}})\]\.
+<ins>Known as:</ins> Microkernel \[[POSA1]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa1" >}}), [POSA4]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa4" >}}) but [not]({{< relref "../part-6--analytics/ambiguous-patterns.md#microkernel" >}}) [SAP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#sap" >}}) and [FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\]\.
 
 <ins>Aspects:</ins>
 
@@ -23,8 +23,8 @@ title = "Microkernel"
 
 - Operating System,
 - Software Framework,
-- Virtualizer / Hypervisor / Container Orchestrator \[[DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddia" >}})\] / Distributed Runtime,
-- Interpreter \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] / Script / Domain\-Specific Language \(DSL\),
+- Virtualizer / Hypervisor / Container Orchestrator \[[DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#dds" >}})\] / Distributed Runtime,
+- Interpreter \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#gof" >}})\] / Script / Domain\-Specific Language \(DSL\),
 - Configurator / Configuration File,
 - Saga Engine,
 - [AUTOSAR Classic Platform](https://www.autosar.org/fileadmin/standards/R20-11/CP/AUTOSAR_EXP_VFB.pdf)\.
@@ -44,7 +44,7 @@ title = "Microkernel"
 | The system is platform\-independent |  |
 
 
-<ins>References:</ins> Microkernel pattern in \[[POSA1]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#peaa" >}})\]\.
+<ins>References:</ins> Microkernel pattern in \[[POSA1]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa1" >}})\]\.
 
 While vanilla [*Plugins*]({{< relref "../part-5--implementation-metapatterns/plugins.md" >}}) and [*Hexagonal Architecture*]({{< relref "../part-5--implementation-metapatterns/hexagonal-architecture.md" >}}) keep the business logic in the monolithic *core* component, *Microkernel* treats the core as a thin [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}) \(called *microkernel*\) that connects user\-facing applications \(*external services*\) to resource providers \(*internal services*\)\. The *resource* in question can be anything ranging from CPU time or RAM to business functions\. The external services communicate with the microkernel through its *API* while the internal services implement the microkernel's *service provider interfaces* \(*SPIs*\) \(usually there is a kind of internal service and an SPI per resource type\)\.
 
@@ -69,8 +69,8 @@ The *applications* depend on the *API* of the *microkernel* while the *providers
 *Microkernel* is <ins>applicable</ins> in:
 
 - *System programming\.* You manage system resources and services which will be used by untrusted client applications\. Hide the real resources behind a trusted proxy layer\. Be ready to change the hardware platform without affecting existing client code\.
-- *Frameworks that integrate several subdomains\.* The microkernel component coordinates multiple specialized libraries\. Its API is a *Facade* \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] for the managed functionality\.
-- *Scripting or* [*DSL*](https://en.wikipedia.org/wiki/Domain-specific_language)*s\.* The microkernel is an *Interpreter* \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] which lets your clients’ code manage the underlying system\.
+- *Frameworks that integrate several subdomains\.* The microkernel component coordinates multiple specialized libraries\. Its API is a *Facade* \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#gof" >}})\] for the managed functionality\.
+- *Scripting or* [*DSL*](https://en.wikipedia.org/wiki/Domain-specific_language)*s\.* The microkernel is an *Interpreter* \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#gof" >}})\] which lets your clients’ code manage the underlying system\.
 
 
 *Microkernel* <ins>does not fit</ins>:
@@ -111,7 +111,7 @@ The original inspiration for *Microkernel*, namely *operating systems*, provides
 <img src="/Variants/4/Framework.png" alt="Framework" width=100%/>
 </p>
 
-The *microkernel* is a [*Facade*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}}) \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] that integrates a set of libraries and exposes a user\-friendly high\-level interface\. [PAM](https://docs.oracle.com/cd/E23824_01/html/819-2145/pam-01.html) looks like a reasonably good example\.
+The *microkernel* is a [*Facade*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}}) \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#gof" >}})\] that integrates a set of libraries and exposes a user\-friendly high\-level interface\. [PAM](https://docs.oracle.com/cd/E23824_01/html/819-2145/pam-01.html) looks like a reasonably good example\.
 
 ### Virtualizer, Hypervisor, Container Orchestrator, Distributed Runtime
 
@@ -119,7 +119,7 @@ The *microkernel* is a [*Facade*]({{< relref "../part-3--extension-metapatterns/
 <img src="/Variants/4/Virtualizer.png" alt="Virtualizer" width=100%/>
 </p>
 
-*Hypervisors* \(Xen\), PaaS and [FaaS](https://shivangsnewsletter.com/p/why-doesnt-cloudflare-use-containers), *container orchestrators* \(Kubernetes\) \[[DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddia" >}})\], and distributed *actor frameworks* \(Akka, Erlang/Elixir/OTP\) use resources of the underlying computer\(s\) to run guest applications\. A hypervisor virtualizes the resources of a single computer while a distributed runtime manages those of multiple servers – in the last case there are several instances of the same kind of an *internal server* which abstracts a host system\.
+*Hypervisors* \(Xen\), PaaS and [FaaS](https://shivangsnewsletter.com/p/why-doesnt-cloudflare-use-containers), *container orchestrators* \(Kubernetes\) \[[DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#dds" >}})\], and distributed *actor frameworks* \(Akka, Erlang/Elixir/OTP\) use resources of the underlying computer\(s\) to run guest applications\. A hypervisor virtualizes the resources of a single computer while a distributed runtime manages those of multiple servers – in the last case there are several instances of the same kind of an *internal server* which abstracts a host system\.
 
 ### Interpreter, Script, Domain\-Specific Language \(DSL\)
 
@@ -127,7 +127,7 @@ The *microkernel* is a [*Facade*]({{< relref "../part-3--extension-metapatterns/
 <img src="/Variants/4/Interpreter.png" alt="Interpreter" width=100%/>
 </p>
 
-User\-provided *scripts* are run by an *Interpreter* \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] which also allows them to access a set of installed libraries\. The *Interpreter* is a microkernel, and the syntax of the script or [*DSL*](https://en.wikipedia.org/wiki/Domain-specific_language) it interprets is the microkernel’s API\.
+User\-provided *scripts* are run by an *Interpreter* \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#gof" >}})\] which also allows them to access a set of installed libraries\. The *Interpreter* is a microkernel, and the syntax of the script or [*DSL*](https://en.wikipedia.org/wiki/Domain-specific_language) it interprets is the microkernel’s API\.
 
 ### Configurator, Configuration File
 
@@ -143,7 +143,7 @@ User\-provided *scripts* are run by an *Interpreter* \[[GoF]({{< relref "../part
 <img src="/Variants/4/Saga engine.png" alt="Saga engine" width=100%/>
 </p>
 
-A [*Saga*]({{< relref "../part-3--extension-metapatterns/orchestrator.md#orchestrated-saga-saga-orchestrator-saga-execution-component-transaction-script-coordinator" >}}) \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#lddd" >}})\] orchestrates distributed transactions\. It may be written in a *DSL* which requires a compiler or interpreter, which is a *microkernel*, to execute\.
+A [*Saga*]({{< relref "../part-3--extension-metapatterns/orchestrator.md#orchestrated-saga-saga-orchestrator-saga-execution-component-transaction-script-coordinator" >}}) \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\] orchestrates distributed transactions\. It may be written in a *DSL* which requires a compiler or interpreter, which is a *microkernel*, to execute\.
 
 ### AUTOSAR Classic Platform
 
@@ -159,7 +159,12 @@ The *microkernel* shows up as *Virtual Functional Bus* \(*VFB*\) which, as a *di
 
 *Microkernel* is a ubiquitous approach to sharing resources among consumers, where both resource providers and consumers may be written by external companies\.
 
+<nav>
+
 | \<\< [Hexagonal Architecture]({{< relref "../part-5--implementation-metapatterns/hexagonal-architecture.md" >}}) | ^ [Part 5\. Implementation Metapatterns]({{< relref "../part-5--implementation-metapatterns/_index.md" >}}) ^ | [Mesh]({{< relref "../part-5--implementation-metapatterns/mesh.md" >}}) \>\> |
 | --- | --- | --- |
+
+</nav>
+
 
 

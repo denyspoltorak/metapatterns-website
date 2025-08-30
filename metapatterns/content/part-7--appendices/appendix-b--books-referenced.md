@@ -6,7 +6,7 @@ title = "Appendix B. Books referenced."
 # Appendix B\. Books referenced\.
 
 <a name="ddd"></a>
-**DDD** – Domain\-Driven Design: Tackling Complexity in the Heart of Software\. *Eric Evans\. Addison\-Wesley \(2003\)\.* \(Most of these patterns are also well\-described in \[[LDDD]({{< relref "#gof" >}})\]\)
+**DDD** – Domain\-Driven Design: Tackling Complexity in the Heart of Software\. *Eric Evans\. Addison\-Wesley \(2003\)\.* \(Most of these patterns are also well\-described in \[[LDDD]({{< relref "#lddd" >}})\]\)
 
 <a name="ddia"></a>
 **DDIA** – Designing Data\-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems\. *Martin Kleppmann\. O’Reilly Media, Inc\. \(2017\)\.*
@@ -27,7 +27,7 @@ title = "Appendix B. Books referenced."
 **GoF** – Design Patterns: Elements of Reusable Object\-Oriented Software\. *Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides\. Addison\-Wesley \(1994\)\.*
 
 <a name="lddd"></a>
-**LDDD** – Learning Domain\-Driven Design: Aligning Software Architecture and Business Strategy\. *Vlad Khononov\. O’Reilly Media, Inc\. \(2021\)\.* \(Duplicates \[[DDD](#)\] thus I marked as \[LDDD\] only patterns not covered by \[[DDD](#)\]\)
+**LDDD** – Learning Domain\-Driven Design: Aligning Software Architecture and Business Strategy\. *Vlad Khononov\. O’Reilly Media, Inc\. \(2021\)\.* \(Duplicates \[[DDD]({{< relref "#ddd" >}})\] thus I marked as \[LDDD\] only patterns not covered by \[[DDD]({{< relref "#ddd" >}})\]\)
 
 <a name="mp"></a>
 **MP** – Microservices Patterns: With Examples in Java\. *Chris Richardson\. Manning Publications \(2018\)*\.
@@ -53,9 +53,15 @@ title = "Appendix B. Books referenced."
 <a name="sahp"></a>
 **SAHP** – Software Architecture: The Hard Parts: Modern Trade\-Off Analyses for Distributed Architectures\. *Neal Ford, Mark Richards, Pramod Sadalage, and Zhamak Dehghani\. O’Reilly Media, Inc\. \(2021\)\.*
 
-**SAP** – Software Architecture Patterns\. *Mark Richards\. O’Reilly Media, Inc\. \(2015\)\.* \(All of the architectures referenced here are in \[[FSA]({{< relref "#eip" >}})\] as well, but \[SAP\] is free\)
+<a name="sap"></a>
+**SAP** – Software Architecture Patterns\. *Mark Richards\. O’Reilly Media, Inc\. \(2015\)\.* \(All of the architectures referenced here are in \[[FSA]({{< relref "#fsa" >}})\] as well, but \[SAP\] is free\)
+
+<nav>
 
 | \<\< [Appendix A\. Acknowledgements\.]({{< relref "../part-7--appendices/appendix-a--acknowledgements.md" >}}) | ^ [Part 7\. Appendices]({{< relref "../part-7--appendices/_index.md" >}}) ^ | [Appendix C\. Copyright\.]({{< relref "../part-7--appendices/appendix-c--copyright.md" >}}) \>\> |
 | --- | --- | --- |
+
+</nav>
+
 
 

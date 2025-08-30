@@ -21,7 +21,12 @@ I want to thank everybody who prayed for me\.
 
 This book was made possible by many people who sacrificed their happy years, their limbs and their lives to protect those who stayed behind\.
 
+<nav>
+
 | \<\< [Part 7\. Appendices]({{< relref "../part-7--appendices/_index.md" >}}) | ^ [Part 7\. Appendices]({{< relref "../part-7--appendices/_index.md" >}}) ^ | [Appendix B\. Books referenced\.]({{< relref "../part-7--appendices/appendix-b--books-referenced.md" >}}) \>\> |
 | --- | --- | --- |
+
+</nav>
+
 
 

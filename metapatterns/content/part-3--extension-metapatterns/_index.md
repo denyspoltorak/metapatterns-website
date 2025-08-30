@@ -54,7 +54,12 @@ Several patterns combine the functionality of two or more extension layers\.
 
 *<ins>Includes</ins>*: Message Bus, API Gateway, Event Mediator, Enterprise Service Bus, Service Mesh, Middleware of Space\-Based Architecture, and Shared Event Store\.
 
+<nav>
+
 | \<\< [Part 2\. Basic Metapatterns]({{< relref "../part-2--basic-metapatterns/_index.md" >}}) | ^ [Table of Contents]({{< relref "../_index.md" >}}) ^ | [Middleware]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}) \>\> |
 | --- | --- | --- |
+
+</nav>
+
 
 
