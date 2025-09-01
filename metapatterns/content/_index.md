@@ -4,9 +4,6 @@ title = "Table of Contents"
 +++
 
 
-### [Table of Contents]({{< relref "_index.md" >}})
-
-
 ### [Introduction]({{< relref "introduction/_index.md" >}})
 
 - [About this book]({{< relref "introduction/about-this-book.md" >}})
