@@ -20,6 +20,27 @@ I had no time to research every idea collected while the book was being written 
 
 Other smaller topics that I was able to look into made the following chapters:
 
+## Contents:
+
+<nav>
+
+- [Comparison of architectural patterns]({{< relref "part-6--analytics/comparison-of-architectural-patterns/_index.md" >}})
+  - [Sharing functionality or data among services]({{< relref "part-6--analytics/comparison-of-architectural-patterns/sharing-functionality-or-data-among-services.md" >}})
+  - [Pipelines in architectural patterns]({{< relref "part-6--analytics/comparison-of-architectural-patterns/pipelines-in-architectural-patterns.md" >}})
+  - [Dependency inversion in architectural patterns]({{< relref "part-6--analytics/comparison-of-architectural-patterns/dependency-inversion-in-architectural-patterns.md" >}})
+  - [Indirection in commands and queries]({{< relref "part-6--analytics/comparison-of-architectural-patterns/indirection-in-commands-and-queries.md" >}})
+- [Ambiguous patterns]({{< relref "part-6--analytics/ambiguous-patterns.md" >}})
+- [Architecture and product life cycle]({{< relref "part-6--analytics/architecture-and-product-life-cycle.md" >}})
+- [Real-world inspirations for architectural patterns]({{< relref "part-6--analytics/real-world-inspirations-for-architectural-patterns.md" >}})
+- [The heart of software architecture]({{< relref "part-6--analytics/the-heart-of-software-architecture/_index.md" >}})
+  - [Cohesers and decouplers]({{< relref "part-6--analytics/the-heart-of-software-architecture/cohesers-and-decouplers.md" >}})
+  - [Deconstructing patterns]({{< relref "part-6--analytics/the-heart-of-software-architecture/deconstructing-patterns.md" >}})
+  - [Choose your own architecture]({{< relref "part-6--analytics/the-heart-of-software-architecture/choose-your-own-architecture.md" >}})
+
+</nav>
+
+
+
 <nav>
 
 | \<\< [Mesh]({{< relref "../part-5--implementation-metapatterns/mesh.md" >}}) | ^ [Table of Contents]({{< relref "../_index.md" >}}) ^ | [Comparison of architectural patterns]({{< relref "../part-6--analytics/comparison-of-architectural-patterns/_index.md" >}}) \>\> |

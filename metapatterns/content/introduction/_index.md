@@ -45,6 +45,17 @@ Please consider sharing your experience as a co\-author of a future version of t
 
 ## Short table of contents
 
+## Contents:
+
+<nav>
+
+- [About this book]({{< relref "introduction/about-this-book.md" >}})
+- [Metapatterns]({{< relref "introduction/metapatterns.md" >}})
+
+</nav>
+
+
+
 <nav>
 
 | \<\< [Table of Contents]({{< relref "../_index.md" >}}) | ^ [Table of Contents]({{< relref "../_index.md" >}}) ^ | [About this book]({{< relref "../introduction/about-this-book.md" >}}) \>\> |

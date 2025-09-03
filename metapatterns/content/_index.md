@@ -4,6 +4,8 @@ title = "Table of Contents"
 bookCollapseSection = true
 +++
 
+<nav>
+
 
 ### [Introduction]({{< relref "introduction/_index.md" >}})
 
@@ -97,6 +99,9 @@ bookCollapseSection = true
 - [Appendix G. Glossary.]({{< relref "part-7--appendices/appendix-g--glossary.md" >}})
 - [Appendix H. History of changes.]({{< relref "part-7--appendices/appendix-h--history-of-changes.md" >}})
 - [Appendix I. Index of patterns.]({{< relref "part-7--appendices/appendix-i--index-of-patterns.md" >}})
+
+</nav>
+
 
 
 <nav>

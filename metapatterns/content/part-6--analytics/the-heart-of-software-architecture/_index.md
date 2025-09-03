@@ -8,6 +8,18 @@ bookCollapseSection = true
 
 As the visible world boils down to protons and neutrons which stick together in various combinations, so too does the entirety of software architecture as a field of endeavor grow from an interplay of *cohesion* and *decoupling*\.
 
+## Contents:
+
+<nav>
+
+- [Cohesers and decouplers]({{< relref "part-6--analytics/the-heart-of-software-architecture/cohesers-and-decouplers.md" >}})
+- [Deconstructing patterns]({{< relref "part-6--analytics/the-heart-of-software-architecture/deconstructing-patterns.md" >}})
+- [Choose your own architecture]({{< relref "part-6--analytics/the-heart-of-software-architecture/choose-your-own-architecture.md" >}})
+
+</nav>
+
+
+
 <nav>
 
 | \<\< [Real\-world inspirations for architectural patterns]({{< relref "../../part-6--analytics/real-world-inspirations-for-architectural-patterns.md" >}}) | ^ [Part 6\. Analytics]({{< relref "../../part-6--analytics/_index.md" >}}) ^ | [Cohesers and decouplers]({{< relref "../../part-6--analytics/the-heart-of-software-architecture/cohesers-and-decouplers.md" >}}) \>\> |

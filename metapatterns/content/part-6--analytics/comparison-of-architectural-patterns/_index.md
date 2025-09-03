@@ -8,6 +8,19 @@ bookCollapseSection = true
 
 This chapter is a compilation of small sections each of which examines one aspect of the architectural patterns included in this book\. It shows the value of having a list of metapatterns to iterate over and analyze\.
 
+## Contents:
+
+<nav>
+
+- [Sharing functionality or data among services]({{< relref "part-6--analytics/comparison-of-architectural-patterns/sharing-functionality-or-data-among-services.md" >}})
+- [Pipelines in architectural patterns]({{< relref "part-6--analytics/comparison-of-architectural-patterns/pipelines-in-architectural-patterns.md" >}})
+- [Dependency inversion in architectural patterns]({{< relref "part-6--analytics/comparison-of-architectural-patterns/dependency-inversion-in-architectural-patterns.md" >}})
+- [Indirection in commands and queries]({{< relref "part-6--analytics/comparison-of-architectural-patterns/indirection-in-commands-and-queries.md" >}})
+
+</nav>
+
+
+
 <nav>
 
 | \<\< [Part 6\. Analytics]({{< relref "../../part-6--analytics/_index.md" >}}) | ^ [Part 6\. Analytics]({{< relref "../../part-6--analytics/_index.md" >}}) ^ | [Sharing functionality or data among services]({{< relref "../../part-6--analytics/comparison-of-architectural-patterns/sharing-functionality-or-data-among-services.md" >}}) \>\> |
