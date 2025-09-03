@@ -60,7 +60,7 @@ A *Pipeline* is a kind of *Services* with unidirectional flow\. Each service imp
 
 <nav>
 
-| \<\< [Arranging communication]({{< relref "../part-1--foundations/arranging-communication.md" >}}) | ^ [Table of Contents]({{< relref "../_index.md" >}}) ^ | [Monolith]({{< relref "../part-2--basic-metapatterns/monolith.md" >}}) \>\> |
+| \<\< [Comparison of the options]({{< relref "../part-1--foundations/arranging-communication/comparison-of-the-options.md" >}}) | ^ [Table of Contents]({{< relref "../_index.md" >}}) ^ | [Monolith]({{< relref "../part-2--basic-metapatterns/monolith.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

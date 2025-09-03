@@ -50,7 +50,7 @@ In most \(all?\) implementations the user *application* is colocated with a *nod
 
 *Mesh*, being a *sharded Middleware*, inherits dependencies from both of its parent metapatterns:
 
-- As with [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}), the services that run over a *Mesh* depend both on the *Mesh’s API* and on each other \(or on a shared message format, aka [*Stamp Coupling*]({{< relref "../part-3--extension-metapatterns/shared-repository.md#inexact-stamp-coupling" >}}), or a [*Shared Database*]({{< relref "../part-3--extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) if they [use one for communication]({{< relref "../part-1--foundations/arranging-communication.md#shared-data" >}})\)\.
+- As with [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}), the services that run over a *Mesh* depend both on the *Mesh’s API* and on each other \(or on a shared message format, aka [*Stamp Coupling*]({{< relref "../part-3--extension-metapatterns/shared-repository.md#inexact-stamp-coupling" >}}), or a [*Shared Database*]({{< relref "../part-3--extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) if they [use one for communication]({{< relref "../part-1--foundations/arranging-communication/shared-data.md" >}})\)\.
 - As with [*Shards*]({{< relref "../part-2--basic-metapatterns/shards.md" >}}), the nodes of the *Mesh* should communicate through a backward\- and forward\-compatible protocol as there will likely be periods of time when multiple versions of the *Mesh* nodes coexist\.
 
 
@@ -150,7 +150,7 @@ A [*Service Mesh*](https://buoyant.io/service-mesh-manifesto) \[[FSA]({{< relref
 
 The control plane \(re\-\)starts, updates, scales, and collects statistics from the nodes of the data plane\.
 
-*Service Mesh* addresses some of the weaknesses of naive [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}}): it provides tools for centralized management and allows for virtual [sharing]({{< relref "../part-6--analytics/comparison-of-architectural-patterns.md#sharing-functionality-or-data-among-services" >}}) \(through creating physical copies\) of libraries to be accessed by all the service instances\. It also takes care of scaling and load balancing\. 
+*Service Mesh* addresses some of the weaknesses of naive [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}}): it provides tools for centralized management and allows for virtual [sharing]({{< relref "../part-6--analytics/comparison-of-architectural-patterns/sharing-functionality-or-data-among-services.md" >}}) \(through creating physical copies\) of libraries to be accessed by all the service instances\. It also takes care of scaling and load balancing\. 
 
 Ready\-to\-use *Service Mesh* frameworks are popular with the *Microservices* architecture\.
 

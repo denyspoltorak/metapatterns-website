@@ -101,7 +101,7 @@ Each [adapter]({{< relref "../part-3--extension-metapatterns/proxy.md#adapter-an
 - May be a shallow [*Hierarchy*]({{< relref "../part-4--fragmented-metapatterns/hierarchy.md" >}})\.
 - Implements [*Monolith*]({{< relref "../part-2--basic-metapatterns/monolith.md" >}}) or [*Layers*]({{< relref "../part-2--basic-metapatterns/layers.md" >}})\.
 - Extends [*Monolith*]({{< relref "../part-2--basic-metapatterns/monolith.md" >}}), [*Layers*]({{< relref "../part-2--basic-metapatterns/layers.md" >}}) or, rarely, [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}}) with one or two layers of *services*\.
-- The [*MVC* family of patterns]({{< relref "#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}}) is also [derived]({{< relref "../part-6--analytics/comparison-of-architectural-patterns.md#pipelines-in-architectural-patterns" >}}) from [*Pipeline*]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}})\.
+- The [*MVC* family of patterns]({{< relref "#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}}) is also [derived]({{< relref "../part-6--analytics/comparison-of-architectural-patterns/pipelines-in-architectural-patterns.md" >}}) from [*Pipeline*]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}})\.
 
 
 ## Variants by placement of adapters
@@ -159,7 +159,7 @@ As *Hexagonal Architecture* built upon the [DDD](https://en.wikipedia.org/wiki/D
 [*Separated Presentation*](https://martinfowler.com/eaaDev/SeparatedPresentation.html) protects business logic from a dependency on *presentation* \(interactions with the system’s user via a window, command line, or web page\)\. There is a [great variety](https://blog.ircmaxell.com/2014/11/alternatives-to-mvc.html) of such patterns, commonly known as *Model\-View\-Controller* \(MVC\) alternatives\. They are derived from *Hexagonal Architecture* by omitting every component not directly involved in user interactions and make three structurally distinct groups:
 
 - Bidirectional flow – the *view* \(user\-facing component\) both receives input and produces output and there is often an explicit *adapter* between it and the main system, resulting in [*Layers*]({{< relref "../part-2--basic-metapatterns/layers.md" >}})\.
-- Unidirectional flow – the *controller* receives input while the *view* produces output, [forming]({{< relref "../part-6--analytics/comparison-of-architectural-patterns.md#model-view-controller-mvc" >}}) a kind of [*Pipeline*]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}})\.
+- Unidirectional flow – the *controller* receives input while the *view* produces output, [forming]({{< relref "../part-6--analytics/comparison-of-architectural-patterns/pipelines-in-architectural-patterns.md#model-view-controller-mvc" >}}) a kind of [*Pipeline*]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}})\.
 - Hierarchical with multiple *models*, [discussed]({{< relref "../part-4--fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}}) in the [*Hierarchy*]({{< relref "../part-4--fragmented-metapatterns/hierarchy.md" >}}) chapter\.
 
 

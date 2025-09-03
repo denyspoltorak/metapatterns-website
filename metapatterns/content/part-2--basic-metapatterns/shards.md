@@ -196,7 +196,7 @@ This approach provides perfect elasticity and flexibility of deployment at the c
 
 ## Evolutions
 
-There are two kinds of evolutions for *Shards*: those intrinsic to the component sharded and those specific to the *Shards* pattern\. All of them are summarized below while [Appendix E]({{< relref "../part-7--appendices/appendix-e--evolutions.md" >}}) provides more details on the second kind\.
+There are two kinds of evolutions for *Shards*: those intrinsic to the component sharded and those specific to the *Shards* pattern\. All of them are summarized below while [Appendix E]({{< relref "../part-7--appendices/appendix-e--evolutions/_index.md" >}}) provides more details on the second kind\.
 
 ### Evolutions of a sharded monolith
 

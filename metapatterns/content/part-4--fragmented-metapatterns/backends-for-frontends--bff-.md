@@ -51,7 +51,7 @@ As the multiple *Orchestrators* of *BFF* donâ€™t intercommunicate, the patternâ€
 
 ### Dependencies
 
-Each *BFF* depends on all the services it uses \(usually every service in the system\)\. The services themselves are likely to be independent, as is common in [*orchestrated* systems]({{< relref "../part-1--foundations/arranging-communication.md#orchestration" >}})\.
+Each *BFF* depends on all the services it uses \(usually every service in the system\)\. The services themselves are likely to be independent, as is common in [*orchestrated* systems]({{< relref "../part-1--foundations/arranging-communication/orchestration.md" >}})\.
 
 <p align="center">
 <img src="/Dependencies/Backends for Frontends.png" alt="Backends for Frontends" width=91%/>

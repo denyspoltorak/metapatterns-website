@@ -282,7 +282,7 @@ An example of such a system can be found in an old mobile phone or a digital cam
 
 ## Evolutions
 
-Layers are not without drawbacks which may force your system to evolve\. A summary of such evolutions is given below while more details can be found in [Appendix E]({{< relref "../part-7--appendices/appendix-e--evolutions.md" >}})\.
+Layers are not without drawbacks which may force your system to evolve\. A summary of such evolutions is given below while more details can be found in [Appendix E]({{< relref "../part-7--appendices/appendix-e--evolutions/_index.md" >}})\.
 
 ### Evolutions that make more layers
 

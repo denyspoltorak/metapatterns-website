@@ -65,7 +65,7 @@ There are three ways to build communication in a pipeline, each with different d
 <img src="/Dependencies/Pipeline.png" alt="Pipeline" width=99%/>
 </p>
 
-See the [*Choreography* chapter]({{< relref "../part-1--foundations/arranging-communication.md#choreography" >}}) for more detailed discussion\.
+See the [*Choreography* chapter]({{< relref "../part-1--foundations/arranging-communication/choreography.md" >}}) for more detailed discussion\.
 
 ### Applicability
 
@@ -79,7 +79,7 @@ See the [*Choreography* chapter]({{< relref "../part-1--foundations/arranging-co
 *Pipeline* <ins>does not work</ins> for:
 
 - *High number of use cases\.* The number of components and their interactions is going to be roughly proportional to the number of supported use cases and will easily overwhelm any developer or architect if new scenarios are added over time\.
-- *Complex use cases*\. Any conditional logic written as two or three lines of code with [*orchestration*]({{< relref "../part-1--foundations/arranging-communication.md#orchestration" >}}) is likely to need a separate pipeline and dedicated services with [*choreography*]({{< relref "../part-1--foundations/arranging-communication.md#choreography" >}})\. Errors and corner cases are remarkably difficult to handle \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\]\.
+- *Complex use cases*\. Any conditional logic written as two or three lines of code with [*orchestration*]({{< relref "../part-1--foundations/arranging-communication/orchestration.md" >}}) is likely to need a separate pipeline and dedicated services with [*choreography*]({{< relref "../part-1--foundations/arranging-communication/choreography.md" >}})\. Errors and corner cases are remarkably difficult to handle \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\]\.
 - *Low latency*\. Every step of a data packet along its journey between services takes time, not in the least because of data serialization\. Moreover, the next service in the chain may still be busy processing previous data packets or its activation involves the OS scheduler\.
 
 
@@ -88,7 +88,7 @@ See the [*Choreography* chapter]({{< relref "../part-1--foundations/arranging-co
 *Pipeline*:
 
 - Is a kind of [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}}) with unidirectional communication and often a single input method\.
-- Is [involved]({{< relref "../part-6--analytics/comparison-of-architectural-patterns.md#pipelines-in-architectural-patterns" >}}) in [*CQRS*]({{< relref "../part-4--fragmented-metapatterns/layered-services.md#command-query-responsibility-segregation-cqrs" >}}), [*Polyglot Persistence* with derived databases]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md#variants-with-derived-storage" >}}), and [*MVC*]({{< relref "../part-5--implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}})\.
+- Is [involved]({{< relref "../part-6--analytics/comparison-of-architectural-patterns/pipelines-in-architectural-patterns.md" >}}) in [*CQRS*]({{< relref "../part-4--fragmented-metapatterns/layered-services.md#command-query-responsibility-segregation-cqrs" >}}), [*Polyglot Persistence* with derived databases]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md#variants-with-derived-storage" >}}), and [*MVC*]({{< relref "../part-5--implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}})\.
 - Can be extended with a [*Proxy*]({{< relref "../part-3--extension-metapatterns/proxy.md" >}}), [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}), or [*Shared Repository*]({{< relref "../part-3--extension-metapatterns/shared-repository.md" >}})\.
 
 
@@ -134,8 +134,8 @@ Examples: Unix shell pipes, processing of video streams, many types of hardware\
 
 In practice, there are [two kinds](https://theburningmonk.com/2020/08/choreography-vs-orchestration-in-the-land-of-serverless/) of *Event\-Driven Architectures*:
 
-- [*Choreographed*]({{< relref "../part-1--foundations/arranging-communication.md#choreography" >}}) */ Broker Topology* / [*Event Collaboration*](https://martinfowler.com/eaaDev/EventCollaboration.html) \[[DEDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#deds" >}})\] – the events are notifications \(usually via publish/subscribe\) and the services form tree\-like structures, matching our definition of *Pipeline*\.
-- [*Orchestrated*]({{< relref "../part-1--foundations/arranging-communication.md#orchestration" >}}) */ Mediator Topology* / [*Request\-Response Collaboration*](https://martinfowler.com/eaaDev/RequestResponseCollaboration.html) – the events are request/confirmation pairs and usually there is a single entity that drives a use case by sending requests and receiving confirmations\. Such a system corresponds to our [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}}) metapattern with the supervisor being an [*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}}), discussed in a separate chapter\.
+- [*Choreographed*]({{< relref "../part-1--foundations/arranging-communication/choreography.md" >}}) */ Broker Topology* / [*Event Collaboration*](https://martinfowler.com/eaaDev/EventCollaboration.html) \[[DEDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#deds" >}})\] – the events are notifications \(usually via publish/subscribe\) and the services form tree\-like structures, matching our definition of *Pipeline*\.
+- [*Orchestrated*]({{< relref "../part-1--foundations/arranging-communication/orchestration.md" >}}) */ Mediator Topology* / [*Request\-Response Collaboration*](https://martinfowler.com/eaaDev/RequestResponseCollaboration.html) – the events are request/confirmation pairs and usually there is a single entity that drives a use case by sending requests and receiving confirmations\. Such a system corresponds to our [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}}) metapattern with the supervisor being an [*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}}), discussed in a separate chapter\.
 
 
 An ordinary *Choreographed Event\-Driven Architecture* \[[SAP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#sap" >}}), [FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}}), [DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#dds" >}})\] is built as a set of subdomain services \(similar to those of the parent [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}}) metapattern\)\. Each of the services subscribes to notifications from other services which it uses as action/data inputs and produces notifications that other services may rely on\. For example, an email service may subscribe to error notifications from other services in the system to let the users know about troubles that occur while processing their orders\. It will also subscribe to the user data service’s add/edit/delete notifications to keep its user contact database updated\.
@@ -188,7 +188,7 @@ A [*nanoservice*]({{< relref "../part-2--basic-metapatterns/services.md#single-f
 
 *Pipeline* [inherits its set of evolutions from *Services*]({{< relref "../part-2--basic-metapatterns/services.md#evolutions" >}})\. Filters can be added, split in two, merged, or replaced\. Many systems employ a [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}) \(a pub/sub or pipeline framework\), a [*Shared Repository*]({{< relref "../part-3--extension-metapatterns/shared-repository.md" >}}) \(which may be a database or a file system\), or [*Proxies*]({{< relref "../part-3--extension-metapatterns/proxy.md" >}})\.
 
-There are a couple of pipeline\-specific evolutions, with more details provided in [Appendix E]({{< relref "../part-7--appendices/appendix-e--evolutions.md" >}}):
+There are a couple of pipeline\-specific evolutions, with more details provided in [Appendix E]({{< relref "../part-7--appendices/appendix-e--evolutions/_index.md" >}}):
 
 - The first service of the *Pipeline* can be promoted to a [*Front Controller*]({{< relref "../part-3--extension-metapatterns/combined-component.md#front-controller" >}}) \[[SAHP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#sahp" >}})\] which tracks the status updates for every request it handles\.
 

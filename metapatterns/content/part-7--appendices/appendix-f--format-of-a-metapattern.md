@@ -27,7 +27,7 @@ Most diagrams feature the following colors:
 
 *Use cases* and *domain logic* comprise *business logic* \[[PEAA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#peaa" >}})\] – the code that makes your software different from whatever else is on the market\. It is this part of the system which your customers pay for, and it usually is much larger than the other parts, which makes business logic the primary focus of development\.
 
-In [*choreographed*]({{< relref "../part-1--foundations/arranging-communication.md#choreography" >}}) systems use cases are defined by the web of communication channels instead of code inside the system’s components\. That is represented by green arrows and overall lack of green areas on corresponding diagrams\.
+In [*choreographed*]({{< relref "../part-1--foundations/arranging-communication/choreography.md" >}}) systems use cases are defined by the web of communication channels instead of code inside the system’s components\. That is represented by green arrows and overall lack of green areas on corresponding diagrams\.
 
 ### Abstract
 
@@ -89,7 +89,7 @@ I tried to show the difference between synonymous names for every variant or exa
 
 This covers a brief summary of possible changes to the architecture under review\. Each change leads to a new architecture which usually matches another metapattern\.
 
-[Appendix E]({{< relref "../part-7--appendices/appendix-e--evolutions.md" >}}) discusses many evolutions in greater detail:
+[Appendix E]({{< relref "../part-7--appendices/appendix-e--evolutions/_index.md" >}}) discusses many evolutions in greater detail:
 
 - A diagram that shows the original and resulting structure\.
 - The list of patterns, present in the resulting architecture\. More general forms of each pattern are given in parentheses, i\.e\. Pattern \(Metapattern \(Parent Metapattern\)\)\.
@@ -102,7 +102,7 @@ This covers a brief summary of possible changes to the architecture under review
 
 <nav>
 
-| \<\< [Appendix E\. Evolutions\.]({{< relref "../part-7--appendices/appendix-e--evolutions.md" >}}) | ^ [Part 7\. Appendices]({{< relref "../part-7--appendices/_index.md" >}}) ^ | [Appendix G\. Glossary\.]({{< relref "../part-7--appendices/appendix-g--glossary.md" >}}) \>\> |
+| \<\< [Combined Component:]({{< relref "../part-7--appendices/appendix-e--evolutions/combined-component-.md" >}}) | ^ [Part 7\. Appendices]({{< relref "../part-7--appendices/_index.md" >}}) ^ | [Appendix G\. Glossary\.]({{< relref "../part-7--appendices/appendix-g--glossary.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

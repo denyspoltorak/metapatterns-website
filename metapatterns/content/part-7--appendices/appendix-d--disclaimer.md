@@ -9,7 +9,7 @@ THIS BOOK IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” AND 
 
 <nav>
 
-| \<\< [Appendix C\. Copyright\.]({{< relref "../part-7--appendices/appendix-c--copyright.md" >}}) | ^ [Part 7\. Appendices]({{< relref "../part-7--appendices/_index.md" >}}) ^ | [Appendix E\. Evolutions\.]({{< relref "../part-7--appendices/appendix-e--evolutions.md" >}}) \>\> |
+| \<\< [Appendix C\. Copyright\.]({{< relref "../part-7--appendices/appendix-c--copyright.md" >}}) | ^ [Part 7\. Appendices]({{< relref "../part-7--appendices/_index.md" >}}) ^ | [Appendix E\. Evolutions\.]({{< relref "../part-7--appendices/appendix-e--evolutions/_index.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

@@ -141,7 +141,7 @@ title = "Appendix I. Index of patterns."
 
 [Database Abstraction Layer]({{< relref "../part-3--extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) \(DBAL or DAL\)
 
-[Dependency Inversion]({{< relref "../part-6--analytics/comparison-of-architectural-patterns.md#dependency-inversion-in-architectural-patterns" >}})
+[Dependency Inversion]({{< relref "../part-6--analytics/comparison-of-architectural-patterns/dependency-inversion-in-architectural-patterns.md" >}})
 
 [Deployment Manager]({{< relref "../part-3--extension-metapatterns/middleware.md" >}})
 

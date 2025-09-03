@@ -87,7 +87,7 @@ The basic patterns lay the foundation for any system by paving ways to *divide* 
 
 - The pattern got its name from real\-world plumbing\.
 - You’ll see similar arrangements in [cellular metabolism](https://en.wikipedia.org/wiki/Metabolism)\.
-- It is the basis for [functional programming]({{< relref "../part-1--foundations/arranging-communication.md#functional-decentralized-streaming-paradigm--choreography" >}})\.
+- It is the basis for [functional programming]({{< relref "../part-1--foundations/arranging-communication/programming-and-architectural-paradigms.md#functional-decentralized-streaming-paradigm--choreography" >}})\.
 - Linux command line tools are often skillfully composed into pipelines\.
 - Hardware is full of pipelines: from [CPU](https://en.wikipedia.org/wiki/Instruction_pipelining) and [GPU](https://en.wikipedia.org/wiki/Graphics_pipeline) to audio and video processing\.
 - Finally, a UI wizard passes its users through a series of screens\.
@@ -269,7 +269,7 @@ Architectural patterns have parallels in the natural world, our society and/or d
 
 <nav>
 
-| \<\< [Architecture and product life cycle]({{< relref "../part-6--analytics/architecture-and-product-life-cycle.md" >}}) | ^ [Part 6\. Analytics]({{< relref "../part-6--analytics/_index.md" >}}) ^ | [The heart of software architecture]({{< relref "../part-6--analytics/the-heart-of-software-architecture.md" >}}) \>\> |
+| \<\< [Architecture and product life cycle]({{< relref "../part-6--analytics/architecture-and-product-life-cycle.md" >}}) | ^ [Part 6\. Analytics]({{< relref "../part-6--analytics/_index.md" >}}) ^ | [The heart of software architecture]({{< relref "../part-6--analytics/the-heart-of-software-architecture/_index.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

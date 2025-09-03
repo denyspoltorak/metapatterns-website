@@ -5,7 +5,7 @@ title = "Ambiguous patterns"
 
 # Ambiguous patterns
 
-We’ve seen a single pattern come under many names, as happens with [*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}}), and also one name used for multiple topologies, as with [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}}), which may [orchestrate each other]({{< relref "../part-1--foundations/arranging-communication.md#mutual-orchestration" >}}), make a [*Pipeline*]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}}), or be components of the [*Service\-Oriented Architecture*]({{< relref "../part-4--fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}) \(*SOA*\)\. On top of that, there are several pattern names that are often believed to be unambiguous while each of them sees conflicting definitions in books or over the web \(thanks to [*Semantic Diffusion*](https://martinfowler.com/bliki/SemanticDiffusion.html) or independent coining of the term by multiple authors\)\. Let’s explore the last kind, which is the most dangerous both for your understanding of other people and for your time wasted in arguments\.
+We’ve seen a single pattern come under many names, as happens with [*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}}), and also one name used for multiple topologies, as with [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}}), which may [orchestrate each other]({{< relref "../part-1--foundations/arranging-communication/orchestration.md#mutual-orchestration" >}}), make a [*Pipeline*]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}}), or be components of the [*Service\-Oriented Architecture*]({{< relref "../part-4--fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}) \(*SOA*\)\. On top of that, there are several pattern names that are often believed to be unambiguous while each of them sees conflicting definitions in books or over the web \(thanks to [*Semantic Diffusion*](https://martinfowler.com/bliki/SemanticDiffusion.html) or independent coining of the term by multiple authors\)\. Let’s explore the last kind, which is the most dangerous both for your understanding of other people and for your time wasted in arguments\.
 
 ### Monolith
 
@@ -123,7 +123,7 @@ A few names of architectural patterns cause confusion as the meaning of each of 
 
 <nav>
 
-| \<\< [Comparison of architectural patterns]({{< relref "../part-6--analytics/comparison-of-architectural-patterns.md" >}}) | ^ [Part 6\. Analytics]({{< relref "../part-6--analytics/_index.md" >}}) ^ | [Architecture and product life cycle]({{< relref "../part-6--analytics/architecture-and-product-life-cycle.md" >}}) \>\> |
+| \<\< [Indirection in commands and queries]({{< relref "../part-6--analytics/comparison-of-architectural-patterns/indirection-in-commands-and-queries.md" >}}) | ^ [Part 6\. Analytics]({{< relref "../part-6--analytics/_index.md" >}}) ^ | [Architecture and product life cycle]({{< relref "../part-6--analytics/architecture-and-product-life-cycle.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

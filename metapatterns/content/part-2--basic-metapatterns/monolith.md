@@ -229,7 +229,7 @@ Each phase lasts until every object in the system completes its tasks scheduled 
 
 ## Evolutions
 
-Every architecture has drawbacks and tends to evolve in a variety of ways to address them\. Below is a brief summary of common evolutions of *Monolith* with more information available in [Appendix E]({{< relref "../part-7--appendices/appendix-e--evolutions.md" >}})\.
+Every architecture has drawbacks and tends to evolve in a variety of ways to address them\. Below is a brief summary of common evolutions of *Monolith* with more information available in [Appendix E]({{< relref "../part-7--appendices/appendix-e--evolutions/_index.md" >}})\.
 
 ### Evolutions to Shards
 
