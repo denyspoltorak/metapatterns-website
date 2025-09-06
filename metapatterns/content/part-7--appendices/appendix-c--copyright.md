@@ -1,6 +1,9 @@
 +++
 weight = 3
 title = "Appendix C. Copyright."
+bookSearchExclude = true
+[sitemap]
+  disable = true
 +++
 
 # Appendix C\. Copyright\.

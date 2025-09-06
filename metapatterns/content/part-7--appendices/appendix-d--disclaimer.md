@@ -1,6 +1,9 @@
 +++
 weight = 4
 title = "Appendix D. Disclaimer."
+bookSearchExclude = true
+[sitemap]
+  disable = true
 +++
 
 # Appendix D\. Disclaimer\.

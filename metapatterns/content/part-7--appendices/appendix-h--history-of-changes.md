@@ -1,6 +1,9 @@
 +++
 weight = 8
 title = "Appendix H. History of changes."
+bookSearchExclude = true
+[sitemap]
+  disable = true
 +++
 
 # Appendix H\. History of changes\.

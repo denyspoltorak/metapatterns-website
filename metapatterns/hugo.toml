@@ -2,6 +2,7 @@ baseURL = 'https://metapatterns.io/'
 languageCode = 'en-us'
 title = 'Architectural Metapatterns'
 theme = 'hugo-book'
+BookComments = false
 
 enableRobotsTXT = true
 printPathWarnings = true

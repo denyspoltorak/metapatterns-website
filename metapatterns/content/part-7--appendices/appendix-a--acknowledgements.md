@@ -1,6 +1,9 @@
 +++
 weight = 1
 title = "Appendix A. Acknowledgements."
+bookSearchExclude = true
+[sitemap]
+  disable = true
 +++
 
 # Appendix A\. Acknowledgements\.
