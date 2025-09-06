@@ -19,7 +19,11 @@ If *cohesion* and *decoupling* dictate software architecture, they should surfac
 
 Please beware that each of those principles in and of themselves involves decoupling which is not free – your software may end up having too many moving parts and strict rules to remain easy to read and support\.
 
+<aside>
+
 > When we choose between cohesion and decoupling, we choose between a single component and a pair of components connected through a constraint rule\. The more decoupling, the more components and rules we have to handle\. Sooner, rather than later, the number of individual components and rules will overwhelm any developer\.
+
+</aside>
 
 ## Gang of Four patterns
 

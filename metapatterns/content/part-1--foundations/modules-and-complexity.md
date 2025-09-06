@@ -5,7 +5,11 @@ title = "Modules and complexity"
 
 # Modules and complexity
 
+<aside>
+
 > This chapter is loosely based on [A Philosophy of Software Design](https://blog.pragmaticengineer.com/a-philosophy-of-software-design-review/) by John Ousterhout and [my article](https://medium.com/itnext/introduction-to-software-architecture-with-actors-part-1-89de6000e0d3)\.
+
+</aside>
 
 Any software system which we encounter is very likely to be too complex to comprehend all at once – the human mind is incapable of discerning a large number of entities and their relations\. It tends to simplify reality by building abstractions: as soon as we define the many shiny pieces of metal, glass and rubber as a ‘car’ we can identify ‘highways’, ‘parking spaces’ and ‘passengers’ – we live in a world of the abstractions which we create\. In the same way the software we write is built of services, processes, files, classes, procedures – modules that conceal the swarm of bits and pieces which we are powerless against\. Let’s reflect on that\.
 

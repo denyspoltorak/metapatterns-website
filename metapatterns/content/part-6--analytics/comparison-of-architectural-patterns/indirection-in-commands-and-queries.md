@@ -11,7 +11,11 @@ Each component operates its own *domain model* \[[DDD]({{< relref "../../part-7-
 
 If we want for each module or service to continue with a model that fits its needs, we have to protect it from the influence of models of other components by employing indirection – a translator – between them\.
 
+<aside>
+
 > In a system of subdomain\-dedicated [*Services*]({{< relref "../../part-2--basic-metapatterns/services.md" >}}) a service may need to operate entities that are defined in another service’s subdomain\. For example, the financial and recruiting departments’ software operates employees, but the employee data which each department needs is different\. Moreover, it also differs from the employee records in the HR department which is responsible for adding, editing, and discarding the employees\. We don’t want our accountants to spend their nights seeking the correlation between salaries, birthday horoscopes from HRs, and MBTI tests from the recruiters\.
+
+</aside>
 
 ## Command \(OLTP\) systems
 

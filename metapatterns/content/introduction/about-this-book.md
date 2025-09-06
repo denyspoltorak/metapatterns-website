@@ -68,7 +68,11 @@ In my opinion:
 
 It is likely that those approaches are best used with systems of different sizes: SOLID is aimed at stand\-alone application design while the heavy frameworks and certifications suit distributed enterprise architectures\. In such a worldview patterns span everything in between the two extremes\.
 
+<aside>
+
 > Patterns of software architecture are abstract just like [Plato’s Ideas or Forms](https://en.wikipedia.org/wiki/Theory_of_forms) in philosophy or classes in object\-oriented programming\. There is only one instance of each given pattern, which is a general idea or a very high\-level blueprint for every implementation of the pattern ever seen in the code\. 
+
+</aside>
 
 ## What’s wrong with patterns
 

@@ -44,7 +44,11 @@ By state:
 
 *Shards* are multiple and, in most cases, independent instances of a component or subsystem which the pattern is applied to\. They provide scalability, often redundancy and sometimes locality, at the cost of slicing or duplicating the component’s state \(writable data\), which obviously does not affect inherently stateless components\. Most of this pattern’s specific evolutions look for a way to coordinate shards at the logic or data level\.
 
+<aside>
+
 > There is a sibling metapattern, [*Mesh*]({{< relref "../part-5--implementation-metapatterns/mesh.md" >}}), in which instances of a component closely communicate among themselves\. The difference between the patterns lies in the strength of interactions: while each *shard* exists primarily to serve its clients, a *Mesh node*’s priority is preserving the *Mesh* itself from falling prey to entropy, making the *Mesh* into a reliable distributed \(virtual\) layer\. Some systems, such as distributed databases, hold the middle ground – their shards or nodes both intercommunicate intensely and execute a variety of client requests\. 
+
+</aside>
 
 ### Performance
 
@@ -143,7 +147,11 @@ There are several subtypes of sharding that differ in the way they handle state:
 
 *Shards* \[[DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#dds" >}})\] own the non\-overlapping parts of the system’s state\. For example, a sharded phonebook \(or DNS\) would use one shard for all contacts with initial “A”, another shard for contacts with initial “B” and so on \(in reality they use hashes \[[DDIA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddia" >}})\]\)\. A large wiki or forum may run several servers, each storing a subset of the articles\. This is proper [*sharding*](https://learn.microsoft.com/en-us/azure/architecture/patterns/sharding), which is also called *partitioning* \[[DDIA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddia" >}})\] in the world of databases\.
 
+<aside>
+
 > Names are not evenly distributed among letters\. Many names start with A but few start with Q\. If we use the first letter of a user’s name to assign them to a shard, the shard that serves users whose names start with A will be much more loaded than the one responsible for the letter Q\. Therefore, real\-world systems rely on *hashing* \[[DDIA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddia" >}})\] – calculation of a *checksum* of the user’s name which yields a seemingly random number\. Then we divide the checksum by the total number of shards we have and use the remainder as the id of the shard that has the user’s data\. For example, CRC16\(“Bender”\) = 52722\. If we have 10 shards, Bender goes to \(52722 % 10 = 2\) the 3rd one\. 
+
+</aside>
 
 *Cells*, according to the [Amazon terminology](https://docs.aws.amazon.com/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/what-is-a-cell-based-architecture.html), are copies of a whole system deployed to several data centers, each serving local users\. The locality improves latency and saves on Internet traffic while having multiple instances of the system up and running provides availability\. The downside of this approach is its complexity and amount of global traffic needed to keep the *Cells* in sync\.
 

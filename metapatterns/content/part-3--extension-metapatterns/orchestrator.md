@@ -185,7 +185,11 @@ High availability requires multiple [instances]({{< relref "../part-2--basic-met
 
 High load systems also require multiple instances of *Orchestrators* because a single instance is not enough to handle the incoming traffic\.
 
+<aside>
+
 > Not all data is made equal\. For example, an online store has different requirements for reliability of its buyers’ cart contents and the payments\. If the current buyers’ carts become empty when the store’s server crashes, that makes only a minor annoyance\. However, any financial data loss or a corrupted money transfer is a real trouble\. Therefore an online store may implement its cart with a simple in\-memory *Orchestrator*, but should be very careful about the payments workflow, every step of which must be persisted to a reliable database\. 
+
+</aside>
 
 ### Layered
 

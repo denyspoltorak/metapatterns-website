@@ -58,7 +58,11 @@ Many patterns have one or more of their layers split by subdomain, resulting in 
 <img src="/Misc/Layers of Services.png" alt="Layers of Services" width=100%/>
 </p>
 
+<aside>
+
 > Thanks to its substantial benefits and minor drawbacks, and the many evolutions it supports, *Layers* became the default architecture for starting new projects\. 
+
+</aside>
 
 ### Performance
 
@@ -68,7 +72,11 @@ The performance of a layered system is shaped by two factors:
 - The frequency and granularity of events or actions increases as we move from the upper more abstract layers to lower\-level components that interface an OS or hardware\.
 
 
+<aside>
+
 > An ideal component should be replaceable and reusable\. As soon as a component exposes details of its implementation, such as workflows or data types, in its interface, it becomes incompatible with other possible implementations, and its interface may even see major changes as the internals of the component evolve\. Therefore, well\-behaving components tend to have their interfaces written in most generic terms, which requires inputs to be transformed to their internal formats and thus penalizes performance\. 
+
+</aside>
 
 There is a number of optimizations to skip interlayer calls:
 
@@ -258,7 +266,11 @@ Here the focus lies with the distribution of the components over heterogeneous h
 
 In this case the division into layers resolves the conflict between scalability, latency, security, and cost as discussed in detail in the [chapter on distribution]({{< relref "../part-1--foundations/forces--asynchronicity--and-distribution.md#distribution" >}})\.
 
+<aside>
+
 > *Tiers* don’t map to *Layers* directly\. For example, a protocol support library which is used for communication between services belongs to the lowest \(infrastructure\) layer but to the middle \(backend\) tier\. The discrepancy is rooted in different natures \([views of the *4\+1 model*](https://en.wikipedia.org/wiki/4%2B1_architectural_view_model)\) of the patterns in question: *Layers* show the logical composition of the system while *Tiers* deal with its physical structure \(deployment\)\.
+
+</aside>
 
 ### Embedded systems
 

@@ -75,7 +75,11 @@ Examples:
 
 Splitting a [*Monolith*]({{< relref "../part-2--basic-metapatterns/monolith.md" >}}) by *subdomain* allows for mostly independent properties, development, and deployment of the resulting components\. However, for the system to benefit from the division, the subdomains must be loosely coupled and, ideally, of comparable size\. In that case the partitioning can reduce complexity of the project’s code by cutting accidental dependencies between the subdomains\. Moreover, if one of the resulting services grows unmanageably large, it can often be further partitioned by sub\-subdomains to form a [*Cell*]({{< relref "#cell-wso2-definition-service-of-services-domain-uber-definition-cluster" >}})\. This flexibility is paid for through the complexity and performance of use cases which involve multiple subdomains\. Another issue to remember is that boundaries between services are [nearly impossible](https://martinfowler.com/bliki/MonolithFirst.html) to move at later project stages as the services grow to vary in technologies and implementation styles, thus separation into services assumes perfect practical knowledge of the domain and relatively stable requirements\.
 
+<aside>
+
 > [Research](https://www.qsm.com/team-size-can-be-key-successful-software-project) shows that when more than five programmers work on the same subject, their performance degrades\. Therefore, if we want our employees to be efficient, they should be grouped into small teams and each team should be given ownership of a dedicated component\.
+
+</aside>
 
 ### Performance
 
@@ -154,7 +158,11 @@ Division by subdomain is so commonplace and varied that no universal terminology
 
 First and foremost, there are multiple grades between a cohesive [*Monolith*]({{< relref "../part-2--basic-metapatterns/monolith.md" >}}) and distributed *Services*\. You should choose incrementally when to stop because the benefits of these next stages \(color\-coded below\) may not outweigh their drawbacks for your project\.
 
+<aside>
+
 > I review here only the most common options while a few more esoteric architectures are found in [Volodymyr Pavlyshyn’s overview](https://volodymyrpavlyshyn.medium.com/monoliths-microlith-moduliths-self-contained-systems-a-system-of-systems-nano-services-cf3e9e1869c0)\. 
+
+</aside>
 
 ### Synchronous modules: Modular Monolith \(Modulith\)
 
@@ -234,7 +242,11 @@ If a service [calls into another service](https://en.wikipedia.org/wiki/Remote_p
 
 Another trouble with distributed systems comes from error recovery: if your component did not receive a timely response, you don’t know if your request was \(or is being, or will be\) executed by its target – and you need to be really careful about possible data corruption if you retry it and it is executed twice \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\]\.
 
+<aside>
+
 > If a request is duplicated \(as a slow network, overloaded service, or lost confirmation may cause a retry\), it is important to make sure that the second \(or parallel\) execution of the request does not change the system’s data\. This is achieved either by using [*idempotent*](https://en.wikipedia.org/wiki/Idempotence#Computer_science_examples) logic \(which is based on assignment instead of increasing or decreasing values in place\), or by writing the id of the last processed message to the database \(and checking that the incoming message’s id is greater than the one found in the database\) \[[MP](https://docs.google.com/document/d/1hzBn-RzzNDcArAWcvXaXgw2nl6O_ryDKE51Xve18zOs/edit?pli=1&tab=t.0#bookmark=kix.z69iqvut58vb)\]\.
+
+</aside>
 
 On the bright side, [*orchestration*]({{< relref "../part-1--foundations/arranging-communication/orchestration.md" >}}) is human\- and debugger\-friendly as it keeps consecutive actions close together in the code\. Therefore, synchronous interaction is the default mode of communication in many projects\.
 
@@ -359,7 +371,11 @@ This architecture usually relies on a [*Service Mesh*]({{< relref "../part-3--ex
 
 *Dynamically scaled* [*Pools*]({{< relref "../part-2--basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}}) of service instances are common thanks to the elasticity of hosting in a cloud\. Extreme elasticity requires [*Space\-Based Architecture*]({{< relref "../part-3--extension-metapatterns/combined-component.md#middleware-of-space-based-architecture" >}}), which puts a [distributed in\-memory database]({{< relref "../part-3--extension-metapatterns/shared-repository.md#data-grid-of-space-based-architecture-sba-replicated-cache-distributed-cache" >}}) node in each *Sidecar*\.
 
+<aside>
+
 > Some authors [distinguish](https://medium.com/@ali.gelenler/architectural-styles-vs-architectural-patterns-7fab51713470) between *architectural patterns* and *architecture styles* \(*architectures*\) \[[FSA](https://docs.google.com/document/d/1hzBn-RzzNDcArAWcvXaXgw2nl6O_ryDKE51Xve18zOs/edit?pli=1&tab=t.0#bookmark=kix.d09ykbr4tzvn), [MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\]\. The difference is similar to that between libraries and frameworks: you use a library or pattern \(e\.g\. division of a component into [*Layers*]({{< relref "../part-2--basic-metapatterns/layers.md" >}}) or [*Services*](#)\) when you think that it will help your needs, but you build your entire system according to the rules of a framework or style \(such as *Microservices* or [*Enterprise SOA*]({{< relref "../part-4--fragmented-metapatterns/service-oriented-architecture--soa-.md#enterprise-soa" >}})\)\. This book does not accent that difference – instead, it boils down styles to combinations of patterns\.
+
+</aside>
 
 ### Actors
 
@@ -373,7 +389,11 @@ An [*actor*](https://volodymyrpavlyshyn.medium.com/actors-actor-systems-as-massi
 
 If we apply a bit of generalization, we can deduce that any server or backend service is an actor because its data cannot be accessed from outside and asynchronous IP packets are its only means of communication\. Services of [*Event\-Driven Architecture*]({{< relref "../part-2--basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}}) closely match this definition\.
 
+<aside>
+
 > A [*deadlock*](https://en.wikipedia.org/wiki/Deadlock_(computer_science)) happens when several threads in a system wait for each other to release unique resources they have each taken\. As no thread involved in the *deadlock* can continue its operation, the system cannot complete its task\. A single\-threaded actor cannot *deadlock* because it does not contain multiple threads in the first place\.
+
+</aside>
 
 ### \(inexact\) Nanoservices \(API layer\)
 

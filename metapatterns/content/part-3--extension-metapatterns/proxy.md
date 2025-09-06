@@ -188,7 +188,11 @@ Finally, a *Proxy* may be co\-located with a component’s clients, making it an
 
 As *Proxies* are used for many purposes, there are a variety of their specializations and names\. Below is a very rough categorization, complicated by the fact that real\-world *Proxies* often implement several categories at once\.
 
+<aside>
+
 > For example, NGINX claims to be: an HTTP web server, [*Reverse Proxy*]({{< relref "#dispatcher-reverse-proxy-ingress-controller-edge-service-microgateway" >}}), content [*Cache*]({{< relref "#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}}), [*Load Balancer*]({{< relref "#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}), TCP/UDP *Proxy* server, and mail *Proxy* server – all at once\.
+
+</aside>
 
 ### Firewall, \(API\) Rate Limiter, API Throttling
 
@@ -280,7 +284,11 @@ There is also a whole bunch of *Adapters* that aim to protect the business logic
 - [*Repository*](https://martinfowler.com/eaaCatalog/repository.html) \[[PEAA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#peaa" >}}), [DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\] provides methods to access a record stored in a database as if it were an object in the application’s memory\.
 
 
+<aside>
+
 > An *Adapter* creates a [layer of indirection](https://en.wikipedia.org/wiki/Fundamental_theorem_of_software_engineering) between your code and a library or service which it uses\. If the external component’s interface changes, or you need to substitute the thing with an incompatible implementation from another vendor, and your code accesses the component directly, you will have to make many changes throughout your code\. However, if there is an *Adapter* in\-between, your code depends only on the interface of the *Adapter*\. And when the external component changes or is replaced, only the relatively small *Adapter*’s implementation needs to change while your main code is blessed with ignorance of what lies beyond the *Adapter*’s borders\. 
+
+</aside>
 
 ### API Gateway
 

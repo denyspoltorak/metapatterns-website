@@ -56,7 +56,11 @@ A *Monolith* is non\-modular \(not divided by interfaces\) along all the structu
 
 On one hand, monolithic applications provide perfect opportunities for performance optimizations as every piece of code is readily accessible from any other\. On the other hand, if the application is stateful, access to the state may [limit the performance benefit](https://stackoverflow.com/questions/16571381/degrading-performance-when-increasing-number-of-cores) of using multiple CPU cores\. Furthermore, large *Monoliths* may become too messy for programmers to identify and too complicated and fragile to implement any non\-local optimizations that could drastically improve performance\.
 
+<aside>
+
 > There are many kinds of bottlenecks which limit an application’s performance\. As soon as you change your code to use multiple CPU cores you may find that the program’s throughput [is constrained](https://en.wikipedia.org/wiki/Resource_contention) by the speed of your hard drive or network interface\. And when you upgrade those two, you may well hit something more subtle, like OS interrupts or [CPU cache coherence](https://www.youtube.com/watch?v=wGSSUSeaLgA)\. 
+
+</aside>
 
 Overall, tiny *Monoliths* provide the best latency and throughput per CPU core\. Larger performance\-critical projects may need to partition the code into [*Layers*]({{< relref "../part-2--basic-metapatterns/layers.md" >}}) or [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}}) so that any manually optimized part remains small enough to be manageable\. Higher throughput is attainable through distributing the software over multiple computers: [*Shards*]({{< relref "../part-2--basic-metapatterns/shards.md" >}}) employ several copies of the whole system while a [*Pipeline*]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}}) may run each step of data processing on a separate server\.
 
