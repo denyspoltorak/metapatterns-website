@@ -71,9 +71,13 @@ As we see, every \[[GoF]({{< relref "../../part-7--appendices/appendix-b--books-
 
 Finally, let’s close the book by iterating over the metapatterns and looking into their roots through the lens of unification and separation\.
 
+<figure>
+
 <p align="center">
 <img src="/Heart/Basic.png" alt="Basic" width=100%/>
 </p>
+
+</figure>
 
 Basic architectures:
 
@@ -91,9 +95,13 @@ Basic architectures:
   - *Decoupling* simplifies reassembling or expanding the system but increases its latency\.
 
 
+<figure>
+
 <p align="center">
 <img src="/Heart/Extension.png" alt="Extension" width=100%/>
 </p>
+
+</figure>
 
 Grouping related functionality:
 
@@ -113,9 +121,13 @@ Grouping related functionality:
   - *Cohesion* improves performance but reduces flexibility\.
 
 
+<figure>
+
 <p align="center">
 <img src="/Heart/Fragmented.png" alt="Fragmented" width=100%/>
 </p>
+
+</figure>
 
 Decoupled systems:
 
@@ -132,9 +144,13 @@ Decoupled systems:
   - *Decoupled* layers and subdomains allow for modification and expansion of local functionality at the cost of performance\.
 
 
+<figure>
+
 <p align="center">
 <img src="/Heart/Implementation.png" alt="Implementation" width=100%/>
 </p>
+
+</figure>
 
 Component implementation:
 

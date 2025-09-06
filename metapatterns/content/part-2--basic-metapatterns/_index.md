@@ -10,9 +10,13 @@ Basic metapatterns are both common stand\-alone architectures and building block
 
 ### [Monolith]({{< relref "../part-2--basic-metapatterns/monolith.md" >}})
 
+<figure>
+
 <p align="center">
 <img src="/Contents/Monolith.png" alt="Monolith" width=100%/>
 </p>
+
+</figure>
 
 *Monolith* is a single\-component system, the simplest possible architecture\. It is easy to write but hard to evolve and maintain\.
 
@@ -20,9 +24,13 @@ Basic metapatterns are both common stand\-alone architectures and building block
 
 ### [Shards]({{< relref "../part-2--basic-metapatterns/shards.md" >}})
 
+<figure>
+
 <p align="center">
 <img src="/Contents/Shards.png" alt="Shards" width=100%/>
 </p>
+
+</figure>
 
 *Shards* are multiple instances of a *Monolith*\. They are scalable but usually require an external component for coordination\.
 
@@ -30,9 +38,13 @@ Basic metapatterns are both common stand\-alone architectures and building block
 
 ### [Layers]({{< relref "../part-2--basic-metapatterns/layers.md" >}})
 
+<figure>
+
 <p align="center">
 <img src="/Contents/Layers.png" alt="Layers" width=100%/>
 </p>
+
+</figure>
 
 *Layers* contain one component per level of abstraction\. The layers may vary in technologies and forces and scale individually\.
 
@@ -40,9 +52,13 @@ Basic metapatterns are both common stand\-alone architectures and building block
 
 ### [Services]({{< relref "../part-2--basic-metapatterns/services.md" >}})
 
+<figure>
+
 <p align="center">
 <img src="/Contents/Services.png" alt="Services" width=93%/>
 </p>
+
+</figure>
 
 *Services* divide a system into subdomains, often resulting in parts of comparable size assignable to dedicated teams\. However, a system of *Services* is hard to synchronize or debug\.
 
@@ -50,9 +66,13 @@ Basic metapatterns are both common stand\-alone architectures and building block
 
 ### [Pipeline]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}})
 
+<figure>
+
 <p align="center">
 <img src="/Contents/Pipeline.png" alt="Pipeline" width=100%/>
 </p>
+
+</figure>
 
 A *Pipeline* is a kind of *Services* with unidirectional flow\. Each service implements a single step of data processing\. The system is flexible but may grow out of control\. 
 

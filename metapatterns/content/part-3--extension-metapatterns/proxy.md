@@ -5,9 +5,13 @@ title = "Proxy"
 
 # Proxy
 
+<figure>
+
 <p align="center">
 <img src="/Main/Proxy.png" alt="Proxy" width=100%/>
 </p>
+
+</figure>
 
 *Should I build the wall?* A layer of indirection between your system and its clients\.
 
@@ -100,9 +104,13 @@ In fact, because *Proxies* tend to have their dependencies configured on startup
 
 ### Relations
 
+<figure>
+
 <p align="center">
 <img src="/Relations/Proxy.png" alt="Proxy" width=100%/>
 </p>
+
+</figure>
 
 *Proxy*:
 
@@ -118,17 +126,25 @@ A *Proxy* [may either fully isolate the system it represents or merely help esta
 
 ### Full Proxy
 
+<figure>
+
 <p align="center">
 <img src="/Variants/2/Full Proxy.png" alt="Full Proxy" width=94%/>
 </p>
+
+</figure>
 
 A *Full Proxy* processes every message between the system and its clients\. It completely isolates the system and may meddle with the protocols but it is resource\-heavy and adds to latency\. [*Adapters*]({{< relref "#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) and [*Response Caches*]({{< relref "#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}}) are always *Full Proxies*\.
 
 ### Half\-Proxy
 
+<figure>
+
 <p align="center">
 <img src="/Variants/2/Half Proxy.png" alt="Half Proxy" width=97%/>
 </p>
+
+</figure>
 
 A *Half\-Proxy* intercepts, analyzes, and routes the session establishment request from a client but then goes out of the loop\. It may still forward the subsequent messages without looking into their content or it may even help connect the client and server directly, which is known as [*direct server return*](https://www.haproxy.com/glossary/what-is-direct-server-return-dsr) *\(DSR\)*\. This approach is faster and much less resource\-hungry but is also less secure and less flexible than that of *Full Proxy*\. A [*Firewall*]({{< relref "#firewall-api-rate-limiter-api-throttling" >}}), [*Load Balancer*]({{< relref "#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}), or [*Reverse Proxy*]({{< relref "#dispatcher-reverse-proxy-ingress-controller-edge-service-microgateway" >}}) may act as a *Half\-Proxy*\. IP telephony servers often use *DSR*: the server helps call parties find each other and establish direct media communication\.
 
@@ -138,9 +154,13 @@ As a *Proxy* stands between a \(sub\)system and its client\(s\), we can imagine 
 
 ### Separate deployment: Standalone
 
+<figure>
+
 <p align="center">
 <img src="/Variants/2/Proxy placement - Standalone.png" alt="Proxy placement - Standalone" width=96%/>
 </p>
+
+</figure>
 
 We can deploy a *Proxy* as a separate system component\. This has the downside of an extra network hop \(higher latency\) in the way of every client’s request to the system and back but that is unavoidable in the following cases:
 
@@ -150,9 +170,13 @@ We can deploy a *Proxy* as a separate system component\. This has the downside o
 
 ### On the system side: Sidecar
 
+<figure>
+
 <p align="center">
 <img src="/Variants/2/Proxy placement - Sidecar.png" alt="Proxy placement - Sidecar" width=100%/>
 </p>
+
+</figure>
 
 We can often co\-locate a *Proxy* with our system when the latter is not distributed\. That avoids the extra network delay, traffic, operational complexity and does not add any new hardware which can fail at the most untimely moments\. Such a placement is called *Sidecar* \[[DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#dds" >}})\] and it is mostly applicable to [*Adapters*]({{< relref "#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}})\.
 
@@ -164,17 +188,25 @@ It should be noted that *Sidecar* – co\-locating a generic component and busin
 - As an *Adapter* for [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}})\.
 
 
+<figure>
+
 <p align="center">
 <img src="/Variants/2/Sidecars.png" alt="Sidecars" width=100%/>
 </p>
+
+</figure>
 
 [*Service Mesh*]({{< relref "../part-5--implementation-metapatterns/mesh.md#service-mesh" >}}) \([*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}) for [*Microservices*]({{< relref "../part-2--basic-metapatterns/services.md#microservices" >}})\) makes heavy use of *Sidecars*\.
 
 ### On the client side: Ambassador
 
+<figure>
+
 <p align="center">
 <img src="/Variants/2/Proxy placement - Ambassador.png" alt="Proxy placement - Ambassador" width=100%/>
 </p>
+
+</figure>
 
 Finally, a *Proxy* may be co\-located with a component’s clients, making it an *Ambassador*  \[[DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#dds" >}})\]\. Its use cases include:
 
@@ -196,9 +228,13 @@ As *Proxies* are used for many purposes, there are a variety of their specializa
 
 ### Firewall, \(API\) Rate Limiter, API Throttling
 
+<figure>
+
 <p align="center">
 <img src="/Variants/2/Firewall.png" alt="Firewall" width=92%/>
 </p>
+
+</figure>
 
 The *Firewall* is a component for white\- and black\-listing network traffic, mostly to protect against attacks\. It is possible to use both generic hardware *Firewalls* on the external perimeter for brute force \(D\)DoS protection and more complex access rules at a second layer of software *Firewalls* to protect critical data and services from unauthorized access\.
 
@@ -208,9 +244,13 @@ The *Firewall* is a component for white\- and black\-listing network traffic, mo
 
 ### Response Cache, Read\-Through Cache, Write\-Through Cache, Write\-Behind Cache, Cache, Caching Layer, Distributed Cache, Replicated Cache
 
+<figure>
+
 <p align="center">
 <img src="/Variants/2/Cache.png" alt="Cache" width=100%/>
 </p>
+
+</figure>
 
 If a system often gets identical requests, it is possible to remember its responses to most frequent of them and return the cached response without fully re\-processing the request\. The real thing is more complicated because users tend to change the data which the system stores, necessitating a variety of *cache refresh policies*\. A *Response Cache* may be co\-located with a *Load Balancer* or it may be \[[DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#dds" >}})\] [*sharded*]({{< relref "../part-2--basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-cells-amazon-definition" >}}) \(each *Cache* processes a unique subset of requests\) and/or [*replicated*]({{< relref "../part-2--basic-metapatterns/shards.md#persistent-copy-replica" >}}) \(all the *Caches* are similar\) and thus require a *Load Balancer* of its own\.
 
@@ -232,9 +272,13 @@ It is possible to combine multiple servers into a virtual *Caching Layer* \[[DDS
 
 ### Load Balancer, Sharding Proxy, Cell Router, Messaging Grid, Scheduler
 
+<figure>
+
 <p align="center">
 <img src="/Variants/2/Load Balancer.png" alt="Load Balancer" width=100%/>
 </p>
+
+</figure>
 
 Here we have a hardware or software component which distributes user traffic among multiple [instances]({{< relref "../part-2--basic-metapatterns/shards.md" >}}) of a service:
 
@@ -248,9 +292,13 @@ Here we have a hardware or software component which distributes user traffic amo
 
 ### Dispatcher, Reverse Proxy, Ingress Controller, Edge Service, Microgateway
 
+<figure>
+
 <p align="center">
 <img src="/Variants/2/Dispatcher.png" alt="Dispatcher" width=100%/>
 </p>
+
+</figure>
 
 The [*Reverse Proxy*, *Ingress Controller*](https://traefik.io/blog/reverse-proxy-vs-ingress-controller-vs-api-gateway/), [*Edge Service*](https://medium.com/knerd/api-infrastructure-at-knewton-whats-in-an-edge-service-51a3777aeb41), or [*Microgateway*](https://github.com/wso2/reference-architecture/blob/master/event-driven-api-architecture.md) is a router that stands between the Internet and the organization’s internal network\. It allows clients to use a public address for the system without knowing how and where their requests are processed\. It parses user requests and forwards them to an internal server based on the requests’ body\. A *Reverse Proxy* can be extended with a *firewall*, *SSL termination*, *load balancing*, and *caching* functionality\. Examples include Nginx\.
 
@@ -260,9 +308,13 @@ You could have noticed that *Dispatcher* or *Reverse Proxy* is quite similar to 
 
 ### Adapter, Anticorruption Layer, Open Host Service, Gateway, Message Translator, API Service, Cell Gateway, \(inexact\) Backend for Frontend, Hardware Abstraction Layer \(HAL\), Operating System Abstraction Layer \(OSAL\), Platform Abstraction Layer \(PAL\), Database Abstraction Layer \(DBAL or DAL\), Database Access Layer, Data Mapper, Repository
 
+<figure>
+
 <p align="center">
 <img src="/Variants/2/Adapter.png" alt="Adapter" width=100%/>
 </p>
+
+</figure>
 
 An *Adapter* \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#gof" >}}), [DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#dds" >}})\] is a mostly stateless *Proxy* that translates between an internal and public protocol and API formats\. It may often be co\-located with a *Reverse Proxy*\. When it adapts messages, it is called a *Message Translator* \[[EIP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}}), [POSA4]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa4" >}})\]\.
 
@@ -292,9 +344,13 @@ There is also a whole bunch of *Adapters* that aim to protect the business logic
 
 ### API Gateway
 
+<figure>
+
 <p align="center">
 <img src="/Variants/2/API Gateway.png" alt="API Gateway" width=100%/>
 </p>
+
+</figure>
 
 *API Gateway* \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\] is a fusion of [*Gateway*]({{< relref "#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) \(*Proxy*\) and [*API Composer*]({{< relref "../part-3--extension-metapatterns/orchestrator.md#api-composer-remote-facade-gateway-aggregation-composed-message-processor-scatter-gather-mapreduce" >}}) \([*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}})\)\. The *Gateway* aspect encapsulates the external \(public\) protocol while the *API Compose*r translates the system’s high\-level public API methods into multiple \(usually parallel\) calls to the APIs of internal components, collects the results and conjoins them into a response\.
 
@@ -309,16 +365,24 @@ As *Proxies* are usually third\-party products, there is not much we can change 
 - We can add another kind of a *Proxy* on top of an existing one\.
 
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/2/Proxy add Proxy.png" alt="Proxy add Proxy" width=100%/>
 </p>
 
+</figure>
+
 - We can use a stack of *Proxies* per client, making *Backends for Frontends*\.
 
+
+<figure>
 
 <p align="center">
 <img src="/Evolutions/2/Proxy to Backends for Frontends.png" alt="Proxy to Backends for Frontends" width=100%/>
 </p>
+
+</figure>
 
 ## Summary
 

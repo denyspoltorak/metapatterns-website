@@ -21,9 +21,13 @@ There is one way to counter the first point and more ways to solve the second on
 
 ## Subdivide to form Layered Services
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/2/Orchestrator to Layered Services.png" alt="Orchestrator to Layered Services" width=100%/>
 </p>
+
+</figure>
 
 <ins>Patterns</ins>: [Orchestrated Three\-Layered Services]({{< relref "../../part-4--fragmented-metapatterns/layered-services.md#orchestrated-three-layered-services" >}}) \([Layered Services]({{< relref "../../part-4--fragmented-metapatterns/layered-services.md" >}}) \([Services]({{< relref "../../part-2--basic-metapatterns/services.md" >}}), [Layers]({{< relref "../../part-2--basic-metapatterns/layers.md" >}})\)\)\.
 
@@ -54,9 +58,13 @@ If the *orchestration* logic mostly follows the subdomains, it may be possible t
 
 ## Subdivide to form Backends for Frontends
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/2/Orchestrator to Backends for Frontends.png" alt="Orchestrator to Backends for Frontends" width=100%/>
 </p>
+
+</figure>
 
 <ins>Patterns</ins>: [Backends for Frontends]({{< relref "../../part-4--fragmented-metapatterns/backends-for-frontends--bff-.md" >}}), [Orchestrator]({{< relref "../../part-3--extension-metapatterns/orchestrator.md" >}})\.
 
@@ -86,9 +94,13 @@ When use cases for clients vary, it makes sense for each kind of client to have 
 
 ## Add a layer of orchestration
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/2/Orchestrator add Orchestrator.png" alt="Orchestrator add Orchestrator" width=100%/>
 </p>
+
+</figure>
 
 <ins>Patterns</ins>: [Orchestrator]({{< relref "../../part-3--extension-metapatterns/orchestrator.md" >}}), [Layers]({{< relref "../../part-2--basic-metapatterns/layers.md" >}})\.
 
@@ -118,9 +130,13 @@ You may use two or three *orchestration frameworks* \(engines\) which differ in 
 
 ## Form a hierarchy
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/2/Orchestrator to Hierarchy.png" alt="Orchestrator to Hierarchy" width=100%/>
 </p>
+
+</figure>
 
 <ins>Patterns</ins>: [Top\-Down Hierarchy]({{< relref "../../part-4--fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}}) \([Hierarchy]({{< relref "../../part-4--fragmented-metapatterns/hierarchy.md" >}})\)\.
 

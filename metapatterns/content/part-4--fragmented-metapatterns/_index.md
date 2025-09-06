@@ -10,9 +10,13 @@ There are several patterns with no system\-wide layers\. Some of them incorporat
 
 ### [Layered Services]({{< relref "../part-4--fragmented-metapatterns/layered-services.md" >}})
 
+<figure>
+
 <p align="center">
 <img src="/Contents/Layered Services.png" alt="Layered Services" width=100%/>
 </p>
+
+</figure>
 
 *Layered Services* is an umbrella metapattern that highlights implementation details of *Services*, *Pipeline*, or *Monolith*\.
 
@@ -20,9 +24,13 @@ There are several patterns with no system\-wide layers\. Some of them incorporat
 
 ### [Polyglot Persistence]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md" >}})
 
+<figure>
+
 <p align="center">
 <img src="/Contents/Polyglot Persistence.png" alt="Polyglot Persistence" width=100%/>
 </p>
+
+</figure>
 
 *Polyglot Persistence* is about using multiple data stores which differ in roles or technologies\. Each of the upper\-level components may have access to any data store\. Each data store is a *Shared Repository*\.
 
@@ -30,9 +38,13 @@ There are several patterns with no system\-wide layers\. Some of them incorporat
 
 ### [Backends for Frontends]({{< relref "../part-4--fragmented-metapatterns/backends-for-frontends--bff-.md" >}})
 
+<figure>
+
 <p align="center">
 <img src="/Contents/Backends for Frontends.png" alt="Backends for Frontends" width=100%/>
 </p>
+
+</figure>
 
 *Backends for Frontends* feature a service \(*BFF*\) for each kind of the system’s client\. A *BFF* may be a *Proxy*, *Orchestrator* or both\. Each *BFF* communicates with all the components below it\. The pattern looks like multiple *Proxies* or *Orchestrators* deployed in parallel\.
 
@@ -40,9 +52,13 @@ There are several patterns with no system\-wide layers\. Some of them incorporat
 
 ### [Service\-Oriented Architecture]({{< relref "../part-4--fragmented-metapatterns/service-oriented-architecture--soa-.md" >}})
 
+<figure>
+
 <p align="center">
 <img src="/Contents/Service-Oriented Architecture.png" alt="Service-Oriented Architecture" width=100%/>
 </p>
+
+</figure>
 
 *SOA* comprises three or four layers of services, with each layer making a domain\. The upper layer contains *Orchestrators* which are often client\-specific, just like *BFFs*\. The second layer incorporates business rules and is divided into business subdomains\. The lower layer\(s\) are libraries and utilities, grouped by functionality and technologies\. Any component may use \(orchestrate\) anything below it\.
 
@@ -50,9 +66,13 @@ There are several patterns with no system\-wide layers\. Some of them incorporat
 
 ### [Hierarchy]({{< relref "../part-4--fragmented-metapatterns/hierarchy.md" >}})
 
+<figure>
+
 <p align="center">
 <img src="/Contents/Hierarchy.png" alt="Hierarchy" width=100%/>
 </p>
+
+</figure>
 
 Some domains allow for hierarchical composition where the functionality is spread throughout a tree of components\.
 

@@ -15,9 +15,13 @@ One issue peculiar to [*Shards*]({{< relref "../../part-2--basic-metapatterns/sh
 
 ## Move all the data to a Shared Repository
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/Shards/Shards to Shared DB.png" alt="Shards to Shared DB" width=100%/>
 </p>
+
+</figure>
 
 <ins>Patterns</ins>: [Pool]({{< relref "../../part-2--basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}}) \([Shards]({{< relref "../../part-2--basic-metapatterns/shards.md" >}})\), [Shared Database]({{< relref "../../part-3--extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) \([Shared Repository]({{< relref "../../part-3--extension-metapatterns/shared-repository.md" >}})\), [Load Balancer]({{< relref "../../part-3--extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) \([Proxy]({{< relref "../../part-3--extension-metapatterns/proxy.md" >}})\), [Layers]({{< relref "../../part-2--basic-metapatterns/layers.md" >}})\.
 
@@ -51,9 +55,13 @@ In case a shard needs to access data owned by any other shard, the prerequisite 
 
 ## Use Space\-Based Architecture
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/Shards/Shards to Space-Based Architecture.png" alt="Shards to Space-Based Architecture" width=100%/>
 </p>
+
+</figure>
 
 <ins>Patterns</ins>: [Space\-Based Architecture]({{< relref "../../part-5--implementation-metapatterns/mesh.md#space-based-architecture" >}}) \([Mesh]({{< relref "../../part-5--implementation-metapatterns/mesh.md" >}}), [Shared Repository]({{< relref "../../part-3--extension-metapatterns/shared-repository.md" >}})\), [Shards]({{< relref "../../part-2--basic-metapatterns/shards.md" >}}), [Layers]({{< relref "../../part-2--basic-metapatterns/layers.md" >}})\.
 
@@ -82,9 +90,13 @@ Though *Space\-Based Architecture* may provide multiple modes of action, includi
 
 ## Use a Shared Repository for a coupled subset of the data
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/Shards/Shards add Shared DB.png" alt="Shards add Shared DB" width=100%/>
 </p>
+
+</figure>
 
 <ins>Patterns</ins>: [Shards]({{< relref "../../part-2--basic-metapatterns/shards.md" >}}), [Private and Shared Databases]({{< relref "../../part-4--fragmented-metapatterns/polyglot-persistence.md#private-and-shared-databases" >}}) \([Polyglot Persistence]({{< relref "../../part-4--fragmented-metapatterns/polyglot-persistence.md" >}})\), [Shared Database]({{< relref "../../part-3--extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) \([Shared Repository]({{< relref "../../part-3--extension-metapatterns/shared-repository.md" >}})\), [Layers]({{< relref "../../part-2--basic-metapatterns/layers.md" >}})\.
 
@@ -108,9 +120,13 @@ This approach resembles [*Shared Kernel*](https://ddd-practitioners.com/home/glo
 
 ## Split a service with the coupled data
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/Shards/Shards split Shared Service.png" alt="Shards split Shared Service" width=100%/>
 </p>
+
+</figure>
 
 <ins>Patterns</ins>: [Services]({{< relref "../../part-2--basic-metapatterns/services.md" >}}), [Shards]({{< relref "../../part-2--basic-metapatterns/shards.md" >}})\.
 

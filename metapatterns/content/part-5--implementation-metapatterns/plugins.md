@@ -5,9 +5,13 @@ title = "Plugins"
 
 # Plugins
 
+<figure>
+
 <p align="center">
 <img src="/Main/Plugins.png" alt="Plugins" width=100%/>
 </p>
+
+</figure>
 
 *Overspecialize, and you breed in weakness\.* Customize the system through attachable modules\.
 
@@ -42,17 +46,25 @@ The only case for a plugin to improve performance of a system that I can think u
 - Customization of supplier services for varying needs of their client services in [*Domain\-Oriented Microservice Architecture*]({{< relref "../part-4--fragmented-metapatterns/service-oriented-architecture--soa-.md#domain-oriented-microservice-architecture-doma" >}})\.
 
 
+<figure>
+
 <p align="center">
 <img src="/Performance/Plugins-injection.png" alt="Plugins-injection" width=100%/>
 </p>
+
+</figure>
 
 ### Dependencies
 
 Each *plugin* depends on the *core*’s *API* \(for *Addons*\) or *SPI* \(for *Plugins*\) for the functionality it extends\. That makes the APIs and SPIs nearly impossible to modify, only to extend, as there tend to be many plugins in the field, some of them out of active development, that rely on any given method of the already published interfaces\.
 
+<figure>
+
 <p align="center">
 <img src="/Dependencies/Plugins.png" alt="Plugins" width=100%/>
 </p>
+
+</figure>
 
 ### Applicability
 
@@ -70,9 +82,13 @@ Each *plugin* depends on the *core*’s *API* \(for *Addons*\) or *SPI* \(for *P
 
 ### Relations
 
+<figure>
+
 <p align="center">
 <img src="/Relations/Plugins.png" alt="Plugins" width=68%/>
 </p>
+
+</figure>
 
 *Plugins*:
 

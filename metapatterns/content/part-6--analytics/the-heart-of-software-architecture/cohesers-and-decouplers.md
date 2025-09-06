@@ -11,9 +11,13 @@ Any project carries many constraints \(*forces*\), some of which want for certai
 
 Let’s explore how a force influences the structure of a project\. Consider the *clarity of code* which determines *development velocity*:
 
+<figure>
+
 <p align="center">
 <img src="/Heart/Pain.png" alt="Pain" width=100%/>
 </p>
+
+</figure>
 
 When you have 10 lines of business logic, you are likely to write them down as a simple script\. Separating them into classes or deploying 5 services, each running 2 lines of code, is an overkill which would make the complexity of your infrastructure much higher than that of the task on hand\.
 
@@ -29,9 +33,13 @@ As we see from the example above, code clarity favors *cohesiveness* \(everythin
 
 Such a behavior is common for forces and, by the way, it is also the case with editing sorted data\. Array is the most efficient data structure for a small collection \(up to about 1 000 elements\) while anything larger requires a hash map or [B\-tree](https://en.wikipedia.org/wiki/B-tree) \(hierarchy of arrays\)\. Just as a database splits oversized arrays because they are too slow to edit, the human mind is inefficient with large collections of similar items and wants them to be restructured into a hierarchy\. When we look into a service, we see only the classes it contains\. When we examine a class, we check the list of its methods, not those of surrounding classes\. And when we open a method, we try to understand how its lines of code work together\. This is the way humans fight complexity – by selecting a segment at one level of abstraction and ignoring everything around\.
 
+<figure>
+
 <p align="center">
 <img src="/Heart/Hierarchy.png" alt="Hierarchy" width=100%/>
 </p>
+
+</figure>
 
 A hierarchy inherently adds some inconvenience – traversing levels of a B\-tree slows down operations, and a project with many files takes time to grasp – which is why we avoid deep hierarchies in smaller projects \(or datasets\) – but that is still a very low cost for having any individual component \(a method, class or module in a project; an array in a B\-tree\) stay reasonably small and simple thanks to the distribution of the overall complexity \(or data\) over the hierarchy\.
 
@@ -66,9 +74,13 @@ And there are forces that try to keep your code fragmented:
 
 ## Expansion and contraction
 
+<figure>
+
 <p align="center">
 <img src="/Heart/Lifecycle.png" alt="Lifecycle" width=100%/>
 </p>
+
+</figure>
 
 As was [discussed previously]({{< relref "../../part-6--analytics/architecture-and-product-life-cycle.md" >}}), when you start a project by building a [PoC](https://en.wikipedia.org/wiki/Proof_of_concept#Software_development) or prototype, you have little code and need to move quickly\. Most of the *decouplers* are not there and the *bidirectional forces* favor cohesion, thus you don’t waste your time on extra interfaces or fine\-grained services\. You don’t have multiple teams to fall prey to Conway’s law\.
 

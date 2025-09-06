@@ -10,9 +10,13 @@ These patterns extend *Services*, *Shards*, or even a *Monolith* with a layer th
 
 ### [Middleware]({{< relref "../part-3--extension-metapatterns/middleware.md" >}})
 
+<figure>
+
 <p align="center">
 <img src="/Contents/Middleware.png" alt="Middleware" width=100%/>
 </p>
+
+</figure>
 
 *Middleware* is a layer that implements communication between instances of the system’s components and it may also manage the instances\. This way each instance is relieved of the need to track the other instances which it accesses\.
 
@@ -20,9 +24,13 @@ These patterns extend *Services*, *Shards*, or even a *Monolith* with a layer th
 
 ### [Shared Repository]({{< relref "../part-3--extension-metapatterns/shared-repository.md" >}})
 
+<figure>
+
 <p align="center">
 <img src="/Contents/Shared Repository.png" alt="Shared Repository" width=100%/>
 </p>
+
+</figure>
 
 A *Shared Repository* stores the system’s data, maintains its integrity through transactions, and may support subscriptions to changes in subsets of the data\. That lets other system components concentrate on implementing the business logic\.
 
@@ -30,9 +38,13 @@ A *Shared Repository* stores the system’s data, maintains its integrity throug
 
 ### [Proxy]({{< relref "../part-3--extension-metapatterns/proxy.md" >}})
 
+<figure>
+
 <p align="center">
 <img src="/Contents/Proxy.png" alt="Proxy" width=100%/>
 </p>
+
+</figure>
 
 A *Proxy* mediates between a system and its clients, transparently taking care of some generic functionality\.
 
@@ -40,9 +52,13 @@ A *Proxy* mediates between a system and its clients, transparently taking care o
 
 ### [Orchestrator]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}})
 
+<figure>
+
 <p align="center">
 <img src="/Contents/Orchestrator.png" alt="Orchestrator" width=100%/>
 </p>
+
+</figure>
 
 An *Orchestrator* implements use cases as sequences of calls to the underlying components which are usually left unaware of each other’s existence\.
 

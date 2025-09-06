@@ -12,9 +12,13 @@ Not all the layered architectures are equally layered\. A [*Monolith*]({{< relre
 - Implementing an [*Orchestrator*]({{< relref "../../part-3--extension-metapatterns/orchestrator.md" >}}) on top of your system may improve programming experience and runtime performance for your clients\.
 
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/Layers/Layers to Layers.png" alt="Layers to Layers" width=100%/>
 </p>
+
+</figure>
 
 It is also common to:
 
@@ -23,9 +27,13 @@ It is also common to:
 
 ## Split the business logic into two layers
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/Layers/Layers Split in Two.png" alt="Layers Split in Two" width=100%/>
 </p>
+
+</figure>
 
 <ins>Patterns</ins>: [Layers]({{< relref "../../part-2--basic-metapatterns/layers.md" >}})\.
 

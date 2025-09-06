@@ -1,2 +1,3 @@
 metapatterns/public/*
+metapatterns/resources/_gen
 metapatterns/.hugo_build.lock

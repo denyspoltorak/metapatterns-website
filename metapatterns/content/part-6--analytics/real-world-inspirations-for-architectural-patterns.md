@@ -17,9 +17,13 @@ The basic patterns lay the foundation for any system by paving ways to *divide* 
 
 ### Monolith
 
+<figure>
+
 <p align="center">
 <img src="/Contents/Monolith.png" alt="Monolith" width=96%/>
 </p>
+
+</figure>
 
 [*Monolith*]({{< relref "../part-2--basic-metapatterns/monolith.md" >}}) means encapsulation – we use the thing without looking inside:
 
@@ -33,9 +37,13 @@ The basic patterns lay the foundation for any system by paving ways to *divide* 
 
 ### Shards
 
+<figure>
+
 <p align="center">
 <img src="/Contents/Shards.png" alt="Shards" width=95%/>
 </p>
+
+</figure>
 
 [*Shards*]({{< relref "../part-2--basic-metapatterns/shards.md" >}}) is about having multiple instances of something, which often differ in their data:
 
@@ -49,9 +57,13 @@ The basic patterns lay the foundation for any system by paving ways to *divide* 
 
 ### Layers
 
+<figure>
+
 <p align="center">
 <img src="/Contents/Layers.png" alt="Layers" width=95%/>
 </p>
+
+</figure>
 
 [*Layers*]({{< relref "../part-2--basic-metapatterns/layers.md" >}}) is the separation of responsibilities between external and internal components:
 
@@ -63,9 +75,13 @@ The basic patterns lay the foundation for any system by paving ways to *divide* 
 
 ### Services
 
+<figure>
+
 <p align="center">
 <img src="/Contents/Services.png" alt="Services" width=95%/>
 </p>
+
+</figure>
 
 [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}}) boil down to composition and [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns):
 
@@ -79,9 +95,13 @@ The basic patterns lay the foundation for any system by paving ways to *divide* 
 
 ### Pipeline
 
+<figure>
+
 <p align="center">
 <img src="/Contents/Pipeline.png" alt="Pipeline" width=95%/>
 </p>
+
+</figure>
 
 [*Pipeline*]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}}) is about the stepwise transformation of data:
 
@@ -99,9 +119,13 @@ An extension pattern encapsulates one or two aspects of the system’s implement
 
 ### Middleware
 
+<figure>
+
 <p align="center">
 <img src="/Contents/Middleware.png" alt="Middleware" width=100%/>
 </p>
+
+</figure>
 
 A [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}) abstracts scaling and/or intercommunication:
 
@@ -114,9 +138,13 @@ A [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}
 
 ### Shared Repository
 
+<figure>
+
 <p align="center">
 <img src="/Contents/Shared Repository.png" alt="Shared Repository" width=100%/>
 </p>
+
+</figure>
 
 A [*Shared Repository*]({{< relref "../part-3--extension-metapatterns/shared-repository.md" >}}) provides data storage and/or data change notifications:
 
@@ -129,9 +157,13 @@ A [*Shared Repository*]({{< relref "../part-3--extension-metapatterns/shared-rep
 
 ### Proxy
 
+<figure>
+
 <p align="center">
 <img src="/Contents/Proxy.png" alt="Proxy" width=100%/>
 </p>
+
+</figure>
 
 A [*Proxy*]({{< relref "../part-3--extension-metapatterns/proxy.md" >}}) isolates a system from its environment by translating between internal and external protocols and/or implementing generic aspects of communication:
 
@@ -143,9 +175,13 @@ A [*Proxy*]({{< relref "../part-3--extension-metapatterns/proxy.md" >}}) isolate
 
 ### Orchestrator
 
+<figure>
+
 <p align="center">
 <img src="/Contents/Orchestrator.png" alt="Orchestrator" width=100%/>
 </p>
+
+</figure>
 
 An [*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}}) integrates several components by implementing high\-level use cases and/or keeping them in sync:
 
@@ -160,9 +196,13 @@ A fragmented pattern uses small specialized components to approach a case which 
 
 ### Polyglot Persistence
 
+<figure>
+
 <p align="center">
 <img src="/Contents/Polyglot Persistence.png" alt="Polyglot Persistence" width=100%/>
 </p>
+
+</figure>
 
 [*Polyglot Persistence*]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md" >}}) is about having multiple containers for data:
 
@@ -173,9 +213,13 @@ A fragmented pattern uses small specialized components to approach a case which 
 
 ### Backends for Frontends
 
+<figure>
+
 <p align="center">
 <img src="/Contents/Backends for Frontends.png" alt="Backends for Frontends" width=100%/>
 </p>
+
+</figure>
 
 [*Backends for Frontends*]({{< relref "../part-4--fragmented-metapatterns/backends-for-frontends--bff-.md" >}}) is about treating different kinds of clients individually:
 
@@ -186,9 +230,13 @@ A fragmented pattern uses small specialized components to approach a case which 
 
 ### Service\-Oriented Architecture
 
+<figure>
+
 <p align="center">
 <img src="/Contents/Service-Oriented Architecture.png" alt="Service-Oriented Architecture" width=100%/>
 </p>
+
+</figure>
 
 [*SOA*]({{< relref "../part-4--fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}) applies OOP techniques, including component reuse, to deal with complex systems:
 
@@ -199,9 +247,13 @@ A fragmented pattern uses small specialized components to approach a case which 
 
 ### Hierarchy
 
+<figure>
+
 <p align="center">
 <img src="/Contents/Hierarchy.png" alt="Hierarchy" width=100%/>
 </p>
+
+</figure>
 
 [*Hierarchy*]({{< relref "../part-4--fragmented-metapatterns/hierarchy.md" >}}) distributes system’s complexity over multiple levels:
 
@@ -215,9 +267,13 @@ An implementation pattern highlights the peculiar internal arrangements of a com
 
 ### Plugins
 
+<figure>
+
 <p align="center">
 <img src="/Contents/Plugins.png" alt="Plugins" width=100%/>
 </p>
+
+</figure>
 
 [*Plugins*]({{< relref "../part-5--implementation-metapatterns/plugins.md" >}}) make a component’s behavior flexible through delegating its parts to small external additions:
 
@@ -227,9 +283,13 @@ An implementation pattern highlights the peculiar internal arrangements of a com
 
 ### Hexagonal Architecture
 
+<figure>
+
 <p align="center">
 <img src="/Contents/Hexagonal Architecture.png" alt="Hexagonal Architecture" width=100%/>
 </p>
+
+</figure>
 
 [*Hexagonal Architecture*]({{< relref "../part-5--implementation-metapatterns/hexagonal-architecture.md" >}}) protects the internals of a system from its environment:
 
@@ -239,9 +299,13 @@ An implementation pattern highlights the peculiar internal arrangements of a com
 
 ### Microkernel
 
+<figure>
+
 <p align="center">
 <img src="/Contents/Microkernel.png" alt="Microkernel" width=100%/>
 </p>
+
+</figure>
 
 [*Microkernel*]({{< relref "../part-5--implementation-metapatterns/microkernel.md" >}}) shares the goods of resource providers among resource users:
 
@@ -252,9 +316,13 @@ An implementation pattern highlights the peculiar internal arrangements of a com
 
 ### Mesh
 
+<figure>
+
 <p align="center">
 <img src="/Contents/Mesh.png" alt="Mesh" width=100%/>
 </p>
+
+</figure>
 
 [*Mesh*]({{< relref "../part-5--implementation-metapatterns/mesh.md" >}}) is like grassroots movements – self\-organizing and survival through redundancy:
 

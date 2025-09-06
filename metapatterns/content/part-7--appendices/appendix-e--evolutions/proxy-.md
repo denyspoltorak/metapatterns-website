@@ -15,9 +15,13 @@ As *Proxies* are usually third\-party products, there is very little we can chan
 
 ## Add another Proxy
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/2/Proxy add Proxy.png" alt="Proxy add Proxy" width=100%/>
 </p>
+
+</figure>
 
 <ins>Patterns</ins>: [Proxy]({{< relref "../../part-3--extension-metapatterns/proxy.md" >}}), [Layers]({{< relref "../../part-2--basic-metapatterns/layers.md" >}})\.
 
@@ -43,9 +47,13 @@ It often makes sense to colocate software *Proxies* or use a multifunctional *Pr
 
 ## Deploy a Proxy per client type
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/2/Proxy to Backends for Frontends.png" alt="Proxy to Backends for Frontends" width=100%/>
 </p>
+
+</figure>
 
 <ins>Patterns</ins>: [Proxy]({{< relref "../../part-3--extension-metapatterns/proxy.md" >}}), [Backends for Frontends]({{< relref "../../part-4--fragmented-metapatterns/backends-for-frontends--bff-.md" >}})\.
 

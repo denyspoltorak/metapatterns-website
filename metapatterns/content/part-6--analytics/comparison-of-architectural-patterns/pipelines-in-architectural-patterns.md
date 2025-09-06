@@ -17,9 +17,13 @@ Staying true to all of these points makes *Pipes and Filters* – one of the old
 
 ## Pipes and Filters
 
+<figure>
+
 <p align="center">
 <img src="/Conclusion/Pipelineliness-PipesAndFilters.png" alt="Pipelineliness-PipesAndFilters" width=100%/>
 </p>
+
+</figure>
 
 [*Pipes and Filters*]({{< relref "../../part-2--basic-metapatterns/pipeline.md#pipes-and-filters-workflow-system" >}}) \[[POSA1]({{< relref "../../part-7--appendices/appendix-b--books-referenced.md#posa1" >}})\] is about stepwise [processing of a data stream]({{< relref "../../part-1--foundations/four-kinds-of-software.md#streaming-continuous-raw-data-input" >}})\. Each piece of data \(a video frame, a line of text or a database record\) passes through the entire system\.
 
@@ -27,9 +31,13 @@ This architecture is easy to build and has a wide range of applications, from ha
 
 ## Choreographed Event\-Driven Architecture
 
+<figure>
+
 <p align="center">
 <img src="/Conclusion/Pipelineliness-EventDrivenArchitecture.png" alt="Pipelineliness-EventDrivenArchitecture" width=100%/>
 </p>
+
+</figure>
 
 Relaxing the *type* and loosening the *identity* clauses opens the way to [*Choreographed Event\-Driven Architecture*]({{< relref "../../part-2--basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}}) \[[SAP]({{< relref "../../part-7--appendices/appendix-b--books-referenced.md#sap" >}}), [FSA]({{< relref "../../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\], in which a service publishes notifications about anything it does that may be of interest to other services\. In such a system:
 
@@ -41,17 +49,25 @@ This architecture covers way more complex use cases than [*Pipes and Filters*]({
 
 ## Command Query Responsibility Segregation \(CQRS\)
 
+<figure>
+
 <p align="center">
 <img src="/Conclusion/Pipelineliness-CQRS.png" alt="Pipelineliness-CQRS" width=100%/>
 </p>
+
+</figure>
 
 When data from events is stored for a future use \(as with the aggregation above\), the *type* and *temporal order* are ignored but data *identity* may be retained\. A [*CQRS*\-based system]({{< relref "../../part-4--fragmented-metapatterns/layered-services.md#command-query-responsibility-segregation-cqrs" >}}) \[[MP]({{< relref "../../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\] separates paths for write \(*command*\) and read \(*query*\) requests, making a kind of data processing pipeline with the database in the middle, which stores events for an indeterminate amount of time\. It is the database that reshuffles the order of events, as a record it stores may be queried at any time, maybe in a year from its addition – or never at all\.
 
 ## Model\-View\-Controller \(MVC\)
 
+<figure>
+
 <p align="center">
 <img src="/Conclusion/Pipelineliness-MVC.png" alt="Pipelineliness-MVC" width=100%/>
 </p>
+
+</figure>
 
 [*Model\-View\-Controller*]({{< relref "../../part-5--implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}}) \[[POSA1]({{< relref "../../part-7--appendices/appendix-b--books-referenced.md#posa1" >}})\] completely neglects the *type* and *identity* limitations\. It is a coarse\-grained pattern where the input source produces many kinds of events that go to the main module which does something and outputs another stream of events of no obvious relation to the input\. A mouse click does not necessarily result in a screen redraw, while a redraw may happen on timer with no user actions\. In fact, the pattern conjoins two different short pipelines\.
 

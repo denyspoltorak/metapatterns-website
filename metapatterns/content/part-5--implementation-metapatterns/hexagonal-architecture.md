@@ -5,9 +5,13 @@ title = "Hexagonal Architecture"
 
 # Hexagonal Architecture
 
+<figure>
+
 <p align="center">
 <img src="/Main/Hexagonal Architecture.png" alt="Hexagonal Architecture" width=100%/>
 </p>
+
+</figure>
 
 *Trust no one\.* Protect your code from external dependencies\.
 
@@ -61,17 +65,25 @@ Examples – [Separated Presentation](https://martinfowler.com/eaaDev/SeparatedP
 
 In rare cases the system may benefit from direct communication between the adapters\. However, that requires several of them to be compatible or polymorphic, in which case your *Hexagonal Architecture* may in fact be a kind of shallow [*Hierarchy*]({{< relref "../part-4--fragmented-metapatterns/hierarchy.md" >}})\. Examples include a service that uses several databases which are kept in sync through [*Change Data Capture*](https://www.dremio.com/wiki/change-data-capture/) \(*CDC*\) or a telephony gateway that interconnects various kinds of voice devices\.
 
+<figure>
+
 <p align="center">
 <img src="/Performance/Hexagonal Architecture.png" alt="Hexagonal Architecture" width=90%/>
 </p>
+
+</figure>
 
 ### Dependencies
 
 Each [adapter]({{< relref "../part-3--extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) breaks the dependency between the core that contains business logic and an adapted component\. This makes all the system’s components mutually independent – and easily interchangeable and evolvable – except for the adapters themselves, which are small enough to be rewritten as need arises\.
 
+<figure>
+
 <p align="center">
 <img src="/Dependencies/Hexagonal Architecture.png" alt="Hexagonal Architecture" width=84%/>
 </p>
+
+</figure>
 
 ### Applicability
 
@@ -95,9 +107,13 @@ Each [adapter]({{< relref "../part-3--extension-metapatterns/proxy.md#adapter-an
 
 ### Relations
 
+<figure>
+
 <p align="center">
 <img src="/Relations/Hexagonal Architecture.png" alt="Hexagonal Architecture" width=100%/>
 </p>
+
+</figure>
 
 *Hexagonal Architecture*:
 
@@ -114,9 +130,13 @@ One possible variation in a distributed or asynchronous *Hexagonal Architecture*
 
 ### Adapters on the external component side
 
+<figure>
+
 <p align="center">
 <img src="/Variants/4/Hexagonal - Adapters with Components.png" alt="Hexagonal - Adapters with Components" width=93%/>
 </p>
+
+</figure>
 
 If your team owns the component adapted, the *adapter* may be placed next to it\. That usually makes sense because a single domain message \(in the terms of your business logic\) tends to unroll into a series of calls to an external component\. The fewer messages you send, the faster your system is\.
 
@@ -124,9 +144,13 @@ This resembles [*Sidecar*](https://docs.google.com/document/d/1hzBn-RzzNDcArAWcv
 
 ### Adapters on the core side
 
+<figure>
+
 <p align="center">
 <img src="/Variants/4/Hexagonal - Adapters with the Core.png" alt="Hexagonal - Adapters with the Core" width=100%/>
 </p>
+
+</figure>
 
 Sometimes you need to adapt an external service which you don’t control\. In that case the only real option is to place its *adapter* together with your *core* logic\. In theory, the adapter can be deployed as a separate component, maybe in a [*Sidecar*]({{< relref "../part-3--extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \[[DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#dds" >}})\], but that may slow down communication\.
 
@@ -138,17 +162,25 @@ This approach resembles [*Ambassador*](https://docs.google.com/document/d/1hzBn-
 
 ### Hexagonal Architecture, Ports and Adapters
 
+<figure>
+
 <p align="center">
 <img src="/Variants/4/Monolithic Hexagonal.png" alt="Monolithic Hexagonal" width=100%/>
 </p>
+
+</figure>
 
 Just like [*MVC*]({{< relref "#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}}) it is based on, the original *Hexagonal Architecture* \([*Ports and Adapters*](https://alistair.cockburn.us/hexagonal-architecture/)\) does not care about the contents or structure of its *core* – it is all about isolating the core from the environment\. The core may have layers or modules or even plugins inside, but the pattern has nothing to say about them\.
 
 ### DDD\-Style Hexagonal Architecture, Onion Architecture, Clean Architecture
 
+<figure>
+
 <p align="center">
 <img src="/Variants/4/Layered Hexagonal.png" alt="Layered Hexagonal" width=100%/>
 </p>
+
+</figure>
 
 As *Hexagonal Architecture* built upon the [DDD](https://en.wikipedia.org/wiki/Domain-driven_design)’s idea of isolating business logic with [*Adapters*]({{< relref "../part-3--extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}), it was quickly integrated back into DDD \[[LDDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#lddd" >}})\]\. However, as *Ports and Adapters* appeared later than the [original DDD book]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddd" >}}), there is no universal agreement on how the thing should work:
 
@@ -171,9 +203,13 @@ All of them aim at making the business logic presentation\-agnostic \(thus cross
 
 ### Model\-View\-Presenter \(MVP\), Model\-View\-Adapter \(MVA\), Model\-View\-ViewModel \(MVVM\), Model 1 \(MVC1\), Document\-View
 
+<figure>
+
 <p align="center">
 <img src="/Variants/4/MVP.png" alt="MVP" width=100%/>
 </p>
+
+</figure>
 
 *MVP*\-style patterns pass user input and output through one or more presentation [*layers*]({{< relref "../part-2--basic-metapatterns/layers.md" >}})\. Each pattern includes:
 
@@ -192,15 +228,23 @@ A [*Model\-View\-ViewModel*](https://herbertograca.com/2017/08/17/mvc-and-its-va
 
 All those patterns exploit modern OS or GUI frameworks’ widgets which handle and process mouse and keyboard input, thus [removing](https://mvc.givan.se/papers/Twisting_the_Triad.pdf) the need for a separate \(input\) *controller* \(see below\)\.
 
+<figure>
+
 <p align="center">
 <img src="/Variants/4/MVP - subtypes.png" alt="MVP - subtypes" width=100%/>
 </p>
 
+</figure>
+
 ### Model\-View\-Controller \(MVC\), Action\-Domain\-Responder \(ADR\), Resource\-Method\-Representation \(RMR\), Model 2 \(MVC2\), Game Development Engine
+
+<figure>
 
 <p align="center">
 <img src="/Variants/4/MVC.png" alt="MVC" width=100%/>
 </p>
+
+</figure>
 
 When your presentation’s input and output diverge \(raw mouse movement vs 3D graphics in UI, HTTP requests vs HTML pages in websites\), it makes sense to separate the presentation layer into dedicated components for input and output\.
 
@@ -225,9 +269,13 @@ A [*game development engine*](https://slideplayer.com/slide/12426213/) creates a
 
 Another difference is that while *MVC* provides for changing target platforms by rewriting its minor components \(*view* and *controller*\), you are very unlikely to change your game framework – instead, it is the framework itself that makes all the platforms look identical to your code\.
 
+<figure>
+
 <p align="center">
 <img src="/Variants/4/MVC - subtypes.png" alt="MVC - subtypes" width=100%/>
 </p>
+
+</figure>
 
 ## Summary
 

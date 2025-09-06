@@ -18,9 +18,13 @@ bookCollapseSection = true
 
 <span style="color:green">Lars Noodén \(editor\)</span>
 
+<figure>
+
 <p align="center">
 <img src="../Pictures/image000.png" alt="image000" width=22%/>
 </p>
+
+</figure>
 
 <span style="color:green">Licensed under Creative Commons Attribution 4\.0 International</span>
 

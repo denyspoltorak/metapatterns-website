@@ -9,9 +9,13 @@ We’ve seen a single pattern come under many names, as happens with [*Orchestra
 
 ### Monolith
 
+<figure>
+
 <p align="center">
 <img src="/Conclusion/Ambiguous-Monolith.png" alt="Ambiguous-Monolith" width=100%/>
 </p>
+
+</figure>
 
 The old books, namely \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#gof" >}})\] and \[[POSA1]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa1" >}})\], described a *tightly coupled* [*unstructured* system]({{< relref "../part-2--basic-metapatterns/monolith.md" >}}), where anything depends on everything, as *monolithic*, which matched the meaning of the word in Latin – “single stone”\.
 
@@ -23,9 +27,13 @@ The novel misnomers, [*Layered Monolith*]({{< relref "../part-2--basic-metapatte
 
 ### Reactor
 
+<figure>
+
 <p align="center">
 <img src="/Variants/1/Subtypes of Monolith.png" alt="Subtypes of Monolith" width=100%/>
 </p>
+
+</figure>
 
 People [tend to call](http://ithare.com/category/reactors/) any event\-driven service a *Reactor*\. In fact, there are three patterns that describe threading models for an event\-handling system:
 
@@ -38,9 +46,13 @@ In most cases we’ll hear of *Proactor* being called *Reactor* – probably bec
 
 ### Microkernel
 
+<figure>
+
 <p align="center">
 <img src="/Conclusion/Ambiguous-Microkernel.png" alt="Ambiguous-Microkernel" width=80%/>
 </p>
+
+</figure>
 
 *Microkernel* is another notable case\. The confusion over it goes all the way back to \[[POSA1]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa1" >}})\] which used [operating systems]({{< relref "../part-5--implementation-metapatterns/microkernel.md#operating-system" >}}) as examples of [*Plugin Architecture*]({{< relref "../part-5--implementation-metapatterns/plugins.md" >}})\. I believe that it was a mismatch:
 
@@ -52,9 +64,13 @@ Thus, here we have two architectural patterns of arguably similar structure \([*
 
 ### Domain Services
 
+<figure>
+
 <p align="center">
 <img src="/Conclusion/Ambiguous-DomainServices.png" alt="Ambiguous-DomainServices" width=74%/>
 </p>
+
+</figure>
 
 I was told that [*Domain Services*]({{< relref "../part-2--basic-metapatterns/services.md#whole-subdomain-sub-domain-services" >}}) of \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] are an incorrect term – because a *domain service* is always limited to the [*domain* layer]({{< relref "../part-2--basic-metapatterns/layers.md#domain-driven-design-ddd-layers" >}}) of \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\] while those of \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] also cover the *application* and, maybe, *infrastructure*\.
 
@@ -62,9 +78,13 @@ I believe that both definitions are technically correct, if the difference in th
 
 ### Service\-Based Architecture
 
+<figure>
+
 <p align="center">
 <img src="/Conclusion/Ambiguous-ServiceBasedArchitecture.png" alt="Ambiguous-ServiceBasedArchitecture" width=100%/>
 </p>
+
+</figure>
 
 \[[DEDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#deds" >}})\] calls anything service\-based a *service\-based architecture*\.
 
@@ -74,9 +94,13 @@ Both definitions are technically correct\. One is wider than the other\.
 
 ### Front Controller
 
+<figure>
+
 <p align="center">
 <img src="/Conclusion/Ambiguous-FrontController.png" alt="Ambiguous-FrontController" width=70%/>
 </p>
+
+</figure>
 
 \[[PEAA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#peaa" >}})\] defines [*Front Controller*](https://learn.microsoft.com/en-us/previous-versions/msp-n-p/ff648617(v=pandp.10)?redirectedfrom=MSDN) as an [*MVC*]({{< relref "../part-5--implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}}) derivative for backend programming\. In this pattern multiple web pages share a request processing component which turns the incoming requests into commands and forwards them to appropriate page classes\.
 
@@ -84,9 +108,13 @@ The definition from \[[SAHP]({{< relref "../part-7--appendices/appendix-b--books
 
 ### Cells
 
+<figure>
+
 <p align="center">
 <img src="/Conclusion/Ambiguous-Cells.png" alt="Ambiguous-Cells" width=100%/>
 </p>
+
+</figure>
 
 The fresh *Cell\-Based Architecture* also has multiple definitions\. 
 
@@ -98,9 +126,13 @@ This case looks like Amazon’s hijacking and redefining a popular emerging tech
 
 ### Nanoservices
 
+<figure>
+
 <p align="center">
 <img src="/Conclusion/Ambiguous-Nanoservices.png" alt="Ambiguous-Nanoservices" width=100%/>
 </p>
+
+</figure>
 
 The *Nanoservices* pattern is another emerging technology and it seems to have never been strictly defined\. Most sources agree that a [*nanoservice*]({{< relref "../part-2--basic-metapatterns/services.md#single-function-faas-nanoservices" >}}) is a cloud\-based function \([*FaaS*](https://en.wikipedia.org/wiki/Function_as_a_service)\), similar to a *service* with a single API method but, just as with the old good [*services*]({{< relref "../part-2--basic-metapatterns/services.md" >}}), they differ in the ways they use the novel technology:
 

@@ -26,9 +26,13 @@ Those layers may also be merged into [*Combined Components*]({{< relref "../../p
 
 ## Add a Middleware
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/Services/Services add Middleware.png" alt="Services add Middleware" width=100%/>
 </p>
+
+</figure>
 
 <ins>Patterns</ins>: [Middleware]({{< relref "../../part-3--extension-metapatterns/middleware.md" >}}), [Services]({{< relref "../../part-2--basic-metapatterns/services.md" >}})\.
 
@@ -57,9 +61,13 @@ Distributed systems may fail in a zillion ways\. You want to ruminate neither on
 
 ## Use a Service Mesh
 
+<figure>
+
 <p align="center">
 <img src="/Variants/2/Multifunctional - Service Mesh.png" alt="Multifunctional - Service Mesh" width=100%/>
 </p>
+
+</figure>
 
 <ins>Patterns</ins>: [Service Mesh]({{< relref "../../part-5--implementation-metapatterns/mesh.md#service-mesh" >}}) \([Mesh]({{< relref "../../part-5--implementation-metapatterns/mesh.md" >}}), [Middleware]({{< relref "../../part-3--extension-metapatterns/middleware.md" >}})\), [Sidecar]({{< relref "../../part-3--extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \([Proxy]({{< relref "../../part-3--extension-metapatterns/proxy.md" >}})\), [Services]({{< relref "../../part-2--basic-metapatterns/services.md" >}})\.
 
@@ -84,9 +92,13 @@ The [*Microservices*]({{< relref "../../part-2--basic-metapatterns/services.md#m
 
 ## Use a Shared Repository
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/Services/Services to Shared Database.png" alt="Services to Shared Database" width=100%/>
 </p>
+
+</figure>
 
 <ins>Patterns</ins>: [Shared Repository]({{< relref "../../part-3--extension-metapatterns/shared-repository.md" >}}), [Services]({{< relref "../../part-2--basic-metapatterns/services.md" >}})\.
 
@@ -117,9 +129,13 @@ You don’t really need every service to have a private database\. A shared one 
 
 ## Add a Proxy
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/Services/Services add Proxy.png" alt="Services add Proxy" width=100%/>
 </p>
+
+</figure>
 
 <ins>Patterns</ins>: [Proxy]({{< relref "../../part-3--extension-metapatterns/proxy.md" >}}), [Services]({{< relref "../../part-2--basic-metapatterns/services.md" >}})\.
 
@@ -149,9 +165,13 @@ Putting a generic component between the system and its clients helps the program
 
 ## Use an Orchestrator
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/Services/Services use Orchestrator.png" alt="Services use Orchestrator" width=100%/>
 </p>
+
+</figure>
 
 <ins>Patterns</ins>: [Orchestrator]({{< relref "../../part-3--extension-metapatterns/orchestrator.md" >}}), [Services]({{< relref "../../part-2--basic-metapatterns/services.md" >}})\.
 

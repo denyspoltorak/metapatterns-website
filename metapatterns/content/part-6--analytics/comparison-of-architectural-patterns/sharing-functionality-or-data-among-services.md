@@ -13,17 +13,25 @@ The simplest way to use a shared functionality \(aspect\) is to call the module 
 
 Sharing data inside a process is similar, but usually requires some kind of protection, like an [RW lock](https://en.wikipedia.org/wiki/Readers%E2%80%93writer_lock), around it to serialize access from multiple threads\.
 
+<figure>
+
 <p align="center">
 <img src="/Conclusion/Sharing-DirectCall.png" alt="Sharing-DirectCall" width=100%/>
 </p>
+
+</figure>
 
 ## Make a dedicated service
 
 In a distributed system you can place the functionality or data to share into a separate service to be accessed over the network, yielding [*Service\-Oriented Architecture*]({{< relref "../../part-4--fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}) for shared utilities or a [*Shared Repository*]({{< relref "../../part-3--extension-metapatterns/shared-repository.md" >}}) / [*Polyglot Persistence*]({{< relref "../../part-4--fragmented-metapatterns/polyglot-persistence.md" >}}) for shared data\.
 
+<figure>
+
 <p align="center">
 <img src="/Conclusion/Sharing-DedicatedService.png" alt="Sharing-DedicatedService" width=100%/>
 </p>
+
+</figure>
 
 ## Delegate the aspect
 
@@ -31,9 +39,13 @@ A less obvious solution is [delegating](https://datatracker.ietf.org/doc/html/rf
 
 In a similar way a service may [behave as a function]({{< relref "../../part-1--foundations/arranging-communication/programming-and-architectural-paradigms.md#functional-decentralized-streaming-paradigm--choreography" >}}): receive all the data it needs in an input message and send back all its work as an output – and let the database access remain the responsibility of its caller\.
 
+<figure>
+
 <p align="center">
 <img src="/Conclusion/Sharing-Delegate.png" alt="Sharing-Delegate" width=100%/>
 </p>
+
+</figure>
 
 ## Replicate it
 
@@ -41,9 +53,13 @@ Finally, each user of a component can get its own replica\. This is done implici
 
 Another case of replication is importing the same code in multiple services, which happens in [single\-layer *Nanoservices*]({{< relref "../../part-2--basic-metapatterns/services.md#inexact-nanoservices-api-layer" >}})\.
 
+<figure>
+
 <p align="center">
 <img src="/Conclusion/Sharing-Duplicate.png" alt="Sharing-Duplicate" width=100%/>
 </p>
+
+</figure>
 
 ## Summary
 

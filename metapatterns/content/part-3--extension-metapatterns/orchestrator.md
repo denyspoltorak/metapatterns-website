@@ -5,9 +5,13 @@ title = "Orchestrator"
 
 # Orchestrator
 
+<figure>
+
 <p align="center">
 <img src="/Main/Orchestrator.png" alt="Orchestrator" width=100%/>
 </p>
+
+</figure>
 
 *One ring to rule them all\.* Make a service to integrate other services\.
 
@@ -69,9 +73,13 @@ An *Orchestrator* fulfills two closely related roles:
 - As a *Facade* \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#gof" >}})\] it builds high\-level scenarios out of smaller steps provided by the services or modules it controls\. This role is obvious for [*processing* systems]({{< relref "../part-1--foundations/four-kinds-of-software.md#computational-single-run-user-input" >}}) where clients communicate with the *Facade*, but it is also featured in *control* software, because sometimes a simple event may trigger a complex multi\-component scenario managed by the system’s *Orchestrator*\.
 
 
+<figure>
+
 <p align="center">
 <img src="/Misc/Orchestrator.png" alt="Orchestrator" width=100%/>
 </p>
+
+</figure>
 
 [Data *processing*]({{< relref "../part-1--foundations/four-kinds-of-software.md#computational-single-run-user-input" >}}) systems, such as backends, may deploy multiple [instances]({{< relref "../part-2--basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}}) of stateless *Orchestrators* to improve stability and performance\. In contrast, an *Orchestrator* in [*control* software]({{< relref "../part-1--foundations/four-kinds-of-software.md#control-real-time-hardware-input" >}}) incorporates the highest\-level view of the system’s state thus it cannot be easily replicated \(as any replicated state must be kept synchronized, introducing delay or inconsistency in decision\-making\)\.
 
@@ -85,9 +93,13 @@ When compared to [*choreography*]({{< relref "../part-1--foundations/arranging-c
 - In a highly loaded or latency\-critical system, orchestrated services may establish direct data streams that bypass the *Orchestrator*\. A classic example is [VoIP](https://en.wikipedia.org/wiki/Voice_over_IP) where the call establishment logic \(SIP\) goes through an orchestrating server while the voice or video \(RTP\) is streaming directly between the clients\.
 
 
+<figure>
+
 <p align="center">
 <img src="/Performance/Orchestrator.png" alt="Orchestrator" width=100%/>
 </p>
+
+</figure>
 
 I don’t see how orchestration can affect throughput as in most cases the *Orchestrator* can be scaled\. However, scaling weakens consistency as then no instance of the *Orchestrator* has exclusive control over the system’s state\.
 
@@ -95,9 +107,13 @@ I don’t see how orchestration can affect throughput as in most cases the *Orch
 
 An *Orchestrator* may depend on the *APIs* of the services it orchestrates or define *SPIs* for them to implement, with the first mode being natural for its *Facade* \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#gof" >}})\] aspect and the second one for the *Mediator* \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#gof" >}})\]:
 
+<figure>
+
 <p align="center">
 <img src="/Dependencies/Orchestrator.png" alt="Orchestrator" width=100%/>
 </p>
+
+</figure>
 
 If an *Orchestrator* is added to integrate existing components, it will use their APIs\.
 
@@ -125,9 +141,13 @@ Likewise, [control systems]({{< relref "../part-1--foundations/four-kinds-of-sof
 
 ### Relations
 
+<figure>
+
 <p align="center">
 <img src="/Relations/Orchestrator.png" alt="Orchestrator" width=100%/>
 </p>
+
+</figure>
 
 *Orchestrator*:
 
@@ -143,17 +163,25 @@ It seems that an *Orchestrator*, just like a [*layer*]({{< relref "../part-2--ba
 
 ### Closed or strict
 
+<figure>
+
 <p align="center">
 <img src="/Variants/2/Orchestrator - Closed.png" alt="Orchestrator - Closed" width=90%/>
 </p>
+
+</figure>
 
 A *strict* or *closed Orchestrator* isolates the orchestrated services from their users – all the requests go through the *Orchestrator*, and the services don’t need to intercommunicate\. 
 
 ### Open or relaxed
 
+<figure>
+
 <p align="center">
 <img src="/Variants/2/Orchestrator - Open.png" alt="Orchestrator - Open" width=92%/>
 </p>
+
+</figure>
 
 An *open Orchestrator* implements a subset of system\-wide scenarios that require strict data consistency while less demanding requests go from the clients directly to the underlying services, which rely on [*choreography*]({{< relref "../part-1--foundations/arranging-communication/choreography.md" >}}) or [*shared data*]({{< relref "../part-1--foundations/arranging-communication/shared-data.md" >}}) for communication\. Such a system sacrifices the clarity of design to avoid some of the drawbacks of both *choreography* and *orchestration*:
 
@@ -169,17 +197,25 @@ The orchestration \(application \[[DDD]({{< relref "../part-7--appendices/append
 
 ### Monolithic
 
+<figure>
+
 <p align="center">
 <img src="/Variants/2/Orchestrator - Monolythic.png" alt="Orchestrator - Monolythic" width=42%/>
 </p>
+
+</figure>
 
 A single *Orchestrator* is deployed\. This option fits ordinary medium\-sized projects\.
 
 ### Scaled
 
+<figure>
+
 <p align="center">
 <img src="/Variants/2/Orchestrator - Scaled.png" alt="Orchestrator - Scaled" width=100%/>
 </p>
+
+</figure>
 
 High availability requires multiple [instances]({{< relref "../part-2--basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}}) of a stateless *Orchestrator* to be deployed\. A *Mediator* \([*Saga*]({{< relref "#orchestrated-saga-saga-orchestrator-saga-execution-component-transaction-script-coordinator" >}}), writing *Orchestrator*\) may store the current transaction’s state in a [*Shared Database*]({{< relref "../part-3--extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) to assure that if it crashes there is always another instance ready to take up its job\.
 
@@ -193,9 +229,13 @@ High load systems also require multiple instances of *Orchestrators* because a s
 
 ### Layered
 
+<figure>
+
 <p align="center">
 <img src="/Variants/2/Orchestrator - Layered.png" alt="Orchestrator - Layered" width=100%/>
 </p>
+
+</figure>
 
 \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] describes an option of a layered [*Event Mediator*]({{< relref "../part-3--extension-metapatterns/combined-component.md#event-mediator" >}})\. A client’s request comes to the topmost layer of the *Orchestrator* which uses the simplest \(and least flexible\) framework\. If the request is found to be complex, it is forwarded to the second layer which is based on a more powerful technology\. And if it fails or requires a human decision then it is forwarded again to the even more complex custom\-tailored orchestration layer\.
 
@@ -205,9 +245,13 @@ A similar example is using an [*API Composer*]({{< relref "#api-composer-remote-
 
 ### A service per client type \(Backends for Frontends\)
 
+<figure>
+
 <p align="center">
 <img src="/Variants/2/Orchestrator - BFF.png" alt="Orchestrator - BFF" width=100%/>
 </p>
+
+</figure>
 
 If your clients strongly differ in workflows \(e\.g\. [OLAP](https://en.wikipedia.org/wiki/Online_analytical_processing) and [OLTP](https://en.wikipedia.org/wiki/Online_transaction_processing), or user and admin interfaces\), implementing dedicated *Orchestrators* is an option to consider\. That makes each client\-specific *Orchestrator* smaller and more cohesive than the unified implementation would be and gives more independence to the teams responsible for different kinds of clients\.
 
@@ -215,17 +259,25 @@ This pattern is known as [*Backends for Frontends*]({{< relref "../part-4--fragm
 
 ### A service per subdomain \(Hierarchy\)
 
+<figure>
+
 <p align="center">
 <img src="/Variants/2/Orchestrator - Hierarchy.png" alt="Orchestrator - Hierarchy" width=100%/>
 </p>
+
+</figure>
 
 In large systems a single *Orchestrator* is very likely to become overgrown and turn into a development bottleneck \(see [*Enterprise Service Bus*]({{< relref "../part-3--extension-metapatterns/combined-component.md#enterprise-service-bus-esb" >}})\)\. Building a [*hierarchy*]({{< relref "../part-4--fragmented-metapatterns/hierarchy.md" >}}) of *Orchestrators* may help \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\], but only if the domain itself is hierarchical\. The top\-level component may even be a [*Reverse Proxy*]({{< relref "../part-3--extension-metapatterns/proxy.md#dispatcher-reverse-proxy-ingress-controller-edge-service-microgateway" >}}) if no use cases cross subdomain borders or if the sub\-orchestrators employ [choreography]({{< relref "../part-1--foundations/arranging-communication/choreography.md" >}}), resulting in a flat [*Cell\-Based Architecture*]({{< relref "../part-4--fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services" >}})\. Otherwise it is a tree\-like [*Orchestrator of Orchestrators*]({{< relref "../part-4--fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}})\.
 
 ### A service per use case \(SOA\-style\)
 
+<figure>
+
 <p align="center">
 <img src="/Variants/2/Orchestrator - SOA.png" alt="Orchestrator - SOA" width=100%/>
 </p>
+
+</figure>
 
 \[[SAHP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#sahp" >}})\] advises for single\-purpose *Orchestrators* in [*Microservices*]({{< relref "../part-2--basic-metapatterns/services.md#microservices" >}}): each *Orchestrator* manages one use case\. This enables fine\-grained scalability but will quickly lead to integration hell as new scenarios keep getting added to the system\. Overall, such a use of *Orchestrators* resembles the [*task layer*]({{< relref "../part-4--fragmented-metapatterns/service-oriented-architecture--soa-.md#enterprise-soa" >}}) of [*SOA*]({{< relref "../part-4--fragmented-metapatterns/service-oriented-architecture--soa-.md" >}})\.
 
@@ -235,9 +287,13 @@ In large systems a single *Orchestrator* is very likely to become overgrown and 
 
 ### API Composer, Remote Facade, Gateway Aggregation, Composed Message Processor, Scatter\-Gather, MapReduce
 
+<figure>
+
 <p align="center">
 <img src="/Variants/2/API Composer.png" alt="API Composer" width=100%/>
 </p>
+
+</figure>
 
 *API Composer* \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\] is a kind of *Facade* \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#gof" >}})\] which decreases the system’s latency by translating a high\-level incoming message into a set of lower\-level internal messages, sending them to the corresponding [services]({{< relref "../part-2--basic-metapatterns/services.md" >}}) in parallel, waiting for results and collecting the latter into a response to the original message\. Such a logic may often be defined declaratively in a third\-party tool without writing any low\-level code\. *Remote Facade* \[[PEAA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#peaa" >}})\] is a similar pattern which makes synchronous calls to the underlying components – it exists to implement a coarse\-grained protocol with the system’s clients, so that a client may achieve whatever it needs through a single request\. [*Gateway Aggregation*](https://learn.microsoft.com/en-us/azure/architecture/patterns/gateway-aggregation) is a generalization of these patterns\.
 
@@ -251,9 +307,13 @@ Example: Microsoft has an [article](https://learn.microsoft.com/en-us/azure/arch
 
 ### Process Manager, Orchestrator
 
+<figure>
+
 <p align="center">
 <img src="/Variants/2/Process Manager.png" alt="Process Manager" width=100%/>
 </p>
+
+</figure>
 
 *Process Manager* \[[EIP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}}), [LDDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#lddd" >}})\] \(referred simply as *Orchestrator* in \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\]\) is a kind of *Facade* that translates high\-level tasks into sequences of lower\-level steps\. This subtype of *Orchestrator* receives a client request, stores its state, runs pre\-programmed request processing steps, and returns a response\. Each of the steps of a *Process Manager* is similar to a whole task of an *API Composer* in that it generates a set of parallel requests to internal services, waits for the results and stores them for the future use in the following steps or final response\. The scenarios it runs may branch on conditions\.
 
@@ -265,9 +325,13 @@ Example: \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.
 
 ### \(Orchestrated\) Saga, Saga Orchestrator, Saga Execution Component, Transaction Script, Coordinator
 
+<figure>
+
 <p align="center">
 <img src="/Variants/2/Saga.png" alt="Saga" width=100%/>
 </p>
+
+</figure>
 
 *\(Orchestrated* \[[SAHP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#sahp" >}})\]*\) Saga* \[[LDDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#lddd" >}})\], *Saga Orchestrator* \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\] or [*Saga Execution Component*](https://www.cs.cornell.edu/andru/cs711/2002fa/reading/sagas.pdf) is a subtype of *Process Manager* which is specialized in *distributed transactions*\.
 
@@ -285,9 +349,13 @@ Example: \[[SAHP]({{< relref "../part-7--appendices/appendix-b--books-referenced
 
 ### Integration \(Micro\-\)Service, Application Service
 
+<figure>
+
 <p align="center">
 <img src="/Variants/2/Integration Service.png" alt="Integration Service" width=100%/>
 </p>
+
+</figure>
 
 An [*Integration Service*](https://github.com/wso2/reference-architecture/blob/master/event-driven-api-architecture.md) is a full\-scale service \(often with a dedicated database\) that runs high\-level scenarios while delegating the bulk of the work to several other services \(remarkably, delegating to a single component forms [*Layers*]({{< relref "../part-2--basic-metapatterns/layers.md" >}})\)\. Though an *Integration Service* usually features both functions of *Orchestrator*, in a [*control* system]({{< relref "../part-1--foundations/four-kinds-of-software.md#control-real-time-hardware-input" >}}) its *Mediator* role is more prominent while in [*processing* software]({{< relref "../part-1--foundations/four-kinds-of-software.md#computational-single-run-user-input" >}}) it is going to behave more like the *Facade*\. A system with an *Integration Service* often resembles a shallow [*Top\-Down Hierarchy*]({{< relref "../part-4--fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}})\.
 
@@ -299,9 +367,13 @@ Several composite patterns involve an *Orchestrator* and are dominated by its be
 
 ### API Gateway
 
+<figure>
+
 <p align="center">
 <img src="/Variants/2/API Gateway.png" alt="API Gateway" width=100%/>
 </p>
+
+</figure>
 
 An *API Gateway* \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\] is a component that processes client requests \(and encapsulates an implementation of a client protocol\(s\)\) as a [*Gateway*]({{< relref "../part-3--extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) \(a kind of [*Proxy*]({{< relref "../part-3--extension-metapatterns/proxy.md" >}})\) but also splits every client request into multiple requests to internal services as an *API Composer* or *Process Manager* \(which are *Orchestrators*\)\. It is a common pattern for backend solutions as it provides all the means to isolate the stable core of the system’s implementation from its fickle clients\. Usually a third\-party framework implements and colocates both its aspects, namely *Proxy* and *Orchestrator*, thus simplifying deployment and improving latency\.
 
@@ -309,9 +381,13 @@ Example: a thorough article from [Microsoft](https://learn.microsoft.com/en-us/a
 
 ### Event Mediator
 
+<figure>
+
 <p align="center">
 <img src="/Variants/2/Event Mediator.png" alt="Event Mediator" width=100%/>
 </p>
+
+</figure>
 
 *Event Mediator* \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] is an *orchestrating* [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}})\. It not only receives requests from clients and turns each request into a multistep use case \(as a *Process Manager*\) but it also manages the deployed instances of services and acts as a medium which transports requests to the services and receives confirmations from them\. Moreover, unlike an ordinary *Middleware*, it seems to be aware of all of the kinds of messages in the system and which service each message must be forwarded to, resulting in overwhelming complexity concentrated in a single component which does not even follow the principle of separation of concerns\. \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] recommends building a hierarchy of *Event Mediators* from several vendors, further complicating the architecture\.
 
@@ -319,9 +395,13 @@ Example: Mediator Topology in the chapter of \[[FSA](https://docs.google.com/doc
 
 ### Enterprise Service Bus \(ESB\)
 
+<figure>
+
 <p align="center">
 <img src="/Variants/2/Enterprise Service Bus.png" alt="Enterprise Service Bus" width=100%/>
 </p>
+
+</figure>
 
 [*Enterprise Service Bus*](https://www.confluent.io/learn/enterprise-service-bus/) \(*ESB*\) \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] is an overgrown *Event Mediator* that incorporates lots of [*cross\-cutting concerns*](https://en.wikipedia.org/wiki/Cross-cutting_concern), including protocol translation for which it utilizes at least one [*Adapter*]({{< relref "../part-3--extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) per service\. The combination of a central role in organizations and its complexity was among the main reasons for the demise of [*Enterprise Service\-Oriented Architecture*]({{< relref "../part-4--fragmented-metapatterns/service-oriented-architecture--soa-.md#enterprise-soa" >}})\.
 
@@ -340,30 +420,46 @@ There is one way to counter the first point and more than one to solve the secon
 - Subdivide the *Orchestrator* by the system’s subdomains, forming [*Layered Services*]({{< relref "../part-4--fragmented-metapatterns/layered-services.md#orchestrated-three-layered-services" >}}) and minimizing network communication\.
 
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/2/Orchestrator to Layered Services.png" alt="Orchestrator to Layered Services" width=100%/>
 </p>
 
+</figure>
+
 - Subdivide the *Orchestrator* by the type of client, forming [*Backends for Frontends*]({{< relref "../part-4--fragmented-metapatterns/backends-for-frontends--bff-.md" >}})\.
 
+
+<figure>
 
 <p align="center">
 <img src="/Evolutions/2/Orchestrator to Backends for Frontends.png" alt="Orchestrator to Backends for Frontends" width=100%/>
 </p>
 
+</figure>
+
 - Add another [*layer*]({{< relref "../part-2--basic-metapatterns/layers.md" >}}) of orchestration\.
 
+
+<figure>
 
 <p align="center">
 <img src="/Evolutions/2/Orchestrator add Orchestrator.png" alt="Orchestrator add Orchestrator" width=100%/>
 </p>
 
+</figure>
+
 - Build a [*Top\-Down Hierarchy*]({{< relref "../part-4--fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}})\.
 
+
+<figure>
 
 <p align="center">
 <img src="/Evolutions/2/Orchestrator to Hierarchy.png" alt="Orchestrator to Hierarchy" width=100%/>
 </p>
+
+</figure>
 
 ## Summary
 

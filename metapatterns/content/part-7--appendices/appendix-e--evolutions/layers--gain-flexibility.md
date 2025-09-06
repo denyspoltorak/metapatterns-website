@@ -12,9 +12,13 @@ The last group of evolutions to consider is about making the system more adaptab
 - [*Scripts*]({{< relref "../../part-5--implementation-metapatterns/microkernel.md#interpreter-script-domain-specific-language-dsl" >}}) allow for customization of the system’s logic on a per client basis\.
 
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/Monolith/Monolith to Layers - Further 2.png" alt="Monolith to Layers - Further 2" width=100%/>
 </p>
+
+</figure>
 
 There is also a new evolution that modifies the upper \(orchestration\) layer:
 
@@ -23,9 +27,13 @@ There is also a new evolution that modifies the upper \(orchestration\) layer:
 
 ## Divide the orchestration layer into Backends for Frontends
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/Layers/Layers to Backends for Frontends.png" alt="Layers to Backends for Frontends" width=100%/>
 </p>
+
+</figure>
 
 <ins>Patterns</ins>: [Layers]({{< relref "../../part-2--basic-metapatterns/layers.md" >}}), [Backends for Frontends aka BFFs]({{< relref "../../part-4--fragmented-metapatterns/backends-for-frontends--bff-.md" >}})\.
 

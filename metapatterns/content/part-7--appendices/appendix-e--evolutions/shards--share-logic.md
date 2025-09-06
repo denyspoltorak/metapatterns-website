@@ -15,9 +15,13 @@ Other cases are better solved by extracting the logic that manipulates multiple 
 
 ## Add a Middleware
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/Shards/Shards add Middleware.png" alt="Shards add Middleware" width=100%/>
 </p>
+
+</figure>
 
 <ins>Patterns</ins>: [Shards]({{< relref "../../part-2--basic-metapatterns/shards.md" >}}), [Middleware]({{< relref "../../part-3--extension-metapatterns/middleware.md" >}}), [Layers]({{< relref "../../part-2--basic-metapatterns/layers.md" >}})\.
 
@@ -41,9 +45,13 @@ A *Middleware* transports messages between shards, checks their health and recov
 
 ## Add a Sharding Proxy
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/Shards/Shards add Load Balancer.png" alt="Shards add Load Balancer" width=100%/>
 </p>
+
+</figure>
 
 <ins>Patterns</ins>: [Shards]({{< relref "../../part-2--basic-metapatterns/shards.md" >}}), [Sharding Proxy]({{< relref "../../part-3--extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) \([Proxy]({{< relref "../../part-3--extension-metapatterns/proxy.md" >}})\), [Layers]({{< relref "../../part-2--basic-metapatterns/layers.md" >}})\.
 
@@ -68,9 +76,13 @@ The client application may know the address of the shard which serves it and con
 
 ## Move the integration logic into an Orchestrator
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/Shards/Shards use Orchestrator.png" alt="Shards use Orchestrator" width=100%/>
 </p>
+
+</figure>
 
 <ins>Patterns</ins>: [Shards]({{< relref "../../part-2--basic-metapatterns/shards.md" >}}), [Orchestrator]({{< relref "../../part-3--extension-metapatterns/orchestrator.md" >}}), [Layers]({{< relref "../../part-2--basic-metapatterns/layers.md" >}})\.
 

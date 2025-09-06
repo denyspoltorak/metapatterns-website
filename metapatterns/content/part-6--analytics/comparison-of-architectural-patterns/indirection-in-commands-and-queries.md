@@ -19,9 +19,13 @@ If we want for each module or service to continue with a model that fits its nee
 
 ## Command \(OLTP\) systems
 
+<figure>
+
 <p align="center">
 <img src="/Conclusion/Indirection-Command.png" alt="Indirection-Command" width=100%/>
 </p>
+
+</figure>
 
 More often than not our system consists of services that command each other: via [RPC](https://en.wikipedia.org/wiki/Remote_procedure_call)s, requests or even notifications – no matter how, one component makes a call to action which other\(s\) should obey\.
 
@@ -34,9 +38,13 @@ In such a case we employ an [*Adapter*]({{< relref "../../part-3--extension-meta
 
 ## Query \(OLAP\) systems
 
+<figure>
+
 <p align="center">
 <img src="/Conclusion/Indirection-Query.png" alt="Indirection-Query" width=100%/>
 </p>
+
+</figure>
 
 There is often another aspect of communication in a system, namely, information collection and analysis\. And it runs into a different set of issues which cannot be helped by mere interface translation\.
 

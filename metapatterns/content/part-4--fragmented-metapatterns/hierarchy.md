@@ -5,9 +5,13 @@ title = "Hierarchy"
 
 # Hierarchy
 
+<figure>
+
 <p align="center">
 <img src="/Main/Hierarchy.png" alt="Hierarchy" width=100%/>
 </p>
+
+</figure>
 
 *Command and conquer\.* Build a tree of responsibilities\.
 
@@ -48,9 +52,13 @@ This architecture is not ubiquitous because few domains are truly hierarchical\.
 
 No kind of distributed hierarchy is latency\-friendly as many use cases involve several network hops\. The fewer layers of the hierarchy are involved in a task, the better its performance\.
 
+<figure>
+
 <p align="center">
 <img src="/Performance/Hierarchy - speed.png" alt="Hierarchy - speed" width=100%/>
 </p>
+
+</figure>
 
 Maintaining high throughput usually requires deploying multiple instances of the root component, which is not possible if it is stateful \(in [*control systems*]({{< relref "../part-1--foundations/four-kinds-of-software.md#control-real-time-hardware-input" >}})\) and the state cannot be split into [*Shards*]({{< relref "../part-2--basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-cells-amazon-definition" >}})\. The following tricks may help unloading the root:
 
@@ -59,17 +67,25 @@ Maintaining high throughput usually requires deploying multiple instances of the
 - *Direct communication channels* \(previously described for [*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}})\): if low\-level nodes need to exchange data, their communication should not always go through the higher\-level nodes\. Instead, they may negotiate a direct link \(open a socket\) that bypasses the root of the hierarchy\.
 
 
+<figure>
+
 <p align="center">
 <img src="/Performance/Hierarchy - optimizations.png" alt="Hierarchy - optimizations" width=100%/>
 </p>
+
+</figure>
 
 ### Dependencies
 
 A parent node would usually define one \(for polymorphic children\) or more \(otherwise\) [*SPIs*](https://en.wikipedia.org/wiki/Service_provider_interface) for its child nodes to implement\. The interfaces reside on the parent side because low\-level nodes tend to be less stable \(new types of them are often added and old ones replaced\) therefore we don’t want our main business logic to depend on them\.
 
+<figure>
+
 <p align="center">
 <img src="/Dependencies/Hierarchy.png" alt="Hierarchy" width=100%/>
 </p>
+
+</figure>
 
 ### Applicability
 
@@ -90,9 +106,13 @@ A parent node would usually define one \(for polymorphic children\) or more \(ot
 
 ### Relations
 
+<figure>
+
 <p align="center">
 <img src="/Relations/Hierarchy.png" alt="Hierarchy" width=100%/>
 </p>
+
+</figure>
 
 *Hierarchy*:
 
@@ -119,9 +139,13 @@ Example: an intrusion alarm logic may need to discern between cat\-affected IR s
 
 ### Top\-Down Hierarchy, Orchestrator of Orchestrators, Presentation\-Abstraction\-Control \(PAC\), Hierarchical Model\-View\-Controller \(HMVC\)
 
+<figure>
+
 <p align="center">
 <img src="/Variants/3/Hierarchy - Top-down.png" alt="Hierarchy - Top-down" width=100%/>
 </p>
+
+</figure>
 
 In the most common case *Hierarchy* is applied to business logic to build a layered system which grows from a single generic high\-level root into a swarm of specialized low\-level pieces\. The most obvious applications are protocol parsers, decision trees, [IIoT](https://en.wikipedia.org/wiki/Industrial_internet_of_things) \(e\.g\. a fire alarm system of a building\), and [modern automotive](https://semiengineering.com/managing-todays-advanced-vehicle-networks-design-challenges/) networks\. A marketplace that allows for customized search and marketing algorithms within each category of its goods may also be powered by a hierarchy of category\-specific services\.
 
@@ -129,15 +153,23 @@ In the most common case *Hierarchy* is applied to business logic to build a laye
 
 [*Hierarchical Model\-View\-Controller*](https://herbertograca.com/2017/08/17/mvc-and-its-variants/#hierarchical-model-view-controller) \(*HMVC*\) is similar, but its views access models directly, like in [*MVC*]({{< relref "../part-5--implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}}), and every model synchronizes with the global data\. This pattern [was used](https://web.archive.org/web/20060319064042/http://www.javaworld.com/javaworld/jw-09-2000/jw-0908-letters.html) in [rich clients](https://en.wikipedia.org/wiki/Rich_client)\.
 
+<figure>
+
 <p align="center">
 <img src="/Variants/3/PAC.png" alt="PAC" width=100%/>
 </p>
 
+</figure>
+
 ### Bottom\-Up Hierarchy, Bus of Buses, Network of Networks
+
+<figure>
 
 <p align="center">
 <img src="/Variants/3/Hierarchy - Bottom-up.png" alt="Hierarchy - Bottom-up" width=100%/>
 </p>
+
+</figure>
 
 Other cases require building a common base for intercommunication between several networks which vary in their protocols \(and maybe even their hardware\)\. The root of such a *Hierarchy* is a [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}) generic and powerful enough to cover the needs of all the specialized networks which it interconnects\.
 
@@ -145,9 +177,13 @@ Example: [Automotive networks](https://www.mdpi.com/1424-8220/21/23/7917), integ
 
 ### In\-Depth Hierarchy, Cell\-Based \(Microservice\) Architecture \(WSO2 version\), Segmented Microservice Architecture, Services of Services, Clusters of Services
 
+<figure>
+
 <p align="center">
 <img src="/Variants/3/Cell-Based Architecture.png" alt="Cell-Based Architecture" width=100%/>
 </p>
+
+</figure>
 
 When several [*services*]({{< relref "../part-2--basic-metapatterns/services.md" >}}) in a system grow large, in some cases it is possible to divide each of them into *subservices*\. Each group of the resulting subservices \(known as a [*Cell*]({{< relref "../part-2--basic-metapatterns/services.md#cell-wso2-definition-service-of-services-domain-uber-definition-cluster" >}}), [*Domain*](https://www.uber.com/blog/microservice-architecture/) or *Cluster* \[[DEDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#deds" >}})\]\) usually implements a *bounded context* \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\]\. It is hidden behind its own [*Cell Gateway*]({{< relref "../part-3--extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) and may even use its own [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}})\. Subservices of a *Cell* may [*share a database*]({{< relref "../part-3--extension-metapatterns/shared-repository.md" >}}) and may be deployed as a single unit\. This keeps the system’s integration complexity \(the length of its APIs and the number of deployable units\) reasonable while still scaling development among many teams, each owning a service\. If each instance of a *Cell* owns a [*shard*]({{< relref "../part-2--basic-metapatterns/shards.md" >}}) of its database, the system [becomes more stable](https://docs.aws.amazon.com/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/what-is-a-cell-based-architecture.html) as there is no single point of failure \(except for the [*Load Balancer*]({{< relref "../part-3--extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) called *Cell Router*\)\. Another benefit is that *Cells* can be deployed to regional data centers to improve locality for users of the system\. However, that will likely cause data synchronization traffic between the data centers\.
 
@@ -160,9 +196,13 @@ Uber [compacted](https://www.uber.com/blog/microservice-architecture/) 2200 [*Mi
 - The upper component of a *Top\-Down Hierarchy* can be split into [*Backends for Frontends*]({{< relref "../part-4--fragmented-metapatterns/backends-for-frontends--bff-.md" >}})\.
 
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/3/Hierarchy - 1.png" alt="Hierarchy - 1" width=100%/>
 </p>
+
+</figure>
 
 ## Summary
 

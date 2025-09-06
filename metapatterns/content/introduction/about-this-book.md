@@ -33,9 +33,13 @@ This book makes heavy use of diagrams – to the extent that it can be treated a
 
 The diagrams are *NoUML* and most of them belong to one of the following kinds:
 
+<figure>
+
 <p align="center">
 <img src="/Misc/Diagrams.png" alt="Diagrams" width=100%/>
 </p>
+
+</figure>
 
 Please refer to the [following chapter]({{< relref "../introduction/metapatterns.md#the-system-of-coordinates" >}}) for the legend and the system of coordinates\.
 

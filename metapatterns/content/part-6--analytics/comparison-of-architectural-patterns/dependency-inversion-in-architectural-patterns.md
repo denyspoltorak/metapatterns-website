@@ -11,9 +11,13 @@ Let’s see how dependency inversion is used on system level\.
 
 ## Patterns that build around it
 
+<figure>
+
 <p align="center">
 <img src="/Conclusion/DI-1.png" alt="DI-1" width=100%/>
 </p>
+
+</figure>
 
 Both [*Plugins*]({{< relref "../../part-5--implementation-metapatterns/plugins.md" >}}) and the derived [*Hexagonal Architecture*]({{< relref "../../part-5--implementation-metapatterns/hexagonal-architecture.md" >}}) rely on dependency inversion for the same reason – to protect the *core*, which contains the bulk of the code, from variability in the external components it uses\. The *core* operates interfaces \([*SPI*](https://en.wikipedia.org/wiki/Service_provider_interface)s\) which it defines so that it may not care whatever is behind an interface\.
 
@@ -25,9 +29,13 @@ It is the nature of the polymorphic components that distinguishes the patterns:
 
 ## Patterns that often rely on it
 
+<figure>
+
 <p align="center">
 <img src="/Conclusion/DI-2.png" alt="DI-2" width=100%/>
 </p>
+
+</figure>
 
 A few more metapatterns tend to use this approach to earn its benefits, even though dependency inversion is not among their integral features:
 
@@ -38,9 +46,13 @@ A few more metapatterns tend to use this approach to earn its benefits, even tho
 
 ## Patterns that may use it
 
+<figure>
+
 <p align="center">
 <img src="/Conclusion/DI-3.png" alt="DI-3" width=100%/>
 </p>
+
+</figure>
 
 Finally, two basic architectures, [*Layers*]({{< relref "../../part-2--basic-metapatterns/layers.md" >}}) and [*Services*]({{< relref "../../part-2--basic-metapatterns/services.md" >}}), may resort to something similar to dependency inversion to decouple their constituents:
 

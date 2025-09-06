@@ -10,9 +10,13 @@ There are several ways to improve the performance of a [*layered system*]({{< re
 - [*Space\-Based Architecture*]({{< relref "../../part-5--implementation-metapatterns/mesh.md#space-based-architecture" >}}) co\-locates the database and business logic and scales both dynamically\.
 
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/Layers/Layers to Space-Based Architecture.png" alt="Layers to Space-Based Architecture" width=100%/>
 </p>
+
+</figure>
 
 Others are new here and thus deserve more attention:
 
@@ -23,9 +27,13 @@ Others are new here and thus deserve more attention:
 
 ## Merge several layers
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/Layers/Layers Merge.png" alt="Layers Merge" width=100%/>
 </p>
+
+</figure>
 
 <ins>Patterns</ins>: [Layers]({{< relref "../../part-2--basic-metapatterns/layers.md" >}}) or [Monolith]({{< relref "../../part-2--basic-metapatterns/monolith.md" >}})
 
@@ -54,9 +62,13 @@ If your system’s development [is finished]({{< relref "../../part-6--analytics
 
 ## Scale individual layers
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/Layers/Layers_ Shard.png" alt="Layers: Shard" width=100%/>
 </p>
+
+</figure>
 
 <ins>Patterns</ins>: [Layers]({{< relref "../../part-2--basic-metapatterns/layers.md" >}}), [Shards]({{< relref "../../part-2--basic-metapatterns/shards.md" >}}), often [Load Balancer]({{< relref "../../part-3--extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) \([Proxy]({{< relref "../../part-3--extension-metapatterns/proxy.md" >}})\)\.
 
@@ -86,9 +98,13 @@ Multiple instances or layers can be created, with their number and deployment [v
 
 ## Use multiple databases
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/Layers/Layers to Polyglot Persistence.png" alt="Layers to Polyglot Persistence" width=100%/>
 </p>
+
+</figure>
 
 <ins>Patterns</ins>: [Layers]({{< relref "../../part-2--basic-metapatterns/layers.md" >}}), [Polyglot Persistence]({{< relref "../../part-4--fragmented-metapatterns/polyglot-persistence.md" >}})\.
 

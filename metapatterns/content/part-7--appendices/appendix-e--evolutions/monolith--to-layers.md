@@ -15,9 +15,13 @@ Another drawback of [*Monolith*]({{< relref "../../part-2--basic-metapatterns/mo
 
 ## Divide into Layers
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/Monolith/Monolith to Layers.png" alt="Monolith to Layers" width=100%/>
 </p>
+
+</figure>
 
 <ins>Patterns</ins>: [Layers]({{< relref "../../part-2--basic-metapatterns/layers.md" >}})\.
 
@@ -47,9 +51,13 @@ Most systems apply *layering* by default as it grants a lot of flexibility at ve
 
 ## Use a database
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/Monolith/Monolith add Database.png" alt="Monolith add Database" width=100%/>
 </p>
+
+</figure>
 
 <ins>Patterns</ins>: [Layers]({{< relref "../../part-2--basic-metapatterns/layers.md" >}}), [Shared Database]({{< relref "../../part-3--extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) \([Shared Repository]({{< relref "../../part-3--extension-metapatterns/shared-repository.md" >}})\)\.
 
@@ -87,9 +95,13 @@ A datastore is non\-trivial to implement\. While ordinary files are good for sma
 
 ## Add a Proxy
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/Monolith/Monolith add Proxy.png" alt="Monolith add Proxy" width=100%/>
 </p>
+
+</figure>
 
 <ins>Patterns</ins>: [Layers]({{< relref "../../part-2--basic-metapatterns/layers.md" >}}), [Proxy]({{< relref "../../part-3--extension-metapatterns/proxy.md" >}})\.
 
@@ -121,9 +133,13 @@ A *Proxy* is placed between your system and its clients to provide generic funct
 
 ## Add an Orchestrator
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/Monolith/Monolith add Orchestrator.png" alt="Monolith add Orchestrator" width=100%/>
 </p>
+
+</figure>
 
 <ins>Patterns</ins>: [Layers]({{< relref "../../part-2--basic-metapatterns/layers.md" >}}), [Orchestrator]({{< relref "../../part-3--extension-metapatterns/orchestrator.md" >}})\.
 
@@ -172,9 +188,13 @@ Another set of evolutions stems from splitting one or more *layers* into [*Servi
 - Finally, some domains support [*Hierarchy*]({{< relref "../../part-4--fragmented-metapatterns/hierarchy.md" >}}) – a tree\-like architecture where each layer takes a share of the system’s functionality\.
 
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/Monolith/Monolith to Layers - Further 1.png" alt="Monolith to Layers - Further 1" width=100%/>
 </p>
+
+</figure>
 
 In addition,
 
@@ -184,9 +204,13 @@ In addition,
 - The system can often be extended with [*Scripts*]({{< relref "../../part-5--implementation-metapatterns/microkernel.md#interpreter-script-domain-specific-language-dsl" >}}), resulting in a kind of [*Microkernel*]({{< relref "../../part-5--implementation-metapatterns/microkernel.md" >}})\.
 
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/Monolith/Monolith to Layers - Further 2.png" alt="Monolith to Layers - Further 2" width=100%/>
 </p>
+
+</figure>
 
 <nav>
 

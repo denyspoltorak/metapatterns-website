@@ -21,15 +21,23 @@ Other programs are not that time\-constrained – they run a single task for a l
 
 Those dimensions make four corner cases that vary in architectural styles:
 
+<figure>
+
 <p align="center">
 <img src="/4Kinds/4 Kinds.png" alt="4 Kinds" width=100%/>
 </p>
 
+</figure>
+
 ## Control \(real\-time, hardware input\)
+
+<figure>
 
 <p align="center">
 <img src="/4Kinds/Control - main.png" alt="Control - main" width=100%/>
 </p>
+
+</figure>
 
 A *control* application supervises several hardware or software interfaces with the goal of keeping a certain system\-wide *invariant*:
 
@@ -71,9 +79,13 @@ At the architectural level, control systems are [event\-driven](https://en.wikip
 - A [*Hierarchical Orchestrator*]({{< relref "../part-4--fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}}) can manage even more complex systems\. The *Orchestrator* may run synchronously with polymorphic specialized components or asynchronously\. In the last case each sub\-orchestrator reacts independently based on its own model but also sends a notification to the high\-level component which builds a global strategy and programs the smaller models of sub\-orchestrators\.
 
 
+<figure>
+
 <p align="center">
 <img src="/4Kinds/Control - variants.png" alt="Control - variants" width=100%/>
 </p>
+
+</figure>
 
 ### Patterns
 
@@ -96,9 +108,13 @@ Messages may be dispatched through multilevel index arrays or *Visitors* \[[GoF]
 
 ## Interactive \(soft real\-time, user input\)
 
+<figure>
+
 <p align="center">
 <img src="/4Kinds/Interactive - main.png" alt="Interactive - main" width=100%/>
 </p>
+
+</figure>
 
 An *interactive* software deals with users who expect it to provide immediate feedback to their actions\. Examples include:
 
@@ -116,16 +132,24 @@ Interactive systems vary in a couple of ways:
 - The presentation layer may wait for the business logic to execute the user’s action, blocking further user input and screen updates \(air conditioner controller\), or it may asynchronously pass the command to the lower layer and continue processing new user input and showing progress of the already running tasks \(many games\) while the main program is busy with the command\.
 
 
+<figure>
+
 <p align="center">
 <img src="/4Kinds/Interactive - variants 1.png" alt="Interactive - variants 1" width=100%/>
 </p>
 
+</figure>
+
 - There may be dedicated modules for processing user input and output \([*MVC* family]({{< relref "../part-5--implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}}) of patterns\) or both may pass through the same stack of components \([*MVP* family]({{< relref "../part-5--implementation-metapatterns/hexagonal-architecture.md#model-view-presenter-mvp-model-view-adapter-mva-model-view-viewmodel-mvvm-model-1-mvc1-document-view" >}})\)\. The asymmetric approach deals with raw controller input, which is what most games need, while the bidirectional flow operates UI widgets provided by the host OS or GUI framework\.
 
+
+<figure>
 
 <p align="center">
 <img src="/4Kinds/Interactive - variants 2.png" alt="Interactive - variants 2" width=100%/>
 </p>
+
+</figure>
 
 ### Patterns
 
@@ -149,9 +173,13 @@ The presentation would usually subscribe to updates from the business logic\.
 
 ## Streaming \(continuous, raw data input\)
 
+<figure>
+
 <p align="center">
 <img src="/4Kinds/Streaming - main.png" alt="Streaming - main" width=100%/>
 </p>
+
+</figure>
 
 A *streaming* system processes a long sequence of similar events or data packets, usually by transforming individual items in a predetermined way:
 
@@ -187,9 +215,13 @@ Every filter is likely to run in its own thread and be unaware of other filters 
 
 ## Computational \(single run, user input\)
 
+<figure>
+
 <p align="center">
 <img src="/4Kinds/Computational - main.png" alt="Computational - main" width=100%/>
 </p>
+
+</figure>
 
 Finally, there is a large group of applications created to process long\-running commands:
 
@@ -226,9 +258,13 @@ Most real\-life software is too complex to fit the classification outlined above
 
 ### Camera
 
+<figure>
+
 <p align="center">
 <img src="/4Kinds/Camera.png" alt="Camera" width=100%/>
 </p>
+
+</figure>
 
 A digital camera incorporates subsystems of different kinds:
 
@@ -239,17 +275,25 @@ A digital camera incorporates subsystems of different kinds:
 
 ### 3D action game
 
+<figure>
+
 <p align="center">
 <img src="/4Kinds/3D action.png" alt="3D action" width=100%/>
 </p>
+
+</figure>
 
 Games with 3D graphics often bypass the host OS’ [desktop environment](https://en.wikipedia.org/wiki/Desktop_environment) and access the underlying hardware drivers to achieve fine control and improved performance\. Such applications, though pretending to be interactive software driven by user input, strongly resemble control systems by polling hardware with fixed frequency \(the game’s frame rate\)\.
 
 ### SQL database
 
+<figure>
+
 <p align="center">
 <img src="/4Kinds/Database.png" alt="Database" width=100%/>
 </p>
+
+</figure>
 
 SQL databases support several kinds of user commands:
 

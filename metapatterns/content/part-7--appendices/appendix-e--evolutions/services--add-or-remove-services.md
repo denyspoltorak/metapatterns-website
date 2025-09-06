@@ -15,9 +15,13 @@ title = "Services: add or remove services"
 
 ## Add or split a service
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/Services/Services_ Split.png" alt="Services: Split" width=100%/>
 </p>
+
+</figure>
 
 <ins>Patterns</ins>: [Services]({{< relref "../../part-2--basic-metapatterns/services.md" >}})\.
 
@@ -46,9 +50,13 @@ If one of your services has grown too large, you should look for a way to subdiv
 
 ## Merge services
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/Services/Services_ Merge.png" alt="Services: Merge" width=100%/>
 </p>
+
+</figure>
 
 <ins>Patterns</ins>: [Services]({{< relref "../../part-2--basic-metapatterns/services.md" >}}), [Monolith]({{< relref "../../part-2--basic-metapatterns/monolith.md" >}}) or [Layers]({{< relref "../../part-2--basic-metapatterns/layers.md" >}})\.
 

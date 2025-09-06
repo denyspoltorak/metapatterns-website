@@ -14,9 +14,13 @@ The last group of evolutions which we review does not really change the monolith
 
 ## Support plugins
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/Monolith/Monolith to Plugins.png" alt="Monolith to Plugins" width=100%/>
 </p>
+
+</figure>
 
 <ins>Patterns</ins>: [Plugins]({{< relref "../../part-5--implementation-metapatterns/plugins.md" >}})\.
 
@@ -41,9 +45,13 @@ The last group of evolutions which we review does not really change the monolith
 
 ## Isolate dependencies with Hexagonal Architecture
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/Monolith/Monolith to Hexagonal.png" alt="Monolith to Hexagonal" width=100%/>
 </p>
+
+</figure>
 
 <ins>Patterns</ins>: [Hexagonal Architecture]({{< relref "../../part-5--implementation-metapatterns/hexagonal-architecture.md" >}}) \([Plugins]({{< relref "../../part-5--implementation-metapatterns/plugins.md" >}})\)\.
 
@@ -69,9 +77,13 @@ The main business logic will communicate with all the external components throug
 
 ## Add an Interpreter \(support Scripts\)
 
+<figure>
+
 <p align="center">
 <img src="/Evolutions/Monolith/Monolith to Interpreter.png" alt="Monolith to Interpreter" width=100%/>
 </p>
+
+</figure>
 
 <ins>Patterns</ins>: [Scripts aka Interpreter]({{< relref "../../part-5--implementation-metapatterns/microkernel.md#interpreter-script-domain-specific-language-dsl" >}}) \([Microkernel]({{< relref "../../part-5--implementation-metapatterns/microkernel.md" >}}) \([Plugins]({{< relref "../../part-5--implementation-metapatterns/plugins.md" >}})\)\)\.
 

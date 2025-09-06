@@ -56,9 +56,13 @@ Inventing a generic coordinate system to fit any pattern’s representation, fro
 
 We’ll draw the abstractness axis vertically with higher\-level modules positioned towards the upper side of the diagram, the subdomain axis horizontally, and sharding diagonally\. Here is an \(arbitrary\) example of such a diagram:
 
+<figure>
+
 <p align="center">
 <img src="/Intro/CQRS with notes.png" alt="CQRS with notes" width=100%/>
 </p>
+
+</figure>
 
 \(A structural diagram for [*CQRS*]({{< relref "../part-4--fragmented-metapatterns/layered-services.md#command-query-responsibility-segregation-cqrs" >}}), adapted from [Udi Dahan’s article](https://udidahan.com/2009/12/09/clarified-cqrs/), to introduce the notation\)
 
@@ -74,9 +78,13 @@ Godspeed\!
 
 Let’s consider the following structure:
 
+<figure>
+
 <p align="center">
 <img src="/Intro/Example-Undefined.png" alt="Example-Undefined" width=93%/>
 </p>
+
+</figure>
 
 It features two \(or more in real life\) high\-level modules that communicate with/via a lower\-level module\. Which patterns does it match?
 
@@ -85,9 +93,13 @@ It features two \(or more in real life\) high\-level modules that communicate wi
 - [*Model\-View\-Controller*]({{< relref "../part-5--implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}}) – a platform\-agnostic business logic with customized means of input and output\.
 
 
+<figure>
+
 <p align="center">
 <img src="/Intro/Example-Defined.png" alt="Example-Defined" width=100%/>
 </p>
+
+</figure>
 
 My idea of grouping patterns by structure seems to have backfired – we got three distinct patterns that have similar structural diagrams\. The first two of them are related – both implement indirect communication, and their distinction is fading as a *Middleware* may feature a persistent storage for messages while a table in a *Shared Database* may be used to orchestrate services\. The third one is very different – primarily because the bulk of its code, that is its *business logic*, resides in the lower layer, leaving the upper\-level components a minor role\.
 
