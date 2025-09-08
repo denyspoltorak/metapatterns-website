@@ -72,7 +72,7 @@ Several patterns combine the functionality of two or more extension layers\.
 
 <nav>
 
-| \<\< [Pipeline]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}}) | ^ [Table of Contents]({{< relref "../_index.md" >}}) ^ | [Middleware]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}) \>\> |
+| \<\< [Pipeline]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}}) | ^ [The Pattern Language of Software Architecture]({{< relref "../_index.md" >}}) ^ | [Middleware]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

@@ -62,7 +62,7 @@ Please consider sharing your experience as a co\-author of a future version of t
 
 <nav>
 
-| \<\< [Table of Contents]({{< relref "../_index.md" >}}) | ^ [Table of Contents]({{< relref "../_index.md" >}}) ^ | [About this book]({{< relref "../introduction/about-this-book.md" >}}) \>\> |
+| \<\< [The Pattern Language of Software Architecture]({{< relref "../_index.md" >}}) | ^ [The Pattern Language of Software Architecture]({{< relref "../_index.md" >}}) ^ | [About this book]({{< relref "../introduction/about-this-book.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

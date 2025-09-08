@@ -66,7 +66,7 @@ A *Mesh* consists of intercommunicating shards, each of which may host an applic
 
 <nav>
 
-| \<\< [Hierarchy]({{< relref "../part-4--fragmented-metapatterns/hierarchy.md" >}}) | ^ [Table of Contents]({{< relref "../_index.md" >}}) ^ | [Plugins]({{< relref "../part-5--implementation-metapatterns/plugins.md" >}}) \>\> |
+| \<\< [Hierarchy]({{< relref "../part-4--fragmented-metapatterns/hierarchy.md" >}}) | ^ [The Pattern Language of Software Architecture]({{< relref "../_index.md" >}}) ^ | [Plugins]({{< relref "../part-5--implementation-metapatterns/plugins.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

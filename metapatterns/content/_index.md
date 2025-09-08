@@ -1,8 +1,10 @@
 +++
 weight = 1
-title = "Table of Contents"
+title = "The Pattern Language of Software Architecture"
 bookCollapseSection = true
 +++
+
+# The Pattern Language of Software Architecture
 
 <nav>
 

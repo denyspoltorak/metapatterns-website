@@ -28,7 +28,7 @@ This part defines some ideas which are used throughout the book\. Please feel fr
 
 <nav>
 
-| \<\< [Metapatterns]({{< relref "../introduction/metapatterns.md" >}}) | ^ [Table of Contents]({{< relref "../_index.md" >}}) ^ | [Modules and complexity]({{< relref "../part-1--foundations/modules-and-complexity.md" >}}) \>\> |
+| \<\< [Metapatterns]({{< relref "../introduction/metapatterns.md" >}}) | ^ [The Pattern Language of Software Architecture]({{< relref "../_index.md" >}}) ^ | [Modules and complexity]({{< relref "../part-1--foundations/modules-and-complexity.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>
