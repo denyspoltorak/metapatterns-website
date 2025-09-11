@@ -24,7 +24,7 @@ Those dimensions make four corner cases that vary in architectural styles:
 <figure>
 
 <p align="center">
-<img src="/4Kinds/4 Kinds.png" alt="4 Kinds" width=100%/>
+<img src="/4Kinds/4%20Kinds.png" alt="4 Kinds" width=100%/>
 </p>
 
 </figure>
@@ -34,7 +34,7 @@ Those dimensions make four corner cases that vary in architectural styles:
 <figure>
 
 <p align="center">
-<img src="/4Kinds/Control - main.png" alt="Control - main" width=100%/>
+<img src="/4Kinds/Control%20-%20main.png" alt="Control - main" width=100%/>
 </p>
 
 </figure>
@@ -82,7 +82,7 @@ At the architectural level, control systems are [event\-driven](https://en.wikip
 <figure>
 
 <p align="center">
-<img src="/4Kinds/Control - variants.png" alt="Control - variants" width=100%/>
+<img src="/4Kinds/Control%20-%20variants.png" alt="Control - variants" width=100%/>
 </p>
 
 </figure>
@@ -111,7 +111,7 @@ Messages may be dispatched through multilevel index arrays or *Visitors* \[[GoF]
 <figure>
 
 <p align="center">
-<img src="/4Kinds/Interactive - main.png" alt="Interactive - main" width=100%/>
+<img src="/4Kinds/Interactive%20-%20main.png" alt="Interactive - main" width=100%/>
 </p>
 
 </figure>
@@ -135,7 +135,7 @@ Interactive systems vary in a couple of ways:
 <figure>
 
 <p align="center">
-<img src="/4Kinds/Interactive - variants 1.png" alt="Interactive - variants 1" width=100%/>
+<img src="/4Kinds/Interactive%20-%20variants%201.png" alt="Interactive - variants 1" width=100%/>
 </p>
 
 </figure>
@@ -146,7 +146,7 @@ Interactive systems vary in a couple of ways:
 <figure>
 
 <p align="center">
-<img src="/4Kinds/Interactive - variants 2.png" alt="Interactive - variants 2" width=100%/>
+<img src="/4Kinds/Interactive%20-%20variants%202.png" alt="Interactive - variants 2" width=100%/>
 </p>
 
 </figure>
@@ -176,7 +176,7 @@ The presentation would usually subscribe to updates from the business logic\.
 <figure>
 
 <p align="center">
-<img src="/4Kinds/Streaming - main.png" alt="Streaming - main" width=100%/>
+<img src="/4Kinds/Streaming%20-%20main.png" alt="Streaming - main" width=100%/>
 </p>
 
 </figure>
@@ -218,7 +218,7 @@ Every filter is likely to run in its own thread and be unaware of other filters 
 <figure>
 
 <p align="center">
-<img src="/4Kinds/Computational - main.png" alt="Computational - main" width=100%/>
+<img src="/4Kinds/Computational%20-%20main.png" alt="Computational - main" width=100%/>
 </p>
 
 </figure>
@@ -278,7 +278,7 @@ A digital camera incorporates subsystems of different kinds:
 <figure>
 
 <p align="center">
-<img src="/4Kinds/3D action.png" alt="3D action" width=100%/>
+<img src="/4Kinds/3D%20action.png" alt="3D action" width=100%/>
 </p>
 
 </figure>

@@ -320,7 +320,7 @@ A service is not necessarily monolithic inside\. Because a service is encapsulat
 <figure>
 
 <p align="center">
-<img src="/Variants/1/Subtypes of Services.png" alt="Subtypes of Services" width=100%/>
+<img src="/Variants/1/Subtypes%20of%20Services.png" alt="Subtypes of Services" width=100%/>
 </p>
 
 </figure>
@@ -330,7 +330,7 @@ A service is not necessarily monolithic inside\. Because a service is encapsulat
 <figure>
 
 <p align="center">
-<img src="/Variants/1/Service - Monolithic.png" alt="Service - Monolithic" width=27%/>
+<img src="/Variants/1/Service%20-%20Monolithic.png" alt="Service - Monolithic" width=27%/>
 </p>
 
 </figure>
@@ -342,7 +342,7 @@ A *monolithic service* is a service with no definite internal structure, probabl
 <figure>
 
 <p align="center">
-<img src="/Variants/1/Service - Layered.png" alt="Service - Layered" width=83%/>
+<img src="/Variants/1/Service%20-%20Layered.png" alt="Service - Layered" width=83%/>
 </p>
 
 </figure>
@@ -358,7 +358,7 @@ Another benefit comes from the existence of the upper integration layer which ma
 <figure>
 
 <p align="center">
-<img src="/Variants/1/Service - Hexagonal.png" alt="Service - Hexagonal" width=100%/>
+<img src="/Variants/1/Service%20-%20Hexagonal.png" alt="Service - Hexagonal" width=100%/>
 </p>
 
 </figure>
@@ -372,7 +372,7 @@ This is a real\-world application of [*Hexagonal Architecture*]({{< relref "../p
 <figure>
 
 <p align="center">
-<img src="/Variants/1/Service - Scaled.png" alt="Service - Scaled" width=100%/>
+<img src="/Variants/1/Service%20-%20Scaled.png" alt="Service - Scaled" width=100%/>
 </p>
 
 </figure>
@@ -384,7 +384,7 @@ With *scaled services* there are multiple [*instances*]({{< relref "../part-2--b
 <figure>
 
 <p align="center">
-<img src="/Variants/1/Service - Cell.png" alt="Service - Cell" width=100%/>
+<img src="/Variants/1/Service%20-%20Cell.png" alt="Service - Cell" width=100%/>
 </p>
 
 </figure>
@@ -406,7 +406,7 @@ Examples of *Services* include:
 <figure>
 
 <p align="center">
-<img src="/Variants/1/Service-Based Architecture.png" alt="Service-Based Architecture" width=100%/>
+<img src="/Variants/1/Service-Based%20Architecture.png" alt="Service-Based Architecture" width=100%/>
 </p>
 
 </figure>
@@ -464,7 +464,7 @@ If we apply a bit of generalization, we can deduce that any server or backend se
 <figure>
 
 <p align="center">
-<img src="/Variants/1/Nanoservices - API Layer.png" alt="Nanoservices - API Layer" width=82%/>
+<img src="/Variants/1/Nanoservices%20-%20API%20Layer.png" alt="Nanoservices - API Layer" width=82%/>
 </p>
 
 </figure>
@@ -504,7 +504,7 @@ The whole system of kernel, drivers, and user applications comprises the [*Micro
 <figure>
 
 <p align="center">
-<img src="/Evolutions/Services/Services_ Split.png" alt="Services: Split" width=100%/>
+<img src="/Evolutions/Services/Services_%20Split.png" alt="Services: Split" width=100%/>
 </p>
 
 </figure>
@@ -515,7 +515,7 @@ The whole system of kernel, drivers, and user applications comprises the [*Micro
 <figure>
 
 <p align="center">
-<img src="/Evolutions/Services/Services_ Merge.png" alt="Services: Merge" width=100%/>
+<img src="/Evolutions/Services/Services_%20Merge.png" alt="Services: Merge" width=100%/>
 </p>
 
 </figure>
@@ -530,7 +530,7 @@ The most common modifications of a system of *Services* involve supplementary sy
 <figure>
 
 <p align="center">
-<img src="/Evolutions/Services/Services add Middleware.png" alt="Services add Middleware" width=100%/>
+<img src="/Evolutions/Services/Services%20add%20Middleware.png" alt="Services add Middleware" width=100%/>
 </p>
 
 </figure>
@@ -541,7 +541,7 @@ The most common modifications of a system of *Services* involve supplementary sy
 <figure>
 
 <p align="center">
-<img src="/Variants/2/Multifunctional - Service Mesh.png" alt="Multifunctional - Service Mesh" width=100%/>
+<img src="/Variants/2/Multifunctional%20-%20Service%20Mesh.png" alt="Multifunctional - Service Mesh" width=100%/>
 </p>
 
 </figure>
@@ -552,7 +552,7 @@ The most common modifications of a system of *Services* involve supplementary sy
 <figure>
 
 <p align="center">
-<img src="/Evolutions/Services/Services to Shared Database.png" alt="Services to Shared Database" width=100%/>
+<img src="/Evolutions/Services/Services%20to%20Shared%20Database.png" alt="Services to Shared Database" width=100%/>
 </p>
 
 </figure>
@@ -563,7 +563,7 @@ The most common modifications of a system of *Services* involve supplementary sy
 <figure>
 
 <p align="center">
-<img src="/Evolutions/Services/Services add Proxy.png" alt="Services add Proxy" width=100%/>
+<img src="/Evolutions/Services/Services%20add%20Proxy.png" alt="Services add Proxy" width=100%/>
 </p>
 
 </figure>
@@ -574,7 +574,7 @@ The most common modifications of a system of *Services* involve supplementary sy
 <figure>
 
 <p align="center">
-<img src="/Evolutions/Services/Services use Orchestrator.png" alt="Services use Orchestrator" width=100%/>
+<img src="/Evolutions/Services/Services%20use%20Orchestrator.png" alt="Services use Orchestrator" width=100%/>
 </p>
 
 </figure>

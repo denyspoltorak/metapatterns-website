@@ -100,7 +100,7 @@ Here reliability conflicts with accuracy: a human operator makes an accurate est
 <figure>
 
 <p align="center">
-<img src="/Intro/Field Gateway.png" alt="Field Gateway" width=100%/>
+<img src="/Intro/Field%20Gateway.png" alt="Field Gateway" width=100%/>
 </p>
 
 </figure>

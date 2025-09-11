@@ -156,7 +156,7 @@ A system of *Actors* may be classified as a *fully connected Mesh* with the acto
 <figure>
 
 <p align="center">
-<img src="/Variants/4/Service Mesh.png" alt="Service Mesh" width=100%/>
+<img src="/Variants/4/Service%20Mesh.png" alt="Service Mesh" width=100%/>
 </p>
 
 </figure>
@@ -179,7 +179,7 @@ Ready\-to\-use *Service Mesh* frameworks are popular with the *Microservices* ar
 <figure>
 
 <p align="center">
-<img src="/Variants/4/Space-Based Architecture.png" alt="Space-Based Architecture" width=100%/>
+<img src="/Variants/4/Space-Based%20Architecture.png" alt="Space-Based Architecture" width=100%/>
 </p>
 
 </figure>

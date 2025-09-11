@@ -43,7 +43,7 @@ Other smaller topics that I was able to look into made the following chapters:
 
 <nav>
 
-| \<\< [Mesh]({{< relref "../part-5--implementation-metapatterns/mesh.md" >}}) | ^ [The Pattern Language of Software Architecture]({{< relref "../_index.md" >}}) ^ | [Comparison of architectural patterns]({{< relref "../part-6--analytics/comparison-of-architectural-patterns/_index.md" >}}) \>\> |
+| \<\< [Mesh]({{< relref "../part-5--implementation-metapatterns/mesh.md" >}}) | ^ [The pattern language of software architecture]({{< relref "../_index.md" >}}) ^ | [Comparison of architectural patterns]({{< relref "../part-6--analytics/comparison-of-architectural-patterns/_index.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

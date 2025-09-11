@@ -30,7 +30,7 @@ The novel misnomers, [*Layered Monolith*]({{< relref "../part-2--basic-metapatte
 <figure>
 
 <p align="center">
-<img src="/Variants/1/Subtypes of Monolith.png" alt="Subtypes of Monolith" width=100%/>
+<img src="/Variants/1/Subtypes%20of%20Monolith.png" alt="Subtypes of Monolith" width=100%/>
 </p>
 
 </figure>

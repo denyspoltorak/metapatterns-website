@@ -543,7 +543,7 @@ title = "Appendix I. Index of patterns."
 
 <nav>
 
-| \<\< [Appendix H\. History of changes\.]({{< relref "../part-7--appendices/appendix-h--history-of-changes.md" >}}) | ^ [Part 7\. Appendices]({{< relref "../part-7--appendices/_index.md" >}}) ^ | [The Pattern Language of Software Architecture]({{< relref "../_index.md" >}}) \>\> |
+| \<\< [Appendix H\. History of changes\.]({{< relref "../part-7--appendices/appendix-h--history-of-changes.md" >}}) | ^ [Part 7\. Appendices]({{< relref "../part-7--appendices/_index.md" >}}) ^ | [The pattern language of software architecture]({{< relref "../_index.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

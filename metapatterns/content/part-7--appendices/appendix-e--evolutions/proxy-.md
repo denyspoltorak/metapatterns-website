@@ -18,7 +18,7 @@ As *Proxies* are usually third\-party products, there is very little we can chan
 <figure>
 
 <p align="center">
-<img src="/Evolutions/2/Proxy add Proxy.png" alt="Proxy add Proxy" width=100%/>
+<img src="/Evolutions/2/Proxy%20add%20Proxy.png" alt="Proxy add Proxy" width=100%/>
 </p>
 
 </figure>
@@ -50,7 +50,7 @@ It often makes sense to colocate software *Proxies* or use a multifunctional *Pr
 <figure>
 
 <p align="center">
-<img src="/Evolutions/2/Proxy to Backends for Frontends.png" alt="Proxy to Backends for Frontends" width=100%/>
+<img src="/Evolutions/2/Proxy%20to%20Backends%20for%20Frontends.png" alt="Proxy to Backends for Frontends" width=100%/>
 </p>
 
 </figure>

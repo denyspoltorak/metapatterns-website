@@ -13,7 +13,7 @@ There are several patterns with no system\-wide layers\. Some of them incorporat
 <figure>
 
 <p align="center">
-<img src="/Contents/Layered Services.png" alt="Layered Services" width=100%/>
+<img src="/Contents/Layered%20Services.png" alt="Layered Services" width=100%/>
 </p>
 
 </figure>
@@ -27,7 +27,7 @@ There are several patterns with no system\-wide layers\. Some of them incorporat
 <figure>
 
 <p align="center">
-<img src="/Contents/Polyglot Persistence.png" alt="Polyglot Persistence" width=100%/>
+<img src="/Contents/Polyglot%20Persistence.png" alt="Polyglot Persistence" width=100%/>
 </p>
 
 </figure>
@@ -41,7 +41,7 @@ There are several patterns with no system\-wide layers\. Some of them incorporat
 <figure>
 
 <p align="center">
-<img src="/Contents/Backends for Frontends.png" alt="Backends for Frontends" width=100%/>
+<img src="/Contents/Backends%20for%20Frontends.png" alt="Backends for Frontends" width=100%/>
 </p>
 
 </figure>
@@ -55,7 +55,7 @@ There are several patterns with no system\-wide layers\. Some of them incorporat
 <figure>
 
 <p align="center">
-<img src="/Contents/Service-Oriented Architecture.png" alt="Service-Oriented Architecture" width=100%/>
+<img src="/Contents/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" width=100%/>
 </p>
 
 </figure>
@@ -80,7 +80,7 @@ Some domains allow for hierarchical composition where the functionality is sprea
 
 <nav>
 
-| \<\< [Combined Component]({{< relref "../part-3--extension-metapatterns/combined-component.md" >}}) | ^ [The Pattern Language of Software Architecture]({{< relref "../_index.md" >}}) ^ | [Layered Services]({{< relref "../part-4--fragmented-metapatterns/layered-services.md" >}}) \>\> |
+| \<\< [Combined Component]({{< relref "../part-3--extension-metapatterns/combined-component.md" >}}) | ^ [The pattern language of software architecture]({{< relref "../_index.md" >}}) ^ | [Layered Services]({{< relref "../part-4--fragmented-metapatterns/layered-services.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

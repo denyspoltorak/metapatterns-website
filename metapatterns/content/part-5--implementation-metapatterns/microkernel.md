@@ -162,7 +162,7 @@ User\-provided *scripts* are run by an *Interpreter* \[[GoF]({{< relref "../part
 <figure>
 
 <p align="center">
-<img src="/Variants/4/Config file.png" alt="Config file" width=100%/>
+<img src="/Variants/4/Config%20file.png" alt="Config file" width=100%/>
 </p>
 
 </figure>
@@ -174,7 +174,7 @@ User\-provided *scripts* are run by an *Interpreter* \[[GoF]({{< relref "../part
 <figure>
 
 <p align="center">
-<img src="/Variants/4/Saga engine.png" alt="Saga engine" width=100%/>
+<img src="/Variants/4/Saga%20engine.png" alt="Saga engine" width=100%/>
 </p>
 
 </figure>
@@ -186,7 +186,7 @@ A [*Saga*]({{< relref "../part-3--extension-metapatterns/orchestrator.md#orchest
 <figure>
 
 <p align="center">
-<img src="/Variants/4/AUTOSAR classic.png" alt="AUTOSAR classic" width=100%/>
+<img src="/Variants/4/AUTOSAR%20classic.png" alt="AUTOSAR classic" width=100%/>
 </p>
 
 </figure>

@@ -1,10 +1,10 @@
 +++
 weight = 1
-title = "The Pattern Language of Software Architecture"
+title = "The pattern language of software architecture"
 bookCollapseSection = true
 +++
 
-# The Pattern Language of Software Architecture
+# The pattern language of software architecture
 
 <nav>
 

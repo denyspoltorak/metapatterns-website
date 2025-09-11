@@ -27,7 +27,7 @@ These patterns extend *Services*, *Shards*, or even a *Monolith* with a layer th
 <figure>
 
 <p align="center">
-<img src="/Contents/Shared Repository.png" alt="Shared Repository" width=100%/>
+<img src="/Contents/Shared%20Repository.png" alt="Shared Repository" width=100%/>
 </p>
 
 </figure>
@@ -72,7 +72,7 @@ Several patterns combine the functionality of two or more extension layers\.
 
 <nav>
 
-| \<\< [Pipeline]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}}) | ^ [The Pattern Language of Software Architecture]({{< relref "../_index.md" >}}) ^ | [Middleware]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}) \>\> |
+| \<\< [Pipeline]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}}) | ^ [The pattern language of software architecture]({{< relref "../_index.md" >}}) ^ | [Middleware]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

@@ -129,7 +129,7 @@ A *Proxy* [may either fully isolate the system it represents or merely help esta
 <figure>
 
 <p align="center">
-<img src="/Variants/2/Full Proxy.png" alt="Full Proxy" width=94%/>
+<img src="/Variants/2/Full%20Proxy.png" alt="Full Proxy" width=94%/>
 </p>
 
 </figure>
@@ -141,7 +141,7 @@ A *Full Proxy* processes every message between the system and its clients\. It c
 <figure>
 
 <p align="center">
-<img src="/Variants/2/Half Proxy.png" alt="Half Proxy" width=97%/>
+<img src="/Variants/2/Half%20Proxy.png" alt="Half Proxy" width=97%/>
 </p>
 
 </figure>
@@ -157,7 +157,7 @@ As a *Proxy* stands between a \(sub\)system and its client\(s\), we can imagine 
 <figure>
 
 <p align="center">
-<img src="/Variants/2/Proxy placement - Standalone.png" alt="Proxy placement - Standalone" width=96%/>
+<img src="/Variants/2/Proxy%20placement%20-%20Standalone.png" alt="Proxy placement - Standalone" width=96%/>
 </p>
 
 </figure>
@@ -173,7 +173,7 @@ We can deploy a *Proxy* as a separate system component\. This has the downside o
 <figure>
 
 <p align="center">
-<img src="/Variants/2/Proxy placement - Sidecar.png" alt="Proxy placement - Sidecar" width=100%/>
+<img src="/Variants/2/Proxy%20placement%20-%20Sidecar.png" alt="Proxy placement - Sidecar" width=100%/>
 </p>
 
 </figure>
@@ -203,7 +203,7 @@ It should be noted that *Sidecar* – co\-locating a generic component and busin
 <figure>
 
 <p align="center">
-<img src="/Variants/2/Proxy placement - Ambassador.png" alt="Proxy placement - Ambassador" width=100%/>
+<img src="/Variants/2/Proxy%20placement%20-%20Ambassador.png" alt="Proxy placement - Ambassador" width=100%/>
 </p>
 
 </figure>
@@ -275,7 +275,7 @@ It is possible to combine multiple servers into a virtual *Caching Layer* \[[DDS
 <figure>
 
 <p align="center">
-<img src="/Variants/2/Load Balancer.png" alt="Load Balancer" width=100%/>
+<img src="/Variants/2/Load%20Balancer.png" alt="Load Balancer" width=100%/>
 </p>
 
 </figure>
@@ -347,7 +347,7 @@ There is also a whole bunch of *Adapters* that aim to protect the business logic
 <figure>
 
 <p align="center">
-<img src="/Variants/2/API Gateway.png" alt="API Gateway" width=100%/>
+<img src="/Variants/2/API%20Gateway.png" alt="API Gateway" width=100%/>
 </p>
 
 </figure>
@@ -368,7 +368,7 @@ As *Proxies* are usually third\-party products, there is not much we can change 
 <figure>
 
 <p align="center">
-<img src="/Evolutions/2/Proxy add Proxy.png" alt="Proxy add Proxy" width=100%/>
+<img src="/Evolutions/2/Proxy%20add%20Proxy.png" alt="Proxy add Proxy" width=100%/>
 </p>
 
 </figure>
@@ -379,7 +379,7 @@ As *Proxies* are usually third\-party products, there is not much we can change 
 <figure>
 
 <p align="center">
-<img src="/Evolutions/2/Proxy to Backends for Frontends.png" alt="Proxy to Backends for Frontends" width=100%/>
+<img src="/Evolutions/2/Proxy%20to%20Backends%20for%20Frontends.png" alt="Proxy to Backends for Frontends" width=100%/>
 </p>
 
 </figure>

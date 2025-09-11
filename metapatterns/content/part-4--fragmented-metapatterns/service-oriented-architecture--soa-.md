@@ -8,7 +8,7 @@ title = "Service-Oriented Architecture (SOA)"
 <figure>
 
 <p align="center">
-<img src="/Main/Service-Oriented Architecture.png" alt="Service-Oriented Architecture" width=100%/>
+<img src="/Main/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" width=100%/>
 </p>
 
 </figure>
@@ -58,7 +58,7 @@ Each service of each layer depends on everything it uses\. As a result, developm
 <figure>
 
 <p align="center">
-<img src="/Dependencies/Service-Oriented Architecture.png" alt="Service-Oriented Architecture" width=88%/>
+<img src="/Dependencies/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" width=88%/>
 </p>
 
 </figure>
@@ -96,7 +96,7 @@ This architecture was hyped at the time when enterprises were expanding by acqui
 <figure>
 
 <p align="center">
-<img src="/Variants/3/Distributed Monolith.png" alt="Distributed Monolith" width=100%/>
+<img src="/Variants/3/Distributed%20Monolith.png" alt="Distributed Monolith" width=100%/>
 </p>
 
 </figure>
@@ -108,7 +108,7 @@ If a [*Monolith*]({{< relref "../part-2--basic-metapatterns/monolith.md" >}}) ge
 <figure>
 
 <p align="center">
-<img src="/Variants/3/Enterprise SOA.png" alt="Enterprise SOA" width=100%/>
+<img src="/Variants/3/Enterprise%20SOA.png" alt="Enterprise SOA" width=100%/>
 </p>
 
 </figure>
@@ -146,7 +146,7 @@ Uber’s *DOMA* also [makes heavy use](https://www.uber.com/blog/microservice-ar
 <figure>
 
 <p align="center">
-<img src="/Variants/3/SOA - AUTOSAR.png" alt="SOA - AUTOSAR" width=100%/>
+<img src="/Variants/3/SOA%20-%20AUTOSAR.png" alt="SOA - AUTOSAR" width=100%/>
 </p>
 
 </figure>
@@ -167,7 +167,7 @@ It seems that some proponents of [*Nanoservices*]({{< relref "../part-2--basic-m
 <figure>
 
 <p align="center">
-<img src="/Evolutions/3/SOA - 1.png" alt="SOA - 1" width=100%/>
+<img src="/Evolutions/3/SOA%20-%201.png" alt="SOA - 1" width=100%/>
 </p>
 
 </figure>
@@ -178,7 +178,7 @@ It seems that some proponents of [*Nanoservices*]({{< relref "../part-2--basic-m
 <figure>
 
 <p align="center">
-<img src="/Evolutions/3/SOA - 2.png" alt="SOA - 2" width=100%/>
+<img src="/Evolutions/3/SOA%20-%202.png" alt="SOA - 2" width=100%/>
 </p>
 
 </figure>
@@ -196,7 +196,7 @@ Afterwards you may deal with the remaining orchestration\. The idea is to move t
 <figure>
 
 <p align="center">
-<img src="/Evolutions/3/SOA - 3.png" alt="SOA - 3" width=100%/>
+<img src="/Evolutions/3/SOA%20-%203.png" alt="SOA - 3" width=100%/>
 </p>
 
 </figure>

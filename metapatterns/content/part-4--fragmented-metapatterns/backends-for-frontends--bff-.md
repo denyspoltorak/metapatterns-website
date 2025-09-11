@@ -8,7 +8,7 @@ title = "Backends for Frontends (BFF)"
 <figure>
 
 <p align="center">
-<img src="/Main/Backends for Frontends.png" alt="Backends for Frontends" width=100%/>
+<img src="/Main/Backends%20for%20Frontends.png" alt="Backends for Frontends" width=100%/>
 </p>
 
 </figure>
@@ -60,7 +60,7 @@ Each *BFF* depends on all the services it uses \(usually every service in the sy
 <figure>
 
 <p align="center">
-<img src="/Dependencies/Backends for Frontends.png" alt="Backends for Frontends" width=91%/>
+<img src="/Dependencies/Backends%20for%20Frontends.png" alt="Backends for Frontends" width=91%/>
 </p>
 
 </figure>
@@ -104,7 +104,7 @@ Each *BFF* depends on all the services it uses \(usually every service in the sy
 <figure>
 
 <p align="center">
-<img src="/Variants/3/BFF - Gateways.png" alt="BFF - Gateways" width=100%/>
+<img src="/Variants/3/BFF%20-%20Gateways.png" alt="BFF - Gateways" width=100%/>
 </p>
 
 </figure>
@@ -118,7 +118,7 @@ Multiple *Adapters* match the literal meaning of *Backends for Frontends* – ea
 <figure>
 
 <p align="center">
-<img src="/Variants/3/BFF - Orchestrators.png" alt="BFF - Orchestrators" width=100%/>
+<img src="/Variants/3/BFF%20-%20Orchestrators.png" alt="BFF - Orchestrators" width=100%/>
 </p>
 
 </figure>
@@ -130,7 +130,7 @@ An [*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.m
 <figure>
 
 <p align="center">
-<img src="/Variants/3/BFF - Gateways + Orchestrators.png" alt="BFF - Gateways + Orchestrators" width=100%/>
+<img src="/Variants/3/BFF%20-%20Gateways%20+%20Orchestrators.png" alt="BFF - Gateways + Orchestrators" width=100%/>
 </p>
 
 </figure>
@@ -142,7 +142,7 @@ Clients vary in both access mode \(protocol\) and workflow\. [*Orchestrators*]({
 <figure>
 
 <p align="center">
-<img src="/Variants/3/BFF - API gateways.png" alt="BFF - API gateways" width=100%/>
+<img src="/Variants/3/BFF%20-%20API%20gateways.png" alt="BFF - API gateways" width=100%/>
 </p>
 
 </figure>
@@ -154,7 +154,7 @@ Clients vary in access mode \(protocol\) and workflow and there is a third\-part
 <figure>
 
 <p align="center">
-<img src="/Variants/3/BFF - Event mediators.png" alt="BFF - Event mediators" width=100%/>
+<img src="/Variants/3/BFF%20-%20Event%20mediators.png" alt="BFF - Event mediators" width=100%/>
 </p>
 
 </figure>

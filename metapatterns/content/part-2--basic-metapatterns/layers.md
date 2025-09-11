@@ -61,7 +61,7 @@ Many patterns have one or more of their layers split by subdomain, resulting in 
 <figure>
 
 <p align="center">
-<img src="/Misc/Layers of Services.png" alt="Layers of Services" width=100%/>
+<img src="/Misc/Layers%20of%20Services.png" alt="Layers of Services" width=100%/>
 </p>
 
 </figure>
@@ -360,7 +360,7 @@ Not all the layered architectures are equally layered\. A [*Monolith*]({{< relre
 <figure>
 
 <p align="center">
-<img src="/Evolutions/Layers/Layers to Layers.png" alt="Layers to Layers" width=100%/>
+<img src="/Evolutions/Layers/Layers%20to%20Layers.png" alt="Layers to Layers" width=100%/>
 </p>
 
 </figure>
@@ -373,7 +373,7 @@ It is also common to:
 <figure>
 
 <p align="center">
-<img src="/Evolutions/Layers/Layers Split in Two.png" alt="Layers Split in Two" width=100%/>
+<img src="/Evolutions/Layers/Layers%20Split%20in%20Two.png" alt="Layers Split in Two" width=100%/>
 </p>
 
 </figure>
@@ -388,7 +388,7 @@ The main drawback \(and benefit as well\) of *Layers* is that much or all of the
 <figure>
 
 <p align="center">
-<img src="/Evolutions/Layers/Layers Split Domain to Services.png" alt="Layers Split Domain to Services" width=100%/>
+<img src="/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.png" alt="Layers Split Domain to Services" width=100%/>
 </p>
 
 </figure>
@@ -399,7 +399,7 @@ The main drawback \(and benefit as well\) of *Layers* is that much or all of the
 <figure>
 
 <p align="center">
-<img src="/Evolutions/Layers/Layers Split to Event-Driven Architecture.png" alt="Layers Split to Event-Driven Architecture" width=100%/>
+<img src="/Evolutions/Layers/Layers%20Split%20to%20Event-Driven%20Architecture.png" alt="Layers Split to Event-Driven Architecture" width=100%/>
 </p>
 
 </figure>
@@ -410,7 +410,7 @@ The main drawback \(and benefit as well\) of *Layers* is that much or all of the
 <figure>
 
 <p align="center">
-<img src="/Evolutions/Layers/Layers to Hierarchy.png" alt="Layers to Hierarchy" width=100%/>
+<img src="/Evolutions/Layers/Layers%20to%20Hierarchy.png" alt="Layers to Hierarchy" width=100%/>
 </p>
 
 </figure>
@@ -425,7 +425,7 @@ There are several ways to improve the performance of a layered system\. One we h
 <figure>
 
 <p align="center">
-<img src="/Evolutions/Layers/Layers to Space-Based Architecture.png" alt="Layers to Space-Based Architecture" width=100%/>
+<img src="/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.png" alt="Layers to Space-Based Architecture" width=100%/>
 </p>
 
 </figure>
@@ -438,7 +438,7 @@ Others are new:
 <figure>
 
 <p align="center">
-<img src="/Evolutions/Layers/Layers Merge.png" alt="Layers Merge" width=100%/>
+<img src="/Evolutions/Layers/Layers%20Merge.png" alt="Layers Merge" width=100%/>
 </p>
 
 </figure>
@@ -449,7 +449,7 @@ Others are new:
 <figure>
 
 <p align="center">
-<img src="/Evolutions/Layers/Layers_ Shard.png" alt="Layers: Shard" width=100%/>
+<img src="/Evolutions/Layers/Layers_%20Shard.png" alt="Layers: Shard" width=100%/>
 </p>
 
 </figure>
@@ -460,7 +460,7 @@ Others are new:
 <figure>
 
 <p align="center">
-<img src="/Evolutions/Layers/Layers to Polyglot Persistence.png" alt="Layers to Polyglot Persistence" width=100%/>
+<img src="/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.png" alt="Layers to Polyglot Persistence" width=100%/>
 </p>
 
 </figure>
@@ -477,7 +477,7 @@ The last group of evolutions to consider is about making the system more adaptab
 <figure>
 
 <p align="center">
-<img src="/Evolutions/Monolith/Monolith to Layers - Further 2.png" alt="Monolith to Layers - Further 2" width=100%/>
+<img src="/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png" alt="Monolith to Layers - Further 2" width=100%/>
 </p>
 
 </figure>
@@ -490,7 +490,7 @@ There is one new evolution which modifies the upper \(*orchestration*\) layer:
 <figure>
 
 <p align="center">
-<img src="/Evolutions/Layers/Layers to Backends for Frontends.png" alt="Layers to Backends for Frontends" width=100%/>
+<img src="/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.png" alt="Layers to Backends for Frontends" width=100%/>
 </p>
 
 </figure>

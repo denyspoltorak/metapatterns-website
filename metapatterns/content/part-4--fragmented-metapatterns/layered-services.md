@@ -8,7 +8,7 @@ title = "Layered Services"
 <figure>
 
 <p align="center">
-<img src="/Main/Layered Services.png" alt="Layered Services" width=100%/>
+<img src="/Main/Layered%20Services.png" alt="Layered Services" width=100%/>
 </p>
 
 </figure>
@@ -40,7 +40,7 @@ Remarkable features of *Layered Services* include:
 <figure>
 
 <p align="center">
-<img src="/Performance/Layered Services - sharding.png" alt="Layered Services - sharding" width=100%/>
+<img src="/Performance/Layered%20Services%20-%20sharding.png" alt="Layered Services - sharding" width=100%/>
 </p>
 
 </figure>
@@ -51,7 +51,7 @@ Remarkable features of *Layered Services* include:
 <figure>
 
 <p align="center">
-<img src="/Performance/Layered Services - channels.png" alt="Layered Services - channels" width=100%/>
+<img src="/Performance/Layered%20Services%20-%20channels.png" alt="Layered Services - channels" width=100%/>
 </p>
 
 </figure>
@@ -65,7 +65,7 @@ Remarkable features of *Layered Services* include:
 <figure>
 
 <p align="center">
-<img src="/Variants/3/Three-Layered Services.png" alt="Three-Layered Services" width=100%/>
+<img src="/Variants/3/Three-Layered%20Services.png" alt="Three-Layered Services" width=100%/>
 </p>
 
 </figure>
@@ -81,7 +81,7 @@ The upper \(application\) layer of each service orchestrates both its middle \(d
 <figure>
 
 <p align="center">
-<img src="/Communication/Mutual Orchestration - 4.png" alt="Mutual Orchestration - 4" width=100%/>
+<img src="/Communication/Mutual%20Orchestration%20-%204.png" alt="Mutual Orchestration - 4" width=100%/>
 </p>
 
 </figure>
@@ -108,7 +108,7 @@ The good thing is that the majority of the code belongs to the domain layer whic
 <figure>
 
 <p align="center">
-<img src="/Evolutions/3/Three-Layered Services - 1.png" alt="Three-Layered Services - 1" width=100%/>
+<img src="/Evolutions/3/Three-Layered%20Services%20-%201.png" alt="Three-Layered Services - 1" width=100%/>
 </p>
 
 </figure>
@@ -122,7 +122,7 @@ or by building derived datasets:
 <figure>
 
 <p align="center">
-<img src="/Evolutions/3/Three-Layered Services - 2.png" alt="Three-Layered Services - 2" width=100%/>
+<img src="/Evolutions/3/Three-Layered%20Services%20-%202.png" alt="Three-Layered Services - 2" width=100%/>
 </p>
 
 </figure>
@@ -135,7 +135,7 @@ If the services become too large:
 <figure>
 
 <p align="center">
-<img src="/Evolutions/3/Three-Layered Services - 3.png" alt="Three-Layered Services - 3" width=100%/>
+<img src="/Evolutions/3/Three-Layered%20Services%20-%203.png" alt="Three-Layered Services - 3" width=100%/>
 </p>
 
 </figure>
@@ -145,7 +145,7 @@ If the services become too large:
 <figure>
 
 <p align="center">
-<img src="/Variants/3/Two-Layered Services.png" alt="Two-Layered Services" width=99%/>
+<img src="/Variants/3/Two-Layered%20Services.png" alt="Two-Layered Services" width=99%/>
 </p>
 
 </figure>
@@ -175,7 +175,7 @@ If *Choreographed Layered Services* become coupled:
 <figure>
 
 <p align="center">
-<img src="/Evolutions/3/Two-Layered Services - 1.png" alt="Two-Layered Services - 1" width=100%/>
+<img src="/Evolutions/3/Two-Layered%20Services%20-%201.png" alt="Two-Layered Services - 1" width=100%/>
 </p>
 
 </figure>
@@ -185,7 +185,7 @@ If *Choreographed Layered Services* become coupled:
 <figure>
 
 <p align="center">
-<img src="/Evolutions/3/Two-Layered Services - 2.png" alt="Two-Layered Services - 2" width=100%/>
+<img src="/Evolutions/3/Two-Layered%20Services%20-%202.png" alt="Two-Layered Services - 2" width=100%/>
 </p>
 
 </figure>
@@ -198,7 +198,7 @@ An overgrown service can be:
 <figure>
 
 <p align="center">
-<img src="/Evolutions/3/Two-Layered Services - 3.png" alt="Two-Layered Services - 3" width=100%/>
+<img src="/Evolutions/3/Two-Layered%20Services%20-%203.png" alt="Two-Layered Services - 3" width=100%/>
 </p>
 
 </figure>
@@ -218,7 +218,7 @@ An overgrown service can be:
 <figure>
 
 <p align="center">
-<img src="/Variants/3/CQRS - pipeline view.png" alt="CQRS - pipeline view" width=100%/>
+<img src="/Variants/3/CQRS%20-%20pipeline%20view.png" alt="CQRS - pipeline view" width=100%/>
 </p>
 
 </figure>
@@ -234,7 +234,7 @@ This separation brings in the pros and cons of [*Services*]({{< relref "../part-
 <figure>
 
 <p align="center">
-<img src="/Variants/3/CQRS - subtypes.png" alt="CQRS - subtypes" width=100%/>
+<img src="/Variants/3/CQRS%20-%20subtypes.png" alt="CQRS - subtypes" width=100%/>
 </p>
 
 </figure>

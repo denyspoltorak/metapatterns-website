@@ -55,7 +55,7 @@ No kind of distributed hierarchy is latency\-friendly as many use cases involve 
 <figure>
 
 <p align="center">
-<img src="/Performance/Hierarchy - speed.png" alt="Hierarchy - speed" width=100%/>
+<img src="/Performance/Hierarchy%20-%20speed.png" alt="Hierarchy - speed" width=100%/>
 </p>
 
 </figure>
@@ -70,7 +70,7 @@ Maintaining high throughput usually requires deploying multiple instances of the
 <figure>
 
 <p align="center">
-<img src="/Performance/Hierarchy - optimizations.png" alt="Hierarchy - optimizations" width=100%/>
+<img src="/Performance/Hierarchy%20-%20optimizations.png" alt="Hierarchy - optimizations" width=100%/>
 </p>
 
 </figure>
@@ -142,7 +142,7 @@ Example: an intrusion alarm logic may need to discern between cat\-affected IR s
 <figure>
 
 <p align="center">
-<img src="/Variants/3/Hierarchy - Top-down.png" alt="Hierarchy - Top-down" width=100%/>
+<img src="/Variants/3/Hierarchy%20-%20Top-down.png" alt="Hierarchy - Top-down" width=100%/>
 </p>
 
 </figure>
@@ -166,7 +166,7 @@ In the most common case *Hierarchy* is applied to business logic to build a laye
 <figure>
 
 <p align="center">
-<img src="/Variants/3/Hierarchy - Bottom-up.png" alt="Hierarchy - Bottom-up" width=100%/>
+<img src="/Variants/3/Hierarchy%20-%20Bottom-up.png" alt="Hierarchy - Bottom-up" width=100%/>
 </p>
 
 </figure>
@@ -180,7 +180,7 @@ Example: [Automotive networks](https://www.mdpi.com/1424-8220/21/23/7917), integ
 <figure>
 
 <p align="center">
-<img src="/Variants/3/Cell-Based Architecture.png" alt="Cell-Based Architecture" width=100%/>
+<img src="/Variants/3/Cell-Based%20Architecture.png" alt="Cell-Based Architecture" width=100%/>
 </p>
 
 </figure>
@@ -199,7 +199,7 @@ Uber [compacted](https://www.uber.com/blog/microservice-architecture/) 2200 [*Mi
 <figure>
 
 <p align="center">
-<img src="/Evolutions/3/Hierarchy - 1.png" alt="Hierarchy - 1" width=100%/>
+<img src="/Evolutions/3/Hierarchy%20-%201.png" alt="Hierarchy - 1" width=100%/>
 </p>
 
 </figure>

@@ -24,7 +24,7 @@ There is one way to counter the first point and more ways to solve the second on
 <figure>
 
 <p align="center">
-<img src="/Evolutions/2/Orchestrator to Layered Services.png" alt="Orchestrator to Layered Services" width=100%/>
+<img src="/Evolutions/2/Orchestrator%20to%20Layered%20Services.png" alt="Orchestrator to Layered Services" width=100%/>
 </p>
 
 </figure>
@@ -61,7 +61,7 @@ If the *orchestration* logic mostly follows the subdomains, it may be possible t
 <figure>
 
 <p align="center">
-<img src="/Evolutions/2/Orchestrator to Backends for Frontends.png" alt="Orchestrator to Backends for Frontends" width=100%/>
+<img src="/Evolutions/2/Orchestrator%20to%20Backends%20for%20Frontends.png" alt="Orchestrator to Backends for Frontends" width=100%/>
 </p>
 
 </figure>
@@ -97,7 +97,7 @@ When use cases for clients vary, it makes sense for each kind of client to have 
 <figure>
 
 <p align="center">
-<img src="/Evolutions/2/Orchestrator add Orchestrator.png" alt="Orchestrator add Orchestrator" width=100%/>
+<img src="/Evolutions/2/Orchestrator%20add%20Orchestrator.png" alt="Orchestrator add Orchestrator" width=100%/>
 </p>
 
 </figure>
@@ -133,7 +133,7 @@ You may use two or three *orchestration frameworks* \(engines\) which differ in 
 <figure>
 
 <p align="center">
-<img src="/Evolutions/2/Orchestrator to Hierarchy.png" alt="Orchestrator to Hierarchy" width=100%/>
+<img src="/Evolutions/2/Orchestrator%20to%20Hierarchy.png" alt="Orchestrator to Hierarchy" width=100%/>
 </p>
 
 </figure>

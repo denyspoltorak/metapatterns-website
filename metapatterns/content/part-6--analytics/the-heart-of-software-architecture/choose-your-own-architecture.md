@@ -159,7 +159,7 @@ When you have built a large system and really need that thorough data analytics,
 <figure>
 
 <p align="center">
-<img src="/Variants/1/Data Mesh.png" alt="Data Mesh" width=100%/>
+<img src="/Variants/1/Data%20Mesh.png" alt="Data Mesh" width=100%/>
 </p>
 
 </figure>

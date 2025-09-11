@@ -27,7 +27,7 @@ The *Plugins* pattern is about separating a system’s main logic from the custo
 <figure>
 
 <p align="center">
-<img src="/Contents/Hexagonal Architecture.png" alt="Hexagonal Architecture" width=100%/>
+<img src="/Contents/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" width=100%/>
 </p>
 
 </figure>
@@ -66,7 +66,7 @@ A *Mesh* consists of intercommunicating shards, each of which may host an applic
 
 <nav>
 
-| \<\< [Hierarchy]({{< relref "../part-4--fragmented-metapatterns/hierarchy.md" >}}) | ^ [The Pattern Language of Software Architecture]({{< relref "../_index.md" >}}) ^ | [Plugins]({{< relref "../part-5--implementation-metapatterns/plugins.md" >}}) \>\> |
+| \<\< [Hierarchy]({{< relref "../part-4--fragmented-metapatterns/hierarchy.md" >}}) | ^ [The pattern language of software architecture]({{< relref "../_index.md" >}}) ^ | [Plugins]({{< relref "../part-5--implementation-metapatterns/plugins.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

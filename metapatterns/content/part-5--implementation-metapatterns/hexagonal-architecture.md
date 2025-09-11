@@ -8,7 +8,7 @@ title = "Hexagonal Architecture"
 <figure>
 
 <p align="center">
-<img src="/Main/Hexagonal Architecture.png" alt="Hexagonal Architecture" width=100%/>
+<img src="/Main/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" width=100%/>
 </p>
 
 </figure>
@@ -68,7 +68,7 @@ In rare cases the system may benefit from direct communication between the adapt
 <figure>
 
 <p align="center">
-<img src="/Performance/Hexagonal Architecture.png" alt="Hexagonal Architecture" width=90%/>
+<img src="/Performance/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" width=90%/>
 </p>
 
 </figure>
@@ -80,7 +80,7 @@ Each [adapter]({{< relref "../part-3--extension-metapatterns/proxy.md#adapter-an
 <figure>
 
 <p align="center">
-<img src="/Dependencies/Hexagonal Architecture.png" alt="Hexagonal Architecture" width=84%/>
+<img src="/Dependencies/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" width=84%/>
 </p>
 
 </figure>
@@ -110,7 +110,7 @@ Each [adapter]({{< relref "../part-3--extension-metapatterns/proxy.md#adapter-an
 <figure>
 
 <p align="center">
-<img src="/Relations/Hexagonal Architecture.png" alt="Hexagonal Architecture" width=100%/>
+<img src="/Relations/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" width=100%/>
 </p>
 
 </figure>
@@ -133,7 +133,7 @@ One possible variation in a distributed or asynchronous *Hexagonal Architecture*
 <figure>
 
 <p align="center">
-<img src="/Variants/4/Hexagonal - Adapters with Components.png" alt="Hexagonal - Adapters with Components" width=93%/>
+<img src="/Variants/4/Hexagonal%20-%20Adapters%20with%20Components.png" alt="Hexagonal - Adapters with Components" width=93%/>
 </p>
 
 </figure>
@@ -147,7 +147,7 @@ This resembles [*Sidecar*](https://docs.google.com/document/d/1hzBn-RzzNDcArAWcv
 <figure>
 
 <p align="center">
-<img src="/Variants/4/Hexagonal - Adapters with the Core.png" alt="Hexagonal - Adapters with the Core" width=100%/>
+<img src="/Variants/4/Hexagonal%20-%20Adapters%20with%20the%20Core.png" alt="Hexagonal - Adapters with the Core" width=100%/>
 </p>
 
 </figure>
@@ -165,7 +165,7 @@ This approach resembles [*Ambassador*](https://docs.google.com/document/d/1hzBn-
 <figure>
 
 <p align="center">
-<img src="/Variants/4/Monolithic Hexagonal.png" alt="Monolithic Hexagonal" width=100%/>
+<img src="/Variants/4/Monolithic%20Hexagonal.png" alt="Monolithic Hexagonal" width=100%/>
 </p>
 
 </figure>
@@ -177,7 +177,7 @@ Just like [*MVC*]({{< relref "#model-view-controller-mvc-action-domain-responder
 <figure>
 
 <p align="center">
-<img src="/Variants/4/Layered Hexagonal.png" alt="Layered Hexagonal" width=100%/>
+<img src="/Variants/4/Layered%20Hexagonal.png" alt="Layered Hexagonal" width=100%/>
 </p>
 
 </figure>
@@ -231,7 +231,7 @@ All those patterns exploit modern OS or GUI frameworks’ widgets which handle a
 <figure>
 
 <p align="center">
-<img src="/Variants/4/MVP - subtypes.png" alt="MVP - subtypes" width=100%/>
+<img src="/Variants/4/MVP%20-%20subtypes.png" alt="MVP - subtypes" width=100%/>
 </p>
 
 </figure>
@@ -272,7 +272,7 @@ Another difference is that while *MVC* provides for changing target platforms by
 <figure>
 
 <p align="center">
-<img src="/Variants/4/MVC - subtypes.png" alt="MVC - subtypes" width=100%/>
+<img src="/Variants/4/MVC%20-%20subtypes.png" alt="MVC - subtypes" width=100%/>
 </p>
 
 </figure>

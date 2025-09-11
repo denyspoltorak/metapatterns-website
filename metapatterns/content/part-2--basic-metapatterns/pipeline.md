@@ -123,7 +123,7 @@ Such a variety of options enables the use of pipelines in a wide range of domain
 <figure>
 
 <p align="center">
-<img src="/Variants/1/Pipes and Filters.png" alt="Pipes and Filters" width=95%/>
+<img src="/Variants/1/Pipes%20and%20Filters.png" alt="Pipes and Filters" width=95%/>
 </p>
 
 </figure>
@@ -141,7 +141,7 @@ Examples: Unix shell pipes, processing of video streams, many types of hardware\
 <figure>
 
 <p align="center">
-<img src="/Variants/1/Event-Driven Architecture.png" alt="Event-Driven Architecture" width=95%/>
+<img src="/Variants/1/Event-Driven%20Architecture.png" alt="Event-Driven Architecture" width=95%/>
 </p>
 
 </figure>
@@ -176,7 +176,7 @@ Examples: high performance web services\.
 <figure>
 
 <p align="center">
-<img src="/Variants/1/Data Mesh.png" alt="Data Mesh" width=100%/>
+<img src="/Variants/1/Data%20Mesh.png" alt="Data Mesh" width=100%/>
 </p>
 
 </figure>
@@ -220,7 +220,7 @@ There are a couple of pipeline\-specific evolutions, with more details provided 
 <figure>
 
 <p align="center">
-<img src="/Evolutions/Services/Pipeline promote Front Controller.png" alt="Pipeline promote Front Controller" width=100%/>
+<img src="/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png" alt="Pipeline promote Front Controller" width=100%/>
 </p>
 
 </figure>
@@ -231,7 +231,7 @@ There are a couple of pipeline\-specific evolutions, with more details provided 
 <figure>
 
 <p align="center">
-<img src="/Evolutions/Services/Pipeline use Orchestrator.png" alt="Pipeline use Orchestrator" width=100%/>
+<img src="/Evolutions/Services/Pipeline%20use%20Orchestrator.png" alt="Pipeline use Orchestrator" width=100%/>
 </p>
 
 </figure>

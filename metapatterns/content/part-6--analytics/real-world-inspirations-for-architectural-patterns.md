@@ -141,7 +141,7 @@ A [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}
 <figure>
 
 <p align="center">
-<img src="/Contents/Shared Repository.png" alt="Shared Repository" width=100%/>
+<img src="/Contents/Shared%20Repository.png" alt="Shared Repository" width=100%/>
 </p>
 
 </figure>
@@ -199,7 +199,7 @@ A fragmented pattern uses small specialized components to approach a case which 
 <figure>
 
 <p align="center">
-<img src="/Contents/Polyglot Persistence.png" alt="Polyglot Persistence" width=100%/>
+<img src="/Contents/Polyglot%20Persistence.png" alt="Polyglot Persistence" width=100%/>
 </p>
 
 </figure>
@@ -216,7 +216,7 @@ A fragmented pattern uses small specialized components to approach a case which 
 <figure>
 
 <p align="center">
-<img src="/Contents/Backends for Frontends.png" alt="Backends for Frontends" width=100%/>
+<img src="/Contents/Backends%20for%20Frontends.png" alt="Backends for Frontends" width=100%/>
 </p>
 
 </figure>
@@ -233,7 +233,7 @@ A fragmented pattern uses small specialized components to approach a case which 
 <figure>
 
 <p align="center">
-<img src="/Contents/Service-Oriented Architecture.png" alt="Service-Oriented Architecture" width=100%/>
+<img src="/Contents/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" width=100%/>
 </p>
 
 </figure>
@@ -286,7 +286,7 @@ An implementation pattern highlights the peculiar internal arrangements of a com
 <figure>
 
 <p align="center">
-<img src="/Contents/Hexagonal Architecture.png" alt="Hexagonal Architecture" width=100%/>
+<img src="/Contents/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" width=100%/>
 </p>
 
 </figure>

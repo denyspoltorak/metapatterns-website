@@ -132,7 +132,7 @@ As we aspire to build a unified classification for both distributed and local sy
 <figure>
 
 <p align="center">
-<img src="/Variants/1/True Monolith.png" alt="True Monolith" width=83%/>
+<img src="/Variants/1/True%20Monolith.png" alt="True Monolith" width=83%/>
 </p>
 
 </figure>
@@ -144,7 +144,7 @@ A true *Monolith* features [no clear internal structure](http://laputan.org/mud/
 <figure>
 
 <p align="center">
-<img src="/Variants/1/Layered Monolith.png" alt="Layered Monolith" width=81%/>
+<img src="/Variants/1/Layered%20Monolith.png" alt="Layered Monolith" width=81%/>
 </p>
 
 </figure>
@@ -156,7 +156,7 @@ When they say [*Layered Monolith*]({{< relref "../part-2--basic-metapatterns/lay
 <figure>
 
 <p align="center">
-<img src="/Variants/1/Modular Monolith.png" alt="Modular Monolith" width=88%/>
+<img src="/Variants/1/Modular%20Monolith.png" alt="Modular Monolith" width=88%/>
 </p>
 
 </figure>
@@ -168,7 +168,7 @@ A [*Modular Monolith*]({{< relref "../part-2--basic-metapatterns/services.md#asy
 <figure>
 
 <p align="center">
-<img src="/Variants/1/Hexagonal Monolith.png" alt="Hexagonal Monolith" width=91%/>
+<img src="/Variants/1/Hexagonal%20Monolith.png" alt="Hexagonal Monolith" width=91%/>
 </p>
 
 </figure>
@@ -184,7 +184,7 @@ Any software module reacts to incoming events or data and produces outgoing even
 <figure>
 
 <p align="center">
-<img src="/Variants/1/Subtypes of Monolith.png" alt="Subtypes of Monolith" width=99%/>
+<img src="/Variants/1/Subtypes%20of%20Monolith.png" alt="Subtypes of Monolith" width=99%/>
 </p>
 
 </figure>
@@ -194,7 +194,7 @@ Any software module reacts to incoming events or data and produces outgoing even
 <figure>
 
 <p align="center">
-<img src="/Variants/1/Reactor - Single Thread.png" alt="Reactor - Single Thread" width=99%/>
+<img src="/Variants/1/Reactor%20-%20Single%20Thread.png" alt="Reactor - Single Thread" width=99%/>
 </p>
 
 </figure>
@@ -208,7 +208,7 @@ That makes sense when the module owns and provides access to a hardware componen
 <figure>
 
 <p align="center">
-<img src="/Variants/1/Reactor - Multiple Threads.png" alt="Reactor - Multiple Threads" width=99%/>
+<img src="/Variants/1/Reactor%20-%20Multiple%20Threads.png" alt="Reactor - Multiple Threads" width=99%/>
 </p>
 
 </figure>
@@ -236,7 +236,7 @@ This approach is good for real\-time systems where thread synchronization is lar
 <figure>
 
 <p align="center">
-<img src="/Variants/1/Half-Sync Half-Async.png" alt="Half-Sync Half-Async" width=99%/>
+<img src="/Variants/1/Half-Sync%20Half-Async.png" alt="Half-Sync Half-Async" width=99%/>
 </p>
 
 </figure>
@@ -258,7 +258,7 @@ Moreover, people [often call]({{< relref "../part-6--analytics/ambiguous-pattern
 <figure>
 
 <p align="center">
-<img src="/Variants/1/Reactor with Extractors.png" alt="Reactor with Extractors" width=100%/>
+<img src="/Variants/1/Reactor%20with%20Extractors.png" alt="Reactor with Extractors" width=100%/>
 </p>
 
 </figure>
@@ -297,7 +297,7 @@ One of the main drawbacks of monolithic architecture is its lack of scalability 
 <figure>
 
 <p align="center">
-<img src="/Evolutions/Monolith/Monolith to Mesh of Shards.png" alt="Monolith to Mesh of Shards" width=100%/>
+<img src="/Evolutions/Monolith/Monolith%20to%20Mesh%20of%20Shards.png" alt="Monolith to Mesh of Shards" width=100%/>
 </p>
 
 </figure>
@@ -308,7 +308,7 @@ One of the main drawbacks of monolithic architecture is its lack of scalability 
 <figure>
 
 <p align="center">
-<img src="/Evolutions/Monolith/Monolith to Isolated Shards with Load Balancer.png" alt="Monolith to Isolated Shards with Load Balancer" width=100%/>
+<img src="/Evolutions/Monolith/Monolith%20to%20Isolated%20Shards%20with%20Load%20Balancer.png" alt="Monolith to Isolated Shards with Load Balancer" width=100%/>
 </p>
 
 </figure>
@@ -319,7 +319,7 @@ One of the main drawbacks of monolithic architecture is its lack of scalability 
 <figure>
 
 <p align="center">
-<img src="/Evolutions/Monolith/Monolith to Stateless Shards with Shared DB.png" alt="Monolith to Stateless Shards with Shared DB" width=100%/>
+<img src="/Evolutions/Monolith/Monolith%20to%20Stateless%20Shards%20with%20Shared%20DB.png" alt="Monolith to Stateless Shards with Shared DB" width=100%/>
 </p>
 
 </figure>
@@ -330,7 +330,7 @@ One of the main drawbacks of monolithic architecture is its lack of scalability 
 <figure>
 
 <p align="center">
-<img src="/Evolutions/Monolith/Monolith to Instance per Client.png" alt="Monolith to Instance per Client" width=100%/>
+<img src="/Evolutions/Monolith/Monolith%20to%20Instance%20per%20Client.png" alt="Monolith to Instance per Client" width=100%/>
 </p>
 
 </figure>
@@ -345,7 +345,7 @@ Another drawback of *Monolith* is its… er… monolithism\. The entire applicat
 <figure>
 
 <p align="center">
-<img src="/Evolutions/Monolith/Monolith to Layers.png" alt="Monolith to Layers" width=100%/>
+<img src="/Evolutions/Monolith/Monolith%20to%20Layers.png" alt="Monolith to Layers" width=100%/>
 </p>
 
 </figure>
@@ -356,7 +356,7 @@ Another drawback of *Monolith* is its… er… monolithism\. The entire applicat
 <figure>
 
 <p align="center">
-<img src="/Evolutions/Monolith/Monolith add Database.png" alt="Monolith add Database" width=100%/>
+<img src="/Evolutions/Monolith/Monolith%20add%20Database.png" alt="Monolith add Database" width=100%/>
 </p>
 
 </figure>
@@ -367,7 +367,7 @@ Another drawback of *Monolith* is its… er… monolithism\. The entire applicat
 <figure>
 
 <p align="center">
-<img src="/Evolutions/Monolith/Monolith add Proxy.png" alt="Monolith add Proxy" width=100%/>
+<img src="/Evolutions/Monolith/Monolith%20add%20Proxy.png" alt="Monolith add Proxy" width=100%/>
 </p>
 
 </figure>
@@ -378,7 +378,7 @@ Another drawback of *Monolith* is its… er… monolithism\. The entire applicat
 <figure>
 
 <p align="center">
-<img src="/Evolutions/Monolith/Monolith add Orchestrator.png" alt="Monolith add Orchestrator" width=100%/>
+<img src="/Evolutions/Monolith/Monolith%20add%20Orchestrator.png" alt="Monolith add Orchestrator" width=100%/>
 </p>
 
 </figure>
@@ -393,7 +393,7 @@ The final major drawback of *Monolith* is the cohesiveness of its code\. The rap
 <figure>
 
 <p align="center">
-<img src="/Evolutions/Monolith/Monolith to Services.png" alt="Monolith to Services" width=100%/>
+<img src="/Evolutions/Monolith/Monolith%20to%20Services.png" alt="Monolith to Services" width=100%/>
 </p>
 
 </figure>
@@ -404,7 +404,7 @@ The final major drawback of *Monolith* is the cohesiveness of its code\. The rap
 <figure>
 
 <p align="center">
-<img src="/Evolutions/Monolith/Monolith Split Service.png" alt="Monolith Split Service" width=100%/>
+<img src="/Evolutions/Monolith/Monolith%20Split%20Service.png" alt="Monolith Split Service" width=100%/>
 </p>
 
 </figure>
@@ -415,7 +415,7 @@ The final major drawback of *Monolith* is the cohesiveness of its code\. The rap
 <figure>
 
 <p align="center">
-<img src="/Evolutions/Monolith/Monolith to Pipeline.png" alt="Monolith to Pipeline" width=100%/>
+<img src="/Evolutions/Monolith/Monolith%20to%20Pipeline.png" alt="Monolith to Pipeline" width=100%/>
 </p>
 
 </figure>
@@ -430,7 +430,7 @@ The last group of evolutions does not really change the monolithic nature of the
 <figure>
 
 <p align="center">
-<img src="/Evolutions/Monolith/Monolith to Plugins.png" alt="Monolith to Plugins" width=100%/>
+<img src="/Evolutions/Monolith/Monolith%20to%20Plugins.png" alt="Monolith to Plugins" width=100%/>
 </p>
 
 </figure>
@@ -441,7 +441,7 @@ The last group of evolutions does not really change the monolithic nature of the
 <figure>
 
 <p align="center">
-<img src="/Evolutions/Monolith/Monolith to Hexagonal.png" alt="Monolith to Hexagonal" width=100%/>
+<img src="/Evolutions/Monolith/Monolith%20to%20Hexagonal.png" alt="Monolith to Hexagonal" width=100%/>
 </p>
 
 </figure>
@@ -452,7 +452,7 @@ The last group of evolutions does not really change the monolithic nature of the
 <figure>
 
 <p align="center">
-<img src="/Evolutions/Monolith/Monolith to Interpreter.png" alt="Monolith to Interpreter" width=100%/>
+<img src="/Evolutions/Monolith/Monolith%20to%20Interpreter.png" alt="Monolith to Interpreter" width=100%/>
 </p>
 
 </figure>

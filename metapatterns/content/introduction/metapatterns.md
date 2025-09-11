@@ -59,7 +59,7 @@ We’ll draw the abstractness axis vertically with higher\-level modules positio
 <figure>
 
 <p align="center">
-<img src="/Intro/CQRS with notes.png" alt="CQRS with notes" width=100%/>
+<img src="/Intro/CQRS%20with%20notes.png" alt="CQRS with notes" width=100%/>
 </p>
 
 </figure>
