@@ -10,9 +10,9 @@ As a project grows, it tends to become subdivided into services, modules, or wha
 
 <figure>
 
-<p align="center">
-<img src="/Communication/Monolith%20to%20Services.png" alt="Monolith to Services" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Communication/Monolith%20to%20Services.png" alt="Monolith to Services" style="width:100%"/>
+</div>
 
 </figure>
 

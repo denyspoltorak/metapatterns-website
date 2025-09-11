@@ -7,9 +7,9 @@ title = "Microkernel"
 
 <figure>
 
-<p align="center">
-<img src="/Main/Microkernel.png" alt="Microkernel" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Main/Microkernel.png" alt="Microkernel" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -66,9 +66,9 @@ The *applications* depend on the *API* of the *microkernel* while the *providers
 
 <figure>
 
-<p align="center">
-<img src="/Dependencies/Microkernel.png" alt="Microkernel" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Dependencies/Microkernel.png" alt="Microkernel" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -90,9 +90,9 @@ The *applications* depend on the *API* of the *microkernel* while the *providers
 
 <figure>
 
-<p align="center">
-<img src="/Relations/Microkernel.png" alt="Microkernel" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Relations/Microkernel.png" alt="Microkernel" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -113,9 +113,9 @@ The *applications* depend on the *API* of the *microkernel* while the *providers
 
 <figure>
 
-<p align="center">
-<img src="/Variants/4/OS.png" alt="OS" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/4/OS.png" alt="OS" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -125,9 +125,9 @@ The original inspiration for *Microkernel*, namely *operating systems*, provides
 
 <figure>
 
-<p align="center">
-<img src="/Variants/4/Framework.png" alt="Framework" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/4/Framework.png" alt="Framework" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -137,9 +137,9 @@ The *microkernel* is a [*Facade*]({{< relref "../part-3--extension-metapatterns/
 
 <figure>
 
-<p align="center">
-<img src="/Variants/4/Virtualizer.png" alt="Virtualizer" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/4/Virtualizer.png" alt="Virtualizer" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -149,9 +149,9 @@ The *microkernel* is a [*Facade*]({{< relref "../part-3--extension-metapatterns/
 
 <figure>
 
-<p align="center">
-<img src="/Variants/4/Interpreter.png" alt="Interpreter" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/4/Interpreter.png" alt="Interpreter" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -161,9 +161,9 @@ User\-provided *scripts* are run by an *Interpreter* \[[GoF]({{< relref "../part
 
 <figure>
 
-<p align="center">
-<img src="/Variants/4/Config%20file.png" alt="Config file" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/4/Config%20file.png" alt="Config file" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -173,9 +173,9 @@ User\-provided *scripts* are run by an *Interpreter* \[[GoF]({{< relref "../part
 
 <figure>
 
-<p align="center">
-<img src="/Variants/4/Saga%20engine.png" alt="Saga engine" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/4/Saga%20engine.png" alt="Saga engine" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -185,9 +185,9 @@ A [*Saga*]({{< relref "../part-3--extension-metapatterns/orchestrator.md#orchest
 
 <figure>
 
-<p align="center">
-<img src="/Variants/4/AUTOSAR%20classic.png" alt="AUTOSAR classic" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/4/AUTOSAR%20classic.png" alt="AUTOSAR classic" style="width:100%"/>
+</div>
 
 </figure>
 

@@ -11,9 +11,9 @@ We’ve seen a single pattern come under many names, as happens with [*Orchestra
 
 <figure>
 
-<p align="center">
-<img src="/Conclusion/Ambiguous-Monolith.png" alt="Ambiguous-Monolith" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Conclusion/Ambiguous-Monolith.png" alt="Ambiguous-Monolith" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -29,9 +29,9 @@ The novel misnomers, [*Layered Monolith*]({{< relref "../part-2--basic-metapatte
 
 <figure>
 
-<p align="center">
-<img src="/Variants/1/Subtypes%20of%20Monolith.png" alt="Subtypes of Monolith" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/1/Subtypes%20of%20Monolith.png" alt="Subtypes of Monolith" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -48,9 +48,9 @@ In most cases we’ll hear of *Proactor* being called *Reactor* – probably bec
 
 <figure>
 
-<p align="center">
-<img src="/Conclusion/Ambiguous-Microkernel.png" alt="Ambiguous-Microkernel" width=80%/>
-</p>
+<div style="text-align:center">
+<img src="/Conclusion/Ambiguous-Microkernel.png" alt="Ambiguous-Microkernel" style="width:80%"/>
+</div>
 
 </figure>
 
@@ -66,9 +66,9 @@ Thus, here we have two architectural patterns of arguably similar structure \([*
 
 <figure>
 
-<p align="center">
-<img src="/Conclusion/Ambiguous-DomainServices.png" alt="Ambiguous-DomainServices" width=74%/>
-</p>
+<div style="text-align:center">
+<img src="/Conclusion/Ambiguous-DomainServices.png" alt="Ambiguous-DomainServices" style="width:74%"/>
+</div>
 
 </figure>
 
@@ -80,9 +80,9 @@ I believe that both definitions are technically correct, if the difference in th
 
 <figure>
 
-<p align="center">
-<img src="/Conclusion/Ambiguous-ServiceBasedArchitecture.png" alt="Ambiguous-ServiceBasedArchitecture" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Conclusion/Ambiguous-ServiceBasedArchitecture.png" alt="Ambiguous-ServiceBasedArchitecture" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -96,9 +96,9 @@ Both definitions are technically correct\. One is wider than the other\.
 
 <figure>
 
-<p align="center">
-<img src="/Conclusion/Ambiguous-FrontController.png" alt="Ambiguous-FrontController" width=70%/>
-</p>
+<div style="text-align:center">
+<img src="/Conclusion/Ambiguous-FrontController.png" alt="Ambiguous-FrontController" style="width:70%"/>
+</div>
 
 </figure>
 
@@ -110,9 +110,9 @@ The definition from \[[SAHP]({{< relref "../part-7--appendices/appendix-b--books
 
 <figure>
 
-<p align="center">
-<img src="/Conclusion/Ambiguous-Cells.png" alt="Ambiguous-Cells" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Conclusion/Ambiguous-Cells.png" alt="Ambiguous-Cells" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -128,9 +128,9 @@ This case looks like Amazon’s hijacking and redefining a popular emerging tech
 
 <figure>
 
-<p align="center">
-<img src="/Conclusion/Ambiguous-Nanoservices.png" alt="Ambiguous-Nanoservices" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Conclusion/Ambiguous-Nanoservices.png" alt="Ambiguous-Nanoservices" style="width:100%"/>
+</div>
 
 </figure>
 

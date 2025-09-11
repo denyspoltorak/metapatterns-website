@@ -12,9 +12,9 @@ Basic metapatterns are both common stand\-alone architectures and building block
 
 <figure>
 
-<p align="center">
-<img src="/Contents/Monolith.png" alt="Monolith" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Contents/Monolith.png" alt="Monolith" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -26,9 +26,9 @@ Basic metapatterns are both common stand\-alone architectures and building block
 
 <figure>
 
-<p align="center">
-<img src="/Contents/Shards.png" alt="Shards" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Contents/Shards.png" alt="Shards" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -40,9 +40,9 @@ Basic metapatterns are both common stand\-alone architectures and building block
 
 <figure>
 
-<p align="center">
-<img src="/Contents/Layers.png" alt="Layers" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Contents/Layers.png" alt="Layers" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -54,9 +54,9 @@ Basic metapatterns are both common stand\-alone architectures and building block
 
 <figure>
 
-<p align="center">
-<img src="/Contents/Services.png" alt="Services" width=93%/>
-</p>
+<div style="text-align:center">
+<img src="/Contents/Services.png" alt="Services" style="width:93%"/>
+</div>
 
 </figure>
 
@@ -68,9 +68,9 @@ Basic metapatterns are both common stand\-alone architectures and building block
 
 <figure>
 
-<p align="center">
-<img src="/Contents/Pipeline.png" alt="Pipeline" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Contents/Pipeline.png" alt="Pipeline" style="width:100%"/>
+</div>
 
 </figure>
 

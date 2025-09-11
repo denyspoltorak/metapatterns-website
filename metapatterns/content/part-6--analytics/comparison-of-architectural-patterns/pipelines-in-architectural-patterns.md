@@ -19,9 +19,9 @@ Staying true to all of these points makes *Pipes and Filters* – one of the old
 
 <figure>
 
-<p align="center">
-<img src="/Conclusion/Pipelineliness-PipesAndFilters.png" alt="Pipelineliness-PipesAndFilters" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Conclusion/Pipelineliness-PipesAndFilters.png" alt="Pipelineliness-PipesAndFilters" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -33,9 +33,9 @@ This architecture is easy to build and has a wide range of applications, from ha
 
 <figure>
 
-<p align="center">
-<img src="/Conclusion/Pipelineliness-EventDrivenArchitecture.png" alt="Pipelineliness-EventDrivenArchitecture" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Conclusion/Pipelineliness-EventDrivenArchitecture.png" alt="Pipelineliness-EventDrivenArchitecture" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -51,9 +51,9 @@ This architecture covers way more complex use cases than [*Pipes and Filters*]({
 
 <figure>
 
-<p align="center">
-<img src="/Conclusion/Pipelineliness-CQRS.png" alt="Pipelineliness-CQRS" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Conclusion/Pipelineliness-CQRS.png" alt="Pipelineliness-CQRS" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -63,9 +63,9 @@ When data from events is stored for a future use \(as with the aggregation above
 
 <figure>
 
-<p align="center">
-<img src="/Conclusion/Pipelineliness-MVC.png" alt="Pipelineliness-MVC" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Conclusion/Pipelineliness-MVC.png" alt="Pipelineliness-MVC" style="width:100%"/>
+</div>
 
 </figure>
 

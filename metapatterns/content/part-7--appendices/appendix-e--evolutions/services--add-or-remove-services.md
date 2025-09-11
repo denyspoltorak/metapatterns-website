@@ -17,9 +17,9 @@ title = "Services: add or remove services"
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Services/Services_%20Split.png" alt="Services: Split" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Services/Services_%20Split.png" alt="Services: Split" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -52,9 +52,9 @@ If one of your services has grown too large, you should look for a way to subdiv
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Services/Services_%20Merge.png" alt="Services: Merge" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Services/Services_%20Merge.png" alt="Services: Merge" style="width:100%"/>
+</div>
 
 </figure>
 

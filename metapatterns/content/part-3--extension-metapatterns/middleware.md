@@ -7,9 +7,9 @@ title = "Middleware"
 
 <figure>
 
-<p align="center">
-<img src="/Main/Middleware.png" alt="Middleware" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Main/Middleware.png" alt="Middleware" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -69,9 +69,9 @@ Each service depends both on the *Middleware* and on the API of every service it
 
 <figure>
 
-<p align="center">
-<img src="/Dependencies/Middleware.png" alt="Middleware" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Dependencies/Middleware.png" alt="Middleware" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -96,9 +96,9 @@ You may decide to use an [*Anticorruption Layer*]({{< relref "../part-3--extensi
 
 <figure>
 
-<p align="center">
-<img src="/Relations/Middleware.png" alt="Middleware" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Relations/Middleware.png" alt="Middleware" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -158,9 +158,9 @@ If the messages are stored indefinitely, the *Middleware* becomes a *Persistent*
 
 <figure>
 
-<p align="center">
-<img src="/Misc/Middleware.png" alt="Middleware" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Misc/Middleware.png" alt="Middleware" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -181,9 +181,9 @@ There are several patterns which extend *Middleware* with other functions:
 
 <figure>
 
-<p align="center">
-<img src="/Variants/2/Message%20Bus.png" alt="Message Bus" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/2/Message%20Bus.png" alt="Message Bus" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -193,9 +193,9 @@ A *Message Bus* \[[EIP]({{< relref "../part-7--appendices/appendix-b--books-refe
 
 <figure>
 
-<p align="center">
-<img src="/Variants/1/Microservices.png" alt="Microservices" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/1/Microservices.png" alt="Microservices" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -207,9 +207,9 @@ The internals of [*Service Mesh*]({{< relref "../part-5--implementation-metapatt
 
 <figure>
 
-<p align="center">
-<img src="/Variants/2/Event%20Mediator.png" alt="Event Mediator" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/2/Event%20Mediator.png" alt="Event Mediator" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -221,9 +221,9 @@ Slightly more details on the *Event Mediator* are [provided in the *Orchestrator
 
 <figure>
 
-<p align="center">
-<img src="/Variants/2/Middleware%20-%20Shared%20Event%20Store.png" alt="Middleware - Shared Event Store" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/2/Middleware%20-%20Shared%20Event%20Store.png" alt="Middleware - Shared Event Store" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -235,9 +235,9 @@ This pattern is detailed in the [*Combined Component* chapter]({{< relref "../pa
 
 <figure>
 
-<p align="center">
-<img src="/Variants/2/Enterprise%20Service%20Bus.png" alt="Enterprise Service Bus" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/2/Enterprise%20Service%20Bus.png" alt="Enterprise Service Bus" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -254,9 +254,9 @@ A *Middleware* is unlikely to be removed \(though it may be replaced\) once it i
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/2/Middleware%20add%20Middleware.png" alt="Middleware add Middleware" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/2/Middleware%20add%20Middleware.png" alt="Middleware add Middleware" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -265,9 +265,9 @@ A *Middleware* is unlikely to be removed \(though it may be replaced\) once it i
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.png" alt="Middleware to Bus of Buses" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.png" alt="Middleware to Bus of Buses" style="width:100%"/>
+</div>
 
 </figure>
 

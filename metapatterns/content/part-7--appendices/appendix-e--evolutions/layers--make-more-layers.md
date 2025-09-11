@@ -14,9 +14,9 @@ Not all the layered architectures are equally layered\. A [*Monolith*]({{< relre
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Layers/Layers%20to%20Layers.png" alt="Layers to Layers" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Layers/Layers%20to%20Layers.png" alt="Layers to Layers" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -29,9 +29,9 @@ It is also common to:
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Layers/Layers%20Split%20in%20Two.png" alt="Layers Split in Two" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Layers/Layers%20Split%20in%20Two.png" alt="Layers Split in Two" style="width:100%"/>
+</div>
 
 </figure>
 

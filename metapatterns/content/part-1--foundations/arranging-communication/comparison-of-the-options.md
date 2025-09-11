@@ -17,9 +17,9 @@ There is advice [from Microsoft](https://learn.microsoft.com/en-us/azure/archite
 
 <figure>
 
-<p align="center">
-<img src="/Communication/Cell-Based%20Architecture.png" alt="Cell-Based Architecture" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Communication/Cell-Based%20Architecture.png" alt="Cell-Based Architecture" style="width:100%"/>
+</div>
 
 </figure>
 

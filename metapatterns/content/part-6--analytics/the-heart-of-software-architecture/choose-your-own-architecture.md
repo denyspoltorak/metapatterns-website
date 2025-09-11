@@ -15,9 +15,9 @@ Therefore, a one day task will likely be [*monolithic*]({{< relref "../../part-2
 
 <figure>
 
-<p align="center">
-<img src="/Heart/Size-1.png" alt="Size-1" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Heart/Size-1.png" alt="Size-1" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -25,9 +25,9 @@ Any inherent decoupling within your domain is another factor to consider in the 
 
 <figure>
 
-<p align="center">
-<img src="/Heart/Size-2.png" alt="Size-2" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Heart/Size-2.png" alt="Size-2" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -43,9 +43,9 @@ Sometimes you expect to have many complex use cases which cannot be matched to y
 
 <figure>
 
-<p align="center">
-<img src="/Heart/Features-1.png" alt="Features-1" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Heart/Features-1.png" alt="Features-1" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -53,9 +53,9 @@ Other systems are built around data\. You cannot split it into private databases
 
 <figure>
 
-<p align="center">
-<img src="/Heart/Features-2.png" alt="Features-2" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Heart/Features-2.png" alt="Features-2" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -63,9 +63,9 @@ Once you go distributed, you will likely employ a [*Middleware*]({{< relref "../
 
 <figure>
 
-<p align="center">
-<img src="/Heart/Features-3.png" alt="Features-3" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Heart/Features-3.png" alt="Features-3" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -77,9 +77,9 @@ High throughput is achieved by [*sharding*]({{< relref "../../part-2--basic-meta
 
 <figure>
 
-<p align="center">
-<img src="/Heart/Performance-1.png" alt="Performance-1" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Heart/Performance-1.png" alt="Performance-1" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -87,9 +87,9 @@ Alternatively, you may use several specialized databases \([*Polyglot Persistenc
 
 <figure>
 
-<p align="center">
-<img src="/Heart/Performance-2.png" alt="Performance-2" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Heart/Performance-2.png" alt="Performance-2" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -97,9 +97,9 @@ Scalability under uneven load is achieved through [*Function as a Service*]({{< 
 
 <figure>
 
-<p align="center">
-<img src="/Heart/Performance-3.png" alt="Performance-3" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Heart/Performance-3.png" alt="Performance-3" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -107,9 +107,9 @@ Fault tolerance requires you to have [*replicas*]({{< relref "../../part-2--basi
 
 <figure>
 
-<p align="center">
-<img src="/Heart/Performance-4.png" alt="Performance-4" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Heart/Performance-4.png" alt="Performance-4" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -122,9 +122,9 @@ Low latency makes you place simplified first response logic close to your input,
 
 <figure>
 
-<p align="center">
-<img src="/Heart/Performance-5.png" alt="Performance-5" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Heart/Performance-5.png" alt="Performance-5" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -138,9 +138,9 @@ If you mediate between resource or service providers and consumers, you build a 
 
 <figure>
 
-<p align="center">
-<img src="/Heart/Flexibility-1.png" alt="Flexibility-1" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Heart/Flexibility-1.png" alt="Flexibility-1" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -148,9 +148,9 @@ When your teams develop services and you want them to be [less interdependent]({
 
 <figure>
 
-<p align="center">
-<img src="/Heart/Flexibility-2.png" alt="Flexibility-2" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Heart/Flexibility-2.png" alt="Flexibility-2" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -158,9 +158,9 @@ When you have built a large system and really need that thorough data analytics,
 
 <figure>
 
-<p align="center">
-<img src="/Variants/1/Data%20Mesh.png" alt="Data Mesh" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/1/Data%20Mesh.png" alt="Data Mesh" style="width:100%"/>
+</div>
 
 </figure>
 

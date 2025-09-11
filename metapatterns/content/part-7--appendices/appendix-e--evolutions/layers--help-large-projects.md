@@ -16,9 +16,9 @@ The main drawback \(and benefit\) of [*Layers*]({{< relref "../../part-2--basic-
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.png" alt="Layers Split Domain to Services" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.png" alt="Layers Split Domain to Services" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -56,9 +56,9 @@ It is very common for a system’s domain to consist of weakly interacting *boun
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Layers/Layers%20Split%20to%20Event-Driven%20Architecture.png" alt="Layers Split to Event-Driven Architecture" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Layers/Layers%20Split%20to%20Event-Driven%20Architecture.png" alt="Layers Split to Event-Driven Architecture" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -99,9 +99,9 @@ If your system has a well\-defined workflow for processing every kind of input r
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Layers/Layers%20to%20Hierarchy.png" alt="Layers to Hierarchy" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Layers/Layers%20to%20Hierarchy.png" alt="Layers to Hierarchy" style="width:100%"/>
+</div>
 
 </figure>
 

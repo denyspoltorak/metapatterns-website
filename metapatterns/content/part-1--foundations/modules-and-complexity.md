@@ -23,9 +23,9 @@ Concepts are important because it is their number \(or the number of the corresp
 
 <figure>
 
-<p align="center">
-<img src="/Intro/Modules-1.png" alt="Modules-1" width=52%/>
-</p>
+<div style="text-align:center">
+<img src="/Intro/Modules-1.png" alt="Modules-1" style="width:52%"/>
+</div>
 
 </figure>
 
@@ -39,9 +39,9 @@ Enter *modules*\. A module wraps several concepts, effectively hiding them from 
 
 <figure>
 
-<p align="center">
-<img src="/Intro/Modules-2.png" alt="Modules-2" width=66%/>
-</p>
+<div style="text-align:center">
+<img src="/Intro/Modules-2.png" alt="Modules-2" style="width:66%"/>
+</div>
 
 </figure>
 
@@ -69,9 +69,9 @@ Apart from dividing the problem into simpler subproblems, modules open the path 
 
 <figure>
 
-<p align="center">
-<img src="/Intro/Modules-3.png" alt="Modules-3" width=64%/>
-</p>
+<div style="text-align:center">
+<img src="/Intro/Modules-3.png" alt="Modules-3" style="width:64%"/>
+</div>
 
 </figure>
 
@@ -91,9 +91,9 @@ The rule of thumb is to aim for *low coupling and high cohesion*, meaning that e
 
 <figure>
 
-<p align="center">
-<img src="/Intro/Modules-4.png" alt="Modules-4" width=75%/>
-</p>
+<div style="text-align:center">
+<img src="/Intro/Modules-4.png" alt="Modules-4" style="width:75%"/>
+</div>
 
 </figure>
 
@@ -103,9 +103,9 @@ Splitting a cohesive module \(a cluster of concepts that interact with each othe
 
 <figure>
 
-<p align="center">
-<img src="/Intro/Modules-5.png" alt="Modules-5" width=64%/>
-</p>
+<div style="text-align:center">
+<img src="/Intro/Modules-5.png" alt="Modules-5" style="width:64%"/>
+</div>
 
 </figure>
 
@@ -135,9 +135,9 @@ A module may encapsulate not only individual concepts, but even other modules\. 
 
 <figure>
 
-<p align="center">
-<img src="/Intro/Modules-6.png" alt="Modules-6" width=58%/>
-</p>
+<div style="text-align:center">
+<img src="/Intro/Modules-6.png" alt="Modules-6" style="width:58%"/>
+</div>
 
 </figure>
 
@@ -149,9 +149,9 @@ If the functionality of our internal module is needed by our clients, we have tw
 
 <figure>
 
-<p align="center">
-<img src="/Intro/Modules-7.png" alt="Modules-7" width=59%/>
-</p>
+<div style="text-align:center">
+<img src="/Intro/Modules-7.png" alt="Modules-7" style="width:59%"/>
+</div>
 
 </figure>
 
@@ -161,9 +161,9 @@ We can add the API of a module which we encapsulate to our public API and forwar
 
 <figure>
 
-<p align="center">
-<img src="/Intro/Modules-8.png" alt="Modules-8" width=78%/>
-</p>
+<div style="text-align:center">
+<img src="/Intro/Modules-8.png" alt="Modules-8" style="width:78%"/>
+</div>
 
 </figure>
 

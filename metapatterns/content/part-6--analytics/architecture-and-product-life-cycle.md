@@ -11,9 +11,9 @@ In my practice, a product’s architecture changes over its lifetime\. For a R&D
 
 <figure>
 
-<p align="center">
-<img src="/Conclusion/Lifecycle-1.png" alt="Lifecycle-1" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Conclusion/Lifecycle-1.png" alt="Lifecycle-1" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -23,9 +23,9 @@ A project in an unknown domain starts humble and small, likely as a proof of con
 
 <figure>
 
-<p align="center">
-<img src="/Conclusion/Lifecycle-2.png" alt="Lifecycle-2" width=89%/>
-</p>
+<div style="text-align:center">
+<img src="/Conclusion/Lifecycle-2.png" alt="Lifecycle-2" style="width:89%"/>
+</div>
 
 </figure>
 
@@ -35,9 +35,9 @@ When you have the thing working, you may start reflecting on the rules and the c
 
 <figure>
 
-<p align="center">
-<img src="/Conclusion/Lifecycle-3.png" alt="Lifecycle-3" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Conclusion/Lifecycle-3.png" alt="Lifecycle-3" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -47,9 +47,9 @@ As you acquire domain experience, you start discerning subdomains \(or *bounded 
 
 <figure>
 
-<p align="center">
-<img src="/Conclusion/Lifecycle-4.png" alt="Lifecycle-4" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Conclusion/Lifecycle-4.png" alt="Lifecycle-4" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -59,9 +59,9 @@ As the product enters the market, its development tends to slow down with more a
 
 <figure>
 
-<p align="center">
-<img src="/Conclusion/Lifecycle-5.png" alt="Lifecycle-5" width=54%/>
-</p>
+<div style="text-align:center">
+<img src="/Conclusion/Lifecycle-5.png" alt="Lifecycle-5" style="width:54%"/>
+</div>
 
 </figure>
 
@@ -71,9 +71,9 @@ When active development ceases, you lose even more people and funding as you dri
 
 <figure>
 
-<p align="center">
-<img src="/Conclusion/Lifecycle-6.png" alt="Lifecycle-6" width=55%/>
-</p>
+<div style="text-align:center">
+<img src="/Conclusion/Lifecycle-6.png" alt="Lifecycle-6" style="width:55%"/>
+</div>
 
 </figure>
 

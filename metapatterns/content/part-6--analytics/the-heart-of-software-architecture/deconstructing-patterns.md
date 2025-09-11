@@ -73,9 +73,9 @@ Finally, let’s close the book by iterating over the metapatterns and looking i
 
 <figure>
 
-<p align="center">
-<img src="/Heart/Basic.png" alt="Basic" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Heart/Basic.png" alt="Basic" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -97,9 +97,9 @@ Basic architectures:
 
 <figure>
 
-<p align="center">
-<img src="/Heart/Extension.png" alt="Extension" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Heart/Extension.png" alt="Extension" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -123,9 +123,9 @@ Grouping related functionality:
 
 <figure>
 
-<p align="center">
-<img src="/Heart/Fragmented.png" alt="Fragmented" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Heart/Fragmented.png" alt="Fragmented" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -146,9 +146,9 @@ Decoupled systems:
 
 <figure>
 
-<p align="center">
-<img src="/Heart/Implementation.png" alt="Implementation" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Heart/Implementation.png" alt="Implementation" style="width:100%"/>
+</div>
 
 </figure>
 

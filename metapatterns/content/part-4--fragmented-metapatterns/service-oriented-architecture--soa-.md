@@ -7,9 +7,9 @@ title = "Service-Oriented Architecture (SOA)"
 
 <figure>
 
-<p align="center">
-<img src="/Main/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Main/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -57,9 +57,9 @@ Each service of each layer depends on everything it uses\. As a result, developm
 
 <figure>
 
-<p align="center">
-<img src="/Dependencies/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" width=88%/>
-</p>
+<div style="text-align:center">
+<img src="/Dependencies/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" style="width:88%"/>
+</div>
 
 </figure>
 
@@ -95,9 +95,9 @@ This architecture was hyped at the time when enterprises were expanding by acqui
 
 <figure>
 
-<p align="center">
-<img src="/Variants/3/Distributed%20Monolith.png" alt="Distributed Monolith" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/3/Distributed%20Monolith.png" alt="Distributed Monolith" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -107,9 +107,9 @@ If a [*Monolith*]({{< relref "../part-2--basic-metapatterns/monolith.md" >}}) ge
 
 <figure>
 
-<p align="center">
-<img src="/Variants/3/Enterprise%20SOA.png" alt="Enterprise SOA" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/3/Enterprise%20SOA.png" alt="Enterprise SOA" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -126,9 +126,9 @@ The layers of *SOA* are:
 
 <figure>
 
-<p align="center">
-<img src="/Variants/3/DOMA.png" alt="DOMA" width=96%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/3/DOMA.png" alt="DOMA" style="width:96%"/>
+</div>
 
 </figure>
 
@@ -145,9 +145,9 @@ Uber’s *DOMA* also [makes heavy use](https://www.uber.com/blog/microservice-ar
 
 <figure>
 
-<p align="center">
-<img src="/Variants/3/SOA%20-%20AUTOSAR.png" alt="SOA - AUTOSAR" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/3/SOA%20-%20AUTOSAR.png" alt="SOA - AUTOSAR" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -166,9 +166,9 @@ It seems that some proponents of [*Nanoservices*]({{< relref "../part-2--basic-m
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/3/SOA%20-%201.png" alt="SOA - 1" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/3/SOA%20-%201.png" alt="SOA - 1" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -177,9 +177,9 @@ It seems that some proponents of [*Nanoservices*]({{< relref "../part-2--basic-m
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/3/SOA%20-%202.png" alt="SOA - 2" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/3/SOA%20-%202.png" alt="SOA - 2" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -195,9 +195,9 @@ Afterwards you may deal with the remaining orchestration\. The idea is to move t
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/3/SOA%20-%203.png" alt="SOA - 3" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/3/SOA%20-%203.png" alt="SOA - 3" style="width:100%"/>
+</div>
 
 </figure>
 

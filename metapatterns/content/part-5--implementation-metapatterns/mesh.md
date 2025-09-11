@@ -7,9 +7,9 @@ title = "Mesh"
 
 <figure>
 
-<p align="center">
-<img src="/Main/Mesh.png" alt="Mesh" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Main/Mesh.png" alt="Mesh" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -117,9 +117,9 @@ The connected *nodes* of a *Mesh* may be:
 
 <figure>
 
-<p align="center">
-<img src="/Variants/4/P2P.png" alt="P2P" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/4/P2P.png" alt="P2P" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -131,9 +131,9 @@ Examples: torrent, onion routing \(Tor\), blockchain\.
 
 <figure>
 
-<p align="center">
-<img src="/Variants/4/Leaf-Spine.png" alt="Leaf-Spine" width=81%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/4/Leaf-Spine.png" alt="Leaf-Spine" style="width:81%"/>
+</div>
 
 </figure>
 
@@ -143,9 +143,9 @@ This [datacenter network architecture](https://www.geeksforgeeks.org/spine-leaf-
 
 <figure>
 
-<p align="center">
-<img src="/Variants/4/Actors.png" alt="Actors" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/4/Actors.png" alt="Actors" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -155,9 +155,9 @@ A system of *Actors* may be classified as a *fully connected Mesh* with the acto
 
 <figure>
 
-<p align="center">
-<img src="/Variants/4/Service%20Mesh.png" alt="Service Mesh" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/4/Service%20Mesh.png" alt="Service Mesh" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -178,9 +178,9 @@ Ready\-to\-use *Service Mesh* frameworks are popular with the *Microservices* ar
 
 <figure>
 
-<p align="center">
-<img src="/Variants/4/Space-Based%20Architecture.png" alt="Space-Based Architecture" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/4/Space-Based%20Architecture.png" alt="Space-Based Architecture" style="width:100%"/>
+</div>
 
 </figure>
 

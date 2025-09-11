@@ -7,9 +7,9 @@ title = "Orchestrator"
 
 <figure>
 
-<p align="center">
-<img src="/Main/Orchestrator.png" alt="Orchestrator" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Main/Orchestrator.png" alt="Orchestrator" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -75,9 +75,9 @@ An *Orchestrator* fulfills two closely related roles:
 
 <figure>
 
-<p align="center">
-<img src="/Misc/Orchestrator.png" alt="Orchestrator" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Misc/Orchestrator.png" alt="Orchestrator" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -95,9 +95,9 @@ When compared to [*choreography*]({{< relref "../part-1--foundations/arranging-c
 
 <figure>
 
-<p align="center">
-<img src="/Performance/Orchestrator.png" alt="Orchestrator" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Performance/Orchestrator.png" alt="Orchestrator" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -109,9 +109,9 @@ An *Orchestrator* may depend on the *APIs* of the services it orchestrates or de
 
 <figure>
 
-<p align="center">
-<img src="/Dependencies/Orchestrator.png" alt="Orchestrator" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Dependencies/Orchestrator.png" alt="Orchestrator" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -143,9 +143,9 @@ Likewise, [control systems]({{< relref "../part-1--foundations/four-kinds-of-sof
 
 <figure>
 
-<p align="center">
-<img src="/Relations/Orchestrator.png" alt="Orchestrator" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Relations/Orchestrator.png" alt="Orchestrator" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -165,9 +165,9 @@ It seems that an *Orchestrator*, just like a [*layer*]({{< relref "../part-2--ba
 
 <figure>
 
-<p align="center">
-<img src="/Variants/2/Orchestrator%20-%20Closed.png" alt="Orchestrator - Closed" width=90%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/2/Orchestrator%20-%20Closed.png" alt="Orchestrator - Closed" style="width:90%"/>
+</div>
 
 </figure>
 
@@ -177,9 +177,9 @@ A *strict* or *closed Orchestrator* isolates the orchestrated services from thei
 
 <figure>
 
-<p align="center">
-<img src="/Variants/2/Orchestrator%20-%20Open.png" alt="Orchestrator - Open" width=92%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/2/Orchestrator%20-%20Open.png" alt="Orchestrator - Open" style="width:92%"/>
+</div>
 
 </figure>
 
@@ -199,9 +199,9 @@ The orchestration \(application \[[DDD]({{< relref "../part-7--appendices/append
 
 <figure>
 
-<p align="center">
-<img src="/Variants/2/Orchestrator%20-%20Monolythic.png" alt="Orchestrator - Monolythic" width=42%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/2/Orchestrator%20-%20Monolythic.png" alt="Orchestrator - Monolythic" style="width:42%"/>
+</div>
 
 </figure>
 
@@ -211,9 +211,9 @@ A single *Orchestrator* is deployed\. This option fits ordinary medium\-sized pr
 
 <figure>
 
-<p align="center">
-<img src="/Variants/2/Orchestrator%20-%20Scaled.png" alt="Orchestrator - Scaled" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/2/Orchestrator%20-%20Scaled.png" alt="Orchestrator - Scaled" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -231,9 +231,9 @@ High load systems also require multiple instances of *Orchestrators* because a s
 
 <figure>
 
-<p align="center">
-<img src="/Variants/2/Orchestrator%20-%20Layered.png" alt="Orchestrator - Layered" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/2/Orchestrator%20-%20Layered.png" alt="Orchestrator - Layered" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -247,9 +247,9 @@ A similar example is using an [*API Composer*]({{< relref "#api-composer-remote-
 
 <figure>
 
-<p align="center">
-<img src="/Variants/2/Orchestrator%20-%20BFF.png" alt="Orchestrator - BFF" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/2/Orchestrator%20-%20BFF.png" alt="Orchestrator - BFF" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -261,9 +261,9 @@ This pattern is known as [*Backends for Frontends*]({{< relref "../part-4--fragm
 
 <figure>
 
-<p align="center">
-<img src="/Variants/2/Orchestrator%20-%20Hierarchy.png" alt="Orchestrator - Hierarchy" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/2/Orchestrator%20-%20Hierarchy.png" alt="Orchestrator - Hierarchy" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -273,9 +273,9 @@ In large systems a single *Orchestrator* is very likely to become overgrown and 
 
 <figure>
 
-<p align="center">
-<img src="/Variants/2/Orchestrator%20-%20SOA.png" alt="Orchestrator - SOA" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/2/Orchestrator%20-%20SOA.png" alt="Orchestrator - SOA" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -289,9 +289,9 @@ In large systems a single *Orchestrator* is very likely to become overgrown and 
 
 <figure>
 
-<p align="center">
-<img src="/Variants/2/API%20Composer.png" alt="API Composer" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/2/API%20Composer.png" alt="API Composer" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -309,9 +309,9 @@ Example: Microsoft has an [article](https://learn.microsoft.com/en-us/azure/arch
 
 <figure>
 
-<p align="center">
-<img src="/Variants/2/Process%20Manager.png" alt="Process Manager" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/2/Process%20Manager.png" alt="Process Manager" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -327,9 +327,9 @@ Example: \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.
 
 <figure>
 
-<p align="center">
-<img src="/Variants/2/Saga.png" alt="Saga" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/2/Saga.png" alt="Saga" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -351,9 +351,9 @@ Example: \[[SAHP]({{< relref "../part-7--appendices/appendix-b--books-referenced
 
 <figure>
 
-<p align="center">
-<img src="/Variants/2/Integration%20Service.png" alt="Integration Service" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/2/Integration%20Service.png" alt="Integration Service" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -369,9 +369,9 @@ Several composite patterns involve an *Orchestrator* and are dominated by its be
 
 <figure>
 
-<p align="center">
-<img src="/Variants/2/API%20Gateway.png" alt="API Gateway" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/2/API%20Gateway.png" alt="API Gateway" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -383,9 +383,9 @@ Example: a thorough article from [Microsoft](https://learn.microsoft.com/en-us/a
 
 <figure>
 
-<p align="center">
-<img src="/Variants/2/Event%20Mediator.png" alt="Event Mediator" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/2/Event%20Mediator.png" alt="Event Mediator" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -397,9 +397,9 @@ Example: Mediator Topology in the chapter of \[[FSA](https://docs.google.com/doc
 
 <figure>
 
-<p align="center">
-<img src="/Variants/2/Enterprise%20Service%20Bus.png" alt="Enterprise Service Bus" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/2/Enterprise%20Service%20Bus.png" alt="Enterprise Service Bus" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -422,9 +422,9 @@ There is one way to counter the first point and more than one to solve the secon
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/2/Orchestrator%20to%20Layered%20Services.png" alt="Orchestrator to Layered Services" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/2/Orchestrator%20to%20Layered%20Services.png" alt="Orchestrator to Layered Services" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -433,9 +433,9 @@ There is one way to counter the first point and more than one to solve the secon
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/2/Orchestrator%20to%20Backends%20for%20Frontends.png" alt="Orchestrator to Backends for Frontends" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/2/Orchestrator%20to%20Backends%20for%20Frontends.png" alt="Orchestrator to Backends for Frontends" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -444,9 +444,9 @@ There is one way to counter the first point and more than one to solve the secon
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/2/Orchestrator%20add%20Orchestrator.png" alt="Orchestrator add Orchestrator" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/2/Orchestrator%20add%20Orchestrator.png" alt="Orchestrator add Orchestrator" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -455,9 +455,9 @@ There is one way to counter the first point and more than one to solve the secon
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/2/Orchestrator%20to%20Hierarchy.png" alt="Orchestrator to Hierarchy" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/2/Orchestrator%20to%20Hierarchy.png" alt="Orchestrator to Hierarchy" style="width:100%"/>
+</div>
 
 </figure>
 

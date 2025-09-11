@@ -17,9 +17,9 @@ Another drawback of [*Monolith*]({{< relref "../../part-2--basic-metapatterns/mo
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Monolith/Monolith%20to%20Layers.png" alt="Monolith to Layers" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Monolith/Monolith%20to%20Layers.png" alt="Monolith to Layers" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -53,9 +53,9 @@ Most systems apply *layering* by default as it grants a lot of flexibility at ve
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Monolith/Monolith%20add%20Database.png" alt="Monolith add Database" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Monolith/Monolith%20add%20Database.png" alt="Monolith add Database" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -97,9 +97,9 @@ A datastore is non\-trivial to implement\. While ordinary files are good for sma
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Monolith/Monolith%20add%20Proxy.png" alt="Monolith add Proxy" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Monolith/Monolith%20add%20Proxy.png" alt="Monolith add Proxy" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -135,9 +135,9 @@ A *Proxy* is placed between your system and its clients to provide generic funct
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Monolith/Monolith%20add%20Orchestrator.png" alt="Monolith add Orchestrator" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Monolith/Monolith%20add%20Orchestrator.png" alt="Monolith add Orchestrator" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -190,9 +190,9 @@ Another set of evolutions stems from splitting one or more *layers* into [*Servi
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%201.png" alt="Monolith to Layers - Further 1" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%201.png" alt="Monolith to Layers - Further 1" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -206,9 +206,9 @@ In addition,
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png" alt="Monolith to Layers - Further 2" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png" alt="Monolith to Layers - Further 2" style="width:100%"/>
+</div>
 
 </figure>
 

@@ -28,9 +28,9 @@ Those layers may also be merged into [*Combined Components*]({{< relref "../../p
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Services/Services%20add%20Middleware.png" alt="Services add Middleware" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Services/Services%20add%20Middleware.png" alt="Services add Middleware" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -63,9 +63,9 @@ Distributed systems may fail in a zillion ways\. You want to ruminate neither on
 
 <figure>
 
-<p align="center">
-<img src="/Variants/2/Multifunctional%20-%20Service%20Mesh.png" alt="Multifunctional - Service Mesh" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/2/Multifunctional%20-%20Service%20Mesh.png" alt="Multifunctional - Service Mesh" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -94,9 +94,9 @@ The [*Microservices*]({{< relref "../../part-2--basic-metapatterns/services.md#m
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Services/Services%20to%20Shared%20Database.png" alt="Services to Shared Database" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Services/Services%20to%20Shared%20Database.png" alt="Services to Shared Database" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -131,9 +131,9 @@ You don’t really need every service to have a private database\. A shared one 
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Services/Services%20add%20Proxy.png" alt="Services add Proxy" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Services/Services%20add%20Proxy.png" alt="Services add Proxy" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -167,9 +167,9 @@ Putting a generic component between the system and its clients helps the program
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Services/Services%20use%20Orchestrator.png" alt="Services use Orchestrator" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Services/Services%20use%20Orchestrator.png" alt="Services use Orchestrator" style="width:100%"/>
+</div>
 
 </figure>
 

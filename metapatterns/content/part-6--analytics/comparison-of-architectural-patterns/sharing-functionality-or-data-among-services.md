@@ -15,9 +15,9 @@ Sharing data inside a process is similar, but usually requires some kind of prot
 
 <figure>
 
-<p align="center">
-<img src="/Conclusion/Sharing-DirectCall.png" alt="Sharing-DirectCall" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Conclusion/Sharing-DirectCall.png" alt="Sharing-DirectCall" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -27,9 +27,9 @@ In a distributed system you can place the functionality or data to share into a 
 
 <figure>
 
-<p align="center">
-<img src="/Conclusion/Sharing-DedicatedService.png" alt="Sharing-DedicatedService" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Conclusion/Sharing-DedicatedService.png" alt="Sharing-DedicatedService" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -41,9 +41,9 @@ In a similar way a service may [behave as a function]({{< relref "../../part-1--
 
 <figure>
 
-<p align="center">
-<img src="/Conclusion/Sharing-Delegate.png" alt="Sharing-Delegate" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Conclusion/Sharing-Delegate.png" alt="Sharing-Delegate" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -55,9 +55,9 @@ Another case of replication is importing the same code in multiple services, whi
 
 <figure>
 
-<p align="center">
-<img src="/Conclusion/Sharing-Duplicate.png" alt="Sharing-Duplicate" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Conclusion/Sharing-Duplicate.png" alt="Sharing-Duplicate" style="width:100%"/>
+</div>
 
 </figure>
 

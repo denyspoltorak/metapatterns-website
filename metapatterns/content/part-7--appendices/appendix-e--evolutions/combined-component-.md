@@ -14,9 +14,9 @@ The patterns that involve *orchestration* \([*API Gateway*]({{< relref "../../pa
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/2/Multifunctional_%20Split.png" alt="Multifunctional: Split" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/2/Multifunctional_%20Split.png" alt="Multifunctional: Split" style="width:100%"/>
+</div>
 
 </figure>
 

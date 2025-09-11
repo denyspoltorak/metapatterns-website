@@ -7,9 +7,9 @@ title = "Shards"
 
 <figure>
 
-<p align="center">
-<img src="/Main/Shards.png" alt="Shards" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Main/Shards.png" alt="Shards" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -60,9 +60,9 @@ A *shard* retains the performance of the original subsystem \(a [*Monolith*]({{<
 
 <figure>
 
-<p align="center">
-<img src="/Performance/Shards.png" alt="Shards" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Performance/Shards.png" alt="Shards" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -94,9 +94,9 @@ A *sharded* system features properties of a pattern it replicates \(a single\-co
 
 <figure>
 
-<p align="center">
-<img src="/Relations/Shards.png" alt="Shards" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Relations/Shards.png" alt="Shards" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -155,9 +155,9 @@ There are several subtypes of sharding that differ in the way they handle state:
 
 <figure>
 
-<p align="center">
-<img src="/Variants/1/Shards%20-%20Sharding.png" alt="Shards - Sharding" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/1/Shards%20-%20Sharding.png" alt="Shards - Sharding" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -184,9 +184,9 @@ It usually takes a stand\-alone [*Sharding Proxy*]({{< relref "../part-3--extens
 
 <figure>
 
-<p align="center">
-<img src="/Variants/1/Shards%20-%20Replica.png" alt="Shards - Replica" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/1/Shards%20-%20Replica.png" alt="Shards - Replica" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -204,9 +204,9 @@ Finally, you can mix sharding and replication to make sure that the data of each
 
 <figure>
 
-<p align="center">
-<img src="/Variants/1/Shards%20-%20Pool.png" alt="Shards - Pool" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/1/Shards%20-%20Pool.png" alt="Shards - Pool" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -220,9 +220,9 @@ Many cloud services implement dynamic pools, the number of instances growing and
 
 <figure>
 
-<p align="center">
-<img src="/Variants/1/Shards%20-%20Create%20on%20Demand.png" alt="Shards - Create on Demand" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/1/Shards%20-%20Create%20on%20Demand.png" alt="Shards - Create on Demand" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -245,9 +245,9 @@ When *Shards* are applied to a single component, which is a [*Monolith*]({{< rel
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Shards/Shards%20-%20General.png" alt="Shards - General" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Shards/Shards%20-%20General.png" alt="Shards - General" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -262,9 +262,9 @@ The issue peculiar to *Shards* is that of coordinating deployed instances, espec
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Shards/Shards%20to%20Shared%20DB.png" alt="Shards to Shared DB" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Shards/Shards%20to%20Shared%20DB.png" alt="Shards to Shared DB" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -273,9 +273,9 @@ The issue peculiar to *Shards* is that of coordinating deployed instances, espec
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Shards/Shards%20to%20Space-Based%20Architecture.png" alt="Shards to Space-Based Architecture" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Shards/Shards%20to%20Space-Based%20Architecture.png" alt="Shards to Space-Based Architecture" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -284,9 +284,9 @@ The issue peculiar to *Shards* is that of coordinating deployed instances, espec
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Shards/Shards%20add%20Shared%20DB.png" alt="Shards add Shared DB" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Shards/Shards%20add%20Shared%20DB.png" alt="Shards add Shared DB" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -295,9 +295,9 @@ The issue peculiar to *Shards* is that of coordinating deployed instances, espec
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Shards/Shards%20split%20Shared%20Service.png" alt="Shards split Shared Service" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Shards/Shards%20split%20Shared%20Service.png" alt="Shards split Shared Service" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -311,9 +311,9 @@ Other cases are better solved by extracting the logic that manipulates multiple 
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Shards/Shards%20add%20Middleware.png" alt="Shards add Middleware" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Shards/Shards%20add%20Middleware.png" alt="Shards add Middleware" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -322,9 +322,9 @@ Other cases are better solved by extracting the logic that manipulates multiple 
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Shards/Shards%20add%20Load%20Balancer.png" alt="Shards add Load Balancer" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Shards/Shards%20add%20Load%20Balancer.png" alt="Shards add Load Balancer" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -333,9 +333,9 @@ Other cases are better solved by extracting the logic that manipulates multiple 
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Shards/Shards%20use%20Orchestrator.png" alt="Shards use Orchestrator" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Shards/Shards%20use%20Orchestrator.png" alt="Shards use Orchestrator" style="width:100%"/>
+</div>
 
 </figure>
 

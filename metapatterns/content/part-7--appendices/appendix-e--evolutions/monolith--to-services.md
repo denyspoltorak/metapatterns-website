@@ -15,9 +15,9 @@ The final major drawback of [*Monolith*]({{< relref "../../part-2--basic-metapat
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Monolith/Monolith_%20Services%20and%20Pipeline.png" alt="Monolith: Services and Pipeline" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Monolith/Monolith_%20Services%20and%20Pipeline.png" alt="Monolith: Services and Pipeline" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -25,9 +25,9 @@ The final major drawback of [*Monolith*]({{< relref "../../part-2--basic-metapat
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Monolith/Monolith%20to%20Services.png" alt="Monolith to Services" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Monolith/Monolith%20to%20Services.png" alt="Monolith to Services" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -62,9 +62,9 @@ Splitting a *Monolith* into *Services* by subdomain [is risky in the early stage
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Monolith/Monolith%20Split%20Service.png" alt="Monolith Split Service" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Monolith/Monolith%20Split%20Service.png" alt="Monolith Split Service" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -104,9 +104,9 @@ If you are not adding a new feature but need to change an old one – use the ch
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Monolith/Monolith%20to%20Pipeline.png" alt="Monolith to Pipeline" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Monolith/Monolith%20to%20Pipeline.png" alt="Monolith to Pipeline" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -149,9 +149,9 @@ Systems of [*Services*]({{< relref "../../part-2--basic-metapatterns/services.md
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Monolith/Monolith%20to%20Services%20-%20Further%201.png" alt="Monolith to Services - Further 1" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Monolith/Monolith%20to%20Services%20-%20Further%201.png" alt="Monolith to Services - Further 1" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -165,9 +165,9 @@ Each service, being a smaller *Monolith*, may evolve on its own\. Most of the ev
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Monolith/Monolith%20to%20Services%20-%20Further%202.png" alt="Monolith to Services - Further 2" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Monolith/Monolith%20to%20Services%20-%20Further%202.png" alt="Monolith to Services - Further 2" style="width:100%"/>
+</div>
 
 </figure>
 

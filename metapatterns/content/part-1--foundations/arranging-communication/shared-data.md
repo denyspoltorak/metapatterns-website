@@ -9,9 +9,9 @@ The final approach is integration through shared data \([*Shared Repository*]({{
 
 <figure>
 
-<p align="center">
-<img src="/Communication/Services%20to%20Shared%20Data.png" alt="Services to Shared Data" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Communication/Services%20to%20Shared%20Data.png" alt="Services to Shared Data" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -25,9 +25,9 @@ The most common case of shared data is storage \(usually a database, sometimes a
 
 <figure>
 
-<p align="center">
-<img src="/Communication/Purchase%20and%20Return.png" alt="Purchase and Return" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Communication/Purchase%20and%20Return.png" alt="Purchase and Return" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -35,17 +35,17 @@ With this model the services don’t depend on each other – instead, they depe
 
 <figure>
 
-<p align="center">
-<img src="/Communication/Shared%20Data%20-%20Dependencies.png" alt="Shared Data - Dependencies" width=92%/>
-</p>
+<div style="text-align:center">
+<img src="/Communication/Shared%20Data%20-%20Dependencies.png" alt="Shared Data - Dependencies" style="width:92%"/>
+</div>
 
 </figure>
 
 <figure>
 
-<p align="center">
-<img src="/Communication/Shared%20Data%20add%20a%20Service.png" alt="Shared Data add a Service" width=99%/>
-</p>
+<div style="text-align:center">
+<img src="/Communication/Shared%20Data%20add%20a%20Service.png" alt="Shared Data add a Service" style="width:99%"/>
+</div>
 
 </figure>
 
@@ -53,9 +53,9 @@ Services usually need to coordinate their actions\. Commonly, services with a sh
 
 <figure>
 
-<p align="center">
-<img src="/Communication/Notification%20to%20Notification.png" alt="Notification to Notification" width=99%/>
-</p>
+<div style="text-align:center">
+<img src="/Communication/Notification%20to%20Notification.png" alt="Notification to Notification" style="width:99%"/>
+</div>
 
 </figure>
 
@@ -63,9 +63,9 @@ Another case is found with data processing pipelines where an element may period
 
 <figure>
 
-<p align="center">
-<img src="/Communication/Shared%20files.png" alt="Shared files" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Communication/Shared%20files.png" alt="Shared files" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -73,9 +73,9 @@ Finally, there is the rarely used option of an external [*Scheduler*]({{< relref
 
 <figure>
 
-<p align="center">
-<img src="/Communication/Blackboard.png" alt="Blackboard" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Communication/Blackboard.png" alt="Blackboard" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -85,9 +85,9 @@ The other, not as obvious, use case for shared data is messaging, which is imple
 
 <figure>
 
-<p align="center">
-<img src="/Communication/Queues.png" alt="Queues" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Communication/Queues.png" alt="Queues" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -101,9 +101,9 @@ Finally, some \(usually distributed\) datastores implement data change notificat
 
 <figure>
 
-<p align="center">
-<img src="/Communication/Notification%20inside%20the%20DB.png" alt="Notification inside the DB" width=99%/>
-</p>
+<div style="text-align:center">
+<img src="/Communication/Notification%20inside%20the%20DB.png" alt="Notification inside the DB" style="width:99%"/>
+</div>
 
 </figure>
 

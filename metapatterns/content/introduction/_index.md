@@ -20,9 +20,9 @@ bookCollapseSection = true
 
 <figure>
 
-<p align="center">
-<img src="../Pictures/image000.png" alt="image000" width=22%/>
-</p>
+<div style="text-align:center">
+<img src="../Pictures/image000.png" alt="image000" style="width:22%"/>
+</div>
 
 </figure>
 

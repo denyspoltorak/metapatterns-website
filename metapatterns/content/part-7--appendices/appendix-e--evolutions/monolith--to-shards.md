@@ -17,9 +17,9 @@ One of the main drawbacks of the monolithic architecture is its lack of scalabil
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Monolith/Monolith%20to%20Mesh%20of%20Shards.png" alt="Monolith to Mesh of Shards" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Monolith/Monolith%20to%20Mesh%20of%20Shards.png" alt="Monolith to Mesh of Shards" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -49,9 +49,9 @@ It is possible to run several instances of an application \(*shards*\), with eac
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Monolith/Monolith%20to%20Isolated%20Shards%20with%20Load%20Balancer.png" alt="Monolith to Isolated Shards with Load Balancer" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Monolith/Monolith%20to%20Isolated%20Shards%20with%20Load%20Balancer.png" alt="Monolith to Isolated Shards with Load Balancer" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -79,9 +79,9 @@ If all the data a user operates on, directly or indirectly, is never accessed by
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Monolith/Monolith%20to%20Stateless%20Shards%20with%20Shared%20DB.png" alt="Monolith to Stateless Shards with Shared DB" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Monolith/Monolith%20to%20Stateless%20Shards%20with%20Shared%20DB.png" alt="Monolith to Stateless Shards with Shared DB" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -111,9 +111,9 @@ As data moves into a dedicated layer, the application becomes stateless and inst
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Monolith/Monolith%20to%20Instance%20per%20Client.png" alt="Monolith to Instance per Client" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Monolith/Monolith%20to%20Instance%20per%20Client.png" alt="Monolith to Instance per Client" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -151,9 +151,9 @@ In most cases *sharding* does not change much inside the application, thus the c
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%201.png" alt="Monolith to Shards - Further 1" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%201.png" alt="Monolith to Shards - Further 1" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -165,9 +165,9 @@ There are specific evolutions of [*Shards*]({{< relref "../../part-2--basic-meta
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%202.png" alt="Monolith to Shards - Further 2" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%202.png" alt="Monolith to Shards - Further 2" style="width:100%"/>
+</div>
 
 </figure>
 

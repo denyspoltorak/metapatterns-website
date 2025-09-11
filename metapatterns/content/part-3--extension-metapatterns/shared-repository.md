@@ -7,9 +7,9 @@ title = "Shared Repository"
 
 <figure>
 
-<p align="center">
-<img src="/Main/Shared%20Repository.png" alt="Shared Repository" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Main/Shared%20Repository.png" alt="Shared Repository" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -72,9 +72,9 @@ Normally, every service depends on the repository\. If the repository does not p
 
 <figure>
 
-<p align="center">
-<img src="/Dependencies/SharedRepository-1.png" alt="SharedRepository-1" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Dependencies/SharedRepository-1.png" alt="SharedRepository-1" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -82,9 +82,9 @@ The dependency on repository technology and a data schema is dangerous for long\
 
 <figure>
 
-<p align="center">
-<img src="/Dependencies/SharedRepository-2.png" alt="SharedRepository-2" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Dependencies/SharedRepository-2.png" alt="SharedRepository-2" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -111,9 +111,9 @@ Still, the DAL does not remove shared dependencies and only adds some flexibilit
 
 <figure>
 
-<p align="center">
-<img src="/Relations/Shared%20Repository.png" alt="Shared Repository" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Relations/Shared%20Repository.png" alt="Shared Repository" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -135,9 +135,9 @@ A *Shared Repository* may provide a generic interface \(e\.g\. SQL\) or a custom
 
 <figure>
 
-<p align="center">
-<img src="/Variants/2/Shared%20Database.png" alt="Shared Database" width=93%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/2/Shared%20Database.png" alt="Shared Database" style="width:93%"/>
+</div>
 
 </figure>
 
@@ -147,9 +147,9 @@ A *Shared Repository* may provide a generic interface \(e\.g\. SQL\) or a custom
 
 <figure>
 
-<p align="center">
-<img src="/Variants/2/Blackboard.png" alt="Blackboard" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/2/Blackboard.png" alt="Blackboard" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -161,9 +161,9 @@ Examples: several use cases are [mentioned on Wikipedia](https://en.wikipedia.or
 
 <figure>
 
-<p align="center">
-<img src="/Variants/2/Data%20Grid.png" alt="Data Grid" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/2/Data%20Grid.png" alt="Data Grid" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -192,9 +192,9 @@ The drawbacks of this architecture include:
 
 <figure>
 
-<p align="center">
-<img src="/Variants/2/Shared%20memory.png" alt="Shared memory" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/2/Shared%20memory.png" alt="Shared memory" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -204,9 +204,9 @@ Several actors \(processes, modules, device drivers\) communicate through one or
 
 <figure>
 
-<p align="center">
-<img src="/Variants/2/Shared%20files.png" alt="Shared files" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/2/Shared%20files.png" alt="Shared files" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -216,9 +216,9 @@ As a file system is a kind of shared dictionary, writing and reading files can b
 
 <figure>
 
-<p align="center">
-<img src="/Variants/2/Shared%20Database%20-%20Event%20Log.png" alt="Shared Database - Event Log" width=95%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/2/Shared%20Database%20-%20Event%20Log.png" alt="Shared Database - Event Log" style="width:95%"/>
+</div>
 
 </figure>
 
@@ -230,9 +230,9 @@ More details are [available]({{< relref "../part-3--extension-metapatterns/combi
 
 <figure>
 
-<p align="center">
-<img src="/Variants/2/Stamp%20Coupling.png" alt="Stamp Coupling" width=96%/>
-</p>
+<div style="text-align:center">
+<img src="/Variants/2/Stamp%20Coupling.png" alt="Stamp Coupling" style="width:96%"/>
+</div>
 
 </figure>
 
@@ -249,9 +249,9 @@ Once a database appears, it is unlikely to go away\. I see the following evoluti
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/2/Shared%20Database_%20Shard.png" alt="Shared Database: Shard" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/2/Shared%20Database_%20Shard.png" alt="Shared Database: Shard" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -260,9 +260,9 @@ Once a database appears, it is unlikely to go away\. I see the following evoluti
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/2/Shared%20Database%20to%20Space-Based%20Architecture.png" alt="Shared Database to Space-Based Architecture" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/2/Shared%20Database%20to%20Space-Based%20Architecture.png" alt="Shared Database to Space-Based Architecture" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -271,9 +271,9 @@ Once a database appears, it is unlikely to go away\. I see the following evoluti
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/2/Shared%20Database%20to%20Services.png" alt="Shared Database to Services" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/2/Shared%20Database%20to%20Services.png" alt="Shared Database to Services" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -282,9 +282,9 @@ Once a database appears, it is unlikely to go away\. I see the following evoluti
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/2/Shared%20Database%20to%20Polyglot%20Persistence.png" alt="Shared Database to Polyglot Persistence" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/2/Shared%20Database%20to%20Polyglot%20Persistence.png" alt="Shared Database to Polyglot Persistence" style="width:100%"/>
+</div>
 
 </figure>
 

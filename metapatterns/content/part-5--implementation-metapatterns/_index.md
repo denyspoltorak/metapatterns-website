@@ -12,9 +12,9 @@ There are patterns that describe implementation of components:
 
 <figure>
 
-<p align="center">
-<img src="/Contents/Plugins.png" alt="Plugins" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Contents/Plugins.png" alt="Plugins" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -26,9 +26,9 @@ The *Plugins* pattern is about separating a system’s main logic from the custo
 
 <figure>
 
-<p align="center">
-<img src="/Contents/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Contents/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -40,9 +40,9 @@ The *Plugins* pattern is about separating a system’s main logic from the custo
 
 <figure>
 
-<p align="center">
-<img src="/Contents/Microkernel.png" alt="Microkernel" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Contents/Microkernel.png" alt="Microkernel" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -54,9 +54,9 @@ This is another derivation of *Plugins*, with a rudimentary *core* component whi
 
 <figure>
 
-<p align="center">
-<img src="/Contents/Mesh.png" alt="Mesh" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Contents/Mesh.png" alt="Mesh" style="width:100%"/>
+</div>
 
 </figure>
 

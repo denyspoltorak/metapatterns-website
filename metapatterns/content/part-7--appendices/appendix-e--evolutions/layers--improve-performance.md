@@ -12,9 +12,9 @@ There are several ways to improve the performance of a [*layered system*]({{< re
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.png" alt="Layers to Space-Based Architecture" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.png" alt="Layers to Space-Based Architecture" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -29,9 +29,9 @@ Others are new here and thus deserve more attention:
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Layers/Layers%20Merge.png" alt="Layers Merge" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Layers/Layers%20Merge.png" alt="Layers Merge" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -64,9 +64,9 @@ If your system’s development [is finished]({{< relref "../../part-6--analytics
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Layers/Layers_%20Shard.png" alt="Layers: Shard" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Layers/Layers_%20Shard.png" alt="Layers: Shard" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -100,9 +100,9 @@ Multiple instances or layers can be created, with their number and deployment [v
 
 <figure>
 
-<p align="center">
-<img src="/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.png" alt="Layers to Polyglot Persistence" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.png" alt="Layers to Polyglot Persistence" style="width:100%"/>
+</div>
 
 </figure>
 

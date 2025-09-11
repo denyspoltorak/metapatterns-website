@@ -21,9 +21,9 @@ If we want for each module or service to continue with a model that fits its nee
 
 <figure>
 
-<p align="center">
-<img src="/Conclusion/Indirection-Command.png" alt="Indirection-Command" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Conclusion/Indirection-Command.png" alt="Indirection-Command" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -40,9 +40,9 @@ In such a case we employ an [*Adapter*]({{< relref "../../part-3--extension-meta
 
 <figure>
 
-<p align="center">
-<img src="/Conclusion/Indirection-Query.png" alt="Indirection-Query" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Conclusion/Indirection-Query.png" alt="Indirection-Query" style="width:100%"/>
+</div>
 
 </figure>
 

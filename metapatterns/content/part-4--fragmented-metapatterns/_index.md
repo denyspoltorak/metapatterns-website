@@ -12,9 +12,9 @@ There are several patterns with no system\-wide layers\. Some of them incorporat
 
 <figure>
 
-<p align="center">
-<img src="/Contents/Layered%20Services.png" alt="Layered Services" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Contents/Layered%20Services.png" alt="Layered Services" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -26,9 +26,9 @@ There are several patterns with no system\-wide layers\. Some of them incorporat
 
 <figure>
 
-<p align="center">
-<img src="/Contents/Polyglot%20Persistence.png" alt="Polyglot Persistence" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Contents/Polyglot%20Persistence.png" alt="Polyglot Persistence" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -40,9 +40,9 @@ There are several patterns with no system\-wide layers\. Some of them incorporat
 
 <figure>
 
-<p align="center">
-<img src="/Contents/Backends%20for%20Frontends.png" alt="Backends for Frontends" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Contents/Backends%20for%20Frontends.png" alt="Backends for Frontends" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -54,9 +54,9 @@ There are several patterns with no system\-wide layers\. Some of them incorporat
 
 <figure>
 
-<p align="center">
-<img src="/Contents/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Contents/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" style="width:100%"/>
+</div>
 
 </figure>
 
@@ -68,9 +68,9 @@ There are several patterns with no system\-wide layers\. Some of them incorporat
 
 <figure>
 
-<p align="center">
-<img src="/Contents/Hierarchy.png" alt="Hierarchy" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Contents/Hierarchy.png" alt="Hierarchy" style="width:100%"/>
+</div>
 
 </figure>
 

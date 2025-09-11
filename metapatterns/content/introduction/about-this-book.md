@@ -35,9 +35,9 @@ The diagrams are *NoUML* and most of them belong to one of the following kinds:
 
 <figure>
 
-<p align="center">
-<img src="/Misc/Diagrams.png" alt="Diagrams" width=100%/>
-</p>
+<div style="text-align:center">
+<img src="/Misc/Diagrams.png" alt="Diagrams" style="width:100%"/>
+</div>
 
 </figure>
 
