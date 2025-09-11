@@ -71,12 +71,10 @@ As we see, every \[[GoF]({{< relref "../../part-7--appendices/appendix-b--books-
 
 Finally, let’s close the book by iterating over the metapatterns and looking into their roots through the lens of unification and separation\.
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Heart/Basic.png" alt="Basic" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Heart/Basic.png" style="outline:none">
+<img src="/Heart/Basic.png" alt="Basic" width=100%/>
+</a>
 </figure>
 
 Basic architectures:
@@ -95,12 +93,10 @@ Basic architectures:
   - *Decoupling* simplifies reassembling or expanding the system but increases its latency\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Heart/Extension.png" alt="Extension" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Heart/Extension.png" style="outline:none">
+<img src="/Heart/Extension.png" alt="Extension" width=100%/>
+</a>
 </figure>
 
 Grouping related functionality:
@@ -121,12 +117,10 @@ Grouping related functionality:
   - *Cohesion* improves performance but reduces flexibility\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Heart/Fragmented.png" alt="Fragmented" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Heart/Fragmented.png" style="outline:none">
+<img src="/Heart/Fragmented.png" alt="Fragmented" width=100%/>
+</a>
 </figure>
 
 Decoupled systems:
@@ -144,12 +138,10 @@ Decoupled systems:
   - *Decoupled* layers and subdomains allow for modification and expansion of local functionality at the cost of performance\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Heart/Implementation.png" alt="Implementation" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Heart/Implementation.png" style="outline:none">
+<img src="/Heart/Implementation.png" alt="Implementation" width=100%/>
+</a>
 </figure>
 
 Component implementation:

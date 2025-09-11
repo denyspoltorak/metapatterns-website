@@ -15,12 +15,10 @@ Once a database appears, it is unlikely to go away\. I see the following evoluti
 
 ## Shard the database
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/2/Shared%20Database_%20Shard.png" alt="Shared Database: Shard" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/2/Shared%20Database_%20Shard.png" style="outline:none">
+<img src="/Evolutions/2/Shared%20Database_%20Shard.png" alt="Shared Database: Shard" width=100%/>
+</a>
 </figure>
 
 <ins>Patterns</ins>: [Sharding]({{< relref "../../part-2--basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-cells-amazon-definition" >}}) \([Shards]({{< relref "../../part-2--basic-metapatterns/shards.md" >}})\), [Shared Repository]({{< relref "../../part-3--extension-metapatterns/shared-repository.md" >}}), maybe [Sharding Proxy]({{< relref "../../part-3--extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}})\.
@@ -55,12 +53,10 @@ Modern distributed databases support sharding out of the box, but an overgrown t
 
 ## Use Space\-Based Architecture
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/2/Shared%20Database%20to%20Space-Based%20Architecture.png" alt="Shared Database to Space-Based Architecture" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/2/Shared%20Database%20to%20Space-Based%20Architecture.png" style="outline:none">
+<img src="/Evolutions/2/Shared%20Database%20to%20Space-Based%20Architecture.png" alt="Shared Database to Space-Based Architecture" width=100%/>
+</a>
 </figure>
 
 <ins>Patterns</ins>: [Space\-Based Architecture]({{< relref "../../part-5--implementation-metapatterns/mesh.md#space-based-architecture" >}}) \([Mesh]({{< relref "../../part-5--implementation-metapatterns/mesh.md" >}}), [Shared Repository]({{< relref "../../part-3--extension-metapatterns/shared-repository.md" >}})\)\.
@@ -88,12 +84,10 @@ Modern distributed databases support sharding out of the box, but an overgrown t
 
 ## Move the data to private databases of services
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/2/Shared%20Database%20to%20Services.png" alt="Shared Database to Services" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/2/Shared%20Database%20to%20Services.png" style="outline:none">
+<img src="/Evolutions/2/Shared%20Database%20to%20Services.png" alt="Shared Database to Services" width=100%/>
+</a>
 </figure>
 
 <ins>Patterns</ins>: [Services]({{< relref "../../part-2--basic-metapatterns/services.md" >}}) or [Shards]({{< relref "../../part-2--basic-metapatterns/shards.md" >}}), [Layers]({{< relref "../../part-2--basic-metapatterns/layers.md" >}})\.
@@ -125,12 +119,10 @@ If the data clearly follows subdomains, it may be possible to subdivide it accor
 
 ## Deploy specialized databases
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/2/Shared%20Database%20to%20Polyglot%20Persistence.png" alt="Shared Database to Polyglot Persistence" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/2/Shared%20Database%20to%20Polyglot%20Persistence.png" style="outline:none">
+<img src="/Evolutions/2/Shared%20Database%20to%20Polyglot%20Persistence.png" alt="Shared Database to Polyglot Persistence" width=100%/>
+</a>
 </figure>
 
 <ins>Patterns</ins>: [Polyglot Persistence]({{< relref "../../part-4--fragmented-metapatterns/polyglot-persistence.md" >}})\.

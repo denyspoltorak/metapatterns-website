@@ -5,12 +5,10 @@ title = "Middleware"
 
 # Middleware
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Main/Middleware.png" alt="Middleware" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Main/Middleware.png" style="outline:none">
+<img src="/Main/Middleware.png" alt="Middleware" width=100%/>
+</a>
 </figure>
 
 *The line between disorder and order lies in logistics\.* Use a shared transport\.
@@ -67,12 +65,10 @@ A more subtle drawback is that transports supported or recommended by a *Middlew
 
 Each service depends both on the *Middleware* and on the API of every service it communicates with\.
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Dependencies/Middleware.png" alt="Middleware" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Dependencies/Middleware.png" style="outline:none">
+<img src="/Dependencies/Middleware.png" alt="Middleware" width=100%/>
+</a>
 </figure>
 
 You may decide to use an [*Anticorruption Layer*]({{< relref "../part-3--extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\] over your *Middleware* just in case you may need to change its vendor in the future\.
@@ -94,12 +90,10 @@ You may decide to use an [*Anticorruption Layer*]({{< relref "../part-3--extensi
 
 ### Relations
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Relations/Middleware.png" alt="Middleware" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Relations/Middleware.png" style="outline:none">
+<img src="/Relations/Middleware.png" alt="Middleware" width=100%/>
+</a>
 </figure>
 
 *Middleware*:
@@ -156,12 +150,10 @@ If the messages are stored indefinitely, the *Middleware* becomes a *Persistent*
 
 ### By structure \(Microkernel, Mesh, Broker\)
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Misc/Middleware.png" alt="Middleware" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Misc/Middleware.png" style="outline:none">
+<img src="/Misc/Middleware.png" alt="Middleware" width=100%/>
+</a>
 </figure>
 
 A *Middleware* may be:
@@ -179,24 +171,20 @@ There are several patterns which extend *Middleware* with other functions:
 
 ### Message Bus
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/2/Message%20Bus.png" alt="Message Bus" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/2/Message%20Bus.png" style="outline:none">
+<img src="/Variants/2/Message%20Bus.png" alt="Message Bus" width=100%/>
+</a>
 </figure>
 
 A *Message Bus* \[[EIP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}})\] employs one or more [*Adapters*]({{< relref "../part-3--extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) per service to let the services intercommunicate even if they differ in protocols\. That helps to integrate legacy services without much change to their code but it degrades overall performance as up to two protocol translations per message are involved\.
 
 ### Service Mesh
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/1/Microservices.png" alt="Microservices" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/1/Microservices.png" style="outline:none">
+<img src="/Variants/1/Microservices.png" alt="Microservices" width=100%/>
+</a>
 </figure>
 
 *Service Mesh* \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}}), [MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\] is a smart [*Mesh*]({{< relref "../part-5--implementation-metapatterns/mesh.md" >}})\-based *Middleware* that manages service instances and employs at least one co\-located [*Proxy*]({{< relref "../part-3--extension-metapatterns/proxy.md" >}}) \(called [*Sidecar*]({{< relref "../part-3--extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \[[DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#dds" >}})\]\) per service instance deployed\. The *Sidecars* may provide protocol translation and cover cross\-cutting concerns such as encryption or logging\. They make a good place for shared libraries\.
@@ -205,12 +193,10 @@ The internals of [*Service Mesh*]({{< relref "../part-5--implementation-metapatt
 
 ### Event Mediator
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/2/Event%20Mediator.png" alt="Event Mediator" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/2/Event%20Mediator.png" style="outline:none">
+<img src="/Variants/2/Event%20Mediator.png" alt="Event Mediator" width=100%/>
+</a>
 </figure>
 
 *Event Mediator* \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\], which pervades both [*Event\-Driven Architecture*s]({{< relref "../part-2--basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}}) and [*Nanoservices*]({{< relref "../part-2--basic-metapatterns/pipeline.md#function-as-a-service-faas-nanoservices-pipelined" >}}), melds a *Middleware* \(used for delivery of messages\) and an [*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}}) \(that coordinates high\-level use cases\)\. A message arrives to a service and is responded to without any explicit component on the service’s side – it appears *out of thin Middleware* which implements the entire integration logic\.
@@ -219,12 +205,10 @@ Slightly more details on the *Event Mediator* are [provided in the *Orchestrator
 
 ### Persistent Event Log, Shared Event Store
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/2/Middleware%20-%20Shared%20Event%20Store.png" alt="Middleware - Shared Event Store" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/2/Middleware%20-%20Shared%20Event%20Store.png" style="outline:none">
+<img src="/Variants/2/Middleware%20-%20Shared%20Event%20Store.png" alt="Middleware - Shared Event Store" width=100%/>
+</a>
 </figure>
 
 When a *Middleware* persists messages, it takes on the function \(and drawbacks\) of a [*Shared Repository*]({{< relref "../part-3--extension-metapatterns/shared-repository.md" >}})\. A *Persistent Event Log* allows to replay incoming events for a given service \(to help a debug session or fix data corrupted by a bug\) while a *Shared Event Store* also captures changes of the internal states of the services \[[DEDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#deds" >}})\], [replacing their private databases](https://cloudnative.ly/event-driven-architectures-edas-vs-event-sourcing-c8582578e87)\. However, with either approach, changing an event field impacts all the services that use the event and may involve rewriting the entire event log \(system’s history\) \[[DEDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#deds" >}})\]\.
@@ -233,12 +217,10 @@ This pattern is detailed in the [*Combined Component* chapter]({{< relref "../pa
 
 ### Enterprise Service Bus \(ESB\)
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/2/Enterprise%20Service%20Bus.png" alt="Enterprise Service Bus" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/2/Enterprise%20Service%20Bus.png" style="outline:none">
+<img src="/Variants/2/Enterprise%20Service%20Bus.png" alt="Enterprise Service Bus" width=100%/>
+</a>
 </figure>
 
 [*Enterprise Service Bus*](https://www.confluent.io/learn/enterprise-service-bus/) \(*ESB*\) \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] is a mixture of *Message Bus* and *Event Mediator*\. A *ESB* blends a *Middleware* and an [*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}}) and adds an [*Adapter*]({{< relref "../part-3--extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) per service as a topping\. It emerged to connect components that originated in incompatible networks of organizations that had been acquired by a corporation\.
@@ -252,23 +234,19 @@ A *Middleware* is unlikely to be removed \(though it may be replaced\) once it i
 - If the *Middleware* in use does not fit the preferred mode of communication between some of your services, there is the option to deploy a second, specialized *Middleware*\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/2/Middleware%20add%20Middleware.png" alt="Middleware add Middleware" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/2/Middleware%20add%20Middleware.png" style="outline:none">
+<img src="/Evolutions/2/Middleware%20add%20Middleware.png" alt="Middleware add Middleware" width=100%/>
+</a>
 </figure>
 
 - If several existing systems need to be merged, that is accomplished by adding yet another layer of *Middleware*, resulting in a [*Bottom\-up Hierarchy*]({{< relref "../part-4--fragmented-metapatterns/hierarchy.md#bottom-up-hierarchy-bus-of-buses-network-of-networks" >}}) *\(Bus of Buses\)*\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.png" alt="Middleware to Bus of Buses" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.png" style="outline:none">
+<img src="/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.png" alt="Middleware to Bus of Buses" width=100%/>
+</a>
 </figure>
 
 ## Summary

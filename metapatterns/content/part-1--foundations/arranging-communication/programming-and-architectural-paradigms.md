@@ -34,78 +34,64 @@ We have heard a lot about keeping *logic and data* together: an object \(or acto
 
 Adding *control* to the blend is more subtle, but no less crucial than the encapsulation discussed above\. If an object commands another thing to do something, it must receive the result of the delegated action to know how to proceed with its own task\. Returning control after the action is conducted enables separation of high\-level supervising \(orchestration, integration\) logic from low\-level algorithms which it drives, adding depth to the structure\.
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Communication/Paradigms%20-%20Object-oriented.png" alt="Paradigms - Object-oriented" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Communication/Paradigms%20-%20Object-oriented.png" style="outline:none">
+<img src="/Communication/Paradigms%20-%20Object-oriented.png" alt="Paradigms - Object-oriented" width=100%/>
+</a>
 </figure>
 
 The ability to address complex domains by reducing the whole to self\-contained pieces makes object\-oriented design ubiquitous\. This paradigm, when applied to distributed systems, gives birth to [*Microservices*]({{< relref "../../part-2--basic-metapatterns/services.md#microservices" >}}), [*Orchestrated Services*]({{< relref "../../part-3--extension-metapatterns/orchestrator.md" >}}), and [*Service\-Oriented Architecture*]({{< relref "../../part-4--fragmented-metapatterns/service-oriented-architecture--soa-.md" >}})\.
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Communication/Paradigms%20-%20Object-oriented%20-%20Variants.png" alt="Paradigms - Object-oriented - Variants" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Communication/Paradigms%20-%20Object-oriented%20-%20Variants.png" style="outline:none">
+<img src="/Communication/Paradigms%20-%20Object-oriented%20-%20Variants.png" alt="Paradigms - Object-oriented - Variants" width=100%/>
+</a>
 </figure>
 
 ## Functional \(decentralized, streaming\) paradigm – choreography
 
 Sometimes you don’t need that level of fine\-tuning for the behavior of the system you build – it operates as an [assembly line](https://en.wikipedia.org/wiki/Assembly_line) with high throughput and little variance: its logic is made of steps that resemble work stations along a [conveyor belt](https://en.wikipedia.org/wiki/Conveyor_belt) through which identically structured pieces of data flow, just like goods on the belt\. In that case there is very little to control: if an item is good, it goes further, otherwise it just falls off the line\. Here the *control* resides in the graph of connections*,* the domain *logic* is subdivided, while the *data* is copied between the components\.
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Communication/Paradigms%20-%20Functional.png" alt="Paradigms - Functional" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Communication/Paradigms%20-%20Functional.png" style="outline:none">
+<img src="/Communication/Paradigms%20-%20Functional.png" alt="Paradigms - Functional" width=100%/>
+</a>
 </figure>
 
 Functional or pipelined design is famous for its simplicity and high performance as the majority of processing steps can be scaled\. However, its straightforward application lacks the depth needed for handling complex processes, which would translate into webs of relations between hundreds of functions present at the same level of design\. It is also inefficient for choose\-your\-own\-adventure\-style \([*control*]({{< relref "../../part-1--foundations/four-kinds-of-software.md#control-real-time-hardware-input" >}})\) systems where too many too short conveyor belts would be required, negating the paradigm’s benefits\. And it may not be the right tool for making small changes in large sets of data as you’ll likely need to copy the whole dataset between the constituent functions\.
 
 In distributed systems the functional paradigm is disguised as [*Choreographed Event\-Driven Architecture*]({{< relref "../../part-2--basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}}), [*Data Mesh*]({{< relref "../../part-2--basic-metapatterns/pipeline.md#data-mesh" >}}), and various [batch or stream]({{< relref "../../part-2--basic-metapatterns/pipeline.md#variants-by-scheduling" >}}) processing \[[DDIA]({{< relref "../../part-7--appendices/appendix-b--books-referenced.md#ddia" >}})\] [*Pipelines*]({{< relref "../../part-2--basic-metapatterns/pipeline.md#pipes-and-filters-workflow-system" >}})\.
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Communication/Paradigms%20-%20Functional%20-%20Variants.png" alt="Paradigms - Functional - Variants" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Communication/Paradigms%20-%20Functional%20-%20Variants.png" style="outline:none">
+<img src="/Communication/Paradigms%20-%20Functional%20-%20Variants.png" alt="Paradigms - Functional - Variants" width=100%/>
+</a>
 </figure>
 
 ## Procedural \(data\-centric\) paradigm – shared data
 
 The final approach is integration through data\. There are cases where the domain data and business logic differ in structure – you cannot divide your project into objects because each of the many pieces of its logic needs to access several \(seemingly unrelated\) parts of its data\.
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Communication/Paradigms%20-%20Data-centric.png" alt="Paradigms - Data-centric" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Communication/Paradigms%20-%20Data-centric.png" style="outline:none">
+<img src="/Communication/Paradigms%20-%20Data-centric.png" alt="Paradigms - Data-centric" width=100%/>
+</a>
 </figure>
 
 In the data\-centric paradigm *logic* and *data* are structured independently\. In procedural programming, like in object\-oriented paradigm, *control* is implemented inside the logic, making the logic layer hierarchical \(*orchestrated*\)\. Another, much less common, option relies on *Observer* \[[GoF]({{< relref "../../part-7--appendices/appendix-b--books-referenced.md#gof" >}})\] to provide data change notifications, resulting in decentralized \(*choreographed*\) application logic:
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Communication/Paradigms%20-%20Data-centric%20-%20Notifications.png" alt="Paradigms - Data-centric - Notifications" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Communication/Paradigms%20-%20Data-centric%20-%20Notifications.png" style="outline:none">
+<img src="/Communication/Paradigms%20-%20Data-centric%20-%20Notifications.png" alt="Paradigms - Data-centric - Notifications" width=100%/>
+</a>
 </figure>
 
 The data\-centric approach works well for moderately\-sized projects with a stable data model \(like reservation of seats in trains or game of chess\)\. The best\-known distributed data\-centric architectures include [*Services with a Shared Database*]({{< relref "../../part-3--extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) and [*Space\-Based Architecture*]({{< relref "../../part-3--extension-metapatterns/shared-repository.md#data-grid-of-space-based-architecture-sba-replicated-cache-distributed-cache" >}})\.
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Communication/Paradigms%20-%20Data-centric%20-%20Variants.png" alt="Paradigms - Data-centric - Variants" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Communication/Paradigms%20-%20Data-centric%20-%20Variants.png" style="outline:none">
+<img src="/Communication/Paradigms%20-%20Data-centric%20-%20Variants.png" alt="Paradigms - Data-centric - Variants" width=100%/>
+</a>
 </figure>
 
 ## Composite cases

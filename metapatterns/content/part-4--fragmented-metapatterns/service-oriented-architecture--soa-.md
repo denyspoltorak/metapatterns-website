@@ -5,12 +5,10 @@ title = "Service-Oriented Architecture (SOA)"
 
 # Service\-Oriented Architecture \(SOA\)
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Main/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Main/Service-Oriented%20Architecture.png" style="outline:none">
+<img src="/Main/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" width=100%/>
+</a>
 </figure>
 
 *The whole is equal to the sum of the parts\.* Distributed [Object\-Oriented Design](https://en.wikipedia.org/wiki/Object-oriented_design)\.
@@ -55,12 +53,10 @@ Nevertheless, the pattern allows for good throughput as its stateless components
 
 Each service of each layer depends on everything it uses\. As a result, development of a low\-level \(utility\) component may be paralyzed because too many services already use it, thus no changes are welcome\. Hence, the team writes a new version of their utility as a new service, which defeats the very idea of component reuse that *SOA* was based on\.
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Dependencies/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" style="width:88%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Dependencies/Service-Oriented%20Architecture.png" style="outline:none">
+<img src="/Dependencies/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" width=88%/>
+</a>
 </figure>
 
 ### Applicability
@@ -93,24 +89,20 @@ This architecture was hyped at the time when enterprises were expanding by acqui
 
 ### Distributed Monolith
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/3/Distributed%20Monolith.png" alt="Distributed Monolith" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/3/Distributed%20Monolith.png" style="outline:none">
+<img src="/Variants/3/Distributed%20Monolith.png" alt="Distributed Monolith" width=100%/>
+</a>
 </figure>
 
 If a [*Monolith*]({{< relref "../part-2--basic-metapatterns/monolith.md" >}}) gets too complex and resource\-hungry, the most simple & stupid way out of the trouble is to deploy each of its component modules to separate, dedicated hardware\. The resulting services still communicate synchronously and are subject to domino effect on failure\. Such an architecture may be seen as a \(hopefully\) intermediate structure in transition to more independent and stable event\-driven [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}}) \(or [*Cells*]({{< relref "../part-4--fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services" >}})\)\.
 
 ### Enterprise SOA
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/3/Enterprise%20SOA.png" alt="Enterprise SOA" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/3/Enterprise%20SOA.png" style="outline:none">
+<img src="/Variants/3/Enterprise%20SOA.png" alt="Enterprise SOA" width=100%/>
+</a>
 </figure>
 
 Multiple systems of [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}}), each featuring an [*API Gateway*]({{< relref "../part-3--extension-metapatterns/combined-component.md#api-gateway" >}}) and sometimes a [*Shared Database*]({{< relref "../part-3--extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}), are integrated, resulting in new cross\-connections\. Much of the orchestration logic is removed from the *API Gateways* and reimplemented in an [*orchestrating*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}}) [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}) called [*Enterprise Service Bus* \(*ESB*\)]({{< relref "../part-3--extension-metapatterns/combined-component.md#enterprise-service-bus-esb" >}})\. This option allows for fast and only moderately intrusive integration \(as no changes to the services, which implement the mass of the business logic, are required\), but the single [orchestrating]({{< relref "../part-1--foundations/arranging-communication/orchestration.md" >}}) component \(*ESB*\) often becomes the bottleneck for future development of the system due to its size and complexity\. It is likely that if the orchestration were encapsulated in the individual *API Gateways*, the system would be easier to deal with \(making what is now [marketed by WSO2](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md) as [*Cell\-Based Architecture*]({{< relref "../part-4--fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services" >}})\)\.
@@ -124,12 +116,10 @@ The layers of *SOA* are:
 
 ### Domain\-Oriented Microservice Architecture \(DOMA\)
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/3/DOMA.png" alt="DOMA" style="width:96%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/3/DOMA.png" style="outline:none">
+<img src="/Variants/3/DOMA.png" alt="DOMA" width=96%/>
+</a>
 </figure>
 
 A huge business may build *SOA* of [*Cells*]({{< relref "../part-2--basic-metapatterns/services.md#cell-wso2-definition-service-of-services-domain-uber-definition-cluster" >}}) \(called *Domains*\) instead of plain [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}})\. That greatly simplifies:
@@ -143,12 +133,10 @@ Uber’s *DOMA* also [makes heavy use](https://www.uber.com/blog/microservice-ar
 
 ### \(misapplied\) Automotive SOA
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/3/SOA%20-%20AUTOSAR.png" alt="SOA - AUTOSAR" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/3/SOA%20-%20AUTOSAR.png" style="outline:none">
+<img src="/Variants/3/SOA%20-%20AUTOSAR.png" alt="SOA - AUTOSAR" width=100%/>
+</a>
 </figure>
 
 *Automotive* architectures are marketed as *SOA*, but the old [*AUTOSAR Classic*]({{< relref "../part-5--implementation-metapatterns/microkernel.md#autosar-classic-platform" >}}) looks more like [*Microkernel*]({{< relref "../part-5--implementation-metapatterns/microkernel.md" >}}) \(which indeed is similar to a 2\-layered *SOA* with an [*ESB*]({{< relref "../part-3--extension-metapatterns/combined-component.md#enterprise-service-bus-esb" >}})\) while the newer system diagrams resemble a [*Hierarchy*]({{< relref "../part-4--fragmented-metapatterns/hierarchy.md" >}})\. Therefore, they are addressed in the corresponding chapters\.
@@ -164,23 +152,19 @@ It seems that some proponents of [*Nanoservices*]({{< relref "../part-2--basic-m
 - Into every *service* that uses it, giving the developers who write the business logic full control of all the code that they use\. Now they have several projects to support on their own \(instead of asking other teams to make changes to their components\)\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/3/SOA%20-%201.png" alt="SOA - 1" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/3/SOA%20-%201.png" style="outline:none">
+<img src="/Evolutions/3/SOA%20-%201.png" alt="SOA - 1" width=100%/>
+</a>
 </figure>
 
 - Or into [*Sidecars*]({{< relref "../part-3--extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \[[DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#dds" >}})\] if you employ a [*Service Mesh*]({{< relref "../part-5--implementation-metapatterns/mesh.md#service-mesh" >}}), resulting in much fewer network hops \(thus lower latency\) in request processing, but retaining the inter\-team dependencies\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/3/SOA%20-%202.png" alt="SOA - 2" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/3/SOA%20-%202.png" style="outline:none">
+<img src="/Evolutions/3/SOA%20-%202.png" alt="SOA - 2" width=100%/>
+</a>
 </figure>
 
 That removes the largest and most obvious part of the fragmentation, making the [*ESB*]({{< relref "../part-3--extension-metapatterns/combined-component.md#enterprise-service-bus-esb" >}}) \(if you use one\) [*orchestrate*]({{< relref "../part-1--foundations/arranging-communication/orchestration.md" >}}) only the *entity* layer\.
@@ -193,12 +177,10 @@ Afterwards you may deal with the remaining orchestration\. The idea is to move t
 - Or a combination of the above\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/3/SOA%20-%203.png" alt="SOA - 3" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/3/SOA%20-%203.png" style="outline:none">
+<img src="/Evolutions/3/SOA%20-%203.png" alt="SOA - 3" width=100%/>
+</a>
 </figure>
 
 Still another step is unbundling the [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}), which supports multiple protocols via [*Adapters*]({{< relref "../part-3--extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}):

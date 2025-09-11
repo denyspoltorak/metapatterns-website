@@ -13,12 +13,10 @@ A [*Middleware*]({{< relref "../../part-3--extension-metapatterns/middleware.md"
 
 ## Add a secondary middleware
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/2/Middleware%20add%20Middleware.png" alt="Middleware add Middleware" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/2/Middleware%20add%20Middleware.png" style="outline:none">
+<img src="/Evolutions/2/Middleware%20add%20Middleware.png" alt="Middleware add Middleware" width=100%/>
+</a>
 </figure>
 
 <ins>Patterns</ins>: [Middleware]({{< relref "../../part-3--extension-metapatterns/middleware.md" >}})\.
@@ -42,12 +40,10 @@ If the current *Middleware* is too generic for the system’s needs, you can add
 
 ## Merge two systems by building a Bottom\-Up Hierarchy
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.png" alt="Middleware to Bus of Buses" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.png" style="outline:none">
+<img src="/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.png" alt="Middleware to Bus of Buses" width=100%/>
+</a>
 </figure>
 
 <ins>Patterns</ins>: [Bottom\-up Hierarchy]({{< relref "../../part-4--fragmented-metapatterns/hierarchy.md#bottom-up-hierarchy-bus-of-buses-network-of-networks" >}}) \([Hierarchy]({{< relref "../../part-4--fragmented-metapatterns/hierarchy.md" >}}), [Middleware]({{< relref "../../part-3--extension-metapatterns/middleware.md" >}})\)\.

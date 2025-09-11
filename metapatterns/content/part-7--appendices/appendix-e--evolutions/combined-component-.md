@@ -12,12 +12,10 @@ The patterns that involve *orchestration* \([*API Gateway*]({{< relref "../../pa
 
 ## Divide into specialized layers
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/2/Multifunctional_%20Split.png" alt="Multifunctional: Split" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/2/Multifunctional_%20Split.png" style="outline:none">
+<img src="/Evolutions/2/Multifunctional_%20Split.png" alt="Multifunctional: Split" width=100%/>
+</a>
 </figure>
 
 <ins>Patterns</ins>: [Layers]({{< relref "../../part-2--basic-metapatterns/layers.md" >}})\.

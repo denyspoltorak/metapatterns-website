@@ -14,12 +14,10 @@ The main drawback \(and benefit\) of [*Layers*]({{< relref "../../part-2--basic-
 
 ## Divide the domain layer into Services
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.png" alt="Layers Split Domain to Services" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.png" style="outline:none">
+<img src="/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.png" alt="Layers Split Domain to Services" width=100%/>
+</a>
 </figure>
 
 <ins>Patterns</ins>: [Services]({{< relref "../../part-2--basic-metapatterns/services.md" >}}), [Shared Database]({{< relref "../../part-3--extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) \([Shared Repository]({{< relref "../../part-3--extension-metapatterns/shared-repository.md" >}})\), [Orchestrator]({{< relref "../../part-3--extension-metapatterns/orchestrator.md" >}})\.
@@ -54,12 +52,10 @@ It is very common for a system’s domain to consist of weakly interacting *boun
 
 ## Build an Event\-Driven Architecture over a Shared Database
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Layers/Layers%20Split%20to%20Event-Driven%20Architecture.png" alt="Layers Split to Event-Driven Architecture" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Layers/Layers%20Split%20to%20Event-Driven%20Architecture.png" style="outline:none">
+<img src="/Evolutions/Layers/Layers%20Split%20to%20Event-Driven%20Architecture.png" alt="Layers Split to Event-Driven Architecture" width=100%/>
+</a>
 </figure>
 
 <ins>Patterns</ins>: [Event\-Driven Architecture]({{< relref "../../part-2--basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}}) \([Pipeline]({{< relref "../../part-2--basic-metapatterns/pipeline.md" >}}) \([Services]({{< relref "../../part-2--basic-metapatterns/services.md" >}})\)\), [Shared Database]({{< relref "../../part-3--extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) \([Shared Repository]({{< relref "../../part-3--extension-metapatterns/shared-repository.md" >}})\)\.
@@ -97,12 +93,10 @@ If your system has a well\-defined workflow for processing every kind of input r
 
 ## Build a Top\-Down Hierarchy
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Layers/Layers%20to%20Hierarchy.png" alt="Layers to Hierarchy" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Layers/Layers%20to%20Hierarchy.png" style="outline:none">
+<img src="/Evolutions/Layers/Layers%20to%20Hierarchy.png" alt="Layers to Hierarchy" width=100%/>
+</a>
 </figure>
 
 <ins>Patterns</ins>: [Top\-Down Hierarchy]({{< relref "../../part-4--fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}}) \([Hierarchy]({{< relref "../../part-4--fragmented-metapatterns/hierarchy.md" >}})\)\.

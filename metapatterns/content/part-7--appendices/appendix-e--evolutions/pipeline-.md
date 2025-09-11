@@ -15,12 +15,10 @@ There are a couple of *Pipeline*\-specific evolutions:
 
 ## Promote a service to Front Controller
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png" alt="Pipeline promote Front Controller" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png" style="outline:none">
+<img src="/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png" alt="Pipeline promote Front Controller" width=100%/>
+</a>
 </figure>
 
 <ins>Patterns</ins>: [Front Controller]({{< relref "../../part-4--fragmented-metapatterns/polyglot-persistence.md#query-service-front-controller-data-warehouse-data-lake-aggregate-data-product-quantum-dpq-of-data-mesh" >}}) \([Polyglot Persistence]({{< relref "../../part-4--fragmented-metapatterns/polyglot-persistence.md" >}}), [Orchestrator]({{< relref "../../part-3--extension-metapatterns/orchestrator.md" >}})\), [Pipeline]({{< relref "../../part-2--basic-metapatterns/pipeline.md" >}}) \([Services]({{< relref "../../part-2--basic-metapatterns/services.md" >}})\)\.
@@ -48,12 +46,10 @@ If request processing steps require heavy calculations or manual action, clients
 
 ## Add an Orchestrator
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Services/Pipeline%20use%20Orchestrator.png" alt="Pipeline use Orchestrator" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Services/Pipeline%20use%20Orchestrator.png" style="outline:none">
+<img src="/Evolutions/Services/Pipeline%20use%20Orchestrator.png" alt="Pipeline use Orchestrator" width=100%/>
+</a>
 </figure>
 
 <ins>Patterns</ins>: [Orchestrator]({{< relref "../../part-3--extension-metapatterns/orchestrator.md" >}}), [Services]({{< relref "../../part-2--basic-metapatterns/services.md" >}})\.

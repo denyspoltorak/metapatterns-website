@@ -21,12 +21,10 @@ There is one way to counter the first point and more ways to solve the second on
 
 ## Subdivide to form Layered Services
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/2/Orchestrator%20to%20Layered%20Services.png" alt="Orchestrator to Layered Services" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/2/Orchestrator%20to%20Layered%20Services.png" style="outline:none">
+<img src="/Evolutions/2/Orchestrator%20to%20Layered%20Services.png" alt="Orchestrator to Layered Services" width=100%/>
+</a>
 </figure>
 
 <ins>Patterns</ins>: [Orchestrated Three\-Layered Services]({{< relref "../../part-4--fragmented-metapatterns/layered-services.md#orchestrated-three-layered-services" >}}) \([Layered Services]({{< relref "../../part-4--fragmented-metapatterns/layered-services.md" >}}) \([Services]({{< relref "../../part-2--basic-metapatterns/services.md" >}}), [Layers]({{< relref "../../part-2--basic-metapatterns/layers.md" >}})\)\)\.
@@ -58,12 +56,10 @@ If the *orchestration* logic mostly follows the subdomains, it may be possible t
 
 ## Subdivide to form Backends for Frontends
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/2/Orchestrator%20to%20Backends%20for%20Frontends.png" alt="Orchestrator to Backends for Frontends" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/2/Orchestrator%20to%20Backends%20for%20Frontends.png" style="outline:none">
+<img src="/Evolutions/2/Orchestrator%20to%20Backends%20for%20Frontends.png" alt="Orchestrator to Backends for Frontends" width=100%/>
+</a>
 </figure>
 
 <ins>Patterns</ins>: [Backends for Frontends]({{< relref "../../part-4--fragmented-metapatterns/backends-for-frontends--bff-.md" >}}), [Orchestrator]({{< relref "../../part-3--extension-metapatterns/orchestrator.md" >}})\.
@@ -94,12 +90,10 @@ When use cases for clients vary, it makes sense for each kind of client to have 
 
 ## Add a layer of orchestration
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/2/Orchestrator%20add%20Orchestrator.png" alt="Orchestrator add Orchestrator" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/2/Orchestrator%20add%20Orchestrator.png" style="outline:none">
+<img src="/Evolutions/2/Orchestrator%20add%20Orchestrator.png" alt="Orchestrator add Orchestrator" width=100%/>
+</a>
 </figure>
 
 <ins>Patterns</ins>: [Orchestrator]({{< relref "../../part-3--extension-metapatterns/orchestrator.md" >}}), [Layers]({{< relref "../../part-2--basic-metapatterns/layers.md" >}})\.
@@ -130,12 +124,10 @@ You may use two or three *orchestration frameworks* \(engines\) which differ in 
 
 ## Form a hierarchy
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/2/Orchestrator%20to%20Hierarchy.png" alt="Orchestrator to Hierarchy" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/2/Orchestrator%20to%20Hierarchy.png" style="outline:none">
+<img src="/Evolutions/2/Orchestrator%20to%20Hierarchy.png" alt="Orchestrator to Hierarchy" width=100%/>
+</a>
 </figure>
 
 <ins>Patterns</ins>: [Top\-Down Hierarchy]({{< relref "../../part-4--fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}}) \([Hierarchy]({{< relref "../../part-4--fragmented-metapatterns/hierarchy.md" >}})\)\.

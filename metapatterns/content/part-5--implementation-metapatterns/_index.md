@@ -10,12 +10,10 @@ There are patterns that describe implementation of components:
 
 ### [Plugins]({{< relref "../part-5--implementation-metapatterns/plugins.md" >}})
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Contents/Plugins.png" alt="Plugins" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Contents/Plugins.png" style="outline:none">
+<img src="/Contents/Plugins.png" alt="Plugins" width=100%/>
+</a>
 </figure>
 
 The *Plugins* pattern is about separating a system’s main logic from the customizable details of its behavior\. That allows for the same codebase to be used for multiple flavors or customers\.
@@ -24,12 +22,10 @@ The *Plugins* pattern is about separating a system’s main logic from the custo
 
 ### [Hexagonal Architecture]({{< relref "../part-5--implementation-metapatterns/hexagonal-architecture.md" >}})
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Contents/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Contents/Hexagonal%20Architecture.png" style="outline:none">
+<img src="/Contents/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" width=100%/>
+</a>
 </figure>
 
 *Hexagonal Architecture* is a specialization of *Plugins* where every external dependency is isolated behind an *Adapter*, making it easy to update or replace third\-party components\.
@@ -38,12 +34,10 @@ The *Plugins* pattern is about separating a system’s main logic from the custo
 
 ### [Microkernel]({{< relref "../part-5--implementation-metapatterns/microkernel.md" >}})
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Contents/Microkernel.png" alt="Microkernel" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Contents/Microkernel.png" style="outline:none">
+<img src="/Contents/Microkernel.png" alt="Microkernel" width=100%/>
+</a>
 </figure>
 
 This is another derivation of *Plugins*, with a rudimentary *core* component which mediates between resource consumers \(*applications*\) and resource *providers*\. The *Microkernel* is a *Middleware* to the *applications* and an *Orchestrator* to the *providers*\.
@@ -52,12 +46,10 @@ This is another derivation of *Plugins*, with a rudimentary *core* component whi
 
 ### [Mesh]({{< relref "../part-5--implementation-metapatterns/mesh.md" >}})
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Contents/Mesh.png" alt="Mesh" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Contents/Mesh.png" style="outline:none">
+<img src="/Contents/Mesh.png" alt="Mesh" width=100%/>
+</a>
 </figure>
 
 A *Mesh* consists of intercommunicating shards, each of which may host an application\. The shards coalesce into a fault\-tolerant distributed *Middleware*\.

@@ -9,72 +9,60 @@ In my practice, a product’s architecture changes over its lifetime\. For a R&D
 
 ### Infancy \(proof of concept\) – Monolith
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Conclusion/Lifecycle-1.png" alt="Lifecycle-1" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Conclusion/Lifecycle-1.png" style="outline:none">
+<img src="/Conclusion/Lifecycle-1.png" alt="Lifecycle-1" width=100%/>
+</a>
 </figure>
 
 A project in an unknown domain starts humble and small, likely as a proof of concept\. You need to write quickly to check your ideas about how the domain works without investing much time – as you may oftentimes be wrong here or there, making you rethink and rewrite\.
 
 ### Childhood \(prototype\) – Layers
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Conclusion/Lifecycle-2.png" alt="Lifecycle-2" style="width:89%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Conclusion/Lifecycle-2.png" style="outline:none">
+<img src="/Conclusion/Lifecycle-2.png" alt="Lifecycle-2" width=89%/>
+</a>
 </figure>
 
 When you have the thing working, you may start reflecting on the rules and the code you wrote\. What belongs where, what can be subject to change, which tests will you need? At this point you clearly see the levels of abstractness: the high\-level *application* \(integration, orchestration\) logic, the lower\-level *domain* \(business\) rules, and the generic *infrastructure* \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\]\. Now that you know better the whats and the hows, you divide the code \(either old or rewritten from scratch\) into [*Layers*]({{< relref "../part-2--basic-metapatterns/layers.md" >}}) or [*Hexagonal Architecture*]({{< relref "../part-5--implementation-metapatterns/hexagonal-architecture.md" >}}) to make it both structured and flexible, still without heavy development overhead caused by interfaces between subdomains\.
 
 ### Youth \(development of features\) – fragmented architectures
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Conclusion/Lifecycle-3.png" alt="Lifecycle-3" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Conclusion/Lifecycle-3.png" style="outline:none">
+<img src="/Conclusion/Lifecycle-3.png" alt="Lifecycle-3" width=100%/>
+</a>
 </figure>
 
 As you acquire domain experience, you start discerning subdomains \(or *bounded contexts* \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\]\) and isolating them to reduce the [complexity]({{< relref "../part-1--foundations/modules-and-complexity.md" >}}) of your code\. The layered structure turns into a system of subdomain\-dedicated components: [modules]({{< relref "../part-2--basic-metapatterns/services.md#synchronous-modules-modular-monolith-modulith" >}}), [services]({{< relref "../part-2--basic-metapatterns/services.md#distributed-services-service-based-architecture-space-based-architecture-microservices" >}}), [device drivers]({{< relref "../part-2--basic-metapatterns/services.md#inexact-device-drivers" >}}) – whatever you used to name them throughout your career\. The actual architecture follows the structure of the domain, with [*Layered Services*]({{< relref "../part-4--fragmented-metapatterns/layered-services.md" >}}), [*Orchestrated Services*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}}), and [*Top\-Down Hierarchy*]({{< relref "../part-4--fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}}) among common examples\. The fragmentation of the system enables development by multiple teams with diverse technologies and styles, reduces ripple effect of changes, and helps testability\. However, use cases for the system as a whole become harder to understand and fix – if only because they traverse the parts of the code owned by multiple teams – which is not extremely bad given you have enough humanpower to do the work\.
 
 ### Adulthood \(production\) – ad\-hoc composition
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Conclusion/Lifecycle-4.png" alt="Lifecycle-4" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Conclusion/Lifecycle-4.png" style="outline:none">
+<img src="/Conclusion/Lifecycle-4.png" alt="Lifecycle-4" width=100%/>
+</a>
 </figure>
 
 As the product enters the market, its development tends to slow down with more attention given to corner cases and user experience\. Some \(often the most active\) people are going to get bored and leave the project, while your understanding of the domain changes again based on user experience and real\-life business needs \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\]\. You may find that some of the components which you have designed as independent become strongly coupled, and you are lucky if they are small enough to be merged together – this is where the fragmentation from the previous stage pays off\. Other parts of the system may outgrow the comfort zone of programmers and need to be subdivided\. The architecture becomes asymmetrical and pragmatic\.
 
 ### Old age \(support\) – back to Layers
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Conclusion/Lifecycle-5.png" alt="Lifecycle-5" style="width:54%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Conclusion/Lifecycle-5.png" style="outline:none">
+<img src="/Conclusion/Lifecycle-5.png" alt="Lifecycle-5" width=54%/>
+</a>
 </figure>
 
 When active development ceases, you lose even more people and funding as you drift into the support phase\. You are unlikely to retain your best programmers – you’ll get novices or even an outsourced team instead\. They will struggle to retain the structure of the system – with its mass of hacks from the previous years – against progressively more weird requests from the business and customers whose natural desires have already been satisfied\. That will cause many more hacks to be added – and components coupled or merged for the hacks to land – bringing the architecture back to [*Layers*]({{< relref "../part-2--basic-metapatterns/layers.md" >}}), though this time heavily oversized *layers*\.
 
 ### Death \(the ultimate release\) – Monolith
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Conclusion/Lifecycle-6.png" alt="Lifecycle-6" style="width:55%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Conclusion/Lifecycle-6.png" style="outline:none">
+<img src="/Conclusion/Lifecycle-6.png" alt="Lifecycle-6" width=55%/>
+</a>
 </figure>
 
 If the project is allowed to die, it may still have a chance of a final release which aims at improving performance and leaving a golden standard for the generations of users to come\. Heavy optimizations will likely require merging the layers to avoid all kinds of communication overhead, reverting the system back to [*Monolith*]({{< relref "../part-2--basic-metapatterns/monolith.md" >}})\.

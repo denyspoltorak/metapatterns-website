@@ -17,12 +17,10 @@ The basic patterns lay the foundation for any system by paving ways to *divide* 
 
 ### Monolith
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Contents/Monolith.png" alt="Monolith" style="width:96%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Contents/Monolith.png" style="outline:none">
+<img src="/Contents/Monolith.png" alt="Monolith" width=96%/>
+</a>
 </figure>
 
 [*Monolith*]({{< relref "../part-2--basic-metapatterns/monolith.md" >}}) means encapsulation – we use the thing without looking inside:
@@ -37,12 +35,10 @@ The basic patterns lay the foundation for any system by paving ways to *divide* 
 
 ### Shards
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Contents/Shards.png" alt="Shards" style="width:95%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Contents/Shards.png" style="outline:none">
+<img src="/Contents/Shards.png" alt="Shards" width=95%/>
+</a>
 </figure>
 
 [*Shards*]({{< relref "../part-2--basic-metapatterns/shards.md" >}}) is about having multiple instances of something, which often differ in their data:
@@ -57,12 +53,10 @@ The basic patterns lay the foundation for any system by paving ways to *divide* 
 
 ### Layers
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Contents/Layers.png" alt="Layers" style="width:95%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Contents/Layers.png" style="outline:none">
+<img src="/Contents/Layers.png" alt="Layers" width=95%/>
+</a>
 </figure>
 
 [*Layers*]({{< relref "../part-2--basic-metapatterns/layers.md" >}}) is the separation of responsibilities between external and internal components:
@@ -75,12 +69,10 @@ The basic patterns lay the foundation for any system by paving ways to *divide* 
 
 ### Services
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Contents/Services.png" alt="Services" style="width:95%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Contents/Services.png" style="outline:none">
+<img src="/Contents/Services.png" alt="Services" width=95%/>
+</a>
 </figure>
 
 [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}}) boil down to composition and [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns):
@@ -95,12 +87,10 @@ The basic patterns lay the foundation for any system by paving ways to *divide* 
 
 ### Pipeline
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Contents/Pipeline.png" alt="Pipeline" style="width:95%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Contents/Pipeline.png" style="outline:none">
+<img src="/Contents/Pipeline.png" alt="Pipeline" width=95%/>
+</a>
 </figure>
 
 [*Pipeline*]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}}) is about the stepwise transformation of data:
@@ -119,12 +109,10 @@ An extension pattern encapsulates one or two aspects of the system’s implement
 
 ### Middleware
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Contents/Middleware.png" alt="Middleware" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Contents/Middleware.png" style="outline:none">
+<img src="/Contents/Middleware.png" alt="Middleware" width=100%/>
+</a>
 </figure>
 
 A [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}) abstracts scaling and/or intercommunication:
@@ -138,12 +126,10 @@ A [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}
 
 ### Shared Repository
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Contents/Shared%20Repository.png" alt="Shared Repository" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Contents/Shared%20Repository.png" style="outline:none">
+<img src="/Contents/Shared%20Repository.png" alt="Shared Repository" width=100%/>
+</a>
 </figure>
 
 A [*Shared Repository*]({{< relref "../part-3--extension-metapatterns/shared-repository.md" >}}) provides data storage and/or data change notifications:
@@ -157,12 +143,10 @@ A [*Shared Repository*]({{< relref "../part-3--extension-metapatterns/shared-rep
 
 ### Proxy
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Contents/Proxy.png" alt="Proxy" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Contents/Proxy.png" style="outline:none">
+<img src="/Contents/Proxy.png" alt="Proxy" width=100%/>
+</a>
 </figure>
 
 A [*Proxy*]({{< relref "../part-3--extension-metapatterns/proxy.md" >}}) isolates a system from its environment by translating between internal and external protocols and/or implementing generic aspects of communication:
@@ -175,12 +159,10 @@ A [*Proxy*]({{< relref "../part-3--extension-metapatterns/proxy.md" >}}) isolate
 
 ### Orchestrator
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Contents/Orchestrator.png" alt="Orchestrator" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Contents/Orchestrator.png" style="outline:none">
+<img src="/Contents/Orchestrator.png" alt="Orchestrator" width=100%/>
+</a>
 </figure>
 
 An [*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}}) integrates several components by implementing high\-level use cases and/or keeping them in sync:
@@ -196,12 +178,10 @@ A fragmented pattern uses small specialized components to approach a case which 
 
 ### Polyglot Persistence
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Contents/Polyglot%20Persistence.png" alt="Polyglot Persistence" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Contents/Polyglot%20Persistence.png" style="outline:none">
+<img src="/Contents/Polyglot%20Persistence.png" alt="Polyglot Persistence" width=100%/>
+</a>
 </figure>
 
 [*Polyglot Persistence*]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md" >}}) is about having multiple containers for data:
@@ -213,12 +193,10 @@ A fragmented pattern uses small specialized components to approach a case which 
 
 ### Backends for Frontends
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Contents/Backends%20for%20Frontends.png" alt="Backends for Frontends" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Contents/Backends%20for%20Frontends.png" style="outline:none">
+<img src="/Contents/Backends%20for%20Frontends.png" alt="Backends for Frontends" width=100%/>
+</a>
 </figure>
 
 [*Backends for Frontends*]({{< relref "../part-4--fragmented-metapatterns/backends-for-frontends--bff-.md" >}}) is about treating different kinds of clients individually:
@@ -230,12 +208,10 @@ A fragmented pattern uses small specialized components to approach a case which 
 
 ### Service\-Oriented Architecture
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Contents/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Contents/Service-Oriented%20Architecture.png" style="outline:none">
+<img src="/Contents/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" width=100%/>
+</a>
 </figure>
 
 [*SOA*]({{< relref "../part-4--fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}) applies OOP techniques, including component reuse, to deal with complex systems:
@@ -247,12 +223,10 @@ A fragmented pattern uses small specialized components to approach a case which 
 
 ### Hierarchy
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Contents/Hierarchy.png" alt="Hierarchy" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Contents/Hierarchy.png" style="outline:none">
+<img src="/Contents/Hierarchy.png" alt="Hierarchy" width=100%/>
+</a>
 </figure>
 
 [*Hierarchy*]({{< relref "../part-4--fragmented-metapatterns/hierarchy.md" >}}) distributes system’s complexity over multiple levels:
@@ -267,12 +241,10 @@ An implementation pattern highlights the peculiar internal arrangements of a com
 
 ### Plugins
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Contents/Plugins.png" alt="Plugins" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Contents/Plugins.png" style="outline:none">
+<img src="/Contents/Plugins.png" alt="Plugins" width=100%/>
+</a>
 </figure>
 
 [*Plugins*]({{< relref "../part-5--implementation-metapatterns/plugins.md" >}}) make a component’s behavior flexible through delegating its parts to small external additions:
@@ -283,12 +255,10 @@ An implementation pattern highlights the peculiar internal arrangements of a com
 
 ### Hexagonal Architecture
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Contents/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Contents/Hexagonal%20Architecture.png" style="outline:none">
+<img src="/Contents/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" width=100%/>
+</a>
 </figure>
 
 [*Hexagonal Architecture*]({{< relref "../part-5--implementation-metapatterns/hexagonal-architecture.md" >}}) protects the internals of a system from its environment:
@@ -299,12 +269,10 @@ An implementation pattern highlights the peculiar internal arrangements of a com
 
 ### Microkernel
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Contents/Microkernel.png" alt="Microkernel" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Contents/Microkernel.png" style="outline:none">
+<img src="/Contents/Microkernel.png" alt="Microkernel" width=100%/>
+</a>
 </figure>
 
 [*Microkernel*]({{< relref "../part-5--implementation-metapatterns/microkernel.md" >}}) shares the goods of resource providers among resource users:
@@ -316,12 +284,10 @@ An implementation pattern highlights the peculiar internal arrangements of a com
 
 ### Mesh
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Contents/Mesh.png" alt="Mesh" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Contents/Mesh.png" style="outline:none">
+<img src="/Contents/Mesh.png" alt="Mesh" width=100%/>
+</a>
 </figure>
 
 [*Mesh*]({{< relref "../part-5--implementation-metapatterns/mesh.md" >}}) is like grassroots movements – self\-organizing and survival through redundancy:

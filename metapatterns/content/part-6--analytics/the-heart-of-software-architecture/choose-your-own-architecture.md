@@ -13,22 +13,18 @@ The project’s expected size is among the main determinants of the project’s 
 
 Therefore, a one day task will likely be [*monolithic*]({{< relref "../../part-2--basic-metapatterns/monolith.md" >}}), a man\-month of work needs [*layering*]({{< relref "../../part-2--basic-metapatterns/layers.md" >}}) while anything larger calls for at least partial separation into *subdomain* [*modules*]({{< relref "../../part-2--basic-metapatterns/services.md#synchronous-modules-modular-monolith-modulith" >}}) or [*services*]({{< relref "../../part-2--basic-metapatterns/services.md#distributed-services-service-based-architecture-space-based-architecture-microservices" >}})\. Very large projects may require further subdivision into [*Service\-Oriented Architecture*]({{< relref "../../part-4--fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}) \(*SOA*\) or [*Cell\-Based Architecture*]({{< relref "../../part-4--fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services" >}}) \(a kind of [*Hierarchy*]({{< relref "../../part-4--fragmented-metapatterns/hierarchy.md" >}})\)\.
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Heart/Size-1.png" alt="Size-1" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Heart/Size-1.png" style="outline:none">
+<img src="/Heart/Size-1.png" alt="Size-1" width=100%/>
+</a>
 </figure>
 
 Any inherent decoupling within your domain is another factor to consider in the initial design\. For example, the layer with domain logic is very likely to contain independent subdomains which naturally make modules or services at next to no development or runtime cost\. Likewise, [*Top\-Down Hierarchy*]({{< relref "../../part-4--fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}}) is a good fit for a hierarchical domain\. A domain that builds around stepwise processing of data or events may be modeled as a [*Pipeline*]({{< relref "../../part-2--basic-metapatterns/pipeline.md" >}}), which is a very flexible architectural style\.
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Heart/Size-2.png" alt="Size-2" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Heart/Size-2.png" style="outline:none">
+<img src="/Heart/Size-2.png" alt="Size-2" width=100%/>
+</a>
 </figure>
 
 The number of teams you start the project with is also important\. For the teams to be as efficient as possible you want them to be almost independent\. As every team gets ownership of one or two components, you must assure that the architecture has enough modules or services for the teams to specialize, because anything shared will likely become a bottleneck\. For example, you can hardly employ more than 3 teams with a [*layered architecture*]({{< relref "../../part-2--basic-metapatterns/layers.md" >}}) as there are only so many layers in any system\. Thus, having a large number of teams strongly hints at [*Services*]({{< relref "../../part-2--basic-metapatterns/services.md" >}}), [*Pipeline*]({{< relref "../../part-2--basic-metapatterns/pipeline.md" >}}), [*SOA*]({{< relref "../../part-4--fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}), or [*Hierarchy*]({{< relref "../../part-4--fragmented-metapatterns/hierarchy.md" >}})\.
@@ -41,32 +37,26 @@ We’ve already seen above that hierarchical or pipelined domains enable the use
 
 Sometimes you expect to have many complex use cases which cannot be matched to your subdomains because every scenario involves multiple components, thus spreading over the entire system\. You would usually collect the global use cases into a dedicated component – an [*Orchestrator*]({{< relref "../../part-3--extension-metapatterns/orchestrator.md" >}})\. And if the *Orchestrator* grows out of control, it is [subdivided]({{< relref "../../part-3--extension-metapatterns/orchestrator.md#variants-by-structure-can-be-combined" >}}) into layers or services\.
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Heart/Features-1.png" alt="Features-1" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Heart/Features-1.png" style="outline:none">
+<img src="/Heart/Features-1.png" alt="Features-1" width=100%/>
+</a>
 </figure>
 
 Other systems are built around data\. You cannot split it into private databases because almost every service needs access to the whole which necessitates a [*Shared Repository*]({{< relref "../../part-3--extension-metapatterns/shared-repository.md" >}}), or the highly performant [*Space\-Based Architecture*]({{< relref "../../part-3--extension-metapatterns/shared-repository.md#data-grid-of-space-based-architecture-sba-replicated-cache-distributed-cache" >}})\.
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Heart/Features-2.png" alt="Features-2" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Heart/Features-2.png" style="outline:none">
+<img src="/Heart/Features-2.png" alt="Features-2" width=100%/>
+</a>
 </figure>
 
 Once you go distributed, you will likely employ a [*Middleware*]({{< relref "../../part-3--extension-metapatterns/middleware.md" >}}) to centralize communication between your services\. And you will have various [*Proxies*]({{< relref "../../part-3--extension-metapatterns/proxy.md" >}}), such as a [*Firewall*]({{< relref "../../part-3--extension-metapatterns/proxy.md#firewall-api-rate-limiter-api-throttling" >}}), a [*Reverse Proxy*]({{< relref "../../part-3--extension-metapatterns/proxy.md#dispatcher-reverse-proxy-ingress-controller-edge-service-microgateway" >}}), and a [*Response Cache*]({{< relref "../../part-3--extension-metapatterns/proxy.md#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}})\. You may even deploy a *Proxy* per kind of client if the clients vary in protocols, resulting in [*Backends for Frontends*]({{< relref "../../part-4--fragmented-metapatterns/backends-for-frontends--bff-.md" >}}) \(*BFF*\)\.
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Heart/Features-3.png" alt="Features-3" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Heart/Features-3.png" style="outline:none">
+<img src="/Heart/Features-3.png" alt="Features-3" width=100%/>
+</a>
 </figure>
 
 ## Runtime performance
@@ -75,42 +65,34 @@ Moreover, there are non\-functional requirements, such as performance and fault 
 
 High throughput is achieved by [*sharding*]({{< relref "../../part-2--basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-cells-amazon-definition" >}}) or [*replicating*]({{< relref "../../part-2--basic-metapatterns/shards.md#persistent-copy-replica" >}}) your business logic or even your data\. Sharding also helps process huge datasets while replication improves fault tolerance\. [*Space\-Based Architecture*]({{< relref "../../part-3--extension-metapatterns/combined-component.md#middleware-of-space-based-architecture" >}}) replicates the entire dataset in memory for faster access\.
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Heart/Performance-1.png" alt="Performance-1" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Heart/Performance-1.png" style="outline:none">
+<img src="/Heart/Performance-1.png" alt="Performance-1" width=100%/>
+</a>
 </figure>
 
 Alternatively, you may use several specialized databases \([*Polyglot Persistence*]({{< relref "../../part-4--fragmented-metapatterns/polyglot-persistence.md" >}})\) or redesign a highly loaded part of your system as a self\-scaling [*Pipeline*]({{< relref "../../part-2--basic-metapatterns/pipeline.md" >}})\.
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Heart/Performance-2.png" alt="Performance-2" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Heart/Performance-2.png" style="outline:none">
+<img src="/Heart/Performance-2.png" alt="Performance-2" width=100%/>
+</a>
 </figure>
 
 Scalability under uneven load is achieved through [*Function as a Service*]({{< relref "../../part-2--basic-metapatterns/services.md#single-function-faas-nanoservices" >}}) \(*Nanoservices*\), [*Service\-Mesh*]({{< relref "../../part-3--extension-metapatterns/combined-component.md#service-mesh" >}})\-based [*Microservices*]({{< relref "../../part-2--basic-metapatterns/services.md#microservices" >}}) and, to a greater extent, [*Space\-Based Architecture*]({{< relref "../../part-5--implementation-metapatterns/mesh.md#space-based-architecture" >}})\.
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Heart/Performance-3.png" alt="Performance-3" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Heart/Performance-3.png" style="outline:none">
+<img src="/Heart/Performance-3.png" alt="Performance-3" width=100%/>
+</a>
 </figure>
 
 Fault tolerance requires you to have [*replicas*]({{< relref "../../part-2--basic-metapatterns/shards.md#persistent-copy-replica" >}}) of every component, including databases, ideally over multiple data centers\. If you are not that rich, be content with [*Actors*]({{< relref "../../part-2--basic-metapatterns/services.md#actors" >}}) or [*Mesh*]({{< relref "../../part-5--implementation-metapatterns/mesh.md" >}})\.
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Heart/Performance-4.png" alt="Performance-4" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Heart/Performance-4.png" style="outline:none">
+<img src="/Heart/Performance-4.png" alt="Performance-4" width=100%/>
+</a>
 </figure>
 
 Low latency makes you place simplified first response logic close to your input, leading to:
@@ -120,12 +102,10 @@ Low latency makes you place simplified first response logic close to your input,
 - A [*Hierarchy*]({{< relref "../../part-4--fragmented-metapatterns/hierarchy.md" >}}) for distributed [*control*]({{< relref "../../part-1--foundations/four-kinds-of-software.md#control-real-time-hardware-input" >}}) systems such as [IIoT](https://en.wikipedia.org/wiki/Industrial_internet_of_things)\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Heart/Performance-5.png" alt="Performance-5" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Heart/Performance-5.png" style="outline:none">
+<img src="/Heart/Performance-5.png" alt="Performance-5" width=100%/>
+</a>
 </figure>
 
 ## Flexibility
@@ -136,32 +116,26 @@ If it is to survive for a decade, you need [*Hexagonal Architecture*]({{< relref
 
 If you mediate between resource or service providers and consumers, you build a [*Microkernel*]({{< relref "../../part-5--implementation-metapatterns/microkernel.md" >}})\.
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Heart/Flexibility-1.png" alt="Flexibility-1" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Heart/Flexibility-1.png" style="outline:none">
+<img src="/Heart/Flexibility-1.png" alt="Flexibility-1" width=100%/>
+</a>
 </figure>
 
 When your teams develop services and you want them to be [less interdependent]({{< relref "../../part-6--analytics/comparison-of-architectural-patterns/indirection-in-commands-and-queries.md" >}}), you insert an [*Anticorruption Layer*]({{< relref "../../part-3--extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}), [*Open Host Service*]({{< relref "../../part-3--extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}), or [*CQRS View*]({{< relref "../../part-4--fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) between them\.
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Heart/Flexibility-2.png" alt="Flexibility-2" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Heart/Flexibility-2.png" style="outline:none">
+<img src="/Heart/Flexibility-2.png" alt="Flexibility-2" width=100%/>
+</a>
 </figure>
 
 When you have built a large system and really need that thorough data analytics, consider implementing a [*Data Mesh*]({{< relref "../../part-2--basic-metapatterns/pipeline.md#data-mesh" >}})\.
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/1/Data%20Mesh.png" alt="Data Mesh" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/1/Data%20Mesh.png" style="outline:none">
+<img src="/Variants/1/Data%20Mesh.png" alt="Data Mesh" width=100%/>
+</a>
 </figure>
 
 ## Every domain is unique

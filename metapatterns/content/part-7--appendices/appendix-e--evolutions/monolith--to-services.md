@@ -13,22 +13,18 @@ The final major drawback of [*Monolith*]({{< relref "../../part-2--basic-metapat
 - Some domains allow for sequential [data processing]({{< relref "../../part-1--foundations/four-kinds-of-software.md#streaming-continuous-raw-data-input" >}}) best described by [*Pipelines*]({{< relref "../../part-2--basic-metapatterns/pipeline.md" >}})\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Monolith/Monolith_%20Services%20and%20Pipeline.png" alt="Monolith: Services and Pipeline" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Monolith/Monolith_%20Services%20and%20Pipeline.png" style="outline:none">
+<img src="/Evolutions/Monolith/Monolith_%20Services%20and%20Pipeline.png" alt="Monolith: Services and Pipeline" width=100%/>
+</a>
 </figure>
 
 ## Divide into Services
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Monolith/Monolith%20to%20Services.png" alt="Monolith to Services" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Monolith/Monolith%20to%20Services.png" style="outline:none">
+<img src="/Evolutions/Monolith/Monolith%20to%20Services.png" alt="Monolith to Services" width=100%/>
+</a>
 </figure>
 
 <ins>Patterns</ins>: [Services]({{< relref "../../part-2--basic-metapatterns/services.md" >}})\.
@@ -60,12 +56,10 @@ Splitting a *Monolith* into *Services* by subdomain [is risky in the early stage
 
 ## Add or split a service
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Monolith/Monolith%20Split%20Service.png" alt="Monolith Split Service" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Monolith/Monolith%20Split%20Service.png" style="outline:none">
+<img src="/Evolutions/Monolith/Monolith%20Split%20Service.png" alt="Monolith Split Service" width=100%/>
+</a>
 </figure>
 
 <ins>Patterns</ins>: [Services]({{< relref "../../part-2--basic-metapatterns/services.md" >}})\.
@@ -102,12 +96,10 @@ If you are not adding a new feature but need to change an old one – use the ch
 
 ## Divide into a Pipeline
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Monolith/Monolith%20to%20Pipeline.png" alt="Monolith to Pipeline" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Monolith/Monolith%20to%20Pipeline.png" style="outline:none">
+<img src="/Evolutions/Monolith/Monolith%20to%20Pipeline.png" alt="Monolith to Pipeline" width=100%/>
+</a>
 </figure>
 
 <ins>Patterns</ins>: [Pipeline]({{< relref "../../part-2--basic-metapatterns/pipeline.md" >}}) \([Services]({{< relref "../../part-2--basic-metapatterns/services.md" >}})\)\.
@@ -147,12 +139,10 @@ Systems of [*Services*]({{< relref "../../part-2--basic-metapatterns/services.md
 - Finally, there are [*Combined Components*]({{< relref "../../part-3--extension-metapatterns/combined-component.md" >}}) that implement two or more of the above patterns in a single framework\. 
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Monolith/Monolith%20to%20Services%20-%20Further%201.png" alt="Monolith to Services - Further 1" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Monolith/Monolith%20to%20Services%20-%20Further%201.png" style="outline:none">
+<img src="/Evolutions/Monolith/Monolith%20to%20Services%20-%20Further%201.png" alt="Monolith to Services - Further 1" width=100%/>
+</a>
 </figure>
 
 Each service, being a smaller *Monolith*, may evolve on its own\. Most of the evolutions of [*Monolith*]({{< relref "../../part-2--basic-metapatterns/monolith.md" >}}) are applicable\. The most common examples include:
@@ -163,12 +153,10 @@ Each service, being a smaller *Monolith*, may evolve on its own\. Most of the ev
 - [*Hexagonal Service*]({{< relref "../../part-2--basic-metapatterns/services.md#hexagonal-service" >}}) to escape vendor lock\-in\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Monolith/Monolith%20to%20Services%20-%20Further%202.png" alt="Monolith to Services - Further 2" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Monolith/Monolith%20to%20Services%20-%20Further%202.png" style="outline:none">
+<img src="/Evolutions/Monolith/Monolith%20to%20Services%20-%20Further%202.png" alt="Monolith to Services - Further 2" width=100%/>
+</a>
 </figure>
 
 <nav>

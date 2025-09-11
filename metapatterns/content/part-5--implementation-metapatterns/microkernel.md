@@ -5,12 +5,10 @@ title = "Microkernel"
 
 # Microkernel
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Main/Microkernel.png" alt="Microkernel" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Main/Microkernel.png" style="outline:none">
+<img src="/Main/Microkernel.png" alt="Microkernel" width=100%/>
+</a>
 </figure>
 
 *Communism\.* Share resources among consumers\.
@@ -64,12 +62,10 @@ It is common to see system components communicate directly via shared memory or 
 
 The *applications* depend on the *API* of the *microkernel* while the *providers* depend on its *SPIs*\. On one hand, that isolates the applications and providers from each other, letting them develop independently\. On the other hand, the microkernel’s API and SPIs should be very stable to support older versions of the components which the microkernel integrates\.
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Dependencies/Microkernel.png" alt="Microkernel" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Dependencies/Microkernel.png" style="outline:none">
+<img src="/Dependencies/Microkernel.png" alt="Microkernel" width=100%/>
+</a>
 </figure>
 
 ### Applicability
@@ -88,12 +84,10 @@ The *applications* depend on the *API* of the *microkernel* while the *providers
 
 ### Relations
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Relations/Microkernel.png" alt="Microkernel" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Relations/Microkernel.png" style="outline:none">
+<img src="/Relations/Microkernel.png" alt="Microkernel" width=100%/>
+</a>
 </figure>
 
 *Microkernel*:
@@ -111,84 +105,70 @@ The *applications* depend on the *API* of the *microkernel* while the *providers
 
 ### Operating System
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/4/OS.png" alt="OS" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/4/OS.png" style="outline:none">
+<img src="/Variants/4/OS.png" alt="OS" width=100%/>
+</a>
 </figure>
 
 The original inspiration for *Microkernel*, namely *operating systems*, provides an almost perfect example of the pattern, even though their kernels are not that “micro\-” \(unless you are running [MINIX](https://en.wikipedia.org/wiki/Minix_3#Architecture) or [QNX](https://en.wikipedia.org/wiki/QNX#Technology)\)\. [Device *drivers*]({{< relref "../part-2--basic-metapatterns/services.md#inexact-device-drivers" >}}) \(*internal services*\) encapsulate available hardware resources and make them accessible to user\-space *applications* \(*external services*\) via an OS *kernel*\. *Drivers* for a given kind of subsystem \(e\.g\. network adapter or disk drive\) are polymorphic towards the kernel and match the hardware installed\. 
 
 ### Software Framework
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/4/Framework.png" alt="Framework" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/4/Framework.png" style="outline:none">
+<img src="/Variants/4/Framework.png" alt="Framework" width=100%/>
+</a>
 </figure>
 
 The *microkernel* is a [*Facade*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}}) \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#gof" >}})\] that integrates a set of libraries and exposes a user\-friendly high\-level interface\. [PAM](https://docs.oracle.com/cd/E23824_01/html/819-2145/pam-01.html) looks like a reasonably good example\.
 
 ### Virtualizer, Hypervisor, Container Orchestrator, Distributed Runtime
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/4/Virtualizer.png" alt="Virtualizer" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/4/Virtualizer.png" style="outline:none">
+<img src="/Variants/4/Virtualizer.png" alt="Virtualizer" width=100%/>
+</a>
 </figure>
 
 *Hypervisors* \(Xen\), PaaS and [FaaS](https://shivangsnewsletter.com/p/why-doesnt-cloudflare-use-containers), *container orchestrators* \(Kubernetes\) \[[DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#dds" >}})\], and distributed *actor frameworks* \(Akka, Erlang/Elixir/OTP\) use resources of the underlying computer\(s\) to run guest applications\. A hypervisor virtualizes the resources of a single computer while a distributed runtime manages those of multiple servers – in the last case there are several instances of the same kind of an *internal server* which abstracts a host system\.
 
 ### Interpreter, Script, Domain\-Specific Language \(DSL\)
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/4/Interpreter.png" alt="Interpreter" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/4/Interpreter.png" style="outline:none">
+<img src="/Variants/4/Interpreter.png" alt="Interpreter" width=100%/>
+</a>
 </figure>
 
 User\-provided *scripts* are run by an *Interpreter* \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#gof" >}})\] which also allows them to access a set of installed libraries\. The *Interpreter* is a microkernel, and the syntax of the script or [*DSL*](https://en.wikipedia.org/wiki/Domain-specific_language) it interprets is the microkernel’s API\.
 
 ### Configurator, Configuration File
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/4/Config%20file.png" alt="Config file" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/4/Config%20file.png" style="outline:none">
+<img src="/Variants/4/Config%20file.png" alt="Config file" width=100%/>
+</a>
 </figure>
 
 *Configuration files* may be regarded as short\-lived *scripts* that configure the underlying modules at the start of the system\. The parser of the configuration file is a transient *microkernel*\.
 
 ### Saga Engine
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/4/Saga%20engine.png" alt="Saga engine" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/4/Saga%20engine.png" style="outline:none">
+<img src="/Variants/4/Saga%20engine.png" alt="Saga engine" width=100%/>
+</a>
 </figure>
 
 A [*Saga*]({{< relref "../part-3--extension-metapatterns/orchestrator.md#orchestrated-saga-saga-orchestrator-saga-execution-component-transaction-script-coordinator" >}}) \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\] orchestrates distributed transactions\. It may be written in a *DSL* which requires a compiler or interpreter, which is a *microkernel*, to execute\.
 
 ### AUTOSAR Classic Platform
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/4/AUTOSAR%20classic.png" alt="AUTOSAR classic" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/4/AUTOSAR%20classic.png" style="outline:none">
+<img src="/Variants/4/AUTOSAR%20classic.png" alt="AUTOSAR classic" width=100%/>
+</a>
 </figure>
 
 The [notorious](https://www.reddit.com/r/embedded/comments/leq366/comment/gmiq6d0/) [automotive standard](https://www.autosar.org/fileadmin/standards/R20-11/CP/AUTOSAR_EXP_VFB.pdf), though promoted as [*SOA*]({{< relref "../part-4--fragmented-metapatterns/service-oriented-architecture--soa-.md#misapplied-automotive-soa" >}}), is structured as a distributed / virtualized *Microkernel*\. The application layer comprises a network of *software components* spread out over hundreds of chips which are, for some secret reason, called *electronic control units* \(*ECU*s\)\. The communication paths between the software components and much of the code are static \(auto\-generated at compilation time\)\. A software component may access hardware of its ECU via standard interfaces\.

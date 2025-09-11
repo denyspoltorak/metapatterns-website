@@ -7,12 +7,10 @@ title = "Monolith"
 
 Let’s take a look at the simplest possible [metapattern]({{< relref "../introduction/metapatterns.md" >}}) – *Monolith* – and see what it can teach us\.
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Main/Monolith.png" alt="Monolith" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Main/Monolith.png" style="outline:none">
+<img src="/Main/Monolith.png" alt="Monolith" width=100%/>
+</a>
 </figure>
 
 *Keep it simple, stupid\!* If you don’t need a modular design, why bother?
@@ -96,12 +94,10 @@ Even though a *Monolith* is a single module, meaning that there are no dependenc
 
 ### Relations
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Relations/Monolith.png" alt="Monolith" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Relations/Monolith.png" style="outline:none">
+<img src="/Relations/Monolith.png" alt="Monolith" width=100%/>
+</a>
 </figure>
 
 *Monolith*:
@@ -115,12 +111,10 @@ Even though a *Monolith* is a single module, meaning that there are no dependenc
 
 *Monoliths* are the atoms to create more complex architectures from, the opaque building blocks, each of which satisfies a consistent set of forces\. Any individual component of a more complex architecture either is monolithic or encapsulates another architectural pattern, decomposable into *Monoliths*, and any architecture looks monolithic to its clients\.
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/1/MonolithAsUnzoomed.png" alt="MonolithAsUnzoomed" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/1/MonolithAsUnzoomed.png" style="outline:none">
+<img src="/Variants/1/MonolithAsUnzoomed.png" alt="MonolithAsUnzoomed" width=100%/>
+</a>
 </figure>
 
 There is a misunderstanding because *software architecture* inspects the internals of *applications* at the level of *modules* or even classes while *systems architecture* deals with *distributed systems* and operates *deployment units* which tend to incorporate multiple modules or even applications\. Each branch of the architecture [calls]({{< relref "../part-6--analytics/ambiguous-patterns.md#monolith" >}}) its atomic unit a *Monolith*, leading to the term sticking both to a *module that cannot be subdivided*, as in \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#gof" >}})\] and \[[POSA1]({{< relref "../part-3--extension-metapatterns/shared-repository.md#blackboard" >}})\], and to a *\(sub\)system which must be deployed together*, as in present\-day literature\.
@@ -129,48 +123,40 @@ As we aspire to build a unified classification for both distributed and local sy
 
 ### True Monolith, Big Ball of Mud
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/1/True%20Monolith.png" alt="True Monolith" style="width:83%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/1/True%20Monolith.png" style="outline:none">
+<img src="/Variants/1/True%20Monolith.png" alt="True Monolith" width=83%/>
+</a>
 </figure>
 
 A true *Monolith* features [no clear internal structure](http://laputan.org/mud/)\. If it has any components, they are so tightly coupled that the entire thing behaves as a single cohesive module\. This is what we explore in the current chapter\.
 
 ### \(misapplied\) Layered Monolith
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/1/Layered%20Monolith.png" alt="Layered Monolith" style="width:81%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/1/Layered%20Monolith.png" style="outline:none">
+<img src="/Variants/1/Layered%20Monolith.png" alt="Layered Monolith" width=81%/>
+</a>
 </figure>
 
 When they say [*Layered Monolith*]({{< relref "../part-2--basic-metapatterns/layers.md#synchronous-layers-layered-monolith" >}}) \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\], that refers to a non\-distributed application with a layered structure, which is a proper [*Layers*]({{< relref "../part-2--basic-metapatterns/layers.md" >}}) architecture and will be discussed in the corresponding chapter\. It is called a *Monolith* for the [sole reason that it is not distributed]({{< relref "../part-6--analytics/ambiguous-patterns.md#monolith" >}})\. Nevertheless, *Layers* resemble *Monolith* in many aspects, including easy debugging and the risk of outgrowing the comfort zone of developers\.
 
 ### \(misapplied\) Modular Monolith \(Modulith\)
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/1/Modular%20Monolith.png" alt="Modular Monolith" style="width:88%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/1/Modular%20Monolith.png" style="outline:none">
+<img src="/Variants/1/Modular%20Monolith.png" alt="Modular Monolith" width=88%/>
+</a>
 </figure>
 
 A [*Modular Monolith*]({{< relref "../part-2--basic-metapatterns/services.md#asynchronous-modules-modular-monolith-modulith-embedded-actors" >}}) \(*Modulith*\) \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] is a single\-process application subdivided into modules that correspond to subdomains\. If the modules communicate via in\-process messaging, the architecture is nearly identical to coarse\-grained [*Actors*]({{< relref "../part-2--basic-metapatterns/services.md#actors" >}}), thus it is a *Monolith* only in name\. *Modulith* [is a kind of](https://en.wikipedia.org/wiki/Duck_typing) [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}}) – it supports development by multiple teams and the asynchronous variant is hard to debug\. The relation to *Monolith* is mostly limited to the inability to scale individual parts of the system\.
 
 ### \(inexact\) Plugins and Hexagonal Architecture
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/1/Hexagonal%20Monolith.png" alt="Hexagonal Monolith" style="width:91%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/1/Hexagonal%20Monolith.png" style="outline:none">
+<img src="/Variants/1/Hexagonal%20Monolith.png" alt="Hexagonal Monolith" width=91%/>
+</a>
 </figure>
 
 [*Plugins*]({{< relref "../part-5--implementation-metapatterns/plugins.md" >}}) \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] and [*Hexagonal Architecture*]({{< relref "../part-5--implementation-metapatterns/hexagonal-architecture.md" >}}) extend a \(sub\)system with external components\. These architectures can be applied to a *Monolith* without drastically changing its properties – it still remains relatively easy to write and debug but hard to support when outgrown\. Therefore, we will not currently discuss these modifications, mainly because each of them has a dedicated chapter\.
@@ -181,22 +167,18 @@ Let’s take a look inside a *Monolith*\.
 
 Any software module reacts to incoming events or data and produces outgoing events or data\. But there are a few basic ways to implement that cycle:
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/1/Subtypes%20of%20Monolith.png" alt="Subtypes of Monolith" style="width:99%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/1/Subtypes%20of%20Monolith.png" style="outline:none">
+<img src="/Variants/1/Subtypes%20of%20Monolith.png" alt="Subtypes of Monolith" width=99%/>
+</a>
 </figure>
 
 ### Single\-threaded Reactor \(one thread, one task\)
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/1/Reactor%20-%20Single%20Thread.png" alt="Reactor - Single Thread" style="width:99%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/1/Reactor%20-%20Single%20Thread.png" style="outline:none">
+<img src="/Variants/1/Reactor%20-%20Single%20Thread.png" alt="Reactor - Single Thread" width=99%/>
+</a>
 </figure>
 
 In a [*Reactor*](https://www.dre.vanderbilt.edu/~schmidt/PDF/reactor-siemens.pdf) \[[POSA2]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa2" >}})\] a single thread waits for an incoming event or data packet, processes it with blocking calls to the underlying OS, hardware, and external dependencies and returns the result, rinse and repeat\.
@@ -205,12 +187,10 @@ That makes sense when the module owns and provides access to a hardware componen
 
 ### Multi\-threaded Reactor \(a thread per task\)
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/1/Reactor%20-%20Multiple%20Threads.png" alt="Reactor - Multiple Threads" style="width:99%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/1/Reactor%20-%20Multiple%20Threads.png" style="outline:none">
+<img src="/Variants/1/Reactor%20-%20Multiple%20Threads.png" alt="Reactor - Multiple Threads" width=99%/>
+</a>
 </figure>
 
 A [*Reactor*](https://www.dre.vanderbilt.edu/~schmidt/PDF/reactor-siemens.pdf) \[[POSA2]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa2" >}})\] may employ multiple threads by having a [*pool*]({{< relref "../part-2--basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}}) of them waiting for a request or data to come\. The incoming event activates a thread, which becomes dedicated to processing it, does several blocking calls and, finally, sends back a response\. When the request processing is complete, the thread returns to the pool of idle threads to wait for the next event to process\.
@@ -219,12 +199,10 @@ This is the default simple & stupid implementation of backend services\. Its pit
 
 ### Proactor \(one thread, many tasks\)
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/1/Proactor.png" alt="Proactor" style="width:99%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/1/Proactor.png" style="outline:none">
+<img src="/Variants/1/Proactor.png" alt="Proactor" width=99%/>
+</a>
 </figure>
 
 In [*Proactor*](https://hillside.net/plop/plop97/Proceedings/pyarali.proactor.pdf) \[[POSA2]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa2" >}})\] a single thread processes all of the incoming events, both from the module’s clients and from the hardware or dependencies it manages\. When an event is received, the thread goes through a short piece of corresponding business logic \(*event handler*\) which usually does one or more non\-blocking actions, such as sending messages to other components, writing to registers of the managed hardware, or initiating an async I/O\. As soon as the event handler returns, the thread becomes ready to process further events\. As the thread never blocks, it is resource\-efficient and serves many interleaved tasks\.
@@ -233,12 +211,10 @@ This approach is good for real\-time systems where thread synchronization is lar
 
 ### \(inexact\) Half\-Sync/Half\-Async \(coroutines or fibers\)
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/1/Half-Sync%20Half-Async.png" alt="Half-Sync Half-Async" style="width:99%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/1/Half-Sync%20Half-Async.png" style="outline:none">
+<img src="/Variants/1/Half-Sync%20Half-Async.png" alt="Half-Sync Half-Async" width=99%/>
+</a>
 </figure>
 
 [*Half\-Sync/Half\-Async*](https://www.dre.vanderbilt.edu/~schmidt/PDF/PLoP-95.pdf) \[[POSA2]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa2" >}})\] originally described the interaction between user space and kernel threads in operating systems which is not much different from that behind coroutines and fibers\. A single thread \(or a thread pool with one thread per CPU core\) handles all the incoming events and switches its call stack in the process\.
@@ -255,12 +231,10 @@ Moreover, people [often call]({{< relref "../part-6--analytics/ambiguous-pattern
 
 ### \(inexact\) \(Re\)Actor\-with\-Extractors \(phased processing\)
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/1/Reactor%20with%20Extractors.png" alt="Reactor with Extractors" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/1/Reactor%20with%20Extractors.png" style="outline:none">
+<img src="/Variants/1/Reactor%20with%20Extractors.png" alt="Reactor with Extractors" width=100%/>
+</a>
 </figure>
 
 As a bonus, let’s review an [unconventional execution model](http://ithare.com/multi-coring-and-non-blocking-instead-of-multi-threading-with-a-script/3/) that fits game development or other kinds of simulation with many interacting objects\.
@@ -294,45 +268,37 @@ One of the main drawbacks of monolithic architecture is its lack of scalability 
 - Self\-managed [*Shards*]({{< relref "../part-2--basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-cells-amazon-definition" >}}) – each instance owns a part of the system’s data and may communicate with all the other instances \(forming a [*Mesh*]({{< relref "../part-5--implementation-metapatterns/mesh.md" >}})\)\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Monolith/Monolith%20to%20Mesh%20of%20Shards.png" alt="Monolith to Mesh of Shards" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Monolith/Monolith%20to%20Mesh%20of%20Shards.png" style="outline:none">
+<img src="/Evolutions/Monolith/Monolith%20to%20Mesh%20of%20Shards.png" alt="Monolith to Mesh of Shards" width=100%/>
+</a>
 </figure>
 
 - *Shards* with a [*Sharding Proxy*]({{< relref "../part-3--extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) – each instance owns a part of the system’s data and relies on an external component to choose a shard for a client\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Monolith/Monolith%20to%20Isolated%20Shards%20with%20Load%20Balancer.png" alt="Monolith to Isolated Shards with Load Balancer" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Monolith/Monolith%20to%20Isolated%20Shards%20with%20Load%20Balancer.png" style="outline:none">
+<img src="/Evolutions/Monolith/Monolith%20to%20Isolated%20Shards%20with%20Load%20Balancer.png" alt="Monolith to Isolated Shards with Load Balancer" width=100%/>
+</a>
 </figure>
 
 - A [*Pool*]({{< relref "../part-2--basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}}) of stateless instances with a [*Load Balancer*]({{< relref "../part-3--extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) and a [*Shared Database*]({{< relref "../part-3--extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) – any instance can process any request, but the database limits the throughput\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Monolith/Monolith%20to%20Stateless%20Shards%20with%20Shared%20DB.png" alt="Monolith to Stateless Shards with Shared DB" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Monolith/Monolith%20to%20Stateless%20Shards%20with%20Shared%20DB.png" style="outline:none">
+<img src="/Evolutions/Monolith/Monolith%20to%20Stateless%20Shards%20with%20Shared%20DB.png" alt="Monolith to Stateless Shards with Shared DB" width=100%/>
+</a>
 </figure>
 
 - A [*Stateful Instance*]({{< relref "../part-2--basic-metapatterns/shards.md#temporary-state-create-on-demand" >}}) per client with an external persistent storage – each instance owns the data related to its client and runs in a virtual environment \(i\.e\. web browser or an [*Actor Framework*]({{< relref "../part-5--implementation-metapatterns/microkernel.md#virtualizer-hypervisor-container-orchestrator-distributed-runtime" >}})\)\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Monolith/Monolith%20to%20Instance%20per%20Client.png" alt="Monolith to Instance per Client" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Monolith/Monolith%20to%20Instance%20per%20Client.png" style="outline:none">
+<img src="/Evolutions/Monolith/Monolith%20to%20Instance%20per%20Client.png" alt="Monolith to Instance per Client" width=100%/>
+</a>
 </figure>
 
 ### Evolutions to Layers
@@ -342,45 +308,37 @@ Another drawback of *Monolith* is its… er… monolithism\. The entire applicat
 - Most *Monoliths* can be divided into 3 or 4 layers of different abstractness\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Monolith/Monolith%20to%20Layers.png" alt="Monolith to Layers" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Monolith/Monolith%20to%20Layers.png" style="outline:none">
+<img src="/Evolutions/Monolith/Monolith%20to%20Layers.png" alt="Monolith to Layers" width=100%/>
+</a>
 </figure>
 
 - It is common to see the database separated from the main application\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Monolith/Monolith%20add%20Database.png" alt="Monolith add Database" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Monolith/Monolith%20add%20Database.png" style="outline:none">
+<img src="/Evolutions/Monolith/Monolith%20add%20Database.png" alt="Monolith add Database" width=100%/>
+</a>
 </figure>
 
 - [*Proxies*]({{< relref "../part-3--extension-metapatterns/proxy.md" >}}) \(e\.g\. [*Firewall*]({{< relref "../part-3--extension-metapatterns/proxy.md#firewall-api-rate-limiter-api-throttling" >}}), [*Cache*]({{< relref "../part-3--extension-metapatterns/proxy.md#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}}), [*Reverse Proxy*]({{< relref "../part-3--extension-metapatterns/proxy.md#dispatcher-reverse-proxy-ingress-controller-edge-service-microgateway" >}})\) are common additions to the system\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Monolith/Monolith%20add%20Proxy.png" alt="Monolith add Proxy" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Monolith/Monolith%20add%20Proxy.png" style="outline:none">
+<img src="/Evolutions/Monolith/Monolith%20add%20Proxy.png" alt="Monolith add Proxy" width=100%/>
+</a>
 </figure>
 
 - An [*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}}) adds a layer of indirection to simplify the system’s external API\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Monolith/Monolith%20add%20Orchestrator.png" alt="Monolith add Orchestrator" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Monolith/Monolith%20add%20Orchestrator.png" style="outline:none">
+<img src="/Evolutions/Monolith/Monolith%20add%20Orchestrator.png" alt="Monolith add Orchestrator" width=100%/>
+</a>
 </figure>
 
 ### Evolutions to Services
@@ -390,34 +348,28 @@ The final major drawback of *Monolith* is the cohesiveness of its code\. The rap
 - A *Monolith* can be split into [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}}) right away\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Monolith/Monolith%20to%20Services.png" alt="Monolith to Services" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Monolith/Monolith%20to%20Services.png" style="outline:none">
+<img src="/Evolutions/Monolith/Monolith%20to%20Services.png" alt="Monolith to Services" width=100%/>
+</a>
 </figure>
 
 - A feature may be added or a weakly coupled part separated into a new service\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Monolith/Monolith%20Split%20Service.png" alt="Monolith Split Service" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Monolith/Monolith%20Split%20Service.png" style="outline:none">
+<img src="/Evolutions/Monolith/Monolith%20Split%20Service.png" alt="Monolith Split Service" width=100%/>
+</a>
 </figure>
 
 - Some domains allow for sequential data processing best described by [*Pipelines*]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}})\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Monolith/Monolith%20to%20Pipeline.png" alt="Monolith to Pipeline" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Monolith/Monolith%20to%20Pipeline.png" style="outline:none">
+<img src="/Evolutions/Monolith/Monolith%20to%20Pipeline.png" alt="Monolith to Pipeline" width=100%/>
+</a>
 </figure>
 
 ### Evolutions with Plugins
@@ -427,34 +379,28 @@ The last group of evolutions does not really change the monolithic nature of the
 - Vanilla [*Plugins*]({{< relref "../part-5--implementation-metapatterns/plugins.md" >}}) is the most direct approach which relies on replaceable bits of logic\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Monolith/Monolith%20to%20Plugins.png" alt="Monolith to Plugins" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Monolith/Monolith%20to%20Plugins.png" style="outline:none">
+<img src="/Evolutions/Monolith/Monolith%20to%20Plugins.png" alt="Monolith to Plugins" width=100%/>
+</a>
 </figure>
 
 - [*Hexagonal Architecture*]({{< relref "../part-5--implementation-metapatterns/hexagonal-architecture.md" >}}) is a subtype of *Plugins* which is all about isolating the main code from any third\-party components it uses\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Monolith/Monolith%20to%20Hexagonal.png" alt="Monolith to Hexagonal" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Monolith/Monolith%20to%20Hexagonal.png" style="outline:none">
+<img src="/Evolutions/Monolith/Monolith%20to%20Hexagonal.png" alt="Monolith to Hexagonal" width=100%/>
+</a>
 </figure>
 
 - [*Scripts*]({{< relref "../part-5--implementation-metapatterns/microkernel.md#interpreter-script-domain-specific-language-dsl" >}}) is a kind of [*Microkernel*]({{< relref "../part-5--implementation-metapatterns/microkernel.md" >}}) – yet another subtype of *Plugins* – which gives users of the system full control over its behavior\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Monolith/Monolith%20to%20Interpreter.png" alt="Monolith to Interpreter" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Monolith/Monolith%20to%20Interpreter.png" style="outline:none">
+<img src="/Evolutions/Monolith/Monolith%20to%20Interpreter.png" alt="Monolith to Interpreter" width=100%/>
+</a>
 </figure>
 
 ## Summary

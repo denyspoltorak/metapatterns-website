@@ -8,12 +8,10 @@ bookCollapseSection = true
 
 As a project grows, it tends to become subdivided into services, modules, or whatever you call the components that match its subdomains \(or *bounded contexts*, if you prefer the \[[DDD]({{< relref "../../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\] convention\)\. Still, there remain system\-wide use cases that require collaboration from many or all of the system’s parts – otherwise the components don’t make a single system\. Let’s see how they can be integrated\.
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Communication/Monolith%20to%20Services.png" alt="Monolith to Services" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Communication/Monolith%20to%20Services.png" style="outline:none">
+<img src="/Communication/Monolith%20to%20Services.png" alt="Monolith to Services" width=100%/>
+</a>
 </figure>
 
 As integration is not unique to distributed systems – it is present even in smaller programs that need to make data, functions, and classes work together – we’ll take a look at programming and architectural paradigms next\.

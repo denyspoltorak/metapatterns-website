@@ -65,24 +65,20 @@ Combined components vary in their structure and properties:
 
 ### Message Bus
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/2/Message%20Bus.png" alt="Message Bus" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/2/Message%20Bus.png" style="outline:none">
+<img src="/Variants/2/Message%20Bus.png" alt="Message Bus" width=100%/>
+</a>
 </figure>
 
 A *Message Bus* \[[EIP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}})\] is a [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}) which employs an [*Adapter*]({{< relref "../part-3--extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) per [*service*]({{< relref "../part-2--basic-metapatterns/services.md" >}}) allowing services that differ in protocols to intercommunicate\.
 
 ### API Gateway
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/2/Multifunctional%20-%20API%20Gateway.png" alt="Multifunctional - API Gateway" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/2/Multifunctional%20-%20API%20Gateway.png" style="outline:none">
+<img src="/Variants/2/Multifunctional%20-%20API%20Gateway.png" alt="Multifunctional - API Gateway" width=100%/>
+</a>
 </figure>
 
 *API Gateway* \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\] is a component which processes client requests \(and encapsulates the client protocol\(s\)\) much like a [*Gateway*]({{< relref "../part-3--extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) \(a kind of [*Proxy*]({{< relref "../part-3--extension-metapatterns/proxy.md" >}})\) but it also splits each client request into multiple requests to the underlying services like an [*API Composer*]({{< relref "../part-3--extension-metapatterns/orchestrator.md#api-composer-remote-facade-gateway-aggregation-composed-message-processor-scatter-gather-mapreduce" >}}) or a [*Process Manager*]({{< relref "../part-3--extension-metapatterns/orchestrator.md#process-manager-orchestrator" >}}) \([*Orchestrators*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}})\)\.
@@ -93,12 +89,10 @@ Example: a thorough article from [Microsoft](https://learn.microsoft.com/en-us/a
 
 ### Event Mediator
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/2/Multifunctional%20-%20Event%20Mediator.png" alt="Multifunctional - Event Mediator" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/2/Multifunctional%20-%20Event%20Mediator.png" style="outline:none">
+<img src="/Variants/2/Multifunctional%20-%20Event%20Mediator.png" alt="Multifunctional - Event Mediator" width=100%/>
+</a>
 </figure>
 
 An *Event Mediator* \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] is an *orchestrating* [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}})\. It not only receives requests from clients and turns each request into a multi\-step use case \(as does [*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}})\) but it also manages instances of the services and acts as the medium which calls them\. Moreover, it seems to be aware of all the kinds of messages in the system and which service each message must be forwarded to, resulting in an overwhelming complexity concentrated in a single component which does not even follow the separation of concerns principle\. \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] proposes countering that by using multiple *Event Mediators* [split over the following dimensions]({{< relref "../part-3--extension-metapatterns/orchestrator.md#variants-by-structure-can-be-combined" >}}):
@@ -115,12 +109,10 @@ Example: Mediator Topology in the \[[FSA]({{< relref "../part-7--appendices/appe
 
 ### Persistent Event Log, Shared Event Store
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/2/Multifunctional%20-%20Shared%20Event%20Store.png" alt="Multifunctional - Shared Event Store" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/2/Multifunctional%20-%20Shared%20Event%20Store.png" style="outline:none">
+<img src="/Variants/2/Multifunctional%20-%20Shared%20Event%20Store.png" alt="Multifunctional - Shared Event Store" width=100%/>
+</a>
 </figure>
 
 When a [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}) grants long\-term persistence, it becomes a [*Shared Repository*]({{< relref "../part-3--extension-metapatterns/shared-repository.md" >}})\. This may happen to an *Event Log* which implements interservice communication\.
@@ -133,24 +125,20 @@ Example: \[[DEDS]({{< relref "../part-7--appendices/appendix-b--books-referenced
 
 ### Front Controller
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/2/Front%20Controller.png" alt="Front Controller" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/2/Front%20Controller.png" style="outline:none">
+<img src="/Variants/2/Front%20Controller.png" alt="Front Controller" width=100%/>
+</a>
 </figure>
 
 *Front Controller* \[[SAHP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#sahp" >}}) but [not]({{< relref "../part-6--analytics/ambiguous-patterns.md#front-controller" >}}) [PEAA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#peaa" >}})\] is the name for the first \(client\-facing\) service of a [*pipeline*]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}}) in [*Choreographed Event\-Driven Architecture*]({{< relref "../part-2--basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}}) when that service collects information about the status of each request it has processed and forwarded down the *pipeline\.* The status is received by listening for notifications from the downstream services and is readily available for the *Front Controller*’s clients, resembling the function of [*Query Service*]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md#query-service-front-controller-data-warehouse-data-lake-aggregate-data-product-quantum-dpq-of-data-mesh" >}}) \([*Polyglot Persistence*]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md" >}})\) and [*Application Service*]({{< relref "../part-3--extension-metapatterns/orchestrator.md#integration-micro-service-application-service" >}}) \([*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}})\)\.
 
 ### Enterprise Service Bus \(ESB\)
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/2/Multifunctional%20-%20Enterprise%20Service%20Bus.png" alt="Multifunctional - Enterprise Service Bus" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/2/Multifunctional%20-%20Enterprise%20Service%20Bus.png" style="outline:none">
+<img src="/Variants/2/Multifunctional%20-%20Enterprise%20Service%20Bus.png" alt="Multifunctional - Enterprise Service Bus" width=100%/>
+</a>
 </figure>
 
 An [*Enterprise Service Bus*](https://www.confluent.io/learn/enterprise-service-bus/) \(*ESB*\) \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] is a mixture of *Message Bus* \(with a stack of *Adapters* per service\) and *Event Mediator* \(built\-in *Orchestrator*\) which turns this kind of [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}) into the core of the system\. The combination of a central role in organizations and its complexity was among the main reasons for the demise of [*Enterprise Service\-Oriented Architecture*]({{< relref "../part-4--fragmented-metapatterns/service-oriented-architecture--soa-.md" >}})\.
@@ -159,12 +147,10 @@ Example: Orchestration\-Driven Service\-Oriented Architecture in \[[FSA]({{< rel
 
 ### Service Mesh
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/2/Multifunctional%20-%20Service%20Mesh.png" alt="Multifunctional - Service Mesh" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/2/Multifunctional%20-%20Service%20Mesh.png" style="outline:none">
+<img src="/Variants/2/Multifunctional%20-%20Service%20Mesh.png" alt="Multifunctional - Service Mesh" width=100%/>
+</a>
 </figure>
 
 A *Service Mesh* \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] is a [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}) that employs one or more [*Sidecars*]({{< relref "../part-3--extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \[[DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#dds" >}})\] per service as a place for *cross\-cutting concerns* \(logging, observability, encryption, protocol translation\)\. A service accesses its *Sidecar* without performance and stability penalties as they are running on the same machine\. The totality of deployed *Sidecars* makes a system\-wide virtual layer of shared libraries: though the *Sidecars* are physically separate, they are often identical and stateless, so that a service that accesses one *Sidecar* may be thought of as accessing all of them\.
@@ -173,12 +159,10 @@ A *Service* [*Mesh*]({{< relref "../part-5--implementation-metapatterns/mesh.md"
 
 ### Middleware of Space\-Based Architecture
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/2/Multifunctional%20-%20Space-Based%20Architecture.png" alt="Multifunctional - Space-Based Architecture" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/2/Multifunctional%20-%20Space-Based%20Architecture.png" style="outline:none">
+<img src="/Variants/2/Multifunctional%20-%20Space-Based%20Architecture.png" alt="Multifunctional - Space-Based Architecture" width=100%/>
+</a>
 </figure>
 
 [*Space\-Based Architecture*]({{< relref "../part-5--implementation-metapatterns/mesh.md#space-based-architecture" >}}) \[[SAP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#sap" >}}), [FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] relies on the most complex *Middleware* known – it incorporates all four of the *extension metapatterns*:
@@ -198,12 +182,10 @@ The patterns that involve [*orchestration*]({{< relref "../part-1--foundations/a
 - Replace the *Combined Component* with several specialized ones
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/2/Multifunctional_%20Split.png" alt="Multifunctional: Split" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/2/Multifunctional_%20Split.png" style="outline:none">
+<img src="/Evolutions/2/Multifunctional_%20Split.png" alt="Multifunctional: Split" width=100%/>
+</a>
 </figure>
 
 ## Summary

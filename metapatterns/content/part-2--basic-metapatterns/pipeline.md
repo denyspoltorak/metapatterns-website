@@ -5,12 +5,10 @@ title = "Pipeline"
 
 # Pipeline
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Main/Pipeline.png" alt="Pipeline" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Main/Pipeline.png" style="outline:none">
+<img src="/Main/Pipeline.png" alt="Pipeline" width=100%/>
+</a>
 </figure>
 
 *Never return\.* Push your data through a chain of processors\.
@@ -65,12 +63,10 @@ There are three ways to build communication in a pipeline, each with different d
 - Services may share a *message schema*, in which case all of them depend on it, not on each other\. That allows for reshuffling the services\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Dependencies/Pipeline.png" alt="Pipeline" style="width:99%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Dependencies/Pipeline.png" style="outline:none">
+<img src="/Dependencies/Pipeline.png" alt="Pipeline" width=99%/>
+</a>
 </figure>
 
 See the [*Choreography* chapter]({{< relref "../part-1--foundations/arranging-communication/choreography.md" >}}) for more detailed discussion\.
@@ -120,12 +116,10 @@ Such a variety of options enables the use of pipelines in a wide range of domain
 
 ### Pipes and Filters, Workflow System
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/1/Pipes%20and%20Filters.png" alt="Pipes and Filters" style="width:95%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/1/Pipes%20and%20Filters.png" style="outline:none">
+<img src="/Variants/1/Pipes%20and%20Filters.png" alt="Pipes and Filters" width=95%/>
+</a>
 </figure>
 
 *Pipes and Filters* \[[POSA1]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa1" >}}), [POSA4]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa4" >}}), [EIP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}})\] usually name a linear local system which obtains data with its *source*, passes the data through a chain of *filters*, connected by *pipes*, and outputs it via a *sink*\. The entire *pipeline* may run as a single process to avoid the overhead of data serialization\. It may range from a Unix shell script which passes file contents through a series of utilities to a hardware pipeline for image processing in a video [camera]({{< relref "../part-1--foundations/four-kinds-of-software.md#camera" >}})\. The filters tend to be single\-purpose \(handle one type of payload\) and stateless\. In some cases a filter may use dedicated hardware \(for encryption or audio/video processing\)\. The entire pipeline often operates a single data format \([*Stamp Coupling*]({{< relref "../part-3--extension-metapatterns/shared-repository.md#inexact-stamp-coupling" >}}) \[[SAHP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#sahp" >}})\]\)\.
@@ -138,12 +132,10 @@ Examples: Unix shell pipes, processing of video streams, many types of hardware\
 
 ### Choreographed \(Broker Topology\) Event\-Driven Architecture \(EDA\), Event Collaboration
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/1/Event-Driven%20Architecture.png" alt="Event-Driven Architecture" style="width:95%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/1/Event-Driven%20Architecture.png" style="outline:none">
+<img src="/Variants/1/Event-Driven%20Architecture.png" alt="Event-Driven Architecture" width=95%/>
+</a>
 </figure>
 
 *Event\-Driven Architecture* \(*EDA*\) means that the system is built of services which use events to communicate in a non\-blocking way\. The idea is similar to the [actor model](https://en.wikipedia.org/wiki/Actor_model) of telecom and embedded programming\. Thus, *EDA* itself does not define anything about the structure of the system \(except that it is not [*monolithic*]({{< relref "../part-2--basic-metapatterns/monolith.md" >}})\)\.
@@ -173,12 +165,10 @@ Examples: high performance web services\.
 
 ### Data Mesh
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/1/Data%20Mesh.png" alt="Data Mesh" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/1/Data%20Mesh.png" style="outline:none">
+<img src="/Variants/1/Data%20Mesh.png" alt="Data Mesh" width=100%/>
+</a>
 </figure>
 
 First and foremost, [*Data Mesh*](https://martinfowler.com/articles/data-mesh-principles.html) \[[LDDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#lddd" >}}), [SAHP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#sahp" >}})\] is not a [*Mesh*]({{< relref "../part-5--implementation-metapatterns/mesh.md" >}}), but rather a *Pipeline*\. This architecture applies [*CQRS*](https://learn.microsoft.com/en-us/azure/architecture/patterns/cqrs) on the system level: it separates the interfaces and channels through which the services change their state \(matching *commands* or [*OLTP*](https://en.wikipedia.org/wiki/Online_transaction_processing) of *CQRS*\) and the ones used to retrieve their data \(similar to *queries* or [*OLAP*](https://en.wikipedia.org/wiki/Online_analytical_processing)\)\. That results in two overlapping subsystems, *operational* and *analytical*, that share most of their nodes\.
@@ -196,12 +186,10 @@ There is a pragmatic option to allow an operational service to resort to the ana
 
 ### Function as a Service \(FaaS\), Nanoservices \(pipelined\)
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/1/Nanoservices.png" alt="Nanoservices" style="width:99%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/1/Nanoservices.png" style="outline:none">
+<img src="/Variants/1/Nanoservices.png" alt="Nanoservices" width=99%/>
+</a>
 </figure>
 
 A [*nanoservice*]({{< relref "../part-2--basic-metapatterns/services.md#single-function-faas-nanoservices" >}}) is, literally, a [function as a service](https://en.wikipedia.org/wiki/Function_as_a_service) \(*FaaS*\) \[[DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#dds" >}})\] – a stateless \(thus perfectly scalable\) component with a single input\. They can run in proprietary cloud [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}) over a [*Shared Database*]({{< relref "../part-3--extension-metapatterns/shared-repository.md" >}}) and are [chained into pipelines](https://increment.com/software-architecture/the-rise-of-nanoservices/), one per use case\. The code complexity stays low, but as the project grows, the integration will quickly turn into a nightmare of hundreds or thousands of interconnected services\.
@@ -217,23 +205,19 @@ There are a couple of pipeline\-specific evolutions, with more details provided 
 - The first service of the *Pipeline* can be promoted to a [*Front Controller*]({{< relref "../part-3--extension-metapatterns/combined-component.md#front-controller" >}}) \[[SAHP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#sahp" >}})\] which tracks the status updates for every request it handles\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png" alt="Pipeline promote Front Controller" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png" style="outline:none">
+<img src="/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png" alt="Pipeline promote Front Controller" width=100%/>
+</a>
 </figure>
 
 - Adding an [*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}}) turns a *Pipeline* into normal [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}})\. As the high\-level business logic moves into the orchestration layer, the filters don’t need to interact directly, therefore the inter\-filter communication channels disappear and the system becomes identical to *Orchestrated Services*\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Services/Pipeline%20use%20Orchestrator.png" alt="Pipeline use Orchestrator" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Services/Pipeline%20use%20Orchestrator.png" style="outline:none">
+<img src="/Evolutions/Services/Pipeline%20use%20Orchestrator.png" alt="Pipeline use Orchestrator" width=100%/>
+</a>
 </figure>
 
 ## Summary

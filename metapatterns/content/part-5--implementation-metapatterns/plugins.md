@@ -5,12 +5,10 @@ title = "Plugins"
 
 # Plugins
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Main/Plugins.png" alt="Plugins" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Main/Plugins.png" style="outline:none">
+<img src="/Main/Plugins.png" alt="Plugins" width=100%/>
+</a>
 </figure>
 
 *Overspecialize, and you breed in weakness\.* Customize the system through attachable modules\.
@@ -46,24 +44,20 @@ The only case for a plugin to improve performance of a system that I can think u
 - Customization of supplier services for varying needs of their client services in [*Domain\-Oriented Microservice Architecture*]({{< relref "../part-4--fragmented-metapatterns/service-oriented-architecture--soa-.md#domain-oriented-microservice-architecture-doma" >}})\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Performance/Plugins-injection.png" alt="Plugins-injection" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Performance/Plugins-injection.png" style="outline:none">
+<img src="/Performance/Plugins-injection.png" alt="Plugins-injection" width=100%/>
+</a>
 </figure>
 
 ### Dependencies
 
 Each *plugin* depends on the *core*’s *API* \(for *Addons*\) or *SPI* \(for *Plugins*\) for the functionality it extends\. That makes the APIs and SPIs nearly impossible to modify, only to extend, as there tend to be many plugins in the field, some of them out of active development, that rely on any given method of the already published interfaces\.
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Dependencies/Plugins.png" alt="Plugins" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Dependencies/Plugins.png" style="outline:none">
+<img src="/Dependencies/Plugins.png" alt="Plugins" width=100%/>
+</a>
 </figure>
 
 ### Applicability
@@ -82,12 +76,10 @@ Each *plugin* depends on the *core*’s *API* \(for *Addons*\) or *SPI* \(for *P
 
 ### Relations
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Relations/Plugins.png" alt="Plugins" style="width:68%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Relations/Plugins.png" style="outline:none">
+<img src="/Relations/Plugins.png" alt="Plugins" width=68%/>
+</a>
 </figure>
 
 *Plugins*:

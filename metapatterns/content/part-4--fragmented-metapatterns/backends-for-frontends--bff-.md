@@ -5,12 +5,10 @@ title = "Backends for Frontends (BFF)"
 
 # Backends for Frontends \(BFF\)
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Main/Backends%20for%20Frontends.png" alt="Backends for Frontends" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Main/Backends%20for%20Frontends.png" style="outline:none">
+<img src="/Main/Backends%20for%20Frontends.png" alt="Backends for Frontends" width=100%/>
+</a>
 </figure>
 
 *Hire a local guide\.* Dedicate a service for every kind of client\.
@@ -57,12 +55,10 @@ As the multiple *Orchestrators* of *BFF* don’t intercommunicate, the pattern�
 
 Each *BFF* depends on all the services it uses \(usually every service in the system\)\. The services themselves are likely to be independent, as is common in [*orchestrated* systems]({{< relref "../part-1--foundations/arranging-communication/orchestration.md" >}})\.
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Dependencies/Backends%20for%20Frontends.png" alt="Backends for Frontends" style="width:91%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Dependencies/Backends%20for%20Frontends.png" style="outline:none">
+<img src="/Dependencies/Backends%20for%20Frontends.png" alt="Backends for Frontends" width=91%/>
+</a>
 </figure>
 
 ### Applicability
@@ -81,12 +77,10 @@ Each *BFF* depends on all the services it uses \(usually every service in the sy
 
 ### Relations
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Relations/BFF.png" alt="BFF" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Relations/BFF.png" style="outline:none">
+<img src="/Relations/BFF.png" alt="BFF" width=100%/>
+</a>
 </figure>
 
 *Backends for Frontends*:
@@ -101,12 +95,10 @@ Each *BFF* depends on all the services it uses \(usually every service in the sy
 
 ### Proxies
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/3/BFF%20-%20Gateways.png" alt="BFF - Gateways" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/3/BFF%20-%20Gateways.png" style="outline:none">
+<img src="/Variants/3/BFF%20-%20Gateways.png" alt="BFF - Gateways" width=100%/>
+</a>
 </figure>
 
 Dedicating a [*Gateway*]({{< relref "../part-3--extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) per client is useful when the clients differ in the mode of access to the system \(protocols / encryption / authorization\) but not in workflows\.
@@ -115,48 +107,40 @@ Multiple *Adapters* match the literal meaning of *Backends for Frontends* – ea
 
 ### Orchestrators
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/3/BFF%20-%20Orchestrators.png" alt="BFF - Orchestrators" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/3/BFF%20-%20Orchestrators.png" style="outline:none">
+<img src="/Variants/3/BFF%20-%20Orchestrators.png" alt="BFF - Orchestrators" width=100%/>
+</a>
 </figure>
 
 An [*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}}) per client makes sense if the clients use the system in completely unrelated ways, e\.g\. a shop’s customers have little to share with its administrators\.
 
 ### Proxy \+ Orchestrator pairs
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/3/BFF%20-%20Gateways%20+%20Orchestrators.png" alt="BFF - Gateways + Orchestrators" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/3/BFF%20-%20Gateways%20+%20Orchestrators.png" style="outline:none">
+<img src="/Variants/3/BFF%20-%20Gateways%20+%20Orchestrators.png" alt="BFF - Gateways + Orchestrators" width=100%/>
+</a>
 </figure>
 
 Clients vary in both access mode \(protocol\) and workflow\. [*Orchestrators*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}}) or [*Proxies*]({{< relref "../part-3--extension-metapatterns/proxy.md" >}}) may be reused if some kinds of clients share only protocol or application logic\.
 
 ### API Gateways
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/3/BFF%20-%20API%20gateways.png" alt="BFF - API gateways" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/3/BFF%20-%20API%20gateways.png" style="outline:none">
+<img src="/Variants/3/BFF%20-%20API%20gateways.png" alt="BFF - API gateways" width=100%/>
+</a>
 </figure>
 
 Clients vary in access mode \(protocol\) and workflow and there is a third\-party [*API Gateway*]({{< relref "../part-3--extension-metapatterns/combined-component.md#api-gateway" >}}) framework which seems to fit your requirements off the shelf\.
 
 ### Event Mediators
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/3/BFF%20-%20Event%20mediators.png" alt="BFF - Event mediators" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/3/BFF%20-%20Event%20mediators.png" style="outline:none">
+<img src="/Variants/3/BFF%20-%20Event%20mediators.png" alt="BFF - Event mediators" width=100%/>
+</a>
 </figure>
 
 \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] mentions that multiple [*Event Mediators*]({{< relref "../part-3--extension-metapatterns/combined-component.md#event-mediator" >}}) may be deployed in [*Event\-Driven Architecture*]({{< relref "../part-2--basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}}) to split the codebase and improve stability\.
@@ -171,12 +155,10 @@ Clients vary in access mode \(protocol\) and workflow and there is a third\-part
 - [*Sidecars*]({{< relref "../part-3--extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \[[DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#dds" >}})\] \(of [*Service Mesh*]({{< relref "../part-5--implementation-metapatterns/mesh.md#service-mesh" >}})\) are a way to share libraries among the *BFF*s\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/3/BFF.png" alt="BFF" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/3/BFF.png" style="outline:none">
+<img src="/Evolutions/3/BFF.png" alt="BFF" width=100%/>
+</a>
 </figure>
 
 ## Summary

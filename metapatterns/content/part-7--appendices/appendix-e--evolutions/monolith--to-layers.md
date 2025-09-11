@@ -15,12 +15,10 @@ Another drawback of [*Monolith*]({{< relref "../../part-2--basic-metapatterns/mo
 
 ## Divide into Layers
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Monolith/Monolith%20to%20Layers.png" alt="Monolith to Layers" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Monolith/Monolith%20to%20Layers.png" style="outline:none">
+<img src="/Evolutions/Monolith/Monolith%20to%20Layers.png" alt="Monolith to Layers" width=100%/>
+</a>
 </figure>
 
 <ins>Patterns</ins>: [Layers]({{< relref "../../part-2--basic-metapatterns/layers.md" >}})\.
@@ -51,12 +49,10 @@ Most systems apply *layering* by default as it grants a lot of flexibility at ve
 
 ## Use a database
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Monolith/Monolith%20add%20Database.png" alt="Monolith add Database" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Monolith/Monolith%20add%20Database.png" style="outline:none">
+<img src="/Evolutions/Monolith/Monolith%20add%20Database.png" alt="Monolith add Database" width=100%/>
+</a>
 </figure>
 
 <ins>Patterns</ins>: [Layers]({{< relref "../../part-2--basic-metapatterns/layers.md" >}}), [Shared Database]({{< relref "../../part-3--extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) \([Shared Repository]({{< relref "../../part-3--extension-metapatterns/shared-repository.md" >}})\)\.
@@ -95,12 +91,10 @@ A datastore is non\-trivial to implement\. While ordinary files are good for sma
 
 ## Add a Proxy
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Monolith/Monolith%20add%20Proxy.png" alt="Monolith add Proxy" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Monolith/Monolith%20add%20Proxy.png" style="outline:none">
+<img src="/Evolutions/Monolith/Monolith%20add%20Proxy.png" alt="Monolith add Proxy" width=100%/>
+</a>
 </figure>
 
 <ins>Patterns</ins>: [Layers]({{< relref "../../part-2--basic-metapatterns/layers.md" >}}), [Proxy]({{< relref "../../part-3--extension-metapatterns/proxy.md" >}})\.
@@ -133,12 +127,10 @@ A *Proxy* is placed between your system and its clients to provide generic funct
 
 ## Add an Orchestrator
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Monolith/Monolith%20add%20Orchestrator.png" alt="Monolith add Orchestrator" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Monolith/Monolith%20add%20Orchestrator.png" style="outline:none">
+<img src="/Evolutions/Monolith/Monolith%20add%20Orchestrator.png" alt="Monolith add Orchestrator" width=100%/>
+</a>
 </figure>
 
 <ins>Patterns</ins>: [Layers]({{< relref "../../part-2--basic-metapatterns/layers.md" >}}), [Orchestrator]({{< relref "../../part-3--extension-metapatterns/orchestrator.md" >}})\.
@@ -188,12 +180,10 @@ Another set of evolutions stems from splitting one or more *layers* into [*Servi
 - Finally, some domains support [*Hierarchy*]({{< relref "../../part-4--fragmented-metapatterns/hierarchy.md" >}}) – a tree\-like architecture where each layer takes a share of the system’s functionality\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%201.png" alt="Monolith to Layers - Further 1" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%201.png" style="outline:none">
+<img src="/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%201.png" alt="Monolith to Layers - Further 1" width=100%/>
+</a>
 </figure>
 
 In addition,
@@ -204,12 +194,10 @@ In addition,
 - The system can often be extended with [*Scripts*]({{< relref "../../part-5--implementation-metapatterns/microkernel.md#interpreter-script-domain-specific-language-dsl" >}}), resulting in a kind of [*Microkernel*]({{< relref "../../part-5--implementation-metapatterns/microkernel.md" >}})\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png" alt="Monolith to Layers - Further 2" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png" style="outline:none">
+<img src="/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png" alt="Monolith to Layers - Further 2" width=100%/>
+</a>
 </figure>
 
 <nav>

@@ -5,12 +5,10 @@ title = "Services"
 
 # Services
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Main/Services.png" alt="Services" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Main/Services.png" style="outline:none">
+<img src="/Main/Services.png" alt="Services" width=100%/>
+</a>
 </figure>
 
 *Divide and conquer\.* Gain flexibility through decoupling subdomains\.
@@ -89,12 +87,10 @@ Splitting a [*Monolith*]({{< relref "../part-2--basic-metapatterns/monolith.md" 
 
 Interservice communication is relatively slow and resource\-consuming, therefore it should be kept to a minimum\.
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Performance/Services.png" alt="Services" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Performance/Services.png" style="outline:none">
+<img src="/Performance/Services.png" alt="Services" width=100%/>
+</a>
 </figure>
 
 The perfect case is when a single service has enough authority to answer a client’s request or process an event\. That case should not be that rare as a service covers a whole subdomain while subdomains are expected to be loosely coupled \(by definition\)\.
@@ -109,42 +105,34 @@ Multiple [instances]({{< relref "../part-2--basic-metapatterns/shards.md#statele
 
 When we see a service to *request* help from other services and then receive the results \(in a *confirmation* message\), that service [*orchestrates*]({{< relref "../part-1--foundations/arranging-communication/orchestration.md" >}}) the services it uses\. Services often orchestrate each other because the subdomain a service is dedicated to is not independent of other subdomains\.
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Dependencies/Services-1.png" alt="Services-1" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Dependencies/Services-1.png" style="outline:none">
+<img src="/Dependencies/Services-1.png" alt="Services-1" width=100%/>
+</a>
 </figure>
 
 Another way for services to communicate is [*choreography*]({{< relref "../part-1--foundations/arranging-communication/choreography.md" >}}) – when a service sends a *command* or publishes a *notification* and does not expect any response\. This is characteristic of [*Pipelines*]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}}) which are covered in the next chapter\. Right now we should note that orchestration and choreography may be intermixed, in which case a service depends on all the services it uses or subscribes to\.
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Dependencies/Services-2.png" alt="Services-2" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Dependencies/Services-2.png" style="outline:none">
+<img src="/Dependencies/Services-2.png" alt="Services-2" width=100%/>
+</a>
 </figure>
 
 If the system relies on notifications \(services publish *domain events*\), it is possible to avoid interservice *queries* \(pairs of a *read* request and confirmation with the data retrieved\) by aggregating data from notifications in a [*CQRS* \(or *materialized*\) *View*]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\], which can reside [in memory](https://martinfowler.com/bliki/MemoryImage.html) or in a database\. Views can be planted inside every service that needs data owned by other services or can be gathered into a dedicated [*Query Service*]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md#query-service-front-controller-data-warehouse-data-lake-aggregate-data-product-quantum-dpq-of-data-mesh" >}}) \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\]\. Though the main goal of *CQRS Views* is to resolve distributed joins from databases of multiple services, they also help [remove dependencies]({{< relref "../part-6--analytics/comparison-of-architectural-patterns/indirection-in-commands-and-queries.md#query-olap-systems" >}}) in the code of services and optimize out interservice queries, simplifying APIs and improving performance\. Further examples will be discussed in the chapter on [*Polyglot Persistence*]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md" >}})\.
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Dependencies/Services-3.png" alt="Services-3" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Dependencies/Services-3.png" style="outline:none">
+<img src="/Dependencies/Services-3.png" alt="Services-3" width=100%/>
+</a>
 </figure>
 
 In general, a large service should wrap its dependencies with an [*Anticorruption Layer*]({{< relref "../part-3--extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\], following the ideas of [*Hexagonal Architecture*]({{< relref "../part-5--implementation-metapatterns/hexagonal-architecture.md" >}})\. The layer consists of *Adapters* \[[GoF]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#gof" >}})\] between the internal domain model of the service and the APIs of the components it uses\. The *Adapters* isolate the business logic from the external environment, granting that no change in the interface of an external service or library may ever take much work to support on the side of the team that writes our business logic as all the ensuing updates are limited to a small adapter\.
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Dependencies/Services-4.png" alt="Services-4" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Dependencies/Services-4.png" style="outline:none">
+<img src="/Dependencies/Services-4.png" alt="Services-4" width=100%/>
+</a>
 </figure>
 
 ### Applicability
@@ -167,12 +155,10 @@ In general, a large service should wrap its dependencies with an [*Anticorruptio
 
 ### Relations
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Relations/Services.png" alt="Services" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Relations/Services.png" style="outline:none">
+<img src="/Relations/Services.png" alt="Services" width=100%/>
+</a>
 </figure>
 
 - Division by subdomain can be applied to [*Layers*]({{< relref "../part-2--basic-metapatterns/layers.md" >}}) to form [*Service\-Oriented Architecture*]({{< relref "../part-4--fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}) \(layers of services\); to [*Proxy*]({{< relref "../part-3--extension-metapatterns/proxy.md" >}}), [*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}}), or [*API Gateway*]({{< relref "../part-3--extension-metapatterns/combined-component.md#api-gateway" >}}) to make [*Backends for Frontends*]({{< relref "../part-4--fragmented-metapatterns/backends-for-frontends--bff-.md" >}}); to a [\(shared\) database]({{< relref "../part-3--extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) resulting in [*Polyglot Persistence*]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md" >}})\.
@@ -317,34 +303,28 @@ A [*nanoservice*](https://medium.com/@ido.vapner/unlocking-the-power-of-nano-ser
 
 A service is not necessarily monolithic inside\. Because a service is encapsulated from its users by its interface, it can have any kind of internal structure\. The most common cases, which can be intermixed together, are:
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/1/Subtypes%20of%20Services.png" alt="Subtypes of Services" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/1/Subtypes%20of%20Services.png" style="outline:none">
+<img src="/Variants/1/Subtypes%20of%20Services.png" alt="Subtypes of Services" width=100%/>
+</a>
 </figure>
 
 ### Monolithic service
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/1/Service%20-%20Monolithic.png" alt="Service - Monolithic" style="width:27%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/1/Service%20-%20Monolithic.png" style="outline:none">
+<img src="/Variants/1/Service%20-%20Monolithic.png" alt="Service - Monolithic" width=27%/>
+</a>
 </figure>
 
 A *monolithic service* is a service with no definite internal structure, probably small enough to allow for complete rewrite instead of refactoring – the ideal of proponents of [*Microservices*]({{< relref "#microservices" >}})\. It is simple & stupid to implement but relies on external sources of persistent data\. For example, *device drivers* and [*Actors*]({{< relref "#actors" >}}) usually get their \(persisted\) configuration during initialization\. A monolithic backend service may receive all the data it needs in incoming requests, via a query to another service, or by reading it from a [*Shared Database*]({{< relref "../part-3--extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}})\.
 
 ### Layered service
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/1/Service%20-%20Layered.png" alt="Service - Layered" style="width:83%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/1/Service%20-%20Layered.png" style="outline:none">
+<img src="/Variants/1/Service%20-%20Layered.png" alt="Service - Layered" width=83%/>
+</a>
 </figure>
 
 A *layered service* is [divided into *layers*]({{< relref "../part-4--fragmented-metapatterns/layered-services.md#orchestrated-three-layered-services" >}})\. This approach is very common both with backend *\(micro\-\)services*, where at least the database is separated from the business logic, and with *device drivers* in system programming, where hardware\-specific low\-level interrupt handlers and register access are separated from the main logic and high\-level OS interface\.
@@ -355,12 +335,10 @@ Another benefit comes from the existence of the upper integration layer which ma
 
 ### Hexagonal service
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/1/Service%20-%20Hexagonal.png" alt="Service - Hexagonal" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/1/Service%20-%20Hexagonal.png" style="outline:none">
+<img src="/Variants/1/Service%20-%20Hexagonal.png" alt="Service - Hexagonal" width=100%/>
+</a>
 </figure>
 
 A *hexagonal service* has its external dependencies isolated behind vendor\-agnostic interfaces\.
@@ -369,24 +347,20 @@ This is a real\-world application of [*Hexagonal Architecture*]({{< relref "../p
 
 ### Scaled service
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/1/Service%20-%20Scaled.png" alt="Service - Scaled" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/1/Service%20-%20Scaled.png" style="outline:none">
+<img src="/Variants/1/Service%20-%20Scaled.png" alt="Service - Scaled" width=100%/>
+</a>
 </figure>
 
 With *scaled services* there are multiple [*instances*]({{< relref "../part-2--basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}}) of a service\. In most cases they [*share a database*]({{< relref "../part-3--extension-metapatterns/shared-repository.md" >}}) \(though sometimes the database may be [*sharded*]({{< relref "../part-2--basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-cells-amazon-definition" >}}) or [*replicated*]({{< relref "../part-2--basic-metapatterns/shards.md#persistent-copy-replica" >}}) together with the service that uses it\) and get their requests through a [*Load Balancer* or *Sharding Proxy*]({{< relref "../part-3--extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}})\.
 
 ### Cell \(WSO2 definition\) \(service of services\), Domain \(Uber definition\), Cluster
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/1/Service%20-%20Cell.png" alt="Service - Cell" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/1/Service%20-%20Cell.png" style="outline:none">
+<img src="/Variants/1/Service%20-%20Cell.png" alt="Service - Cell" width=100%/>
+</a>
 </figure>
 
 When a service is split into a set of subservices, it makes a [*Cell*](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md) \(WSO2 name\), [*Domain*](https://www.uber.com/blog/microservice-architecture/) \(Uber name\), or *Cluster* \[[DEDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#deds" >}})\]\. All the incoming communication passes through a [*Cell Gateway*]({{< relref "../part-3--extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) which encapsulates the *Cell* from its environment\. Outgoing communication may involve the *Cell Gateway* or dedicated [*Adapters*]({{< relref "../part-3--extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) \(*Anticorruption Layer* \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\]\) A *Cell* may deploy its own [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}) and/or [*share a database*]({{< relref "../part-3--extension-metapatterns/shared-repository.md" >}}) among its components\.
@@ -403,24 +377,20 @@ Examples of *Services* include:
 
 ### Service\-Based Architecture
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/1/Service-Based%20Architecture.png" alt="Service-Based Architecture" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/1/Service-Based%20Architecture.png" style="outline:none">
+<img src="/Variants/1/Service-Based%20Architecture.png" alt="Service-Based Architecture" width=100%/>
+</a>
 </figure>
 
 This is the simplest use of *Services* where each subdomain gets a dedicated component\. A *Service\-Based Architecture* \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] tends to consist of a few coarse\-grained services, some of which may [*share a database*]({{< relref "../part-3--extension-metapatterns/shared-repository.md" >}}) and have little direct communication\. An [*API Gateway*]({{< relref "../part-3--extension-metapatterns/combined-component.md#api-gateway" >}}) is often present as well\.
 
 ### Microservices
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/1/Microservices.png" alt="Microservices" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/1/Microservices.png" style="outline:none">
+<img src="/Variants/1/Microservices.png" alt="Microservices" width=100%/>
+</a>
 </figure>
 
 *Microservices* \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}}), [FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] are usually smaller than components of *Service\-Based Architecture* and feature multiple services per subdomain with strict decoupling: no [*Shared Database*]({{< relref "../part-3--extension-metapatterns/shared-repository.md" >}}), independent \(and often dynamic\) scaling and deployment\. Even [*orchestration*]({{< relref "../part-1--foundations/arranging-communication/orchestration.md" >}}) and distributed transactions \([*Sagas*]({{< relref "../part-3--extension-metapatterns/orchestrator.md#orchestrated-saga-saga-orchestrator-saga-execution-component-transaction-script-coordinator" >}})\) are considered to be a smell of bad design\.
@@ -439,12 +409,10 @@ This architecture usually relies on a [*Service Mesh*]({{< relref "../part-3--ex
 
 ### Actors
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/1/Actors.png" alt="Actors" style="width:98%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/1/Actors.png" style="outline:none">
+<img src="/Variants/1/Actors.png" alt="Actors" width=98%/>
+</a>
 </figure>
 
 An [*actor*](https://volodymyrpavlyshyn.medium.com/actors-actor-systems-as-massively-distributed-scalability-architecture-5e40f5ea9e86) is an entity with private data and a public message queue\. They are like objects with the difference that actors communicate only by sending each other asynchronous messages\. The fact that a single execution thread may serve thousands of actors makes actor systems an extremely lightweight approach to asynchronous programming\. As an actor is usually single\-threaded, there is no place for *mutexes* and *deadlocks* in the code and it is possible to [replay events](https://martinfowler.com/eaaDev/EventSourcing.html)\. Non\-blocking [*Proactors*]({{< relref "../part-2--basic-metapatterns/monolith.md#proactor-one-thread-many-tasks" >}}) are often used in [real\-time systems]({{< relref "../part-1--foundations/four-kinds-of-software.md#control-real-time-hardware-input" >}})\.
@@ -461,24 +429,20 @@ If we apply a bit of generalization, we can deduce that any server or backend se
 
 ### \(inexact\) Nanoservices \(API layer\)
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/1/Nanoservices%20-%20API%20Layer.png" alt="Nanoservices - API Layer" style="width:82%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/1/Nanoservices%20-%20API%20Layer.png" style="outline:none">
+<img src="/Variants/1/Nanoservices%20-%20API%20Layer.png" alt="Nanoservices - API Layer" width=82%/>
+</a>
 </figure>
 
 Though *Nanoservices* are defined by their size \(a single function\), not system topology, I want to mention a specific application from Diego Zanon’s book *Building Serverless Web Applications*\. That example is interesting because it comprises a single layer of isolated functions \(each providing a single API method\) which may share functionality by including code from a common repository\. As nanoservices of this kind never interact, the common drawbacks of *Services* \(poor debugging and high latency\) don’t apply to them\.
 
 ### \(inexact\) Device Drivers
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/1/Drivers.png" alt="Drivers" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/1/Drivers.png" style="outline:none">
+<img src="/Variants/1/Drivers.png" alt="Drivers" width=100%/>
+</a>
 </figure>
 
 An operating system must run efficiently with an unpredictable combination of hardware components, any of which can come from different manufacturers\. It is impossible to know all the combinations beforehand\. Thus it employs one service \(called *driver*\) per hardware device\. A driver *adapts* a manufacturer\- and model\-specific hardware interface to the generic interface of the OS *kernel*, allowing for the kernel to operate the hardware it controls without the detailed knowledge of the model\. Internally, a driver is usually [*layered*]({{< relref "../part-2--basic-metapatterns/layers.md#embedded-systems" >}}):
@@ -501,23 +465,19 @@ The whole system of kernel, drivers, and user applications comprises the [*Micro
 - A new feature request may emerge outside of any of the existing subdomains, creating a new service, or a service may grow too large to be developed by a single team, calling for division\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Services/Services_%20Split.png" alt="Services: Split" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Services/Services_%20Split.png" style="outline:none">
+<img src="/Evolutions/Services/Services_%20Split.png" alt="Services: Split" width=100%/>
+</a>
 </figure>
 
 - Two services may become so strongly coupled that they fare better if merged together, or the entire system may need to be glued back into a [*Monolith*]({{< relref "../part-2--basic-metapatterns/monolith.md" >}}) if the domain knowledge changes or if interservice communication strongly degrades performance\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Services/Services_%20Merge.png" alt="Services: Merge" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Services/Services_%20Merge.png" style="outline:none">
+<img src="/Evolutions/Services/Services_%20Merge.png" alt="Services: Merge" width=100%/>
+</a>
 </figure>
 
 ### Evolutions that add layers
@@ -527,56 +487,46 @@ The most common modifications of a system of *Services* involve supplementary sy
 - A [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}) tracks all the deployed service instances\. It mediates the communication between them and may manage their scaling and failure recovery\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Services/Services%20add%20Middleware.png" alt="Services add Middleware" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Services/Services%20add%20Middleware.png" style="outline:none">
+<img src="/Evolutions/Services/Services%20add%20Middleware.png" alt="Services add Middleware" width=100%/>
+</a>
 </figure>
 
 - [*Sidecars*]({{< relref "../part-3--extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \[[DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#dds" >}})\] of a [*Service Mesh*]({{< relref "../part-3--extension-metapatterns/combined-component.md#service-mesh" >}}) make a virtual layer of shared libraries for the [*Microservices*]({{< relref "#microservices" >}}) it hosts\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/2/Multifunctional%20-%20Service%20Mesh.png" alt="Multifunctional - Service Mesh" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/2/Multifunctional%20-%20Service%20Mesh.png" style="outline:none">
+<img src="/Variants/2/Multifunctional%20-%20Service%20Mesh.png" alt="Multifunctional - Service Mesh" width=100%/>
+</a>
 </figure>
 
 - A [*Shared Database*]({{< relref "../part-3--extension-metapatterns/shared-repository.md" >}}) simplifies the initial phases of development and interservice communication and enables the use of *Services* in [data\-centric domains]({{< relref "../part-1--foundations/arranging-communication/shared-data.md" >}})\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Services/Services%20to%20Shared%20Database.png" alt="Services to Shared Database" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Services/Services%20to%20Shared%20Database.png" style="outline:none">
+<img src="/Evolutions/Services/Services%20to%20Shared%20Database.png" alt="Services to Shared Database" width=100%/>
+</a>
 </figure>
 
 - [*Proxies*]({{< relref "../part-3--extension-metapatterns/proxy.md" >}}) stand between the system and its clients and take care of shared aspects that otherwise would need to be implemented by every service\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Services/Services%20add%20Proxy.png" alt="Services add Proxy" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Services/Services%20add%20Proxy.png" style="outline:none">
+<img src="/Evolutions/Services/Services%20add%20Proxy.png" alt="Services add Proxy" width=100%/>
+</a>
 </figure>
 
 - An [*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}}) is the single place where the high\-level logic of all use cases resides\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Services/Services%20use%20Orchestrator.png" alt="Services use Orchestrator" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Services/Services%20use%20Orchestrator.png" style="outline:none">
+<img src="/Evolutions/Services/Services%20use%20Orchestrator.png" alt="Services use Orchestrator" width=100%/>
+</a>
 </figure>
 
 Those layers may also be consolidated into [*Combined Components*]({{< relref "../part-3--extension-metapatterns/combined-component.md" >}}):

@@ -5,12 +5,10 @@ title = "Mesh"
 
 # Mesh
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Main/Mesh.png" alt="Mesh" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Main/Mesh.png" style="outline:none">
+<img src="/Main/Mesh.png" alt="Mesh" width=100%/>
+</a>
 </figure>
 
 *Hive mind\.* Go decentralized\.
@@ -115,12 +113,10 @@ The connected *nodes* of a *Mesh* may be:
 
 ### Peer\-to\-Peer Networks
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/4/P2P.png" alt="P2P" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/4/P2P.png" style="outline:none">
+<img src="/Variants/4/P2P.png" alt="P2P" width=100%/>
+</a>
 </figure>
 
 [*Peer to Peer*](https://en.wikipedia.org/wiki/Peer-to-peer) \(*P2P*\) networks are intended for massive resource sharing over unstable connections\. The *resource* in question may be data \(torrents, blockchain, [P2PTV](https://en.wikipedia.org/wiki/P2PTV)\), CPU time \([volunteer computing](https://en.wikipedia.org/wiki/Volunteer_computing), [distributed compilation](https://en.wikipedia.org/wiki/Distcc)\), or Internet access \([Tor](https://en.wikipedia.org/wiki/Tor_(network)), [I2P](https://en.wikipedia.org/wiki/I2P)\)\. In most cases it is shared over an *unstructured* \(as participants join and leave\) *2\-layer* \(there are dedicated servers that register and coordinate users\) network which is [*overlaid*](https://en.wikipedia.org/wiki/Overlay_network) on top of the Internet\. All the leaf nodes run identical narrowly specialized software \(i\.e\. either file sharing or blockchain but not both at once\) which provides the clients with access to resources of other nodes, making a kind of distributed [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}) or [*Shared Repository*]({{< relref "../part-3--extension-metapatterns/shared-repository.md" >}})\.
@@ -129,36 +125,30 @@ Examples: torrent, onion routing \(Tor\), blockchain\.
 
 ### Leaf\-Spine Architecture, Spine\-Leaf Architecture
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/4/Leaf-Spine.png" alt="Leaf-Spine" style="width:81%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/4/Leaf-Spine.png" style="outline:none">
+<img src="/Variants/4/Leaf-Spine.png" alt="Leaf-Spine" width=81%/>
+</a>
 </figure>
 
 This [datacenter network architecture](https://www.geeksforgeeks.org/spine-leaf-architecture/) is a rare example of a *structured fully connected Mesh*\. It consists of client\-facing \(*leaf*\) and internal \(*spine*\) switches\. Each *leaf* is connected to every *spine*, allowing for very high bandwidth \(by distributing the traffic over multiple routes\) that is almost insensitive to failures of individual hardware as there are always many parallel connections\.
 
 ### Actors
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/4/Actors.png" alt="Actors" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/4/Actors.png" style="outline:none">
+<img src="/Variants/4/Actors.png" alt="Actors" width=100%/>
+</a>
 </figure>
 
 A system of *Actors* may be classified as a *fully connected Mesh* with the actors’ message queues being the nodes of the *Mesh*\. Any actor can post messages to the queue of any other actor it knows about, as all the actors share a virtual namespace or physical address space\.
 
 ### Service Mesh
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/4/Service%20Mesh.png" alt="Service Mesh" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/4/Service%20Mesh.png" style="outline:none">
+<img src="/Variants/4/Service%20Mesh.png" alt="Service Mesh" width=100%/>
+</a>
 </figure>
 
 A [*Service Mesh*](https://buoyant.io/service-mesh-manifesto) \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}}), [MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\] is a distributed [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}) for running [*Microservices*]({{< relref "../part-2--basic-metapatterns/services.md#microservices" >}})\. It is a 2\-layer *Mesh* which contains one or few management nodes \(*control plane*\) and many user nodes \(*data plane*\)\. Each data plane node colocates:
@@ -176,12 +166,10 @@ Ready\-to\-use *Service Mesh* frameworks are popular with the *Microservices* ar
 
 ### Space\-Based Architecture
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Variants/4/Space-Based%20Architecture.png" alt="Space-Based Architecture" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Variants/4/Space-Based%20Architecture.png" style="outline:none">
+<img src="/Variants/4/Space-Based%20Architecture.png" alt="Space-Based Architecture" width=100%/>
+</a>
 </figure>
 
 [*Space\-Based Architecture*](https://en.wikipedia.org/wiki/Space-based_architecture) \[[SAP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#sap" >}}), [FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] is a kind of [*Service Mesh*]({{< relref "#service-mesh" >}}) with an integrated [*Shared Repository*]({{< relref "../part-3--extension-metapatterns/shared-repository.md" >}}) \(a [*tuple space*](https://en.wikipedia.org/wiki/Tuple_space) – shared dictionary – called [*Data Grid*]({{< relref "../part-3--extension-metapatterns/shared-repository.md#data-grid-of-space-based-architecture-sba-replicated-cache-distributed-cache" >}})\) and an [*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}}) \(called *Processing Grid*\)\. The user services are called *Processing Units*\. They may be identical \(making [*Shards*]({{< relref "../part-2--basic-metapatterns/shards.md" >}})\) or different \(resulting in [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}})\)\. This architecture is used for:

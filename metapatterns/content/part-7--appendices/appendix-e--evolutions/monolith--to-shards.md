@@ -15,12 +15,10 @@ One of the main drawbacks of the monolithic architecture is its lack of scalabil
 
 ## Implement a Mesh of self\-managed shards
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Monolith/Monolith%20to%20Mesh%20of%20Shards.png" alt="Monolith to Mesh of Shards" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Monolith/Monolith%20to%20Mesh%20of%20Shards.png" style="outline:none">
+<img src="/Evolutions/Monolith/Monolith%20to%20Mesh%20of%20Shards.png" alt="Monolith to Mesh of Shards" width=100%/>
+</a>
 </figure>
 
 <ins>Patterns</ins>: [Sharding]({{< relref "../../part-2--basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-cells-amazon-definition" >}}) \([Shards]({{< relref "../../part-2--basic-metapatterns/shards.md" >}})\), [Mesh]({{< relref "../../part-5--implementation-metapatterns/mesh.md" >}})\.
@@ -47,12 +45,10 @@ It is possible to run several instances of an application \(*shards*\), with eac
 
 ## Split data to isolated shards and add a Sharding Proxy
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Monolith/Monolith%20to%20Isolated%20Shards%20with%20Load%20Balancer.png" alt="Monolith to Isolated Shards with Load Balancer" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Monolith/Monolith%20to%20Isolated%20Shards%20with%20Load%20Balancer.png" style="outline:none">
+<img src="/Evolutions/Monolith/Monolith%20to%20Isolated%20Shards%20with%20Load%20Balancer.png" alt="Monolith to Isolated Shards with Load Balancer" width=100%/>
+</a>
 </figure>
 
 <ins>Patterns</ins>: [Sharding]({{< relref "../../part-2--basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-cells-amazon-definition" >}}) \([Shards]({{< relref "../../part-2--basic-metapatterns/shards.md" >}})\), [Sharding Proxy]({{< relref "../../part-3--extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) \([Proxy]({{< relref "../../part-3--extension-metapatterns/proxy.md" >}})\), [Layers]({{< relref "../../part-2--basic-metapatterns/layers.md" >}})\.
@@ -77,12 +73,10 @@ If all the data a user operates on, directly or indirectly, is never accessed by
 
 ## Separate the data layer and add a load balancer
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Monolith/Monolith%20to%20Stateless%20Shards%20with%20Shared%20DB.png" alt="Monolith to Stateless Shards with Shared DB" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Monolith/Monolith%20to%20Stateless%20Shards%20with%20Shared%20DB.png" style="outline:none">
+<img src="/Evolutions/Monolith/Monolith%20to%20Stateless%20Shards%20with%20Shared%20DB.png" alt="Monolith to Stateless Shards with Shared DB" width=100%/>
+</a>
 </figure>
 
 <ins>Patterns</ins>: [Pool]({{< relref "../../part-2--basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}}) \([Shards]({{< relref "../../part-2--basic-metapatterns/shards.md" >}})\), [Shared Database]({{< relref "../../part-3--extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) \([Shared Repository]({{< relref "../../part-3--extension-metapatterns/shared-repository.md" >}})\), [Load Balancer]({{< relref "../../part-3--extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) \([Proxy]({{< relref "../../part-3--extension-metapatterns/proxy.md" >}})\), [Layers]({{< relref "../../part-2--basic-metapatterns/layers.md" >}})\.
@@ -109,12 +103,10 @@ As data moves into a dedicated layer, the application becomes stateless and inst
 
 ## Dedicate an instance to each client
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Monolith/Monolith%20to%20Instance%20per%20Client.png" alt="Monolith to Instance per Client" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Monolith/Monolith%20to%20Instance%20per%20Client.png" style="outline:none">
+<img src="/Evolutions/Monolith/Monolith%20to%20Instance%20per%20Client.png" alt="Monolith to Instance per Client" width=100%/>
+</a>
 </figure>
 
 <ins>Patterns</ins>: [Create on Demand]({{< relref "../../part-2--basic-metapatterns/shards.md#temporary-state-create-on-demand" >}}) \([Shards]({{< relref "../../part-2--basic-metapatterns/shards.md" >}})\), [Shared Repository]({{< relref "../../part-3--extension-metapatterns/shared-repository.md" >}}), [Virtualizer]({{< relref "../../part-5--implementation-metapatterns/microkernel.md#virtualizer-hypervisor-container-orchestrator-distributed-runtime" >}}) \([Microkernel]({{< relref "../../part-5--implementation-metapatterns/microkernel.md" >}})\), [Layers]({{< relref "../../part-2--basic-metapatterns/layers.md" >}})\.
@@ -149,12 +141,10 @@ In most cases *sharding* does not change much inside the application, thus the c
 - Granular scaling can apply to [*Pipelines*]({{< relref "../../part-2--basic-metapatterns/pipeline.md" >}}), but in many cases that does not make much sense as pipeline components tend to be lightweight and stateless, making it easy to scale the pipeline as a whole\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%201.png" alt="Monolith to Shards - Further 1" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%201.png" style="outline:none">
+<img src="/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%201.png" alt="Monolith to Shards - Further 1" width=100%/>
+</a>
 </figure>
 
 There are specific evolutions of [*Shards*]({{< relref "../../part-2--basic-metapatterns/shards.md" >}}) that deal with their drawbacks:
@@ -163,12 +153,10 @@ There are specific evolutions of [*Shards*]({{< relref "../../part-2--basic-meta
 - [*Orchestrator*]({{< relref "../../part-3--extension-metapatterns/orchestrator.md" >}}) is a mirror image of [*Shared Database*]({{< relref "../../part-3--extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}), another option to implement use cases that deal with data of multiple shards without the need for the shards to intercommunicate\. Stateless *Orchestrators* scale perfectly but may corrupt the data if two of them write to an overlapping set of records\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%202.png" alt="Monolith to Shards - Further 2" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%202.png" style="outline:none">
+<img src="/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%202.png" alt="Monolith to Shards - Further 2" width=100%/>
+</a>
 </figure>
 
 <nav>

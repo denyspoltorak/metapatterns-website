@@ -12,12 +12,10 @@ The last group of evolutions to consider is about making the system more adaptab
 - [*Scripts*]({{< relref "../../part-5--implementation-metapatterns/microkernel.md#interpreter-script-domain-specific-language-dsl" >}}) allow for customization of the system’s logic on a per client basis\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png" alt="Monolith to Layers - Further 2" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png" style="outline:none">
+<img src="/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png" alt="Monolith to Layers - Further 2" width=100%/>
+</a>
 </figure>
 
 There is also a new evolution that modifies the upper \(orchestration\) layer:
@@ -27,12 +25,10 @@ There is also a new evolution that modifies the upper \(orchestration\) layer:
 
 ## Divide the orchestration layer into Backends for Frontends
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.png" alt="Layers to Backends for Frontends" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.png" style="outline:none">
+<img src="/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.png" alt="Layers to Backends for Frontends" width=100%/>
+</a>
 </figure>
 
 <ins>Patterns</ins>: [Layers]({{< relref "../../part-2--basic-metapatterns/layers.md" >}}), [Backends for Frontends aka BFFs]({{< relref "../../part-4--fragmented-metapatterns/backends-for-frontends--bff-.md" >}})\.

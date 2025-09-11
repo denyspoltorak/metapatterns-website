@@ -10,12 +10,10 @@ There are several ways to improve the performance of a [*layered system*]({{< re
 - [*Space\-Based Architecture*]({{< relref "../../part-5--implementation-metapatterns/mesh.md#space-based-architecture" >}}) co\-locates the database and business logic and scales both dynamically\.
 
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.png" alt="Layers to Space-Based Architecture" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.png" style="outline:none">
+<img src="/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.png" alt="Layers to Space-Based Architecture" width=100%/>
+</a>
 </figure>
 
 Others are new here and thus deserve more attention:
@@ -27,12 +25,10 @@ Others are new here and thus deserve more attention:
 
 ## Merge several layers
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Layers/Layers%20Merge.png" alt="Layers Merge" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Layers/Layers%20Merge.png" style="outline:none">
+<img src="/Evolutions/Layers/Layers%20Merge.png" alt="Layers Merge" width=100%/>
+</a>
 </figure>
 
 <ins>Patterns</ins>: [Layers]({{< relref "../../part-2--basic-metapatterns/layers.md" >}}) or [Monolith]({{< relref "../../part-2--basic-metapatterns/monolith.md" >}})
@@ -62,12 +58,10 @@ If your system’s development [is finished]({{< relref "../../part-6--analytics
 
 ## Scale individual layers
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Layers/Layers_%20Shard.png" alt="Layers: Shard" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Layers/Layers_%20Shard.png" style="outline:none">
+<img src="/Evolutions/Layers/Layers_%20Shard.png" alt="Layers: Shard" width=100%/>
+</a>
 </figure>
 
 <ins>Patterns</ins>: [Layers]({{< relref "../../part-2--basic-metapatterns/layers.md" >}}), [Shards]({{< relref "../../part-2--basic-metapatterns/shards.md" >}}), often [Load Balancer]({{< relref "../../part-3--extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) \([Proxy]({{< relref "../../part-3--extension-metapatterns/proxy.md" >}})\)\.
@@ -98,12 +92,10 @@ Multiple instances or layers can be created, with their number and deployment [v
 
 ## Use multiple databases
 
-<figure>
-
-<div style="text-align:center">
-<img src="/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.png" alt="Layers to Polyglot Persistence" style="width:100%"/>
-</div>
-
+<figure style="text-align:center">
+<a href="/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.png" style="outline:none">
+<img src="/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.png" alt="Layers to Polyglot Persistence" width=100%/>
+</a>
 </figure>
 
 <ins>Patterns</ins>: [Layers]({{< relref "../../part-2--basic-metapatterns/layers.md" >}}), [Polyglot Persistence]({{< relref "../../part-4--fragmented-metapatterns/polyglot-persistence.md" >}})\.
