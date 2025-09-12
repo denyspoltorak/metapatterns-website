@@ -1,7 +1,7 @@
 +++
 weight = 10
 title = "Evolutions of Layers to gain flexibility"
-description = The upper Proxy or Orchestrator layer can be split into a service per client, making Backends for Frontends. This allows for per-client customization.
+description = "The upper Proxy or Orchestrator layer can be split into a service per client, making Backends for Frontends. This allows for per-client customization."
 +++
 
 # Evolutions of Layers to gain flexibility

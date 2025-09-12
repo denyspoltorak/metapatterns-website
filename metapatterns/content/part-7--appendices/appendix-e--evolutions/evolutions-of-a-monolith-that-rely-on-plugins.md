@@ -1,7 +1,7 @@
 +++
 weight = 4
 title = "Evolutions of a Monolith that rely on Plugins"
-description = Plugins or Interpreter make a monolithic component customizable. Hexagonal Architecture protects its business logic from unstable external dependencies. 
+description = "Plugins or Interpreter make a monolithic component customizable. Hexagonal Architecture protects its business logic from unstable external dependencies. "
 +++
 
 # Evolutions of a Monolith that rely on Plugins

@@ -1,7 +1,7 @@
 +++
 weight = 9
 title = "Appendix I. Index of patterns."
-description = The index of patterns described in the Architectural Metapatterns book.
+description = "The index of patterns described in the Architectural Metapatterns book."
 +++
 
 # Appendix I\. Index of patterns\.

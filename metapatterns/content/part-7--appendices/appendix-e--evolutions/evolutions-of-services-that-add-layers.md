@@ -1,7 +1,7 @@
 +++
 weight = 12
 title = "Evolutions of Services that add layers"
-description = A system of services can be extended with a Middleware, Service Mesh, Proxies, Shared Database or an Orchestrator which implement cross-cutting concerns.
+description = "A system of services can be extended with a Middleware, Service Mesh, Proxies, Shared Database or an Orchestrator which implement cross-cutting concerns."
 +++
 
 # Evolutions of Services that add layers

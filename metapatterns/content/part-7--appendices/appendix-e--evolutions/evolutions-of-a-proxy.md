@@ -1,7 +1,7 @@
 +++
 weight = 16
 title = "Evolutions of a Proxy"
-description = A new system-wide proxy may be stacked with the existing one or you can deploy a proxy per client type.
+description = "A new system-wide proxy may be stacked with the existing one or you can deploy a proxy per client type."
 +++
 
 # Evolutions of a Proxy

@@ -1,7 +1,7 @@
 +++
 weight = 9
 title = "Service-Oriented Architecture (SOA)"
-description = Service-Oriented Architecture is an application of object-oriented design at the system level. It builds a system from small reusable components.
+description = "Service-Oriented Architecture is an application of object-oriented design at the system level. It builds a system from small reusable components."
 +++
 
 # Service\-Oriented Architecture \(SOA\)

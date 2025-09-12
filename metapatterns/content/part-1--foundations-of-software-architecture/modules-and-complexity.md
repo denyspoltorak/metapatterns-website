@@ -1,7 +1,7 @@
 +++
 weight = 1
 title = "Modules and complexity"
-description = Complexity is the number of concepts which one must keep in mind to understand a system. Breaking a system into components may lower its complexity.
+description = "Complexity is the number of concepts which one must keep in mind to understand a system. Breaking a system into components may lower its complexity."
 +++
 
 # Modules and complexity

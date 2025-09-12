@@ -1,7 +1,7 @@
 +++
 weight = 2
 title = "Deconstructing patterns"
-description = Both SOLID principles, Gang of Four design patterns, and architectural metapatterns emerge from the interplay of coupling and cohesion.
+description = "Both SOLID principles, Gang of Four design patterns, and architectural metapatterns emerge from the interplay of coupling and cohesion."
 +++
 
 # Deconstructing patterns

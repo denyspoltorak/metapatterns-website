@@ -1,7 +1,7 @@
 +++
 weight = 5
 title = "Part 4. Fragmented metapatterns"
-description = Fragmented architectures make use of small specialized components. Examples include Layered Services, BFF, SOA, Polyglot Persistence, and Hierarchy.
+description = "Fragmented architectures make use of small specialized components. Examples include Layered Services, BFF, SOA, Polyglot Persistence, and Hierarchy."
 bookCollapseSection = true
 +++
 

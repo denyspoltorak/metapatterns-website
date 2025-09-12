@@ -1,7 +1,7 @@
 +++
 weight = 9
 title = "Services"
-description = Services are components dedicated to subdomains. They may vary in size, internal structure and technologies. A service can be further subdivided into a Cell.
+description = "Services are components dedicated to subdomains. They may vary in size, internal structure and technologies. A service can be further subdivided into a Cell."
 +++
 
 # Services

@@ -1,7 +1,7 @@
 +++
 weight = 3
 title = "Appendix C. Copyright."
-description = Creative Commons Attribution 4.0 International Public License.
+description = "Creative Commons Attribution 4.0 International Public License."
 bookSearchExclude = true
 [sitemap]
   disable = true

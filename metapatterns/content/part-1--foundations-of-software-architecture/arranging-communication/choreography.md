@@ -1,7 +1,7 @@
 +++
 weight = 3
 title = "Choreography"
-description = In choreography user requests or input events pass through a chain of components that handle individual steps of the scenario which the system implements.
+description = "In choreography user requests or input events pass through a chain of components that handle individual steps of the scenario which the system implements."
 +++
 
 # Choreography

@@ -1,7 +1,7 @@
 +++
 weight = 8
 title = "Part 7. Appendices"
-description = This part contains miscellaneous information which ranges from marginally useful (e.g. pattern evolutions) to copyright and revisions history.
+description = "This part contains miscellaneous information which ranges from marginally useful (e.g. pattern evolutions) to copyright and revisions history."
 bookCollapseSection = true
 +++
 

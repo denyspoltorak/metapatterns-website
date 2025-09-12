@@ -1,7 +1,7 @@
 +++
 weight = 5
 title = "Plugins"
-description = Plugins let a client customize select aspects of a system's behavior. Addons build their application logic on top of whatever the modified system provides.
+description = "Plugins let a client customize select aspects of a system's behavior. Addons build their application logic on top of whatever the modified system provides."
 +++
 
 # Plugins

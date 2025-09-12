@@ -1,7 +1,7 @@
 +++
 weight = 3
 title = "Choose your own architecture"
-description = This is a guide to choosing an architectural style based on project size, domain features, target performance and flexibility requirements.
+description = "This is a guide to choosing an architectural style based on project size, domain features, target performance and flexibility requirements."
 +++
 
 # Choose your own architecture

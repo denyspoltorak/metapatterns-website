@@ -1,7 +1,7 @@
 +++
 weight = 2
 title = "Pipelines in architectural patterns"
-description = Pipeline is a unidirectional data flow. Depending on pattern, it may or may not preserve: data type, data identity and temporal order of the data stream.
+description = "Pipeline is a unidirectional data flow. Depending on pattern, it may or may not preserve: data type, data identity and temporal order of the data stream."
 +++
 
 # Pipelines in architectural patterns

@@ -1,7 +1,7 @@
 +++
 weight = 5
 title = "Comparison of communication styles"
-description = Orchestration is good when there are many complex scenarios, choreography - for simple highly loaded systems, shared data - for data-centric domains.
+description = "Orchestration is good when there are many complex scenarios, choreography - for simple highly loaded systems, shared data - for data-centric domains."
 +++
 
 # Comparison of communication styles

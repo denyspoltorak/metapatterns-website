@@ -1,7 +1,7 @@
 +++
 weight = 1
 title = "Appendix A. Acknowledgements."
-description = Thanks to the people who made Architectural Metapatterns possible.
+description = "Thanks to the people who made Architectural Metapatterns possible."
 bookSearchExclude = true
 [sitemap]
   disable = true

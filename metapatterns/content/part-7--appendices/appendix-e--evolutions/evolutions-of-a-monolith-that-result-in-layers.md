@@ -1,7 +1,7 @@
 +++
 weight = 2
 title = "Evolutions of a Monolith that result in Layers"
-description = A Monolith can be split into Layers, or a specialized layer, such as a Proxy or an Orchestrator, may be added between an existing Monolith and its clients.
+description = "A Monolith can be split into Layers, or a specialized layer, such as a Proxy or an Orchestrator, may be added between an existing Monolith and its clients."
 +++
 
 # Evolutions of a Monolith that result in Layers

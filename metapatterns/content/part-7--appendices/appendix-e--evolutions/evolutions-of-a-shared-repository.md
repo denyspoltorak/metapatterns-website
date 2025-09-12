@@ -1,7 +1,7 @@
 +++
 weight = 15
 title = "Evolutions of a Shared Repository"
-description = A shared database can be sharded or divided into private databases. Space-Based Architecture or Polyglot Persistence help to improve performance.
+description = "A shared database can be sharded or divided into private databases. Space-Based Architecture or Polyglot Persistence help to improve performance."
 +++
 
 # Evolutions of a Shared Repository

@@ -1,7 +1,7 @@
 +++
 weight = 8
 title = "Backends for Frontends (BFF)"
-description = Backends for Frontends dedicates a component to each kind of a system's client. That grants flexibility in workflows and technologies.
+description = "Backends for Frontends dedicates a component to each kind of a system's client. That grants flexibility in workflows and technologies."
 +++
 
 # Backends for Frontends \(BFF\)

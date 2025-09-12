@@ -1,7 +1,7 @@
 +++
 weight = 8
 title = "Proxy"
-description = A Proxy represents a system to its clients. It implements cross-cutting concerns, such as caching or protocol translation, and routes client requests.
+description = "A Proxy represents a system to its clients. It implements cross-cutting concerns, such as caching or protocol translation, and routes client requests."
 +++
 
 # Proxy
