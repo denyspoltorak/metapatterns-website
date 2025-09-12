@@ -12,7 +12,7 @@ Now, having leisure thanks to the war, burnout, unemployment and depression I ha
 
 The book is mostly technology\-agnostic\. It does not answer practical questions like “Which database should I use?” Instead it inclines towards the understanding of “When should I use a shared database?” Any specific technologies ~are easy to google~ can be found ~over the Internet~ somewhere in the Noosphere\.
 
-This book started as a rather small project to prove that patterns can be intuitively classified \(*These nightmarish creatures* can *be felled\! They* can *be beaten\!*\) but grew into a multifaceted compendium of a hundred or so architectures and architectural patterns\. It is grounded in the idea that software and system architecture evolves naturally, as opposed to being scientifically planned\. Thus, the architectures may exhibit [fractal features]({{< relref "../part-1--foundations-of-software-architecture/arranging-communication/programming-and-architectural-paradigms.md" >}}), just like those in biology – merely because the [set of guidelines and forces]({{< relref "../part-6--analytics/the-heart-of-software-architecture/cohesers-and-decouplers.md" >}}) remains the same for most systems that range from low\-end embedded devices to world\-wide financial networks\. Moreover, in some cases we can see the same patterns applied to hardware design\.
+This book started as a rather small project to prove that patterns can be intuitively classified \(*These nightmarish creatures* can *be felled\! They* can *be beaten\!*\) but grew into a multifaceted compendium of a hundred or so architectures and architectural patterns\. It is grounded in the idea that software and system architecture evolves naturally, as opposed to being scientifically planned\. Thus, the architectures may exhibit [fractal features]({{< relref "../foundations-of-software-architecture/arranging-communication/programming-and-architectural-paradigms.md" >}}), just like those in biology – merely because the [set of guidelines and forces]({{< relref "../analytics/the-heart-of-software-architecture/cohesers-and-decouplers.md" >}}) remains the same for most systems that range from low\-end embedded devices to world\-wide financial networks\. Moreover, in some cases we can see the same patterns applied to hardware design\.
 
 The idea of unifying software and system architecture is heretical\. I am well aware of that\. Still, the industry is in the early stage of alchemy these days: the same things are sold under multitudes of names, being remarketed or reinvented every decade\. If this book manages to provide rules of thumb, similar to those of biology \(a bat is a mammal, thus it should run on all four, while ostriches, as birds, must fly to Europe each spring\), I will be happy with that\. *Science makes progress funeral by funeral*\.
 
@@ -20,13 +20,13 @@ The latest version of the book is available for free on [GitHub](https://github.
 
 ## Structure of the book
 
-The [first chapter]({{< relref "../introduction/metapatterns.md" >}}) explains the main idea which makes this book different from others\. The following chapters in the [first part]({{< relref "../part-1--foundations-of-software-architecture/_index.md" >}}) touch on several general topics that are referenced throughout the book\.
+The [first chapter]({{< relref "../introduction/metapatterns.md" >}}) explains the main idea which makes this book different from others\. The following chapters in the [first part]({{< relref "../foundations-of-software-architecture/_index.md" >}}) touch on several general topics that are referenced throughout the book\.
 
-The next [four parts]({{< relref "../part-2--basic-metapatterns/_index.md" >}}) iterate over *metapatterns* \(clusters of closely related architectural patterns\), starting with the simplest one, namely [*Monolith*]({{< relref "../part-2--basic-metapatterns/monolith.md" >}}), then heading towards more complex systems that may be derived from *Monolith* by repeatedly dissecting it with interfaces\. Each chapter describes a group of related patterns that share benefits and drawbacks, adds in a few references to books and websites, and summarizes the ways the patterns can be transformed into other architectures\. The format of these chapters is described in [Appendix F]({{< relref "../part-7--appendices/appendix-f--format-of-a-metapattern.md" >}})\.
+The next [four parts]({{< relref "../basic-metapatterns/_index.md" >}}) iterate over *metapatterns* \(clusters of closely related architectural patterns\), starting with the simplest one, namely [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}), then heading towards more complex systems that may be derived from *Monolith* by repeatedly dissecting it with interfaces\. Each chapter describes a group of related patterns that share benefits and drawbacks, adds in a few references to books and websites, and summarizes the ways the patterns can be transformed into other architectures\. The format of these chapters is described in [Appendix F]({{< relref "../appendices/format-of-a-metapattern.md" >}})\.
 
-The [sixth part]({{< relref "../part-6--analytics/_index.md" >}}) of the book is analytics – the fruits of the pattern classification from the earlier parts\.
+The [sixth part]({{< relref "../analytics/_index.md" >}}) of the book is analytics – the fruits of the pattern classification from the earlier parts\.
 
-Finally, there are appendices\. [Appendix B]({{< relref "../part-7--appendices/appendix-b--books-referenced.md" >}}) is the list of the books referenced, [Appendix E]({{< relref "../part-7--appendices/appendix-e--evolutions/_index.md" >}}) contains detailed evolutions of patterns and [Appendix I]({{< relref "../part-7--appendices/appendix-i--index-of-patterns.md" >}}) is the index of the patterns found in the book\.
+Finally, there are appendices\. [Appendix B]({{< relref "../appendices/books-referenced.md" >}}) is the list of the books referenced, [Appendix E]({{< relref "../appendices/evolutions/_index.md" >}}) contains detailed evolutions of patterns and [Appendix I]({{< relref "../appendices/index-of-patterns.md" >}}) is the index of the patterns found in the book\.
 
 ## Diagrams
 
@@ -44,10 +44,10 @@ Please refer to the [following chapter]({{< relref "../introduction/metapatterns
 
 ## Notation
 
-- Pattern names are given in [*Title Case Italics*]({{< relref "../part-7--appendices/appendix-i--index-of-patterns.md" >}}) and usually link to the pattern’s definition\.
+- Pattern names are given in [*Title Case Italics*]({{< relref "../appendices/index-of-patterns.md" >}}) and usually link to the pattern’s definition\.
 - The first mention of a term or a name of a pattern component is *italicized*\.
 - *Quotes and puns are in full italics*\.
-- Book references are \[[BRACKETED]({{< relref "../part-7--appendices/appendix-b--books-referenced.md" >}})\] and link to the list of the books in Appendix B\.
+- Book references are \[[BRACKETED]({{< relref "../appendices/books-referenced.md" >}})\] and link to the list of the books in Appendix B\.
 - > Supplementary explanations are grayed\-out\.
 
 
@@ -92,9 +92,9 @@ Have we been fooled?
 
 ## TLDR
 
-Compare [*Firewall*]({{< relref "../part-3--extension-metapatterns/proxy.md#firewall-api-rate-limiter-api-throttling" >}}) and [*Response Cache*]({{< relref "../part-3--extension-metapatterns/proxy.md#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}})\. Both represent a system to its users and implement generic aspects of the system’s behavior\. Both are [*Proxies*]({{< relref "../part-3--extension-metapatterns/proxy.md" >}})\.
+Compare [*Firewall*]({{< relref "../extension-metapatterns/proxy.md#firewall-api-rate-limiter-api-throttling" >}}) and [*Response Cache*]({{< relref "../extension-metapatterns/proxy.md#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}})\. Both represent a system to its users and implement generic aspects of the system’s behavior\. Both are [*Proxies*]({{< relref "../extension-metapatterns/proxy.md" >}})\.
 
-Take [*Saga Execution Component*]({{< relref "../part-3--extension-metapatterns/orchestrator.md#orchestrated-saga-saga-orchestrator-saga-execution-component-transaction-script-coordinator" >}}) and [*API Composer*]({{< relref "../part-3--extension-metapatterns/orchestrator.md#api-composer-remote-facade-gateway-aggregation-composed-message-processor-scatter-gather-mapreduce" >}})\. Both are high\-level services that make a series of calls into an underlying system – they *orchestrate* it\. Both are [*Orchestrators*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}})\.
+Take [*Saga Execution Component*]({{< relref "../extension-metapatterns/orchestrator.md#orchestrated-saga-saga-orchestrator-saga-execution-component-transaction-script-coordinator" >}}) and [*API Composer*]({{< relref "../extension-metapatterns/orchestrator.md#api-composer-remote-facade-gateway-aggregation-composed-message-processor-scatter-gather-mapreduce" >}})\. Both are high\-level services that make a series of calls into an underlying system – they *orchestrate* it\. Both are [*Orchestrators*]({{< relref "../extension-metapatterns/orchestrator.md" >}})\.
 
 It’s that simple and stupid\. We can classify architectural patterns\.
 
