@@ -1,6 +1,7 @@
 +++
 weight = 18
 title = "Combined Component:"
+description = A stack of single-purpose layers can replace a Combined Component, buying you flexibility at the cost of development effort and, often, performance.
 +++
 
 # Combined Component:

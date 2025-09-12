@@ -1,6 +1,7 @@
 +++
 weight = 6
 title = "Metapatterns"
+description = A metapattern is a cluster of patterns with related structure and function. We draw designs along the abstractness, subdomain and sharding axes.
 +++
 
 # Metapatterns

@@ -1,6 +1,7 @@
 +++
 weight = 3
 title = "Architecture and product life cycle"
+description = Architecture of a software project evolves over its lifetime. It starts monolithic, transforms into Layers and Services, then merges back to a Monolith.
 +++
 
 # Architecture and product life cycle

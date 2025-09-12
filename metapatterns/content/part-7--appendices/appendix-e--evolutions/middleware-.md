@@ -1,6 +1,7 @@
 +++
 weight = 14
 title = "Middleware:"
+description = It is possible to add a second specialized Middleware or integrate several systems through a hierarchy of Middlewares.
 +++
 
 # Middleware:

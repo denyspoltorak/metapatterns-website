@@ -1,6 +1,7 @@
 +++
 weight = 4
 title = "Indirection in commands and queries"
+description = Indirection is implemented with Anticorruption Layer or Open Host Service in OLTP and with CQRS View or Reporting Database in OLAP systems.
 +++
 
 # Indirection in commands and queries

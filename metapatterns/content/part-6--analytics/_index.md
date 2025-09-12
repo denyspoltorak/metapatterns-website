@@ -1,6 +1,7 @@
 +++
 weight = 7
 title = "Part 6. Analytics"
+description = This part compares different aspects of patterns which were covered in the previous chapters and outlines a few general topics of software architecture.
 bookCollapseSection = true
 +++
 

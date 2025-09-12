@@ -1,6 +1,7 @@
 +++
 weight = 1
 title = "Monolith: to Shards"
+description = Multiple stateful or stateless instances of a Monolith can be deployed to improve performance. The systems may need a Sharding Proxy or Load Balancer.
 +++
 
 # Monolith: to Shards

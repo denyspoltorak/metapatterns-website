@@ -1,6 +1,7 @@
 +++
 weight = 8
 title = "Appendix H. History of changes."
+description = The list of versions of Architectural Metapatterns and its predecessors.
 bookSearchExclude = true
 [sitemap]
   disable = true

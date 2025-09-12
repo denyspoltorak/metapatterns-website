@@ -1,6 +1,7 @@
 +++
 weight = 2
 title = "Part 1. Foundations"
+description = This part reviews the basics of software architecture: forces, complexity, distribution, and the ways to connect multiple components in a system.
 bookCollapseSection = true
 +++
 

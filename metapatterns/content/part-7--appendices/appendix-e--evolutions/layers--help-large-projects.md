@@ -1,6 +1,7 @@
 +++
 weight = 8
 title = "Layers: help large projects"
+description = When a layered software grows large, its business logic should be subdivided into Services, Pipeline or Hierarchy.
 +++
 
 # Layers: help large projects

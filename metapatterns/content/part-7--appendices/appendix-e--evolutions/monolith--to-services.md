@@ -1,6 +1,7 @@
 +++
 weight = 3
 title = "Monolith: to Services"
+description = A Monolith can be divided into modules, Services or a Pipeline to support development by multiple teams, improve its codebase, and employ more hardware.
 +++
 
 # Monolith: to Services

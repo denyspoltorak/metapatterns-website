@@ -1,6 +1,7 @@
 +++
 weight = 6
 title = "Shards: share logic"
+description = Intershard communication is helped by a Middleware or is made unnecessary by employing a Sharding Proxy or an Orchestrator.
 +++
 
 # Shards: share logic

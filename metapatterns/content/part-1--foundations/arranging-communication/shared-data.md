@@ -1,6 +1,7 @@
 +++
 weight = 4
 title = "Shared data"
+description = Communication through shared data benefits data-centric domains where multiple services need to operate on a common dataset.
 +++
 
 # Shared data

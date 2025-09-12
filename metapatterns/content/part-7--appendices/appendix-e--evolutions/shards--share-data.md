@@ -1,6 +1,7 @@
 +++
 weight = 5
 title = "Shards: share data"
+description = The main issue with Shards is coordination between the instances. It is solved by deploying a Shared Repository or wrapping the shared data with a service.
 +++
 
 # Shards: share data

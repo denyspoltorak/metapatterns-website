@@ -1,6 +1,7 @@
 +++
 weight = 11
 title = "Services: add or remove services"
+description = A new service can be added, an existing one can be split in two, or multiple services can be merged if they become tightly coupled.
 +++
 
 # Services: add or remove services

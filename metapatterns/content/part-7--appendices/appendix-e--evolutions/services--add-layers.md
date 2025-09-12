@@ -1,6 +1,7 @@
 +++
 weight = 12
 title = "Services: add layers"
+description = A system of services can be extended with a Middleware, Service Mesh, Proxies, Shared Database or an Orchestrator which implement cross-cutting concerns.
 +++
 
 # Services: add layers

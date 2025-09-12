@@ -1,6 +1,7 @@
 +++
 weight = 7
 title = "Layers: make more layers"
+description = It is often possible to split the business logic layer in two, namely, integration or application logic (scenarios) and domain logic (business rules).
 +++
 
 # Layers: make more layers

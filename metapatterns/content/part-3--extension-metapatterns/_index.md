@@ -1,6 +1,7 @@
 +++
 weight = 4
 title = "Part 3. Extension Metapatterns"
+description = A system of services can be extended with one or more specialized layers such as a Proxy, a Middleware, an Orchestrator, or a Shared Repository.
 bookCollapseSection = true
 +++
 

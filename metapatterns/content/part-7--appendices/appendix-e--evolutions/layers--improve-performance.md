@@ -1,6 +1,7 @@
 +++
 weight = 9
 title = "Layers: improve performance"
+description = There are a few ways to improve performance of a layered system: merge the layers, scale them, or use specialized databases (Polyglot Persistence).
 +++
 
 # Layers: improve performance

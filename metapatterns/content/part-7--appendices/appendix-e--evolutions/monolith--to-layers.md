@@ -1,6 +1,7 @@
 +++
 weight = 2
 title = "Monolith: to Layers"
+description = A Monolith can be split into Layers, or a specialized layer, such as a Proxy or an Orchestrator, may be added between an existing Monolith and its clients.
 +++
 
 # Monolith: to Layers

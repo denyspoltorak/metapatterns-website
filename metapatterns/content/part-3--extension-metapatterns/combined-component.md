@@ -1,6 +1,7 @@
 +++
 weight = 10
 title = "Combined Component"
+description = A Combined Component implements two or more of the following extension patterns: Middleware, Shared Repository, Proxy, and Orchestrator.
 +++
 
 # Combined Component

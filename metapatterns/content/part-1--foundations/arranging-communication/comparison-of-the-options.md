@@ -1,6 +1,7 @@
 +++
 weight = 5
 title = "Comparison of the options"
+description = Orchestration is good when there are many complex scenarios, choreography - for simple highly loaded systems, shared data - for data-centric domains.
 +++
 
 # Comparison of the options

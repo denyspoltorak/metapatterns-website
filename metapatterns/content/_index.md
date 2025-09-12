@@ -1,6 +1,7 @@
 +++
 weight = 1
 title = "The pattern language of software architecture"
+description = The Metapatterns website is a compendium and classification of architectural patterns based on the assumption that structure determines function.
 bookCollapseSection = true
 +++
 

@@ -1,6 +1,7 @@
 +++
 weight = 7
 title = "Appendix G. Glossary."
+description = The glossary of terms used throughout the Architectural Metapatterns book.
 +++
 
 # Appendix G\. Glossary\.

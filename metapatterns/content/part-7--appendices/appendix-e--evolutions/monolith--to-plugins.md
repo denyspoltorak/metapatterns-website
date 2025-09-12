@@ -1,6 +1,7 @@
 +++
 weight = 4
 title = "Monolith: to Plugins"
+description = Plugins or Interpreter make a monolithic component customizable. Hexagonal Architecture protects its business logic from unstable external dependencies. 
 +++
 
 # Monolith: to Plugins

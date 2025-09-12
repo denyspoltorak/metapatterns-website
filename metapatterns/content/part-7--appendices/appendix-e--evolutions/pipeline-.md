@@ -1,6 +1,7 @@
 +++
 weight = 13
 title = "Pipeline:"
+description = A Front Controller may be used to track states of running requests. Alternatively, adding an Orchestrator benefits complex scenarios.
 +++
 
 # Pipeline:

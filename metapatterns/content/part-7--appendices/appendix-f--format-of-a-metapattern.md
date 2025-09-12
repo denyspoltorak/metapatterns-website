@@ -1,6 +1,7 @@
 +++
 weight = 6
 title = "Appendix F. Format of a metapattern."
+description = This section formalized the format of each of the metapattern chapters.
 +++
 
 # Appendix F\. Format of a metapattern\.

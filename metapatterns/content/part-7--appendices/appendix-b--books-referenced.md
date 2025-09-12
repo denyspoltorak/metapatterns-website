@@ -1,6 +1,7 @@
 +++
 weight = 2
 title = "Appendix B. Books referenced."
+description = The list of books which Architectural Metapatterns references.
 +++
 
 # Appendix B\. Books referenced\.
