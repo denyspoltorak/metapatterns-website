@@ -36,7 +36,7 @@ Adding *control* to the blend is more subtle, but no less crucial than the encap
 
 <figure style="text-align:center">
 <a href="/Communication/Paradigms%20-%20Object-oriented.png" style="outline:none">
-<img src="/Communication/Paradigms%20-%20Object-oriented.png" alt="Paradigms - Object-oriented" width=100%/>
+<img src="/Communication/Paradigms%20-%20Object-oriented.png" alt="Paradigms - Object-oriented" style="width:100%"/>
 </a>
 </figure>
 
@@ -44,7 +44,7 @@ The ability to address complex domains by reducing the whole to self\-contained 
 
 <figure style="text-align:center">
 <a href="/Communication/Paradigms%20-%20Object-oriented%20-%20Variants.png" style="outline:none">
-<img src="/Communication/Paradigms%20-%20Object-oriented%20-%20Variants.png" alt="Paradigms - Object-oriented - Variants" width=100%/>
+<img src="/Communication/Paradigms%20-%20Object-oriented%20-%20Variants.png" alt="Paradigms - Object-oriented - Variants" style="width:100%"/>
 </a>
 </figure>
 
@@ -54,7 +54,7 @@ Sometimes you don’t need that level of fine\-tuning for the behavior of the sy
 
 <figure style="text-align:center">
 <a href="/Communication/Paradigms%20-%20Functional.png" style="outline:none">
-<img src="/Communication/Paradigms%20-%20Functional.png" alt="Paradigms - Functional" width=100%/>
+<img src="/Communication/Paradigms%20-%20Functional.png" alt="Paradigms - Functional" style="width:100%"/>
 </a>
 </figure>
 
@@ -64,7 +64,7 @@ In distributed systems the functional paradigm is disguised as [*Choreographed E
 
 <figure style="text-align:center">
 <a href="/Communication/Paradigms%20-%20Functional%20-%20Variants.png" style="outline:none">
-<img src="/Communication/Paradigms%20-%20Functional%20-%20Variants.png" alt="Paradigms - Functional - Variants" width=100%/>
+<img src="/Communication/Paradigms%20-%20Functional%20-%20Variants.png" alt="Paradigms - Functional - Variants" style="width:100%"/>
 </a>
 </figure>
 
@@ -74,7 +74,7 @@ The final approach is integration through data\. There are cases where the domai
 
 <figure style="text-align:center">
 <a href="/Communication/Paradigms%20-%20Data-centric.png" style="outline:none">
-<img src="/Communication/Paradigms%20-%20Data-centric.png" alt="Paradigms - Data-centric" width=100%/>
+<img src="/Communication/Paradigms%20-%20Data-centric.png" alt="Paradigms - Data-centric" style="width:100%"/>
 </a>
 </figure>
 
@@ -82,7 +82,7 @@ In the data\-centric paradigm *logic* and *data* are structured independently\. 
 
 <figure style="text-align:center">
 <a href="/Communication/Paradigms%20-%20Data-centric%20-%20Notifications.png" style="outline:none">
-<img src="/Communication/Paradigms%20-%20Data-centric%20-%20Notifications.png" alt="Paradigms - Data-centric - Notifications" width=100%/>
+<img src="/Communication/Paradigms%20-%20Data-centric%20-%20Notifications.png" alt="Paradigms - Data-centric - Notifications" style="width:100%"/>
 </a>
 </figure>
 
@@ -90,7 +90,7 @@ The data\-centric approach works well for moderately\-sized projects with a stab
 
 <figure style="text-align:center">
 <a href="/Communication/Paradigms%20-%20Data-centric%20-%20Variants.png" style="outline:none">
-<img src="/Communication/Paradigms%20-%20Data-centric%20-%20Variants.png" alt="Paradigms - Data-centric - Variants" width=100%/>
+<img src="/Communication/Paradigms%20-%20Data-centric%20-%20Variants.png" alt="Paradigms - Data-centric - Variants" style="width:100%"/>
 </a>
 </figure>
 

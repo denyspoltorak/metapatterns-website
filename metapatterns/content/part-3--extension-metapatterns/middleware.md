@@ -7,7 +7,7 @@ title = "Middleware"
 
 <figure style="text-align:center">
 <a href="/Main/Middleware.png" style="outline:none">
-<img src="/Main/Middleware.png" alt="Middleware" width=100%/>
+<img src="/Main/Middleware.png" alt="Middleware" style="width:100%"/>
 </a>
 </figure>
 
@@ -67,7 +67,7 @@ Each service depends both on the *Middleware* and on the API of every service it
 
 <figure style="text-align:center">
 <a href="/Dependencies/Middleware.png" style="outline:none">
-<img src="/Dependencies/Middleware.png" alt="Middleware" width=100%/>
+<img src="/Dependencies/Middleware.png" alt="Middleware" style="width:100%"/>
 </a>
 </figure>
 
@@ -92,7 +92,7 @@ You may decide to use an [*Anticorruption Layer*]({{< relref "../part-3--extensi
 
 <figure style="text-align:center">
 <a href="/Relations/Middleware.png" style="outline:none">
-<img src="/Relations/Middleware.png" alt="Middleware" width=100%/>
+<img src="/Relations/Middleware.png" alt="Middleware" style="width:100%"/>
 </a>
 </figure>
 
@@ -152,7 +152,7 @@ If the messages are stored indefinitely, the *Middleware* becomes a *Persistent*
 
 <figure style="text-align:center">
 <a href="/Misc/Middleware.png" style="outline:none">
-<img src="/Misc/Middleware.png" alt="Middleware" width=100%/>
+<img src="/Misc/Middleware.png" alt="Middleware" style="width:100%"/>
 </a>
 </figure>
 
@@ -173,7 +173,7 @@ There are several patterns which extend *Middleware* with other functions:
 
 <figure style="text-align:center">
 <a href="/Variants/2/Message%20Bus.png" style="outline:none">
-<img src="/Variants/2/Message%20Bus.png" alt="Message Bus" width=100%/>
+<img src="/Variants/2/Message%20Bus.png" alt="Message Bus" style="width:100%"/>
 </a>
 </figure>
 
@@ -183,7 +183,7 @@ A *Message Bus* \[[EIP]({{< relref "../part-7--appendices/appendix-b--books-refe
 
 <figure style="text-align:center">
 <a href="/Variants/1/Microservices.png" style="outline:none">
-<img src="/Variants/1/Microservices.png" alt="Microservices" width=100%/>
+<img src="/Variants/1/Microservices.png" alt="Microservices" style="width:100%"/>
 </a>
 </figure>
 
@@ -195,7 +195,7 @@ The internals of [*Service Mesh*]({{< relref "../part-5--implementation-metapatt
 
 <figure style="text-align:center">
 <a href="/Variants/2/Event%20Mediator.png" style="outline:none">
-<img src="/Variants/2/Event%20Mediator.png" alt="Event Mediator" width=100%/>
+<img src="/Variants/2/Event%20Mediator.png" alt="Event Mediator" style="width:100%"/>
 </a>
 </figure>
 
@@ -207,7 +207,7 @@ Slightly more details on the *Event Mediator* are [provided in the *Orchestrator
 
 <figure style="text-align:center">
 <a href="/Variants/2/Middleware%20-%20Shared%20Event%20Store.png" style="outline:none">
-<img src="/Variants/2/Middleware%20-%20Shared%20Event%20Store.png" alt="Middleware - Shared Event Store" width=100%/>
+<img src="/Variants/2/Middleware%20-%20Shared%20Event%20Store.png" alt="Middleware - Shared Event Store" style="width:100%"/>
 </a>
 </figure>
 
@@ -219,7 +219,7 @@ This pattern is detailed in the [*Combined Component* chapter]({{< relref "../pa
 
 <figure style="text-align:center">
 <a href="/Variants/2/Enterprise%20Service%20Bus.png" style="outline:none">
-<img src="/Variants/2/Enterprise%20Service%20Bus.png" alt="Enterprise Service Bus" width=100%/>
+<img src="/Variants/2/Enterprise%20Service%20Bus.png" alt="Enterprise Service Bus" style="width:100%"/>
 </a>
 </figure>
 
@@ -236,7 +236,7 @@ A *Middleware* is unlikely to be removed \(though it may be replaced\) once it i
 
 <figure style="text-align:center">
 <a href="/Evolutions/2/Middleware%20add%20Middleware.png" style="outline:none">
-<img src="/Evolutions/2/Middleware%20add%20Middleware.png" alt="Middleware add Middleware" width=100%/>
+<img src="/Evolutions/2/Middleware%20add%20Middleware.png" alt="Middleware add Middleware" style="width:100%"/>
 </a>
 </figure>
 
@@ -245,7 +245,7 @@ A *Middleware* is unlikely to be removed \(though it may be replaced\) once it i
 
 <figure style="text-align:center">
 <a href="/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.png" style="outline:none">
-<img src="/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.png" alt="Middleware to Bus of Buses" width=100%/>
+<img src="/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.png" alt="Middleware to Bus of Buses" style="width:100%"/>
 </a>
 </figure>
 

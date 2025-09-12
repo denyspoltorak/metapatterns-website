@@ -17,7 +17,7 @@ Other cases are better solved by extracting the logic that manipulates multiple 
 
 <figure style="text-align:center">
 <a href="/Evolutions/Shards/Shards%20add%20Middleware.png" style="outline:none">
-<img src="/Evolutions/Shards/Shards%20add%20Middleware.png" alt="Shards add Middleware" width=100%/>
+<img src="/Evolutions/Shards/Shards%20add%20Middleware.png" alt="Shards add Middleware" style="width:100%"/>
 </a>
 </figure>
 
@@ -45,7 +45,7 @@ A *Middleware* transports messages between shards, checks their health and recov
 
 <figure style="text-align:center">
 <a href="/Evolutions/Shards/Shards%20add%20Load%20Balancer.png" style="outline:none">
-<img src="/Evolutions/Shards/Shards%20add%20Load%20Balancer.png" alt="Shards add Load Balancer" width=100%/>
+<img src="/Evolutions/Shards/Shards%20add%20Load%20Balancer.png" alt="Shards add Load Balancer" style="width:100%"/>
 </a>
 </figure>
 
@@ -74,7 +74,7 @@ The client application may know the address of the shard which serves it and con
 
 <figure style="text-align:center">
 <a href="/Evolutions/Shards/Shards%20use%20Orchestrator.png" style="outline:none">
-<img src="/Evolutions/Shards/Shards%20use%20Orchestrator.png" alt="Shards use Orchestrator" width=100%/>
+<img src="/Evolutions/Shards/Shards%20use%20Orchestrator.png" alt="Shards use Orchestrator" style="width:100%"/>
 </a>
 </figure>
 

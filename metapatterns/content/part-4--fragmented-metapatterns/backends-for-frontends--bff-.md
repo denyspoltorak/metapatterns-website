@@ -7,7 +7,7 @@ title = "Backends for Frontends (BFF)"
 
 <figure style="text-align:center">
 <a href="/Main/Backends%20for%20Frontends.png" style="outline:none">
-<img src="/Main/Backends%20for%20Frontends.png" alt="Backends for Frontends" width=100%/>
+<img src="/Main/Backends%20for%20Frontends.png" alt="Backends for Frontends" style="width:100%"/>
 </a>
 </figure>
 
@@ -57,7 +57,7 @@ Each *BFF* depends on all the services it uses \(usually every service in the sy
 
 <figure style="text-align:center">
 <a href="/Dependencies/Backends%20for%20Frontends.png" style="outline:none">
-<img src="/Dependencies/Backends%20for%20Frontends.png" alt="Backends for Frontends" width=91%/>
+<img src="/Dependencies/Backends%20for%20Frontends.png" alt="Backends for Frontends" style="width:91%"/>
 </a>
 </figure>
 
@@ -79,7 +79,7 @@ Each *BFF* depends on all the services it uses \(usually every service in the sy
 
 <figure style="text-align:center">
 <a href="/Relations/BFF.png" style="outline:none">
-<img src="/Relations/BFF.png" alt="BFF" width=100%/>
+<img src="/Relations/BFF.png" alt="BFF" style="width:100%"/>
 </a>
 </figure>
 
@@ -97,7 +97,7 @@ Each *BFF* depends on all the services it uses \(usually every service in the sy
 
 <figure style="text-align:center">
 <a href="/Variants/3/BFF%20-%20Gateways.png" style="outline:none">
-<img src="/Variants/3/BFF%20-%20Gateways.png" alt="BFF - Gateways" width=100%/>
+<img src="/Variants/3/BFF%20-%20Gateways.png" alt="BFF - Gateways" style="width:100%"/>
 </a>
 </figure>
 
@@ -109,7 +109,7 @@ Multiple *Adapters* match the literal meaning of *Backends for Frontends* – ea
 
 <figure style="text-align:center">
 <a href="/Variants/3/BFF%20-%20Orchestrators.png" style="outline:none">
-<img src="/Variants/3/BFF%20-%20Orchestrators.png" alt="BFF - Orchestrators" width=100%/>
+<img src="/Variants/3/BFF%20-%20Orchestrators.png" alt="BFF - Orchestrators" style="width:100%"/>
 </a>
 </figure>
 
@@ -119,7 +119,7 @@ An [*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.m
 
 <figure style="text-align:center">
 <a href="/Variants/3/BFF%20-%20Gateways%20+%20Orchestrators.png" style="outline:none">
-<img src="/Variants/3/BFF%20-%20Gateways%20+%20Orchestrators.png" alt="BFF - Gateways + Orchestrators" width=100%/>
+<img src="/Variants/3/BFF%20-%20Gateways%20+%20Orchestrators.png" alt="BFF - Gateways + Orchestrators" style="width:100%"/>
 </a>
 </figure>
 
@@ -129,7 +129,7 @@ Clients vary in both access mode \(protocol\) and workflow\. [*Orchestrators*]({
 
 <figure style="text-align:center">
 <a href="/Variants/3/BFF%20-%20API%20gateways.png" style="outline:none">
-<img src="/Variants/3/BFF%20-%20API%20gateways.png" alt="BFF - API gateways" width=100%/>
+<img src="/Variants/3/BFF%20-%20API%20gateways.png" alt="BFF - API gateways" style="width:100%"/>
 </a>
 </figure>
 
@@ -139,7 +139,7 @@ Clients vary in access mode \(protocol\) and workflow and there is a third\-part
 
 <figure style="text-align:center">
 <a href="/Variants/3/BFF%20-%20Event%20mediators.png" style="outline:none">
-<img src="/Variants/3/BFF%20-%20Event%20mediators.png" alt="BFF - Event mediators" width=100%/>
+<img src="/Variants/3/BFF%20-%20Event%20mediators.png" alt="BFF - Event mediators" style="width:100%"/>
 </a>
 </figure>
 
@@ -157,7 +157,7 @@ Clients vary in access mode \(protocol\) and workflow and there is a third\-part
 
 <figure style="text-align:center">
 <a href="/Evolutions/3/BFF.png" style="outline:none">
-<img src="/Evolutions/3/BFF.png" alt="BFF" width=100%/>
+<img src="/Evolutions/3/BFF.png" alt="BFF" style="width:100%"/>
 </a>
 </figure>
 

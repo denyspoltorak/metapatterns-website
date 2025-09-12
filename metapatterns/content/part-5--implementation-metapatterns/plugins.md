@@ -7,7 +7,7 @@ title = "Plugins"
 
 <figure style="text-align:center">
 <a href="/Main/Plugins.png" style="outline:none">
-<img src="/Main/Plugins.png" alt="Plugins" width=100%/>
+<img src="/Main/Plugins.png" alt="Plugins" style="width:100%"/>
 </a>
 </figure>
 
@@ -46,7 +46,7 @@ The only case for a plugin to improve performance of a system that I can think u
 
 <figure style="text-align:center">
 <a href="/Performance/Plugins-injection.png" style="outline:none">
-<img src="/Performance/Plugins-injection.png" alt="Plugins-injection" width=100%/>
+<img src="/Performance/Plugins-injection.png" alt="Plugins-injection" style="width:100%"/>
 </a>
 </figure>
 
@@ -56,7 +56,7 @@ Each *plugin* depends on the *core*’s *API* \(for *Addons*\) or *SPI* \(for *P
 
 <figure style="text-align:center">
 <a href="/Dependencies/Plugins.png" style="outline:none">
-<img src="/Dependencies/Plugins.png" alt="Plugins" width=100%/>
+<img src="/Dependencies/Plugins.png" alt="Plugins" style="width:100%"/>
 </a>
 </figure>
 
@@ -78,7 +78,7 @@ Each *plugin* depends on the *core*’s *API* \(for *Addons*\) or *SPI* \(for *P
 
 <figure style="text-align:center">
 <a href="/Relations/Plugins.png" style="outline:none">
-<img src="/Relations/Plugins.png" alt="Plugins" width=68%/>
+<img src="/Relations/Plugins.png" alt="Plugins" style="width:68%"/>
 </a>
 </figure>
 

@@ -37,7 +37,7 @@ Remember how old Windows used to freeze on formatting a floppy or when it encoun
 
 <figure style="text-align:center">
 <a href="/Intro/Floppy-Sync.png" style="outline:none">
-<img src="/Intro/Floppy-Sync.png" alt="Floppy-Sync" width=80%/>
+<img src="/Intro/Floppy-Sync.png" alt="Floppy-Sync" style="width:80%"/>
 </a>
 </figure>
 
@@ -49,7 +49,7 @@ If the modules cannot communicate directly \(call each other and wait for the re
 
 <figure style="text-align:center">
 <a href="/Intro/Floppy-Async.png" style="outline:none">
-<img src="/Intro/Floppy-Async.png" alt="Floppy-Async" width=99%/>
+<img src="/Intro/Floppy-Async.png" alt="Floppy-Async" style="width:99%"/>
 </a>
 </figure>
 
@@ -68,7 +68,7 @@ This common division makes quite a lot of sense:
 
 <figure style="text-align:center">
 <a href="/Intro/3-Tier.png" style="outline:none">
-<img src="/Intro/3-Tier.png" alt="3-Tier" width=72%/>
+<img src="/Intro/3-Tier.png" alt="3-Tier" style="width:72%"/>
 </a>
 </figure>
 
@@ -93,7 +93,7 @@ Here reliability conflicts with accuracy: a human operator makes an accurate est
 
 <figure style="text-align:center">
 <a href="/Intro/Field%20Gateway.png" style="outline:none">
-<img src="/Intro/Field%20Gateway.png" alt="Field Gateway" width=100%/>
+<img src="/Intro/Field%20Gateway.png" alt="Field Gateway" style="width:100%"/>
 </a>
 </figure>
 

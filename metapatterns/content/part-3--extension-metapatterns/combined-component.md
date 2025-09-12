@@ -67,7 +67,7 @@ Combined components vary in their structure and properties:
 
 <figure style="text-align:center">
 <a href="/Variants/2/Message%20Bus.png" style="outline:none">
-<img src="/Variants/2/Message%20Bus.png" alt="Message Bus" width=100%/>
+<img src="/Variants/2/Message%20Bus.png" alt="Message Bus" style="width:100%"/>
 </a>
 </figure>
 
@@ -77,7 +77,7 @@ A *Message Bus* \[[EIP]({{< relref "../part-7--appendices/appendix-b--books-refe
 
 <figure style="text-align:center">
 <a href="/Variants/2/Multifunctional%20-%20API%20Gateway.png" style="outline:none">
-<img src="/Variants/2/Multifunctional%20-%20API%20Gateway.png" alt="Multifunctional - API Gateway" width=100%/>
+<img src="/Variants/2/Multifunctional%20-%20API%20Gateway.png" alt="Multifunctional - API Gateway" style="width:100%"/>
 </a>
 </figure>
 
@@ -91,7 +91,7 @@ Example: a thorough article from [Microsoft](https://learn.microsoft.com/en-us/a
 
 <figure style="text-align:center">
 <a href="/Variants/2/Multifunctional%20-%20Event%20Mediator.png" style="outline:none">
-<img src="/Variants/2/Multifunctional%20-%20Event%20Mediator.png" alt="Multifunctional - Event Mediator" width=100%/>
+<img src="/Variants/2/Multifunctional%20-%20Event%20Mediator.png" alt="Multifunctional - Event Mediator" style="width:100%"/>
 </a>
 </figure>
 
@@ -111,7 +111,7 @@ Example: Mediator Topology in the \[[FSA]({{< relref "../part-7--appendices/appe
 
 <figure style="text-align:center">
 <a href="/Variants/2/Multifunctional%20-%20Shared%20Event%20Store.png" style="outline:none">
-<img src="/Variants/2/Multifunctional%20-%20Shared%20Event%20Store.png" alt="Multifunctional - Shared Event Store" width=100%/>
+<img src="/Variants/2/Multifunctional%20-%20Shared%20Event%20Store.png" alt="Multifunctional - Shared Event Store" style="width:100%"/>
 </a>
 </figure>
 
@@ -127,7 +127,7 @@ Example: \[[DEDS]({{< relref "../part-7--appendices/appendix-b--books-referenced
 
 <figure style="text-align:center">
 <a href="/Variants/2/Front%20Controller.png" style="outline:none">
-<img src="/Variants/2/Front%20Controller.png" alt="Front Controller" width=100%/>
+<img src="/Variants/2/Front%20Controller.png" alt="Front Controller" style="width:100%"/>
 </a>
 </figure>
 
@@ -137,7 +137,7 @@ Example: \[[DEDS]({{< relref "../part-7--appendices/appendix-b--books-referenced
 
 <figure style="text-align:center">
 <a href="/Variants/2/Multifunctional%20-%20Enterprise%20Service%20Bus.png" style="outline:none">
-<img src="/Variants/2/Multifunctional%20-%20Enterprise%20Service%20Bus.png" alt="Multifunctional - Enterprise Service Bus" width=100%/>
+<img src="/Variants/2/Multifunctional%20-%20Enterprise%20Service%20Bus.png" alt="Multifunctional - Enterprise Service Bus" style="width:100%"/>
 </a>
 </figure>
 
@@ -149,7 +149,7 @@ Example: Orchestration\-Driven Service\-Oriented Architecture in \[[FSA]({{< rel
 
 <figure style="text-align:center">
 <a href="/Variants/2/Multifunctional%20-%20Service%20Mesh.png" style="outline:none">
-<img src="/Variants/2/Multifunctional%20-%20Service%20Mesh.png" alt="Multifunctional - Service Mesh" width=100%/>
+<img src="/Variants/2/Multifunctional%20-%20Service%20Mesh.png" alt="Multifunctional - Service Mesh" style="width:100%"/>
 </a>
 </figure>
 
@@ -161,7 +161,7 @@ A *Service* [*Mesh*]({{< relref "../part-5--implementation-metapatterns/mesh.md"
 
 <figure style="text-align:center">
 <a href="/Variants/2/Multifunctional%20-%20Space-Based%20Architecture.png" style="outline:none">
-<img src="/Variants/2/Multifunctional%20-%20Space-Based%20Architecture.png" alt="Multifunctional - Space-Based Architecture" width=100%/>
+<img src="/Variants/2/Multifunctional%20-%20Space-Based%20Architecture.png" alt="Multifunctional - Space-Based Architecture" style="width:100%"/>
 </a>
 </figure>
 
@@ -184,7 +184,7 @@ The patterns that involve [*orchestration*]({{< relref "../part-1--foundations/a
 
 <figure style="text-align:center">
 <a href="/Evolutions/2/Multifunctional_%20Split.png" style="outline:none">
-<img src="/Evolutions/2/Multifunctional_%20Split.png" alt="Multifunctional: Split" width=100%/>
+<img src="/Evolutions/2/Multifunctional_%20Split.png" alt="Multifunctional: Split" style="width:100%"/>
 </a>
 </figure>
 

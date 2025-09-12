@@ -13,7 +13,7 @@ Let’s explore how a force influences the structure of a project\. Consider the
 
 <figure style="text-align:center">
 <a href="/Heart/Pain.png" style="outline:none">
-<img src="/Heart/Pain.png" alt="Pain" width=100%/>
+<img src="/Heart/Pain.png" alt="Pain" style="width:100%"/>
 </a>
 </figure>
 
@@ -33,7 +33,7 @@ Such a behavior is common for forces and, by the way, it is also the case with e
 
 <figure style="text-align:center">
 <a href="/Heart/Hierarchy.png" style="outline:none">
-<img src="/Heart/Hierarchy.png" alt="Hierarchy" width=100%/>
+<img src="/Heart/Hierarchy.png" alt="Hierarchy" style="width:100%"/>
 </a>
 </figure>
 
@@ -72,7 +72,7 @@ And there are forces that try to keep your code fragmented:
 
 <figure style="text-align:center">
 <a href="/Heart/Lifecycle.png" style="outline:none">
-<img src="/Heart/Lifecycle.png" alt="Lifecycle" width=100%/>
+<img src="/Heart/Lifecycle.png" alt="Lifecycle" style="width:100%"/>
 </a>
 </figure>
 

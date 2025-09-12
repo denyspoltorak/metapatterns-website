@@ -7,7 +7,7 @@ title = "Hierarchy"
 
 <figure style="text-align:center">
 <a href="/Main/Hierarchy.png" style="outline:none">
-<img src="/Main/Hierarchy.png" alt="Hierarchy" width=100%/>
+<img src="/Main/Hierarchy.png" alt="Hierarchy" style="width:100%"/>
 </a>
 </figure>
 
@@ -52,7 +52,7 @@ No kind of distributed hierarchy is latency\-friendly as many use cases involve 
 
 <figure style="text-align:center">
 <a href="/Performance/Hierarchy%20-%20speed.png" style="outline:none">
-<img src="/Performance/Hierarchy%20-%20speed.png" alt="Hierarchy - speed" width=100%/>
+<img src="/Performance/Hierarchy%20-%20speed.png" alt="Hierarchy - speed" style="width:100%"/>
 </a>
 </figure>
 
@@ -65,7 +65,7 @@ Maintaining high throughput usually requires deploying multiple instances of the
 
 <figure style="text-align:center">
 <a href="/Performance/Hierarchy%20-%20optimizations.png" style="outline:none">
-<img src="/Performance/Hierarchy%20-%20optimizations.png" alt="Hierarchy - optimizations" width=100%/>
+<img src="/Performance/Hierarchy%20-%20optimizations.png" alt="Hierarchy - optimizations" style="width:100%"/>
 </a>
 </figure>
 
@@ -75,7 +75,7 @@ A parent node would usually define one \(for polymorphic children\) or more \(ot
 
 <figure style="text-align:center">
 <a href="/Dependencies/Hierarchy.png" style="outline:none">
-<img src="/Dependencies/Hierarchy.png" alt="Hierarchy" width=100%/>
+<img src="/Dependencies/Hierarchy.png" alt="Hierarchy" style="width:100%"/>
 </a>
 </figure>
 
@@ -100,7 +100,7 @@ A parent node would usually define one \(for polymorphic children\) or more \(ot
 
 <figure style="text-align:center">
 <a href="/Relations/Hierarchy.png" style="outline:none">
-<img src="/Relations/Hierarchy.png" alt="Hierarchy" width=100%/>
+<img src="/Relations/Hierarchy.png" alt="Hierarchy" style="width:100%"/>
 </a>
 </figure>
 
@@ -131,7 +131,7 @@ Example: an intrusion alarm logic may need to discern between cat\-affected IR s
 
 <figure style="text-align:center">
 <a href="/Variants/3/Hierarchy%20-%20Top-down.png" style="outline:none">
-<img src="/Variants/3/Hierarchy%20-%20Top-down.png" alt="Hierarchy - Top-down" width=100%/>
+<img src="/Variants/3/Hierarchy%20-%20Top-down.png" alt="Hierarchy - Top-down" style="width:100%"/>
 </a>
 </figure>
 
@@ -143,7 +143,7 @@ In the most common case *Hierarchy* is applied to business logic to build a laye
 
 <figure style="text-align:center">
 <a href="/Variants/3/PAC.png" style="outline:none">
-<img src="/Variants/3/PAC.png" alt="PAC" width=100%/>
+<img src="/Variants/3/PAC.png" alt="PAC" style="width:100%"/>
 </a>
 </figure>
 
@@ -151,7 +151,7 @@ In the most common case *Hierarchy* is applied to business logic to build a laye
 
 <figure style="text-align:center">
 <a href="/Variants/3/Hierarchy%20-%20Bottom-up.png" style="outline:none">
-<img src="/Variants/3/Hierarchy%20-%20Bottom-up.png" alt="Hierarchy - Bottom-up" width=100%/>
+<img src="/Variants/3/Hierarchy%20-%20Bottom-up.png" alt="Hierarchy - Bottom-up" style="width:100%"/>
 </a>
 </figure>
 
@@ -163,7 +163,7 @@ Example: [Automotive networks](https://www.mdpi.com/1424-8220/21/23/7917), integ
 
 <figure style="text-align:center">
 <a href="/Variants/3/Cell-Based%20Architecture.png" style="outline:none">
-<img src="/Variants/3/Cell-Based%20Architecture.png" alt="Cell-Based Architecture" width=100%/>
+<img src="/Variants/3/Cell-Based%20Architecture.png" alt="Cell-Based Architecture" style="width:100%"/>
 </a>
 </figure>
 
@@ -180,7 +180,7 @@ Uber [compacted](https://www.uber.com/blog/microservice-architecture/) 2200 [*Mi
 
 <figure style="text-align:center">
 <a href="/Evolutions/3/Hierarchy%20-%201.png" style="outline:none">
-<img src="/Evolutions/3/Hierarchy%20-%201.png" alt="Hierarchy - 1" width=100%/>
+<img src="/Evolutions/3/Hierarchy%20-%201.png" alt="Hierarchy - 1" style="width:100%"/>
 </a>
 </figure>
 

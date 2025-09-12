@@ -16,7 +16,7 @@ The last group of evolutions which we review does not really change the monolith
 
 <figure style="text-align:center">
 <a href="/Evolutions/Monolith/Monolith%20to%20Plugins.png" style="outline:none">
-<img src="/Evolutions/Monolith/Monolith%20to%20Plugins.png" alt="Monolith to Plugins" width=100%/>
+<img src="/Evolutions/Monolith/Monolith%20to%20Plugins.png" alt="Monolith to Plugins" style="width:100%"/>
 </a>
 </figure>
 
@@ -45,7 +45,7 @@ The last group of evolutions which we review does not really change the monolith
 
 <figure style="text-align:center">
 <a href="/Evolutions/Monolith/Monolith%20to%20Hexagonal.png" style="outline:none">
-<img src="/Evolutions/Monolith/Monolith%20to%20Hexagonal.png" alt="Monolith to Hexagonal" width=100%/>
+<img src="/Evolutions/Monolith/Monolith%20to%20Hexagonal.png" alt="Monolith to Hexagonal" style="width:100%"/>
 </a>
 </figure>
 
@@ -75,7 +75,7 @@ The main business logic will communicate with all the external components throug
 
 <figure style="text-align:center">
 <a href="/Evolutions/Monolith/Monolith%20to%20Interpreter.png" style="outline:none">
-<img src="/Evolutions/Monolith/Monolith%20to%20Interpreter.png" alt="Monolith to Interpreter" width=100%/>
+<img src="/Evolutions/Monolith/Monolith%20to%20Interpreter.png" alt="Monolith to Interpreter" style="width:100%"/>
 </a>
 </figure>
 

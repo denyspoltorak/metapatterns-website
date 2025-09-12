@@ -19,7 +19,7 @@ The basic patterns lay the foundation for any system by paving ways to *divide* 
 
 <figure style="text-align:center">
 <a href="/Contents/Monolith.png" style="outline:none">
-<img src="/Contents/Monolith.png" alt="Monolith" width=96%/>
+<img src="/Contents/Monolith.png" alt="Monolith" style="width:96%"/>
 </a>
 </figure>
 
@@ -37,7 +37,7 @@ The basic patterns lay the foundation for any system by paving ways to *divide* 
 
 <figure style="text-align:center">
 <a href="/Contents/Shards.png" style="outline:none">
-<img src="/Contents/Shards.png" alt="Shards" width=95%/>
+<img src="/Contents/Shards.png" alt="Shards" style="width:95%"/>
 </a>
 </figure>
 
@@ -55,7 +55,7 @@ The basic patterns lay the foundation for any system by paving ways to *divide* 
 
 <figure style="text-align:center">
 <a href="/Contents/Layers.png" style="outline:none">
-<img src="/Contents/Layers.png" alt="Layers" width=95%/>
+<img src="/Contents/Layers.png" alt="Layers" style="width:95%"/>
 </a>
 </figure>
 
@@ -71,7 +71,7 @@ The basic patterns lay the foundation for any system by paving ways to *divide* 
 
 <figure style="text-align:center">
 <a href="/Contents/Services.png" style="outline:none">
-<img src="/Contents/Services.png" alt="Services" width=95%/>
+<img src="/Contents/Services.png" alt="Services" style="width:95%"/>
 </a>
 </figure>
 
@@ -89,7 +89,7 @@ The basic patterns lay the foundation for any system by paving ways to *divide* 
 
 <figure style="text-align:center">
 <a href="/Contents/Pipeline.png" style="outline:none">
-<img src="/Contents/Pipeline.png" alt="Pipeline" width=95%/>
+<img src="/Contents/Pipeline.png" alt="Pipeline" style="width:95%"/>
 </a>
 </figure>
 
@@ -111,7 +111,7 @@ An extension pattern encapsulates one or two aspects of the system’s implement
 
 <figure style="text-align:center">
 <a href="/Contents/Middleware.png" style="outline:none">
-<img src="/Contents/Middleware.png" alt="Middleware" width=100%/>
+<img src="/Contents/Middleware.png" alt="Middleware" style="width:100%"/>
 </a>
 </figure>
 
@@ -128,7 +128,7 @@ A [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}
 
 <figure style="text-align:center">
 <a href="/Contents/Shared%20Repository.png" style="outline:none">
-<img src="/Contents/Shared%20Repository.png" alt="Shared Repository" width=100%/>
+<img src="/Contents/Shared%20Repository.png" alt="Shared Repository" style="width:100%"/>
 </a>
 </figure>
 
@@ -145,7 +145,7 @@ A [*Shared Repository*]({{< relref "../part-3--extension-metapatterns/shared-rep
 
 <figure style="text-align:center">
 <a href="/Contents/Proxy.png" style="outline:none">
-<img src="/Contents/Proxy.png" alt="Proxy" width=100%/>
+<img src="/Contents/Proxy.png" alt="Proxy" style="width:100%"/>
 </a>
 </figure>
 
@@ -161,7 +161,7 @@ A [*Proxy*]({{< relref "../part-3--extension-metapatterns/proxy.md" >}}) isolate
 
 <figure style="text-align:center">
 <a href="/Contents/Orchestrator.png" style="outline:none">
-<img src="/Contents/Orchestrator.png" alt="Orchestrator" width=100%/>
+<img src="/Contents/Orchestrator.png" alt="Orchestrator" style="width:100%"/>
 </a>
 </figure>
 
@@ -180,7 +180,7 @@ A fragmented pattern uses small specialized components to approach a case which 
 
 <figure style="text-align:center">
 <a href="/Contents/Polyglot%20Persistence.png" style="outline:none">
-<img src="/Contents/Polyglot%20Persistence.png" alt="Polyglot Persistence" width=100%/>
+<img src="/Contents/Polyglot%20Persistence.png" alt="Polyglot Persistence" style="width:100%"/>
 </a>
 </figure>
 
@@ -195,7 +195,7 @@ A fragmented pattern uses small specialized components to approach a case which 
 
 <figure style="text-align:center">
 <a href="/Contents/Backends%20for%20Frontends.png" style="outline:none">
-<img src="/Contents/Backends%20for%20Frontends.png" alt="Backends for Frontends" width=100%/>
+<img src="/Contents/Backends%20for%20Frontends.png" alt="Backends for Frontends" style="width:100%"/>
 </a>
 </figure>
 
@@ -210,7 +210,7 @@ A fragmented pattern uses small specialized components to approach a case which 
 
 <figure style="text-align:center">
 <a href="/Contents/Service-Oriented%20Architecture.png" style="outline:none">
-<img src="/Contents/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" width=100%/>
+<img src="/Contents/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" style="width:100%"/>
 </a>
 </figure>
 
@@ -225,7 +225,7 @@ A fragmented pattern uses small specialized components to approach a case which 
 
 <figure style="text-align:center">
 <a href="/Contents/Hierarchy.png" style="outline:none">
-<img src="/Contents/Hierarchy.png" alt="Hierarchy" width=100%/>
+<img src="/Contents/Hierarchy.png" alt="Hierarchy" style="width:100%"/>
 </a>
 </figure>
 
@@ -243,7 +243,7 @@ An implementation pattern highlights the peculiar internal arrangements of a com
 
 <figure style="text-align:center">
 <a href="/Contents/Plugins.png" style="outline:none">
-<img src="/Contents/Plugins.png" alt="Plugins" width=100%/>
+<img src="/Contents/Plugins.png" alt="Plugins" style="width:100%"/>
 </a>
 </figure>
 
@@ -257,7 +257,7 @@ An implementation pattern highlights the peculiar internal arrangements of a com
 
 <figure style="text-align:center">
 <a href="/Contents/Hexagonal%20Architecture.png" style="outline:none">
-<img src="/Contents/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" width=100%/>
+<img src="/Contents/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" style="width:100%"/>
 </a>
 </figure>
 
@@ -271,7 +271,7 @@ An implementation pattern highlights the peculiar internal arrangements of a com
 
 <figure style="text-align:center">
 <a href="/Contents/Microkernel.png" style="outline:none">
-<img src="/Contents/Microkernel.png" alt="Microkernel" width=100%/>
+<img src="/Contents/Microkernel.png" alt="Microkernel" style="width:100%"/>
 </a>
 </figure>
 
@@ -286,7 +286,7 @@ An implementation pattern highlights the peculiar internal arrangements of a com
 
 <figure style="text-align:center">
 <a href="/Contents/Mesh.png" style="outline:none">
-<img src="/Contents/Mesh.png" alt="Mesh" width=100%/>
+<img src="/Contents/Mesh.png" alt="Mesh" style="width:100%"/>
 </a>
 </figure>
 

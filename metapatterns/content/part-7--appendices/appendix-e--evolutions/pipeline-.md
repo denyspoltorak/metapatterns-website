@@ -17,7 +17,7 @@ There are a couple of *Pipeline*\-specific evolutions:
 
 <figure style="text-align:center">
 <a href="/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png" style="outline:none">
-<img src="/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png" alt="Pipeline promote Front Controller" width=100%/>
+<img src="/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png" alt="Pipeline promote Front Controller" style="width:100%"/>
 </a>
 </figure>
 
@@ -48,7 +48,7 @@ If request processing steps require heavy calculations or manual action, clients
 
 <figure style="text-align:center">
 <a href="/Evolutions/Services/Pipeline%20use%20Orchestrator.png" style="outline:none">
-<img src="/Evolutions/Services/Pipeline%20use%20Orchestrator.png" alt="Pipeline use Orchestrator" width=100%/>
+<img src="/Evolutions/Services/Pipeline%20use%20Orchestrator.png" alt="Pipeline use Orchestrator" style="width:100%"/>
 </a>
 </figure>
 

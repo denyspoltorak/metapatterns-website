@@ -14,7 +14,7 @@ The last group of evolutions to consider is about making the system more adaptab
 
 <figure style="text-align:center">
 <a href="/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png" style="outline:none">
-<img src="/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png" alt="Monolith to Layers - Further 2" width=100%/>
+<img src="/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png" alt="Monolith to Layers - Further 2" style="width:100%"/>
 </a>
 </figure>
 
@@ -27,7 +27,7 @@ There is also a new evolution that modifies the upper \(orchestration\) layer:
 
 <figure style="text-align:center">
 <a href="/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.png" style="outline:none">
-<img src="/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.png" alt="Layers to Backends for Frontends" width=100%/>
+<img src="/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.png" alt="Layers to Backends for Frontends" style="width:100%"/>
 </a>
 </figure>
 

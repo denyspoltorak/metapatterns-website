@@ -20,7 +20,7 @@ bookCollapseSection = true
 
 <figure style="text-align:center">
 <a href="../Pictures/image000.png" style="outline:none">
-<img src="../Pictures/image000.png" alt="image000" width=22%/>
+<img src="../Pictures/image000.png" alt="image000" style="width:22%"/>
 </a>
 </figure>
 

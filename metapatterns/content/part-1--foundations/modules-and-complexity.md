@@ -23,7 +23,7 @@ Concepts are important because it is their number \(or the number of the corresp
 
 <figure style="text-align:center">
 <a href="/Intro/Modules-1.png" style="outline:none">
-<img src="/Intro/Modules-1.png" alt="Modules-1" width=52%/>
+<img src="/Intro/Modules-1.png" alt="Modules-1" style="width:52%"/>
 </a>
 </figure>
 
@@ -37,7 +37,7 @@ Enter *modules*\. A module wraps several concepts, effectively hiding them from 
 
 <figure style="text-align:center">
 <a href="/Intro/Modules-2.png" style="outline:none">
-<img src="/Intro/Modules-2.png" alt="Modules-2" width=66%/>
+<img src="/Intro/Modules-2.png" alt="Modules-2" style="width:66%"/>
 </a>
 </figure>
 
@@ -65,7 +65,7 @@ Apart from dividing the problem into simpler subproblems, modules open the path 
 
 <figure style="text-align:center">
 <a href="/Intro/Modules-3.png" style="outline:none">
-<img src="/Intro/Modules-3.png" alt="Modules-3" width=64%/>
+<img src="/Intro/Modules-3.png" alt="Modules-3" style="width:64%"/>
 </a>
 </figure>
 
@@ -85,7 +85,7 @@ The rule of thumb is to aim for *low coupling and high cohesion*, meaning that e
 
 <figure style="text-align:center">
 <a href="/Intro/Modules-4.png" style="outline:none">
-<img src="/Intro/Modules-4.png" alt="Modules-4" width=75%/>
+<img src="/Intro/Modules-4.png" alt="Modules-4" style="width:75%"/>
 </a>
 </figure>
 
@@ -95,7 +95,7 @@ Splitting a cohesive module \(a cluster of concepts that interact with each othe
 
 <figure style="text-align:center">
 <a href="/Intro/Modules-5.png" style="outline:none">
-<img src="/Intro/Modules-5.png" alt="Modules-5" width=64%/>
+<img src="/Intro/Modules-5.png" alt="Modules-5" style="width:64%"/>
 </a>
 </figure>
 
@@ -125,7 +125,7 @@ A module may encapsulate not only individual concepts, but even other modules\. 
 
 <figure style="text-align:center">
 <a href="/Intro/Modules-6.png" style="outline:none">
-<img src="/Intro/Modules-6.png" alt="Modules-6" width=58%/>
+<img src="/Intro/Modules-6.png" alt="Modules-6" style="width:58%"/>
 </a>
 </figure>
 
@@ -137,7 +137,7 @@ If the functionality of our internal module is needed by our clients, we have tw
 
 <figure style="text-align:center">
 <a href="/Intro/Modules-7.png" style="outline:none">
-<img src="/Intro/Modules-7.png" alt="Modules-7" width=59%/>
+<img src="/Intro/Modules-7.png" alt="Modules-7" style="width:59%"/>
 </a>
 </figure>
 
@@ -147,7 +147,7 @@ We can add the API of a module which we encapsulate to our public API and forwar
 
 <figure style="text-align:center">
 <a href="/Intro/Modules-8.png" style="outline:none">
-<img src="/Intro/Modules-8.png" alt="Modules-8" width=78%/>
+<img src="/Intro/Modules-8.png" alt="Modules-8" style="width:78%"/>
 </a>
 </figure>
 

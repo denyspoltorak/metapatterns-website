@@ -7,7 +7,7 @@ title = "Proxy"
 
 <figure style="text-align:center">
 <a href="/Main/Proxy.png" style="outline:none">
-<img src="/Main/Proxy.png" alt="Proxy" width=100%/>
+<img src="/Main/Proxy.png" alt="Proxy" style="width:100%"/>
 </a>
 </figure>
 
@@ -104,7 +104,7 @@ In fact, because *Proxies* tend to have their dependencies configured on startup
 
 <figure style="text-align:center">
 <a href="/Relations/Proxy.png" style="outline:none">
-<img src="/Relations/Proxy.png" alt="Proxy" width=100%/>
+<img src="/Relations/Proxy.png" alt="Proxy" style="width:100%"/>
 </a>
 </figure>
 
@@ -124,7 +124,7 @@ A *Proxy* [may either fully isolate the system it represents or merely help esta
 
 <figure style="text-align:center">
 <a href="/Variants/2/Full%20Proxy.png" style="outline:none">
-<img src="/Variants/2/Full%20Proxy.png" alt="Full Proxy" width=94%/>
+<img src="/Variants/2/Full%20Proxy.png" alt="Full Proxy" style="width:94%"/>
 </a>
 </figure>
 
@@ -134,7 +134,7 @@ A *Full Proxy* processes every message between the system and its clients\. It c
 
 <figure style="text-align:center">
 <a href="/Variants/2/Half%20Proxy.png" style="outline:none">
-<img src="/Variants/2/Half%20Proxy.png" alt="Half Proxy" width=97%/>
+<img src="/Variants/2/Half%20Proxy.png" alt="Half Proxy" style="width:97%"/>
 </a>
 </figure>
 
@@ -148,7 +148,7 @@ As a *Proxy* stands between a \(sub\)system and its client\(s\), we can imagine 
 
 <figure style="text-align:center">
 <a href="/Variants/2/Proxy%20placement%20-%20Standalone.png" style="outline:none">
-<img src="/Variants/2/Proxy%20placement%20-%20Standalone.png" alt="Proxy placement - Standalone" width=96%/>
+<img src="/Variants/2/Proxy%20placement%20-%20Standalone.png" alt="Proxy placement - Standalone" style="width:96%"/>
 </a>
 </figure>
 
@@ -162,7 +162,7 @@ We can deploy a *Proxy* as a separate system component\. This has the downside o
 
 <figure style="text-align:center">
 <a href="/Variants/2/Proxy%20placement%20-%20Sidecar.png" style="outline:none">
-<img src="/Variants/2/Proxy%20placement%20-%20Sidecar.png" alt="Proxy placement - Sidecar" width=100%/>
+<img src="/Variants/2/Proxy%20placement%20-%20Sidecar.png" alt="Proxy placement - Sidecar" style="width:100%"/>
 </a>
 </figure>
 
@@ -178,7 +178,7 @@ It should be noted that *Sidecar* – co\-locating a generic component and busin
 
 <figure style="text-align:center">
 <a href="/Variants/2/Sidecars.png" style="outline:none">
-<img src="/Variants/2/Sidecars.png" alt="Sidecars" width=100%/>
+<img src="/Variants/2/Sidecars.png" alt="Sidecars" style="width:100%"/>
 </a>
 </figure>
 
@@ -188,7 +188,7 @@ It should be noted that *Sidecar* – co\-locating a generic component and busin
 
 <figure style="text-align:center">
 <a href="/Variants/2/Proxy%20placement%20-%20Ambassador.png" style="outline:none">
-<img src="/Variants/2/Proxy%20placement%20-%20Ambassador.png" alt="Proxy placement - Ambassador" width=100%/>
+<img src="/Variants/2/Proxy%20placement%20-%20Ambassador.png" alt="Proxy placement - Ambassador" style="width:100%"/>
 </a>
 </figure>
 
@@ -214,7 +214,7 @@ As *Proxies* are used for many purposes, there are a variety of their specializa
 
 <figure style="text-align:center">
 <a href="/Variants/2/Firewall.png" style="outline:none">
-<img src="/Variants/2/Firewall.png" alt="Firewall" width=92%/>
+<img src="/Variants/2/Firewall.png" alt="Firewall" style="width:92%"/>
 </a>
 </figure>
 
@@ -228,7 +228,7 @@ The *Firewall* is a component for white\- and black\-listing network traffic, mo
 
 <figure style="text-align:center">
 <a href="/Variants/2/Cache.png" style="outline:none">
-<img src="/Variants/2/Cache.png" alt="Cache" width=100%/>
+<img src="/Variants/2/Cache.png" alt="Cache" style="width:100%"/>
 </a>
 </figure>
 
@@ -254,7 +254,7 @@ It is possible to combine multiple servers into a virtual *Caching Layer* \[[DDS
 
 <figure style="text-align:center">
 <a href="/Variants/2/Load%20Balancer.png" style="outline:none">
-<img src="/Variants/2/Load%20Balancer.png" alt="Load Balancer" width=100%/>
+<img src="/Variants/2/Load%20Balancer.png" alt="Load Balancer" style="width:100%"/>
 </a>
 </figure>
 
@@ -272,7 +272,7 @@ Here we have a hardware or software component which distributes user traffic amo
 
 <figure style="text-align:center">
 <a href="/Variants/2/Dispatcher.png" style="outline:none">
-<img src="/Variants/2/Dispatcher.png" alt="Dispatcher" width=100%/>
+<img src="/Variants/2/Dispatcher.png" alt="Dispatcher" style="width:100%"/>
 </a>
 </figure>
 
@@ -286,7 +286,7 @@ You could have noticed that *Dispatcher* or *Reverse Proxy* is quite similar to 
 
 <figure style="text-align:center">
 <a href="/Variants/2/Adapter.png" style="outline:none">
-<img src="/Variants/2/Adapter.png" alt="Adapter" width=100%/>
+<img src="/Variants/2/Adapter.png" alt="Adapter" style="width:100%"/>
 </a>
 </figure>
 
@@ -320,7 +320,7 @@ There is also a whole bunch of *Adapters* that aim to protect the business logic
 
 <figure style="text-align:center">
 <a href="/Variants/2/API%20Gateway.png" style="outline:none">
-<img src="/Variants/2/API%20Gateway.png" alt="API Gateway" width=100%/>
+<img src="/Variants/2/API%20Gateway.png" alt="API Gateway" style="width:100%"/>
 </a>
 </figure>
 
@@ -339,7 +339,7 @@ As *Proxies* are usually third\-party products, there is not much we can change 
 
 <figure style="text-align:center">
 <a href="/Evolutions/2/Proxy%20add%20Proxy.png" style="outline:none">
-<img src="/Evolutions/2/Proxy%20add%20Proxy.png" alt="Proxy add Proxy" width=100%/>
+<img src="/Evolutions/2/Proxy%20add%20Proxy.png" alt="Proxy add Proxy" style="width:100%"/>
 </a>
 </figure>
 
@@ -348,7 +348,7 @@ As *Proxies* are usually third\-party products, there is not much we can change 
 
 <figure style="text-align:center">
 <a href="/Evolutions/2/Proxy%20to%20Backends%20for%20Frontends.png" style="outline:none">
-<img src="/Evolutions/2/Proxy%20to%20Backends%20for%20Frontends.png" alt="Proxy to Backends for Frontends" width=100%/>
+<img src="/Evolutions/2/Proxy%20to%20Backends%20for%20Frontends.png" alt="Proxy to Backends for Frontends" style="width:100%"/>
 </a>
 </figure>
 

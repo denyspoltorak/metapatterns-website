@@ -17,7 +17,7 @@ One issue peculiar to [*Shards*]({{< relref "../../part-2--basic-metapatterns/sh
 
 <figure style="text-align:center">
 <a href="/Evolutions/Shards/Shards%20to%20Shared%20DB.png" style="outline:none">
-<img src="/Evolutions/Shards/Shards%20to%20Shared%20DB.png" alt="Shards to Shared DB" width=100%/>
+<img src="/Evolutions/Shards/Shards%20to%20Shared%20DB.png" alt="Shards to Shared DB" style="width:100%"/>
 </a>
 </figure>
 
@@ -55,7 +55,7 @@ In case a shard needs to access data owned by any other shard, the prerequisite 
 
 <figure style="text-align:center">
 <a href="/Evolutions/Shards/Shards%20to%20Space-Based%20Architecture.png" style="outline:none">
-<img src="/Evolutions/Shards/Shards%20to%20Space-Based%20Architecture.png" alt="Shards to Space-Based Architecture" width=100%/>
+<img src="/Evolutions/Shards/Shards%20to%20Space-Based%20Architecture.png" alt="Shards to Space-Based Architecture" style="width:100%"/>
 </a>
 </figure>
 
@@ -88,7 +88,7 @@ Though *Space\-Based Architecture* may provide multiple modes of action, includi
 
 <figure style="text-align:center">
 <a href="/Evolutions/Shards/Shards%20add%20Shared%20DB.png" style="outline:none">
-<img src="/Evolutions/Shards/Shards%20add%20Shared%20DB.png" alt="Shards add Shared DB" width=100%/>
+<img src="/Evolutions/Shards/Shards%20add%20Shared%20DB.png" alt="Shards add Shared DB" style="width:100%"/>
 </a>
 </figure>
 
@@ -116,7 +116,7 @@ This approach resembles [*Shared Kernel*](https://ddd-practitioners.com/home/glo
 
 <figure style="text-align:center">
 <a href="/Evolutions/Shards/Shards%20split%20Shared%20Service.png" style="outline:none">
-<img src="/Evolutions/Shards/Shards%20split%20Shared%20Service.png" alt="Shards split Shared Service" width=100%/>
+<img src="/Evolutions/Shards/Shards%20split%20Shared%20Service.png" alt="Shards split Shared Service" style="width:100%"/>
 </a>
 </figure>
 

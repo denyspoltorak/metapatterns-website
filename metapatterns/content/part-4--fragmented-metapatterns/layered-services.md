@@ -7,7 +7,7 @@ title = "Layered Services"
 
 <figure style="text-align:center">
 <a href="/Main/Layered%20Services.png" style="outline:none">
-<img src="/Main/Layered%20Services.png" alt="Layered Services" width=100%/>
+<img src="/Main/Layered%20Services.png" alt="Layered Services" style="width:100%"/>
 </a>
 </figure>
 
@@ -37,7 +37,7 @@ Remarkable features of *Layered Services* include:
 
 <figure style="text-align:center">
 <a href="/Performance/Layered%20Services%20-%20sharding.png" style="outline:none">
-<img src="/Performance/Layered%20Services%20-%20sharding.png" alt="Layered Services - sharding" width=100%/>
+<img src="/Performance/Layered%20Services%20-%20sharding.png" alt="Layered Services - sharding" style="width:100%"/>
 </a>
 </figure>
 
@@ -46,7 +46,7 @@ Remarkable features of *Layered Services* include:
 
 <figure style="text-align:center">
 <a href="/Performance/Layered%20Services%20-%20channels.png" style="outline:none">
-<img src="/Performance/Layered%20Services%20-%20channels.png" alt="Layered Services - channels" width=100%/>
+<img src="/Performance/Layered%20Services%20-%20channels.png" alt="Layered Services - channels" style="width:100%"/>
 </a>
 </figure>
 
@@ -58,7 +58,7 @@ Remarkable features of *Layered Services* include:
 
 <figure style="text-align:center">
 <a href="/Variants/3/Three-Layered%20Services.png" style="outline:none">
-<img src="/Variants/3/Three-Layered%20Services.png" alt="Three-Layered Services" width=100%/>
+<img src="/Variants/3/Three-Layered%20Services.png" alt="Three-Layered Services" style="width:100%"/>
 </a>
 </figure>
 
@@ -72,7 +72,7 @@ The upper \(application\) layer of each service orchestrates both its middle \(d
 
 <figure style="text-align:center">
 <a href="/Communication/Mutual%20Orchestration%20-%204.png" style="outline:none">
-<img src="/Communication/Mutual%20Orchestration%20-%204.png" alt="Mutual Orchestration - 4" width=100%/>
+<img src="/Communication/Mutual%20Orchestration%20-%204.png" alt="Mutual Orchestration - 4" style="width:100%"/>
 </a>
 </figure>
 
@@ -97,7 +97,7 @@ The good thing is that the majority of the code belongs to the domain layer whic
 
 <figure style="text-align:center">
 <a href="/Evolutions/3/Three-Layered%20Services%20-%201.png" style="outline:none">
-<img src="/Evolutions/3/Three-Layered%20Services%20-%201.png" alt="Three-Layered Services - 1" width=100%/>
+<img src="/Evolutions/3/Three-Layered%20Services%20-%201.png" alt="Three-Layered Services - 1" style="width:100%"/>
 </a>
 </figure>
 
@@ -109,7 +109,7 @@ or by building derived datasets:
 
 <figure style="text-align:center">
 <a href="/Evolutions/3/Three-Layered%20Services%20-%202.png" style="outline:none">
-<img src="/Evolutions/3/Three-Layered%20Services%20-%202.png" alt="Three-Layered Services - 2" width=100%/>
+<img src="/Evolutions/3/Three-Layered%20Services%20-%202.png" alt="Three-Layered Services - 2" style="width:100%"/>
 </a>
 </figure>
 
@@ -120,7 +120,7 @@ If the services become too large:
 
 <figure style="text-align:center">
 <a href="/Evolutions/3/Three-Layered%20Services%20-%203.png" style="outline:none">
-<img src="/Evolutions/3/Three-Layered%20Services%20-%203.png" alt="Three-Layered Services - 3" width=100%/>
+<img src="/Evolutions/3/Three-Layered%20Services%20-%203.png" alt="Three-Layered Services - 3" style="width:100%"/>
 </a>
 </figure>
 
@@ -128,7 +128,7 @@ If the services become too large:
 
 <figure style="text-align:center">
 <a href="/Variants/3/Two-Layered%20Services.png" style="outline:none">
-<img src="/Variants/3/Two-Layered%20Services.png" alt="Two-Layered Services" width=99%/>
+<img src="/Variants/3/Two-Layered%20Services.png" alt="Two-Layered Services" style="width:99%"/>
 </a>
 </figure>
 
@@ -156,7 +156,7 @@ If *Choreographed Layered Services* become coupled:
 
 <figure style="text-align:center">
 <a href="/Evolutions/3/Two-Layered%20Services%20-%201.png" style="outline:none">
-<img src="/Evolutions/3/Two-Layered%20Services%20-%201.png" alt="Two-Layered Services - 1" width=100%/>
+<img src="/Evolutions/3/Two-Layered%20Services%20-%201.png" alt="Two-Layered Services - 1" style="width:100%"/>
 </a>
 </figure>
 
@@ -164,7 +164,7 @@ If *Choreographed Layered Services* become coupled:
 
 <figure style="text-align:center">
 <a href="/Evolutions/3/Two-Layered%20Services%20-%202.png" style="outline:none">
-<img src="/Evolutions/3/Two-Layered%20Services%20-%202.png" alt="Two-Layered Services - 2" width=100%/>
+<img src="/Evolutions/3/Two-Layered%20Services%20-%202.png" alt="Two-Layered Services - 2" style="width:100%"/>
 </a>
 </figure>
 
@@ -175,7 +175,7 @@ An overgrown service can be:
 
 <figure style="text-align:center">
 <a href="/Evolutions/3/Two-Layered%20Services%20-%203.png" style="outline:none">
-<img src="/Evolutions/3/Two-Layered%20Services%20-%203.png" alt="Two-Layered Services - 3" width=100%/>
+<img src="/Evolutions/3/Two-Layered%20Services%20-%203.png" alt="Two-Layered Services - 3" style="width:100%"/>
 </a>
 </figure>
 
@@ -183,7 +183,7 @@ An overgrown service can be:
 
 <figure style="text-align:center">
 <a href="/Variants/3/CQRS.png" style="outline:none">
-<img src="/Variants/3/CQRS.png" alt="CQRS" width=100%/>
+<img src="/Variants/3/CQRS.png" alt="CQRS" style="width:100%"/>
 </a>
 </figure>
 
@@ -191,7 +191,7 @@ An overgrown service can be:
 
 <figure style="text-align:center">
 <a href="/Variants/3/CQRS%20-%20pipeline%20view.png" style="outline:none">
-<img src="/Variants/3/CQRS%20-%20pipeline%20view.png" alt="CQRS - pipeline view" width=100%/>
+<img src="/Variants/3/CQRS%20-%20pipeline%20view.png" alt="CQRS - pipeline view" style="width:100%"/>
 </a>
 </figure>
 
@@ -205,7 +205,7 @@ This separation brings in the pros and cons of [*Services*]({{< relref "../part-
 
 <figure style="text-align:center">
 <a href="/Variants/3/CQRS%20-%20subtypes.png" style="outline:none">
-<img src="/Variants/3/CQRS%20-%20subtypes.png" alt="CQRS - subtypes" width=100%/>
+<img src="/Variants/3/CQRS%20-%20subtypes.png" alt="CQRS - subtypes" style="width:100%"/>
 </a>
 </figure>
 
@@ -219,7 +219,7 @@ Each backend depends on its database \(its technology and schema\)\. The OLTP to
 
 <figure style="text-align:center">
 <a href="/Dependencies/CQRS.png" style="outline:none">
-<img src="/Dependencies/CQRS.png" alt="CQRS" width=100%/>
+<img src="/Dependencies/CQRS.png" alt="CQRS" style="width:100%"/>
 </a>
 </figure>
 
@@ -243,7 +243,7 @@ Each backend depends on its database \(its technology and schema\)\. The OLTP to
 
 <figure style="text-align:center">
 <a href="/Evolutions/3/CQRS.png" style="outline:none">
-<img src="/Evolutions/3/CQRS.png" alt="CQRS" width=100%/>
+<img src="/Evolutions/3/CQRS.png" alt="CQRS" style="width:100%"/>
 </a>
 </figure>
 

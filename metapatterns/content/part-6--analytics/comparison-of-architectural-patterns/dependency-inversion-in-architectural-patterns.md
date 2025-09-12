@@ -13,7 +13,7 @@ Let’s see how dependency inversion is used on system level\.
 
 <figure style="text-align:center">
 <a href="/Conclusion/DI-1.png" style="outline:none">
-<img src="/Conclusion/DI-1.png" alt="DI-1" width=100%/>
+<img src="/Conclusion/DI-1.png" alt="DI-1" style="width:100%"/>
 </a>
 </figure>
 
@@ -29,7 +29,7 @@ It is the nature of the polymorphic components that distinguishes the patterns:
 
 <figure style="text-align:center">
 <a href="/Conclusion/DI-2.png" style="outline:none">
-<img src="/Conclusion/DI-2.png" alt="DI-2" width=100%/>
+<img src="/Conclusion/DI-2.png" alt="DI-2" style="width:100%"/>
 </a>
 </figure>
 
@@ -44,7 +44,7 @@ A few more metapatterns tend to use this approach to earn its benefits, even tho
 
 <figure style="text-align:center">
 <a href="/Conclusion/DI-3.png" style="outline:none">
-<img src="/Conclusion/DI-3.png" alt="DI-3" width=100%/>
+<img src="/Conclusion/DI-3.png" alt="DI-3" style="width:100%"/>
 </a>
 </figure>
 

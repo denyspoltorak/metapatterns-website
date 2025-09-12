@@ -7,7 +7,7 @@ title = "Pipeline"
 
 <figure style="text-align:center">
 <a href="/Main/Pipeline.png" style="outline:none">
-<img src="/Main/Pipeline.png" alt="Pipeline" width=100%/>
+<img src="/Main/Pipeline.png" alt="Pipeline" style="width:100%"/>
 </a>
 </figure>
 
@@ -65,7 +65,7 @@ There are three ways to build communication in a pipeline, each with different d
 
 <figure style="text-align:center">
 <a href="/Dependencies/Pipeline.png" style="outline:none">
-<img src="/Dependencies/Pipeline.png" alt="Pipeline" width=99%/>
+<img src="/Dependencies/Pipeline.png" alt="Pipeline" style="width:99%"/>
 </a>
 </figure>
 
@@ -118,7 +118,7 @@ Such a variety of options enables the use of pipelines in a wide range of domain
 
 <figure style="text-align:center">
 <a href="/Variants/1/Pipes%20and%20Filters.png" style="outline:none">
-<img src="/Variants/1/Pipes%20and%20Filters.png" alt="Pipes and Filters" width=95%/>
+<img src="/Variants/1/Pipes%20and%20Filters.png" alt="Pipes and Filters" style="width:95%"/>
 </a>
 </figure>
 
@@ -134,7 +134,7 @@ Examples: Unix shell pipes, processing of video streams, many types of hardware\
 
 <figure style="text-align:center">
 <a href="/Variants/1/Event-Driven%20Architecture.png" style="outline:none">
-<img src="/Variants/1/Event-Driven%20Architecture.png" alt="Event-Driven Architecture" width=95%/>
+<img src="/Variants/1/Event-Driven%20Architecture.png" alt="Event-Driven Architecture" style="width:95%"/>
 </a>
 </figure>
 
@@ -167,7 +167,7 @@ Examples: high performance web services\.
 
 <figure style="text-align:center">
 <a href="/Variants/1/Data%20Mesh.png" style="outline:none">
-<img src="/Variants/1/Data%20Mesh.png" alt="Data Mesh" width=100%/>
+<img src="/Variants/1/Data%20Mesh.png" alt="Data Mesh" style="width:100%"/>
 </a>
 </figure>
 
@@ -188,7 +188,7 @@ There is a pragmatic option to allow an operational service to resort to the ana
 
 <figure style="text-align:center">
 <a href="/Variants/1/Nanoservices.png" style="outline:none">
-<img src="/Variants/1/Nanoservices.png" alt="Nanoservices" width=99%/>
+<img src="/Variants/1/Nanoservices.png" alt="Nanoservices" style="width:99%"/>
 </a>
 </figure>
 
@@ -207,7 +207,7 @@ There are a couple of pipeline\-specific evolutions, with more details provided 
 
 <figure style="text-align:center">
 <a href="/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png" style="outline:none">
-<img src="/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png" alt="Pipeline promote Front Controller" width=100%/>
+<img src="/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png" alt="Pipeline promote Front Controller" style="width:100%"/>
 </a>
 </figure>
 
@@ -216,7 +216,7 @@ There are a couple of pipeline\-specific evolutions, with more details provided 
 
 <figure style="text-align:center">
 <a href="/Evolutions/Services/Pipeline%20use%20Orchestrator.png" style="outline:none">
-<img src="/Evolutions/Services/Pipeline%20use%20Orchestrator.png" alt="Pipeline use Orchestrator" width=100%/>
+<img src="/Evolutions/Services/Pipeline%20use%20Orchestrator.png" alt="Pipeline use Orchestrator" style="width:100%"/>
 </a>
 </figure>
 

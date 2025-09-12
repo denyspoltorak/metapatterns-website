@@ -7,7 +7,7 @@ title = "Polyglot Persistence"
 
 <figure style="text-align:center">
 <a href="/Main/Polyglot%20Persistence.png" style="outline:none">
-<img src="/Main/Polyglot%20Persistence.png" alt="Polyglot Persistence" width=100%/>
+<img src="/Main/Polyglot%20Persistence.png" alt="Polyglot Persistence" style="width:100%"/>
 </a>
 </figure>
 
@@ -74,7 +74,7 @@ In general, each service depends on all of the databases which it uses\. There m
 
 <figure style="text-align:center">
 <a href="/Dependencies/PolyglotPersistence.png" style="outline:none">
-<img src="/Dependencies/PolyglotPersistence.png" alt="PolyglotPersistence" width=100%/>
+<img src="/Dependencies/PolyglotPersistence.png" alt="PolyglotPersistence" style="width:100%"/>
 </a>
 </figure>
 
@@ -98,7 +98,7 @@ In general, each service depends on all of the databases which it uses\. There m
 
 <figure style="text-align:center">
 <a href="/Relations/Polyglot%20Persistence.png" style="outline:none">
-<img src="/Relations/Polyglot%20Persistence.png" alt="Polyglot Persistence" width=100%/>
+<img src="/Relations/Polyglot%20Persistence.png" alt="Polyglot Persistence" style="width:100%"/>
 </a>
 </figure>
 
@@ -117,7 +117,7 @@ Many cases of *Polyglot Persistence* use multiple datastores just because there 
 
 <figure style="text-align:center">
 <a href="/Variants/3/PP%20-%20Specialized.png" style="outline:none">
-<img src="/Variants/3/PP%20-%20Specialized.png" alt="PP - Specialized" width=100%/>
+<img src="/Variants/3/PP%20-%20Specialized.png" alt="PP - Specialized" style="width:100%"/>
 </a>
 </figure>
 
@@ -127,7 +127,7 @@ Databases [vary in their optimal use cases](https://www.jamesserra.com/archive/2
 
 <figure style="text-align:center">
 <a href="/Variants/3/PP%20-%20Private%20and%20Shared.png" style="outline:none">
-<img src="/Variants/3/PP%20-%20Private%20and%20Shared.png" alt="PP - Private and Shared" width=100%/>
+<img src="/Variants/3/PP%20-%20Private%20and%20Shared.png" alt="PP - Private and Shared" style="width:100%"/>
 </a>
 </figure>
 
@@ -137,7 +137,7 @@ If several services or shards become coupled through a subset of the system’s 
 
 <figure style="text-align:center">
 <a href="/Variants/3/PP%20-%20File%20Storage.png" style="outline:none">
-<img src="/Variants/3/PP%20-%20File%20Storage.png" alt="PP - File Storage" width=100%/>
+<img src="/Variants/3/PP%20-%20File%20Storage.png" alt="PP - File Storage" style="width:100%"/>
 </a>
 </figure>
 
@@ -157,7 +157,7 @@ The updates to the derived databases may come from:
 
 <figure style="text-align:center">
 <a href="/Variants/3/PP%20-%20Derived%20Storage.png" style="outline:none">
-<img src="/Variants/3/PP%20-%20Derived%20Storage.png" alt="PP - Derived Storage" width=100%/>
+<img src="/Variants/3/PP%20-%20Derived%20Storage.png" alt="PP - Derived Storage" style="width:100%"/>
 </a>
 </figure>
 
@@ -165,7 +165,7 @@ The updates to the derived databases may come from:
 
 <figure style="text-align:center">
 <a href="/Variants/3/Read-only%20Replica.png" style="outline:none">
-<img src="/Variants/3/Read-only%20Replica.png" alt="Read-only Replica" width=71%/>
+<img src="/Variants/3/Read-only%20Replica.png" alt="Read-only Replica" style="width:71%"/>
 </a>
 </figure>
 
@@ -175,7 +175,7 @@ Multiple instances of the database are deployed and one of them is the *leader* 
 
 <figure style="text-align:center">
 <a href="/Variants/3/Reporting%20DB%20and%20CQRS%20View.png" style="outline:none">
-<img src="/Variants/3/Reporting%20DB%20and%20CQRS%20View.png" alt="Reporting DB and CQRS View" width=100%/>
+<img src="/Variants/3/Reporting%20DB%20and%20CQRS%20View.png" alt="Reporting DB and CQRS View" style="width:100%"/>
 </a>
 </figure>
 
@@ -187,7 +187,7 @@ A [*Reporting Database*](https://martinfowler.com/bliki/ReportingDatabase.html) 
 
 <figure style="text-align:center">
 <a href="/Variants/3/Memory%20Image.png" style="outline:none">
-<img src="/Variants/3/Memory%20Image.png" alt="Memory Image" width=100%/>
+<img src="/Variants/3/Memory%20Image.png" alt="Memory Image" style="width:100%"/>
 </a>
 </figure>
 
@@ -197,7 +197,7 @@ A [*Reporting Database*](https://martinfowler.com/bliki/ReportingDatabase.html) 
 
 <figure style="text-align:center">
 <a href="/Variants/3/Query%20Service.png" style="outline:none">
-<img src="/Variants/3/Query%20Service.png" alt="Query Service" width=100%/>
+<img src="/Variants/3/Query%20Service.png" alt="Query Service" style="width:100%"/>
 </a>
 </figure>
 
@@ -211,7 +211,7 @@ A [*Front Controller*]({{< relref "../part-3--extension-metapatterns/combined-co
 
 <figure style="text-align:center">
 <a href="/Variants/3/Search%20Index.png" style="outline:none">
-<img src="/Variants/3/Search%20Index.png" alt="Search Index" width=100%/>
+<img src="/Variants/3/Search%20Index.png" alt="Search Index" style="width:100%"/>
 </a>
 </figure>
 
@@ -221,7 +221,7 @@ Some domains require a kind of search which is not naturally supported by ordina
 
 <figure style="text-align:center">
 <a href="/Variants/3/Historical%20Data.png" style="outline:none">
-<img src="/Variants/3/Historical%20Data.png" alt="Historical Data" width=92%/>
+<img src="/Variants/3/Historical%20Data.png" alt="Historical Data" style="width:92%"/>
 </a>
 </figure>
 
@@ -231,7 +231,7 @@ It is common to store the history of sales in a database\. However, once a month
 
 <figure style="text-align:center">
 <a href="/Variants/3/Cache-Aside.png" style="outline:none">
-<img src="/Variants/3/Cache-Aside.png" alt="Cache-Aside" width=80%/>
+<img src="/Variants/3/Cache-Aside.png" alt="Cache-Aside" style="width:80%"/>
 </a>
 </figure>
 
@@ -248,7 +248,7 @@ Keeping the cache consistent with the main database is the hard part\. There are
 
 <figure style="text-align:center">
 <a href="/Evolutions/3/Polyglor%20Persistence%20-%201.png" style="outline:none">
-<img src="/Evolutions/3/Polyglor%20Persistence%20-%201.png" alt="Polyglor Persistence - 1" width=100%/>
+<img src="/Evolutions/3/Polyglor%20Persistence%20-%201.png" alt="Polyglor Persistence - 1" style="width:100%"/>
 </a>
 </figure>
 

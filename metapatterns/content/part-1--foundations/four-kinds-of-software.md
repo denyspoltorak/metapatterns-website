@@ -23,7 +23,7 @@ Those dimensions make four corner cases that vary in architectural styles:
 
 <figure style="text-align:center">
 <a href="/4Kinds/4%20Kinds.png" style="outline:none">
-<img src="/4Kinds/4%20Kinds.png" alt="4 Kinds" width=100%/>
+<img src="/4Kinds/4%20Kinds.png" alt="4 Kinds" style="width:100%"/>
 </a>
 </figure>
 
@@ -31,7 +31,7 @@ Those dimensions make four corner cases that vary in architectural styles:
 
 <figure style="text-align:center">
 <a href="/4Kinds/Control%20-%20main.png" style="outline:none">
-<img src="/4Kinds/Control%20-%20main.png" alt="Control - main" width=100%/>
+<img src="/4Kinds/Control%20-%20main.png" alt="Control - main" style="width:100%"/>
 </a>
 </figure>
 
@@ -77,7 +77,7 @@ At the architectural level, control systems are [event\-driven](https://en.wikip
 
 <figure style="text-align:center">
 <a href="/4Kinds/Control%20-%20variants.png" style="outline:none">
-<img src="/4Kinds/Control%20-%20variants.png" alt="Control - variants" width=100%/>
+<img src="/4Kinds/Control%20-%20variants.png" alt="Control - variants" style="width:100%"/>
 </a>
 </figure>
 
@@ -104,7 +104,7 @@ Messages may be dispatched through multilevel index arrays or *Visitors* \[[GoF]
 
 <figure style="text-align:center">
 <a href="/4Kinds/Interactive%20-%20main.png" style="outline:none">
-<img src="/4Kinds/Interactive%20-%20main.png" alt="Interactive - main" width=100%/>
+<img src="/4Kinds/Interactive%20-%20main.png" alt="Interactive - main" style="width:100%"/>
 </a>
 </figure>
 
@@ -126,7 +126,7 @@ Interactive systems vary in a couple of ways:
 
 <figure style="text-align:center">
 <a href="/4Kinds/Interactive%20-%20variants%201.png" style="outline:none">
-<img src="/4Kinds/Interactive%20-%20variants%201.png" alt="Interactive - variants 1" width=100%/>
+<img src="/4Kinds/Interactive%20-%20variants%201.png" alt="Interactive - variants 1" style="width:100%"/>
 </a>
 </figure>
 
@@ -135,7 +135,7 @@ Interactive systems vary in a couple of ways:
 
 <figure style="text-align:center">
 <a href="/4Kinds/Interactive%20-%20variants%202.png" style="outline:none">
-<img src="/4Kinds/Interactive%20-%20variants%202.png" alt="Interactive - variants 2" width=100%/>
+<img src="/4Kinds/Interactive%20-%20variants%202.png" alt="Interactive - variants 2" style="width:100%"/>
 </a>
 </figure>
 
@@ -163,7 +163,7 @@ The presentation would usually subscribe to updates from the business logic\.
 
 <figure style="text-align:center">
 <a href="/4Kinds/Streaming%20-%20main.png" style="outline:none">
-<img src="/4Kinds/Streaming%20-%20main.png" alt="Streaming - main" width=100%/>
+<img src="/4Kinds/Streaming%20-%20main.png" alt="Streaming - main" style="width:100%"/>
 </a>
 </figure>
 
@@ -203,7 +203,7 @@ Every filter is likely to run in its own thread and be unaware of other filters 
 
 <figure style="text-align:center">
 <a href="/4Kinds/Computational%20-%20main.png" style="outline:none">
-<img src="/4Kinds/Computational%20-%20main.png" alt="Computational - main" width=100%/>
+<img src="/4Kinds/Computational%20-%20main.png" alt="Computational - main" style="width:100%"/>
 </a>
 </figure>
 
@@ -244,7 +244,7 @@ Most real\-life software is too complex to fit the classification outlined above
 
 <figure style="text-align:center">
 <a href="/4Kinds/Camera.png" style="outline:none">
-<img src="/4Kinds/Camera.png" alt="Camera" width=100%/>
+<img src="/4Kinds/Camera.png" alt="Camera" style="width:100%"/>
 </a>
 </figure>
 
@@ -259,7 +259,7 @@ A digital camera incorporates subsystems of different kinds:
 
 <figure style="text-align:center">
 <a href="/4Kinds/3D%20action.png" style="outline:none">
-<img src="/4Kinds/3D%20action.png" alt="3D action" width=100%/>
+<img src="/4Kinds/3D%20action.png" alt="3D action" style="width:100%"/>
 </a>
 </figure>
 
@@ -269,7 +269,7 @@ Games with 3D graphics often bypass the host OS’ [desktop environment](https:/
 
 <figure style="text-align:center">
 <a href="/4Kinds/Database.png" style="outline:none">
-<img src="/4Kinds/Database.png" alt="Database" width=100%/>
+<img src="/4Kinds/Database.png" alt="Database" style="width:100%"/>
 </a>
 </figure>
 
