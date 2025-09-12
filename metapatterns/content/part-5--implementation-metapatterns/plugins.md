@@ -118,7 +118,7 @@ A plugin may:
 - Receive output from the core \(e\.g\. collection of statistics\)\.
 - Participate in both input and output \(like health check instrumentation\)\.
 - Take the role of [*Controller*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}}) \(*Orchestrator*\) – the plugin processes events from the core and decides on the core’s further behavior\.
-- Be a data processor – the plugin implements a part of a [data processing]({{< relref "../part-1--foundations/four-kinds-of-software.md#computational-single-run-user-input" >}}) algorithm which is run by the core\. This enables platform\-specific optimizations, like SIMD or DSP\.
+- Be a data processor – the plugin implements a part of a [data processing]({{< relref "../part-1--foundations-of-software-architecture/four-kinds-of-software.md#computational-single-run-user-input" >}}) algorithm which is run by the core\. This enables platform\-specific optimizations, like SIMD or DSP\.
 
 
 ### By linkage
@@ -163,7 +163,7 @@ Plugins may be:
 
 <nav>
 
-| \<\< [Part 5\. Implementation Metapatterns]({{< relref "../part-5--implementation-metapatterns/_index.md" >}}) | ^ [Part 5\. Implementation Metapatterns]({{< relref "../part-5--implementation-metapatterns/_index.md" >}}) ^ | [Hexagonal Architecture]({{< relref "../part-5--implementation-metapatterns/hexagonal-architecture.md" >}}) \>\> |
+| \<\< [Part 5\. Implementation metapatterns]({{< relref "../part-5--implementation-metapatterns/_index.md" >}}) | ^ [Part 5\. Implementation metapatterns]({{< relref "../part-5--implementation-metapatterns/_index.md" >}}) ^ | [Hexagonal Architecture]({{< relref "../part-5--implementation-metapatterns/hexagonal-architecture.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

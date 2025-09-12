@@ -21,11 +21,11 @@ As integration is not unique to distributed systems – it is present even in sm
 
 <nav>
 
-- [Programming and architectural paradigms]({{< relref "part-1--foundations/arranging-communication/programming-and-architectural-paradigms.md" >}})
-- [Orchestration]({{< relref "part-1--foundations/arranging-communication/orchestration.md" >}})
-- [Choreography]({{< relref "part-1--foundations/arranging-communication/choreography.md" >}})
-- [Shared data]({{< relref "part-1--foundations/arranging-communication/shared-data.md" >}})
-- [Comparison of the options]({{< relref "part-1--foundations/arranging-communication/comparison-of-the-options.md" >}})
+- [Programming and architectural paradigms]({{< relref "part-1--foundations-of-software-architecture/arranging-communication/programming-and-architectural-paradigms.md" >}})
+- [Orchestration]({{< relref "part-1--foundations-of-software-architecture/arranging-communication/orchestration.md" >}})
+- [Choreography]({{< relref "part-1--foundations-of-software-architecture/arranging-communication/choreography.md" >}})
+- [Shared data]({{< relref "part-1--foundations-of-software-architecture/arranging-communication/shared-data.md" >}})
+- [Comparison of communication styles]({{< relref "part-1--foundations-of-software-architecture/arranging-communication/comparison-of-communication-styles.md" >}})
 
 </nav>
 
@@ -33,7 +33,7 @@ As integration is not unique to distributed systems – it is present even in sm
 
 <nav>
 
-| \<\< [Four kinds of software]({{< relref "../../part-1--foundations/four-kinds-of-software.md" >}}) | ^ [Part 1\. Foundations]({{< relref "../../part-1--foundations/_index.md" >}}) ^ | [Programming and architectural paradigms]({{< relref "../../part-1--foundations/arranging-communication/programming-and-architectural-paradigms.md" >}}) \>\> |
+| \<\< [Four kinds of software]({{< relref "../../part-1--foundations-of-software-architecture/four-kinds-of-software.md" >}}) | ^ [Part 1\. Foundations of software architecture]({{< relref "../../part-1--foundations-of-software-architecture/_index.md" >}}) ^ | [Programming and architectural paradigms]({{< relref "../../part-1--foundations-of-software-architecture/arranging-communication/programming-and-architectural-paradigms.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

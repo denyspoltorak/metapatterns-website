@@ -1,12 +1,12 @@
 +++
 weight = 18
-title = "Combined Component:"
+title = "Evolutions of a Combined Component"
 description = A stack of single-purpose layers can replace a Combined Component, buying you flexibility at the cost of development effort and, often, performance.
 +++
 
-# Combined Component:
+# Evolutions of a Combined Component
 
-The patterns that involve *orchestration* \([*API Gateway*]({{< relref "../../part-3--extension-metapatterns/combined-component.md#api-gateway" >}}), [*Event Mediator*]({{< relref "../../part-3--extension-metapatterns/combined-component.md#event-mediator" >}}), [*Enterprise Service Bus*]({{< relref "../../part-3--extension-metapatterns/combined-component.md#enterprise-service-bus-esb" >}})\) may allow for [most of the evolutions]({{< relref "../../part-7--appendices/appendix-e--evolutions/orchestrator-.md" >}}) of the [*Orchestrator*]({{< relref "../../part-3--extension-metapatterns/orchestrator.md" >}}) metapattern by deploying multiple versions of the *Combined Component* that differ in their orchestration logic\. There is also a special evolution:
+The patterns that involve *orchestration* \([*API Gateway*]({{< relref "../../part-3--extension-metapatterns/combined-component.md#api-gateway" >}}), [*Event Mediator*]({{< relref "../../part-3--extension-metapatterns/combined-component.md#event-mediator" >}}), [*Enterprise Service Bus*]({{< relref "../../part-3--extension-metapatterns/combined-component.md#enterprise-service-bus-esb" >}})\) may allow for [most of the evolutions]({{< relref "../../part-7--appendices/appendix-e--evolutions/evolutions-of-an-orchestrator.md" >}}) of the [*Orchestrator*]({{< relref "../../part-3--extension-metapatterns/orchestrator.md" >}}) metapattern by deploying multiple versions of the *Combined Component* that differ in their orchestration logic\. There is also a special evolution:
 
 - Replace the *Combined Component* with several specialized ones
 
@@ -42,7 +42,7 @@ If you feel that the *Combined Component* which your system relies on does not c
 
 <nav>
 
-| \<\< [Orchestrator:]({{< relref "../../part-7--appendices/appendix-e--evolutions/orchestrator-.md" >}}) | ^ [Appendix E\. Evolutions\.]({{< relref "../../part-7--appendices/appendix-e--evolutions/_index.md" >}}) ^ | [Appendix F\. Format of a metapattern\.]({{< relref "../../part-7--appendices/appendix-f--format-of-a-metapattern.md" >}}) \>\> |
+| \<\< [Evolutions of an Orchestrator]({{< relref "../../part-7--appendices/appendix-e--evolutions/evolutions-of-an-orchestrator.md" >}}) | ^ [Appendix E\. Evolutions\.]({{< relref "../../part-7--appendices/appendix-e--evolutions/_index.md" >}}) ^ | [Appendix F\. Format of a metapattern\.]({{< relref "../../part-7--appendices/appendix-f--format-of-a-metapattern.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

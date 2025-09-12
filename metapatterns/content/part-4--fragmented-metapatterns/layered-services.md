@@ -16,8 +16,8 @@ description = Layered Services may orchestrate each other, rely on choreography,
 
 <ins>Variants:</ins> 
 
-- [Orchestrated]({{< relref "../part-1--foundations/arranging-communication/orchestration.md" >}}) Three\-Layered Services,
-- \(*Pipelined*\) [Choreographed]({{< relref "../part-1--foundations/arranging-communication/choreography.md" >}}) Two\-Layered Services,
+- [Orchestrated]({{< relref "../part-1--foundations-of-software-architecture/arranging-communication/orchestration.md" >}}) Three\-Layered Services,
+- \(*Pipelined*\) [Choreographed]({{< relref "../part-1--foundations-of-software-architecture/arranging-communication/choreography.md" >}}) Two\-Layered Services,
 - \(*Pipelined*\) Command Query Responsibility Segregation \(CQRS\) \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}}), [LDDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#lddd" >}})\]\.
 
 
@@ -63,13 +63,13 @@ Remarkable features of *Layered Services* include:
 </a>
 </figure>
 
-Probably the most common backend architecture has [three layers]({{< relref "../part-2--basic-metapatterns/layers.md#domain-driven-design-ddd-layers" >}}): *application*, *domain*, and *infrastructure* \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\]\. The application layer [*orchestrates*]({{< relref "../part-1--foundations/arranging-communication/orchestration.md" >}}) the domain layer\.
+Probably the most common backend architecture has [three layers]({{< relref "../part-2--basic-metapatterns/layers.md#domain-driven-design-ddd-layers" >}}): *application*, *domain*, and *infrastructure* \[[DDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\]\. The application layer [*orchestrates*]({{< relref "../part-1--foundations-of-software-architecture/arranging-communication/orchestration.md" >}}) the domain layer\.
 
 If such an architecture is divided into [services]({{< relref "../part-2--basic-metapatterns/services.md" >}}), each of them receives a part of every layer, including application, which means that now there are as many *Orchestrators* as services\. Each *Orchestrator* implements the API of its service by integrating \(calling or messaging into\) the domain layer of its service and APIs of other services, which makes all the *Orchestrators* interdependent:
 
 ### Dependencies
 
-The upper \(application\) layer of each service orchestrates both its middle \(domain\) layer and the upper layers of other services, resulting in [mutual orchestration and interdependencies]({{< relref "../part-1--foundations/arranging-communication/orchestration.md#mutual-orchestration" >}})\.
+The upper \(application\) layer of each service orchestrates both its middle \(domain\) layer and the upper layers of other services, resulting in [mutual orchestration and interdependencies]({{< relref "../part-1--foundations-of-software-architecture/arranging-communication/orchestration.md#mutual-orchestration" >}})\.
 
 <figure style="text-align:center">
 <a href="/Communication/Mutual%20Orchestration%20-%204.png" style="outline:none">
@@ -133,11 +133,11 @@ If the services become too large:
 </a>
 </figure>
 
-If there is no [*orchestration*]({{< relref "../part-1--foundations/arranging-communication/orchestration.md" >}}), there is no role for the *application* layer\. [*Choreographed*]({{< relref "../part-1--foundations/arranging-communication/choreography.md" >}}) systems are made up of services that implement individual steps of request processing\. The sequence of actions \(*integration logic*\) which three\-layered systems put in the [*Orchestrators*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}}) now moves to the graph of *event channels* between the services\. This means that with choreography the high\-level part of the business logic \(use cases\) exists outside of the code of the constituent services\.
+If there is no [*orchestration*]({{< relref "../part-1--foundations-of-software-architecture/arranging-communication/orchestration.md" >}}), there is no role for the *application* layer\. [*Choreographed*]({{< relref "../part-1--foundations-of-software-architecture/arranging-communication/choreography.md" >}}) systems are made up of services that implement individual steps of request processing\. The sequence of actions \(*integration logic*\) which three\-layered systems put in the [*Orchestrators*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}}) now moves to the graph of *event channels* between the services\. This means that with choreography the high\-level part of the business logic \(use cases\) exists outside of the code of the constituent services\.
 
 ### Dependencies
 
-Dependencies are identical to those of a [*Pipeline*]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}}) or [*choreographed*]({{< relref "../part-1--foundations/arranging-communication/choreography.md" >}}) [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}}) except that each service also depends on its database\.
+Dependencies are identical to those of a [*Pipeline*]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}}) or [*choreographed*]({{< relref "../part-1--foundations-of-software-architecture/arranging-communication/choreography.md" >}}) [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}}) except that each service also depends on its database\.
 
 ### Relations
 
@@ -188,7 +188,7 @@ An overgrown service can be:
 </a>
 </figure>
 
-*Command Query Responsibility Segregation* \(*CQRS*\) \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}}), [LDDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#lddd" >}})\] is, essentially, the division of a [layered]({{< relref "../part-2--basic-metapatterns/layers.md" >}}) application or a service into two \(rarely more\) [services]({{< relref "../part-2--basic-metapatterns/services.md" >}}), one of which is responsible for write access \(handling *commands*\) to the domain data while the other\(s\) deal with read access \(*queries*\), thus [creating]({{< relref "../part-6--analytics/comparison-of-architectural-patterns/pipelines-in-architectural-patterns.md" >}}) a data [*pipeline*]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}}) \(see the diagram below\)\. Such an architecture makes sense when the write and read operations don’t rely on a common vision \(*model*\) of the domain, for example, writes are individual changes \([*OLTP*](https://en.wikipedia.org/wiki/Online_transaction_processing)\) that require cross\-checks and validation of input while reads show aggregated data \([*OLAP*](https://en.wikipedia.org/wiki/Online_analytical_processing)\) and may take long time to complete \(meaning that [*forces*]({{< relref "../part-1--foundations/forces--asynchronicity--and-distribution.md" >}}) for the read and write paths differ\)\. If there is nothing to share in the code, why not separate the implementations?
+*Command Query Responsibility Segregation* \(*CQRS*\) \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}}), [LDDD]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#lddd" >}})\] is, essentially, the division of a [layered]({{< relref "../part-2--basic-metapatterns/layers.md" >}}) application or a service into two \(rarely more\) [services]({{< relref "../part-2--basic-metapatterns/services.md" >}}), one of which is responsible for write access \(handling *commands*\) to the domain data while the other\(s\) deal with read access \(*queries*\), thus [creating]({{< relref "../part-6--analytics/comparison-of-architectural-patterns/pipelines-in-architectural-patterns.md" >}}) a data [*pipeline*]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}}) \(see the diagram below\)\. Such an architecture makes sense when the write and read operations don’t rely on a common vision \(*model*\) of the domain, for example, writes are individual changes \([*OLTP*](https://en.wikipedia.org/wiki/Online_transaction_processing)\) that require cross\-checks and validation of input while reads show aggregated data \([*OLAP*](https://en.wikipedia.org/wiki/Online_analytical_processing)\) and may take long time to complete \(meaning that [*forces*]({{< relref "../part-1--foundations-of-software-architecture/forces--asynchronicity--and-distribution.md" >}}) for the read and write paths differ\)\. If there is nothing to share in the code, why not separate the implementations?
 
 <figure style="text-align:center">
 <a href="/Variants/3/CQRS%20-%20pipeline%20view.png" style="outline:none">
@@ -252,14 +252,14 @@ Each backend depends on its database \(its technology and schema\)\. The OLTP to
 
 *Layered Services* is an umbrella pattern that conjoins:
 
-- *Three\-Layered Services* where each service [*orchestrates*]({{< relref "../part-1--foundations/arranging-communication/orchestration.md" >}}) other services\.
+- *Three\-Layered Services* where each service [*orchestrates*]({{< relref "../part-1--foundations-of-software-architecture/arranging-communication/orchestration.md" >}}) other services\.
 - *Two\-Layered Services* that form a [*Pipeline*]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}})\.
 - *CQRS* that separates read and write request processing paths\.
 
 
 <nav>
 
-| \<\< [Part 4\. Fragmented Metapatterns]({{< relref "../part-4--fragmented-metapatterns/_index.md" >}}) | ^ [Part 4\. Fragmented Metapatterns]({{< relref "../part-4--fragmented-metapatterns/_index.md" >}}) ^ | [Polyglot Persistence]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md" >}}) \>\> |
+| \<\< [Part 4\. Fragmented metapatterns]({{< relref "../part-4--fragmented-metapatterns/_index.md" >}}) | ^ [Part 4\. Fragmented metapatterns]({{< relref "../part-4--fragmented-metapatterns/_index.md" >}}) ^ | [Polyglot Persistence]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

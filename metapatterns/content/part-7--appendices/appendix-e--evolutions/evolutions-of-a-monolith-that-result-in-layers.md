@@ -1,12 +1,12 @@
 +++
 weight = 2
-title = "Monolith: to Layers"
+title = "Evolutions of a Monolith that result in Layers"
 description = A Monolith can be split into Layers, or a specialized layer, such as a Proxy or an Orchestrator, may be added between an existing Monolith and its clients.
 +++
 
-# Monolith: to Layers
+# Evolutions of a Monolith that result in Layers
 
-Another drawback of [*Monolith*]({{< relref "../../part-2--basic-metapatterns/monolith.md" >}}) is its … er … monolithism\. The entire application exposes a single set of qualities and all its parts \(if they ever emerge\) are deployed together\. However, life awards flexibility: parts of a system may benefit from being written in varying languages and styles, deployed with different frequency and amount of testing, sometimes to specific hardware or end users’ devices\. They may need to [vary in security and scalability]({{< relref "../../part-1--foundations/forces--asynchronicity--and-distribution.md#distribution" >}}) as well\. Enter [*Layers*]({{< relref "../../part-2--basic-metapatterns/layers.md" >}}) – a subdivision by the *level of abstractness*:
+Another drawback of [*Monolith*]({{< relref "../../part-2--basic-metapatterns/monolith.md" >}}) is its … er … monolithism\. The entire application exposes a single set of qualities and all its parts \(if they ever emerge\) are deployed together\. However, life awards flexibility: parts of a system may benefit from being written in varying languages and styles, deployed with different frequency and amount of testing, sometimes to specific hardware or end users’ devices\. They may need to [vary in security and scalability]({{< relref "../../part-1--foundations-of-software-architecture/forces--asynchronicity--and-distribution.md#distribution" >}}) as well\. Enter [*Layers*]({{< relref "../../part-2--basic-metapatterns/layers.md" >}}) – a subdivision by the *level of abstractness*:
 
 - Most *Monoliths* can be divided into three or four [*layers*]({{< relref "../../part-2--basic-metapatterns/layers.md" >}})\.
 - It is common to see the database separated from the main application\.
@@ -39,7 +39,7 @@ Most systems apply *layering* by default as it grants a lot of flexibility at ve
   - They may vary in programming language, paradigm and release cycle\.
 - Most changes are isolated to a single layer\.
 - Layering opens a way to many evolutions of the system\.
-- The code [becomes easier to read]({{< relref "../../part-1--foundations/modules-and-complexity.md" >}})\.
+- The code [becomes easier to read]({{< relref "../../part-1--foundations-of-software-architecture/modules-and-complexity.md" >}})\.
 
 
 <ins>Cons</ins>: 
@@ -102,7 +102,7 @@ A datastore is non\-trivial to implement\. While ordinary files are good for sma
 
 <ins>Goal</ins>: avoid implementing generic functionality\.
 
-<ins>Prerequisite</ins>: Your system serves clients \(as opposed to [controlling hardware]({{< relref "../../part-1--foundations/four-kinds-of-software.md#control-real-time-hardware-input" >}})\)\.
+<ins>Prerequisite</ins>: Your system serves clients \(as opposed to [controlling hardware]({{< relref "../../part-1--foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}})\)\.
 
 A *Proxy* is placed between your system and its clients to provide generic functionality that otherwise would have to be implemented by the system\. The kinds of *Proxy* to use with [*Monolith*]({{< relref "../../part-2--basic-metapatterns/monolith.md" >}}) are: [*Firewall*]({{< relref "../../part-3--extension-metapatterns/proxy.md#firewall-api-rate-limiter-api-throttling" >}}), [*Cache*]({{< relref "../../part-3--extension-metapatterns/proxy.md#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}}), [*Reverse Proxy*]({{< relref "../../part-3--extension-metapatterns/proxy.md#dispatcher-reverse-proxy-ingress-controller-edge-service-microgateway" >}}), and [*Adapter*]({{< relref "../../part-3--extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}})\. Multiple *Proxies* can be deployed\.
 
@@ -203,7 +203,7 @@ In addition,
 
 <nav>
 
-| \<\< [Monolith: to Shards]({{< relref "../../part-7--appendices/appendix-e--evolutions/monolith--to-shards.md" >}}) | ^ [Appendix E\. Evolutions\.]({{< relref "../../part-7--appendices/appendix-e--evolutions/_index.md" >}}) ^ | [Monolith: to Services]({{< relref "../../part-7--appendices/appendix-e--evolutions/monolith--to-services.md" >}}) \>\> |
+| \<\< [Evolutions of a Monolith that lead to Shards]({{< relref "../../part-7--appendices/appendix-e--evolutions/evolutions-of-a-monolith-that-lead-to-shards.md" >}}) | ^ [Appendix E\. Evolutions\.]({{< relref "../../part-7--appendices/appendix-e--evolutions/_index.md" >}}) ^ | [Evolutions of a Monolith that make Services]({{< relref "../../part-7--appendices/appendix-e--evolutions/evolutions-of-a-monolith-that-make-services.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

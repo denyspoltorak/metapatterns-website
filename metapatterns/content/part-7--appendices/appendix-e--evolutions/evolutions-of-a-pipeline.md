@@ -1,10 +1,10 @@
 +++
 weight = 13
-title = "Pipeline:"
+title = "Evolutions of a Pipeline"
 description = A Front Controller may be used to track states of running requests. Alternatively, adding an Orchestrator benefits complex scenarios.
 +++
 
-# Pipeline:
+# Evolutions of a Pipeline
 
 [*Pipeline*]({{< relref "../../part-2--basic-metapatterns/pipeline.md" >}}) [inherits its set of evolutions from *Services*]({{< relref "../../part-2--basic-metapatterns/services.md#evolutions" >}})\. Components can be added, split in two, merged or replaced\. Many systems employ a [*Middleware*]({{< relref "../../part-3--extension-metapatterns/middleware.md" >}}) \(pub/sub or pipeline framework\), [*Shared Repository*]({{< relref "../../part-3--extension-metapatterns/shared-repository.md" >}}) \(which may be a database or file system\) or [*Proxies*]({{< relref "../../part-3--extension-metapatterns/proxy.md" >}})\.
 
@@ -59,7 +59,7 @@ If request processing steps require heavy calculations or manual action, clients
 
 <ins>Prerequisite</ins>: performance degradation is acceptable\.
 
-When a [*choreographed*]({{< relref "../../part-1--foundations/arranging-communication/choreography.md" >}}) system is extended with more and more use cases, it is very likely to fall into integration hell where nobody understands how its components interrelate\. Extract the workflow logic into a dedicated service\.
+When a [*choreographed*]({{< relref "../../part-1--foundations-of-software-architecture/arranging-communication/choreography.md" >}}) system is extended with more and more use cases, it is very likely to fall into integration hell where nobody understands how its components interrelate\. Extract the workflow logic into a dedicated service\.
 
 <ins>Pros</ins>: 
 
@@ -87,7 +87,7 @@ When a [*choreographed*]({{< relref "../../part-1--foundations/arranging-communi
 
 <nav>
 
-| \<\< [Services: add layers]({{< relref "../../part-7--appendices/appendix-e--evolutions/services--add-layers.md" >}}) | ^ [Appendix E\. Evolutions\.]({{< relref "../../part-7--appendices/appendix-e--evolutions/_index.md" >}}) ^ | [Middleware:]({{< relref "../../part-7--appendices/appendix-e--evolutions/middleware-.md" >}}) \>\> |
+| \<\< [Evolutions of Services that add layers]({{< relref "../../part-7--appendices/appendix-e--evolutions/evolutions-of-services-that-add-layers.md" >}}) | ^ [Appendix E\. Evolutions\.]({{< relref "../../part-7--appendices/appendix-e--evolutions/_index.md" >}}) ^ | [Evolutions of a Middleware]({{< relref "../../part-7--appendices/appendix-e--evolutions/evolutions-of-a-middleware.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

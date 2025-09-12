@@ -1,12 +1,12 @@
 +++
 weight = 7
-title = "Layers: make more layers"
+title = "Evolutions of Layers that make more layers"
 description = It is often possible to split the business logic layer in two, namely, integration or application logic (scenarios) and domain logic (business rules).
 +++
 
-# Layers: make more layers
+# Evolutions of Layers that make more layers
 
-Not all the layered architectures are equally layered\. A [*Monolith*]({{< relref "../../part-2--basic-metapatterns/monolith.md" >}}) with a [*Proxy*]({{< relref "../../part-3--extension-metapatterns/proxy.md" >}}) or database has already stepped into the realm of [*Layers*]({{< relref "../../part-2--basic-metapatterns/layers.md" >}}) but is far from reaping all of its benefits\. It may continue its journey in a few ways that [were earlier discussed]({{< relref "../../part-7--appendices/appendix-e--evolutions/monolith--to-layers.md" >}}) for *Monolith*:
+Not all the layered architectures are equally layered\. A [*Monolith*]({{< relref "../../part-2--basic-metapatterns/monolith.md" >}}) with a [*Proxy*]({{< relref "../../part-3--extension-metapatterns/proxy.md" >}}) or database has already stepped into the realm of [*Layers*]({{< relref "../../part-2--basic-metapatterns/layers.md" >}}) but is far from reaping all of its benefits\. It may continue its journey in a few ways that [were earlier discussed]({{< relref "../../part-7--appendices/appendix-e--evolutions/evolutions-of-a-monolith-that-result-in-layers.md" >}}) for *Monolith*:
 
 - Employing a *database* \(if you don’t use one\) lets you rely on a thoroughly optimized state\-of\-the\-art subsystem for data processing and storage\.
 - [*Proxies*]({{< relref "../../part-3--extension-metapatterns/proxy.md" >}}) are similarly reusable generic modules to be added at will\.
@@ -38,14 +38,14 @@ It is also common to:
 
 <ins>Prerequisite</ins>: the high\-level and low\-level logic are loosely coupled\.
 
-It is often possible to split a backend into integration \([orchestration]({{< relref "../../part-1--foundations/arranging-communication/orchestration.md" >}})\) and domain layers\. That allows for one team to specialize in customer use cases while the other one delves deep into the domain knowledge and infrastructure\.
+It is often possible to split a backend into integration \([orchestration]({{< relref "../../part-1--foundations-of-software-architecture/arranging-communication/orchestration.md" >}})\) and domain layers\. That allows for one team to specialize in customer use cases while the other one delves deep into the domain knowledge and infrastructure\.
 
 <ins>Pros</ins>: 
 
 - You get an extra development team\.
 - High\-level use cases may be deployed separately from business rules\.
 - The layers may diverge in technologies and styles\.
-- The code may [become less complex]({{< relref "../../part-1--foundations/modules-and-complexity.md" >}})\.
+- The code may [become less complex]({{< relref "../../part-1--foundations-of-software-architecture/modules-and-complexity.md" >}})\.
 
 
 <ins>Cons</ins>: 
@@ -56,7 +56,7 @@ It is often possible to split a backend into integration \([orchestration]({{< r
 
 <nav>
 
-| \<\< [Shards: share logic]({{< relref "../../part-7--appendices/appendix-e--evolutions/shards--share-logic.md" >}}) | ^ [Appendix E\. Evolutions\.]({{< relref "../../part-7--appendices/appendix-e--evolutions/_index.md" >}}) ^ | [Layers: help large projects]({{< relref "../../part-7--appendices/appendix-e--evolutions/layers--help-large-projects.md" >}}) \>\> |
+| \<\< [Evolutions of Shards that share logic]({{< relref "../../part-7--appendices/appendix-e--evolutions/evolutions-of-shards-that-share-logic.md" >}}) | ^ [Appendix E\. Evolutions\.]({{< relref "../../part-7--appendices/appendix-e--evolutions/_index.md" >}}) ^ | [Evolutions of Layers that help large projects]({{< relref "../../part-7--appendices/appendix-e--evolutions/evolutions-of-layers-that-help-large-projects.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

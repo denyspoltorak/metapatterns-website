@@ -1,10 +1,10 @@
 +++
 weight = 5
-title = "Shards: share data"
+title = "Evolutions of Shards that share data"
 description = The main issue with Shards is coordination between the instances. It is solved by deploying a Shared Repository or wrapping the shared data with a service.
 +++
 
-# Shards: share data
+# Evolutions of Shards that share data
 
 One issue peculiar to [*Shards*]({{< relref "../../part-2--basic-metapatterns/shards.md" >}}) is that of coordinating the instances deployed, especially if their data become coupled\. The most direct solution is to let the instances operate a component that wraps the shared data:
 
@@ -147,7 +147,7 @@ This approach resembles [*Shared Kernel*](https://ddd-practitioners.com/home/glo
 
 <nav>
 
-| \<\< [Monolith: to Plugins]({{< relref "../../part-7--appendices/appendix-e--evolutions/monolith--to-plugins.md" >}}) | ^ [Appendix E\. Evolutions\.]({{< relref "../../part-7--appendices/appendix-e--evolutions/_index.md" >}}) ^ | [Shards: share logic]({{< relref "../../part-7--appendices/appendix-e--evolutions/shards--share-logic.md" >}}) \>\> |
+| \<\< [Evolutions of a Monolith that rely on Plugins]({{< relref "../../part-7--appendices/appendix-e--evolutions/evolutions-of-a-monolith-that-rely-on-plugins.md" >}}) | ^ [Appendix E\. Evolutions\.]({{< relref "../../part-7--appendices/appendix-e--evolutions/_index.md" >}}) ^ | [Evolutions of Shards that share logic]({{< relref "../../part-7--appendices/appendix-e--evolutions/evolutions-of-shards-that-share-logic.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

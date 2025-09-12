@@ -138,7 +138,7 @@ Finally, instances of the subsystem may be distributed over a network to achieve
 
 ## Variants by state
 
-Sharding can often be transparently applied to individual components of [data processing]({{< relref "../part-1--foundations/four-kinds-of-software.md#streaming-continuous-raw-data-input" >}}) systems\. That does not hold for [control systems]({{< relref "../part-1--foundations/four-kinds-of-software.md#control-real-time-hardware-input" >}}) which need centralized decisions based on the modeled system’s state, which must be accessible as a whole, thus the main business logic that owns the model \(last known state of the system\) cannot be sharded\.
+Sharding can often be transparently applied to individual components of [data processing]({{< relref "../part-1--foundations-of-software-architecture/four-kinds-of-software.md#streaming-continuous-raw-data-input" >}}) systems\. That does not hold for [control systems]({{< relref "../part-1--foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}}) which need centralized decisions based on the modeled system’s state, which must be accessible as a whole, thus the main business logic that owns the model \(last known state of the system\) cannot be sharded\.
 
 Many kinds of *Shards* require an external coordinating module \([*Load Balancer*]({{< relref "../part-3--extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}})\) to assign tasks to the individual instances\. In some cases the coordinator may be implicit, e\.g\. an OS socket or scheduler\. In others it may be replicated and co\-located with each client \(as an [*Ambassador*]({{< relref "../part-3--extension-metapatterns/proxy.md#on-the-client-side-ambassador" >}}) \[[DDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#dds" >}})\]\)\.
 
@@ -225,7 +225,7 @@ There are two kinds of evolutions for *Shards*: those intrinsic to the component
 
 When *Shards* are applied to a single component, which is a [*Monolith*]({{< relref "../part-2--basic-metapatterns/monolith.md" >}}), the resulting \(sub\)system follows most of the [evolutions of *Monolith*]({{< relref "../part-2--basic-metapatterns/monolith.md#evolutions" >}}):
 
-- [*Layers*]({{< relref "../part-2--basic-metapatterns/layers.md" >}}) allow for the parts of the system to differ in *qualities* \([*forces*]({{< relref "../part-1--foundations/forces--asynchronicity--and-distribution.md#conflicting-forces" >}})\) and [deployment]({{< relref "../part-1--foundations/forces--asynchronicity--and-distribution.md#distribution" >}})\. Various third\-party components can be integrated and the code becomes better structured\.
+- [*Layers*]({{< relref "../part-2--basic-metapatterns/layers.md" >}}) allow for the parts of the system to differ in *qualities* \([*forces*]({{< relref "../part-1--foundations-of-software-architecture/forces--asynchronicity--and-distribution.md#conflicting-forces" >}})\) and [deployment]({{< relref "../part-1--foundations-of-software-architecture/forces--asynchronicity--and-distribution.md#distribution" >}})\. Various third\-party components can be integrated and the code becomes better structured\.
 - [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}}) or [*Pipeline*]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}}) help to distribute the work among multiple teams and may decrease the project’s complexity if the division yields loosely coupled components\.
 - [*Plugins*]({{< relref "../part-5--implementation-metapatterns/plugins.md" >}}) and its subtypes, namely [*Hexagonal Architecture*]({{< relref "../part-5--implementation-metapatterns/hexagonal-architecture.md" >}}) and [*Scripts*]({{< relref "../part-5--implementation-metapatterns/microkernel.md#interpreter-script-domain-specific-language-dsl" >}}), make the system more adaptable\.
 
@@ -238,7 +238,7 @@ When *Shards* are applied to a single component, which is a [*Monolith*]({{< rel
 
 There is a benefit of such transformations which is important in the context of *Shards*: in many cases the resulting components can be scaled independently, arranging for a better resource utilization by the system \(when compared to scaling a *Monolith*\)\. However, scaling individual services usually requires a [*Load Balancer*]({{< relref "../part-3--extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) or [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}) to distribute requests over the scaled instances\.
 
-### Evolutions that share data
+### [Evolutions that share data]({{< relref "../part-7--appendices/appendix-e--evolutions/evolutions-of-shards-that-share-data.md" >}})
 
 The issue peculiar to *Shards* is that of coordinating deployed instances, especially if their data becomes coupled\. The most direct solution is to let the instances access the shared data:
 
@@ -278,7 +278,7 @@ The issue peculiar to *Shards* is that of coordinating deployed instances, espec
 </a>
 </figure>
 
-### Evolutions that share logic
+### [Evolutions that share logic]({{< relref "../part-7--appendices/appendix-e--evolutions/evolutions-of-shards-that-share-logic.md" >}})
 
 Other cases are better solved by extracting the logic that manipulates multiple shards:
 
@@ -316,7 +316,7 @@ Other cases are better solved by extracting the logic that manipulates multiple 
 
 <nav>
 
-| \<\< [Monolith]({{< relref "../part-2--basic-metapatterns/monolith.md" >}}) | ^ [Part 2\. Basic Metapatterns]({{< relref "../part-2--basic-metapatterns/_index.md" >}}) ^ | [Layers]({{< relref "../part-2--basic-metapatterns/layers.md" >}}) \>\> |
+| \<\< [Monolith]({{< relref "../part-2--basic-metapatterns/monolith.md" >}}) | ^ [Part 2\. Basic metapatterns]({{< relref "../part-2--basic-metapatterns/_index.md" >}}) ^ | [Layers]({{< relref "../part-2--basic-metapatterns/layers.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

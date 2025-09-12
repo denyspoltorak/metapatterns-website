@@ -14,7 +14,7 @@ The final approach is integration through shared data \([*Shared Repository*]({{
 </a>
 </figure>
 
-The shared data is a “blackboard” available for each service to read from and write to\. It is passive \(as controlled by the services\) and does not contain any logic except for the data schema, which represents a part of the domain knowledge\. That makes communication through shared data the antipode of [orchestration]({{< relref "../../part-1--foundations/arranging-communication/orchestration.md" >}}), which also features a shared component, [*Orchestrator*]({{< relref "../../part-3--extension-metapatterns/orchestrator.md" >}}), which is, however, active \(controls services\) and contains business logic, not data\.
+The shared data is a “blackboard” available for each service to read from and write to\. It is passive \(as controlled by the services\) and does not contain any logic except for the data schema, which represents a part of the domain knowledge\. That makes communication through shared data the antipode of [orchestration]({{< relref "../../part-1--foundations-of-software-architecture/arranging-communication/orchestration.md" >}}), which also features a shared component, [*Orchestrator*]({{< relref "../../part-3--extension-metapatterns/orchestrator.md" >}}), which is, however, active \(controls services\) and contains business logic, not data\.
 
 Shared data can be used for storage, messaging, or both:
 
@@ -76,7 +76,7 @@ The other, not as obvious, use case for shared data is messaging, which is imple
 </a>
 </figure>
 
-The use of shared data for messaging turns our datastore into a [*Middleware*]({{< relref "../../part-3--extension-metapatterns/middleware.md" >}})\. The dependencies are identical to [those in choreography]({{< relref "../../part-1--foundations/arranging-communication/choreography.md#dependencies" >}}) – each service depends on the APIs of its destinations for commands or its sources for notifications\.
+The use of shared data for messaging turns our datastore into a [*Middleware*]({{< relref "../../part-3--extension-metapatterns/middleware.md" >}})\. The dependencies are identical to [those in choreography]({{< relref "../../part-1--foundations-of-software-architecture/arranging-communication/choreography.md#dependencies" >}}) – each service depends on the APIs of its destinations for commands or its sources for notifications\.
 
 There should be a means for the recipient of a message to know about its arrival so that it starts processing the input\. Usually a messaging *Middleware* implements a receive\(\) method for the service to block on\. However, very low latency applications, like [HFT](https://en.wikipedia.org/wiki/High-frequency_trading), may [busy\-wait](https://en.wikipedia.org/wiki/Busy_waiting) by repeatedly re\-reading the shared memory so that the service starts processing the incoming data immediately on its arrival, bypassing the OS scheduler\. This is the fastest means of communication available in software\.
 
@@ -96,7 +96,7 @@ Communication through shared data is best suited for data\-centric domains \(for
 
 <nav>
 
-| \<\< [Choreography]({{< relref "../../part-1--foundations/arranging-communication/choreography.md" >}}) | ^ [Arranging communication]({{< relref "../../part-1--foundations/arranging-communication/_index.md" >}}) ^ | [Comparison of the options]({{< relref "../../part-1--foundations/arranging-communication/comparison-of-the-options.md" >}}) \>\> |
+| \<\< [Choreography]({{< relref "../../part-1--foundations-of-software-architecture/arranging-communication/choreography.md" >}}) | ^ [Arranging communication]({{< relref "../../part-1--foundations-of-software-architecture/arranging-communication/_index.md" >}}) ^ | [Comparison of communication styles]({{< relref "../../part-1--foundations-of-software-architecture/arranging-communication/comparison-of-communication-styles.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

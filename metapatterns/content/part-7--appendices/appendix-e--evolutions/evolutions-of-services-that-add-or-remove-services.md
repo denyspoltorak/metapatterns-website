@@ -1,10 +1,10 @@
 +++
 weight = 11
-title = "Services: add or remove services"
+title = "Evolutions of Services that add or remove services"
 description = A new service can be added, an existing one can be split in two, or multiple services can be merged if they become tightly coupled.
 +++
 
-# Services: add or remove services
+# Evolutions of Services that add or remove services
 
 [*Services*]({{< relref "../../part-2--basic-metapatterns/services.md" >}}) work well when each service matches a subdomain and is developed by a single team\. If those premises change, you’ll need to restructure the system:
 
@@ -30,7 +30,7 @@ description = A new service can be added, an existing one can be split in two, o
 
 If you need to add a new functionality that does not naturally fit into one of the existing services, you may create a new service and maybe get a new team for it\.
 
-If one of your services has grown too large, you should look for a way to subdivide it \(likely through a [*Cell*]({{< relref "../../part-2--basic-metapatterns/services.md#cell-wso2-definition-service-of-services-domain-uber-definition-cluster" >}}) stage with a shared [*Orchestrator*]({{< relref "../../part-3--extension-metapatterns/orchestrator.md" >}}) and [*database*]({{< relref "../../part-3--extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}})\) to decrease the size and, correspondingly, complexity of its code and get multiple teams to work on the resulting \(sub\)services\. However, that makes sense only if the old service is not highly cohesive – otherwise [the resulting subsystem may be more complex]({{< relref "../../part-1--foundations/modules-and-complexity.md#coupling-and-cohesion" >}}) than the original service\.
+If one of your services has grown too large, you should look for a way to subdivide it \(likely through a [*Cell*]({{< relref "../../part-2--basic-metapatterns/services.md#cell-wso2-definition-service-of-services-domain-uber-definition-cluster" >}}) stage with a shared [*Orchestrator*]({{< relref "../../part-3--extension-metapatterns/orchestrator.md" >}}) and [*database*]({{< relref "../../part-3--extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}})\) to decrease the size and, correspondingly, complexity of its code and get multiple teams to work on the resulting \(sub\)services\. However, that makes sense only if the old service is not highly cohesive – otherwise [the resulting subsystem may be more complex]({{< relref "../../part-1--foundations-of-software-architecture/modules-and-complexity.md#coupling-and-cohesion" >}}) than the original service\.
 
 <ins>Pros</ins>: 
 
@@ -85,7 +85,7 @@ Alternatively, as domain knowledge changes \[[DDD]({{< relref "../../part-7--app
 
 <nav>
 
-| \<\< [Layers: gain flexibility]({{< relref "../../part-7--appendices/appendix-e--evolutions/layers--gain-flexibility.md" >}}) | ^ [Appendix E\. Evolutions\.]({{< relref "../../part-7--appendices/appendix-e--evolutions/_index.md" >}}) ^ | [Services: add layers]({{< relref "../../part-7--appendices/appendix-e--evolutions/services--add-layers.md" >}}) \>\> |
+| \<\< [Evolutions of Layers to gain flexibility]({{< relref "../../part-7--appendices/appendix-e--evolutions/evolutions-of-layers-to-gain-flexibility.md" >}}) | ^ [Appendix E\. Evolutions\.]({{< relref "../../part-7--appendices/appendix-e--evolutions/_index.md" >}}) ^ | [Evolutions of Services that add layers]({{< relref "../../part-7--appendices/appendix-e--evolutions/evolutions-of-services-that-add-layers.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

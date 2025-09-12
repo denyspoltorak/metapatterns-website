@@ -260,7 +260,7 @@ Another difference is that while *MVC* provides for changing target platforms by
 
 <nav>
 
-| \<\< [Plugins]({{< relref "../part-5--implementation-metapatterns/plugins.md" >}}) | ^ [Part 5\. Implementation Metapatterns]({{< relref "../part-5--implementation-metapatterns/_index.md" >}}) ^ | [Microkernel]({{< relref "../part-5--implementation-metapatterns/microkernel.md" >}}) \>\> |
+| \<\< [Plugins]({{< relref "../part-5--implementation-metapatterns/plugins.md" >}}) | ^ [Part 5\. Implementation metapatterns]({{< relref "../part-5--implementation-metapatterns/_index.md" >}}) ^ | [Microkernel]({{< relref "../part-5--implementation-metapatterns/microkernel.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

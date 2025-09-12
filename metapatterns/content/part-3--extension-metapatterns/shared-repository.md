@@ -48,7 +48,7 @@ description = A Shared Repository stores all or a part of the system's data. It 
 
 <ins>References:</ins> \[[DDIA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddia" >}})\] is all about databases; \[[FSA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#fsa" >}})\] has chapters on *Service\-Based Architecture* and *Space\-Based Architecture*; \[[DEDS]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#deds" >}})\] deals with *Shared Event Store\.*
 
-A *Shared Repository* builds communication in the system around its data, which is natural for [data\-centric domains]({{< relref "../part-1--foundations/arranging-communication/shared-data.md" >}}) and multiple [instances of a stateless service]({{< relref "../part-2--basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}}) and may often simplify development of a system of [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}}) that need to exchange data\. It covers the following concerns:
+A *Shared Repository* builds communication in the system around its data, which is natural for [data\-centric domains]({{< relref "../part-1--foundations-of-software-architecture/arranging-communication/shared-data.md" >}}) and multiple [instances of a stateless service]({{< relref "../part-2--basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}}) and may often simplify development of a system of [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}}) that need to exchange data\. It covers the following concerns:
 
 - Storage of the entire domain data\.
 - Keeping the data self\-consistent by providing atomic transactions for use by the application code\.
@@ -67,7 +67,7 @@ Non\-transactional distributed databases may be very fast when colocated with th
 
 ### Dependencies
 
-Normally, every service depends on the repository\. If the repository does not provide notifications on changes to the data, the services may need to communicate directly, in which case they will also depend on each other through [*choreography*]({{< relref "../part-1--foundations/arranging-communication/choreography.md" >}}) or *mutual* [*orchestration*]({{< relref "../part-1--foundations/arranging-communication/orchestration.md" >}})\.
+Normally, every service depends on the repository\. If the repository does not provide notifications on changes to the data, the services may need to communicate directly, in which case they will also depend on each other through [*choreography*]({{< relref "../part-1--foundations-of-software-architecture/arranging-communication/choreography.md" >}}) or *mutual* [*orchestration*]({{< relref "../part-1--foundations-of-software-architecture/arranging-communication/orchestration.md" >}})\.
 
 <figure style="text-align:center">
 <a href="/Dependencies/SharedRepository-1.png" style="outline:none">
@@ -89,7 +89,7 @@ Still, the DAL does not remove shared dependencies and only adds some flexibilit
 
 *Shared Repository* is <ins>good</ins> for:
 
-- *Data\-centric domains\.* If most of your domain’s data is used in every subdomain, keeping any part of it private to a single service will be a pain in the system design\. Examples include a [ticket reservation system]({{< relref "../part-1--foundations/arranging-communication/shared-data.md" >}}) and even the minesweeper game\.
+- *Data\-centric domains\.* If most of your domain’s data is used in every subdomain, keeping any part of it private to a single service will be a pain in the system design\. Examples include a [ticket reservation system]({{< relref "../part-1--foundations-of-software-architecture/arranging-communication/shared-data.md" >}}) and even the minesweeper game\.
 - *A scalable service\.* When you run several [instances]({{< relref "../part-2--basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}}) of a service, like in [*Microservices*]({{< relref "../part-2--basic-metapatterns/services.md#microservices" >}}), the instances are likely to be identical and stateless, with the service’s data pushed out to a database shared among the instances\.
 - *Huge datasets*\. Sometimes you may need to deal with a lot of data\. It is unwise \(meaning expensive\) to stream and replicate it between your services just for the sake of ensuring their isolation\. Share it instead\. If the data does not fit in an ordinary database, some kind of [*Space\-Based Architecture*]({{< relref "../part-5--implementation-metapatterns/mesh.md#space-based-architecture" >}}) \(which [was invented to this end](https://en.wikipedia.org/wiki/Space-based_architecture#History)\) may become your friend\.
 - *Quick simple projects\.* Don’t over\-engineer if the project won’t live long enough to benefit from its flexibility\. You may also save a buck or two on the storage\.
@@ -193,7 +193,7 @@ Several actors \(processes, modules, device drivers\) communicate through one or
 </a>
 </figure>
 
-As a file system is a kind of shared dictionary, writing and reading files can be used to transfer data between applications\. A [data processing]({{< relref "../part-1--foundations/four-kinds-of-software.md#streaming-continuous-raw-data-input" >}}) [*Pipeline*]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}}) which stores intermediate results in files benefits from the ability to restart its calculation from the last successful step because files are persistent \[[DDIA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddia" >}})\]\.
+As a file system is a kind of shared dictionary, writing and reading files can be used to transfer data between applications\. A [data processing]({{< relref "../part-1--foundations-of-software-architecture/four-kinds-of-software.md#streaming-continuous-raw-data-input" >}}) [*Pipeline*]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}}) which stores intermediate results in files benefits from the ability to restart its calculation from the last successful step because files are persistent \[[DDIA]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#ddia" >}})\]\.
 
 ### Persistent Event Log, Shared Event Store
 
@@ -217,11 +217,11 @@ More details are [available]({{< relref "../part-3--extension-metapatterns/combi
 
 *Stamp Coupling* \[[SAHP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#sahp" >}})\] happens when a single data structure passes through an entire [*Pipeline*]({{< relref "../part-2--basic-metapatterns/pipeline.md" >}}), with separate fields of the data structure targeting individual processing steps\.
 
-A [*choreographed*]({{< relref "../part-1--foundations/arranging-communication/choreography.md" >}}) system with no shared databases does not provide any way to aggregate the data spread over its multiple services\. If we need to collect everything known about a user or purchase, we pass a query message through the system, and every service appends to it whatever it knows of the subject \(just like post offices add their *stamps* to a letter\)\. The unified message becomes a kind of virtual \(temporary\) *Shared Repository* which the services \(*Content Enrichers* according to \[[EIP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}})\]\) write to\. This also manifests in the dependencies: all the services [depend on the format of the query message]({{< relref "../part-1--foundations/arranging-communication/choreography.md#dependencies" >}}) as they would on the schema of a *Shared Repository*, instead of depending on each other, as is usual with *Pipelines*\.
+A [*choreographed*]({{< relref "../part-1--foundations-of-software-architecture/arranging-communication/choreography.md" >}}) system with no shared databases does not provide any way to aggregate the data spread over its multiple services\. If we need to collect everything known about a user or purchase, we pass a query message through the system, and every service appends to it whatever it knows of the subject \(just like post offices add their *stamps* to a letter\)\. The unified message becomes a kind of virtual \(temporary\) *Shared Repository* which the services \(*Content Enrichers* according to \[[EIP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#eip" >}})\]\) write to\. This also manifests in the dependencies: all the services [depend on the format of the query message]({{< relref "../part-1--foundations-of-software-architecture/arranging-communication/choreography.md#dependencies" >}}) as they would on the schema of a *Shared Repository*, instead of depending on each other, as is usual with *Pipelines*\.
 
 ## Evolutions
 
-Once a database appears, it is unlikely to go away\. I see the following evolutions to improve performance of the data layer:
+Once a database appears, it is unlikely to go away\. I see the [following evolutions]({{< relref "../part-7--appendices/appendix-e--evolutions/evolutions-of-a-shared-repository.md" >}}) to improve performance of the data layer:
 
 - [Shard]({{< relref "../part-2--basic-metapatterns/shards.md" >}}) the database\.
 
@@ -261,11 +261,11 @@ Once a database appears, it is unlikely to go away\. I see the following evoluti
 
 ## Summary
 
-A *Shared Repository* encapsulates a system’s data, allowing for [data\-centric]({{< relref "../part-1--foundations/arranging-communication/shared-data.md" >}}) development and kickstarting [*Service\-Based*]({{< relref "../part-2--basic-metapatterns/services.md#service-based-architecture" >}}) architectures through simplifying interservice interactions\. Its downsides are a frozen data schema and limited performance\.
+A *Shared Repository* encapsulates a system’s data, allowing for [data\-centric]({{< relref "../part-1--foundations-of-software-architecture/arranging-communication/shared-data.md" >}}) development and kickstarting [*Service\-Based*]({{< relref "../part-2--basic-metapatterns/services.md#service-based-architecture" >}}) architectures through simplifying interservice interactions\. Its downsides are a frozen data schema and limited performance\.
 
 <nav>
 
-| \<\< [Middleware]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}) | ^ [Part 3\. Extension Metapatterns]({{< relref "../part-3--extension-metapatterns/_index.md" >}}) ^ | [Proxy]({{< relref "../part-3--extension-metapatterns/proxy.md" >}}) \>\> |
+| \<\< [Middleware]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}) | ^ [Part 3\. Extension metapatterns]({{< relref "../part-3--extension-metapatterns/_index.md" >}}) ^ | [Proxy]({{< relref "../part-3--extension-metapatterns/proxy.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

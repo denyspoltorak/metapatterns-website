@@ -1,11 +1,11 @@
 +++
 weight = 3
-title = "Part 2. Basic Metapatterns"
+title = "Part 2. Basic metapatterns"
 description = Basic architectures include: Monolith, Shards, Layers, Services, and Pipeline. They are building blocks for more complex designs.
 bookCollapseSection = true
 +++
 
-# Part 2\. Basic Metapatterns
+# Part 2\. Basic metapatterns
 
 Basic metapatterns are both common stand\-alone architectures and building blocks for more complex systems\. They include the single\-component *Monolithic* architecture and the results of its division along each of the [coordinate axes]({{< relref "../introduction/metapatterns.md#the-system-of-coordinates" >}}), namely *abstractness*, *subdomain*, and *sharding*:
 
@@ -71,7 +71,7 @@ A *Pipeline* is a kind of *Services* with unidirectional flow\. Each service imp
 
 <nav>
 
-| \<\< [Comparison of the options]({{< relref "../part-1--foundations/arranging-communication/comparison-of-the-options.md" >}}) | ^ [The pattern language of software architecture]({{< relref "../_index.md" >}}) ^ | [Monolith]({{< relref "../part-2--basic-metapatterns/monolith.md" >}}) \>\> |
+| \<\< [Comparison of communication styles]({{< relref "../part-1--foundations-of-software-architecture/arranging-communication/comparison-of-communication-styles.md" >}}) | ^ [The pattern language of software architecture]({{< relref "../_index.md" >}}) ^ | [Monolith]({{< relref "../part-2--basic-metapatterns/monolith.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

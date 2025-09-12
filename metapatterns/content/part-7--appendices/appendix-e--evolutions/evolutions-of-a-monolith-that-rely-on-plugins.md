@@ -1,10 +1,10 @@
 +++
 weight = 4
-title = "Monolith: to Plugins"
+title = "Evolutions of a Monolith that rely on Plugins"
 description = Plugins or Interpreter make a monolithic component customizable. Hexagonal Architecture protects its business logic from unstable external dependencies. 
 +++
 
-# Monolith: to Plugins
+# Evolutions of a Monolith that rely on Plugins
 
 The last group of evolutions which we review does not really change the monolithic nature of the application\. Instead, its goal is to improve the *customizability* of the [*Monolith*]({{< relref "../../part-2--basic-metapatterns/monolith.md" >}}):
 
@@ -103,7 +103,7 @@ The main business logic will communicate with all the external components throug
 
 <nav>
 
-| \<\< [Monolith: to Services]({{< relref "../../part-7--appendices/appendix-e--evolutions/monolith--to-services.md" >}}) | ^ [Appendix E\. Evolutions\.]({{< relref "../../part-7--appendices/appendix-e--evolutions/_index.md" >}}) ^ | [Shards: share data]({{< relref "../../part-7--appendices/appendix-e--evolutions/shards--share-data.md" >}}) \>\> |
+| \<\< [Evolutions of a Monolith that make Services]({{< relref "../../part-7--appendices/appendix-e--evolutions/evolutions-of-a-monolith-that-make-services.md" >}}) | ^ [Appendix E\. Evolutions\.]({{< relref "../../part-7--appendices/appendix-e--evolutions/_index.md" >}}) ^ | [Evolutions of Shards that share data]({{< relref "../../part-7--appendices/appendix-e--evolutions/evolutions-of-shards-that-share-data.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

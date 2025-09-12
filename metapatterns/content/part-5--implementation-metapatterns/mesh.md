@@ -53,7 +53,7 @@ In most \(all?\) implementations the user *application* is colocated with a *nod
 
 *Mesh*, being a *sharded Middleware*, inherits dependencies from both of its parent metapatterns:
 
-- As with [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}), the services that run over a *Mesh* depend both on the *Mesh’s API* and on each other \(or on a shared message format, aka [*Stamp Coupling*]({{< relref "../part-3--extension-metapatterns/shared-repository.md#inexact-stamp-coupling" >}}), or a [*Shared Database*]({{< relref "../part-3--extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) if they [use one for communication]({{< relref "../part-1--foundations/arranging-communication/shared-data.md" >}})\)\.
+- As with [*Middleware*]({{< relref "../part-3--extension-metapatterns/middleware.md" >}}), the services that run over a *Mesh* depend both on the *Mesh’s API* and on each other \(or on a shared message format, aka [*Stamp Coupling*]({{< relref "../part-3--extension-metapatterns/shared-repository.md#inexact-stamp-coupling" >}}), or a [*Shared Database*]({{< relref "../part-3--extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) if they [use one for communication]({{< relref "../part-1--foundations-of-software-architecture/arranging-communication/shared-data.md" >}})\)\.
 - As with [*Shards*]({{< relref "../part-2--basic-metapatterns/shards.md" >}}), the nodes of the *Mesh* should communicate through a backward\- and forward\-compatible protocol as there will likely be periods of time when multiple versions of the *Mesh* nodes coexist\.
 
 
@@ -196,7 +196,7 @@ The in\-memory data in the nodes is usually loaded from a *Persistent Database* 
 
 <nav>
 
-| \<\< [Microkernel]({{< relref "../part-5--implementation-metapatterns/microkernel.md" >}}) | ^ [Part 5\. Implementation Metapatterns]({{< relref "../part-5--implementation-metapatterns/_index.md" >}}) ^ | [Part 6\. Analytics]({{< relref "../part-6--analytics/_index.md" >}}) \>\> |
+| \<\< [Microkernel]({{< relref "../part-5--implementation-metapatterns/microkernel.md" >}}) | ^ [Part 5\. Implementation metapatterns]({{< relref "../part-5--implementation-metapatterns/_index.md" >}}) ^ | [Part 6\. Analytics]({{< relref "../part-6--analytics/_index.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

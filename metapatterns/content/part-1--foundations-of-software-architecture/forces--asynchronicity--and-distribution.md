@@ -127,7 +127,7 @@ Any moral? There is one, even a few\.
 
 <nav>
 
-| \<\< [Modules and complexity]({{< relref "../part-1--foundations/modules-and-complexity.md" >}}) | ^ [Part 1\. Foundations]({{< relref "../part-1--foundations/_index.md" >}}) ^ | [Four kinds of software]({{< relref "../part-1--foundations/four-kinds-of-software.md" >}}) \>\> |
+| \<\< [Modules and complexity]({{< relref "../part-1--foundations-of-software-architecture/modules-and-complexity.md" >}}) | ^ [Part 1\. Foundations of software architecture]({{< relref "../part-1--foundations-of-software-architecture/_index.md" >}}) ^ | [Four kinds of software]({{< relref "../part-1--foundations-of-software-architecture/four-kinds-of-software.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

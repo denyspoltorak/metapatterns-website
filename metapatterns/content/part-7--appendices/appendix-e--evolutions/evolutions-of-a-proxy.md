@@ -1,10 +1,10 @@
 +++
 weight = 16
-title = "Proxy:"
+title = "Evolutions of a Proxy"
 description = A new system-wide proxy may be stacked with the existing one or you can deploy a proxy per client type.
 +++
 
-# Proxy:
+# Evolutions of a Proxy
 
 It usually makes little sense to get rid of a [*Proxy*]({{< relref "../../part-3--extension-metapatterns/proxy.md" >}}) once it is integrated into a system\. Its only real drawback is a slight increase in latency for user requests which may be helped through creation of [bypass channels]({{< relref "../../part-3--extension-metapatterns/proxy.md#half-proxy" >}}) between the clients and a service that needs low latency\. The other drawback of the pattern, the *Proxy*’s being a single point of failure, is countered by deploying multiple instances of the *Proxy*\.
 
@@ -72,7 +72,7 @@ If you have internal and external clients, or admins and users, you may want to 
 
 <nav>
 
-| \<\< [Shared Repository:]({{< relref "../../part-7--appendices/appendix-e--evolutions/shared-repository-.md" >}}) | ^ [Appendix E\. Evolutions\.]({{< relref "../../part-7--appendices/appendix-e--evolutions/_index.md" >}}) ^ | [Orchestrator:]({{< relref "../../part-7--appendices/appendix-e--evolutions/orchestrator-.md" >}}) \>\> |
+| \<\< [Evolutions of a Shared Repository]({{< relref "../../part-7--appendices/appendix-e--evolutions/evolutions-of-a-shared-repository.md" >}}) | ^ [Appendix E\. Evolutions\.]({{< relref "../../part-7--appendices/appendix-e--evolutions/_index.md" >}}) ^ | [Evolutions of an Orchestrator]({{< relref "../../part-7--appendices/appendix-e--evolutions/evolutions-of-an-orchestrator.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

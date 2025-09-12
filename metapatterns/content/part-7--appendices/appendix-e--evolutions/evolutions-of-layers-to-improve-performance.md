@@ -1,12 +1,12 @@
 +++
 weight = 9
-title = "Layers: improve performance"
+title = "Evolutions of Layers to improve performance"
 description = There are a few ways to improve performance of a layered system: merge the layers, scale them, or use specialized databases (Polyglot Persistence).
 +++
 
-# Layers: improve performance
+# Evolutions of Layers to improve performance
 
-There are several ways to improve the performance of a [*layered system*]({{< relref "../../part-2--basic-metapatterns/layers.md" >}})\. One we have [already discussed]({{< relref "../../part-7--appendices/appendix-e--evolutions/shards--share-data.md#use-space-based-architecture" >}}) for [*Shards*]({{< relref "../../part-2--basic-metapatterns/shards.md" >}}):
+There are several ways to improve the performance of a [*layered system*]({{< relref "../../part-2--basic-metapatterns/layers.md" >}})\. One we have [already discussed]({{< relref "../../part-7--appendices/appendix-e--evolutions/evolutions-of-shards-that-share-data.md#use-space-based-architecture" >}}) for [*Shards*]({{< relref "../../part-2--basic-metapatterns/shards.md" >}}):
 
 - [*Space\-Based Architecture*]({{< relref "../../part-5--implementation-metapatterns/mesh.md#space-based-architecture" >}}) co\-locates the database and business logic and scales both dynamically\.
 
@@ -71,7 +71,7 @@ If your system’s development [is finished]({{< relref "../../part-6--analytics
 
 <ins>Prerequisite</ins>: some layers are [stateless]({{< relref "../../part-2--basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}}) or limited to the [data of a single client]({{< relref "../../part-2--basic-metapatterns/shards.md#temporary-state-create-on-demand" >}})\.
 
-Multiple instances or layers can be created, with their number and deployment [varying from layer to layer]({{< relref "../../part-1--foundations/forces--asynchronicity--and-distribution.md#distribution" >}})\. That may work seamlessly if each instance of the layer which receives an event which can start a use case knows the instance of the next layer to communicate to\. Otherwise you will need a *Load Balancer*\.
+Multiple instances or layers can be created, with their number and deployment [varying from layer to layer]({{< relref "../../part-1--foundations-of-software-architecture/forces--asynchronicity--and-distribution.md#distribution" >}})\. That may work seamlessly if each instance of the layer which receives an event which can start a use case knows the instance of the next layer to communicate to\. Otherwise you will need a *Load Balancer*\.
 
 <ins>Pros</ins>: 
 
@@ -130,7 +130,7 @@ If your types of data or data processing algorithms vary, you may deploy several
 
 <nav>
 
-| \<\< [Layers: help large projects]({{< relref "../../part-7--appendices/appendix-e--evolutions/layers--help-large-projects.md" >}}) | ^ [Appendix E\. Evolutions\.]({{< relref "../../part-7--appendices/appendix-e--evolutions/_index.md" >}}) ^ | [Layers: gain flexibility]({{< relref "../../part-7--appendices/appendix-e--evolutions/layers--gain-flexibility.md" >}}) \>\> |
+| \<\< [Evolutions of Layers that help large projects]({{< relref "../../part-7--appendices/appendix-e--evolutions/evolutions-of-layers-that-help-large-projects.md" >}}) | ^ [Appendix E\. Evolutions\.]({{< relref "../../part-7--appendices/appendix-e--evolutions/_index.md" >}}) ^ | [Evolutions of Layers to gain flexibility]({{< relref "../../part-7--appendices/appendix-e--evolutions/evolutions-of-layers-to-gain-flexibility.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

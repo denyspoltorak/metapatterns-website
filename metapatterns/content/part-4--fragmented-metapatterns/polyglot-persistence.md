@@ -259,7 +259,7 @@ Keeping the cache consistent with the main database is the hard part\. There are
 
 <nav>
 
-| \<\< [Layered Services]({{< relref "../part-4--fragmented-metapatterns/layered-services.md" >}}) | ^ [Part 4\. Fragmented Metapatterns]({{< relref "../part-4--fragmented-metapatterns/_index.md" >}}) ^ | [Backends for Frontends \(BFF\)]({{< relref "../part-4--fragmented-metapatterns/backends-for-frontends--bff-.md" >}}) \>\> |
+| \<\< [Layered Services]({{< relref "../part-4--fragmented-metapatterns/layered-services.md" >}}) | ^ [Part 4\. Fragmented metapatterns]({{< relref "../part-4--fragmented-metapatterns/_index.md" >}}) ^ | [Backends for Frontends \(BFF\)]({{< relref "../part-4--fragmented-metapatterns/backends-for-frontends--bff-.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

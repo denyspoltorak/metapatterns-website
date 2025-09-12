@@ -1,12 +1,12 @@
 +++
 weight = 8
-title = "Layers: help large projects"
+title = "Evolutions of Layers that help large projects"
 description = When a layered software grows large, its business logic should be subdivided into Services, Pipeline or Hierarchy.
 +++
 
-# Layers: help large projects
+# Evolutions of Layers that help large projects
 
-The main drawback \(and benefit\) of [*Layers*]({{< relref "../../part-2--basic-metapatterns/layers.md" >}}) is that much or all of the business logic is kept together in one or two components\. That allows for easy debugging and fast development in the initial stages of the project but slows down and complicates work as the project [grows in size]({{< relref "../../part-6--analytics/architecture-and-product-life-cycle.md#youth-development-of-features--fragmented-architectures" >}})\. The only way for a growing project to survive and continue evolving at a reasonable speed is to divide its business logic into several smaller, thus less [complex]({{< relref "../../part-1--foundations/modules-and-complexity.md" >}}), components that match subdomains \(*bounded contexts* \[[DDD]({{< relref "../../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\]\)\. There are several options for such a change whose applicability depends on the domain:
+The main drawback \(and benefit\) of [*Layers*]({{< relref "../../part-2--basic-metapatterns/layers.md" >}}) is that much or all of the business logic is kept together in one or two components\. That allows for easy debugging and fast development in the initial stages of the project but slows down and complicates work as the project [grows in size]({{< relref "../../part-6--analytics/architecture-and-product-life-cycle.md#youth-development-of-features--fragmented-architectures" >}})\. The only way for a growing project to survive and continue evolving at a reasonable speed is to divide its business logic into several smaller, thus less [complex]({{< relref "../../part-1--foundations-of-software-architecture/modules-and-complexity.md" >}}), components that match subdomains \(*bounded contexts* \[[DDD]({{< relref "../../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\]\)\. There are several options for such a change whose applicability depends on the domain:
 
 - The middle layer with the main business logic can be divided into [*Services*]({{< relref "../../part-2--basic-metapatterns/services.md" >}}) leaving the upper [*Orchestrator*]({{< relref "../../part-3--extension-metapatterns/orchestrator.md" >}}) and lower [*database*]({{< relref "../../part-3--extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) layers intact for future evolutions\.
 - Sometimes the business logic can be represented as a set of directed graphs which is known as [*Event\-Driven Architecture*]({{< relref "../../part-2--basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}})\.
@@ -27,7 +27,7 @@ The main drawback \(and benefit\) of [*Layers*]({{< relref "../../part-2--basic-
 
 <ins>Prerequisite</ins>: the low\-level business logic comprises loosely coupled subdomains\.
 
-It is very common for a system’s domain to consist of weakly interacting *bounded contexts* \[[DDD]({{< relref "../../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\]\. They are integrated through high\-level use cases and/or [relations in data]({{< relref "../../part-1--foundations/arranging-communication/shared-data.md" >}})\. For such a system it is relatively easy to divide the domain logic into *Services* while leaving the integration and data layers shared\.
+It is very common for a system’s domain to consist of weakly interacting *bounded contexts* \[[DDD]({{< relref "../../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\]\. They are integrated through high\-level use cases and/or [relations in data]({{< relref "../../part-1--foundations-of-software-architecture/arranging-communication/shared-data.md" >}})\. For such a system it is relatively easy to divide the domain logic into *Services* while leaving the integration and data layers shared\.
 
 <ins>Pros</ins>: 
 
@@ -125,7 +125,7 @@ Splitting the lower layers into independent components with identical interfaces
 
 <nav>
 
-| \<\< [Layers: make more layers]({{< relref "../../part-7--appendices/appendix-e--evolutions/layers--make-more-layers.md" >}}) | ^ [Appendix E\. Evolutions\.]({{< relref "../../part-7--appendices/appendix-e--evolutions/_index.md" >}}) ^ | [Layers: improve performance]({{< relref "../../part-7--appendices/appendix-e--evolutions/layers--improve-performance.md" >}}) \>\> |
+| \<\< [Evolutions of Layers that make more layers]({{< relref "../../part-7--appendices/appendix-e--evolutions/evolutions-of-layers-that-make-more-layers.md" >}}) | ^ [Appendix E\. Evolutions\.]({{< relref "../../part-7--appendices/appendix-e--evolutions/_index.md" >}}) ^ | [Evolutions of Layers to improve performance]({{< relref "../../part-7--appendices/appendix-e--evolutions/evolutions-of-layers-to-improve-performance.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

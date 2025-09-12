@@ -1,12 +1,12 @@
 +++
 weight = 10
-title = "Layers: gain flexibility"
+title = "Evolutions of Layers to gain flexibility"
 description = The upper Proxy or Orchestrator layer can be split into a service per client, making Backends for Frontends. This allows for per-client customization.
 +++
 
-# Layers: gain flexibility
+# Evolutions of Layers to gain flexibility
 
-The last group of evolutions to consider is about making the system more adaptable\. We have [already discussed]({{< relref "../../part-7--appendices/appendix-e--evolutions/monolith--to-plugins.md" >}}) the following evolutions for [*Monolith*]({{< relref "../../part-2--basic-metapatterns/monolith.md" >}}):
+The last group of evolutions to consider is about making the system more adaptable\. We have [already discussed]({{< relref "../../part-7--appendices/appendix-e--evolutions/evolutions-of-a-monolith-that-rely-on-plugins.md" >}}) the following evolutions for [*Monolith*]({{< relref "../../part-2--basic-metapatterns/monolith.md" >}}):
 
 - The behavior of the system may be modified through [*Plugins*]({{< relref "../../part-5--implementation-metapatterns/plugins.md" >}})\.
 - [*Hexagonal Architecture*]({{< relref "../../part-5--implementation-metapatterns/hexagonal-architecture.md" >}}) protects the business logic from dependencies on libraries and databases\.
@@ -59,7 +59,7 @@ It is possible that your system has different kinds of users, e\.g\. buyers, sel
 
 <nav>
 
-| \<\< [Layers: improve performance]({{< relref "../../part-7--appendices/appendix-e--evolutions/layers--improve-performance.md" >}}) | ^ [Appendix E\. Evolutions\.]({{< relref "../../part-7--appendices/appendix-e--evolutions/_index.md" >}}) ^ | [Services: add or remove services]({{< relref "../../part-7--appendices/appendix-e--evolutions/services--add-or-remove-services.md" >}}) \>\> |
+| \<\< [Evolutions of Layers to improve performance]({{< relref "../../part-7--appendices/appendix-e--evolutions/evolutions-of-layers-to-improve-performance.md" >}}) | ^ [Appendix E\. Evolutions\.]({{< relref "../../part-7--appendices/appendix-e--evolutions/_index.md" >}}) ^ | [Evolutions of Services that add or remove services]({{< relref "../../part-7--appendices/appendix-e--evolutions/evolutions-of-services-that-add-or-remove-services.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

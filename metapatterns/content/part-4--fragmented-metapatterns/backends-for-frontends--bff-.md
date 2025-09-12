@@ -54,7 +54,7 @@ As the multiple *Orchestrators* of *BFF* donâ€™t intercommunicate, the patternâ€
 
 ### Dependencies
 
-Each *BFF* depends on all the services it uses \(usually every service in the system\)\. The services themselves are likely to be independent, as is common in [*orchestrated* systems]({{< relref "../part-1--foundations/arranging-communication/orchestration.md" >}})\.
+Each *BFF* depends on all the services it uses \(usually every service in the system\)\. The services themselves are likely to be independent, as is common in [*orchestrated* systems]({{< relref "../part-1--foundations-of-software-architecture/arranging-communication/orchestration.md" >}})\.
 
 <figure style="text-align:center">
 <a href="/Dependencies/Backends%20for%20Frontends.png" style="outline:none">
@@ -168,7 +168,7 @@ Clients vary in access mode \(protocol\) and workflow and there is a third\-part
 
 <nav>
 
-| \<\< [Polyglot Persistence]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md" >}}) | ^ [Part 4\. Fragmented Metapatterns]({{< relref "../part-4--fragmented-metapatterns/_index.md" >}}) ^ | [Service\-Oriented Architecture \(SOA\)]({{< relref "../part-4--fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}) \>\> |
+| \<\< [Polyglot Persistence]({{< relref "../part-4--fragmented-metapatterns/polyglot-persistence.md" >}}) | ^ [Part 4\. Fragmented metapatterns]({{< relref "../part-4--fragmented-metapatterns/_index.md" >}}) ^ | [Service\-Oriented Architecture \(SOA\)]({{< relref "../part-4--fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

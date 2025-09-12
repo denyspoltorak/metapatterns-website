@@ -1,10 +1,10 @@
 +++
 weight = 15
-title = "Shared Repository:"
+title = "Evolutions of a Shared Repository"
 description = A shared database can be sharded or divided into private databases. Space-Based Architecture or Polyglot Persistence help to improve performance.
 +++
 
-# Shared Repository:
+# Evolutions of a Shared Repository
 
 Once a database appears, it is unlikely to go away\. I see the following evolutions to improve performance of the data layer:
 
@@ -97,7 +97,7 @@ Modern distributed databases support sharding out of the box, but an overgrown t
 
 <ins>Prerequisite</ins>: the domain data is weakly coupled\.
 
-If the data clearly follows subdomains, it may be possible to subdivide it accordingly\. The services will become [*choreographed*]({{< relref "../../part-1--foundations/arranging-communication/choreography.md" >}}) \(or [*orchestrated*]({{< relref "../../part-1--foundations/arranging-communication/orchestration.md" >}}) if they have an [*integration layer*]({{< relref "../../part-3--extension-metapatterns/orchestrator.md" >}})\) instead of communicating through the [shared data]({{< relref "../../part-1--foundations/arranging-communication/shared-data.md" >}})\.
+If the data clearly follows subdomains, it may be possible to subdivide it accordingly\. The services will become [*choreographed*]({{< relref "../../part-1--foundations-of-software-architecture/arranging-communication/choreography.md" >}}) \(or [*orchestrated*]({{< relref "../../part-1--foundations-of-software-architecture/arranging-communication/orchestration.md" >}}) if they have an [*integration layer*]({{< relref "../../part-3--extension-metapatterns/orchestrator.md" >}})\) instead of communicating through the [shared data]({{< relref "../../part-1--foundations-of-software-architecture/arranging-communication/shared-data.md" >}})\.
 
 <ins>Pros</ins>: 
 
@@ -150,7 +150,7 @@ It is very likely that you can either use [*specialized databases*]({{< relref "
 
 <nav>
 
-| \<\< [Middleware:]({{< relref "../../part-7--appendices/appendix-e--evolutions/middleware-.md" >}}) | ^ [Appendix E\. Evolutions\.]({{< relref "../../part-7--appendices/appendix-e--evolutions/_index.md" >}}) ^ | [Proxy:]({{< relref "../../part-7--appendices/appendix-e--evolutions/proxy-.md" >}}) \>\> |
+| \<\< [Evolutions of a Middleware]({{< relref "../../part-7--appendices/appendix-e--evolutions/evolutions-of-a-middleware.md" >}}) | ^ [Appendix E\. Evolutions\.]({{< relref "../../part-7--appendices/appendix-e--evolutions/_index.md" >}}) ^ | [Evolutions of a Proxy]({{< relref "../../part-7--appendices/appendix-e--evolutions/evolutions-of-a-proxy.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

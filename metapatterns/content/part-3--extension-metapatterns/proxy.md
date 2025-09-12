@@ -333,7 +333,7 @@ There is also a whole bunch of *Adapters* that aim to protect the business logic
 
 It usually makes little sense to get rid of a *Proxy* once it has been integrated into a system\. The only real drawback to using a *Proxy* is a slight increase in latency for user requests which may be mitigated through the creation of [bypass channels]({{< relref "#half-proxy" >}}) between the clients and a service that needs low latency\. The other drawback of the pattern, the *Proxy* being a single point of failure, is countered by deploying multiple instances of the *Proxy*\.
 
-As *Proxies* are usually third\-party products, there is not much we can change about them:
+As *Proxies* are usually third\-party products, there is not much [we can change about them]({{< relref "../part-7--appendices/appendix-e--evolutions/evolutions-of-a-proxy.md" >}}):
 
 - We can add another kind of a *Proxy* on top of an existing one\.
 
@@ -359,7 +359,7 @@ As *Proxies* are usually third\-party products, there is not much we can change 
 
 <nav>
 
-| \<\< [Shared Repository]({{< relref "../part-3--extension-metapatterns/shared-repository.md" >}}) | ^ [Part 3\. Extension Metapatterns]({{< relref "../part-3--extension-metapatterns/_index.md" >}}) ^ | [Orchestrator]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}}) \>\> |
+| \<\< [Shared Repository]({{< relref "../part-3--extension-metapatterns/shared-repository.md" >}}) | ^ [Part 3\. Extension metapatterns]({{< relref "../part-3--extension-metapatterns/_index.md" >}}) ^ | [Orchestrator]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

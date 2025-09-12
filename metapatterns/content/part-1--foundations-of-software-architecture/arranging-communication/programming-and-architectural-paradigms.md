@@ -29,7 +29,7 @@ Each [programming paradigm](https://en.wikipedia.org/wiki/Programming_paradigm) 
 
 Almost every software project is too complex for a programmer to keep all the details of its requirements and implementation in their mind\. Notwithstanding, those details must be written down and run as code\.
 
-The good old way out of the trouble is called [*divide and conquer*](https://en.wikipedia.org/wiki/Divide-and-conquer_algorithm)\. The global task is divided into several subtasks, and each subtask is subdivided again and again – till the resulting pieces are either simple enough to solve directly or [too messy]({{< relref "../../part-1--foundations/modules-and-complexity.md" >}}) to allow for further subdivision\. Basically, we need to split our domain’s *control*, *logic*, and *data* into a single hierarchy of moderately sized components\.
+The good old way out of the trouble is called [*divide and conquer*](https://en.wikipedia.org/wiki/Divide-and-conquer_algorithm)\. The global task is divided into several subtasks, and each subtask is subdivided again and again – till the resulting pieces are either simple enough to solve directly or [too messy]({{< relref "../../part-1--foundations-of-software-architecture/modules-and-complexity.md" >}}) to allow for further subdivision\. Basically, we need to split our domain’s *control*, *logic*, and *data* into a single hierarchy of moderately sized components\.
 
 We have heard a lot about keeping *logic and data* together: an object \(or actor, or module, or service – no matter what you call it\) must own its data to assure its consistency and hide the complexity of the component’s internals from its users\. If the encapsulation of an object's data is violated, the object’s code can neither trust nor restructure it\. On the other hand, if the data is bound to the logic that deals with it, the entire thing becomes a useful black box one does not need to look into to operate\.
 
@@ -59,7 +59,7 @@ Sometimes you don’t need that level of fine\-tuning for the behavior of the sy
 </a>
 </figure>
 
-Functional or pipelined design is famous for its simplicity and high performance as the majority of processing steps can be scaled\. However, its straightforward application lacks the depth needed for handling complex processes, which would translate into webs of relations between hundreds of functions present at the same level of design\. It is also inefficient for choose\-your\-own\-adventure\-style \([*control*]({{< relref "../../part-1--foundations/four-kinds-of-software.md#control-real-time-hardware-input" >}})\) systems where too many too short conveyor belts would be required, negating the paradigm’s benefits\. And it may not be the right tool for making small changes in large sets of data as you’ll likely need to copy the whole dataset between the constituent functions\.
+Functional or pipelined design is famous for its simplicity and high performance as the majority of processing steps can be scaled\. However, its straightforward application lacks the depth needed for handling complex processes, which would translate into webs of relations between hundreds of functions present at the same level of design\. It is also inefficient for choose\-your\-own\-adventure\-style \([*control*]({{< relref "../../part-1--foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}})\) systems where too many too short conveyor belts would be required, negating the paradigm’s benefits\. And it may not be the right tool for making small changes in large sets of data as you’ll likely need to copy the whole dataset between the constituent functions\.
 
 In distributed systems the functional paradigm is disguised as [*Choreographed Event\-Driven Architecture*]({{< relref "../../part-2--basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}}), [*Data Mesh*]({{< relref "../../part-2--basic-metapatterns/pipeline.md#data-mesh" >}}), and various [batch or stream]({{< relref "../../part-2--basic-metapatterns/pipeline.md#variants-by-scheduling" >}}) processing \[[DDIA]({{< relref "../../part-7--appendices/appendix-b--books-referenced.md#ddia" >}})\] [*Pipelines*]({{< relref "../../part-2--basic-metapatterns/pipeline.md#pipes-and-filters-workflow-system" >}})\.
 
@@ -132,7 +132,7 @@ Now let’s examine each of these approaches in depth:
 
 <nav>
 
-| \<\< [Arranging communication]({{< relref "../../part-1--foundations/arranging-communication/_index.md" >}}) | ^ [Arranging communication]({{< relref "../../part-1--foundations/arranging-communication/_index.md" >}}) ^ | [Orchestration]({{< relref "../../part-1--foundations/arranging-communication/orchestration.md" >}}) \>\> |
+| \<\< [Arranging communication]({{< relref "../../part-1--foundations-of-software-architecture/arranging-communication/_index.md" >}}) | ^ [Arranging communication]({{< relref "../../part-1--foundations-of-software-architecture/arranging-communication/_index.md" >}}) ^ | [Orchestration]({{< relref "../../part-1--foundations-of-software-architecture/arranging-communication/orchestration.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

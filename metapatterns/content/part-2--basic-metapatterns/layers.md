@@ -91,7 +91,7 @@ There is a number of optimizations to skip interlayer calls:
 </a>
 </figure>
 
-*Caching*: an upper layer tends to *model* \(cache last known state of\) the layers below it\. This way it can behave as if it knew the state of the whole system without querying the actual state from the hardware below all the layers\. Such an approach is universal for [*control software*]({{< relref "../part-1--foundations/four-kinds-of-software.md#control-real-time-hardware-input" >}})\. For example, a network monitoring suite shows you the last known state of all the components it observes without actually querying them – it is subscribed to notifications and remembers what each device has previously reported\.
+*Caching*: an upper layer tends to *model* \(cache last known state of\) the layers below it\. This way it can behave as if it knew the state of the whole system without querying the actual state from the hardware below all the layers\. Such an approach is universal for [*control software*]({{< relref "../part-1--foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}})\. For example, a network monitoring suite shows you the last known state of all the components it observes without actually querying them – it is subscribed to notifications and remembers what each device has previously reported\.
 
 <figure style="text-align:center">
 <a href="/Performance/Layers-aggregation.png" style="outline:none">
@@ -117,7 +117,7 @@ There is a number of optimizations to skip interlayer calls:
 
 *Strategy injection*: an upper layer installs an event handler \(hook\) into the lower layer\. The goal is for the hook to do basic pre\-processing, filtering, aggregation, and decision making to process the majority of events autonomously while escalating to the upper layer in exceptional or important cases\. That may help in such time\-critical domains as high\-frequency trading\.
 
-Layers can be scaled independently, as [exemplified]({{< relref "../part-1--foundations/forces--asynchronicity--and-distribution.md#distribution" >}}) by common web applications that comprise a highly scalable and resource\-consuming frontend, somewhat scalable backend and unscalable data layer\. Another example is an OS \(lower layer\) that runs multiple user applications \(upper layer\)\.
+Layers can be scaled independently, as [exemplified]({{< relref "../part-1--foundations-of-software-architecture/forces--asynchronicity--and-distribution.md#distribution" >}}) by common web applications that comprise a highly scalable and resource\-consuming frontend, somewhat scalable backend and unscalable data layer\. Another example is an OS \(lower layer\) that runs multiple user applications \(upper layer\)\.
 
 ### Dependencies
 
@@ -185,7 +185,7 @@ If you ever need to *scale* \(run multiple instances of\) a layer, you may notic
 
 ## Variants by isolation
 
-There are [several grades]({{< relref "../part-1--foundations/forces--asynchronicity--and-distribution.md" >}}) of layer isolation between unstructured [*Monolith*]({{< relref "../part-2--basic-metapatterns/monolith.md" >}}) and distributed *Tiers*\. All of them are widely used in practice: each step adds its specific benefits and drawbacks to those of the previous stages until at some point it makes more sense to reject the next deal because its cons are too inconvenient for you\.
+There are [several grades]({{< relref "../part-1--foundations-of-software-architecture/forces--asynchronicity--and-distribution.md" >}}) of layer isolation between unstructured [*Monolith*]({{< relref "../part-2--basic-metapatterns/monolith.md" >}}) and distributed *Tiers*\. All of them are widely used in practice: each step adds its specific benefits and drawbacks to those of the previous stages until at some point it makes more sense to reject the next deal because its cons are too inconvenient for you\.
 
 ### Synchronous layers, Layered Monolith
 
@@ -289,7 +289,7 @@ Here the focus lies with the distribution of the components over heterogeneous h
 - *Data* \(*Database*\) tier – a service provider’s database which runs on a dedicated server\. It is not scalable but is very secure\.
 
 
-In this case the division into layers resolves the conflict between scalability, latency, security, and cost as discussed in detail in the [chapter on distribution]({{< relref "../part-1--foundations/forces--asynchronicity--and-distribution.md#distribution" >}})\.
+In this case the division into layers resolves the conflict between scalability, latency, security, and cost as discussed in detail in the [chapter on distribution]({{< relref "../part-1--foundations-of-software-architecture/forces--asynchronicity--and-distribution.md#distribution" >}})\.
 
 <aside>
 
@@ -323,7 +323,7 @@ An example of such a system can be found in an old mobile phone or a digital cam
 
 Layers are not without drawbacks which may force your system to evolve\. A summary of such evolutions is given below while more details can be found in [Appendix E]({{< relref "../part-7--appendices/appendix-e--evolutions/_index.md" >}})\.
 
-### Evolutions that make more layers
+### [Evolutions that make more layers]({{< relref "../part-7--appendices/appendix-e--evolutions/evolutions-of-layers-that-make-more-layers.md" >}})
 
 Not all the layered architectures are equally layered\. A [*Monolith*]({{< relref "../part-2--basic-metapatterns/monolith.md" >}}) with a [*Proxy*]({{< relref "../part-3--extension-metapatterns/proxy.md" >}}) or database has already stepped into the realm of *Layers* but is far from reaping all its benefits\. Such a system may continue its course in a few ways that were previously [discussed for *Monolith*]({{< relref "../part-2--basic-metapatterns/monolith.md#evolutions-to-layers" >}}):
 
@@ -349,9 +349,9 @@ It is also common to:
 </a>
 </figure>
 
-### Evolutions that help large projects
+### [Evolutions that help large projects]({{< relref "../part-7--appendices/appendix-e--evolutions/evolutions-of-layers-that-help-large-projects.md" >}})
 
-The main drawback \(and benefit as well\) of *Layers* is that much or all of the business logic is kept together in one or two components\. That allows for easy debugging and fast development in the initial stages of the project but slows down and complicates work as the project grows in size \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\]\. The only way for a growing project to survive and continue evolving at a reasonable speed is to divide its business logic into several smaller, [thus less complex]({{< relref "../part-1--foundations/modules-and-complexity.md" >}}), components that match subdomains \(*bounded contexts* \[[DDD](https://docs.google.com/document/d/1hzBn-RzzNDcArAWcvXaXgw2nl6O_ryDKE51Xve18zOs/edit?pli=1&tab=t.0#bookmark=kix.zhw27orifw3i)\]\)\. There are several options for such a change, with their applicability depending on the domain:
+The main drawback \(and benefit as well\) of *Layers* is that much or all of the business logic is kept together in one or two components\. That allows for easy debugging and fast development in the initial stages of the project but slows down and complicates work as the project grows in size \[[MP]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#mp" >}})\]\. The only way for a growing project to survive and continue evolving at a reasonable speed is to divide its business logic into several smaller, [thus less complex]({{< relref "../part-1--foundations-of-software-architecture/modules-and-complexity.md" >}}), components that match subdomains \(*bounded contexts* \[[DDD](https://docs.google.com/document/d/1hzBn-RzzNDcArAWcvXaXgw2nl6O_ryDKE51Xve18zOs/edit?pli=1&tab=t.0#bookmark=kix.zhw27orifw3i)\]\)\. There are several options for such a change, with their applicability depending on the domain:
 
 - The middle layer with the main business logic can be divided into [*Services*]({{< relref "../part-2--basic-metapatterns/services.md" >}}) leaving the upper [*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}}) and lower [*database*]({{< relref "../part-3--extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) layers intact for future evolutions\.
 
@@ -380,7 +380,7 @@ The main drawback \(and benefit as well\) of *Layers* is that much or all of the
 </a>
 </figure>
 
-### Evolutions that improve performance
+### [Evolutions that improve performance]({{< relref "../part-7--appendices/appendix-e--evolutions/evolutions-of-layers-to-improve-performance.md" >}})
 
 There are several ways to improve the performance of a layered system\. One we have [already discussed for *Shards*]({{< relref "../part-2--basic-metapatterns/shards.md#evolutions-that-share-data" >}}):
 
@@ -422,7 +422,7 @@ Others are new:
 </a>
 </figure>
 
-### Evolutions to gain flexibility
+### [Evolutions to gain flexibility]({{< relref "../part-7--appendices/appendix-e--evolutions/evolutions-of-layers-to-gain-flexibility.md" >}})
 
 The last group of evolutions to consider is about making the system more adaptable\. We have already discussed the following [evolutions for *Monolith*]({{< relref "../part-2--basic-metapatterns/monolith.md#evolutions-with-plugins" >}}):
 
@@ -454,7 +454,7 @@ There is one new evolution which modifies the upper \(*orchestration*\) layer:
 
 <nav>
 
-| \<\< [Shards]({{< relref "../part-2--basic-metapatterns/shards.md" >}}) | ^ [Part 2\. Basic Metapatterns]({{< relref "../part-2--basic-metapatterns/_index.md" >}}) ^ | [Services]({{< relref "../part-2--basic-metapatterns/services.md" >}}) \>\> |
+| \<\< [Shards]({{< relref "../part-2--basic-metapatterns/shards.md" >}}) | ^ [Part 2\. Basic metapatterns]({{< relref "../part-2--basic-metapatterns/_index.md" >}}) ^ | [Services]({{< relref "../part-2--basic-metapatterns/services.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

@@ -1,11 +1,11 @@
 +++
 weight = 5
-title = "Part 4. Fragmented Metapatterns"
+title = "Part 4. Fragmented metapatterns"
 description = Fragmented architectures make use of small specialized components. Examples include Layered Services, BFF, SOA, Polyglot Persistence, and Hierarchy.
 bookCollapseSection = true
 +++
 
-# Part 4\. Fragmented Metapatterns
+# Part 4\. Fragmented metapatterns
 
 There are several patterns with no system\-wide layers\. Some of them incorporate two or three orthogonal domains which vary in abstractness to the extent that a service \(limited to a subdomain\) of one domain acts as a layer for another domain\.
 

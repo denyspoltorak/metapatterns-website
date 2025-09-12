@@ -34,7 +34,7 @@ In a distributed system you can place the functionality or data to share into a 
 
 A less obvious solution is [delegating](https://datatracker.ietf.org/doc/html/rfc1925) our needs to another layer of the system\. To continue our example of logging, a [*Proxy*]({{< relref "../../part-3--extension-metapatterns/proxy.md" >}}) may log user requests and a [*Middleware*]({{< relref "../../part-3--extension-metapatterns/middleware.md" >}}) – interservice communication\. In many cases one of these generic components is configurable to record all calls to the methods which we need to log – with no changes to the code\!
 
-In a similar way a service may [behave as a function]({{< relref "../../part-1--foundations/arranging-communication/programming-and-architectural-paradigms.md#functional-decentralized-streaming-paradigm--choreography" >}}): receive all the data it needs in an input message and send back all its work as an output – and let the database access remain the responsibility of its caller\.
+In a similar way a service may [behave as a function]({{< relref "../../part-1--foundations-of-software-architecture/arranging-communication/programming-and-architectural-paradigms.md#functional-decentralized-streaming-paradigm--choreography" >}}): receive all the data it needs in an input message and send back all its work as an output – and let the database access remain the responsibility of its caller\.
 
 <figure style="text-align:center">
 <a href="/Conclusion/Sharing-Delegate.png" style="outline:none">

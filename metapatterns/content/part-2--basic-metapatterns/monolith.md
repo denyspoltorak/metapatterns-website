@@ -84,13 +84,13 @@ Even though a *Monolith* is a single module, meaning that there are no dependenc
 
 *Monolith* <ins>should be avoided</ins> when we need modules:
 
-- *Incompatible forces\.* There are [conflicting *forces*]({{< relref "../part-1--foundations/forces--asynchronicity--and-distribution.md#conflicting-forces" >}}) \(non\-functional requirements\) for different subsets of functionality\. They require splitting the system into \(usually asynchronous\) components each of which is specifically designed to satisfy its own subset of forces\. Your main tool is the careful selection of appropriate technologies and architectures on a per component basis which may allow the project to satisfy all the non\-functional requirements even if the task looks impossible during the initial analysis\.
+- *Incompatible forces\.* There are [conflicting *forces*]({{< relref "../part-1--foundations-of-software-architecture/forces--asynchronicity--and-distribution.md#conflicting-forces" >}}) \(non\-functional requirements\) for different subsets of functionality\. They require splitting the system into \(usually asynchronous\) components each of which is specifically designed to satisfy its own subset of forces\. Your main tool is the careful selection of appropriate technologies and architectures on a per component basis which may allow the project to satisfy all the non\-functional requirements even if the task looks impossible during the initial analysis\.
 - *Long\-running projects\.* The project is going to evolve over time and you believe you can predict the general direction of the future changes\. Modularity brings flexibility which you will need for sure\.
 - *Larger codebases\.* The project grows above average size \(100 000 lines of code\)\. If you don’t split it into smaller components it will grow into a [monolithic hell](https://livebook.manning.com/book/microservices-patterns/chapter-1/25) with development and debugging slowing down year after year till it reaches [terminal stage](https://news.ycombinator.com/item?id=18442941)\. Slow development is a waste of money, both in salary and in time to market\.
 - *Multiple teams\.* You have multiple teams to work on the project\. Inter\-team communication is hard and error\-prone whereas merging several teams together is known to greatly reduce the programmers’ productivity \(which peaks with teams of 5 or less members\)\. Explicit interfaces between components will formalize interdependencies between the teams, lowering communication overhead\.
 - *Fault tolerance\.* Your domain requires fault tolerance which is next to impossible for large monolithic applications\.
 - *Resource\-limited\.* Your project is too resource\-hungry for commodity hardware\. Even if you buy the best server for its needs right now, it is going to crave more tomorrow \(or on the next Black Friday\)\.
-- *Distributed setup\.* Your project needs to run on multiple hardware devices\. One of common examples is a [web service]({{< relref "../part-1--foundations/forces--asynchronicity--and-distribution.md#distribution" >}}) containing frontend and backend\.
+- *Distributed setup\.* Your project needs to run on multiple hardware devices\. One of common examples is a [web service]({{< relref "../part-1--foundations-of-software-architecture/forces--asynchronicity--and-distribution.md#distribution" >}}) containing frontend and backend\.
 
 
 ### Relations
@@ -208,7 +208,7 @@ This is the default simple & stupid implementation of backend services\. Its pit
 
 In [*Proactor*](https://hillside.net/plop/plop97/Proceedings/pyarali.proactor.pdf) \[[POSA2]({{< relref "../part-7--appendices/appendix-b--books-referenced.md#posa2" >}})\] a single thread processes all of the incoming events, both from the module’s clients and from the hardware or dependencies it manages\. When an event is received, the thread goes through a short piece of corresponding business logic \(*event handler*\) which usually does one or more non\-blocking actions, such as sending messages to other components, writing to registers of the managed hardware, or initiating an async I/O\. As soon as the event handler returns, the thread becomes ready to process further events\. As the thread never blocks, it is resource\-efficient and serves many interleaved tasks\.
 
-This approach is good for real\-time systems where thread synchronization is largely forbidden because of the associated delays and for reactive [control]({{< relref "../part-1--foundations/four-kinds-of-software.md#control-real-time-hardware-input" >}}) applications which mostly adapt to the environment instead of running pre\-programmed scenarios\. The drawback is very poor structure of the code and debuggability as any complex behavior is broken into many independent event handlers\.
+This approach is good for real\-time systems where thread synchronization is largely forbidden because of the associated delays and for reactive [control]({{< relref "../part-1--foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}}) applications which mostly adapt to the environment instead of running pre\-programmed scenarios\. The drawback is very poor structure of the code and debuggability as any complex behavior is broken into many independent event handlers\.
 
 ### \(inexact\) Half\-Sync/Half\-Async \(coroutines or fibers\)
 
@@ -262,7 +262,7 @@ Each phase lasts until every object in the system completes its tasks scheduled 
 
 Every architecture has drawbacks and tends to evolve in a variety of ways to address them\. Below is a brief summary of common evolutions of *Monolith* with more information available in [Appendix E]({{< relref "../part-7--appendices/appendix-e--evolutions/_index.md" >}})\.
 
-### Evolutions to Shards
+### [Evolutions to Shards]({{< relref "../part-7--appendices/appendix-e--evolutions/evolutions-of-a-monolith-that-lead-to-shards.md" >}})
 
 One of the main drawbacks of monolithic architecture is its lack of scalability – a single running instance of your system may not be enough to serve all the clients no matter how many resources you add in\. If that is the case, you should consider [*Shards*]({{< relref "../part-2--basic-metapatterns/shards.md" >}}) – *multiple instances* of a *Monolith*\. There are following options:
 
@@ -302,9 +302,9 @@ One of the main drawbacks of monolithic architecture is its lack of scalability 
 </a>
 </figure>
 
-### Evolutions to Layers
+### [Evolutions to Layers]({{< relref "../part-7--appendices/appendix-e--evolutions/evolutions-of-a-monolith-that-result-in-layers.md" >}})
 
-Another drawback of *Monolith* is its… er… monolithism\. The entire application exposes a single set of qualities and all its parts \(if they ever emerge\) are deployed together\. However, life awards flexibility: parts of a system may benefit from being written in varying languages and styles, deployed with different frequency and amount of testing, sometimes to specific hardware or end users’ devices\. They may need to [vary in security and scalability]({{< relref "../part-1--foundations/forces--asynchronicity--and-distribution.md#distribution" >}}) as well\. Enter [*Layers*]({{< relref "../part-2--basic-metapatterns/layers.md" >}}) – a subdivision by the *level of abstractness*:
+Another drawback of *Monolith* is its… er… monolithism\. The entire application exposes a single set of qualities and all its parts \(if they ever emerge\) are deployed together\. However, life awards flexibility: parts of a system may benefit from being written in varying languages and styles, deployed with different frequency and amount of testing, sometimes to specific hardware or end users’ devices\. They may need to [vary in security and scalability]({{< relref "../part-1--foundations-of-software-architecture/forces--asynchronicity--and-distribution.md#distribution" >}}) as well\. Enter [*Layers*]({{< relref "../part-2--basic-metapatterns/layers.md" >}}) – a subdivision by the *level of abstractness*:
 
 - Most *Monoliths* can be divided into 3 or 4 layers of different abstractness\.
 
@@ -342,7 +342,7 @@ Another drawback of *Monolith* is its… er… monolithism\. The entire applicat
 </a>
 </figure>
 
-### Evolutions to Services
+### [Evolutions to Services]({{< relref "../part-7--appendices/appendix-e--evolutions/evolutions-of-a-monolith-that-make-services.md" >}})
 
 The final major drawback of *Monolith* is the cohesiveness of its code\. The rapid start of development with *Monolith* begets a major obstacle as the project grows: every developer needs to know the entire codebase to be productive while changes made by individual developers overlap and may break each other\. Such distress is usually solved by dividing the project into modules along *subdomain boundaries* \(which usually match [bounded contexts](https://martinfowler.com/bliki/BoundedContext.html)\)\. However, that requires much work, and good boundaries and APIs are hard to design\. Thus many organizations prefer a slower iterative transition\.
 
@@ -373,7 +373,7 @@ The final major drawback of *Monolith* is the cohesiveness of its code\. The rap
 </a>
 </figure>
 
-### Evolutions with Plugins
+### [Evolutions with Plugins]({{< relref "../part-7--appendices/appendix-e--evolutions/evolutions-of-a-monolith-that-rely-on-plugins.md" >}})
 
 The last group of evolutions does not really change the monolithic nature of the application\. Instead, its goal is to improve the customizability of the *Monolith*:
 
@@ -410,7 +410,7 @@ A *Monolith* is an unstructured application\. It is the best architecture for ra
 
 <nav>
 
-| \<\< [Part 2\. Basic Metapatterns]({{< relref "../part-2--basic-metapatterns/_index.md" >}}) | ^ [Part 2\. Basic Metapatterns]({{< relref "../part-2--basic-metapatterns/_index.md" >}}) ^ | [Shards]({{< relref "../part-2--basic-metapatterns/shards.md" >}}) \>\> |
+| \<\< [Part 2\. Basic metapatterns]({{< relref "../part-2--basic-metapatterns/_index.md" >}}) | ^ [Part 2\. Basic metapatterns]({{< relref "../part-2--basic-metapatterns/_index.md" >}}) ^ | [Shards]({{< relref "../part-2--basic-metapatterns/shards.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

@@ -166,7 +166,7 @@ Having too many modules causes trouble for the system’s maintainers\. A module
 
 <nav>
 
-| \<\< [Part 1\. Foundations]({{< relref "../part-1--foundations/_index.md" >}}) | ^ [Part 1\. Foundations]({{< relref "../part-1--foundations/_index.md" >}}) ^ | [Forces, asynchronicity, and distribution]({{< relref "../part-1--foundations/forces--asynchronicity--and-distribution.md" >}}) \>\> |
+| \<\< [Part 1\. Foundations of software architecture]({{< relref "../part-1--foundations-of-software-architecture/_index.md" >}}) | ^ [Part 1\. Foundations of software architecture]({{< relref "../part-1--foundations-of-software-architecture/_index.md" >}}) ^ | [Forces, asynchronicity, and distribution]({{< relref "../part-1--foundations-of-software-architecture/forces--asynchronicity--and-distribution.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

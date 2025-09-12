@@ -16,7 +16,7 @@ The most straightforward way to integrate services is to add a coordinating laye
 
 The good thing is that your *Orchestrator* has explicit code for every use case it covers and every running scenario gets an associated thread, coroutine, or object so that you are able to attach to the *Orchestrator* and debug any use case step by step\. Nor do you have to worry about keeping the state of the services consistent as they are passive with all the changes in the system being driven by the *Orchestrator*\. 
 
-Orchestration is the default approach for single\-process \(desktop\) applications where it is faster to call into an orchestrated module and return than to send it a message\. However, in distributed systems orchestration doubles the communication overhead \(when compared to [choreography]({{< relref "../../part-1--foundations/arranging-communication/choreography.md" >}}) or [shared data]({{< relref "../../part-1--foundations/arranging-communication/shared-data.md" >}})\) as every method call into an orchestrated service uses two messages: request and confirmation\.
+Orchestration is the default approach for single\-process \(desktop\) applications where it is faster to call into an orchestrated module and return than to send it a message\. However, in distributed systems orchestration doubles the communication overhead \(when compared to [choreography]({{< relref "../../part-1--foundations-of-software-architecture/arranging-communication/choreography.md" >}}) or [shared data]({{< relref "../../part-1--foundations-of-software-architecture/arranging-communication/shared-data.md" >}})\) as every method call into an orchestrated service uses two messages: request and confirmation\.
 
 ## Roles
 
@@ -36,7 +36,7 @@ A *Facade* also supports querying the services in parallel and collecting the da
 </a>
 </figure>
 
-Embedded and system programming – the areas that deal with automating [*control*]({{< relref "../../part-1--foundations/four-kinds-of-software.md#control-real-time-hardware-input" >}}) of hardware or distributed software – employ *Orchestrators* as *Mediators* \[[GoF]({{< relref "../../part-7--appendices/appendix-b--books-referenced.md#gof" >}})\]  – components that keep the state of the whole system \(and, by implication, any hardware it may manage\) consistent by enacting a system\-wide reaction to any observable change in any of the system’s constituents\. A mediator operates in non\-blocking, fire\-and\-forget mode which is more characteristic of choreography, to be discussed [below]({{< relref "../../part-1--foundations/arranging-communication/choreography.md" >}})\. This also means that you will not be able to debug a use case as a thread – because [there are no predefined scenarios in control software](https://medium.com/itnext/control-and-processing-software-9011fee8bc66)\!
+Embedded and system programming – the areas that deal with automating [*control*]({{< relref "../../part-1--foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}}) of hardware or distributed software – employ *Orchestrators* as *Mediators* \[[GoF]({{< relref "../../part-7--appendices/appendix-b--books-referenced.md#gof" >}})\]  – components that keep the state of the whole system \(and, by implication, any hardware it may manage\) consistent by enacting a system\-wide reaction to any observable change in any of the system’s constituents\. A mediator operates in non\-blocking, fire\-and\-forget mode which is more characteristic of choreography, to be discussed [below]({{< relref "../../part-1--foundations-of-software-architecture/arranging-communication/choreography.md" >}})\. This also means that you will not be able to debug a use case as a thread – because [there are no predefined scenarios in control software](https://medium.com/itnext/control-and-processing-software-9011fee8bc66)\!
 
 <figure style="text-align:center">
 <a href="/Communication/Mediator.png" style="outline:none">
@@ -118,7 +118,7 @@ Orchestration represents use cases as a code, allowing for an orchestrated syste
 
 <nav>
 
-| \<\< [Programming and architectural paradigms]({{< relref "../../part-1--foundations/arranging-communication/programming-and-architectural-paradigms.md" >}}) | ^ [Arranging communication]({{< relref "../../part-1--foundations/arranging-communication/_index.md" >}}) ^ | [Choreography]({{< relref "../../part-1--foundations/arranging-communication/choreography.md" >}}) \>\> |
+| \<\< [Programming and architectural paradigms]({{< relref "../../part-1--foundations-of-software-architecture/arranging-communication/programming-and-architectural-paradigms.md" >}}) | ^ [Arranging communication]({{< relref "../../part-1--foundations-of-software-architecture/arranging-communication/_index.md" >}}) ^ | [Choreography]({{< relref "../../part-1--foundations-of-software-architecture/arranging-communication/choreography.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

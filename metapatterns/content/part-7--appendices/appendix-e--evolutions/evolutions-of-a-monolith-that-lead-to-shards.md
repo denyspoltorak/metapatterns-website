@@ -1,10 +1,10 @@
 +++
 weight = 1
-title = "Monolith: to Shards"
+title = "Evolutions of a Monolith that lead to Shards"
 description = Multiple stateful or stateless instances of a Monolith can be deployed to improve performance. The systems may need a Sharding Proxy or Load Balancer.
 +++
 
-# Monolith: to Shards
+# Evolutions of a Monolith that lead to Shards
 
 One of the main drawbacks of the monolithic architecture is its lack of scalability – a single running instance of your system may not be enough to serve all its clients no matter how many resources you add in\. If that is the case, you should consider [*Shards*]({{< relref "../../part-2--basic-metapatterns/shards.md" >}}) – *multiple instances* of a monolith\. There are following options:
 
@@ -72,7 +72,7 @@ If all the data a user operates on, directly or indirectly, is never accessed by
 - The *Sharding Proxy* is a single point of failure unless [*replicated*]({{< relref "../../part-2--basic-metapatterns/shards.md#persistent-copy-replica" >}}) and increases latency unless deployed as an [*Ambassador*]({{< relref "../../part-3--extension-metapatterns/proxy.md#on-the-client-side-ambassador" >}}) \[[DDS]({{< relref "../../part-7--appendices/appendix-b--books-referenced.md#dds" >}})\]\.
 
 
-## Separate the data layer and add a load balancer
+## Separate the data layer and add a Load Balancer
 
 <figure style="text-align:center">
 <a href="/Evolutions/Monolith/Monolith%20to%20Stateless%20Shards%20with%20Shared%20DB.png" style="outline:none">
@@ -137,7 +137,7 @@ Each client gets an instance of the application which preloads their data into m
 
 In most cases *sharding* does not change much inside the application, thus the common evolutions for [*Monolith*]({{< relref "../../part-2--basic-metapatterns/monolith.md" >}}) \(to [*Layers*]({{< relref "../../part-2--basic-metapatterns/layers.md" >}}), [*Services*]({{< relref "../../part-2--basic-metapatterns/services.md" >}}), and [*Pipeline*]({{< relref "../../part-2--basic-metapatterns/pipeline.md" >}})\) remain applicable after sharding\. We’ll focus on their scalability:
 
-- [*Layers*]({{< relref "../../part-2--basic-metapatterns/layers.md" >}}) can be scaled \(often to a dramatic extent\) and deployed individually, as [exemplified by the *Three\-Tier Architecture*]({{< relref "../../part-1--foundations/forces--asynchronicity--and-distribution.md#distribution" >}})\.
+- [*Layers*]({{< relref "../../part-2--basic-metapatterns/layers.md" >}}) can be scaled \(often to a dramatic extent\) and deployed individually, as [exemplified by the *Three\-Tier Architecture*]({{< relref "../../part-1--foundations-of-software-architecture/forces--asynchronicity--and-distribution.md#distribution" >}})\.
 - [*Services*]({{< relref "../../part-2--basic-metapatterns/services.md" >}}) allow for subdomains to scale independently with the help of [*Load Balancers*]({{< relref "../../part-3--extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) or a [*Middleware*]({{< relref "../../part-3--extension-metapatterns/middleware.md" >}})\. They also improve performance of data storage as each service uses its own database which is often chosen to best fit its distinct needs\.
 - Granular scaling can apply to [*Pipelines*]({{< relref "../../part-2--basic-metapatterns/pipeline.md" >}}), but in many cases that does not make much sense as pipeline components tend to be lightweight and stateless, making it easy to scale the pipeline as a whole\.
 
@@ -162,7 +162,7 @@ There are specific evolutions of [*Shards*]({{< relref "../../part-2--basic-meta
 
 <nav>
 
-| \<\< [Appendix E\. Evolutions\.]({{< relref "../../part-7--appendices/appendix-e--evolutions/_index.md" >}}) | ^ [Appendix E\. Evolutions\.]({{< relref "../../part-7--appendices/appendix-e--evolutions/_index.md" >}}) ^ | [Monolith: to Layers]({{< relref "../../part-7--appendices/appendix-e--evolutions/monolith--to-layers.md" >}}) \>\> |
+| \<\< [Appendix E\. Evolutions\.]({{< relref "../../part-7--appendices/appendix-e--evolutions/_index.md" >}}) | ^ [Appendix E\. Evolutions\.]({{< relref "../../part-7--appendices/appendix-e--evolutions/_index.md" >}}) ^ | [Evolutions of a Monolith that result in Layers]({{< relref "../../part-7--appendices/appendix-e--evolutions/evolutions-of-a-monolith-that-result-in-layers.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

@@ -1,10 +1,10 @@
 +++
 weight = 17
-title = "Orchestrator:"
+title = "Evolutions of an Orchestrator"
 description = An Orchestrator can be subdivided into Backends for Frontends or Layered Services. Alternatively, you can use a layered or hierarchical Orchestrator.
 +++
 
-# Orchestrator:
+# Evolutions of an Orchestrator
 
 Employing an [*Orchestrator*]({{< relref "../../part-3--extension-metapatterns/orchestrator.md" >}}) has two pitfalls:
 
@@ -32,9 +32,9 @@ There is one way to counter the first point and more ways to solve the second on
 
 <ins>Goal</ins>: simplify the *Orchestrator*, let the service teams own orchestration, decouple forces for the services, improve performance\.
 
-<ins>Prerequisite</ins>: the high\-level \([orchestration]({{< relref "../../part-1--foundations/arranging-communication/orchestration.md" >}})\) logic is weakly coupled between the subdomains\.
+<ins>Prerequisite</ins>: the high\-level \([orchestration]({{< relref "../../part-1--foundations-of-software-architecture/arranging-communication/orchestration.md" >}})\) logic is weakly coupled between the subdomains\.
 
-If the *orchestration* logic mostly follows the subdomains, it may be possible to subdivide it accordingly\. Each service gets a part of the *Orchestrator* that mostly deals with its subdomain but may call other services when needed\. As a result, [each service orchestrates every other service]({{< relref "../../part-1--foundations/arranging-communication/orchestration.md#mutual-orchestration" >}})\. Still, a large part of orchestration becomes internal to the service, meaning that fewer calls over the network are involved\.
+If the *orchestration* logic mostly follows the subdomains, it may be possible to subdivide it accordingly\. Each service gets a part of the *Orchestrator* that mostly deals with its subdomain but may call other services when needed\. As a result, [each service orchestrates every other service]({{< relref "../../part-1--foundations-of-software-architecture/arranging-communication/orchestration.md#mutual-orchestration" >}})\. Still, a large part of orchestration becomes internal to the service, meaning that fewer calls over the network are involved\.
 
 <ins>Pros</ins>:
 
@@ -123,7 +123,7 @@ You may use two or three *orchestration frameworks* \(engines\) which differ in 
 - Divide one or more of the resulting *orchestration layers* to form [*Layered Services*]({{< relref "../../part-4--fragmented-metapatterns/layered-services.md" >}}), [*Backends for Frontends*]({{< relref "../../part-4--fragmented-metapatterns/backends-for-frontends--bff-.md" >}}), [*Hierarchy*]({{< relref "../../part-4--fragmented-metapatterns/hierarchy.md" >}}), or [*Cell\-Based Architecture*]({{< relref "../../part-4--fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services" >}})\.
 
 
-## Form a hierarchy
+## Form a Hierarchy
 
 <figure style="text-align:center">
 <a href="/Evolutions/2/Orchestrator%20to%20Hierarchy.png" style="outline:none">
@@ -155,7 +155,7 @@ If an *Orchestrator* becomes too complex, some domains \(e\.g\. IIoT or telecom\
 
 <nav>
 
-| \<\< [Proxy:]({{< relref "../../part-7--appendices/appendix-e--evolutions/proxy-.md" >}}) | ^ [Appendix E\. Evolutions\.]({{< relref "../../part-7--appendices/appendix-e--evolutions/_index.md" >}}) ^ | [Combined Component:]({{< relref "../../part-7--appendices/appendix-e--evolutions/combined-component-.md" >}}) \>\> |
+| \<\< [Evolutions of a Proxy]({{< relref "../../part-7--appendices/appendix-e--evolutions/evolutions-of-a-proxy.md" >}}) | ^ [Appendix E\. Evolutions\.]({{< relref "../../part-7--appendices/appendix-e--evolutions/_index.md" >}}) ^ | [Evolutions of a Combined Component]({{< relref "../../part-7--appendices/appendix-e--evolutions/evolutions-of-a-combined-component.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

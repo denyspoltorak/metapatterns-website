@@ -1,16 +1,16 @@
 +++
 weight = 12
-title = "Services: add layers"
+title = "Evolutions of Services that add layers"
 description = A system of services can be extended with a Middleware, Service Mesh, Proxies, Shared Database or an Orchestrator which implement cross-cutting concerns.
 +++
 
-# Services: add layers
+# Evolutions of Services that add layers
 
 The most common modifications to a [system of *Services*]({{< relref "../../part-2--basic-metapatterns/services.md" >}}) involve supplementary system\-wide *layers* which compensate for the inability of the *Services* to share anything among themselves:
 
 - A [*Middleware*]({{< relref "../../part-3--extension-metapatterns/middleware.md" >}}) knows of all the deployed service [instances]({{< relref "../../part-2--basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}})\. It mediates communication between them and may manage their scaling and failure recovery\.
 - [*Sidecars*]({{< relref "../../part-3--extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \[[DDS]({{< relref "../../part-7--appendices/appendix-b--books-referenced.md#dds" >}})\] of a [*Service Mesh*]({{< relref "../../part-5--implementation-metapatterns/mesh.md#service-mesh" >}}) make a virtual layer of [shared libraries]({{< relref "../../part-6--analytics/comparison-of-architectural-patterns/sharing-functionality-or-data-among-services.md" >}}) for the [*Microservices*]({{< relref "../../part-2--basic-metapatterns/services.md#microservices" >}}) it hosts\.
-- A [*Shared Database*]({{< relref "../../part-3--extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) simplifies the initial phases of development and provides data consistency and [interservice communication]({{< relref "../../part-1--foundations/arranging-communication/shared-data.md" >}})\.
+- A [*Shared Database*]({{< relref "../../part-3--extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) simplifies the initial phases of development and provides data consistency and [interservice communication]({{< relref "../../part-1--foundations-of-software-architecture/arranging-communication/shared-data.md" >}})\.
 - [*Proxies*]({{< relref "../../part-3--extension-metapatterns/proxy.md" >}}) stand between the system and its clients and take care of shared aspects that otherwise would need to be implemented by every service\.
 - An [*Orchestrator*]({{< relref "../../part-3--extension-metapatterns/orchestrator.md" >}}) is the single place for the high\-level logic of every use case\.
 
@@ -97,7 +97,7 @@ The [*Microservices*]({{< relref "../../part-2--basic-metapatterns/services.md#m
 
 <ins>Patterns</ins>: [Shared Repository]({{< relref "../../part-3--extension-metapatterns/shared-repository.md" >}}), [Services]({{< relref "../../part-2--basic-metapatterns/services.md" >}})\.
 
-<ins>Goal</ins>: let the services [share data]({{< relref "../../part-1--foundations/arranging-communication/shared-data.md" >}}), don’t invest in operating multiple databases\.
+<ins>Goal</ins>: let the services [share data]({{< relref "../../part-1--foundations-of-software-architecture/arranging-communication/shared-data.md" >}}), don’t invest in operating multiple databases\.
 
 <ins>Prerequisite</ins>: the services use a uniform approach to persisting their data\.
 
@@ -170,7 +170,7 @@ Putting a generic component between the system and its clients helps the program
 
 <ins>Prerequisite</ins>: the use cases comprise sequences of high\-level steps \(which is very likely to be true for a system of [*subdomain services*]({{< relref "../../part-2--basic-metapatterns/services.md#whole-subdomain-sub-domain-services" >}})\)\.
 
-When a use case jumps over several services in a dance of [*choreography*]({{< relref "../../part-1--foundations/arranging-communication/choreography.md" >}}), there is no easy way to understand it as there is no single place to see it in the code\. It may be even worse with [*Pipelined*]({{< relref "../../part-2--basic-metapatterns/pipeline.md" >}}) systems where use cases are embodied in the structure of event channels between the components\.
+When a use case jumps over several services in a dance of [*choreography*]({{< relref "../../part-1--foundations-of-software-architecture/arranging-communication/choreography.md" >}}), there is no easy way to understand it as there is no single place to see it in the code\. It may be even worse with [*Pipelined*]({{< relref "../../part-2--basic-metapatterns/pipeline.md" >}}) systems where use cases are embodied in the structure of event channels between the components\.
 
 Extract the high\-level business logic from the choreographed services or their interconnections and put it into a dedicated component\.
 
@@ -199,7 +199,7 @@ Extract the high\-level business logic from the choreographed services or their 
 
 <nav>
 
-| \<\< [Services: add or remove services]({{< relref "../../part-7--appendices/appendix-e--evolutions/services--add-or-remove-services.md" >}}) | ^ [Appendix E\. Evolutions\.]({{< relref "../../part-7--appendices/appendix-e--evolutions/_index.md" >}}) ^ | [Pipeline:]({{< relref "../../part-7--appendices/appendix-e--evolutions/pipeline-.md" >}}) \>\> |
+| \<\< [Evolutions of Services that add or remove services]({{< relref "../../part-7--appendices/appendix-e--evolutions/evolutions-of-services-that-add-or-remove-services.md" >}}) | ^ [Appendix E\. Evolutions\.]({{< relref "../../part-7--appendices/appendix-e--evolutions/_index.md" >}}) ^ | [Evolutions of a Pipeline]({{< relref "../../part-7--appendices/appendix-e--evolutions/evolutions-of-a-pipeline.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

@@ -120,7 +120,7 @@ Chemistry has the [periodic table](https://en.wikipedia.org/wiki/Periodic_table)
 
 <nav>
 
-| \<\< [About this book]({{< relref "../introduction/about-this-book.md" >}}) | ^ [Introduction]({{< relref "../introduction/_index.md" >}}) ^ | [Part 1\. Foundations]({{< relref "../part-1--foundations/_index.md" >}}) \>\> |
+| \<\< [About this book]({{< relref "../introduction/about-this-book.md" >}}) | ^ [Introduction]({{< relref "../introduction/_index.md" >}}) ^ | [Part 1\. Foundations of software architecture]({{< relref "../part-1--foundations-of-software-architecture/_index.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

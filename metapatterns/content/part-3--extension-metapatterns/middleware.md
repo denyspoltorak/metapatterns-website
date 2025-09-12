@@ -230,7 +230,7 @@ See the [chapter about *Service\-Oriented Architecture*]({{< relref "../part-4--
 
 ## Evolutions
 
-A *Middleware* is unlikely to be removed \(though it may be replaced\) once it is built into a system\. There are few evolutions for *Middleware* because it is usually a third\-party product and thus unlikely to be modified in\-house:
+A *Middleware* is unlikely to be removed \(though it may be replaced\) once it is built into a system\. There are [few evolutions for *Middleware*]({{< relref "../part-7--appendices/appendix-e--evolutions/evolutions-of-a-middleware.md" >}}) because it is usually a third\-party product and thus unlikely to be modified in\-house:
 
 - If the *Middleware* in use does not fit the preferred mode of communication between some of your services, there is the option to deploy a second, specialized *Middleware*\.
 
@@ -256,7 +256,7 @@ A *Middleware* is a ready\-to\-use component that provides a system of services 
 
 <nav>
 
-| \<\< [Part 3\. Extension Metapatterns]({{< relref "../part-3--extension-metapatterns/_index.md" >}}) | ^ [Part 3\. Extension Metapatterns]({{< relref "../part-3--extension-metapatterns/_index.md" >}}) ^ | [Shared Repository]({{< relref "../part-3--extension-metapatterns/shared-repository.md" >}}) \>\> |
+| \<\< [Part 3\. Extension metapatterns]({{< relref "../part-3--extension-metapatterns/_index.md" >}}) | ^ [Part 3\. Extension metapatterns]({{< relref "../part-3--extension-metapatterns/_index.md" >}}) ^ | [Shared Repository]({{< relref "../part-3--extension-metapatterns/shared-repository.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

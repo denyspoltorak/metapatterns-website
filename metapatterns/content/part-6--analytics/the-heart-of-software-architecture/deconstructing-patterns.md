@@ -52,7 +52,7 @@ On the other hand, a few patterns gather separate components together:
 
 - *Command* collects all the data required to call a method\.
 - *Mediator* is a cohesive implementation of multi\-object use cases\.
-- *Composite* and *Facade* represent multiple objects as a cohesive entity\. A *Composite* broadcasts a call to its interface to every object it contains while a *Facade* [orchestrates]({{< relref "../../part-1--foundations/arranging-communication/orchestration.md" >}}) the wrapped subsystem\.
+- *Composite* and *Facade* represent multiple objects as a cohesive entity\. A *Composite* broadcasts a call to its interface to every object it contains while a *Facade* [orchestrates]({{< relref "../../part-1--foundations-of-software-architecture/arranging-communication/orchestration.md" >}}) the wrapped subsystem\.
 - *Abstract Factory* and *Builder* encapsulate *type selection* and *initialization* for several related hierarchies, so that the client code gets objects from a set of consistent types\. On top of that, a *Builder* cross\-links the objects it creates into a cohesive subsystem, which is returned to the *builder*’s client as a whole\.
 
 
@@ -105,9 +105,9 @@ Grouping related functionality:
 - [*Middleware*]({{< relref "../../part-3--extension-metapatterns/middleware.md" >}}) separates the implementation of communication and/or instance management from the business logic:
   - The *cohesive* communication layer is reliable and uniform, thus it is easy to learn\.
   - *Decoupling* communication concerns from the business logic simplifies the latter\.
-- [*Shared Repository*]({{< relref "../../part-3--extension-metapatterns/shared-repository.md" >}}) dissociates data from code, enabling [data\-centric programming]({{< relref "../../part-1--foundations/arranging-communication/shared-data.md" >}}):
+- [*Shared Repository*]({{< relref "../../part-3--extension-metapatterns/shared-repository.md" >}}) dissociates data from code, enabling [data\-centric programming]({{< relref "../../part-1--foundations-of-software-architecture/arranging-communication/shared-data.md" >}}):
   - *Cohesive* data is consistent and easy to handle\.
-  - *Decoupled* business logic can be scaled or subdivided [independently]({{< relref "../../part-1--foundations/arranging-communication/programming-and-architectural-paradigms.md#procedural-data-centric-paradigm--shared-data" >}}) of the data\.
+  - *Decoupled* business logic can be scaled or subdivided [independently]({{< relref "../../part-1--foundations-of-software-architecture/arranging-communication/programming-and-architectural-paradigms.md#procedural-data-centric-paradigm--shared-data" >}}) of the data\.
 - [*Proxy*]({{< relref "../../part-3--extension-metapatterns/proxy.md" >}}) mediates between a system and its clients, taking care of one or more aspects of their communication:
   - A *cohesive* edge component is easier to manage and secure\.
   - *Decoupling* generic aspects simplifies business logic but usually increases latency\.
@@ -127,7 +127,7 @@ Grouping related functionality:
 Decoupled systems:
 
 - [*Layered Services*]({{< relref "../../part-4--fragmented-metapatterns/layered-services.md" >}}) first decouple the subdomains, and then the layers within each subdomain:
-  - *Decoupled* subdomains allow for multi\-team development and large codebases but complicate global use cases\. *Decoupled* layers enable variation in technologies within a subdomain and [limit interdependencies]({{< relref "../../part-1--foundations/arranging-communication/orchestration.md#mutual-orchestration" >}}) between subdomains to a single layer\.
+  - *Decoupled* subdomains allow for multi\-team development and large codebases but complicate global use cases\. *Decoupled* layers enable variation in technologies within a subdomain and [limit interdependencies]({{< relref "../../part-1--foundations-of-software-architecture/arranging-communication/orchestration.md#mutual-orchestration" >}}) between subdomains to a single layer\.
 - [*Polyglot Persistence*]({{< relref "../../part-4--fragmented-metapatterns/polyglot-persistence.md" >}}) divides data among multiple data stores:
   - *Decoupling* improves performance through database specialization at the cost of consistency\.
 - [*Backends for Frontends*]({{< relref "../../part-4--fragmented-metapatterns/backends-for-frontends--bff-.md" >}}) dedicate one or two components \(a [*Proxy*]({{< relref "../../part-3--extension-metapatterns/proxy.md" >}}) and/or [*Orchestrator*]({{< relref "../../part-3--extension-metapatterns/orchestrator.md" >}})\) per each kind of client\.

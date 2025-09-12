@@ -55,7 +55,7 @@ On one hand, the pattern is very specific and feels esoteric\. On the other – 
 
 ### Performance
 
-The *microkernel*, being an extra layer of indirection, degrades performance\. The actual extent varies from a few percent for *OSes* and *virtualizers* to an order of magnitude for *scripts*\. A more grievous aspect of performance is that latency becomes unpredictable as soon as the system runs short of one of the shared resources: memory, disk space, CPU time, or even storage for deleted objects\. That is why [real\-time systems]({{< relref "../part-1--foundations/four-kinds-of-software.md#control-real-time-hardware-input" >}}) rely on minimalistic [real\-time OS](https://en.wikipedia.org/wiki/Real-time_operating_system)es or even run on bare metal\.
+The *microkernel*, being an extra layer of indirection, degrades performance\. The actual extent varies from a few percent for *OSes* and *virtualizers* to an order of magnitude for *scripts*\. A more grievous aspect of performance is that latency becomes unpredictable as soon as the system runs short of one of the shared resources: memory, disk space, CPU time, or even storage for deleted objects\. That is why [real\-time systems]({{< relref "../part-1--foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}}) rely on minimalistic [real\-time OS](https://en.wikipedia.org/wiki/Real-time_operating_system)es or even run on bare metal\.
 
 It is common to see system components communicate directly via shared memory or sockets bypassing the *microkernel* to alleviate the performance penalty it introduces\.
 
@@ -182,7 +182,7 @@ The *microkernel* shows up as *Virtual Functional Bus* \(*VFB*\) which, as a *di
 
 <nav>
 
-| \<\< [Hexagonal Architecture]({{< relref "../part-5--implementation-metapatterns/hexagonal-architecture.md" >}}) | ^ [Part 5\. Implementation Metapatterns]({{< relref "../part-5--implementation-metapatterns/_index.md" >}}) ^ | [Mesh]({{< relref "../part-5--implementation-metapatterns/mesh.md" >}}) \>\> |
+| \<\< [Hexagonal Architecture]({{< relref "../part-5--implementation-metapatterns/hexagonal-architecture.md" >}}) | ^ [Part 5\. Implementation metapatterns]({{< relref "../part-5--implementation-metapatterns/_index.md" >}}) ^ | [Mesh]({{< relref "../part-5--implementation-metapatterns/mesh.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

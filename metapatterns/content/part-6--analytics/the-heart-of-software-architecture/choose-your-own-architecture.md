@@ -100,7 +100,7 @@ Low latency makes you place simplified first response logic close to your input,
 
 - [*Model\-View\-Presenter*]({{< relref "../../part-5--implementation-metapatterns/hexagonal-architecture.md#model-view-presenter-mvp-model-view-adapter-mva-model-view-viewmodel-mvvm-model-1-mvc1-document-view" >}}) or [*Model\-View\-Controller*]({{< relref "../../part-5--implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}}) pattern families for user interaction\.
 - [*Layers*]({{< relref "../../part-2--basic-metapatterns/layers.md" >}}) with [*strategy injection*]({{< relref "../../part-2--basic-metapatterns/layers.md#performance" >}}) for single hardware input\.
-- A [*Hierarchy*]({{< relref "../../part-4--fragmented-metapatterns/hierarchy.md" >}}) for distributed [*control*]({{< relref "../../part-1--foundations/four-kinds-of-software.md#control-real-time-hardware-input" >}}) systems such as [IIoT](https://en.wikipedia.org/wiki/Industrial_internet_of_things)\.
+- A [*Hierarchy*]({{< relref "../../part-4--fragmented-metapatterns/hierarchy.md" >}}) for distributed [*control*]({{< relref "../../part-1--foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}}) systems such as [IIoT](https://en.wikipedia.org/wiki/Industrial_internet_of_things)\.
 
 
 <figure style="text-align:center">

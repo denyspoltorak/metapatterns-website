@@ -24,7 +24,7 @@ Staying true to all of these points makes *Pipes and Filters* – one of the old
 </a>
 </figure>
 
-[*Pipes and Filters*]({{< relref "../../part-2--basic-metapatterns/pipeline.md#pipes-and-filters-workflow-system" >}}) \[[POSA1]({{< relref "../../part-7--appendices/appendix-b--books-referenced.md#posa1" >}})\] is about stepwise [processing of a data stream]({{< relref "../../part-1--foundations/four-kinds-of-software.md#streaming-continuous-raw-data-input" >}})\. Each piece of data \(a video frame, a line of text or a database record\) passes through the entire system\.
+[*Pipes and Filters*]({{< relref "../../part-2--basic-metapatterns/pipeline.md#pipes-and-filters-workflow-system" >}}) \[[POSA1]({{< relref "../../part-7--appendices/appendix-b--books-referenced.md#posa1" >}})\] is about stepwise [processing of a data stream]({{< relref "../../part-1--foundations-of-software-architecture/four-kinds-of-software.md#streaming-continuous-raw-data-input" >}})\. Each piece of data \(a video frame, a line of text or a database record\) passes through the entire system\.
 
 This architecture is easy to build and has a wide range of applications, from hardware to data analytics\. Though each pipeline is specialized for a single use case, a new one can often be built of the same set of generic components – this skill is mastered by Linux admins through their use of shell scripts\.
 

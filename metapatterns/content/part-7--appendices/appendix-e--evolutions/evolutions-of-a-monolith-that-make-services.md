@@ -1,17 +1,17 @@
 +++
 weight = 3
-title = "Monolith: to Services"
+title = "Evolutions of a Monolith that make Services"
 description = A Monolith can be divided into modules, Services or a Pipeline to support development by multiple teams, improve its codebase, and employ more hardware.
 +++
 
-# Monolith: to Services
+# Evolutions of a Monolith that make Services
 
 The final major drawback of [*Monolith*]({{< relref "../../part-2--basic-metapatterns/monolith.md" >}}) is the cohesiveness of its code\. The rapid start of development begets a major obstacle for project growth: every developer needs to know the entire codebase to be productive and changes made by individual developers overlap and may break each other\. Such distress is usually solved by dividing the project into components along *subdomain boundaries* \(which tend to match [*bounded contexts*](https://martinfowler.com/bliki/BoundedContext.html) \[[DDD]({{< relref "../../part-7--appendices/appendix-b--books-referenced.md#ddd" >}})\]\)\. However, that requires a lot of work, and good boundaries and APIs are [hard to design](https://martinfowler.com/bliki/MonolithFirst.html)\. Thus many organizations prefer a slower iterative transition\.
 
 - A *Monolith* can be split into [*Services*]({{< relref "../../part-2--basic-metapatterns/services.md" >}}) right away\.
 - Or only the new features may be added as new services\.
 - Or the weakly coupled parts of existing functionality may be separated, one at a time\.
-- Some domains allow for sequential [data processing]({{< relref "../../part-1--foundations/four-kinds-of-software.md#streaming-continuous-raw-data-input" >}}) best described by [*Pipelines*]({{< relref "../../part-2--basic-metapatterns/pipeline.md" >}})\.
+- Some domains allow for sequential [data processing]({{< relref "../../part-1--foundations-of-software-architecture/four-kinds-of-software.md#streaming-continuous-raw-data-input" >}}) best described by [*Pipelines*]({{< relref "../../part-2--basic-metapatterns/pipeline.md" >}})\.
 
 
 <figure style="text-align:center">
@@ -109,7 +109,7 @@ If you are not adding a new feature but need to change an old one – use the ch
 
 <ins>Prerequisite</ins>: the domain can be represented as a sequence of coarse\-grained data processing steps\.
 
-If you can treat your application as a chain of independent steps that transform the input data, you can rely on the OS to schedule them and you can also dedicate a development team to each of the steps\. This is the default solution for a system that [processes a stream]({{< relref "../../part-1--foundations/four-kinds-of-software.md#streaming-continuous-raw-data-input" >}}) of a single type of data \(video, audio, measurements\)\. It has excellent flexibility\.
+If you can treat your application as a chain of independent steps that transform the input data, you can rely on the OS to schedule them and you can also dedicate a development team to each of the steps\. This is the default solution for a system that [processes a stream]({{< relref "../../part-1--foundations-of-software-architecture/four-kinds-of-software.md#streaming-continuous-raw-data-input" >}}) of a single type of data \(video, audio, measurements\)\. It has excellent flexibility\.
 
 <ins>Pros</ins>: 
 
@@ -134,7 +134,7 @@ As your knowledge of the domain and your business requirements change, you may n
 Systems of [*Services*]({{< relref "../../part-2--basic-metapatterns/services.md" >}}) or [*Pipelines*]({{< relref "../../part-2--basic-metapatterns/pipeline.md" >}}) are quite often extended with special kinds of [*layers*]({{< relref "../../part-2--basic-metapatterns/layers.md" >}}):
 
 - [*Middleware*]({{< relref "../../part-3--extension-metapatterns/middleware.md" >}}) takes care of deployment, intercommunication and scaling of services\.
-- [*Shared Repository*]({{< relref "../../part-3--extension-metapatterns/shared-repository.md" >}}) lets services operate on and communicate through [shared data]({{< relref "../../part-1--foundations/arranging-communication/shared-data.md" >}})\.
+- [*Shared Repository*]({{< relref "../../part-3--extension-metapatterns/shared-repository.md" >}}) lets services operate on and communicate through [shared data]({{< relref "../../part-1--foundations-of-software-architecture/arranging-communication/shared-data.md" >}})\.
 - [*Proxies*]({{< relref "../../part-3--extension-metapatterns/proxy.md" >}}) are ready\-to\-use components that add generic functionality to the system\.
 - [*Orchestrator*]({{< relref "../../part-3--extension-metapatterns/orchestrator.md" >}}) encapsulates use cases that involve multiple services, so that the services don’t need to know about each other\.
 - Finally, there are [*Combined Components*]({{< relref "../../part-3--extension-metapatterns/combined-component.md" >}}) that implement two or more of the above patterns in a single framework\. 
@@ -162,7 +162,7 @@ Each service, being a smaller *Monolith*, may evolve on its own\. Most of the ev
 
 <nav>
 
-| \<\< [Monolith: to Layers]({{< relref "../../part-7--appendices/appendix-e--evolutions/monolith--to-layers.md" >}}) | ^ [Appendix E\. Evolutions\.]({{< relref "../../part-7--appendices/appendix-e--evolutions/_index.md" >}}) ^ | [Monolith: to Plugins]({{< relref "../../part-7--appendices/appendix-e--evolutions/monolith--to-plugins.md" >}}) \>\> |
+| \<\< [Evolutions of a Monolith that result in Layers]({{< relref "../../part-7--appendices/appendix-e--evolutions/evolutions-of-a-monolith-that-result-in-layers.md" >}}) | ^ [Appendix E\. Evolutions\.]({{< relref "../../part-7--appendices/appendix-e--evolutions/_index.md" >}}) ^ | [Evolutions of a Monolith that rely on Plugins]({{< relref "../../part-7--appendices/appendix-e--evolutions/evolutions-of-a-monolith-that-rely-on-plugins.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

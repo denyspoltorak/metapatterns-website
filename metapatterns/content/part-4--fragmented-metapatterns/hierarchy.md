@@ -57,10 +57,10 @@ No kind of distributed hierarchy is latency\-friendly as many use cases involve 
 </a>
 </figure>
 
-Maintaining high throughput usually requires deploying multiple instances of the root component, which is not possible if it is stateful \(in [*control systems*]({{< relref "../part-1--foundations/four-kinds-of-software.md#control-real-time-hardware-input" >}})\) and the state cannot be split into [*Shards*]({{< relref "../part-2--basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-cells-amazon-definition" >}})\. The following tricks may help unloading the root:
+Maintaining high throughput usually requires deploying multiple instances of the root component, which is not possible if it is stateful \(in [*control systems*]({{< relref "../part-1--foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}})\) and the state cannot be split into [*Shards*]({{< relref "../part-2--basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-cells-amazon-definition" >}})\. The following tricks may help unloading the root:
 
 - *Aggregation* \(first met in [*Layers*]({{< relref "../part-2--basic-metapatterns/layers.md" >}})\): a node of a hierarchy collects reports from its children, aggregates them into a single package, and sends the aggregated data up to its parent\. This greatly reduces traffic to the root in large [IIoT](https://en.wikipedia.org/wiki/Industrial_internet_of_things) networks\.
-- *Delegation* \(resembles strategy injection and batching for [*Layers*]({{< relref "../part-2--basic-metapatterns/layers.md" >}})\): a node should try to handle all the low\-level details of communication with its children without consulting its parent node\. For a [control system]({{< relref "../part-1--foundations/four-kinds-of-software.md#control-real-time-hardware-input" >}}) that means that its mid\-level nodes should implement control loops for the majority of incoming events\. For a [processing system]({{< relref "../part-1--foundations/four-kinds-of-software.md#computational-single-run-user-input" >}}) that means that its mid\-level nodes should expose coarse\-grained interfaces to their parent\(s\) while translating each API method call into multiple calls to their child nodes\.
+- *Delegation* \(resembles strategy injection and batching for [*Layers*]({{< relref "../part-2--basic-metapatterns/layers.md" >}})\): a node should try to handle all the low\-level details of communication with its children without consulting its parent node\. For a [control system]({{< relref "../part-1--foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}}) that means that its mid\-level nodes should implement control loops for the majority of incoming events\. For a [processing system]({{< relref "../part-1--foundations-of-software-architecture/four-kinds-of-software.md#computational-single-run-user-input" >}}) that means that its mid\-level nodes should expose coarse\-grained interfaces to their parent\(s\) while translating each API method call into multiple calls to their child nodes\.
 - *Direct communication channels* \(previously described for [*Orchestrator*]({{< relref "../part-3--extension-metapatterns/orchestrator.md" >}})\): if low\-level nodes need to exchange data, their communication should not always go through the higher\-level nodes\. Instead, they may negotiate a direct link \(open a socket\) that bypasses the root of the hierarchy\.
 
 
@@ -191,7 +191,7 @@ Uber [compacted](https://www.uber.com/blog/microservice-architecture/) 2200 [*Mi
 
 <nav>
 
-| \<\< [Service\-Oriented Architecture \(SOA\)]({{< relref "../part-4--fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}) | ^ [Part 4\. Fragmented Metapatterns]({{< relref "../part-4--fragmented-metapatterns/_index.md" >}}) ^ | [Part 5\. Implementation Metapatterns]({{< relref "../part-5--implementation-metapatterns/_index.md" >}}) \>\> |
+| \<\< [Service\-Oriented Architecture \(SOA\)]({{< relref "../part-4--fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}) | ^ [Part 4\. Fragmented metapatterns]({{< relref "../part-4--fragmented-metapatterns/_index.md" >}}) ^ | [Part 5\. Implementation metapatterns]({{< relref "../part-5--implementation-metapatterns/_index.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>

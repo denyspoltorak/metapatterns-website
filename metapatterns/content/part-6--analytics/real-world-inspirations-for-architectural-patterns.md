@@ -14,7 +14,7 @@ Let’s go\!
 
 ## Basic metapatterns
 
-The basic patterns lay the foundation for any system by paving ways to *divide* it into components to *conquer* its [complexity]({{< relref "../part-1--foundations/modules-and-complexity.md" >}})\. We are going to observe them all around:
+The basic patterns lay the foundation for any system by paving ways to *divide* it into components to *conquer* its [complexity]({{< relref "../part-1--foundations-of-software-architecture/modules-and-complexity.md" >}})\. We are going to observe them all around:
 
 ### Monolith
 
@@ -98,7 +98,7 @@ The basic patterns lay the foundation for any system by paving ways to *divide* 
 
 - The pattern got its name from real\-world plumbing\.
 - You’ll see similar arrangements in [cellular metabolism](https://en.wikipedia.org/wiki/Metabolism)\.
-- It is the basis for [functional programming]({{< relref "../part-1--foundations/arranging-communication/programming-and-architectural-paradigms.md#functional-decentralized-streaming-paradigm--choreography" >}})\.
+- It is the basis for [functional programming]({{< relref "../part-1--foundations-of-software-architecture/arranging-communication/programming-and-architectural-paradigms.md#functional-decentralized-streaming-paradigm--choreography" >}})\.
 - Linux command line tools are often skillfully composed into pipelines\.
 - Hardware is full of pipelines: from [CPU](https://en.wikipedia.org/wiki/Instruction_pipelining) and [GPU](https://en.wikipedia.org/wiki/Graphics_pipeline) to audio and video processing\.
 - Finally, a UI wizard passes its users through a series of screens\.

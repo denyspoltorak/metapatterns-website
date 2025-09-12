@@ -1,10 +1,10 @@
 +++
 weight = 14
-title = "Middleware:"
+title = "Evolutions of a Middleware"
 description = It is possible to add a second specialized Middleware or integrate several systems through a hierarchy of Middlewares.
 +++
 
-# Middleware:
+# Evolutions of a Middleware
 
 A [*Middleware*]({{< relref "../../part-3--extension-metapatterns/middleware.md" >}}) is unlikely to be removed \(though it may be replaced\) once it is built into a system\. There are few evolutions as a *Middleware* is a third\-party product and is unlikely to be messed with:
 
@@ -12,7 +12,7 @@ A [*Middleware*]({{< relref "../../part-3--extension-metapatterns/middleware.md"
 - If several existing systems need to be merged, that is accomplished by adding yet another layer of *Middleware*, resulting in a [*Bottom\-Up Hierarchy \(Bus of Buses\)*]({{< relref "../../part-4--fragmented-metapatterns/hierarchy.md#bottom-up-hierarchy-bus-of-buses-network-of-networks" >}})\.
 
 
-## Add a secondary middleware
+## Add a secondary Middleware
 
 <figure style="text-align:center">
 <a href="/Evolutions/2/Middleware%20add%20Middleware.png" style="outline:none">
@@ -68,7 +68,7 @@ If we cannot change the way each subsystem’s services use its *Middleware*, we
 
 <nav>
 
-| \<\< [Pipeline:]({{< relref "../../part-7--appendices/appendix-e--evolutions/pipeline-.md" >}}) | ^ [Appendix E\. Evolutions\.]({{< relref "../../part-7--appendices/appendix-e--evolutions/_index.md" >}}) ^ | [Shared Repository:]({{< relref "../../part-7--appendices/appendix-e--evolutions/shared-repository-.md" >}}) \>\> |
+| \<\< [Evolutions of a Pipeline]({{< relref "../../part-7--appendices/appendix-e--evolutions/evolutions-of-a-pipeline.md" >}}) | ^ [Appendix E\. Evolutions\.]({{< relref "../../part-7--appendices/appendix-e--evolutions/_index.md" >}}) ^ | [Evolutions of a Shared Repository]({{< relref "../../part-7--appendices/appendix-e--evolutions/evolutions-of-a-shared-repository.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>
