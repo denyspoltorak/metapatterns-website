@@ -38,7 +38,7 @@ With this model the services don’t depend on each other – instead, they depe
 
 <figure style="text-align:center">
 <a href="/Communication/Shared%20Data%20add%20a%20Service.png" style="outline:none">
-<img src="/Communication/Shared%20Data%20add%20a%20Service.png" alt="Shared Data add a Service" style="width:99%"/>
+<img src="/Communication/Shared%20Data%20add%20a%20Service.png" alt="Shared Data add a Service" style="width:100%"/>
 </a>
 </figure>
 
@@ -46,7 +46,7 @@ Services usually need to coordinate their actions\. Commonly, services with a sh
 
 <figure style="text-align:center">
 <a href="/Communication/Notification%20to%20Notification.png" style="outline:none">
-<img src="/Communication/Notification%20to%20Notification.png" alt="Notification to Notification" style="width:99%"/>
+<img src="/Communication/Notification%20to%20Notification.png" alt="Notification to Notification" style="width:100%"/>
 </a>
 </figure>
 
@@ -86,7 +86,7 @@ Finally, some \(usually distributed\) datastores implement data change notificat
 
 <figure style="text-align:center">
 <a href="/Communication/Notification%20inside%20the%20DB.png" style="outline:none">
-<img src="/Communication/Notification%20inside%20the%20DB.png" alt="Notification inside the DB" style="width:99%"/>
+<img src="/Communication/Notification%20inside%20the%20DB.png" alt="Notification inside the DB" style="width:100%"/>
 </a>
 </figure>
 

@@ -50,7 +50,7 @@ If the modules cannot communicate directly \(call each other and wait for the re
 
 <figure style="text-align:center">
 <a href="/Intro/Floppy-Async.png" style="outline:none">
-<img src="/Intro/Floppy-Async.png" alt="Floppy-Async" style="width:99%"/>
+<img src="/Intro/Floppy-Async.png" alt="Floppy-Async" style="width:100%"/>
 </a>
 </figure>
 

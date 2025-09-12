@@ -20,7 +20,7 @@ The basic patterns lay the foundation for any system by paving ways to *divide* 
 
 <figure style="text-align:center">
 <a href="/Contents/Monolith.png" style="outline:none">
-<img src="/Contents/Monolith.png" alt="Monolith" style="width:96%"/>
+<img src="/Contents/Monolith.png" alt="Monolith" style="width:100%"/>
 </a>
 </figure>
 
@@ -38,7 +38,7 @@ The basic patterns lay the foundation for any system by paving ways to *divide* 
 
 <figure style="text-align:center">
 <a href="/Contents/Shards.png" style="outline:none">
-<img src="/Contents/Shards.png" alt="Shards" style="width:95%"/>
+<img src="/Contents/Shards.png" alt="Shards" style="width:100%"/>
 </a>
 </figure>
 

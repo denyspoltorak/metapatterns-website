@@ -412,7 +412,7 @@ This architecture usually relies on a [*Service Mesh*]({{< relref "../part-3--ex
 
 <figure style="text-align:center">
 <a href="/Variants/1/Actors.png" style="outline:none">
-<img src="/Variants/1/Actors.png" alt="Actors" style="width:98%"/>
+<img src="/Variants/1/Actors.png" alt="Actors" style="width:100%"/>
 </a>
 </figure>
 

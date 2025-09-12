@@ -135,7 +135,7 @@ A *Full Proxy* processes every message between the system and its clients\. It c
 
 <figure style="text-align:center">
 <a href="/Variants/2/Half%20Proxy.png" style="outline:none">
-<img src="/Variants/2/Half%20Proxy.png" alt="Half Proxy" style="width:97%"/>
+<img src="/Variants/2/Half%20Proxy.png" alt="Half Proxy" style="width:100%"/>
 </a>
 </figure>
 
@@ -149,7 +149,7 @@ As a *Proxy* stands between a \(sub\)system and its client\(s\), we can imagine 
 
 <figure style="text-align:center">
 <a href="/Variants/2/Proxy%20placement%20-%20Standalone.png" style="outline:none">
-<img src="/Variants/2/Proxy%20placement%20-%20Standalone.png" alt="Proxy placement - Standalone" style="width:96%"/>
+<img src="/Variants/2/Proxy%20placement%20-%20Standalone.png" alt="Proxy placement - Standalone" style="width:100%"/>
 </a>
 </figure>
 

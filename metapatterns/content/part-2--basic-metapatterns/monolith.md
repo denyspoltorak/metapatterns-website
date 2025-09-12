@@ -170,7 +170,7 @@ Any software module reacts to incoming events or data and produces outgoing even
 
 <figure style="text-align:center">
 <a href="/Variants/1/Subtypes%20of%20Monolith.png" style="outline:none">
-<img src="/Variants/1/Subtypes%20of%20Monolith.png" alt="Subtypes of Monolith" style="width:99%"/>
+<img src="/Variants/1/Subtypes%20of%20Monolith.png" alt="Subtypes of Monolith" style="width:100%"/>
 </a>
 </figure>
 
@@ -178,7 +178,7 @@ Any software module reacts to incoming events or data and produces outgoing even
 
 <figure style="text-align:center">
 <a href="/Variants/1/Reactor%20-%20Single%20Thread.png" style="outline:none">
-<img src="/Variants/1/Reactor%20-%20Single%20Thread.png" alt="Reactor - Single Thread" style="width:99%"/>
+<img src="/Variants/1/Reactor%20-%20Single%20Thread.png" alt="Reactor - Single Thread" style="width:100%"/>
 </a>
 </figure>
 
@@ -190,7 +190,7 @@ That makes sense when the module owns and provides access to a hardware componen
 
 <figure style="text-align:center">
 <a href="/Variants/1/Reactor%20-%20Multiple%20Threads.png" style="outline:none">
-<img src="/Variants/1/Reactor%20-%20Multiple%20Threads.png" alt="Reactor - Multiple Threads" style="width:99%"/>
+<img src="/Variants/1/Reactor%20-%20Multiple%20Threads.png" alt="Reactor - Multiple Threads" style="width:100%"/>
 </a>
 </figure>
 
@@ -202,7 +202,7 @@ This is the default simple & stupid implementation of backend services\. Its pit
 
 <figure style="text-align:center">
 <a href="/Variants/1/Proactor.png" style="outline:none">
-<img src="/Variants/1/Proactor.png" alt="Proactor" style="width:99%"/>
+<img src="/Variants/1/Proactor.png" alt="Proactor" style="width:100%"/>
 </a>
 </figure>
 
@@ -214,7 +214,7 @@ This approach is good for real\-time systems where thread synchronization is lar
 
 <figure style="text-align:center">
 <a href="/Variants/1/Half-Sync%20Half-Async.png" style="outline:none">
-<img src="/Variants/1/Half-Sync%20Half-Async.png" alt="Half-Sync Half-Async" style="width:99%"/>
+<img src="/Variants/1/Half-Sync%20Half-Async.png" alt="Half-Sync Half-Async" style="width:100%"/>
 </a>
 </figure>
 

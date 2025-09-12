@@ -278,7 +278,7 @@ We will often use the DDD naming convention while describing more complex archit
 
 <figure style="text-align:center">
 <a href="/Variants/1/Three-Tier.png" style="outline:none">
-<img src="/Variants/1/Three-Tier.png" alt="Three-Tier" style="width:98%"/>
+<img src="/Variants/1/Three-Tier.png" alt="Three-Tier" style="width:100%"/>
 </a>
 </figure>
 

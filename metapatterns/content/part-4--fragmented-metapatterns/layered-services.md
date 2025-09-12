@@ -129,7 +129,7 @@ If the services become too large:
 
 <figure style="text-align:center">
 <a href="/Variants/3/Two-Layered%20Services.png" style="outline:none">
-<img src="/Variants/3/Two-Layered%20Services.png" alt="Two-Layered Services" style="width:99%"/>
+<img src="/Variants/3/Two-Layered%20Services.png" alt="Two-Layered Services" style="width:100%"/>
 </a>
 </figure>
 

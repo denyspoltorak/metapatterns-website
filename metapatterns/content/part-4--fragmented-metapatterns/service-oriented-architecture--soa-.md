@@ -119,7 +119,7 @@ The layers of *SOA* are:
 
 <figure style="text-align:center">
 <a href="/Variants/3/DOMA.png" style="outline:none">
-<img src="/Variants/3/DOMA.png" alt="DOMA" style="width:96%"/>
+<img src="/Variants/3/DOMA.png" alt="DOMA" style="width:100%"/>
 </a>
 </figure>
 

@@ -211,7 +211,7 @@ More details are [available]({{< relref "../part-3--extension-metapatterns/combi
 
 <figure style="text-align:center">
 <a href="/Variants/2/Stamp%20Coupling.png" style="outline:none">
-<img src="/Variants/2/Stamp%20Coupling.png" alt="Stamp Coupling" style="width:96%"/>
+<img src="/Variants/2/Stamp%20Coupling.png" alt="Stamp Coupling" style="width:100%"/>
 </a>
 </figure>
 

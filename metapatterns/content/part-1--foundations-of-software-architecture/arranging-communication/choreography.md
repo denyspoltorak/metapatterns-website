@@ -20,7 +20,7 @@ On the bright side, there is no communication overhead caused by response messag
 
 <figure style="text-align:center">
 <a href="/Communication/Pipeline%20Enricher.png" style="outline:none">
-<img src="/Communication/Pipeline%20Enricher.png" alt="Pipeline Enricher" style="width:96%"/>
+<img src="/Communication/Pipeline%20Enricher.png" alt="Pipeline Enricher" style="width:100%"/>
 </a>
 </figure>
 
@@ -36,7 +36,7 @@ Still another trouble with choreography comes from its weakness in error process
 
 <figure style="text-align:center">
 <a href="/Communication/Pipeline%20Error.png" style="outline:none">
-<img src="/Communication/Pipeline%20Error.png" alt="Pipeline Error" style="width:96%"/>
+<img src="/Communication/Pipeline%20Error.png" alt="Pipeline Error" style="width:100%"/>
 </a>
 </figure>
 
@@ -62,7 +62,7 @@ It is possible to avoid both adding a *Gateway* and having the cyclic dependency
 
 <figure style="text-align:center">
 <a href="/Communication/Pipeline%20Early%20Response.png" style="outline:none">
-<img src="/Communication/Pipeline%20Early%20Response.png" alt="Pipeline Early Response" style="width:96%"/>
+<img src="/Communication/Pipeline%20Early%20Response.png" alt="Pipeline Early Response" style="width:100%"/>
 </a>
 </figure>
 
@@ -76,7 +76,7 @@ If services communicate through commands, each service depends on all the direct
 
 <figure style="text-align:center">
 <a href="/Communication/Downstream%20Dependencies.png" style="outline:none">
-<img src="/Communication/Downstream%20Dependencies.png" alt="Downstream Dependencies" style="width:99%"/>
+<img src="/Communication/Downstream%20Dependencies.png" alt="Downstream Dependencies" style="width:100%"/>
 </a>
 </figure>
 
@@ -84,7 +84,7 @@ Upstream dependencies come from the [publish/subscribe](https://en.wikipedia.org
 
 <figure style="text-align:center">
 <a href="/Communication/Upstream%20Dependencies.png" style="outline:none">
-<img src="/Communication/Upstream%20Dependencies.png" alt="Upstream Dependencies" style="width:99%"/>
+<img src="/Communication/Upstream%20Dependencies.png" alt="Upstream Dependencies" style="width:100%"/>
 </a>
 </figure>
 
@@ -92,7 +92,7 @@ The final option is for the entire pipeline to use a uniform message format \([*
 
 <figure style="text-align:center">
 <a href="/Communication/Shared%20Message%20Format.png" style="outline:none">
-<img src="/Communication/Shared%20Message%20Format.png" alt="Shared Message Format" style="width:99%"/>
+<img src="/Communication/Shared%20Message%20Format.png" alt="Shared Message Format" style="width:100%"/>
 </a>
 </figure>
 
@@ -106,7 +106,7 @@ A peculiar feature of choreography is the ability to cut and cross\-link pipelin
 
 <figure style="text-align:center">
 <a href="/Communication/Cross-link%20Pipeline.png" style="outline:none">
-<img src="/Communication/Cross-link%20Pipeline.png" alt="Cross-link Pipeline" style="width:99%"/>
+<img src="/Communication/Cross-link%20Pipeline.png" alt="Cross-link Pipeline" style="width:100%"/>
 </a>
 </figure>
 
@@ -116,7 +116,7 @@ It is very common for a service to participate in multiple pipelines, especially
 
 <figure style="text-align:center">
 <a href="/Communication/Multi-choreography.png" style="outline:none">
-<img src="/Communication/Multi-choreography.png" alt="Multi-choreography" style="width:99%"/>
+<img src="/Communication/Multi-choreography.png" alt="Multi-choreography" style="width:100%"/>
 </a>
 </figure>
 
