@@ -1,7 +1,7 @@
 +++
 weight = 1
 title = "Sharing functionality or data among services"
-description = "Functionality or data may be shared among componets through: direct access, building a dedicated service, delegation, and replication."
+description = "Functionality or data may be shared among components through: direct access, building a dedicated service, delegation, and replication."
 +++
 
 # Sharing functionality or data among services
