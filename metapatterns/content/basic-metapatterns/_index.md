@@ -11,7 +11,7 @@ Basic metapatterns are both common stand\-alone architectures and building block
 
 ### [Monolith]({{< relref "../basic-metapatterns/monolith.md" >}})
 
-<figure style="text-align:center">
+<figure>
 <a href="/Contents/Monolith.png" style="outline:none">
 <img src="/Contents/Monolith.png" alt="Monolith" style="width:100%"/>
 </a>
@@ -23,7 +23,7 @@ Basic metapatterns are both common stand\-alone architectures and building block
 
 ### [Shards]({{< relref "../basic-metapatterns/shards.md" >}})
 
-<figure style="text-align:center">
+<figure>
 <a href="/Contents/Shards.png" style="outline:none">
 <img src="/Contents/Shards.png" alt="Shards" style="width:100%"/>
 </a>
@@ -35,7 +35,7 @@ Basic metapatterns are both common stand\-alone architectures and building block
 
 ### [Layers]({{< relref "../basic-metapatterns/layers.md" >}})
 
-<figure style="text-align:center">
+<figure>
 <a href="/Contents/Layers.png" style="outline:none">
 <img src="/Contents/Layers.png" alt="Layers" style="width:100%"/>
 </a>
@@ -47,7 +47,7 @@ Basic metapatterns are both common stand\-alone architectures and building block
 
 ### [Services]({{< relref "../basic-metapatterns/services.md" >}})
 
-<figure style="text-align:center">
+<figure>
 <a href="/Contents/Services.png" style="outline:none">
 <img src="/Contents/Services.png" alt="Services" style="width:93%"/>
 </a>
@@ -59,7 +59,7 @@ Basic metapatterns are both common stand\-alone architectures and building block
 
 ### [Pipeline]({{< relref "../basic-metapatterns/pipeline.md" >}})
 
-<figure style="text-align:center">
+<figure>
 <a href="/Contents/Pipeline.png" style="outline:none">
 <img src="/Contents/Pipeline.png" alt="Pipeline" style="width:100%"/>
 </a>

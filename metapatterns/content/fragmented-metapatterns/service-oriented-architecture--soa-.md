@@ -6,7 +6,7 @@ description = "Service-Oriented Architecture is an application of object-oriente
 
 # Service\-Oriented Architecture \(SOA\)
 
-<figure style="text-align:center">
+<figure>
 <a href="/Main/Service-Oriented%20Architecture.png" style="outline:none">
 <img src="/Main/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" style="width:100%"/>
 </a>
@@ -54,7 +54,7 @@ Nevertheless, the pattern allows for good throughput as its stateless components
 
 Each service of each layer depends on everything it uses\. As a result, development of a low\-level \(utility\) component may be paralyzed because too many services already use it, thus no changes are welcome\. Hence, the team writes a new version of their utility as a new service, which defeats the very idea of component reuse that *SOA* was based on\.
 
-<figure style="text-align:center">
+<figure>
 <a href="/Dependencies/Service-Oriented%20Architecture.png" style="outline:none">
 <img src="/Dependencies/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" style="width:88%"/>
 </a>
@@ -90,7 +90,7 @@ This architecture was hyped at the time when enterprises were expanding by acqui
 
 ### Distributed Monolith
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/3/Distributed%20Monolith.png" style="outline:none">
 <img src="/Variants/3/Distributed%20Monolith.png" alt="Distributed Monolith" style="width:100%"/>
 </a>
@@ -100,7 +100,7 @@ If a [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) gets too c
 
 ### Enterprise SOA
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/3/Enterprise%20SOA.png" style="outline:none">
 <img src="/Variants/3/Enterprise%20SOA.png" alt="Enterprise SOA" style="width:100%"/>
 </a>
@@ -117,7 +117,7 @@ The layers of *SOA* are:
 
 ### Domain\-Oriented Microservice Architecture \(DOMA\)
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/3/DOMA.png" style="outline:none">
 <img src="/Variants/3/DOMA.png" alt="DOMA" style="width:100%"/>
 </a>
@@ -134,7 +134,7 @@ Uber’s *DOMA* also [makes heavy use](https://www.uber.com/blog/microservice-ar
 
 ### \(misapplied\) Automotive SOA
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/3/SOA%20-%20AUTOSAR.png" style="outline:none">
 <img src="/Variants/3/SOA%20-%20AUTOSAR.png" alt="SOA - AUTOSAR" style="width:100%"/>
 </a>
@@ -153,7 +153,7 @@ It seems that some proponents of [*Nanoservices*]({{< relref "../basic-metapatte
 - Into every *service* that uses it, giving the developers who write the business logic full control of all the code that they use\. Now they have several projects to support on their own \(instead of asking other teams to make changes to their components\)\.
 
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/3/SOA%20-%201.png" style="outline:none">
 <img src="/Evolutions/3/SOA%20-%201.png" alt="SOA - 1" style="width:100%"/>
 </a>
@@ -162,7 +162,7 @@ It seems that some proponents of [*Nanoservices*]({{< relref "../basic-metapatte
 - Or into [*Sidecars*]({{< relref "../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] if you employ a [*Service Mesh*]({{< relref "../implementation-metapatterns/mesh.md#service-mesh" >}}), resulting in much fewer network hops \(thus lower latency\) in request processing, but retaining the inter\-team dependencies\.
 
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/3/SOA%20-%202.png" style="outline:none">
 <img src="/Evolutions/3/SOA%20-%202.png" alt="SOA - 2" style="width:100%"/>
 </a>
@@ -178,7 +178,7 @@ Afterwards you may deal with the remaining orchestration\. The idea is to move t
 - Or a combination of the above\.
 
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/3/SOA%20-%203.png" style="outline:none">
 <img src="/Evolutions/3/SOA%20-%203.png" alt="SOA - 3" style="width:100%"/>
 </a>

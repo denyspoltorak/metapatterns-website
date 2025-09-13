@@ -6,7 +6,7 @@ description = "Polyglot Persistence is the pattern for using multiple databases,
 
 # Polyglot Persistence
 
-<figure style="text-align:center">
+<figure>
 <a href="/Main/Polyglot%20Persistence.png" style="outline:none">
 <img src="/Main/Polyglot%20Persistence.png" alt="Polyglot Persistence" style="width:100%"/>
 </a>
@@ -73,7 +73,7 @@ Read\-write separation introduces a [replication lag](https://medium.com/@Ian_ca
 
 In general, each service depends on all of the databases which it uses\. There may also be an additional dependency between the databases if they share a dataset \(one or more databases are derived\)\.
 
-<figure style="text-align:center">
+<figure>
 <a href="/Dependencies/PolyglotPersistence.png" style="outline:none">
 <img src="/Dependencies/PolyglotPersistence.png" alt="PolyglotPersistence" style="width:100%"/>
 </a>
@@ -97,7 +97,7 @@ In general, each service depends on all of the databases which it uses\. There m
 
 ### Relations
 
-<figure style="text-align:center">
+<figure>
 <a href="/Relations/Polyglot%20Persistence.png" style="outline:none">
 <img src="/Relations/Polyglot%20Persistence.png" alt="Polyglot Persistence" style="width:100%"/>
 </a>
@@ -116,7 +116,7 @@ Many cases of *Polyglot Persistence* use multiple datastores just because there 
 
 ### Specialized Databases
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/3/PP%20-%20Specialized.png" style="outline:none">
 <img src="/Variants/3/PP%20-%20Specialized.png" alt="PP - Specialized" style="width:100%"/>
 </a>
@@ -126,7 +126,7 @@ Databases [vary in their optimal use cases](https://www.jamesserra.com/archive/2
 
 ### Private and Shared Databases
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/3/PP%20-%20Private%20and%20Shared.png" style="outline:none">
 <img src="/Variants/3/PP%20-%20Private%20and%20Shared.png" alt="PP - Private and Shared" style="width:100%"/>
 </a>
@@ -136,7 +136,7 @@ If several services or shards become coupled through a subset of the system’s 
 
 ### Data File, Content Delivery Network \(CDN\)
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/3/PP%20-%20File%20Storage.png" style="outline:none">
 <img src="/Variants/3/PP%20-%20File%20Storage.png" alt="PP - File Storage" style="width:100%"/>
 </a>
@@ -156,7 +156,7 @@ The updates to the derived databases may come from:
 - a dedicated *indexer* that periodically crawls the main database or web site\.
 
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/3/PP%20-%20Derived%20Storage.png" style="outline:none">
 <img src="/Variants/3/PP%20-%20Derived%20Storage.png" alt="PP - Derived Storage" style="width:100%"/>
 </a>
@@ -164,7 +164,7 @@ The updates to the derived databases may come from:
 
 ### Read\-Only Replica
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/3/Read-only%20Replica.png" style="outline:none">
 <img src="/Variants/3/Read-only%20Replica.png" alt="Read-only Replica" style="width:71%"/>
 </a>
@@ -174,7 +174,7 @@ Multiple instances of the database are deployed and one of them is the *leader* 
 
 ### Reporting Database, CQRS View Database, Event\-Sourced View, Source\-Aligned \(Native\) Data Product Quantum \(DPQ\) of Data Mesh
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/3/Reporting%20DB%20and%20CQRS%20View.png" style="outline:none">
 <img src="/Variants/3/Reporting%20DB%20and%20CQRS%20View.png" alt="Reporting DB and CQRS View" style="width:100%"/>
 </a>
@@ -186,7 +186,7 @@ A [*Reporting Database*](https://martinfowler.com/bliki/ReportingDatabase.html) 
 
 ### Memory Image, Materialized View
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/3/Memory%20Image.png" style="outline:none">
 <img src="/Variants/3/Memory%20Image.png" alt="Memory Image" style="width:100%"/>
 </a>
@@ -196,7 +196,7 @@ A [*Reporting Database*](https://martinfowler.com/bliki/ReportingDatabase.html) 
 
 ### Query Service, Front Controller, Data Warehouse, Data Lake, Aggregate Data Product Quantum \(DPQ\) of Data Mesh
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/3/Query%20Service.png" style="outline:none">
 <img src="/Variants/3/Query%20Service.png" alt="Query Service" style="width:100%"/>
 </a>
@@ -210,7 +210,7 @@ A [*Front Controller*]({{< relref "../extension-metapatterns/combined-component.
 
 ### External Search Index
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/3/Search%20Index.png" style="outline:none">
 <img src="/Variants/3/Search%20Index.png" alt="Search Index" style="width:100%"/>
 </a>
@@ -220,7 +220,7 @@ Some domains require a kind of search which is not naturally supported by ordina
 
 ### Historical Data, Data Archiving
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/3/Historical%20Data.png" style="outline:none">
 <img src="/Variants/3/Historical%20Data.png" alt="Historical Data" style="width:92%"/>
 </a>
@@ -230,7 +230,7 @@ It is common to store the history of sales in a database\. However, once a month
 
 ### Database Cache, Cache\-Aside
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/3/Cache-Aside.png" style="outline:none">
 <img src="/Variants/3/Cache-Aside.png" alt="Cache-Aside" style="width:80%"/>
 </a>
@@ -247,7 +247,7 @@ Keeping the cache consistent with the main database is the hard part\. There are
 - The service that uses the read and write databases is [split into separate read and write services]({{< relref "../fragmented-metapatterns/layered-services.md#command-query-responsibility-segregation-cqrs" >}})\.
 
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/3/Polyglor%20Persistence%20-%201.png" style="outline:none">
 <img src="/Evolutions/3/Polyglor%20Persistence%20-%201.png" alt="Polyglor Persistence - 1" style="width:100%"/>
 </a>

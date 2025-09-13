@@ -66,7 +66,7 @@ Combined components vary in their structure and properties:
 
 ### Message Bus
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/2/Message%20Bus.png" style="outline:none">
 <img src="/Variants/2/Message%20Bus.png" alt="Message Bus" style="width:100%"/>
 </a>
@@ -76,7 +76,7 @@ A *Message Bus* \[[EIP]({{< relref "../appendices/books-referenced.md#eip" >}})\
 
 ### API Gateway
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/2/Multifunctional%20-%20API%20Gateway.png" style="outline:none">
 <img src="/Variants/2/Multifunctional%20-%20API%20Gateway.png" alt="Multifunctional - API Gateway" style="width:100%"/>
 </a>
@@ -90,7 +90,7 @@ Example: a thorough article from [Microsoft](https://learn.microsoft.com/en-us/a
 
 ### Event Mediator
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/2/Multifunctional%20-%20Event%20Mediator.png" style="outline:none">
 <img src="/Variants/2/Multifunctional%20-%20Event%20Mediator.png" alt="Multifunctional - Event Mediator" style="width:100%"/>
 </a>
@@ -110,7 +110,7 @@ Example: Mediator Topology in the \[[FSA]({{< relref "../appendices/books-refere
 
 ### Persistent Event Log, Shared Event Store
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/2/Multifunctional%20-%20Shared%20Event%20Store.png" style="outline:none">
 <img src="/Variants/2/Multifunctional%20-%20Shared%20Event%20Store.png" alt="Multifunctional - Shared Event Store" style="width:100%"/>
 </a>
@@ -126,7 +126,7 @@ Example: \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\] sho
 
 ### Front Controller
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/2/Front%20Controller.png" style="outline:none">
 <img src="/Variants/2/Front%20Controller.png" alt="Front Controller" style="width:100%"/>
 </a>
@@ -136,7 +136,7 @@ Example: \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\] sho
 
 ### Enterprise Service Bus \(ESB\)
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/2/Multifunctional%20-%20Enterprise%20Service%20Bus.png" style="outline:none">
 <img src="/Variants/2/Multifunctional%20-%20Enterprise%20Service%20Bus.png" alt="Multifunctional - Enterprise Service Bus" style="width:100%"/>
 </a>
@@ -148,7 +148,7 @@ Example: Orchestration\-Driven Service\-Oriented Architecture in \[[FSA]({{< rel
 
 ### Service Mesh
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/2/Multifunctional%20-%20Service%20Mesh.png" style="outline:none">
 <img src="/Variants/2/Multifunctional%20-%20Service%20Mesh.png" alt="Multifunctional - Service Mesh" style="width:100%"/>
 </a>
@@ -160,7 +160,7 @@ A *Service* [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}}) is
 
 ### Middleware of Space\-Based Architecture
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/2/Multifunctional%20-%20Space-Based%20Architecture.png" style="outline:none">
 <img src="/Variants/2/Multifunctional%20-%20Space-Based%20Architecture.png" alt="Multifunctional - Space-Based Architecture" style="width:100%"/>
 </a>
@@ -183,7 +183,7 @@ The patterns that involve [*orchestration*]({{< relref "../foundations-of-softwa
 - Replace the *Combined Component* with several specialized ones
 
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/2/Multifunctional_%20Split.png" style="outline:none">
 <img src="/Evolutions/2/Multifunctional_%20Split.png" alt="Multifunctional: Split" style="width:100%"/>
 </a>

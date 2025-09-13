@@ -19,7 +19,7 @@ bookCollapseSection = true
 
 <span style="color:green">Lars Noodén \(editor\)</span>
 
-<figure style="text-align:center">
+<figure>
 <a href="../Pictures/image000.png" style="outline:none">
 <img src="../Pictures/image000.png" alt="image000" style="width:22%"/>
 </a>

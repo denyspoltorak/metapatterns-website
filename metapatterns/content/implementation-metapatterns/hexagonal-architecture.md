@@ -6,7 +6,7 @@ description = "Hexagonal Architecture isolates a component's business logic from
 
 # Hexagonal Architecture
 
-<figure style="text-align:center">
+<figure>
 <a href="/Main/Hexagonal%20Architecture.png" style="outline:none">
 <img src="/Main/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" style="width:100%"/>
 </a>
@@ -64,7 +64,7 @@ Examples – [Separated Presentation](https://martinfowler.com/eaaDev/SeparatedP
 
 In rare cases the system may benefit from direct communication between the adapters\. However, that requires several of them to be compatible or polymorphic, in which case your *Hexagonal Architecture* may in fact be a kind of shallow [*Hierarchy*]({{< relref "../fragmented-metapatterns/hierarchy.md" >}})\. Examples include a service that uses several databases which are kept in sync through [*Change Data Capture*](https://www.dremio.com/wiki/change-data-capture/) \(*CDC*\) or a telephony gateway that interconnects various kinds of voice devices\.
 
-<figure style="text-align:center">
+<figure>
 <a href="/Performance/Hexagonal%20Architecture.png" style="outline:none">
 <img src="/Performance/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" style="width:90%"/>
 </a>
@@ -74,7 +74,7 @@ In rare cases the system may benefit from direct communication between the adapt
 
 Each [adapter]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) breaks the dependency between the core that contains business logic and an adapted component\. This makes all the system’s components mutually independent – and easily interchangeable and evolvable – except for the adapters themselves, which are small enough to be rewritten as need arises\.
 
-<figure style="text-align:center">
+<figure>
 <a href="/Dependencies/Hexagonal%20Architecture.png" style="outline:none">
 <img src="/Dependencies/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" style="width:84%"/>
 </a>
@@ -102,7 +102,7 @@ Each [adapter]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorrup
 
 ### Relations
 
-<figure style="text-align:center">
+<figure>
 <a href="/Relations/Hexagonal%20Architecture.png" style="outline:none">
 <img src="/Relations/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" style="width:100%"/>
 </a>
@@ -123,7 +123,7 @@ One possible variation in a distributed or asynchronous *Hexagonal Architecture*
 
 ### Adapters on the external component side
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/4/Hexagonal%20-%20Adapters%20with%20Components.png" style="outline:none">
 <img src="/Variants/4/Hexagonal%20-%20Adapters%20with%20Components.png" alt="Hexagonal - Adapters with Components" style="width:93%"/>
 </a>
@@ -135,7 +135,7 @@ This resembles [*Sidecar*](https://docs.google.com/document/d/1hzBn-RzzNDcArAWcv
 
 ### Adapters on the core side
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/4/Hexagonal%20-%20Adapters%20with%20the%20Core.png" style="outline:none">
 <img src="/Variants/4/Hexagonal%20-%20Adapters%20with%20the%20Core.png" alt="Hexagonal - Adapters with the Core" style="width:100%"/>
 </a>
@@ -151,7 +151,7 @@ This approach resembles [*Ambassador*](https://docs.google.com/document/d/1hzBn-
 
 ### Hexagonal Architecture, Ports and Adapters
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/4/Monolithic%20Hexagonal.png" style="outline:none">
 <img src="/Variants/4/Monolithic%20Hexagonal.png" alt="Monolithic Hexagonal" style="width:100%"/>
 </a>
@@ -161,7 +161,7 @@ Just like [*MVC*]({{< relref "#model-view-controller-mvc-action-domain-responder
 
 ### DDD\-Style Hexagonal Architecture, Onion Architecture, Clean Architecture
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/4/Layered%20Hexagonal.png" style="outline:none">
 <img src="/Variants/4/Layered%20Hexagonal.png" alt="Layered Hexagonal" style="width:100%"/>
 </a>
@@ -188,7 +188,7 @@ All of them aim at making the business logic presentation\-agnostic \(thus cross
 
 ### Model\-View\-Presenter \(MVP\), Model\-View\-Adapter \(MVA\), Model\-View\-ViewModel \(MVVM\), Model 1 \(MVC1\), Document\-View
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/4/MVP.png" style="outline:none">
 <img src="/Variants/4/MVP.png" alt="MVP" style="width:100%"/>
 </a>
@@ -211,7 +211,7 @@ A [*Model\-View\-ViewModel*](https://herbertograca.com/2017/08/17/mvc-and-its-va
 
 All those patterns exploit modern OS or GUI frameworks’ widgets which handle and process mouse and keyboard input, thus [removing](https://mvc.givan.se/papers/Twisting_the_Triad.pdf) the need for a separate \(input\) *controller* \(see below\)\.
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/4/MVP%20-%20subtypes.png" style="outline:none">
 <img src="/Variants/4/MVP%20-%20subtypes.png" alt="MVP - subtypes" style="width:100%"/>
 </a>
@@ -219,7 +219,7 @@ All those patterns exploit modern OS or GUI frameworks’ widgets which handle a
 
 ### Model\-View\-Controller \(MVC\), Action\-Domain\-Responder \(ADR\), Resource\-Method\-Representation \(RMR\), Model 2 \(MVC2\), Game Development Engine
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/4/MVC.png" style="outline:none">
 <img src="/Variants/4/MVC.png" alt="MVC" style="width:100%"/>
 </a>
@@ -248,7 +248,7 @@ A [*game development engine*](https://slideplayer.com/slide/12426213/) creates a
 
 Another difference is that while *MVC* provides for changing target platforms by rewriting its minor components \(*view* and *controller*\), you are very unlikely to change your game framework – instead, it is the framework itself that makes all the platforms look identical to your code\.
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/4/MVC%20-%20subtypes.png" style="outline:none">
 <img src="/Variants/4/MVC%20-%20subtypes.png" alt="MVC - subtypes" style="width:100%"/>
 </a>

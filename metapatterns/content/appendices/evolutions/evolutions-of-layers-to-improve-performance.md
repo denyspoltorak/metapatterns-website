@@ -11,7 +11,7 @@ There are several ways to improve the performance of a [*layered system*]({{< re
 - [*Space\-Based Architecture*]({{< relref "../../implementation-metapatterns/mesh.md#space-based-architecture" >}}) co\-locates the database and business logic and scales both dynamically\.
 
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.png" style="outline:none">
 <img src="/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.png" alt="Layers to Space-Based Architecture" style="width:100%"/>
 </a>
@@ -26,7 +26,7 @@ Others are new here and thus deserve more attention:
 
 ## Merge several layers
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/Layers/Layers%20Merge.png" style="outline:none">
 <img src="/Evolutions/Layers/Layers%20Merge.png" alt="Layers Merge" style="width:100%"/>
 </a>
@@ -59,7 +59,7 @@ If your system’s development [is finished]({{< relref "../../analytics/archite
 
 ## Scale individual layers
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/Layers/Layers_%20Shard.png" style="outline:none">
 <img src="/Evolutions/Layers/Layers_%20Shard.png" alt="Layers: Shard" style="width:100%"/>
 </a>
@@ -93,7 +93,7 @@ Multiple instances or layers can be created, with their number and deployment [v
 
 ## Use multiple databases
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.png" style="outline:none">
 <img src="/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.png" alt="Layers to Polyglot Persistence" style="width:100%"/>
 </a>

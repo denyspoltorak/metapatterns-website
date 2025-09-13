@@ -36,7 +36,7 @@ We see that forces influence architecture\. That becomes way more interesting wh
 
 Remember how old Windows used to freeze on formatting a floppy or when it encountered one with a bad cluster? Let’s see how such things could have happened \(though [the real cause was a bit different](https://sudonull.com/post/124038-Why-did-Windows-95-freeze-when-formatting-a-floppy-disk), it also came from the modules’ sharing a context\)\.
 
-<figure style="text-align:center">
+<figure>
 <a href="/Intro/Floppy-Sync.png" style="outline:none">
 <img src="/Intro/Floppy-Sync.png" alt="Floppy-Sync" style="width:80%"/>
 </a>
@@ -48,7 +48,7 @@ The system implements the function it was made for – it formats floppies\. How
 
 If the modules cannot communicate directly \(call each other and wait for the results returned\) how should they interact? Through an intermediary where one of the modules leaves a message for another\. Such an intermediary may be a message queue, a pub/sub channel, or even a data record in shared memory\. The sender posts its message and continues its routine tasks\. The receiver checks for incoming messages whenever it has a free time slot\. Behold multithreading in action\!
 
-<figure style="text-align:center">
+<figure>
 <a href="/Intro/Floppy-Async.png" style="outline:none">
 <img src="/Intro/Floppy-Async.png" alt="Floppy-Async" style="width:100%"/>
 </a>
@@ -67,7 +67,7 @@ Consider a web site\. Most of them follow [*Three\-Tier Architecture*](https://e
 
 This common division makes quite a lot of sense:
 
-<figure style="text-align:center">
+<figure>
 <a href="/Intro/3-Tier.png" style="outline:none">
 <img src="/Intro/3-Tier.png" alt="3-Tier" style="width:72%"/>
 </a>
@@ -92,7 +92,7 @@ Sensors and actuators are cheap and energy\-efficient but dumb devices\. They do
 
 Here reliability conflicts with accuracy: a human operator makes an accurate estimate of the threat and chooses an appropriate action, but it is not granted that we can always reach the operator\. Thus to be reliable we add an inaccurate but trustworthy fallback reaction\.
 
-<figure style="text-align:center">
+<figure>
 <a href="/Intro/Field%20Gateway.png" style="outline:none">
 <img src="/Intro/Field%20Gateway.png" alt="Field Gateway" style="width:100%"/>
 </a>

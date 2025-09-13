@@ -14,7 +14,7 @@ A [*Middleware*]({{< relref "../../extension-metapatterns/middleware.md" >}}) is
 
 ## Add a secondary Middleware
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/2/Middleware%20add%20Middleware.png" style="outline:none">
 <img src="/Evolutions/2/Middleware%20add%20Middleware.png" alt="Middleware add Middleware" style="width:100%"/>
 </a>
@@ -41,7 +41,7 @@ If the current *Middleware* is too generic for the system’s needs, you can add
 
 ## Merge two systems by building a Bottom\-Up Hierarchy
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.png" style="outline:none">
 <img src="/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.png" alt="Middleware to Bus of Buses" style="width:100%"/>
 </a>

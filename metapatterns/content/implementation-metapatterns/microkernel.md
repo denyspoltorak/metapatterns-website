@@ -6,7 +6,7 @@ description = "A microkernel mediates between resource providers and resource co
 
 # Microkernel
 
-<figure style="text-align:center">
+<figure>
 <a href="/Main/Microkernel.png" style="outline:none">
 <img src="/Main/Microkernel.png" alt="Microkernel" style="width:100%"/>
 </a>
@@ -63,7 +63,7 @@ It is common to see system components communicate directly via shared memory or 
 
 The *applications* depend on the *API* of the *microkernel* while the *providers* depend on its *SPIs*\. On one hand, that isolates the applications and providers from each other, letting them develop independently\. On the other hand, the microkernel’s API and SPIs should be very stable to support older versions of the components which the microkernel integrates\.
 
-<figure style="text-align:center">
+<figure>
 <a href="/Dependencies/Microkernel.png" style="outline:none">
 <img src="/Dependencies/Microkernel.png" alt="Microkernel" style="width:100%"/>
 </a>
@@ -85,7 +85,7 @@ The *applications* depend on the *API* of the *microkernel* while the *providers
 
 ### Relations
 
-<figure style="text-align:center">
+<figure>
 <a href="/Relations/Microkernel.png" style="outline:none">
 <img src="/Relations/Microkernel.png" alt="Microkernel" style="width:100%"/>
 </a>
@@ -106,7 +106,7 @@ The *applications* depend on the *API* of the *microkernel* while the *providers
 
 ### Operating System
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/4/OS.png" style="outline:none">
 <img src="/Variants/4/OS.png" alt="OS" style="width:100%"/>
 </a>
@@ -116,7 +116,7 @@ The original inspiration for *Microkernel*, namely *operating systems*, provides
 
 ### Software Framework
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/4/Framework.png" style="outline:none">
 <img src="/Variants/4/Framework.png" alt="Framework" style="width:100%"/>
 </a>
@@ -126,7 +126,7 @@ The *microkernel* is a [*Facade*]({{< relref "../extension-metapatterns/orchestr
 
 ### Virtualizer, Hypervisor, Container Orchestrator, Distributed Runtime
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/4/Virtualizer.png" style="outline:none">
 <img src="/Variants/4/Virtualizer.png" alt="Virtualizer" style="width:100%"/>
 </a>
@@ -136,7 +136,7 @@ The *microkernel* is a [*Facade*]({{< relref "../extension-metapatterns/orchestr
 
 ### Interpreter, Script, Domain\-Specific Language \(DSL\)
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/4/Interpreter.png" style="outline:none">
 <img src="/Variants/4/Interpreter.png" alt="Interpreter" style="width:100%"/>
 </a>
@@ -146,7 +146,7 @@ User\-provided *scripts* are run by an *Interpreter* \[[GoF]({{< relref "../appe
 
 ### Configurator, Configuration File
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/4/Config%20file.png" style="outline:none">
 <img src="/Variants/4/Config%20file.png" alt="Config file" style="width:100%"/>
 </a>
@@ -156,7 +156,7 @@ User\-provided *scripts* are run by an *Interpreter* \[[GoF]({{< relref "../appe
 
 ### Saga Engine
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/4/Saga%20engine.png" style="outline:none">
 <img src="/Variants/4/Saga%20engine.png" alt="Saga engine" style="width:100%"/>
 </a>
@@ -166,7 +166,7 @@ A [*Saga*]({{< relref "../extension-metapatterns/orchestrator.md#orchestrated-sa
 
 ### AUTOSAR Classic Platform
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/4/AUTOSAR%20classic.png" style="outline:none">
 <img src="/Variants/4/AUTOSAR%20classic.png" alt="AUTOSAR classic" style="width:100%"/>
 </a>

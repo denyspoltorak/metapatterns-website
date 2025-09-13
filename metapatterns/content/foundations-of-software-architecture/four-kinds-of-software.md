@@ -22,7 +22,7 @@ Other programs are not that time\-constrained – they run a single task for a l
 
 Those dimensions make four corner cases that vary in architectural styles:
 
-<figure style="text-align:center">
+<figure>
 <a href="/4Kinds/4%20Kinds.png" style="outline:none">
 <img src="/4Kinds/4%20Kinds.png" alt="4 Kinds" style="width:100%"/>
 </a>
@@ -30,7 +30,7 @@ Those dimensions make four corner cases that vary in architectural styles:
 
 ## Control \(real\-time, hardware input\)
 
-<figure style="text-align:center">
+<figure>
 <a href="/4Kinds/Control%20-%20main.png" style="outline:none">
 <img src="/4Kinds/Control%20-%20main.png" alt="Control - main" style="width:100%"/>
 </a>
@@ -76,7 +76,7 @@ At the architectural level, control systems are [event\-driven](https://en.wikip
 - A [*Hierarchical Orchestrator*]({{< relref "../fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}}) can manage even more complex systems\. The *Orchestrator* may run synchronously with polymorphic specialized components or asynchronously\. In the last case each sub\-orchestrator reacts independently based on its own model but also sends a notification to the high\-level component which builds a global strategy and programs the smaller models of sub\-orchestrators\.
 
 
-<figure style="text-align:center">
+<figure>
 <a href="/4Kinds/Control%20-%20variants.png" style="outline:none">
 <img src="/4Kinds/Control%20-%20variants.png" alt="Control - variants" style="width:100%"/>
 </a>
@@ -103,7 +103,7 @@ Messages may be dispatched through multilevel index arrays or *Visitors* \[[GoF]
 
 ## Interactive \(soft real\-time, user input\)
 
-<figure style="text-align:center">
+<figure>
 <a href="/4Kinds/Interactive%20-%20main.png" style="outline:none">
 <img src="/4Kinds/Interactive%20-%20main.png" alt="Interactive - main" style="width:100%"/>
 </a>
@@ -125,7 +125,7 @@ Interactive systems vary in a couple of ways:
 - The presentation layer may wait for the business logic to execute the user’s action, blocking further user input and screen updates \(air conditioner controller\), or it may asynchronously pass the command to the lower layer and continue processing new user input and showing progress of the already running tasks \(many games\) while the main program is busy with the command\.
 
 
-<figure style="text-align:center">
+<figure>
 <a href="/4Kinds/Interactive%20-%20variants%201.png" style="outline:none">
 <img src="/4Kinds/Interactive%20-%20variants%201.png" alt="Interactive - variants 1" style="width:100%"/>
 </a>
@@ -134,7 +134,7 @@ Interactive systems vary in a couple of ways:
 - There may be dedicated modules for processing user input and output \([*MVC* family]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}}) of patterns\) or both may pass through the same stack of components \([*MVP* family]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-presenter-mvp-model-view-adapter-mva-model-view-viewmodel-mvvm-model-1-mvc1-document-view" >}})\)\. The asymmetric approach deals with raw controller input, which is what most games need, while the bidirectional flow operates UI widgets provided by the host OS or GUI framework\.
 
 
-<figure style="text-align:center">
+<figure>
 <a href="/4Kinds/Interactive%20-%20variants%202.png" style="outline:none">
 <img src="/4Kinds/Interactive%20-%20variants%202.png" alt="Interactive - variants 2" style="width:100%"/>
 </a>
@@ -162,7 +162,7 @@ The presentation would usually subscribe to updates from the business logic\.
 
 ## Streaming \(continuous, raw data input\)
 
-<figure style="text-align:center">
+<figure>
 <a href="/4Kinds/Streaming%20-%20main.png" style="outline:none">
 <img src="/4Kinds/Streaming%20-%20main.png" alt="Streaming - main" style="width:100%"/>
 </a>
@@ -202,7 +202,7 @@ Every filter is likely to run in its own thread and be unaware of other filters 
 
 ## Computational \(single run, user input\)
 
-<figure style="text-align:center">
+<figure>
 <a href="/4Kinds/Computational%20-%20main.png" style="outline:none">
 <img src="/4Kinds/Computational%20-%20main.png" alt="Computational - main" style="width:100%"/>
 </a>
@@ -243,7 +243,7 @@ Most real\-life software is too complex to fit the classification outlined above
 
 ### Camera
 
-<figure style="text-align:center">
+<figure>
 <a href="/4Kinds/Camera.png" style="outline:none">
 <img src="/4Kinds/Camera.png" alt="Camera" style="width:100%"/>
 </a>
@@ -258,7 +258,7 @@ A digital camera incorporates subsystems of different kinds:
 
 ### 3D action game
 
-<figure style="text-align:center">
+<figure>
 <a href="/4Kinds/3D%20action.png" style="outline:none">
 <img src="/4Kinds/3D%20action.png" alt="3D action" style="width:100%"/>
 </a>
@@ -268,7 +268,7 @@ Games with 3D graphics often bypass the host OS’ [desktop environment](https:/
 
 ### SQL database
 
-<figure style="text-align:center">
+<figure>
 <a href="/4Kinds/Database.png" style="outline:none">
 <img src="/4Kinds/Database.png" alt="Database" style="width:100%"/>
 </a>

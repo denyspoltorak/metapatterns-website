@@ -11,7 +11,7 @@ There are patterns that describe implementation of components:
 
 ### [Plugins]({{< relref "../implementation-metapatterns/plugins.md" >}})
 
-<figure style="text-align:center">
+<figure>
 <a href="/Contents/Plugins.png" style="outline:none">
 <img src="/Contents/Plugins.png" alt="Plugins" style="width:100%"/>
 </a>
@@ -23,7 +23,7 @@ The *Plugins* pattern is about separating a system’s main logic from the custo
 
 ### [Hexagonal Architecture]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}})
 
-<figure style="text-align:center">
+<figure>
 <a href="/Contents/Hexagonal%20Architecture.png" style="outline:none">
 <img src="/Contents/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" style="width:100%"/>
 </a>
@@ -35,7 +35,7 @@ The *Plugins* pattern is about separating a system’s main logic from the custo
 
 ### [Microkernel]({{< relref "../implementation-metapatterns/microkernel.md" >}})
 
-<figure style="text-align:center">
+<figure>
 <a href="/Contents/Microkernel.png" style="outline:none">
 <img src="/Contents/Microkernel.png" alt="Microkernel" style="width:100%"/>
 </a>
@@ -47,7 +47,7 @@ This is another derivation of *Plugins*, with a rudimentary *core* component whi
 
 ### [Mesh]({{< relref "../implementation-metapatterns/mesh.md" >}})
 
-<figure style="text-align:center">
+<figure>
 <a href="/Contents/Mesh.png" style="outline:none">
 <img src="/Contents/Mesh.png" alt="Mesh" style="width:100%"/>
 </a>

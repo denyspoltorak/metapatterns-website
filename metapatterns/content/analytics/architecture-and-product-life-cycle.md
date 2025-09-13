@@ -10,7 +10,7 @@ In my practice, a product’s architecture changes over its lifetime\. For a R&D
 
 ### Infancy \(proof of concept\) – Monolith
 
-<figure style="text-align:center">
+<figure>
 <a href="/Conclusion/Lifecycle-1.png" style="outline:none">
 <img src="/Conclusion/Lifecycle-1.png" alt="Lifecycle-1" style="width:100%"/>
 </a>
@@ -20,7 +20,7 @@ A project in an unknown domain starts humble and small, likely as a proof of con
 
 ### Childhood \(prototype\) – Layers
 
-<figure style="text-align:center">
+<figure>
 <a href="/Conclusion/Lifecycle-2.png" style="outline:none">
 <img src="/Conclusion/Lifecycle-2.png" alt="Lifecycle-2" style="width:89%"/>
 </a>
@@ -30,7 +30,7 @@ When you have the thing working, you may start reflecting on the rules and the c
 
 ### Youth \(development of features\) – fragmented architectures
 
-<figure style="text-align:center">
+<figure>
 <a href="/Conclusion/Lifecycle-3.png" style="outline:none">
 <img src="/Conclusion/Lifecycle-3.png" alt="Lifecycle-3" style="width:100%"/>
 </a>
@@ -40,7 +40,7 @@ As you acquire domain experience, you start discerning subdomains \(or *bounded 
 
 ### Adulthood \(production\) – ad\-hoc composition
 
-<figure style="text-align:center">
+<figure>
 <a href="/Conclusion/Lifecycle-4.png" style="outline:none">
 <img src="/Conclusion/Lifecycle-4.png" alt="Lifecycle-4" style="width:100%"/>
 </a>
@@ -50,7 +50,7 @@ As the product enters the market, its development tends to slow down with more a
 
 ### Old age \(support\) – back to Layers
 
-<figure style="text-align:center">
+<figure>
 <a href="/Conclusion/Lifecycle-5.png" style="outline:none">
 <img src="/Conclusion/Lifecycle-5.png" alt="Lifecycle-5" style="width:54%"/>
 </a>
@@ -60,7 +60,7 @@ When active development ceases, you lose even more people and funding as you dri
 
 ### Death \(the ultimate release\) – Monolith
 
-<figure style="text-align:center">
+<figure>
 <a href="/Conclusion/Lifecycle-6.png" style="outline:none">
 <img src="/Conclusion/Lifecycle-6.png" alt="Lifecycle-6" style="width:55%"/>
 </a>

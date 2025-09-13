@@ -6,7 +6,7 @@ description = "Backends for Frontends dedicate a component to each kind of a sys
 
 # Backends for Frontends \(BFF\)
 
-<figure style="text-align:center">
+<figure>
 <a href="/Main/Backends%20for%20Frontends.png" style="outline:none">
 <img src="/Main/Backends%20for%20Frontends.png" alt="Backends for Frontends" style="width:100%"/>
 </a>
@@ -56,7 +56,7 @@ As the multiple *Orchestrators* of *BFF* don’t intercommunicate, the pattern�
 
 Each *BFF* depends on all the services it uses \(usually every service in the system\)\. The services themselves are likely to be independent, as is common in [*orchestrated* systems]({{< relref "../foundations-of-software-architecture/arranging-communication/orchestration.md" >}})\.
 
-<figure style="text-align:center">
+<figure>
 <a href="/Dependencies/Backends%20for%20Frontends.png" style="outline:none">
 <img src="/Dependencies/Backends%20for%20Frontends.png" alt="Backends for Frontends" style="width:91%"/>
 </a>
@@ -78,7 +78,7 @@ Each *BFF* depends on all the services it uses \(usually every service in the sy
 
 ### Relations
 
-<figure style="text-align:center">
+<figure>
 <a href="/Relations/BFF.png" style="outline:none">
 <img src="/Relations/BFF.png" alt="BFF" style="width:100%"/>
 </a>
@@ -96,7 +96,7 @@ Each *BFF* depends on all the services it uses \(usually every service in the sy
 
 ### Proxies
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/3/BFF%20-%20Gateways.png" style="outline:none">
 <img src="/Variants/3/BFF%20-%20Gateways.png" alt="BFF - Gateways" style="width:100%"/>
 </a>
@@ -108,7 +108,7 @@ Multiple *Adapters* match the literal meaning of *Backends for Frontends* – ea
 
 ### Orchestrators
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/3/BFF%20-%20Orchestrators.png" style="outline:none">
 <img src="/Variants/3/BFF%20-%20Orchestrators.png" alt="BFF - Orchestrators" style="width:100%"/>
 </a>
@@ -118,7 +118,7 @@ An [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) 
 
 ### Proxy \+ Orchestrator pairs
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/3/BFF%20-%20Gateways%20+%20Orchestrators.png" style="outline:none">
 <img src="/Variants/3/BFF%20-%20Gateways%20+%20Orchestrators.png" alt="BFF - Gateways + Orchestrators" style="width:100%"/>
 </a>
@@ -128,7 +128,7 @@ Clients vary in both access mode \(protocol\) and workflow\. [*Orchestrators*]({
 
 ### API Gateways
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/3/BFF%20-%20API%20gateways.png" style="outline:none">
 <img src="/Variants/3/BFF%20-%20API%20gateways.png" alt="BFF - API gateways" style="width:100%"/>
 </a>
@@ -138,7 +138,7 @@ Clients vary in access mode \(protocol\) and workflow and there is a third\-part
 
 ### Event Mediators
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/3/BFF%20-%20Event%20mediators.png" style="outline:none">
 <img src="/Variants/3/BFF%20-%20Event%20mediators.png" alt="BFF - Event mediators" style="width:100%"/>
 </a>
@@ -156,7 +156,7 @@ Clients vary in access mode \(protocol\) and workflow and there is a third\-part
 - [*Sidecars*]({{< relref "../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] \(of [*Service Mesh*]({{< relref "../implementation-metapatterns/mesh.md#service-mesh" >}})\) are a way to share libraries among the *BFF*s\.
 
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/3/BFF.png" style="outline:none">
 <img src="/Evolutions/3/BFF.png" alt="BFF" style="width:100%"/>
 </a>

@@ -6,7 +6,7 @@ description = "Shards are multiple instances of a subsystem or component. They c
 
 # Shards
 
-<figure style="text-align:center">
+<figure>
 <a href="/Main/Shards.png" style="outline:none">
 <img src="/Main/Shards.png" alt="Shards" style="width:100%"/>
 </a>
@@ -57,7 +57,7 @@ By state:
 
 A *shard* retains the performance of the original subsystem \(a [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) in the simplest case\) as long as it runs independently\. Any task that involves intershard communication has its performance degraded by data serialization and network latency\. And as soon as multiple shards need to synchronize their states you find yourself on the horns of a dilemma: damage data consistency through write conflicts or kill performance with distributed transactions \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\]\.
 
-<figure style="text-align:center">
+<figure>
 <a href="/Performance/Shards.png" style="outline:none">
 <img src="/Performance/Shards.png" alt="Shards" style="width:100%"/>
 </a>
@@ -89,7 +89,7 @@ A *sharded* system features properties of a pattern it replicates \(a single\-co
 
 ### Relations
 
-<figure style="text-align:center">
+<figure>
 <a href="/Relations/Shards.png" style="outline:none">
 <img src="/Relations/Shards.png" alt="Shards" style="width:100%"/>
 </a>
@@ -148,7 +148,7 @@ There are several subtypes of sharding that differ in the way they handle state:
 
 ### Persistent slice: Sharding, Shards, Partitions, Cells \(Amazon definition\)
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/1/Shards%20-%20Sharding.png" style="outline:none">
 <img src="/Variants/1/Shards%20-%20Sharding.png" alt="Shards - Sharding" style="width:100%"/>
 </a>
@@ -175,7 +175,7 @@ It usually takes a stand\-alone [*Sharding Proxy*]({{< relref "../extension-meta
 
 ### Persistent copy: Replica
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/1/Shards%20-%20Replica.png" style="outline:none">
 <img src="/Variants/1/Shards%20-%20Replica.png" alt="Shards - Replica" style="width:100%"/>
 </a>
@@ -193,7 +193,7 @@ Finally, you can mix sharding and replication to make sure that the data of each
 
 ### Stateless: Pool, Instances, Replicated Stateless Services, Work Queue
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/1/Shards%20-%20Pool.png" style="outline:none">
 <img src="/Variants/1/Shards%20-%20Pool.png" alt="Shards - Pool" style="width:100%"/>
 </a>
@@ -207,7 +207,7 @@ Many cloud services implement dynamic pools, the number of instances growing and
 
 ### Temporary state: Create on Demand
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/1/Shards%20-%20Create%20on%20Demand.png" style="outline:none">
 <img src="/Variants/1/Shards%20-%20Create%20on%20Demand.png" alt="Shards - Create on Demand" style="width:100%"/>
 </a>
@@ -230,7 +230,7 @@ When *Shards* are applied to a single component, which is a [*Monolith*]({{< rel
 - [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) and its subtypes, namely [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) and [*Scripts*]({{< relref "../implementation-metapatterns/microkernel.md#interpreter-script-domain-specific-language-dsl" >}}), make the system more adaptable\.
 
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/Shards/Shards%20-%20General.png" style="outline:none">
 <img src="/Evolutions/Shards/Shards%20-%20General.png" alt="Shards - General" style="width:100%"/>
 </a>
@@ -245,7 +245,7 @@ The issue peculiar to *Shards* is that of coordinating deployed instances, espec
 - If the whole dataset needs to be shared, it can be split into a [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) layer\. 
 
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/Shards/Shards%20to%20Shared%20DB.png" style="outline:none">
 <img src="/Evolutions/Shards/Shards%20to%20Shared%20DB.png" alt="Shards to Shared DB" style="width:100%"/>
 </a>
@@ -254,7 +254,7 @@ The issue peculiar to *Shards* is that of coordinating deployed instances, espec
 - If data collisions are tolerated, [*Space\-Based Architecture*]({{< relref "../extension-metapatterns/shared-repository.md#data-grid-of-space-based-architecture-sba-replicated-cache-distributed-cache" >}}) promises low latency and dynamic scalability\.
 
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/Shards/Shards%20to%20Space-Based%20Architecture.png" style="outline:none">
 <img src="/Evolutions/Shards/Shards%20to%20Space-Based%20Architecture.png" alt="Shards to Space-Based Architecture" style="width:100%"/>
 </a>
@@ -263,7 +263,7 @@ The issue peculiar to *Shards* is that of coordinating deployed instances, espec
 - If a part of the system’s data becomes coupled, only that part can be moved to a *Shared Repository*, making each instance manage [two stores of data: private and shared]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#private-and-shared-databases" >}})\.
 
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/Shards/Shards%20add%20Shared%20DB.png" style="outline:none">
 <img src="/Evolutions/Shards/Shards%20add%20Shared%20DB.png" alt="Shards add Shared DB" style="width:100%"/>
 </a>
@@ -272,7 +272,7 @@ The issue peculiar to *Shards* is that of coordinating deployed instances, espec
 - Another possible option is to split a [service]({{< relref "../basic-metapatterns/services.md" >}}) that owns the coupled data and is always deployed as a single instance\. The remaining parts of the system become coupled to that service, not to each other\.
 
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/Shards/Shards%20split%20Shared%20Service.png" style="outline:none">
 <img src="/Evolutions/Shards/Shards%20split%20Shared%20Service.png" alt="Shards split Shared Service" style="width:100%"/>
 </a>
@@ -286,7 +286,7 @@ Other cases are better solved by extracting the logic that manipulates multiple 
 - Adding a [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) lets the shards communicate with each other without maintaining direct connections\. It also may do housekeeping: error recovery, replication, and scaling\.
 
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/Shards/Shards%20add%20Middleware.png" style="outline:none">
 <img src="/Evolutions/Shards/Shards%20add%20Middleware.png" alt="Shards add Middleware" style="width:100%"/>
 </a>
@@ -295,7 +295,7 @@ Other cases are better solved by extracting the logic that manipulates multiple 
 - A [*Sharding Proxy*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) hides the shards from the system’s clients\.
 
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/Shards/Shards%20add%20Load%20Balancer.png" style="outline:none">
 <img src="/Evolutions/Shards/Shards%20add%20Load%20Balancer.png" alt="Shards add Load Balancer" style="width:100%"/>
 </a>
@@ -304,7 +304,7 @@ Other cases are better solved by extracting the logic that manipulates multiple 
 - An [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) calls multiple shards to serve a user request\. That relieves the shards of the need to coordinate their states and actions by themselves\.
 
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/Shards/Shards%20use%20Orchestrator.png" style="outline:none">
 <img src="/Evolutions/Shards/Shards%20use%20Orchestrator.png" alt="Shards use Orchestrator" style="width:100%"/>
 </a>

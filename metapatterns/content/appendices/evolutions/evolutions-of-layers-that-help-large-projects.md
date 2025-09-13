@@ -15,7 +15,7 @@ The main drawback \(and benefit\) of [*Layers*]({{< relref "../../basic-metapatt
 
 ## Divide the domain layer into Services
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.png" style="outline:none">
 <img src="/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.png" alt="Layers Split Domain to Services" style="width:100%"/>
 </a>
@@ -53,7 +53,7 @@ It is very common for a system’s domain to consist of weakly interacting *boun
 
 ## Build an Event\-Driven Architecture over a Shared Database
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/Layers/Layers%20Split%20to%20Event-Driven%20Architecture.png" style="outline:none">
 <img src="/Evolutions/Layers/Layers%20Split%20to%20Event-Driven%20Architecture.png" alt="Layers Split to Event-Driven Architecture" style="width:100%"/>
 </a>
@@ -94,7 +94,7 @@ If your system has a well\-defined workflow for processing every kind of input r
 
 ## Build a Top\-Down Hierarchy
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/Layers/Layers%20to%20Hierarchy.png" style="outline:none">
 <img src="/Evolutions/Layers/Layers%20to%20Hierarchy.png" alt="Layers to Hierarchy" style="width:100%"/>
 </a>

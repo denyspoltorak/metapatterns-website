@@ -34,7 +34,7 @@ This book makes heavy use of diagrams – to the extent that it can be treated a
 
 The diagrams are *NoUML* and most of them belong to one of the following kinds:
 
-<figure style="text-align:center">
+<figure>
 <a href="/Misc/Diagrams.png" style="outline:none">
 <img src="/Misc/Diagrams.png" alt="Diagrams" style="width:100%"/>
 </a>

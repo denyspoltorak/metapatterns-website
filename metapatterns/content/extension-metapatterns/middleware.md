@@ -6,7 +6,7 @@ description = "A Middleware provides system components with means of communicati
 
 # Middleware
 
-<figure style="text-align:center">
+<figure>
 <a href="/Main/Middleware.png" style="outline:none">
 <img src="/Main/Middleware.png" alt="Middleware" style="width:100%"/>
 </a>
@@ -66,7 +66,7 @@ A more subtle drawback is that transports supported or recommended by a *Middlew
 
 Each service depends both on the *Middleware* and on the API of every service it communicates with\.
 
-<figure style="text-align:center">
+<figure>
 <a href="/Dependencies/Middleware.png" style="outline:none">
 <img src="/Dependencies/Middleware.png" alt="Middleware" style="width:100%"/>
 </a>
@@ -91,7 +91,7 @@ You may decide to use an [*Anticorruption Layer*]({{< relref "../extension-metap
 
 ### Relations
 
-<figure style="text-align:center">
+<figure>
 <a href="/Relations/Middleware.png" style="outline:none">
 <img src="/Relations/Middleware.png" alt="Middleware" style="width:100%"/>
 </a>
@@ -151,7 +151,7 @@ If the messages are stored indefinitely, the *Middleware* becomes a *Persistent*
 
 ### By structure \(Microkernel, Mesh, Broker\)
 
-<figure style="text-align:center">
+<figure>
 <a href="/Misc/Middleware.png" style="outline:none">
 <img src="/Misc/Middleware.png" alt="Middleware" style="width:100%"/>
 </a>
@@ -172,7 +172,7 @@ There are several patterns which extend *Middleware* with other functions:
 
 ### Message Bus
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/2/Message%20Bus.png" style="outline:none">
 <img src="/Variants/2/Message%20Bus.png" alt="Message Bus" style="width:100%"/>
 </a>
@@ -182,7 +182,7 @@ A *Message Bus* \[[EIP]({{< relref "../appendices/books-referenced.md#eip" >}})\
 
 ### Service Mesh
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/1/Microservices.png" style="outline:none">
 <img src="/Variants/1/Microservices.png" alt="Microservices" style="width:100%"/>
 </a>
@@ -194,7 +194,7 @@ The internals of [*Service Mesh*]({{< relref "../implementation-metapatterns/mes
 
 ### Event Mediator
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/2/Event%20Mediator.png" style="outline:none">
 <img src="/Variants/2/Event%20Mediator.png" alt="Event Mediator" style="width:100%"/>
 </a>
@@ -206,7 +206,7 @@ Slightly more details on the *Event Mediator* are [provided in the *Orchestrator
 
 ### Persistent Event Log, Shared Event Store
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/2/Middleware%20-%20Shared%20Event%20Store.png" style="outline:none">
 <img src="/Variants/2/Middleware%20-%20Shared%20Event%20Store.png" alt="Middleware - Shared Event Store" style="width:100%"/>
 </a>
@@ -218,7 +218,7 @@ This pattern is detailed in the [*Combined Component* chapter]({{< relref "../ex
 
 ### Enterprise Service Bus \(ESB\)
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/2/Enterprise%20Service%20Bus.png" style="outline:none">
 <img src="/Variants/2/Enterprise%20Service%20Bus.png" alt="Enterprise Service Bus" style="width:100%"/>
 </a>
@@ -235,7 +235,7 @@ A *Middleware* is unlikely to be removed \(though it may be replaced\) once it i
 - If the *Middleware* in use does not fit the preferred mode of communication between some of your services, there is the option to deploy a second, specialized *Middleware*\.
 
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/2/Middleware%20add%20Middleware.png" style="outline:none">
 <img src="/Evolutions/2/Middleware%20add%20Middleware.png" alt="Middleware add Middleware" style="width:100%"/>
 </a>
@@ -244,7 +244,7 @@ A *Middleware* is unlikely to be removed \(though it may be replaced\) once it i
 - If several existing systems need to be merged, that is accomplished by adding yet another layer of *Middleware*, resulting in a [*Bottom\-up Hierarchy*]({{< relref "../fragmented-metapatterns/hierarchy.md#bottom-up-hierarchy-bus-of-buses-network-of-networks" >}}) *\(Bus of Buses\)*\.
 
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.png" style="outline:none">
 <img src="/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.png" alt="Middleware to Bus of Buses" style="width:100%"/>
 </a>

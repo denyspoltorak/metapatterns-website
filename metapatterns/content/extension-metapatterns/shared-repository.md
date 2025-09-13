@@ -6,7 +6,7 @@ description = "A Shared Repository stores all or a part of the system's data. It
 
 # Shared Repository
 
-<figure style="text-align:center">
+<figure>
 <a href="/Main/Shared%20Repository.png" style="outline:none">
 <img src="/Main/Shared%20Repository.png" alt="Shared Repository" style="width:100%"/>
 </a>
@@ -69,7 +69,7 @@ Non\-transactional distributed databases may be very fast when colocated with th
 
 Normally, every service depends on the repository\. If the repository does not provide notifications on changes to the data, the services may need to communicate directly, in which case they will also depend on each other through [*choreography*]({{< relref "../foundations-of-software-architecture/arranging-communication/choreography.md" >}}) or *mutual* [*orchestration*]({{< relref "../foundations-of-software-architecture/arranging-communication/orchestration.md" >}})\.
 
-<figure style="text-align:center">
+<figure>
 <a href="/Dependencies/SharedRepository-1.png" style="outline:none">
 <img src="/Dependencies/SharedRepository-1.png" alt="SharedRepository-1" style="width:100%"/>
 </a>
@@ -77,7 +77,7 @@ Normally, every service depends on the repository\. If the repository does not p
 
 The dependency on repository technology and a data schema is dangerous for long\-running projects as both of them may need to change sooner or later\. Decoupling the code from the data storage is done with [yet another layer of indirection](https://en.wikipedia.org/wiki/Fundamental_theorem_of_software_engineering) which is called a [*Database Abstraction Layer*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) \(*DAL*\), a *Database Access Layer* \[[POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\], or a *Data Mapper* \[[PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\]\. The DAL, which translates between the data schema and database’s API on one side and the business logic’s SPI on the other side, may reside inside each service or wrap the database:
 
-<figure style="text-align:center">
+<figure>
 <a href="/Dependencies/SharedRepository-2.png" style="outline:none">
 <img src="/Dependencies/SharedRepository-2.png" alt="SharedRepository-2" style="width:100%"/>
 </a>
@@ -104,7 +104,7 @@ Still, the DAL does not remove shared dependencies and only adds some flexibilit
 
 ### Relations
 
-<figure style="text-align:center">
+<figure>
 <a href="/Relations/Shared%20Repository.png" style="outline:none">
 <img src="/Relations/Shared%20Repository.png" alt="Shared Repository" style="width:100%"/>
 </a>
@@ -126,7 +126,7 @@ A *Shared Repository* may provide a generic interface \(e\.g\. SQL\) or a custom
 
 ### Shared Database, Integration Database, Data Domain, Database of Service\-Based Architecture
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/2/Shared%20Database.png" style="outline:none">
 <img src="/Variants/2/Shared%20Database.png" alt="Shared Database" style="width:93%"/>
 </a>
@@ -136,7 +136,7 @@ A *Shared Repository* may provide a generic interface \(e\.g\. SQL\) or a custom
 
 ### Blackboard
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/2/Blackboard.png" style="outline:none">
 <img src="/Variants/2/Blackboard.png" alt="Blackboard" style="width:100%"/>
 </a>
@@ -148,7 +148,7 @@ Examples: several use cases are [mentioned on Wikipedia](https://en.wikipedia.or
 
 ### Data Grid of Space\-Based Architecture \(SBA\), Replicated Cache, Distributed Cache
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/2/Data%20Grid.png" style="outline:none">
 <img src="/Variants/2/Data%20Grid.png" alt="Data Grid" style="width:100%"/>
 </a>
@@ -177,7 +177,7 @@ The drawbacks of this architecture include:
 
 ### Shared Memory
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/2/Shared%20memory.png" style="outline:none">
 <img src="/Variants/2/Shared%20memory.png" alt="Shared memory" style="width:100%"/>
 </a>
@@ -187,7 +187,7 @@ Several actors \(processes, modules, device drivers\) communicate through one or
 
 ### Shared File System
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/2/Shared%20files.png" style="outline:none">
 <img src="/Variants/2/Shared%20files.png" alt="Shared files" style="width:100%"/>
 </a>
@@ -197,7 +197,7 @@ As a file system is a kind of shared dictionary, writing and reading files can b
 
 ### Persistent Event Log, Shared Event Store
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/2/Shared%20Database%20-%20Event%20Log.png" style="outline:none">
 <img src="/Variants/2/Shared%20Database%20-%20Event%20Log.png" alt="Shared Database - Event Log" style="width:95%"/>
 </a>
@@ -209,7 +209,7 @@ More details are [available]({{< relref "../extension-metapatterns/combined-comp
 
 ### \(inexact\) Stamp Coupling
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/2/Stamp%20Coupling.png" style="outline:none">
 <img src="/Variants/2/Stamp%20Coupling.png" alt="Stamp Coupling" style="width:100%"/>
 </a>
@@ -226,7 +226,7 @@ Once a database appears, it is unlikely to go away\. I see the [following evolut
 - [Shard]({{< relref "../basic-metapatterns/shards.md" >}}) the database\.
 
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/2/Shared%20Database_%20Shard.png" style="outline:none">
 <img src="/Evolutions/2/Shared%20Database_%20Shard.png" alt="Shared Database: Shard" style="width:100%"/>
 </a>
@@ -235,7 +235,7 @@ Once a database appears, it is unlikely to go away\. I see the [following evolut
 - Use [*Space\-Based Architecture*]({{< relref "../implementation-metapatterns/mesh.md#space-based-architecture" >}}) for dynamic scalability\.
 
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/2/Shared%20Database%20to%20Space-Based%20Architecture.png" style="outline:none">
 <img src="/Evolutions/2/Shared%20Database%20to%20Space-Based%20Architecture.png" alt="Shared Database to Space-Based Architecture" style="width:100%"/>
 </a>
@@ -244,7 +244,7 @@ Once a database appears, it is unlikely to go away\. I see the [following evolut
 - Divide the data into private databases\.
 
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/2/Shared%20Database%20to%20Services.png" style="outline:none">
 <img src="/Evolutions/2/Shared%20Database%20to%20Services.png" alt="Shared Database to Services" style="width:100%"/>
 </a>
@@ -253,7 +253,7 @@ Once a database appears, it is unlikely to go away\. I see the [following evolut
 - Deploy specialized databases \([*Polyglot Persistence*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md" >}})\)\.
 
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/2/Shared%20Database%20to%20Polyglot%20Persistence.png" style="outline:none">
 <img src="/Evolutions/2/Shared%20Database%20to%20Polyglot%20Persistence.png" alt="Shared Database to Polyglot Persistence" style="width:100%"/>
 </a>

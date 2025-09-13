@@ -57,7 +57,7 @@ Inventing a generic coordinate system to fit any pattern’s representation, fro
 
 We’ll draw the abstractness axis vertically with higher\-level modules positioned towards the upper side of the diagram, the subdomain axis horizontally, and sharding diagonally\. Here is an \(arbitrary\) example of such a diagram:
 
-<figure style="text-align:center">
+<figure>
 <a href="/Intro/CQRS%20with%20notes.png" style="outline:none">
 <img src="/Intro/CQRS%20with%20notes.png" alt="CQRS with notes" style="width:100%"/>
 </a>
@@ -77,7 +77,7 @@ Godspeed\!
 
 Let’s consider the following structure:
 
-<figure style="text-align:center">
+<figure>
 <a href="/Intro/Example-Undefined.png" style="outline:none">
 <img src="/Intro/Example-Undefined.png" alt="Example-Undefined" style="width:93%"/>
 </a>
@@ -90,7 +90,7 @@ It features two \(or more in real life\) high\-level modules that communicate wi
 - [*Model\-View\-Controller*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}}) – a platform\-agnostic business logic with customized means of input and output\.
 
 
-<figure style="text-align:center">
+<figure>
 <a href="/Intro/Example-Defined.png" style="outline:none">
 <img src="/Intro/Example-Defined.png" alt="Example-Defined" style="width:100%"/>
 </a>

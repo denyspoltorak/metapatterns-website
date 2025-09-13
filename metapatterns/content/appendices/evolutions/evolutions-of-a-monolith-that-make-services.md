@@ -14,7 +14,7 @@ The final major drawback of [*Monolith*]({{< relref "../../basic-metapatterns/mo
 - Some domains allow for sequential [data processing]({{< relref "../../foundations-of-software-architecture/four-kinds-of-software.md#streaming-continuous-raw-data-input" >}}) best described by [*Pipelines*]({{< relref "../../basic-metapatterns/pipeline.md" >}})\.
 
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/Monolith/Monolith_%20Services%20and%20Pipeline.png" style="outline:none">
 <img src="/Evolutions/Monolith/Monolith_%20Services%20and%20Pipeline.png" alt="Monolith: Services and Pipeline" style="width:100%"/>
 </a>
@@ -22,7 +22,7 @@ The final major drawback of [*Monolith*]({{< relref "../../basic-metapatterns/mo
 
 ## Divide into Services
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/Monolith/Monolith%20to%20Services.png" style="outline:none">
 <img src="/Evolutions/Monolith/Monolith%20to%20Services.png" alt="Monolith to Services" style="width:100%"/>
 </a>
@@ -57,7 +57,7 @@ Splitting a *Monolith* into *Services* by subdomain [is risky in the early stage
 
 ## Add or split a service
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/Monolith/Monolith%20Split%20Service.png" style="outline:none">
 <img src="/Evolutions/Monolith/Monolith%20Split%20Service.png" alt="Monolith Split Service" style="width:100%"/>
 </a>
@@ -97,7 +97,7 @@ If you are not adding a new feature but need to change an old one – use the ch
 
 ## Divide into a Pipeline
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/Monolith/Monolith%20to%20Pipeline.png" style="outline:none">
 <img src="/Evolutions/Monolith/Monolith%20to%20Pipeline.png" alt="Monolith to Pipeline" style="width:100%"/>
 </a>
@@ -140,7 +140,7 @@ Systems of [*Services*]({{< relref "../../basic-metapatterns/services.md" >}}) o
 - Finally, there are [*Combined Components*]({{< relref "../../extension-metapatterns/combined-component.md" >}}) that implement two or more of the above patterns in a single framework\. 
 
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/Monolith/Monolith%20to%20Services%20-%20Further%201.png" style="outline:none">
 <img src="/Evolutions/Monolith/Monolith%20to%20Services%20-%20Further%201.png" alt="Monolith to Services - Further 1" style="width:100%"/>
 </a>
@@ -154,7 +154,7 @@ Each service, being a smaller *Monolith*, may evolve on its own\. Most of the ev
 - [*Hexagonal Service*]({{< relref "../../basic-metapatterns/services.md#hexagonal-service" >}}) to escape vendor lock\-in\.
 
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/Monolith/Monolith%20to%20Services%20-%20Further%202.png" style="outline:none">
 <img src="/Evolutions/Monolith/Monolith%20to%20Services%20-%20Further%202.png" alt="Monolith to Services - Further 2" style="width:100%"/>
 </a>

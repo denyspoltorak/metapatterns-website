@@ -13,7 +13,7 @@ Not all the layered architectures are equally layered\. A [*Monolith*]({{< relre
 - Implementing an [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) on top of your system may improve programming experience and runtime performance for your clients\.
 
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/Layers/Layers%20to%20Layers.png" style="outline:none">
 <img src="/Evolutions/Layers/Layers%20to%20Layers.png" alt="Layers to Layers" style="width:100%"/>
 </a>
@@ -26,7 +26,7 @@ It is also common to:
 
 ## Split the business logic into two layers
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/Layers/Layers%20Split%20in%20Two.png" style="outline:none">
 <img src="/Evolutions/Layers/Layers%20Split%20in%20Two.png" alt="Layers Split in Two" style="width:100%"/>
 </a>

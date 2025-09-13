@@ -6,7 +6,7 @@ description = "A pipeline is a chain of components that implement individual ste
 
 # Pipeline
 
-<figure style="text-align:center">
+<figure>
 <a href="/Main/Pipeline.png" style="outline:none">
 <img src="/Main/Pipeline.png" alt="Pipeline" style="width:100%"/>
 </a>
@@ -64,7 +64,7 @@ There are three ways to build communication in a pipeline, each with different d
 - Services may share a *message schema*, in which case all of them depend on it, not on each other\. That allows for reshuffling the services\.
 
 
-<figure style="text-align:center">
+<figure>
 <a href="/Dependencies/Pipeline.png" style="outline:none">
 <img src="/Dependencies/Pipeline.png" alt="Pipeline" style="width:100%"/>
 </a>
@@ -117,7 +117,7 @@ Such a variety of options enables the use of pipelines in a wide range of domain
 
 ### Pipes and Filters, Workflow System
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/1/Pipes%20and%20Filters.png" style="outline:none">
 <img src="/Variants/1/Pipes%20and%20Filters.png" alt="Pipes and Filters" style="width:100%"/>
 </a>
@@ -133,7 +133,7 @@ Examples: Unix shell pipes, processing of video streams, many types of hardware\
 
 ### Choreographed \(Broker Topology\) Event\-Driven Architecture \(EDA\), Event Collaboration
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/1/Event-Driven%20Architecture.png" style="outline:none">
 <img src="/Variants/1/Event-Driven%20Architecture.png" alt="Event-Driven Architecture" style="width:100%"/>
 </a>
@@ -166,7 +166,7 @@ Examples: high performance web services\.
 
 ### Data Mesh
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/1/Data%20Mesh.png" style="outline:none">
 <img src="/Variants/1/Data%20Mesh.png" alt="Data Mesh" style="width:100%"/>
 </a>
@@ -187,7 +187,7 @@ There is a pragmatic option to allow an operational service to resort to the ana
 
 ### Function as a Service \(FaaS\), Nanoservices \(pipelined\)
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/1/Nanoservices.png" style="outline:none">
 <img src="/Variants/1/Nanoservices.png" alt="Nanoservices" style="width:100%"/>
 </a>
@@ -206,7 +206,7 @@ There are a couple of [pipeline\-specific evolutions]({{< relref "../appendices/
 - The first service of the *Pipeline* can be promoted to a [*Front Controller*]({{< relref "../extension-metapatterns/combined-component.md#front-controller" >}}) \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\] which tracks the status updates for every request it handles\.
 
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png" style="outline:none">
 <img src="/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png" alt="Pipeline promote Front Controller" style="width:100%"/>
 </a>
@@ -215,7 +215,7 @@ There are a couple of [pipeline\-specific evolutions]({{< relref "../appendices/
 - Adding an [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) turns a *Pipeline* into normal [*Services*]({{< relref "../basic-metapatterns/services.md" >}})\. As the high\-level business logic moves into the orchestration layer, the filters don’t need to interact directly, therefore the inter\-filter communication channels disappear and the system becomes identical to *Orchestrated Services*\.
 
 
-<figure style="text-align:center">
+<figure>
 <a href="/Evolutions/Services/Pipeline%20use%20Orchestrator.png" style="outline:none">
 <img src="/Evolutions/Services/Pipeline%20use%20Orchestrator.png" alt="Pipeline use Orchestrator" style="width:100%"/>
 </a>

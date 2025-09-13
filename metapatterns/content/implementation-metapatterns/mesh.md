@@ -6,7 +6,7 @@ description = "A Mesh or Grid is a virtual layer of interconnected components wh
 
 # Mesh
 
-<figure style="text-align:center">
+<figure>
 <a href="/Main/Mesh.png" style="outline:none">
 <img src="/Main/Mesh.png" alt="Mesh" style="width:100%"/>
 </a>
@@ -114,7 +114,7 @@ The connected *nodes* of a *Mesh* may be:
 
 ### Peer\-to\-Peer Networks
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/4/P2P.png" style="outline:none">
 <img src="/Variants/4/P2P.png" alt="P2P" style="width:100%"/>
 </a>
@@ -126,7 +126,7 @@ Examples: torrent, onion routing \(Tor\), blockchain\.
 
 ### Leaf\-Spine Architecture, Spine\-Leaf Architecture
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/4/Leaf-Spine.png" style="outline:none">
 <img src="/Variants/4/Leaf-Spine.png" alt="Leaf-Spine" style="width:81%"/>
 </a>
@@ -136,7 +136,7 @@ This [datacenter network architecture](https://www.geeksforgeeks.org/spine-leaf-
 
 ### Actors
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/4/Actors.png" style="outline:none">
 <img src="/Variants/4/Actors.png" alt="Actors" style="width:100%"/>
 </a>
@@ -146,7 +146,7 @@ A system of *Actors* may be classified as a *fully connected Mesh* with the acto
 
 ### Service Mesh
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/4/Service%20Mesh.png" style="outline:none">
 <img src="/Variants/4/Service%20Mesh.png" alt="Service Mesh" style="width:100%"/>
 </a>
@@ -167,7 +167,7 @@ Ready\-to\-use *Service Mesh* frameworks are popular with the *Microservices* ar
 
 ### Space\-Based Architecture
 
-<figure style="text-align:center">
+<figure>
 <a href="/Variants/4/Space-Based%20Architecture.png" style="outline:none">
 <img src="/Variants/4/Space-Based%20Architecture.png" alt="Space-Based Architecture" style="width:100%"/>
 </a>

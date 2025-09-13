@@ -11,7 +11,7 @@ These patterns extend *Services*, *Shards*, or even a *Monolith* with a layer th
 
 ### [Middleware]({{< relref "../extension-metapatterns/middleware.md" >}})
 
-<figure style="text-align:center">
+<figure>
 <a href="/Contents/Middleware.png" style="outline:none">
 <img src="/Contents/Middleware.png" alt="Middleware" style="width:100%"/>
 </a>
@@ -23,7 +23,7 @@ These patterns extend *Services*, *Shards*, or even a *Monolith* with a layer th
 
 ### [Shared Repository]({{< relref "../extension-metapatterns/shared-repository.md" >}})
 
-<figure style="text-align:center">
+<figure>
 <a href="/Contents/Shared%20Repository.png" style="outline:none">
 <img src="/Contents/Shared%20Repository.png" alt="Shared Repository" style="width:100%"/>
 </a>
@@ -35,7 +35,7 @@ A *Shared Repository* stores the system’s data, maintains its integrity throug
 
 ### [Proxy]({{< relref "../extension-metapatterns/proxy.md" >}})
 
-<figure style="text-align:center">
+<figure>
 <a href="/Contents/Proxy.png" style="outline:none">
 <img src="/Contents/Proxy.png" alt="Proxy" style="width:100%"/>
 </a>
@@ -47,7 +47,7 @@ A *Proxy* mediates between a system and its clients, transparently taking care o
 
 ### [Orchestrator]({{< relref "../extension-metapatterns/orchestrator.md" >}})
 
-<figure style="text-align:center">
+<figure>
 <a href="/Contents/Orchestrator.png" style="outline:none">
 <img src="/Contents/Orchestrator.png" alt="Orchestrator" style="width:100%"/>
 </a>

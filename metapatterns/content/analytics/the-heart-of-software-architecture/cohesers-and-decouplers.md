@@ -12,7 +12,7 @@ Any project carries many constraints \(*forces*\), some of which want for certai
 
 Let’s explore how a force influences the structure of a project\. Consider the *clarity of code* which determines *development velocity*:
 
-<figure style="text-align:center">
+<figure>
 <a href="/Heart/Pain.png" style="outline:none">
 <img src="/Heart/Pain.png" alt="Pain" style="width:100%"/>
 </a>
@@ -32,7 +32,7 @@ As we see from the example above, code clarity favors *cohesiveness* \(everythin
 
 Such a behavior is common for forces and, by the way, it is also the case with editing sorted data\. Array is the most efficient data structure for a small collection \(up to about 1 000 elements\) while anything larger requires a hash map or [B\-tree](https://en.wikipedia.org/wiki/B-tree) \(hierarchy of arrays\)\. Just as a database splits oversized arrays because they are too slow to edit, the human mind is inefficient with large collections of similar items and wants them to be restructured into a hierarchy\. When we look into a service, we see only the classes it contains\. When we examine a class, we check the list of its methods, not those of surrounding classes\. And when we open a method, we try to understand how its lines of code work together\. This is the way humans fight complexity – by selecting a segment at one level of abstraction and ignoring everything around\.
 
-<figure style="text-align:center">
+<figure>
 <a href="/Heart/Hierarchy.png" style="outline:none">
 <img src="/Heart/Hierarchy.png" alt="Hierarchy" style="width:100%"/>
 </a>
@@ -71,7 +71,7 @@ And there are forces that try to keep your code fragmented:
 
 ## Expansion and contraction
 
-<figure style="text-align:center">
+<figure>
 <a href="/Heart/Lifecycle.png" style="outline:none">
 <img src="/Heart/Lifecycle.png" alt="Lifecycle" style="width:100%"/>
 </a>
