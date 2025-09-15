@@ -136,6 +136,3 @@ Now let’s examine each of these approaches in depth:
 | --- | --- | --- |
 
 </nav>
-
-
-

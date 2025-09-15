@@ -43,7 +43,6 @@ Applicable to:
 | A specialized team and technology per client may be employed | More work for the DevOps team |
 | The multiple *Orchestrators* are smaller and more cohesive than the original universal one |  |
 
-
 <ins>References:</ins> The [original article](https://samnewman.io/patterns/architectural/bff/), a [smaller one](https://learn.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends) from Microsoft and an [excerpt](https://microservices.io/patterns/apigateway.html) from \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\]\. Here are [reference diagrams](https://github.com/wso2/reference-architecture/blob/master/api-driven-microservice-architecture.md) from WSO2 \(notice multiple *Microgateway* \+ *Integration Microservice* pairs\)\.
 
 If some aspect\(s\) of serving our system’s clients strongly vary by client type \(e\.g\. OLAP vs OLTP, user vs admin, buyer vs seller vs customer support\), it makes sense to use a dedicated component \(the titular *Backend for Frontend* or *BFF*\) per client type to encapsulate the variation\. Protocol variations call for multiple [*Proxies*]({{< relref "../extension-metapatterns/proxy.md" >}}), workflow variations – for several [*Orchestrators*]({{< relref "../extension-metapatterns/orchestrator.md" >}}), both coming together – for [*API Gateways*]({{< relref "../extension-metapatterns/combined-component.md#api-gateway" >}}) or *Proxy \+ Orchestrator* pairs\. It is even possible to vary the *BFF*’s programming language on a per client basis\. The drawback is that once the clients get their dedicated *BFFs* it becomes hard to share a common functionality between them, unless you are willing to add yet another new utility [*service*]({{< relref "../basic-metapatterns/services.md" >}}) or [*layer*]({{< relref "../basic-metapatterns/layers.md" >}}) that can be used by each of them \(and that will strongly smell of [*SOA*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}})\)\.
@@ -172,6 +171,3 @@ Clients vary in access mode \(protocol\) and workflow and there is a third\-part
 | --- | --- | --- |
 
 </nav>
-
-
-

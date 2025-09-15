@@ -29,7 +29,6 @@ description = "Plugins let a client customize select aspects of a system's behav
 | Platform\-specific optimizations are supported | Designing good plugin APIs is hard |
 | The custom pieces may be written in a different programming language or DSL |  |
 
-
 <ins>References:</ins> \[[SAP]({{< relref "../appendices/books-referenced.md#sap" >}})\] and \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] [mistakenly]({{< relref "../analytics/ambiguous-patterns.md#microkernel" >}}) call this pattern *Microkernel* and dedicate chapters to it\.
 
 Most systems require some extent of customizability all the way from the basic codec selection by a video player to the screens full of tools and wizards unlocked once you upgrade your subscription plan\. This is achieved by keeping the *core* functionality separate from its extensions, which are developed by either your team or external enthusiasts to modify behavior of the system\. The cost of flexibility is paid in complexity of design – the need to predict which aspects should be customizable and which APIs are good for known \(and unknown\) uses by the extensions\. Heavy communication between the core and *plugins* negatively impacts performance\.
@@ -167,6 +166,3 @@ Plugins may be:
 | --- | --- | --- |
 
 </nav>
-
-
-

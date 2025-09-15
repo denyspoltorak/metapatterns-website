@@ -107,6 +107,3 @@ This covers a brief summary of possible changes to the architecture under review
 | --- | --- | --- |
 
 </nav>
-
-
-

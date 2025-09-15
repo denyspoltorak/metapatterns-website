@@ -31,6 +31,3 @@ This book was made possible by many people who sacrificed their happy years, the
 | --- | --- | --- |
 
 </nav>
-
-
-

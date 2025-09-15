@@ -548,6 +548,3 @@ description = "The index of patterns described in the Architectural Metapatterns
 | --- | --- | --- |
 
 </nav>
-
-
-

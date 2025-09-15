@@ -44,7 +44,6 @@ Examples:
 | The components can be reused | Error handling may be non\-trivial |
 | The components can be tested in isolation |  |
 
-
 <ins>References:</ins> *Pipes and Filters* are defined in \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}})\] and are the foundation for part 3 \(Derived Data\) of \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\]\. \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] has an overview of all kinds of *Pipelines* in general while \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] has a chapter on *Event\-Driven Architecture*\. \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\] is dedicated to *Event\-Driven Architecture*\. The \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\] chapter on *Data Mesh* was written by the pattern’s author\. \[[EIP]({{< relref "../appendices/books-referenced.md#eip" >}})\] is a whole book about distributed *Pipelines*\.
 
 *Pipeline* is a variation of [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) with no user sessions \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\], a unidirectional data flow, and often a single message type per communication channel \(which thus becomes a *data stream*\)\. As processed data does not return to the module that requested processing, there is no common concept of request ownership or high\-level \(integration, application\) business logic, which is instead defined by the graph of connections between the components\. On the one hand, as all the services involved are equal and know nothing about each other \(their interfaces are often limited to a single entry point\), it is very easy to reshape the overall algorithm\. On the other hand, the system lacks the abstractness dimension, thus any new use case builds a separate pipeline which may easily turn the architecture into a mess of thousands of intrinsically interrelated pieces when the number of scenarios grows\. Moreover, error handling requires dedicated pipelines that roll back changes to the system’s state which had been committed by earlier steps of a failed use case\.
@@ -231,6 +230,3 @@ A *Pipeline* represents a data processing algorithm as a sequence of steps\. It 
 | --- | --- | --- |
 
 </nav>
-
-
-

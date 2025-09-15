@@ -107,6 +107,3 @@ The main business logic will communicate with all the external components throug
 | --- | --- | --- |
 
 </nav>
-
-
-

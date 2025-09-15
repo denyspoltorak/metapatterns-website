@@ -104,6 +104,3 @@ It’s that simple and stupid\. We can classify architectural patterns\.
 | --- | --- | --- |
 
 </nav>
-
-
-

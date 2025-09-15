@@ -29,14 +29,9 @@ As integration is not unique to distributed systems – it is present even in sm
 
 </nav>
 
-
-
 <nav>
 
 | \<\< [Four kinds of software]({{< relref "../../foundations-of-software-architecture/four-kinds-of-software.md" >}}) | ^ [Foundations of software architecture]({{< relref "../../foundations-of-software-architecture/_index.md" >}}) ^ | [Programming and architectural paradigms]({{< relref "../../foundations-of-software-architecture/arranging-communication/programming-and-architectural-paradigms.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>
-
-
-

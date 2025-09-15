@@ -155,6 +155,3 @@ Software architecture lies lifeless in my hands, devoid of its magical colors, *
 | --- | --- | --- |
 
 </nav>
-
-
-

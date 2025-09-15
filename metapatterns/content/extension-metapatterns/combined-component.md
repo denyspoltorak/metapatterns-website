@@ -32,7 +32,6 @@ description = "A Combined Component implements two or more of the following exte
 | Improved latency | May not be flexible enough for your needs |
 | Less DevOps effort | May become overcomplicated |
 
-
 <ins>References:</ins> Mostly \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\], [Microsoft](https://learn.microsoft.com/en-us/azure/architecture/microservices/design/gateway) on *API Gateway*, \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\] on *Shared Event Store*\.
 
 Two or three metapatterns may be blended together into a *Combined Component* which is usually a ready\-to\-use framework which tries to cover \(and subtly create\) as many project needs as possible to make sure it will never be dropped from the project\. On one hand, such a framework may provide a significant boost to the speed of development\. On the other – it is going to force you into its own area of applicability and keep you bound within it\.
@@ -199,6 +198,3 @@ A *Combined Component* is a ready\-to\-use framework that may speed up developme
 | --- | --- | --- |
 
 </nav>
-
-
-

@@ -63,6 +63,3 @@ It is possible that your system has different kinds of users, e\.g\. buyers, sel
 | --- | --- | --- |
 
 </nav>
-
-
-

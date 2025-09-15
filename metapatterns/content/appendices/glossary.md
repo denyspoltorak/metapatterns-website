@@ -291,6 +291,3 @@ description = "The glossary of terms used throughout the Architectural Metapatte
 | --- | --- | --- |
 
 </nav>
-
-
-

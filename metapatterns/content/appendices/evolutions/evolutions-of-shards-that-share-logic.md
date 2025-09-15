@@ -114,6 +114,3 @@ When a high\-level scenario uses multiple shards \([*Scatter\-Gather* and *MapRe
 | --- | --- | --- |
 
 </nav>
-
-
-

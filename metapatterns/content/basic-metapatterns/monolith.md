@@ -48,7 +48,6 @@ By mode of action:
 | Low resource consumption | Lacks support for conflicting forces |
 | The system’s state is self\-consistent | Any failure crashes the entire system |
 
-
 <ins>References:</ins> [Big Ball of Mud](http://www.laputan.org/mud/) for a philosophical discussion, [my article](https://itnext.io/introduction-to-software-architecture-with-actors-part-2-on-handling-messages-940c62cb06dc) and \[[POSA2]({{< relref "../appendices/books-referenced.md#posa2" >}})\] for subtypes of *Monolith*, Martin Fowler’s discussion on [starting development with *Monolith*](https://martinfowler.com/bliki/MonolithFirst.html), \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] for the [definition of *monolithic hell*](https://livebook.manning.com/book/microservices-patterns/chapter-1/25) and a post describing the [first\-hand experience of it](https://news.ycombinator.com/item?id=18442941)\.
 
 We distance ourselves from the [systems architecture’s definition]({{< relref "../analytics/ambiguous-patterns.md#monolith" >}}) of *Monolith* as a single unit of deployment because our main focus lies with the internal structure of systems\. Instead, we will use the old definition of a *monolithic* application as a cohesive lump of code containing no discernible components \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}}), [POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}})\]\.
@@ -414,6 +413,3 @@ A *Monolith* is an unstructured application\. It is the best architecture for ra
 | --- | --- | --- |
 
 </nav>
-
-
-

@@ -131,6 +131,3 @@ Any moral? There is one, even a few\.
 | --- | --- | --- |
 
 </nav>
-
-
-

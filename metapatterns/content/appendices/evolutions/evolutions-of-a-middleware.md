@@ -72,6 +72,3 @@ If we cannot change the way each subsystem’s services use its *Middleware*, we
 | --- | --- | --- |
 
 </nav>
-
-
-

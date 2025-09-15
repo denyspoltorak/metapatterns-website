@@ -71,6 +71,3 @@ Which shows that the principles of software architecture are deeper than the [CQ
 | --- | --- | --- |
 
 </nav>
-
-
-

@@ -263,6 +263,3 @@ Each backend depends on its database \(its technology and schema\)\. The OLTP to
 | --- | --- | --- |
 
 </nav>
-
-
-

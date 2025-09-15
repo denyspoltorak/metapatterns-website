@@ -122,6 +122,3 @@ Orchestration represents use cases as a code, allowing for an orchestrated syste
 | --- | --- | --- |
 
 </nav>
-
-
-

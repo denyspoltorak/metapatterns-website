@@ -321,6 +321,3 @@ Complex real\-world software usually involves two or three of these approaches\.
 | --- | --- | --- |
 
 </nav>
-
-
-

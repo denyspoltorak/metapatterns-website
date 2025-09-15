@@ -48,7 +48,6 @@ Examples:
 | Deployment to dedicated hardware |  |
 | Layers with no business logic are reusable |  |
 
-
 <ins>References:</ins> \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}})\] and \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] discuss layered software in depth; \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] promotes the layered style; most of the architectures in Herberto Graça’s [Software Architecture Chronicles](https://herbertograca.com/2017/07/03/the-software-architecture-chronicles/) are layered\. The Wiki has a reasonably [good article](https://en.wikipedia.org/wiki/Multitier_architecture)\.
 
 *Layering* a system creates interfaces between its levels of abstractness \(high\-level use cases, lower\-level domain logic, infrastructure\) while also retaining monolithic cohesiveness within each of the levels\. That allows both for easy debugging inside each individual layer \(no need to jump into another programming language or re\-attach the debugger to a remote server\) and enough flexibility to have a dedicated development team, tools, deployment, and scaling policies for each\. Though layered code is slightly better than that of [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}), thanks to the separation of concerns, one of the upper \(business logic\) layers may nonetheless grow too large for efficient development\.
@@ -196,7 +195,6 @@ First you separate the high\-level logic from low\-level implementation details\
 | <span style="color:green">Structured code</span> | <span style="color:red">Lost opportunities for optimization</span> |
 | <span style="color:green">Two or three teams</span> |  |
 
-
 ### Asynchronous layers
 
 For the next step you may decide to take will be to isolate the layers’ execution threads and data\. The layers will communicate only through in\-process messages, which are slower than direct calls and harder to debug, but now each layer can run at its own pace – a must for interactive systems\.
@@ -206,7 +204,6 @@ For the next step you may decide to take will be to isolate the layers’ execut
 | Structured code | <span style="color:red">No</span> opportunities for optimization |
 | Two or three teams | <span style="color:red">Some troubles with debugging</span> |
 | <span style="color:green">The layers may differ in latency</span> |  |
-
 
 ### A process per layer
 
@@ -222,7 +219,6 @@ Next, you may run each layer in a separate process\. You have to devise an effic
 | <span style="color:green">Software security isolation</span> |  |
 | <span style="color:green">Software fault isolation</span> |  |
 | <span style="color:green">Limited scalability</span> |  |
-
 
 ### Distributed tiers
 
@@ -240,7 +236,6 @@ Finally, you may separate the hardware which the processes run on – going all 
 | <span style="color:green">Full</span> scalability |  |
 | <span style="color:green">Layers vary in hardware setup</span> |  |
 | <span style="color:green">Deployment close to clients</span> |  |
-
 
 ## Examples
 
@@ -458,6 +453,3 @@ There is one new evolution which modifies the upper \(*orchestration*\) layer:
 | --- | --- | --- |
 
 </nav>
-
-
-

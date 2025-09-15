@@ -37,6 +37,3 @@ That likely means that our distinction between the modes of communication is a b
 | --- | --- | --- |
 
 </nav>
-
-
-

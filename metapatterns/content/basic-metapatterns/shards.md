@@ -42,7 +42,6 @@ By state:
 | Good scalability | It’s hard to synchronize the system’s state |
 | Good performance |  |
 
-
 <ins>References:</ins> \[[POSA3]({{< relref "../appendices/books-referenced.md#posa3" >}})\] is dedicated to pooling and resource management; \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] reviews *Shards*, *Replicas* and *Stateless Instances*; \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\] covers sharding and synchronization of *Replicas* in depth; Amazon promotes full\-system sharding as [*Cell\-Based Architecture*](https://docs.aws.amazon.com/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/what-is-a-cell-based-architecture.html)\.
 
 *Shards* are multiple and, in most cases, independent instances of a component or subsystem which the pattern is applied to\. They provide scalability, often redundancy and sometimes locality, at the cost of slicing or duplicating the component’s state \(writable data\), which obviously does not affect inherently stateless components\. Most of this pattern’s specific evolutions look for a way to coordinate shards at the logic or data level\.
@@ -114,7 +113,6 @@ The first and very common advance towards scaling a component is running multipl
 | --- | --- |
 | <span style="color:green">Limited scalability</span> | <span style="color:red">More complex data access</span> |
 
-
 ### Multiple processes
 
 The next stage is running several \(usually single\-threaded\) instances of the component on the same system\. If one of them crashes, others survive\. However, sharing data among them and debugging multi\-instance scenarios becomes non\-trivial\.
@@ -123,7 +121,6 @@ The next stage is running several \(usually single\-threaded\) instances of the 
 | --- | --- |
 | Limited scalability | <span style="color:red">Non\-trivial</span> shared data access |
 | <span style="color:green">Software fault isolation</span> | <span style="color:red">Troublesome multi\-instance debugging</span> |
-
 
 ### Distributed instances
 
@@ -134,7 +131,6 @@ Finally, instances of the subsystem may be distributed over a network to achieve
 | <span style="color:green">Full</span> scalability | <span style="color:red">No</span> shared data access |
 | <span style="color:green">Full</span> fault isolation | <span style="color:red">Hard</span> multi\-instance debugging |
 |  | <span style="color:red">No good way to synchronize state of the instances</span> |
-
 
 ## Variants by state
 
@@ -320,6 +316,3 @@ Other cases are better solved by extracting the logic that manipulates multiple 
 | --- | --- | --- |
 
 </nav>
-
-
-

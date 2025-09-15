@@ -100,6 +100,3 @@ Communication through shared data is best suited for data\-centric domains \(for
 | --- | --- | --- |
 
 </nav>
-
-
-

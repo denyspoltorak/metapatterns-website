@@ -308,6 +308,3 @@ Architectural patterns have parallels in the natural world, our society and/or d
 | --- | --- | --- |
 
 </nav>
-
-
-

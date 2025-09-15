@@ -75,6 +75,3 @@ Some domains allow for hierarchical composition where the functionality is sprea
 | --- | --- | --- |
 
 </nav>
-
-
-

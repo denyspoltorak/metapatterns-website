@@ -203,6 +203,3 @@ Extract the high\-level business logic from the choreographed services or their 
 | --- | --- | --- |
 
 </nav>
-
-
-

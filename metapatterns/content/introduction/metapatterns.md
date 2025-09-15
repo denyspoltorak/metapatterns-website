@@ -124,6 +124,3 @@ Chemistry has the [periodic table](https://en.wikipedia.org/wiki/Periodic_table)
 | --- | --- | --- |
 
 </nav>
-
-
-

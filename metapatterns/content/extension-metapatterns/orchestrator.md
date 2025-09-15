@@ -61,7 +61,6 @@ By function:
 | Global use cases can be changed and deployed independently from the services | Qualities of the services become coupled to an extent |
 | Decouples the services from the system’s clients | API design is an extra step before implementation |
 
-
 <ins>References:</ins> \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] discusses orchestration in its chapters on *Event\-Driven Architecture*, *Service\-Oriented Architecture*, and *Microservices*\. \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] describes orchestration\-based *Sagas* and its Order Service acts as an *Application Service* without explicitly naming the pattern\. \[[POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\] defines several variants of *Facade*\.
 
 An *Orchestrator* takes care of global use cases \(those involving multiple services\) thus allowing each service to specialize in its own subdomain and, ideally, forget about the existence of all the other services\. This way the entire system’s high\-level logic \(which is subject to frequent changes\) is kept \(and deployed\) together, isolated from usually more complex subdomain\-specific services\. Dedicating a [layer]({{< relref "../basic-metapatterns/layers.md" >}}) to global scenarios makes them relatively easy to implement and debug, while the corresponding development team that communicates with clients shelters other narrow\-focused teams from disruptions\. The cost of employing an *Orchestrator* is both degraded performance when compared to basic [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) that rely on [*choreography*]({{< relref "../foundations-of-software-architecture/arranging-communication/choreography.md" >}}) \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}}), [MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] and some coupling of the properties of the orchestrated services as the *Orchestrator* usually treats every service in the same way\.
@@ -424,6 +423,3 @@ There is [one way to counter the first point and more than one to solve the seco
 | --- | --- | --- |
 
 </nav>
-
-
-

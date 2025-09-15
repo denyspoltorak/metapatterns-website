@@ -82,6 +82,3 @@ The first two, being true pipelines, are built around data processing and transf
 | --- | --- | --- |
 
 </nav>
-
-
-

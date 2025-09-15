@@ -80,7 +80,7 @@ If services communicate through commands, each service depends on all the direct
 </a>
 </figure>
 
-Upstream dependencies come from the [publish/subscribe](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) model where each service broadcasts notifications about what it has done to any interested subscriber\. This way of building systems engines [*Event\-Driven Architecture*]({{< relref "../../basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}}) \[[FSA]({{< relref "../../appendices/books-referenced.md#fsa" >}})\] which is used in high\-load backends\. Extending or truncating an already implemented request processing tree is as easy as adding or removing subscribers to existing events but the creation of a new event source will require changes in the downstream components\. The easy addition of downstream branches supports new customer experiences and analytical features which business is hungry for\.
+Upstream dependencies come from the [publish/subscribe](https://en.wikipedia.org/wiki/Publish–subscribe_pattern) model where each service broadcasts notifications about what it has done to any interested subscriber\. This way of building systems engines [*Event\-Driven Architecture*]({{< relref "../../basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}}) \[[FSA]({{< relref "../../appendices/books-referenced.md#fsa" >}})\] which is used in high\-load backends\. Extending or truncating an already implemented request processing tree is as easy as adding or removing subscribers to existing events but the creation of a new event source will require changes in the downstream components\. The easy addition of downstream branches supports new customer experiences and analytical features which business is hungry for\.
 
 <figure>
 <a href="/Communication/Upstream%20Dependencies.png" style="outline:none">
@@ -132,6 +132,3 @@ There is a decent [overview from Microsoft](https://learn.microsoft.com/en-us/az
 | --- | --- | --- |
 
 </nav>
-
-
-

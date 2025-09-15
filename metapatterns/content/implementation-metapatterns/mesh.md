@@ -38,7 +38,6 @@ description = "A Mesh or Grid is a virtual layer of interconnected components wh
 | Great scalability | The *Mesh* itself is very hard to debug |
 | Available off the shelf | Unreliable communication must be accounted for in the code |
 
-
 <ins>References:</ins> [Wikipedia](https://en.wikipedia.org/wiki/Network_topology#Classification) and \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\] on topology and protocols\. \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] on *Service Mesh* and *Space\-Based Architecture*\. A [long](https://buoyant.io/service-mesh-manifesto) and [short](https://www.oracle.com/cloud/cloud-native/service-mesh/what-is-a-service-mesh/) article on *Service Mesh*\.
 
 If a system is required to survive faults, all of its components must be both [*sharded*]({{< relref "../basic-metapatterns/shards.md" >}}) and interconnected, which makes a *Mesh* – a network of interacting instances \(*nodes*\)\. In most cases the lower layer of a *shard* implements connectivity while the business logic resides in its upper layer\(s\)\. Whilst the connectivity component tends to be identical in every node of a system, the upper components may be identical – forming [*Shards*]({{< relref "../basic-metapatterns/shards.md" >}}), or different – forming [*Services*]({{< relref "../basic-metapatterns/services.md" >}})\.
@@ -200,6 +199,3 @@ The in\-memory data in the nodes is usually loaded from a *Persistent Database* 
 | --- | --- | --- |
 
 </nav>
-
-
-

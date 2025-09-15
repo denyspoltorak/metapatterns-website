@@ -43,7 +43,6 @@ The following combined patterns include *Middleware*:
 | Transparent scaling of components | May increase latency |
 | Available off the shelf | A generic *Middleware* may not fit specific communication needs |
 
-
 <ins>References:</ins> \[[EIP]({{< relref "../appendices/books-referenced.md#eip" >}})\] has a lot of content on the implementation of messaging *Middleware*\. \[[POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\] features a chapter on *Middleware*\. However, those books are old\. \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\] is about Kafka, but it goes too far advertising it as a [*Shared Event Store*]({{< relref "#persistent-event-log-shared-event-store" >}})\. There is also a [Wikipedia article](https://en.wikipedia.org/wiki/Middleware_(distributed_applications))\.
 
 Extracting transport into a separate layer relieves the components that implement business logic of the need to know the addresses and statuses of each other’s instances\. An industrial\-grade, third\-party *Middleware* is likely to be more stable and provide better error recovery than anything an average company can afford to implement on its own\.
@@ -260,6 +259,3 @@ A *Middleware* is a ready\-to\-use component that provides a system of services 
 | --- | --- | --- |
 
 </nav>
-
-
-

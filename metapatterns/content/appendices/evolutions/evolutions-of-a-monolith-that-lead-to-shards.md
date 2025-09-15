@@ -166,6 +166,3 @@ There are specific evolutions of [*Shards*]({{< relref "../../basic-metapatterns
 | --- | --- | --- |
 
 </nav>
-
-
-

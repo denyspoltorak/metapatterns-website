@@ -19,14 +19,9 @@ As the visible world boils down to protons and neutrons which stick together in 
 
 </nav>
 
-
-
 <nav>
 
 | \<\< [Real\-world inspirations for architectural patterns]({{< relref "../../analytics/real-world-inspirations-for-architectural-patterns.md" >}}) | ^ [Analytics]({{< relref "../../analytics/_index.md" >}}) ^ | [Cohesers and decouplers]({{< relref "../../analytics/the-heart-of-software-architecture/cohesers-and-decouplers.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>
-
-
-

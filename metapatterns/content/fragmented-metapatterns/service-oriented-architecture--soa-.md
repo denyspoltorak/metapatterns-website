@@ -37,7 +37,6 @@ description = "Service-Oriented Architecture is an application of object-oriente
 | Deployment to dedicated hardware | Very high DevOps complexity |
 | Fine\-grained scaling | The teams are highly interdependent |
 
-
 <ins>References:</ins> \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] has a chapter on Orchestration\-Driven \(Enterprise\) Service\-Oriented Architecture\. \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] mentions Distributed Monolith\. There is also much \(though somewhat conflicting\) content over the Web\.
 
 *Service\-Oriented Architecture* looks like the application of modular or object\-oriented design followed by distribution of the resulting components over a network\. The system usually contains three \(rarely four\) [*layers*]({{< relref "../basic-metapatterns/layers.md" >}}) of [*services*]({{< relref "../basic-metapatterns/services.md" >}}) where every service has access to all the services below it \(and sometimes some within its own layer\)\. The services stay small, but as their number grows it becomes hard to keep in mind all the API methods and contracts available which a high\-level component might use\. Another issue originates from the idea of reusable components – multiple applications, written for different clients with varied workflows, require the same service to behave in \(subtly\) different ways, either causing its API to bloat or else impairing its usability \(which means that a new customized duplicate service will likely be added to the system\)\. Use cases are slow because there is much interservice communication over the network\. Teams are interdependent as any use case involves many services, each owned by a different team\. Testability is poor because there are too many moving \(and being independently updated\!\) parts\. The foundational idea of service reuse failed in practice, but its child architecture, *SOA*, still survives in historical environments\.
@@ -204,6 +203,3 @@ In any case, many of the evolutions will likely be very expensive, thus it makes
 | --- | --- | --- |
 
 </nav>
-
-
-

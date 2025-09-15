@@ -63,6 +63,3 @@ A *Mesh* consists of intercommunicating shards, each of which may host an applic
 | --- | --- | --- |
 
 </nav>
-
-
-

@@ -45,7 +45,6 @@ description = "A Shared Repository stores all or a part of the system's data. It
 | Helps saving on hardware, licenses, traffic, and administration | A single database technology may not fit the needs of all the services equally well |
 | Quick start for a project | Limits scalability |
 
-
 <ins>References:</ins> \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\] is all about databases; \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] has chapters on *Service\-Based Architecture* and *Space\-Based Architecture*; \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\] deals with *Shared Event Store\.*
 
 A *Shared Repository* builds communication in the system around its data, which is natural for [data\-centric domains]({{< relref "../foundations-of-software-architecture/arranging-communication/shared-data.md" >}}) and multiple [instances of a stateless service]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}}) and may often simplify development of a system of [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) that need to exchange data\. It covers the following concerns:
@@ -122,7 +121,7 @@ Still, the DAL does not remove shared dependencies and only adds some flexibilit
 
 *Shared Repository* is a sibling of [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}})\. While a *Middleware* assists direct communication between services \(*shared\-nothing* messaging\), a *Shared Repository* grants them indirect communication through access to an external state \(similar to *shared memory*\) which usually stores all the data for the domain\.
 
-A *Shared Repository* may provide a generic interface \(e\.g\. SQL\) or a custom API \(with a domain\-aware [*Adapter*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) / [*ORM*](https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping) for the database\)\. The *repository* can be anything ranging from a trivial OS file system or a memory block accessible from all the components to an ordinary database to a [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}})\-based, distributed [*tuple space*](https://en.wikipedia.org/wiki/Tuple_space):
+A *Shared Repository* may provide a generic interface \(e\.g\. SQL\) or a custom API \(with a domain\-aware [*Adapter*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) / [*ORM*](https://en.wikipedia.org/wiki/Object–relational_mapping) for the database\)\. The *repository* can be anything ranging from a trivial OS file system or a memory block accessible from all the components to an ordinary database to a [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}})\-based, distributed [*tuple space*](https://en.wikipedia.org/wiki/Tuple_space):
 
 ### Shared Database, Integration Database, Data Domain, Database of Service\-Based Architecture
 
@@ -269,6 +268,3 @@ A *Shared Repository* encapsulates a system’s data, allowing for [data\-centri
 | --- | --- | --- |
 
 </nav>
-
-
-

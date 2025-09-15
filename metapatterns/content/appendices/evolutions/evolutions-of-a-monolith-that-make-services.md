@@ -166,6 +166,3 @@ Each service, being a smaller *Monolith*, may evolve on its own\. Most of the ev
 | --- | --- | --- |
 
 </nav>
-
-
-

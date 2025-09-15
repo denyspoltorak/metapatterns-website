@@ -91,6 +91,3 @@ When a [*choreographed*]({{< relref "../../foundations-of-software-architecture/
 | --- | --- | --- |
 
 </nav>
-
-
-

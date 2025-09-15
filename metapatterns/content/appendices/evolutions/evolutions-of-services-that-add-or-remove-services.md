@@ -89,6 +89,3 @@ Alternatively, as domain knowledge changes \[[DDD]({{< relref "../../appendices/
 | --- | --- | --- |
 
 </nav>
-
-
-

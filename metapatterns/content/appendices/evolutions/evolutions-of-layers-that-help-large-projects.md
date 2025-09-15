@@ -129,6 +129,3 @@ Splitting the lower layers into independent components with identical interfaces
 | --- | --- | --- |
 
 </nav>
-
-
-

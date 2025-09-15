@@ -63,6 +63,3 @@ description = "The list of books which Architectural Metapatterns references."
 | --- | --- | --- |
 
 </nav>
-
-
-

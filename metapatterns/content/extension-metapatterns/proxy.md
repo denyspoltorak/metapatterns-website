@@ -60,7 +60,6 @@ See also [*Backends for Frontends*]({{< relref "../fragmented-metapatterns/backe
 | Low attack surface |  |
 | Available off the shelf |  |
 
-
 <ins>References:</ins> Half of \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] is about the use of *Proxies*\. See also: \[[POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\] on *Proxy*; [Chris Richardson](https://microservices.io/patterns/apigateway.html) and [Microsoft](https://learn.microsoft.com/en-us/azure/architecture/microservices/design/gateway) on *API Gateway*; [Martin Fowler](https://martinfowler.com/articles/gateway-pattern.html) on *Gateway*, *Facade* and *API Gateway*\.
 
 A *Proxy* stands between a \(sub\)system’s implementation and its users\. It receives a request from a client, does some pre\-processing, then forwards the request to a lower\-level component\. In other words, a *Proxy* encapsulates selected aspects of the system’s communication with its clients by serving as yet another layer of indirection\. It may also decouple the system’s internals from changes in the public protocol\. The [main functions](https://learn.microsoft.com/en-us/azure/architecture/microservices/design/gateway) of a proxy include:
@@ -363,6 +362,3 @@ As *Proxies* are usually third\-party products, there is not much [we can change
 | --- | --- | --- |
 
 </nav>
-
-
-

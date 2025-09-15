@@ -75,6 +75,3 @@ A *Pipeline* is a kind of *Services* with unidirectional flow\. Each service imp
 | --- | --- | --- |
 
 </nav>
-
-
-

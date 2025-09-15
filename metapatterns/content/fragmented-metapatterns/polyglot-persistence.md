@@ -49,7 +49,6 @@ Derived storage:
 | The databases may satisfy conflicting forces | More points of failure in the system |
 |  | Consistency is hard or slow to achieve |
 
-
 <ins>References:</ins> The [original](https://martinfowler.com/bliki/PolyglotPersistence.html) and closely related [CQRS](https://martinfowler.com/bliki/CQRS.html) articles from Martin Fowler, chapter 7 of \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\], chapter 11 of \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\] and much information dispersed all over the Web\.
 
 You can choose a dedicated technology for each kind of data or pattern of data access in your system\. That improves performance \(as each database engine is optimized for a few use cases\), distributes load between the databases, and may solve conflicts between forces \(like when you need both low latency and large storage\)\. However, you’ll likely have to hire several experts to get the best use of and to support the multiple databases\. Moreover, having your data spread over multiple databases makes it the application’s responsibility to keep the data in sync \(by implementing some kind of distributed transactions or making sure that the clients don’t get stale data\)\.
@@ -263,6 +262,3 @@ Keeping the cache consistent with the main database is the hard part\. There are
 | --- | --- | --- |
 
 </nav>
-
-
-

@@ -36,14 +36,9 @@ Duplicate and similar evolutions are omitted, and I did not write any evolutions
 
 </nav>
 
-
-
 <nav>
 
 | \<\< [Disclaimer]({{< relref "../../appendices/disclaimer.md" >}}) | ^ [Appendices]({{< relref "../../appendices/_index.md" >}}) ^ | [Evolutions of a Monolith that lead to Shards]({{< relref "../../appendices/evolutions/evolutions-of-a-monolith-that-lead-to-shards.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>
-
-
-

@@ -154,6 +154,3 @@ It is very likely that you can either use [*specialized databases*]({{< relref "
 | --- | --- | --- |
 
 </nav>
-
-
-

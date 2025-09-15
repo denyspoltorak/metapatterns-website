@@ -24,7 +24,7 @@ By structure:
 
 By direction:
 
-- Top\-Down Hierarchy / Orchestrator of Orchestrators / [Presentation\-Abstraction\-Control](https://en.wikipedia.org/wiki/Presentation%E2%80%93abstraction%E2%80%93control) \(PAC\) \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\] / [Hierarchical Model\-View\-Controller](https://herbertograca.com/2017/08/17/mvc-and-its-variants/#hierarchical-model-view-controller) \(HMVC\),
+- Top\-Down Hierarchy / Orchestrator of Orchestrators / [Presentation\-Abstraction\-Control](https://en.wikipedia.org/wiki/Presentation–abstraction–control) \(PAC\) \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\] / [Hierarchical Model\-View\-Controller](https://herbertograca.com/2017/08/17/mvc-and-its-variants/#hierarchical-model-view-controller) \(HMVC\),
 - Bottom\-Up Hierarchy / Bus of Buses / Network of Networks,
 - In\-Depth Hierarchy / [Cell\-Based \(Microservice\) Architecture](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md) \(WSO2 version\) / [Segmented Microservice Architecture](https://github.com/wso2/reference-architecture/blob/master/api-driven-microservice-architecture.md) / Services of Services / Clusters of Services \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\]\.
 
@@ -39,7 +39,6 @@ By direction:
 | Supports multiple development teams and technologies | Poor latency for global use cases |
 | Components may vary in qualities | Operational complexity |
 | Low\-level components are easy to replace | Slow start of the project |
-
 
 <ins>References:</ins> None good I know of\.
 
@@ -138,7 +137,7 @@ Example: an intrusion alarm logic may need to discern between cat\-affected IR s
 
 In the most common case *Hierarchy* is applied to business logic to build a layered system which grows from a single generic high\-level root into a swarm of specialized low\-level pieces\. The most obvious applications are protocol parsers, decision trees, [IIoT](https://en.wikipedia.org/wiki/Industrial_internet_of_things) \(e\.g\. a fire alarm system of a building\), and [modern automotive](https://semiengineering.com/managing-todays-advanced-vehicle-networks-design-challenges/) networks\. A marketplace that allows for customized search and marketing algorithms within each category of its goods may also be powered by a hierarchy of category\-specific services\.
 
-[*Presentation\-Abstraction\-Control*](https://en.wikipedia.org/wiki/Presentation%E2%80%93abstraction%E2%80%93control) \(*PAC*\) \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\] applies *Top\-Down Hierarchy* to a user\-facing application, providing each of the resulting [*layered*]({{< relref "../basic-metapatterns/layers.md" >}}) nodes with its own widget \(*presentation*\) on the UI screen \(which is the *presentation* of the root node\)\. *Controls* are responsible for inter\-node communication and integration logic, while domain logic and data reside in *abstractions*\.
+[*Presentation\-Abstraction\-Control*](https://en.wikipedia.org/wiki/Presentation–abstraction–control) \(*PAC*\) \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\] applies *Top\-Down Hierarchy* to a user\-facing application, providing each of the resulting [*layered*]({{< relref "../basic-metapatterns/layers.md" >}}) nodes with its own widget \(*presentation*\) on the UI screen \(which is the *presentation* of the root node\)\. *Controls* are responsible for inter\-node communication and integration logic, while domain logic and data reside in *abstractions*\.
 
 [*Hierarchical Model\-View\-Controller*](https://herbertograca.com/2017/08/17/mvc-and-its-variants/#hierarchical-model-view-controller) \(*HMVC*\) is similar, but its views access models directly, like in [*MVC*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}}), and every model synchronizes with the global data\. This pattern [was used](https://web.archive.org/web/20060319064042/http://www.javaworld.com/javaworld/jw-09-2000/jw-0908-letters.html) in [rich clients](https://en.wikipedia.org/wiki/Rich_client)\.
 
@@ -195,6 +194,3 @@ Uber [compacted](https://www.uber.com/blog/microservice-architecture/) 2200 [*Mi
 | --- | --- | --- |
 
 </nav>
-
-
-

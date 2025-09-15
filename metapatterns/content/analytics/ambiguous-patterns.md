@@ -144,6 +144,3 @@ A few names of architectural patterns cause confusion as the meaning of each of 
 | --- | --- | --- |
 
 </nav>
-
-
-

@@ -151,6 +151,3 @@ This approach resembles [*Shared Kernel*](https://ddd-practitioners.com/home/glo
 | --- | --- | --- |
 
 </nav>
-
-
-

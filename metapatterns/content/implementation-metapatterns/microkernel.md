@@ -46,7 +46,6 @@ description = "A microkernel mediates between resource providers and resource co
 | Each application is sandboxed by the microkernel |  |
 | The system is platform\-independent |  |
 
-
 <ins>References:</ins> Microkernel pattern in \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}})\]\.
 
 While vanilla [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) and [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) keep the business logic in the monolithic *core* component, *Microkernel* treats the core as a thin [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) \(called *microkernel*\) that connects user\-facing applications \(*external services*\) to resource providers \(*internal services*\)\. The *resource* in question can be anything ranging from CPU time or RAM to business functions\. The external services communicate with the microkernel through its *API* while the internal services implement the microkernel's *service provider interfaces* \(*SPIs*\) \(usually there is a kind of internal service and an SPI per resource type\)\.
@@ -186,6 +185,3 @@ The *microkernel* shows up as *Virtual Functional Bus* \(*VFB*\) which, as a *di
 | --- | --- | --- |
 
 </nav>
-
-
-

@@ -69,6 +69,3 @@ Several patterns combine the functionality of two or more extension layers\.
 | --- | --- | --- |
 
 </nav>
-
-
-

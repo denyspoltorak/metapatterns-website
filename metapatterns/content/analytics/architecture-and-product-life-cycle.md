@@ -84,6 +84,3 @@ In such cases it may be easier to rewrite the affected components from scratch r
 | --- | --- | --- |
 
 </nav>
-
-
-

@@ -40,14 +40,9 @@ Other smaller topics that I was able to look into made the following chapters:
 
 </nav>
 
-
-
 <nav>
 
 | \<\< [Mesh]({{< relref "../implementation-metapatterns/mesh.md" >}}) | ^ [The pattern language of software architecture]({{< relref "../_index.md" >}}) ^ | [Comparison of architectural patterns]({{< relref "../analytics/comparison-of-architectural-patterns/_index.md" >}}) \>\> |
 | --- | --- | --- |
 
 </nav>
-
-
-

@@ -91,6 +91,3 @@ Finally, you move to the support phase\. The best programmers leave for more act
 | --- | --- | --- |
 
 </nav>
-
-
-

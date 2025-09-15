@@ -159,6 +159,3 @@ If an *Orchestrator* becomes too complex, some domains \(e\.g\. IIoT or telecom\
 | --- | --- | --- |
 
 </nav>
-
-
-

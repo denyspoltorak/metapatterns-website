@@ -73,7 +73,6 @@ Examples:
 |  | The domain structure should never change |
 |  | Operational complexity |
 
-
 <ins>References:</ins> \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] has a chapter on *Service\-Based Architecture*; \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] is dedicated to *Microservices*\.
 
 Splitting a [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) by *subdomain* allows for mostly independent properties, development, and deployment of the resulting components\. However, for the system to benefit from the division, the subdomains must be loosely coupled and, ideally, of comparable size\. In that case the partitioning can reduce complexity of the project’s code by cutting accidental dependencies between the subdomains\. Moreover, if one of the resulting services grows unmanageably large, it can often be further partitioned by sub\-subdomains to form a [*Cell*]({{< relref "#cell-wso2-definition-service-of-services-domain-uber-definition-cluster" >}})\. This flexibility is paid for through the complexity and performance of use cases which involve multiple subdomains\. Another issue to remember is that boundaries between services are [nearly impossible](https://martinfowler.com/bliki/MonolithFirst.html) to move at later project stages as the services grow to vary in technologies and implementation styles, thus separation into services assumes perfect practical knowledge of the domain and relatively stable requirements\.
@@ -187,7 +186,6 @@ The first stage to take when designing a large project is the division of the co
 | --- | --- |
 | <span style="color:green">Multi\-team development</span> | <span style="color:red">Subdomain boundaries are settled</span> |
 
-
 ### Asynchronous modules: Modular Monolith \(Modulith\), Embedded Actors
 
 The next stage is separating the modules’ execution threads and data\. Each module becomes a kind of [*actor*](https://en.wikipedia.org/wiki/Actor_model) that communicates with other components through messaging\. Now your modules don’t block each other’s execution and you can [replay events](http://ithare.com/chapter-vc-modular-architecture-client-side-on-debugging-distributed-systems-deterministic-logic-and-finite-state-machines/) at the cost of nightmarish debugging and no clean way to share data between or synchronize the state of the components\.
@@ -197,7 +195,6 @@ The next stage is separating the modules’ execution threads and data\. Each mo
 | Multi\-team development | Subdomain boundaries are settled |
 | <span style="color:green">Event replay</span> | <span style="color:red">No good way to share data or synchronize state</span> |
 | <span style="color:green">Some independence of module qualities</span> | <span style="color:red">Hard to debug</span> |
-
 
 ### Multiple processes
 
@@ -211,7 +208,6 @@ There is also the option of running system components as separate binaries which
 | <span style="color:green">Single\-component updates</span> | <span style="color:red">Needs error recovery routines</span> |
 | <span style="color:green">Software fault isolation</span> | <span style="color:red">Data inconsistencies after partial crashes</span> |
 | <span style="color:green">Limited granular scalability</span> |  |
-
 
 ### Distributed runtime: Function as a Service \(FaaS\) \(including Nanoservices\), Backend Actors
 
@@ -228,7 +224,6 @@ Modern distributed [runtimes](https://en.wikipedia.org/wiki/Runtime_system) crea
 |  | <span style="color:red">Moderate communication overhead</span> |
 |  | <span style="color:red">Moderate performance overhead caused by the framework</span> |
 
-
 ### Distributed services: Service\-Based Architecture, Space\-Based Architecture, Microservices
 
 Fully autonomous services run on dedicated servers or virtual machines\. This way you employ resources of multiple servers, but the communication between them is both unstable \(requests may be lost, reordered or duplicated\) and slow and debugging tends to be very hard\. [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}})\-based \([*Microservices*]({{< relref "../implementation-metapatterns/mesh.md#service-mesh" >}}) and [*Space\-Based*]({{< relref "../implementation-metapatterns/mesh.md#space-based-architecture" >}})\) architectures provide dynamic scaling under load\.
@@ -241,7 +236,6 @@ Fully autonomous services run on dedicated servers or virtual machines\. This wa
 | Single\-component updates | Needs error recovery routines |
 | <span style="color:green">Full</span> fault isolation | Data inconsistencies after partial crashes |
 | <span style="color:green">Full \(dynamic for *Mesh*\)</span> granular scalability | <span style="color:red">High communication overhead</span> |
-
 
 ## Variants by communication
 
@@ -563,6 +557,3 @@ Each service starts as either a [*Monolith*]({{< relref "../basic-metapatterns/m
 | --- | --- | --- |
 
 </nav>
-
-
-

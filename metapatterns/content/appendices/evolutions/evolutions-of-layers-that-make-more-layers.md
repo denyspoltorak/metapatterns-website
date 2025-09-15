@@ -60,6 +60,3 @@ It is often possible to split a backend into integration \([orchestration]({{< r
 | --- | --- | --- |
 
 </nav>
-
-
-

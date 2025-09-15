@@ -75,6 +75,3 @@ The two approaches apply in different circumstances:
 | --- | --- | --- |
 
 </nav>
-
-
-
