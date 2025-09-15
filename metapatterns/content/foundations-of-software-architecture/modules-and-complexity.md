@@ -26,9 +26,8 @@ Concepts are important because it is their number \(or the number of the corresp
 <a href="/Intro/Modules-1.png" style="outline:none">
 <img src="/Intro/Modules-1.png" alt="Modules-1" style="width:52%"/>
 </a>
+<figcaption>Figure 1: Complexity correlates with the number of entities.</figcaption>
 </figure>
-
-Figure 1: Complexity correlates with the number of entities\.
 
 ## Modules, encapsulation and bounded context
 
@@ -40,9 +39,8 @@ Enter *modules*\. A module wraps several concepts, effectively hiding them from 
 <a href="/Intro/Modules-2.png" style="outline:none">
 <img src="/Intro/Modules-2.png" alt="Modules-2" style="width:66%"/>
 </a>
+<figcaption>Figure 2: Dividing a system into modules, bounded contexts highlighted.</figcaption>
 </figure>
-
-Figure 2: Dividing a system into modules, bounded contexts highlighted\.
 
 This diagram has several important points to note:
 
@@ -68,9 +66,8 @@ Apart from dividing the problem into simpler subproblems, modules open the path 
 <a href="/Intro/Modules-3.png" style="outline:none">
 <img src="/Intro/Modules-3.png" alt="Modules-3" style="width:64%"/>
 </a>
+<figcaption>Figure 3: Merged two API concepts in the green module.</figcaption>
 </figure>
-
-Figure 3: Merged two API concepts in the green module\.
 
 For example, the original definition of a phonebook contained *first name* and *last name*\. Once we separate the language support into a dedicated module, we may find out that various locales differ in the way they represent contacts: some \(USA\) use ‘first name \+ last name’ while others \(Japan\) need ‘last name \+ first name’\. If we want to abstract ourselves from that detail, we should use a new concept of *full name* which conjoins first and last names in a locale\-specific way\. Such a change actually simplifies some of the phonebook’s representation logic and code as it replaces two concepts with one\.
 
@@ -88,9 +85,8 @@ The rule of thumb is to aim for *low coupling and high cohesion*, meaning that e
 <a href="/Intro/Modules-4.png" style="outline:none">
 <img src="/Intro/Modules-4.png" alt="Modules-4" style="width:75%"/>
 </a>
+<figcaption>Figure 4: The upper modules are tightly coupled.</figcaption>
 </figure>
-
-Figure 4: The upper modules are tightly coupled\.
 
 Splitting a cohesive module \(a cluster of concepts that interact with each other\) yields two strongly coupled modules\. That’s what we wanted, except that each of the new modules is nearly as complex as the original one\. Meaning, that we now face two hard tasks instead of one\. Also, the system’s performance may be poor because communication between modules is rarely optimal, and we’ve got too much of that\.
 
@@ -98,9 +94,8 @@ Splitting a cohesive module \(a cluster of concepts that interact with each othe
 <a href="/Intro/Modules-5.png" style="outline:none">
 <img src="/Intro/Modules-5.png" alt="Modules-5" style="width:64%"/>
 </a>
+<figcaption>Figure 5: The lower module has low cohesion.</figcaption>
 </figure>
-
-Figure 5: The lower module has low cohesion\.
 
 What happens if we put several clusters of concepts in the same module? Nothing too evil happens with small modules – the module gets a higher complexity than each of its constituents, but lower than their sum\. In practice, multiple unrelated functions are often gathered in a ‘utils’ or ‘tools’ file or directory to alleviate *operational complexity*\.
 
@@ -128,9 +123,8 @@ A module may encapsulate not only individual concepts, but even other modules\. 
 <a href="/Intro/Modules-6.png" style="outline:none">
 <img src="/Intro/Modules-6.png" alt="Modules-6" style="width:58%"/>
 </a>
+<figcaption>Figure 6: Composition of modules prevents reuse.</figcaption>
 </figure>
-
-Figure 6: Composition of modules prevents reuse\.
 
 If the functionality of our internal module is needed by our clients, we have two bad options to choose from:
 
@@ -140,9 +134,8 @@ If the functionality of our internal module is needed by our clients, we have tw
 <a href="/Intro/Modules-7.png" style="outline:none">
 <img src="/Intro/Modules-7.png" alt="Modules-7" style="width:59%"/>
 </a>
+<figcaption>Figure 7: Forwarding the API of an internal module.</figcaption>
 </figure>
-
-Figure 7: Forwarding the API of an internal module\.
 
 We can add the API of a module which we encapsulate to our public API and forward its calls to the internal module\. However, that increases the complexity and lowers the cohesion of our module – now each client of our module is also exposed to the details of the methods of the module we have encapsulated even if they are not interested in using it\.
 
@@ -150,9 +143,8 @@ We can add the API of a module which we encapsulate to our public API and forwar
 <a href="/Intro/Modules-8.png" style="outline:none">
 <img src="/Intro/Modules-8.png" alt="Modules-8" style="width:78%"/>
 </a>
+<figcaption>Figure 8: Duplicating an internal module.</figcaption>
 </figure>
-
-Figure 8: Duplicating an internal module\.
 
 Another bad option is to let the clients that need a module which we encapsulate duplicate it and own the copies as their own submodules\. This relieves us of any shared responsibility, lets us modify and misuse our internals in any way we like, but violates [a couple](https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming)) [of rules](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) of common sense\.
 

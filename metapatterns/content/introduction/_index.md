@@ -23,9 +23,8 @@ bookCollapseSection = true
 <a href="../Pictures/image000.png" style="outline:none">
 <img src="../Pictures/image000.png" alt="image000" style="width:22%"/>
 </a>
+<figcaption>Licensed under Creative Commons Attribution 4.0 International</figcaption>
 </figure>
-
-<span style="color:green">Licensed under Creative Commons Attribution 4\.0 International</span>
 
 ## You’ll find inside
 
