@@ -178,7 +178,7 @@ description = "The glossary of terms used throughout the Architectural Metapatte
 : see *integration complexity*\.
 
 *Orchestration*
-: a kind of *workflow* where a single dedicated *component* \(*Orchestrator*\) makes use of \(usually multiple\) less *abstract components*\. *Facade* \[[GoF](kix.biwhq98sqmss)\] is a good example\.
+: a kind of *workflow* where a single dedicated *component* \(*Orchestrator*\) makes use of \(usually multiple\) less *abstract components*\. *Facade* \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] is a good example\.
 
 *Output*
 : *actions* or data that a *system* produces\.
