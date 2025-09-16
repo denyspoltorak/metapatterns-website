@@ -6,6 +6,7 @@ BookComments = false
 
 enableRobotsTXT = true
 printPathWarnings = true
+disableKinds = ['taxonomy', 'term']
 
 [markup]
   [markup.goldmark]
