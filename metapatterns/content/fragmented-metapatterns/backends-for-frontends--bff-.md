@@ -2,6 +2,7 @@
 weight = 8
 title = "Backends for Frontends (BFF)"
 description = "Backends for Frontends dedicate a component to each kind of a system's client. That grants flexibility in workflows and technologies."
+images = ["/Main/Backends%20for%20Frontends.png"]
 +++
 
 # Backends for Frontends \(BFF\)

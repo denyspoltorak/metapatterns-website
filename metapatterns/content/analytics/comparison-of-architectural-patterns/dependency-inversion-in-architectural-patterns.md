@@ -2,6 +2,7 @@
 weight = 3
 title = "Dependency inversion in architectural patterns"
 description = "Plugins, Hexagonal Architecture, Microkernel and Hierarchy rely on dependency inversion. Other patterns, such as Layers and Services, occasionally use it."
+images = ["/Conclusion/DI-1.png"]
 +++
 
 # Dependency inversion in architectural patterns

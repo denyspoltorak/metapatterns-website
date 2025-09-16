@@ -2,6 +2,7 @@
 weight = 5
 title = "About this book"
 description = "The story behind Architectural Metapatterns, the kinds of diagrams and notation used throughout the book, and why we need a classification of patterns."
+images = ["/Misc/Diagrams.png"]
 +++
 
 # About this book

@@ -2,6 +2,7 @@
 weight = 7
 title = "Shared Repository"
 description = "A Shared Repository stores all or a part of the system's data. It may provide notifications on data change and atomic transactions."
+images = ["/Main/Shared%20Repository.png"]
 +++
 
 # Shared Repository

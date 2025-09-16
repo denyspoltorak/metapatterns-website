@@ -2,6 +2,7 @@
 weight = 10
 title = "Hierarchy"
 description = "A Hierarchy distributes responsibilities throughout a tree of components. It is fault tolerant, and the components remain simple and are easy to replace."
+images = ["/Main/Hierarchy.png"]
 +++
 
 # Hierarchy

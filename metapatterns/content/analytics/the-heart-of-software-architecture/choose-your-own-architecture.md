@@ -2,6 +2,7 @@
 weight = 3
 title = "Choose your own architecture"
 description = "This is a guide to choosing an architectural style based on project size, domain features, target performance and flexibility requirements."
+images = ["/Heart/Features-1.png"]
 +++
 
 # Choose your own architecture

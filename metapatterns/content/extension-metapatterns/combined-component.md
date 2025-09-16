@@ -2,6 +2,7 @@
 weight = 10
 title = "Combined Component"
 description = "A Combined Component implements two or more of the following extension patterns: Middleware, Shared Repository, Proxy, and Orchestrator."
+images = ["Variants/2/Multifunctional%20-%20API%20Gateway.png"]
 +++
 
 # Combined Component

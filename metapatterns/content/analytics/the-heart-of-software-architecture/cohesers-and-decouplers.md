@@ -2,6 +2,7 @@
 weight = 1
 title = "Cohesers and decouplers"
 description = "Some architectural constraints or forces cause the code to be kept together, others pull it apart, still others prefer components of a definite size."
+images = ["/Heart/Pain.png"]
 +++
 
 # Cohesers and decouplers

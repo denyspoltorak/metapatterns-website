@@ -2,6 +2,7 @@
 weight = 1
 title = "Introduction"
 description = "This part defines metapatterns, explains the notation for NoSQL diagrams used throughout the book, and provides a theory for pattern classification."
+images = ["../Pictures/image000.png"]
 bookCollapseSection = true
 +++
 
