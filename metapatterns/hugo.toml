@@ -20,7 +20,7 @@ disableKinds = ['taxonomy', 'term']
   BookSection = '/'
   BookTheme = 'auto'
   description = "The Metapatterns website is a compendium and classification of architectural patterns based on the assumption that structure determines function."
-  images = ["/Cover.png"]
+  images = ["/diagrams/Cover.png"]
 
 [sitemap]
   changeFreq = 'weekly'
