@@ -10,25 +10,6 @@ bookCollapseSection = true
 
 # Introduction
 
-**<span style="color:green">Architectural Metapatterns</span>**
-
-*<span style="color:green">The Pattern Language</span>* 
-
-*<span style="color:green">of Software Architecture</span>*
-
-*<span style="color:green">v 1\.1\.1 \(09\-2025\)</span>*
-
-<span style="color:green">Denys Poltorak \(author\)</span>
-
-<span style="color:green">Lars Noodén \(editor\)</span>
-
-<figure>
-<a href="../Pictures/image000.png" style="outline:none">
-<img src="../Pictures/image000.png" alt="image000" style="width:22%"/>
-</a>
-<figcaption>Licensed under Creative Commons Attribution 4.0 International</figcaption>
-</figure>
-
 ## You’ll find inside
 
 - A structured collection of [architectural patterns](https://en.wikipedia.org/wiki/Architectural_pattern) with hundreds of NoUML diagrams\.
@@ -47,8 +28,6 @@ Several readers told me that the patterns and principles should be illustrated w
 I am looking for both inline explanations about individual patterns \(see blocks with gray background scattered throughout this book\) and for one or two introductory case studies that will detail internal workings and evolution of complex real\-world software to show how patterns are used in practice and promote the book to the [duplex league](https://martinfowler.com/bliki/DuplexBook.html)\.
 
 Please consider sharing your experience as a co\-author of a future version of this book\.
-
-## Short table of contents
 
 ## Contents:
 

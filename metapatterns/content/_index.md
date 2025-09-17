@@ -9,6 +9,15 @@ bookCollapseSection = true
 
 # The pattern language of software architecture
 
+Patterns of software architecture are interrelated (*no pattern is an island*). You can rarely make a product in a pure architectural style, and the chances for it to survive undistorted over years are negligible. Software grows iteratively and adapts to its environment.
+
+*Architectural Metapatterns* is all about patterns and their relations. It generalizes hundreds of individual patterns into several wider classes (*metapatterns*) each of which can be applied to a local or distributed system to change its properties in a certain way. *Rinse and repeat.*
+
+The content is lavishly illustrated with intuitive NoSQL diagrams. It’s terse and AI-free.
+
+*Have a good time!*
+
+
 <nav>
 
 
