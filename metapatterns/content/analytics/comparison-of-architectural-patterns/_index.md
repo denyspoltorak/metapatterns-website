@@ -3,6 +3,8 @@ weight = 1
 title = "Comparison of architectural patterns"
 description = "Patterns vary in ways to share functionality or data among system components, build pipelines, and in their use of dependency inversion or indirection."
 bookCollapseSection = true
+[sitemap]
+  priority = 0.2
 +++
 
 # Comparison of architectural patterns

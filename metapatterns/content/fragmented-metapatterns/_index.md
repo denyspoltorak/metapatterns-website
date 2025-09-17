@@ -3,6 +3,8 @@ weight = 5
 title = "Fragmented metapatterns"
 description = "Fragmented architectures make use of small specialized components. Examples include Layered Services, BFF, SOA, Polyglot Persistence, and Hierarchy."
 bookCollapseSection = true
+[sitemap]
+  priority = 0.2
 +++
 
 # Fragmented metapatterns

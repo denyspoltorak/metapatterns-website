@@ -2,6 +2,8 @@
 weight = 7
 title = "Glossary"
 description = "The glossary of terms used throughout the Architectural Metapatterns book."
+[sitemap]
+  priority = 0.1
 +++
 
 # Glossary

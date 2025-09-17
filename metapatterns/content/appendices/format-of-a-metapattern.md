@@ -2,6 +2,8 @@
 weight = 6
 title = "Format of a metapattern"
 description = "This section formalized the format of each of the metapattern chapters."
+[sitemap]
+  priority = 0.1
 +++
 
 # Format of a metapattern

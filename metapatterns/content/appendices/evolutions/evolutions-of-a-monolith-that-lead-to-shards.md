@@ -2,6 +2,8 @@
 weight = 1
 title = "Evolutions of a Monolith that lead to Shards"
 description = "Multiple stateful or stateless instances of a Monolith can be deployed to improve performance. The systems may need a Sharding Proxy or Load Balancer."
+[sitemap]
+  priority = 0.3
 +++
 
 # Evolutions of a Monolith that lead to Shards

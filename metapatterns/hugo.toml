@@ -22,6 +22,9 @@ disableKinds = ['taxonomy', 'term']
   description = "The Metapatterns website is a compendium and classification of architectural patterns based on the assumption that structure determines function."
   images = ["/Cover.png"]
 
+[sitemap]
+  changeFreq = 'weekly'
+
 [author]
   name = "Denys Poltorak"
   location = "Ukraine"

@@ -3,6 +3,8 @@ weight = 8
 title = "Appendices"
 description = "This part contains miscellaneous information which ranges from marginally useful (e.g. pattern evolutions) to copyright and revisions history."
 bookCollapseSection = true
+[sitemap]
+  priority = 0.1
 +++
 
 # Appendices

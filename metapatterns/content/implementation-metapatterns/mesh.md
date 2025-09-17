@@ -3,6 +3,8 @@ weight = 8
 title = "Mesh"
 description = "A Mesh or Grid is a virtual layer of interconnected components which makes a distributed Middleware. It features supreme fault tolerance and scalability."
 images = ["/diagrams/Main/Mesh.png"]
+[sitemap]
+  priority = 0.8
 +++
 
 # Mesh

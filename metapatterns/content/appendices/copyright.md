@@ -2,9 +2,9 @@
 weight = 3
 title = "Copyright"
 description = "Creative Commons Attribution 4.0 International Public License."
-bookSearchExclude = true
 [sitemap]
   disable = true
+bookSearchExclude = true
 +++
 
 # Copyright

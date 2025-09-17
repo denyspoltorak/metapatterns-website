@@ -2,6 +2,8 @@
 weight = 5
 title = "Evolutions of Shards that share data"
 description = "The main issue with Shards is coordination between the instances. It is solved by deploying a Shared Repository or wrapping the shared data with a service."
+[sitemap]
+  priority = 0.3
 +++
 
 # Evolutions of Shards that share data

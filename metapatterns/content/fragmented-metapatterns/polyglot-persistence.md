@@ -3,6 +3,8 @@ weight = 7
 title = "Polyglot Persistence"
 description = "Polyglot Persistence is the pattern for using multiple databases, which may be mutually independent or derived. The specialization improves performance."
 images = ["/diagrams/Main/Polyglot%20Persistence.png"]
+[sitemap]
+  priority = 0.8
 +++
 
 # Polyglot Persistence

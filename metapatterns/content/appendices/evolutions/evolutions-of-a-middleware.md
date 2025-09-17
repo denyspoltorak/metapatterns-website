@@ -2,6 +2,8 @@
 weight = 14
 title = "Evolutions of a Middleware"
 description = "It is possible to add a second specialized Middleware or integrate several systems through a hierarchy of Middlewares."
+[sitemap]
+  priority = 0.3
 +++
 
 # Evolutions of a Middleware

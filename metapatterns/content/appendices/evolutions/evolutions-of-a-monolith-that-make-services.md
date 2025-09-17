@@ -3,6 +3,8 @@ weight = 3
 title = "Evolutions of a Monolith that make Services"
 description = "A Monolith can be divided into modules, Services or a Pipeline to support development by multiple teams, improve its codebase, and employ more hardware."
 images = ["/diagrams/Evolutions/Monolith/Monolith_%20Services%20and%20Pipeline.png"]
+[sitemap]
+  priority = 0.3
 +++
 
 # Evolutions of a Monolith that make Services

@@ -3,6 +3,8 @@ weight = 5
 title = "Evolutions"
 description = "Avenues to evolve many software and system architectures. Each evolution lists its goal, preconditions, benefits and drawbacks."
 bookCollapseSection = true
+[sitemap]
+  priority = 0.2
 +++
 
 # Evolutions

@@ -2,9 +2,9 @@
 weight = 1
 title = "Acknowledgements"
 description = "Thanks to the people who made Architectural Metapatterns possible."
-bookSearchExclude = true
 [sitemap]
   disable = true
+bookSearchExclude = true
 +++
 
 # Acknowledgements

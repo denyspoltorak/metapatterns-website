@@ -2,9 +2,9 @@
 weight = 4
 title = "Disclaimer"
 description = "IN NO EVENT SHALL THE COPYRIGHT HOLDERS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES."
-bookSearchExclude = true
 [sitemap]
   disable = true
+bookSearchExclude = true
 +++
 
 # Disclaimer

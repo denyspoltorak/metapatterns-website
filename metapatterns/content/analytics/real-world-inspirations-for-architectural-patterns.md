@@ -2,6 +2,8 @@
 weight = 4
 title = "Real-world inspirations for architectural patterns"
 description = "Styles and patterns of software architecture have real-world inspirations and parallels. Learning about them may help us to invent new patterns when needed."
+[sitemap]
+  priority = 0.5
 +++
 
 # Real\-world inspirations for architectural patterns

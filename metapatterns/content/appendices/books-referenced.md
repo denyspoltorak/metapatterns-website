@@ -2,6 +2,8 @@
 weight = 2
 title = "Books referenced"
 description = "The list of books which Architectural Metapatterns references."
+[sitemap]
+  priority = 0.1
 +++
 
 # Books referenced
