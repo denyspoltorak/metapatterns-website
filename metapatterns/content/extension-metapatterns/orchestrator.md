@@ -2,14 +2,14 @@
 weight = 9
 title = "Orchestrator"
 description = "An Orchestrator integrates lower-level components. It runs a client request as a series of calls to other components while keeping their states consistent."
-images = ["/Main/Orchestrator.png"]
+images = ["/diagrams/Main/Orchestrator.png"]
 +++
 
 # Orchestrator
 
 <figure>
-<a href="/Main/Orchestrator.png" style="outline:none">
-<img src="/Main/Orchestrator.png" alt="Orchestrator" style="width:100%"/>
+<a href="/diagrams/Main/Orchestrator.png" style="outline:none">
+<img src="/diagrams/Main/Orchestrator.png" alt="Orchestrator" style="width:100%"/>
 </a>
 </figure>
 
@@ -73,8 +73,8 @@ An *Orchestrator* fulfills two closely related roles:
 
 
 <figure>
-<a href="/Misc/Orchestrator.png" style="outline:none">
-<img src="/Misc/Orchestrator.png" alt="Orchestrator" style="width:100%"/>
+<a href="/diagrams/Misc/Orchestrator.png" style="outline:none">
+<img src="/diagrams/Misc/Orchestrator.png" alt="Orchestrator" style="width:100%"/>
 </a>
 </figure>
 
@@ -91,8 +91,8 @@ When compared to [*choreography*]({{< relref "../foundations-of-software-archite
 
 
 <figure>
-<a href="/Performance/Orchestrator.png" style="outline:none">
-<img src="/Performance/Orchestrator.png" alt="Orchestrator" style="width:100%"/>
+<a href="/diagrams/Performance/Orchestrator.png" style="outline:none">
+<img src="/diagrams/Performance/Orchestrator.png" alt="Orchestrator" style="width:100%"/>
 </a>
 </figure>
 
@@ -103,8 +103,8 @@ I don’t see how orchestration can affect throughput as in most cases the *Orch
 An *Orchestrator* may depend on the *APIs* of the services it orchestrates or define *SPIs* for them to implement, with the first mode being natural for its *Facade* \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] aspect and the second one for the *Mediator* \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\]:
 
 <figure>
-<a href="/Dependencies/Orchestrator.png" style="outline:none">
-<img src="/Dependencies/Orchestrator.png" alt="Orchestrator" style="width:100%"/>
+<a href="/diagrams/Dependencies/Orchestrator.png" style="outline:none">
+<img src="/diagrams/Dependencies/Orchestrator.png" alt="Orchestrator" style="width:100%"/>
 </a>
 </figure>
 
@@ -135,8 +135,8 @@ Likewise, [control systems]({{< relref "../foundations-of-software-architecture/
 ### Relations
 
 <figure>
-<a href="/Relations/Orchestrator.png" style="outline:none">
-<img src="/Relations/Orchestrator.png" alt="Orchestrator" style="width:100%"/>
+<a href="/diagrams/Relations/Orchestrator.png" style="outline:none">
+<img src="/diagrams/Relations/Orchestrator.png" alt="Orchestrator" style="width:100%"/>
 </a>
 </figure>
 
@@ -155,8 +155,8 @@ It seems that an *Orchestrator*, just like a [*layer*]({{< relref "../basic-meta
 ### Closed or strict
 
 <figure>
-<a href="/Variants/2/Orchestrator%20-%20Closed.png" style="outline:none">
-<img src="/Variants/2/Orchestrator%20-%20Closed.png" alt="Orchestrator - Closed" style="width:90%"/>
+<a href="/diagrams/Variants/2/Orchestrator%20-%20Closed.png" style="outline:none">
+<img src="/diagrams/Variants/2/Orchestrator%20-%20Closed.png" alt="Orchestrator - Closed" style="width:90%"/>
 </a>
 </figure>
 
@@ -165,8 +165,8 @@ A *strict* or *closed Orchestrator* isolates the orchestrated services from thei
 ### Open or relaxed
 
 <figure>
-<a href="/Variants/2/Orchestrator%20-%20Open.png" style="outline:none">
-<img src="/Variants/2/Orchestrator%20-%20Open.png" alt="Orchestrator - Open" style="width:92%"/>
+<a href="/diagrams/Variants/2/Orchestrator%20-%20Open.png" style="outline:none">
+<img src="/diagrams/Variants/2/Orchestrator%20-%20Open.png" alt="Orchestrator - Open" style="width:92%"/>
 </a>
 </figure>
 
@@ -185,8 +185,8 @@ The orchestration \(application \[[DDD]({{< relref "../appendices/books-referenc
 ### Monolithic
 
 <figure>
-<a href="/Variants/2/Orchestrator%20-%20Monolythic.png" style="outline:none">
-<img src="/Variants/2/Orchestrator%20-%20Monolythic.png" alt="Orchestrator - Monolythic" style="width:42%"/>
+<a href="/diagrams/Variants/2/Orchestrator%20-%20Monolythic.png" style="outline:none">
+<img src="/diagrams/Variants/2/Orchestrator%20-%20Monolythic.png" alt="Orchestrator - Monolythic" style="width:42%"/>
 </a>
 </figure>
 
@@ -195,8 +195,8 @@ A single *Orchestrator* is deployed\. This option fits ordinary medium\-sized pr
 ### Scaled
 
 <figure>
-<a href="/Variants/2/Orchestrator%20-%20Scaled.png" style="outline:none">
-<img src="/Variants/2/Orchestrator%20-%20Scaled.png" alt="Orchestrator - Scaled" style="width:100%"/>
+<a href="/diagrams/Variants/2/Orchestrator%20-%20Scaled.png" style="outline:none">
+<img src="/diagrams/Variants/2/Orchestrator%20-%20Scaled.png" alt="Orchestrator - Scaled" style="width:100%"/>
 </a>
 </figure>
 
@@ -213,8 +213,8 @@ High load systems also require multiple instances of *Orchestrators* because a s
 ### Layered
 
 <figure>
-<a href="/Variants/2/Orchestrator%20-%20Layered.png" style="outline:none">
-<img src="/Variants/2/Orchestrator%20-%20Layered.png" alt="Orchestrator - Layered" style="width:100%"/>
+<a href="/diagrams/Variants/2/Orchestrator%20-%20Layered.png" style="outline:none">
+<img src="/diagrams/Variants/2/Orchestrator%20-%20Layered.png" alt="Orchestrator - Layered" style="width:100%"/>
 </a>
 </figure>
 
@@ -227,8 +227,8 @@ A similar example is using an [*API Composer*]({{< relref "#api-composer-remote-
 ### A service per client type \(Backends for Frontends\)
 
 <figure>
-<a href="/Variants/2/Orchestrator%20-%20BFF.png" style="outline:none">
-<img src="/Variants/2/Orchestrator%20-%20BFF.png" alt="Orchestrator - BFF" style="width:100%"/>
+<a href="/diagrams/Variants/2/Orchestrator%20-%20BFF.png" style="outline:none">
+<img src="/diagrams/Variants/2/Orchestrator%20-%20BFF.png" alt="Orchestrator - BFF" style="width:100%"/>
 </a>
 </figure>
 
@@ -239,8 +239,8 @@ This pattern is known as [*Backends for Frontends*]({{< relref "../fragmented-me
 ### A service per subdomain \(Hierarchy\)
 
 <figure>
-<a href="/Variants/2/Orchestrator%20-%20Hierarchy.png" style="outline:none">
-<img src="/Variants/2/Orchestrator%20-%20Hierarchy.png" alt="Orchestrator - Hierarchy" style="width:100%"/>
+<a href="/diagrams/Variants/2/Orchestrator%20-%20Hierarchy.png" style="outline:none">
+<img src="/diagrams/Variants/2/Orchestrator%20-%20Hierarchy.png" alt="Orchestrator - Hierarchy" style="width:100%"/>
 </a>
 </figure>
 
@@ -249,8 +249,8 @@ In large systems a single *Orchestrator* is very likely to become overgrown and 
 ### A service per use case \(SOA\-style\)
 
 <figure>
-<a href="/Variants/2/Orchestrator%20-%20SOA.png" style="outline:none">
-<img src="/Variants/2/Orchestrator%20-%20SOA.png" alt="Orchestrator - SOA" style="width:100%"/>
+<a href="/diagrams/Variants/2/Orchestrator%20-%20SOA.png" style="outline:none">
+<img src="/diagrams/Variants/2/Orchestrator%20-%20SOA.png" alt="Orchestrator - SOA" style="width:100%"/>
 </a>
 </figure>
 
@@ -263,8 +263,8 @@ In large systems a single *Orchestrator* is very likely to become overgrown and 
 ### API Composer, Remote Facade, Gateway Aggregation, Composed Message Processor, Scatter\-Gather, MapReduce
 
 <figure>
-<a href="/Variants/2/API%20Composer.png" style="outline:none">
-<img src="/Variants/2/API%20Composer.png" alt="API Composer" style="width:100%"/>
+<a href="/diagrams/Variants/2/API%20Composer.png" style="outline:none">
+<img src="/diagrams/Variants/2/API%20Composer.png" alt="API Composer" style="width:100%"/>
 </a>
 </figure>
 
@@ -281,8 +281,8 @@ Example: Microsoft has an [article](https://learn.microsoft.com/en-us/azure/arch
 ### Process Manager, Orchestrator
 
 <figure>
-<a href="/Variants/2/Process%20Manager.png" style="outline:none">
-<img src="/Variants/2/Process%20Manager.png" alt="Process Manager" style="width:100%"/>
+<a href="/diagrams/Variants/2/Process%20Manager.png" style="outline:none">
+<img src="/diagrams/Variants/2/Process%20Manager.png" alt="Process Manager" style="width:100%"/>
 </a>
 </figure>
 
@@ -297,8 +297,8 @@ Example: \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] provi
 ### \(Orchestrated\) Saga, Saga Orchestrator, Saga Execution Component, Transaction Script, Coordinator
 
 <figure>
-<a href="/Variants/2/Saga.png" style="outline:none">
-<img src="/Variants/2/Saga.png" alt="Saga" style="width:100%"/>
+<a href="/diagrams/Variants/2/Saga.png" style="outline:none">
+<img src="/diagrams/Variants/2/Saga.png" alt="Saga" style="width:100%"/>
 </a>
 </figure>
 
@@ -319,8 +319,8 @@ Example: \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\] inv
 ### Integration \(Micro\-\)Service, Application Service
 
 <figure>
-<a href="/Variants/2/Integration%20Service.png" style="outline:none">
-<img src="/Variants/2/Integration%20Service.png" alt="Integration Service" style="width:100%"/>
+<a href="/diagrams/Variants/2/Integration%20Service.png" style="outline:none">
+<img src="/diagrams/Variants/2/Integration%20Service.png" alt="Integration Service" style="width:100%"/>
 </a>
 </figure>
 
@@ -335,8 +335,8 @@ Several composite patterns involve an *Orchestrator* and are dominated by its be
 ### API Gateway
 
 <figure>
-<a href="/Variants/2/API%20Gateway.png" style="outline:none">
-<img src="/Variants/2/API%20Gateway.png" alt="API Gateway" style="width:100%"/>
+<a href="/diagrams/Variants/2/API%20Gateway.png" style="outline:none">
+<img src="/diagrams/Variants/2/API%20Gateway.png" alt="API Gateway" style="width:100%"/>
 </a>
 </figure>
 
@@ -347,8 +347,8 @@ Example: a thorough article from [Microsoft](https://learn.microsoft.com/en-us/a
 ### Event Mediator
 
 <figure>
-<a href="/Variants/2/Event%20Mediator.png" style="outline:none">
-<img src="/Variants/2/Event%20Mediator.png" alt="Event Mediator" style="width:100%"/>
+<a href="/diagrams/Variants/2/Event%20Mediator.png" style="outline:none">
+<img src="/diagrams/Variants/2/Event%20Mediator.png" alt="Event Mediator" style="width:100%"/>
 </a>
 </figure>
 
@@ -359,8 +359,8 @@ Example: Mediator Topology in the chapter of \[[FSA](https://docs.google.com/doc
 ### Enterprise Service Bus \(ESB\)
 
 <figure>
-<a href="/Variants/2/Enterprise%20Service%20Bus.png" style="outline:none">
-<img src="/Variants/2/Enterprise%20Service%20Bus.png" alt="Enterprise Service Bus" style="width:100%"/>
+<a href="/diagrams/Variants/2/Enterprise%20Service%20Bus.png" style="outline:none">
+<img src="/diagrams/Variants/2/Enterprise%20Service%20Bus.png" alt="Enterprise Service Bus" style="width:100%"/>
 </a>
 </figure>
 
@@ -382,8 +382,8 @@ There is [one way to counter the first point and more than one to solve the seco
 
 
 <figure>
-<a href="/Evolutions/2/Orchestrator%20to%20Layered%20Services.png" style="outline:none">
-<img src="/Evolutions/2/Orchestrator%20to%20Layered%20Services.png" alt="Orchestrator to Layered Services" style="width:100%"/>
+<a href="/diagrams/Evolutions/2/Orchestrator%20to%20Layered%20Services.png" style="outline:none">
+<img src="/diagrams/Evolutions/2/Orchestrator%20to%20Layered%20Services.png" alt="Orchestrator to Layered Services" style="width:100%"/>
 </a>
 </figure>
 
@@ -391,8 +391,8 @@ There is [one way to counter the first point and more than one to solve the seco
 
 
 <figure>
-<a href="/Evolutions/2/Orchestrator%20to%20Backends%20for%20Frontends.png" style="outline:none">
-<img src="/Evolutions/2/Orchestrator%20to%20Backends%20for%20Frontends.png" alt="Orchestrator to Backends for Frontends" style="width:100%"/>
+<a href="/diagrams/Evolutions/2/Orchestrator%20to%20Backends%20for%20Frontends.png" style="outline:none">
+<img src="/diagrams/Evolutions/2/Orchestrator%20to%20Backends%20for%20Frontends.png" alt="Orchestrator to Backends for Frontends" style="width:100%"/>
 </a>
 </figure>
 
@@ -400,8 +400,8 @@ There is [one way to counter the first point and more than one to solve the seco
 
 
 <figure>
-<a href="/Evolutions/2/Orchestrator%20add%20Orchestrator.png" style="outline:none">
-<img src="/Evolutions/2/Orchestrator%20add%20Orchestrator.png" alt="Orchestrator add Orchestrator" style="width:100%"/>
+<a href="/diagrams/Evolutions/2/Orchestrator%20add%20Orchestrator.png" style="outline:none">
+<img src="/diagrams/Evolutions/2/Orchestrator%20add%20Orchestrator.png" alt="Orchestrator add Orchestrator" style="width:100%"/>
 </a>
 </figure>
 
@@ -409,8 +409,8 @@ There is [one way to counter the first point and more than one to solve the seco
 
 
 <figure>
-<a href="/Evolutions/2/Orchestrator%20to%20Hierarchy.png" style="outline:none">
-<img src="/Evolutions/2/Orchestrator%20to%20Hierarchy.png" alt="Orchestrator to Hierarchy" style="width:100%"/>
+<a href="/diagrams/Evolutions/2/Orchestrator%20to%20Hierarchy.png" style="outline:none">
+<img src="/diagrams/Evolutions/2/Orchestrator%20to%20Hierarchy.png" alt="Orchestrator to Hierarchy" style="width:100%"/>
 </a>
 </figure>
 

@@ -59,8 +59,8 @@ Inventing a generic coordinate system to fit any pattern’s representation, fro
 We’ll draw the abstractness axis vertically with higher\-level modules positioned towards the upper side of the diagram, the subdomain axis horizontally, and sharding diagonally\. Here is an \(arbitrary\) example of such a diagram:
 
 <figure>
-<a href="/Intro/CQRS%20with%20notes.png" style="outline:none">
-<img src="/Intro/CQRS%20with%20notes.png" alt="CQRS with notes" style="width:100%"/>
+<a href="/diagrams/Intro/CQRS%20with%20notes.png" style="outline:none">
+<img src="/diagrams/Intro/CQRS%20with%20notes.png" alt="CQRS with notes" style="width:100%"/>
 </a>
 </figure>
 
@@ -79,8 +79,8 @@ Godspeed\!
 Let’s consider the following structure:
 
 <figure>
-<a href="/Intro/Example-Undefined.png" style="outline:none">
-<img src="/Intro/Example-Undefined.png" alt="Example-Undefined" style="width:93%"/>
+<a href="/diagrams/Intro/Example-Undefined.png" style="outline:none">
+<img src="/diagrams/Intro/Example-Undefined.png" alt="Example-Undefined" style="width:93%"/>
 </a>
 </figure>
 
@@ -92,8 +92,8 @@ It features two \(or more in real life\) high\-level modules that communicate wi
 
 
 <figure>
-<a href="/Intro/Example-Defined.png" style="outline:none">
-<img src="/Intro/Example-Defined.png" alt="Example-Defined" style="width:100%"/>
+<a href="/diagrams/Intro/Example-Defined.png" style="outline:none">
+<img src="/diagrams/Intro/Example-Defined.png" alt="Example-Defined" style="width:100%"/>
 </a>
 </figure>
 

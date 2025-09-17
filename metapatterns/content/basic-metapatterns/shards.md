@@ -2,14 +2,14 @@
 weight = 7
 title = "Shards"
 description = "Shards are multiple instances of a subsystem or component. They can be stateful or stateless. Stateful shards with identical data are called replicas."
-images = ["/Main/Shards.png"]
+images = ["/diagrams/Main/Shards.png"]
 +++
 
 # Shards
 
 <figure>
-<a href="/Main/Shards.png" style="outline:none">
-<img src="/Main/Shards.png" alt="Shards" style="width:100%"/>
+<a href="/diagrams/Main/Shards.png" style="outline:none">
+<img src="/diagrams/Main/Shards.png" alt="Shards" style="width:100%"/>
 </a>
 </figure>
 
@@ -58,8 +58,8 @@ By state:
 A *shard* retains the performance of the original subsystem \(a [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) in the simplest case\) as long as it runs independently\. Any task that involves intershard communication has its performance degraded by data serialization and network latency\. And as soon as multiple shards need to synchronize their states you find yourself on the horns of a dilemma: damage data consistency through write conflicts or kill performance with distributed transactions \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\]\.
 
 <figure>
-<a href="/Performance/Shards.png" style="outline:none">
-<img src="/Performance/Shards.png" alt="Shards" style="width:100%"/>
+<a href="/diagrams/Performance/Shards.png" style="outline:none">
+<img src="/diagrams/Performance/Shards.png" alt="Shards" style="width:100%"/>
 </a>
 </figure>
 
@@ -90,8 +90,8 @@ A *sharded* system features properties of a pattern it replicates \(a single\-co
 ### Relations
 
 <figure>
-<a href="/Relations/Shards.png" style="outline:none">
-<img src="/Relations/Shards.png" alt="Shards" style="width:100%"/>
+<a href="/diagrams/Relations/Shards.png" style="outline:none">
+<img src="/diagrams/Relations/Shards.png" alt="Shards" style="width:100%"/>
 </a>
 </figure>
 
@@ -146,8 +146,8 @@ There are several subtypes of sharding that differ in the way they handle state:
 ### Persistent slice: Sharding, Shards, Partitions, Cells \(Amazon definition\)
 
 <figure>
-<a href="/Variants/1/Shards%20-%20Sharding.png" style="outline:none">
-<img src="/Variants/1/Shards%20-%20Sharding.png" alt="Shards - Sharding" style="width:100%"/>
+<a href="/diagrams/Variants/1/Shards%20-%20Sharding.png" style="outline:none">
+<img src="/diagrams/Variants/1/Shards%20-%20Sharding.png" alt="Shards - Sharding" style="width:100%"/>
 </a>
 </figure>
 
@@ -173,8 +173,8 @@ It usually takes a stand\-alone [*Sharding Proxy*]({{< relref "../extension-meta
 ### Persistent copy: Replica
 
 <figure>
-<a href="/Variants/1/Shards%20-%20Replica.png" style="outline:none">
-<img src="/Variants/1/Shards%20-%20Replica.png" alt="Shards - Replica" style="width:100%"/>
+<a href="/diagrams/Variants/1/Shards%20-%20Replica.png" style="outline:none">
+<img src="/diagrams/Variants/1/Shards%20-%20Replica.png" alt="Shards - Replica" style="width:100%"/>
 </a>
 </figure>
 
@@ -191,8 +191,8 @@ Finally, you can mix sharding and replication to make sure that the data of each
 ### Stateless: Pool, Instances, Replicated Stateless Services, Work Queue
 
 <figure>
-<a href="/Variants/1/Shards%20-%20Pool.png" style="outline:none">
-<img src="/Variants/1/Shards%20-%20Pool.png" alt="Shards - Pool" style="width:100%"/>
+<a href="/diagrams/Variants/1/Shards%20-%20Pool.png" style="outline:none">
+<img src="/diagrams/Variants/1/Shards%20-%20Pool.png" alt="Shards - Pool" style="width:100%"/>
 </a>
 </figure>
 
@@ -205,8 +205,8 @@ Many cloud services implement dynamic pools, the number of instances growing and
 ### Temporary state: Create on Demand
 
 <figure>
-<a href="/Variants/1/Shards%20-%20Create%20on%20Demand.png" style="outline:none">
-<img src="/Variants/1/Shards%20-%20Create%20on%20Demand.png" alt="Shards - Create on Demand" style="width:100%"/>
+<a href="/diagrams/Variants/1/Shards%20-%20Create%20on%20Demand.png" style="outline:none">
+<img src="/diagrams/Variants/1/Shards%20-%20Create%20on%20Demand.png" alt="Shards - Create on Demand" style="width:100%"/>
 </a>
 </figure>
 
@@ -228,8 +228,8 @@ When *Shards* are applied to a single component, which is a [*Monolith*]({{< rel
 
 
 <figure>
-<a href="/Evolutions/Shards/Shards%20-%20General.png" style="outline:none">
-<img src="/Evolutions/Shards/Shards%20-%20General.png" alt="Shards - General" style="width:100%"/>
+<a href="/diagrams/Evolutions/Shards/Shards%20-%20General.png" style="outline:none">
+<img src="/diagrams/Evolutions/Shards/Shards%20-%20General.png" alt="Shards - General" style="width:100%"/>
 </a>
 </figure>
 
@@ -243,8 +243,8 @@ The issue peculiar to *Shards* is that of coordinating deployed instances, espec
 
 
 <figure>
-<a href="/Evolutions/Shards/Shards%20to%20Shared%20DB.png" style="outline:none">
-<img src="/Evolutions/Shards/Shards%20to%20Shared%20DB.png" alt="Shards to Shared DB" style="width:100%"/>
+<a href="/diagrams/Evolutions/Shards/Shards%20to%20Shared%20DB.png" style="outline:none">
+<img src="/diagrams/Evolutions/Shards/Shards%20to%20Shared%20DB.png" alt="Shards to Shared DB" style="width:100%"/>
 </a>
 </figure>
 
@@ -252,8 +252,8 @@ The issue peculiar to *Shards* is that of coordinating deployed instances, espec
 
 
 <figure>
-<a href="/Evolutions/Shards/Shards%20to%20Space-Based%20Architecture.png" style="outline:none">
-<img src="/Evolutions/Shards/Shards%20to%20Space-Based%20Architecture.png" alt="Shards to Space-Based Architecture" style="width:100%"/>
+<a href="/diagrams/Evolutions/Shards/Shards%20to%20Space-Based%20Architecture.png" style="outline:none">
+<img src="/diagrams/Evolutions/Shards/Shards%20to%20Space-Based%20Architecture.png" alt="Shards to Space-Based Architecture" style="width:100%"/>
 </a>
 </figure>
 
@@ -261,8 +261,8 @@ The issue peculiar to *Shards* is that of coordinating deployed instances, espec
 
 
 <figure>
-<a href="/Evolutions/Shards/Shards%20add%20Shared%20DB.png" style="outline:none">
-<img src="/Evolutions/Shards/Shards%20add%20Shared%20DB.png" alt="Shards add Shared DB" style="width:100%"/>
+<a href="/diagrams/Evolutions/Shards/Shards%20add%20Shared%20DB.png" style="outline:none">
+<img src="/diagrams/Evolutions/Shards/Shards%20add%20Shared%20DB.png" alt="Shards add Shared DB" style="width:100%"/>
 </a>
 </figure>
 
@@ -270,8 +270,8 @@ The issue peculiar to *Shards* is that of coordinating deployed instances, espec
 
 
 <figure>
-<a href="/Evolutions/Shards/Shards%20split%20Shared%20Service.png" style="outline:none">
-<img src="/Evolutions/Shards/Shards%20split%20Shared%20Service.png" alt="Shards split Shared Service" style="width:100%"/>
+<a href="/diagrams/Evolutions/Shards/Shards%20split%20Shared%20Service.png" style="outline:none">
+<img src="/diagrams/Evolutions/Shards/Shards%20split%20Shared%20Service.png" alt="Shards split Shared Service" style="width:100%"/>
 </a>
 </figure>
 
@@ -284,8 +284,8 @@ Other cases are better solved by extracting the logic that manipulates multiple 
 
 
 <figure>
-<a href="/Evolutions/Shards/Shards%20add%20Middleware.png" style="outline:none">
-<img src="/Evolutions/Shards/Shards%20add%20Middleware.png" alt="Shards add Middleware" style="width:100%"/>
+<a href="/diagrams/Evolutions/Shards/Shards%20add%20Middleware.png" style="outline:none">
+<img src="/diagrams/Evolutions/Shards/Shards%20add%20Middleware.png" alt="Shards add Middleware" style="width:100%"/>
 </a>
 </figure>
 
@@ -293,8 +293,8 @@ Other cases are better solved by extracting the logic that manipulates multiple 
 
 
 <figure>
-<a href="/Evolutions/Shards/Shards%20add%20Load%20Balancer.png" style="outline:none">
-<img src="/Evolutions/Shards/Shards%20add%20Load%20Balancer.png" alt="Shards add Load Balancer" style="width:100%"/>
+<a href="/diagrams/Evolutions/Shards/Shards%20add%20Load%20Balancer.png" style="outline:none">
+<img src="/diagrams/Evolutions/Shards/Shards%20add%20Load%20Balancer.png" alt="Shards add Load Balancer" style="width:100%"/>
 </a>
 </figure>
 
@@ -302,8 +302,8 @@ Other cases are better solved by extracting the logic that manipulates multiple 
 
 
 <figure>
-<a href="/Evolutions/Shards/Shards%20use%20Orchestrator.png" style="outline:none">
-<img src="/Evolutions/Shards/Shards%20use%20Orchestrator.png" alt="Shards use Orchestrator" style="width:100%"/>
+<a href="/diagrams/Evolutions/Shards/Shards%20use%20Orchestrator.png" style="outline:none">
+<img src="/diagrams/Evolutions/Shards/Shards%20use%20Orchestrator.png" alt="Shards use Orchestrator" style="width:100%"/>
 </a>
 </figure>
 

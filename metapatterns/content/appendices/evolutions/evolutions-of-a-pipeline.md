@@ -17,8 +17,8 @@ There are a couple of *Pipeline*\-specific evolutions:
 ## Promote a service to Front Controller
 
 <figure>
-<a href="/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png" style="outline:none">
-<img src="/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png" alt="Pipeline promote Front Controller" style="width:100%"/>
+<a href="/diagrams/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png" style="outline:none">
+<img src="/diagrams/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png" alt="Pipeline promote Front Controller" style="width:100%"/>
 </a>
 </figure>
 
@@ -48,8 +48,8 @@ If request processing steps require heavy calculations or manual action, clients
 ## Add an Orchestrator
 
 <figure>
-<a href="/Evolutions/Services/Pipeline%20use%20Orchestrator.png" style="outline:none">
-<img src="/Evolutions/Services/Pipeline%20use%20Orchestrator.png" alt="Pipeline use Orchestrator" style="width:100%"/>
+<a href="/diagrams/Evolutions/Services/Pipeline%20use%20Orchestrator.png" style="outline:none">
+<img src="/diagrams/Evolutions/Services/Pipeline%20use%20Orchestrator.png" alt="Pipeline use Orchestrator" style="width:100%"/>
 </a>
 </figure>
 

@@ -2,7 +2,7 @@
 weight = 9
 title = "Evolutions of Layers to improve performance"
 description = "There are a few ways to improve performance of a layered system: merge the layers, scale them, or use specialized databases (Polyglot Persistence)."
-images = ["/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.png"]
+images = ["/diagrams/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.png"]
 +++
 
 # Evolutions of Layers to improve performance
@@ -13,8 +13,8 @@ There are several ways to improve the performance of a [*layered system*]({{< re
 
 
 <figure>
-<a href="/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.png" style="outline:none">
-<img src="/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.png" alt="Layers to Space-Based Architecture" style="width:100%"/>
+<a href="/diagrams/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.png" style="outline:none">
+<img src="/diagrams/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.png" alt="Layers to Space-Based Architecture" style="width:100%"/>
 </a>
 </figure>
 
@@ -28,8 +28,8 @@ Others are new here and thus deserve more attention:
 ## Merge several layers
 
 <figure>
-<a href="/Evolutions/Layers/Layers%20Merge.png" style="outline:none">
-<img src="/Evolutions/Layers/Layers%20Merge.png" alt="Layers Merge" style="width:100%"/>
+<a href="/diagrams/Evolutions/Layers/Layers%20Merge.png" style="outline:none">
+<img src="/diagrams/Evolutions/Layers/Layers%20Merge.png" alt="Layers Merge" style="width:100%"/>
 </a>
 </figure>
 
@@ -61,8 +61,8 @@ If your system’s development [is finished]({{< relref "../../analytics/archite
 ## Scale individual layers
 
 <figure>
-<a href="/Evolutions/Layers/Layers_%20Shard.png" style="outline:none">
-<img src="/Evolutions/Layers/Layers_%20Shard.png" alt="Layers: Shard" style="width:100%"/>
+<a href="/diagrams/Evolutions/Layers/Layers_%20Shard.png" style="outline:none">
+<img src="/diagrams/Evolutions/Layers/Layers_%20Shard.png" alt="Layers: Shard" style="width:100%"/>
 </a>
 </figure>
 
@@ -95,8 +95,8 @@ Multiple instances or layers can be created, with their number and deployment [v
 ## Use multiple databases
 
 <figure>
-<a href="/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.png" style="outline:none">
-<img src="/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.png" alt="Layers to Polyglot Persistence" style="width:100%"/>
+<a href="/diagrams/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.png" style="outline:none">
+<img src="/diagrams/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.png" alt="Layers to Polyglot Persistence" style="width:100%"/>
 </a>
 </figure>
 

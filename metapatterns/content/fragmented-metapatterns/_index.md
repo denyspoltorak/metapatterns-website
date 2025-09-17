@@ -12,8 +12,8 @@ There are several patterns with no system\-wide layers\. Some of them incorporat
 ### [Layered Services]({{< relref "../fragmented-metapatterns/layered-services.md" >}})
 
 <figure>
-<a href="/Contents/Layered%20Services.png" style="outline:none">
-<img src="/Contents/Layered%20Services.png" alt="Layered Services" style="width:100%"/>
+<a href="/diagrams/Contents/Layered%20Services.png" style="outline:none">
+<img src="/diagrams/Contents/Layered%20Services.png" alt="Layered Services" style="width:100%"/>
 </a>
 </figure>
 
@@ -24,8 +24,8 @@ There are several patterns with no system\-wide layers\. Some of them incorporat
 ### [Polyglot Persistence]({{< relref "../fragmented-metapatterns/polyglot-persistence.md" >}})
 
 <figure>
-<a href="/Contents/Polyglot%20Persistence.png" style="outline:none">
-<img src="/Contents/Polyglot%20Persistence.png" alt="Polyglot Persistence" style="width:100%"/>
+<a href="/diagrams/Contents/Polyglot%20Persistence.png" style="outline:none">
+<img src="/diagrams/Contents/Polyglot%20Persistence.png" alt="Polyglot Persistence" style="width:100%"/>
 </a>
 </figure>
 
@@ -36,8 +36,8 @@ There are several patterns with no system\-wide layers\. Some of them incorporat
 ### [Backends for Frontends]({{< relref "../fragmented-metapatterns/backends-for-frontends--bff-.md" >}})
 
 <figure>
-<a href="/Contents/Backends%20for%20Frontends.png" style="outline:none">
-<img src="/Contents/Backends%20for%20Frontends.png" alt="Backends for Frontends" style="width:100%"/>
+<a href="/diagrams/Contents/Backends%20for%20Frontends.png" style="outline:none">
+<img src="/diagrams/Contents/Backends%20for%20Frontends.png" alt="Backends for Frontends" style="width:100%"/>
 </a>
 </figure>
 
@@ -48,8 +48,8 @@ There are several patterns with no system\-wide layers\. Some of them incorporat
 ### [Service\-Oriented Architecture]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}})
 
 <figure>
-<a href="/Contents/Service-Oriented%20Architecture.png" style="outline:none">
-<img src="/Contents/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" style="width:100%"/>
+<a href="/diagrams/Contents/Service-Oriented%20Architecture.png" style="outline:none">
+<img src="/diagrams/Contents/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" style="width:100%"/>
 </a>
 </figure>
 
@@ -60,8 +60,8 @@ There are several patterns with no system\-wide layers\. Some of them incorporat
 ### [Hierarchy]({{< relref "../fragmented-metapatterns/hierarchy.md" >}})
 
 <figure>
-<a href="/Contents/Hierarchy.png" style="outline:none">
-<img src="/Contents/Hierarchy.png" alt="Hierarchy" style="width:100%"/>
+<a href="/diagrams/Contents/Hierarchy.png" style="outline:none">
+<img src="/diagrams/Contents/Hierarchy.png" alt="Hierarchy" style="width:100%"/>
 </a>
 </figure>
 

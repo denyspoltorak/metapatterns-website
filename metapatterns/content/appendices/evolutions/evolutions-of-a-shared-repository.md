@@ -17,8 +17,8 @@ Once a database appears, it is unlikely to go away\. I see the following evoluti
 ## Shard the database
 
 <figure>
-<a href="/Evolutions/2/Shared%20Database_%20Shard.png" style="outline:none">
-<img src="/Evolutions/2/Shared%20Database_%20Shard.png" alt="Shared Database: Shard" style="width:100%"/>
+<a href="/diagrams/Evolutions/2/Shared%20Database_%20Shard.png" style="outline:none">
+<img src="/diagrams/Evolutions/2/Shared%20Database_%20Shard.png" alt="Shared Database: Shard" style="width:100%"/>
 </a>
 </figure>
 
@@ -55,8 +55,8 @@ Modern distributed databases support sharding out of the box, but an overgrown t
 ## Use Space\-Based Architecture
 
 <figure>
-<a href="/Evolutions/2/Shared%20Database%20to%20Space-Based%20Architecture.png" style="outline:none">
-<img src="/Evolutions/2/Shared%20Database%20to%20Space-Based%20Architecture.png" alt="Shared Database to Space-Based Architecture" style="width:100%"/>
+<a href="/diagrams/Evolutions/2/Shared%20Database%20to%20Space-Based%20Architecture.png" style="outline:none">
+<img src="/diagrams/Evolutions/2/Shared%20Database%20to%20Space-Based%20Architecture.png" alt="Shared Database to Space-Based Architecture" style="width:100%"/>
 </a>
 </figure>
 
@@ -86,8 +86,8 @@ Modern distributed databases support sharding out of the box, but an overgrown t
 ## Move the data to private databases of services
 
 <figure>
-<a href="/Evolutions/2/Shared%20Database%20to%20Services.png" style="outline:none">
-<img src="/Evolutions/2/Shared%20Database%20to%20Services.png" alt="Shared Database to Services" style="width:100%"/>
+<a href="/diagrams/Evolutions/2/Shared%20Database%20to%20Services.png" style="outline:none">
+<img src="/diagrams/Evolutions/2/Shared%20Database%20to%20Services.png" alt="Shared Database to Services" style="width:100%"/>
 </a>
 </figure>
 
@@ -121,8 +121,8 @@ If the data clearly follows subdomains, it may be possible to subdivide it accor
 ## Deploy specialized databases
 
 <figure>
-<a href="/Evolutions/2/Shared%20Database%20to%20Polyglot%20Persistence.png" style="outline:none">
-<img src="/Evolutions/2/Shared%20Database%20to%20Polyglot%20Persistence.png" alt="Shared Database to Polyglot Persistence" style="width:100%"/>
+<a href="/diagrams/Evolutions/2/Shared%20Database%20to%20Polyglot%20Persistence.png" style="outline:none">
+<img src="/diagrams/Evolutions/2/Shared%20Database%20to%20Polyglot%20Persistence.png" alt="Shared Database to Polyglot Persistence" style="width:100%"/>
 </a>
 </figure>
 

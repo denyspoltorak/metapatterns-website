@@ -12,8 +12,8 @@ We’ve seen a single pattern come under many names, as happens with [*Orchestra
 ### Monolith
 
 <figure>
-<a href="/Conclusion/Ambiguous-Monolith.png" style="outline:none">
-<img src="/Conclusion/Ambiguous-Monolith.png" alt="Ambiguous-Monolith" style="width:100%"/>
+<a href="/diagrams/Conclusion/Ambiguous-Monolith.png" style="outline:none">
+<img src="/diagrams/Conclusion/Ambiguous-Monolith.png" alt="Ambiguous-Monolith" style="width:100%"/>
 </a>
 </figure>
 
@@ -28,8 +28,8 @@ The novel misnomers, [*Layered Monolith*]({{< relref "../basic-metapatterns/laye
 ### Reactor
 
 <figure>
-<a href="/Variants/1/Subtypes%20of%20Monolith.png" style="outline:none">
-<img src="/Variants/1/Subtypes%20of%20Monolith.png" alt="Subtypes of Monolith" style="width:100%"/>
+<a href="/diagrams/Variants/1/Subtypes%20of%20Monolith.png" style="outline:none">
+<img src="/diagrams/Variants/1/Subtypes%20of%20Monolith.png" alt="Subtypes of Monolith" style="width:100%"/>
 </a>
 </figure>
 
@@ -45,8 +45,8 @@ In most cases we’ll hear of *Proactor* being called *Reactor* – probably bec
 ### Microkernel
 
 <figure>
-<a href="/Conclusion/Ambiguous-Microkernel.png" style="outline:none">
-<img src="/Conclusion/Ambiguous-Microkernel.png" alt="Ambiguous-Microkernel" style="width:80%"/>
+<a href="/diagrams/Conclusion/Ambiguous-Microkernel.png" style="outline:none">
+<img src="/diagrams/Conclusion/Ambiguous-Microkernel.png" alt="Ambiguous-Microkernel" style="width:80%"/>
 </a>
 </figure>
 
@@ -61,8 +61,8 @@ Thus, here we have two architectural patterns of arguably similar structure \([*
 ### Domain Services
 
 <figure>
-<a href="/Conclusion/Ambiguous-DomainServices.png" style="outline:none">
-<img src="/Conclusion/Ambiguous-DomainServices.png" alt="Ambiguous-DomainServices" style="width:74%"/>
+<a href="/diagrams/Conclusion/Ambiguous-DomainServices.png" style="outline:none">
+<img src="/diagrams/Conclusion/Ambiguous-DomainServices.png" alt="Ambiguous-DomainServices" style="width:74%"/>
 </a>
 </figure>
 
@@ -73,8 +73,8 @@ I believe that both definitions are technically correct, if the difference in th
 ### Service\-Based Architecture
 
 <figure>
-<a href="/Conclusion/Ambiguous-ServiceBasedArchitecture.png" style="outline:none">
-<img src="/Conclusion/Ambiguous-ServiceBasedArchitecture.png" alt="Ambiguous-ServiceBasedArchitecture" style="width:100%"/>
+<a href="/diagrams/Conclusion/Ambiguous-ServiceBasedArchitecture.png" style="outline:none">
+<img src="/diagrams/Conclusion/Ambiguous-ServiceBasedArchitecture.png" alt="Ambiguous-ServiceBasedArchitecture" style="width:100%"/>
 </a>
 </figure>
 
@@ -87,8 +87,8 @@ Both definitions are technically correct\. One is wider than the other\.
 ### Front Controller
 
 <figure>
-<a href="/Conclusion/Ambiguous-FrontController.png" style="outline:none">
-<img src="/Conclusion/Ambiguous-FrontController.png" alt="Ambiguous-FrontController" style="width:70%"/>
+<a href="/diagrams/Conclusion/Ambiguous-FrontController.png" style="outline:none">
+<img src="/diagrams/Conclusion/Ambiguous-FrontController.png" alt="Ambiguous-FrontController" style="width:70%"/>
 </a>
 </figure>
 
@@ -99,8 +99,8 @@ The definition from \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp"
 ### Cells
 
 <figure>
-<a href="/Conclusion/Ambiguous-Cells.png" style="outline:none">
-<img src="/Conclusion/Ambiguous-Cells.png" alt="Ambiguous-Cells" style="width:100%"/>
+<a href="/diagrams/Conclusion/Ambiguous-Cells.png" style="outline:none">
+<img src="/diagrams/Conclusion/Ambiguous-Cells.png" alt="Ambiguous-Cells" style="width:100%"/>
 </a>
 </figure>
 
@@ -115,8 +115,8 @@ This case looks like Amazon’s hijacking and redefining a popular emerging tech
 ### Nanoservices
 
 <figure>
-<a href="/Conclusion/Ambiguous-Nanoservices.png" style="outline:none">
-<img src="/Conclusion/Ambiguous-Nanoservices.png" alt="Ambiguous-Nanoservices" style="width:100%"/>
+<a href="/diagrams/Conclusion/Ambiguous-Nanoservices.png" style="outline:none">
+<img src="/diagrams/Conclusion/Ambiguous-Nanoservices.png" alt="Ambiguous-Nanoservices" style="width:100%"/>
 </a>
 </figure>
 

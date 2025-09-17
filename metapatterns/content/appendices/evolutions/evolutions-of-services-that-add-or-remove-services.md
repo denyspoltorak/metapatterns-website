@@ -17,8 +17,8 @@ description = "A new service can be added, an existing one can be split in two, 
 ## Add or split a service
 
 <figure>
-<a href="/Evolutions/Services/Services_%20Split.png" style="outline:none">
-<img src="/Evolutions/Services/Services_%20Split.png" alt="Services: Split" style="width:100%"/>
+<a href="/diagrams/Evolutions/Services/Services_%20Split.png" style="outline:none">
+<img src="/diagrams/Evolutions/Services/Services_%20Split.png" alt="Services: Split" style="width:100%"/>
 </a>
 </figure>
 
@@ -50,8 +50,8 @@ If one of your services has grown too large, you should look for a way to subdiv
 ## Merge services
 
 <figure>
-<a href="/Evolutions/Services/Services_%20Merge.png" style="outline:none">
-<img src="/Evolutions/Services/Services_%20Merge.png" alt="Services: Merge" style="width:100%"/>
+<a href="/diagrams/Evolutions/Services/Services_%20Merge.png" style="outline:none">
+<img src="/diagrams/Evolutions/Services/Services_%20Merge.png" alt="Services: Merge" style="width:100%"/>
 </a>
 </figure>
 

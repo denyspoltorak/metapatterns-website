@@ -2,7 +2,7 @@
 weight = 10
 title = "Evolutions of Layers to gain flexibility"
 description = "The upper Proxy or Orchestrator layer can be split into a service per client, making Backends for Frontends. This allows for per-client customization."
-images = ["/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png"]
+images = ["/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png"]
 +++
 
 # Evolutions of Layers to gain flexibility
@@ -15,8 +15,8 @@ The last group of evolutions to consider is about making the system more adaptab
 
 
 <figure>
-<a href="/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png" style="outline:none">
-<img src="/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png" alt="Monolith to Layers - Further 2" style="width:100%"/>
+<a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png" style="outline:none">
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png" alt="Monolith to Layers - Further 2" style="width:100%"/>
 </a>
 </figure>
 
@@ -28,8 +28,8 @@ There is also a new evolution that modifies the upper \(orchestration\) layer:
 ## Divide the orchestration layer into Backends for Frontends
 
 <figure>
-<a href="/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.png" style="outline:none">
-<img src="/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.png" alt="Layers to Backends for Frontends" style="width:100%"/>
+<a href="/diagrams/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.png" style="outline:none">
+<img src="/diagrams/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.png" alt="Layers to Backends for Frontends" style="width:100%"/>
 </a>
 </figure>
 

@@ -2,14 +2,14 @@
 weight = 10
 title = "Pipeline"
 description = "A pipeline is a chain of components that implement individual steps of data or event processing. Its parts tend to be highly independent and scalable."
-images = ["/Main/Pipeline.png"]
+images = ["/diagrams/Main/Pipeline.png"]
 +++
 
 # Pipeline
 
 <figure>
-<a href="/Main/Pipeline.png" style="outline:none">
-<img src="/Main/Pipeline.png" alt="Pipeline" style="width:100%"/>
+<a href="/diagrams/Main/Pipeline.png" style="outline:none">
+<img src="/diagrams/Main/Pipeline.png" alt="Pipeline" style="width:100%"/>
 </a>
 </figure>
 
@@ -65,8 +65,8 @@ There are three ways to build communication in a pipeline, each with different d
 
 
 <figure>
-<a href="/Dependencies/Pipeline.png" style="outline:none">
-<img src="/Dependencies/Pipeline.png" alt="Pipeline" style="width:100%"/>
+<a href="/diagrams/Dependencies/Pipeline.png" style="outline:none">
+<img src="/diagrams/Dependencies/Pipeline.png" alt="Pipeline" style="width:100%"/>
 </a>
 </figure>
 
@@ -118,8 +118,8 @@ Such a variety of options enables the use of pipelines in a wide range of domain
 ### Pipes and Filters, Workflow System
 
 <figure>
-<a href="/Variants/1/Pipes%20and%20Filters.png" style="outline:none">
-<img src="/Variants/1/Pipes%20and%20Filters.png" alt="Pipes and Filters" style="width:100%"/>
+<a href="/diagrams/Variants/1/Pipes%20and%20Filters.png" style="outline:none">
+<img src="/diagrams/Variants/1/Pipes%20and%20Filters.png" alt="Pipes and Filters" style="width:100%"/>
 </a>
 </figure>
 
@@ -134,8 +134,8 @@ Examples: Unix shell pipes, processing of video streams, many types of hardware\
 ### Choreographed \(Broker Topology\) Event\-Driven Architecture \(EDA\), Event Collaboration
 
 <figure>
-<a href="/Variants/1/Event-Driven%20Architecture.png" style="outline:none">
-<img src="/Variants/1/Event-Driven%20Architecture.png" alt="Event-Driven Architecture" style="width:100%"/>
+<a href="/diagrams/Variants/1/Event-Driven%20Architecture.png" style="outline:none">
+<img src="/diagrams/Variants/1/Event-Driven%20Architecture.png" alt="Event-Driven Architecture" style="width:100%"/>
 </a>
 </figure>
 
@@ -167,8 +167,8 @@ Examples: high performance web services\.
 ### Data Mesh
 
 <figure>
-<a href="/Variants/1/Data%20Mesh.png" style="outline:none">
-<img src="/Variants/1/Data%20Mesh.png" alt="Data Mesh" style="width:100%"/>
+<a href="/diagrams/Variants/1/Data%20Mesh.png" style="outline:none">
+<img src="/diagrams/Variants/1/Data%20Mesh.png" alt="Data Mesh" style="width:100%"/>
 </a>
 </figure>
 
@@ -188,8 +188,8 @@ There is a pragmatic option to allow an operational service to resort to the ana
 ### Function as a Service \(FaaS\), Nanoservices \(pipelined\)
 
 <figure>
-<a href="/Variants/1/Nanoservices.png" style="outline:none">
-<img src="/Variants/1/Nanoservices.png" alt="Nanoservices" style="width:100%"/>
+<a href="/diagrams/Variants/1/Nanoservices.png" style="outline:none">
+<img src="/diagrams/Variants/1/Nanoservices.png" alt="Nanoservices" style="width:100%"/>
 </a>
 </figure>
 
@@ -207,8 +207,8 @@ There are a couple of [pipeline\-specific evolutions]({{< relref "../appendices/
 
 
 <figure>
-<a href="/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png" style="outline:none">
-<img src="/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png" alt="Pipeline promote Front Controller" style="width:100%"/>
+<a href="/diagrams/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png" style="outline:none">
+<img src="/diagrams/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png" alt="Pipeline promote Front Controller" style="width:100%"/>
 </a>
 </figure>
 
@@ -216,8 +216,8 @@ There are a couple of [pipeline\-specific evolutions]({{< relref "../appendices/
 
 
 <figure>
-<a href="/Evolutions/Services/Pipeline%20use%20Orchestrator.png" style="outline:none">
-<img src="/Evolutions/Services/Pipeline%20use%20Orchestrator.png" alt="Pipeline use Orchestrator" style="width:100%"/>
+<a href="/diagrams/Evolutions/Services/Pipeline%20use%20Orchestrator.png" style="outline:none">
+<img src="/diagrams/Evolutions/Services/Pipeline%20use%20Orchestrator.png" alt="Pipeline use Orchestrator" style="width:100%"/>
 </a>
 </figure>
 

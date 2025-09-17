@@ -2,14 +2,14 @@
 weight = 6
 title = "Layered Services"
 description = "Layered Services may orchestrate each other, rely on choreography, or make a CQRS system. The communication between services happens at different layers."
-images = ["/Main/Layered%20Services.png"]
+images = ["/diagrams/Main/Layered%20Services.png"]
 +++
 
 # Layered Services
 
 <figure>
-<a href="/Main/Layered%20Services.png" style="outline:none">
-<img src="/Main/Layered%20Services.png" alt="Layered Services" style="width:100%"/>
+<a href="/diagrams/Main/Layered%20Services.png" style="outline:none">
+<img src="/diagrams/Main/Layered%20Services.png" alt="Layered Services" style="width:100%"/>
 </a>
 </figure>
 
@@ -38,8 +38,8 @@ Remarkable features of *Layered Services* include:
 
 
 <figure>
-<a href="/Performance/Layered%20Services%20-%20sharding.png" style="outline:none">
-<img src="/Performance/Layered%20Services%20-%20sharding.png" alt="Layered Services - sharding" style="width:100%"/>
+<a href="/diagrams/Performance/Layered%20Services%20-%20sharding.png" style="outline:none">
+<img src="/diagrams/Performance/Layered%20Services%20-%20sharding.png" alt="Layered Services - sharding" style="width:100%"/>
 </a>
 </figure>
 
@@ -47,8 +47,8 @@ Remarkable features of *Layered Services* include:
 
 
 <figure>
-<a href="/Performance/Layered%20Services%20-%20channels.png" style="outline:none">
-<img src="/Performance/Layered%20Services%20-%20channels.png" alt="Layered Services - channels" style="width:100%"/>
+<a href="/diagrams/Performance/Layered%20Services%20-%20channels.png" style="outline:none">
+<img src="/diagrams/Performance/Layered%20Services%20-%20channels.png" alt="Layered Services - channels" style="width:100%"/>
 </a>
 </figure>
 
@@ -59,8 +59,8 @@ Remarkable features of *Layered Services* include:
 ## Orchestrated Three\-Layered Services 
 
 <figure>
-<a href="/Variants/3/Three-Layered%20Services.png" style="outline:none">
-<img src="/Variants/3/Three-Layered%20Services.png" alt="Three-Layered Services" style="width:100%"/>
+<a href="/diagrams/Variants/3/Three-Layered%20Services.png" style="outline:none">
+<img src="/diagrams/Variants/3/Three-Layered%20Services.png" alt="Three-Layered Services" style="width:100%"/>
 </a>
 </figure>
 
@@ -73,8 +73,8 @@ If such an architecture is divided into [services]({{< relref "../basic-metapatt
 The upper \(application\) layer of each service orchestrates both its middle \(domain\) layer and the upper layers of other services, resulting in [mutual orchestration and interdependencies]({{< relref "../foundations-of-software-architecture/arranging-communication/orchestration.md#mutual-orchestration" >}})\.
 
 <figure>
-<a href="/Communication/Mutual%20Orchestration%20-%204.png" style="outline:none">
-<img src="/Communication/Mutual%20Orchestration%20-%204.png" alt="Mutual Orchestration - 4" style="width:100%"/>
+<a href="/diagrams/Communication/Mutual%20Orchestration%20-%204.png" style="outline:none">
+<img src="/diagrams/Communication/Mutual%20Orchestration%20-%204.png" alt="Mutual Orchestration - 4" style="width:100%"/>
 </a>
 </figure>
 
@@ -98,8 +98,8 @@ The good thing is that the majority of the code belongs to the domain layer whic
 
 
 <figure>
-<a href="/Evolutions/3/Three-Layered%20Services%20-%201.png" style="outline:none">
-<img src="/Evolutions/3/Three-Layered%20Services%20-%201.png" alt="Three-Layered Services - 1" style="width:100%"/>
+<a href="/diagrams/Evolutions/3/Three-Layered%20Services%20-%201.png" style="outline:none">
+<img src="/diagrams/Evolutions/3/Three-Layered%20Services%20-%201.png" alt="Three-Layered Services - 1" style="width:100%"/>
 </a>
 </figure>
 
@@ -110,8 +110,8 @@ or by building derived datasets:
 
 
 <figure>
-<a href="/Evolutions/3/Three-Layered%20Services%20-%202.png" style="outline:none">
-<img src="/Evolutions/3/Three-Layered%20Services%20-%202.png" alt="Three-Layered Services - 2" style="width:100%"/>
+<a href="/diagrams/Evolutions/3/Three-Layered%20Services%20-%202.png" style="outline:none">
+<img src="/diagrams/Evolutions/3/Three-Layered%20Services%20-%202.png" alt="Three-Layered Services - 2" style="width:100%"/>
 </a>
 </figure>
 
@@ -121,16 +121,16 @@ If the services become too large:
 
 
 <figure>
-<a href="/Evolutions/3/Three-Layered%20Services%20-%203.png" style="outline:none">
-<img src="/Evolutions/3/Three-Layered%20Services%20-%203.png" alt="Three-Layered Services - 3" style="width:100%"/>
+<a href="/diagrams/Evolutions/3/Three-Layered%20Services%20-%203.png" style="outline:none">
+<img src="/diagrams/Evolutions/3/Three-Layered%20Services%20-%203.png" alt="Three-Layered Services - 3" style="width:100%"/>
 </a>
 </figure>
 
 ## Choreographed Two\-Layered Services
 
 <figure>
-<a href="/Variants/3/Two-Layered%20Services.png" style="outline:none">
-<img src="/Variants/3/Two-Layered%20Services.png" alt="Two-Layered Services" style="width:100%"/>
+<a href="/diagrams/Variants/3/Two-Layered%20Services.png" style="outline:none">
+<img src="/diagrams/Variants/3/Two-Layered%20Services.png" alt="Two-Layered Services" style="width:100%"/>
 </a>
 </figure>
 
@@ -157,16 +157,16 @@ If *Choreographed Layered Services* become coupled:
 
 
 <figure>
-<a href="/Evolutions/3/Two-Layered%20Services%20-%201.png" style="outline:none">
-<img src="/Evolutions/3/Two-Layered%20Services%20-%201.png" alt="Two-Layered Services - 1" style="width:100%"/>
+<a href="/diagrams/Evolutions/3/Two-Layered%20Services%20-%201.png" style="outline:none">
+<img src="/diagrams/Evolutions/3/Two-Layered%20Services%20-%201.png" alt="Two-Layered Services - 1" style="width:100%"/>
 </a>
 </figure>
 
 [*CQRS Views*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] or [*Query Services*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#query-service-front-controller-data-warehouse-data-lake-aggregate-data-product-quantum-dpq-of-data-mesh" >}}) \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] are also an option:
 
 <figure>
-<a href="/Evolutions/3/Two-Layered%20Services%20-%202.png" style="outline:none">
-<img src="/Evolutions/3/Two-Layered%20Services%20-%202.png" alt="Two-Layered Services - 2" style="width:100%"/>
+<a href="/diagrams/Evolutions/3/Two-Layered%20Services%20-%202.png" style="outline:none">
+<img src="/diagrams/Evolutions/3/Two-Layered%20Services%20-%202.png" alt="Two-Layered Services - 2" style="width:100%"/>
 </a>
 </figure>
 
@@ -176,24 +176,24 @@ An overgrown service can be:
 
 
 <figure>
-<a href="/Evolutions/3/Two-Layered%20Services%20-%203.png" style="outline:none">
-<img src="/Evolutions/3/Two-Layered%20Services%20-%203.png" alt="Two-Layered Services - 3" style="width:100%"/>
+<a href="/diagrams/Evolutions/3/Two-Layered%20Services%20-%203.png" style="outline:none">
+<img src="/diagrams/Evolutions/3/Two-Layered%20Services%20-%203.png" alt="Two-Layered Services - 3" style="width:100%"/>
 </a>
 </figure>
 
 ## Command Query Responsibility Segregation \(CQRS\)
 
 <figure>
-<a href="/Variants/3/CQRS.png" style="outline:none">
-<img src="/Variants/3/CQRS.png" alt="CQRS" style="width:100%"/>
+<a href="/diagrams/Variants/3/CQRS.png" style="outline:none">
+<img src="/diagrams/Variants/3/CQRS.png" alt="CQRS" style="width:100%"/>
 </a>
 </figure>
 
 *Command Query Responsibility Segregation* \(*CQRS*\) \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}}), [LDDD]({{< relref "../appendices/books-referenced.md#lddd" >}})\] is, essentially, the division of a [layered]({{< relref "../basic-metapatterns/layers.md" >}}) application or a service into two \(rarely more\) [services]({{< relref "../basic-metapatterns/services.md" >}}), one of which is responsible for write access \(handling *commands*\) to the domain data while the other\(s\) deal with read access \(*queries*\), thus [creating]({{< relref "../analytics/comparison-of-architectural-patterns/pipelines-in-architectural-patterns.md" >}}) a data [*pipeline*]({{< relref "../basic-metapatterns/pipeline.md" >}}) \(see the diagram below\)\. Such an architecture makes sense when the write and read operations don’t rely on a common vision \(*model*\) of the domain, for example, writes are individual changes \([*OLTP*](https://en.wikipedia.org/wiki/Online_transaction_processing)\) that require cross\-checks and validation of input while reads show aggregated data \([*OLAP*](https://en.wikipedia.org/wiki/Online_analytical_processing)\) and may take long time to complete \(meaning that [*forces*]({{< relref "../foundations-of-software-architecture/forces--asynchronicity--and-distribution.md" >}}) for the read and write paths differ\)\. If there is nothing to share in the code, why not separate the implementations?
 
 <figure>
-<a href="/Variants/3/CQRS%20-%20pipeline%20view.png" style="outline:none">
-<img src="/Variants/3/CQRS%20-%20pipeline%20view.png" alt="CQRS - pipeline view" style="width:100%"/>
+<a href="/diagrams/Variants/3/CQRS%20-%20pipeline%20view.png" style="outline:none">
+<img src="/diagrams/Variants/3/CQRS%20-%20pipeline%20view.png" alt="CQRS - pipeline view" style="width:100%"/>
 </a>
 </figure>
 
@@ -206,8 +206,8 @@ This separation brings in the pros and cons of [*Services*]({{< relref "../basic
 
 
 <figure>
-<a href="/Variants/3/CQRS%20-%20subtypes.png" style="outline:none">
-<img src="/Variants/3/CQRS%20-%20subtypes.png" alt="CQRS - subtypes" style="width:100%"/>
+<a href="/diagrams/Variants/3/CQRS%20-%20subtypes.png" style="outline:none">
+<img src="/diagrams/Variants/3/CQRS%20-%20subtypes.png" alt="CQRS - subtypes" style="width:100%"/>
 </a>
 </figure>
 
@@ -220,8 +220,8 @@ Examples: Martin Fowler has a [short article](https://martinfowler.com/bliki/CQR
 Each backend depends on its database \(its technology and schema\)\. The OLTP to OLAP data replication requires an additional dependency that corresponds to the way the replication is implemented:
 
 <figure>
-<a href="/Dependencies/CQRS.png" style="outline:none">
-<img src="/Dependencies/CQRS.png" alt="CQRS" style="width:100%"/>
+<a href="/diagrams/Dependencies/CQRS.png" style="outline:none">
+<img src="/diagrams/Dependencies/CQRS.png" alt="CQRS" style="width:100%"/>
 </a>
 </figure>
 
@@ -244,8 +244,8 @@ Each backend depends on its database \(its technology and schema\)\. The OLTP to
 
 
 <figure>
-<a href="/Evolutions/3/CQRS.png" style="outline:none">
-<img src="/Evolutions/3/CQRS.png" alt="CQRS" style="width:100%"/>
+<a href="/diagrams/Evolutions/3/CQRS.png" style="outline:none">
+<img src="/diagrams/Evolutions/3/CQRS.png" alt="CQRS" style="width:100%"/>
 </a>
 </figure>
 

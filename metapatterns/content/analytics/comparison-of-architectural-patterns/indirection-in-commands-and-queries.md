@@ -22,8 +22,8 @@ If we want for each module or service to continue with a model that fits its nee
 ## Command \(OLTP\) systems
 
 <figure>
-<a href="/Conclusion/Indirection-Command.png" style="outline:none">
-<img src="/Conclusion/Indirection-Command.png" alt="Indirection-Command" style="width:100%"/>
+<a href="/diagrams/Conclusion/Indirection-Command.png" style="outline:none">
+<img src="/diagrams/Conclusion/Indirection-Command.png" alt="Indirection-Command" style="width:100%"/>
 </a>
 </figure>
 
@@ -39,8 +39,8 @@ In such a case we employ an [*Adapter*]({{< relref "../../extension-metapatterns
 ## Query \(OLAP\) systems
 
 <figure>
-<a href="/Conclusion/Indirection-Query.png" style="outline:none">
-<img src="/Conclusion/Indirection-Query.png" alt="Indirection-Query" style="width:100%"/>
+<a href="/diagrams/Conclusion/Indirection-Query.png" style="outline:none">
+<img src="/diagrams/Conclusion/Indirection-Query.png" alt="Indirection-Query" style="width:100%"/>
 </a>
 </figure>
 

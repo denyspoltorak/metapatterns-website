@@ -2,14 +2,14 @@
 weight = 9
 title = "Service-Oriented Architecture (SOA)"
 description = "Service-Oriented Architecture is an application of object-oriented design at the system level. It builds a system from small reusable components."
-images = ["/Main/Service-Oriented%20Architecture.png"]
+images = ["/diagrams/Main/Service-Oriented%20Architecture.png"]
 +++
 
 # Service\-Oriented Architecture \(SOA\)
 
 <figure>
-<a href="/Main/Service-Oriented%20Architecture.png" style="outline:none">
-<img src="/Main/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" style="width:100%"/>
+<a href="/diagrams/Main/Service-Oriented%20Architecture.png" style="outline:none">
+<img src="/diagrams/Main/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" style="width:100%"/>
 </a>
 </figure>
 
@@ -55,8 +55,8 @@ Nevertheless, the pattern allows for good throughput as its stateless components
 Each service of each layer depends on everything it uses\. As a result, development of a low\-level \(utility\) component may be paralyzed because too many services already use it, thus no changes are welcome\. Hence, the team writes a new version of their utility as a new service, which defeats the very idea of component reuse that *SOA* was based on\.
 
 <figure>
-<a href="/Dependencies/Service-Oriented%20Architecture.png" style="outline:none">
-<img src="/Dependencies/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" style="width:88%"/>
+<a href="/diagrams/Dependencies/Service-Oriented%20Architecture.png" style="outline:none">
+<img src="/diagrams/Dependencies/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" style="width:88%"/>
 </a>
 </figure>
 
@@ -91,8 +91,8 @@ This architecture was hyped at the time when enterprises were expanding by acqui
 ### Distributed Monolith
 
 <figure>
-<a href="/Variants/3/Distributed%20Monolith.png" style="outline:none">
-<img src="/Variants/3/Distributed%20Monolith.png" alt="Distributed Monolith" style="width:100%"/>
+<a href="/diagrams/Variants/3/Distributed%20Monolith.png" style="outline:none">
+<img src="/diagrams/Variants/3/Distributed%20Monolith.png" alt="Distributed Monolith" style="width:100%"/>
 </a>
 </figure>
 
@@ -101,8 +101,8 @@ If a [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) gets too c
 ### Enterprise SOA
 
 <figure>
-<a href="/Variants/3/Enterprise%20SOA.png" style="outline:none">
-<img src="/Variants/3/Enterprise%20SOA.png" alt="Enterprise SOA" style="width:100%"/>
+<a href="/diagrams/Variants/3/Enterprise%20SOA.png" style="outline:none">
+<img src="/diagrams/Variants/3/Enterprise%20SOA.png" alt="Enterprise SOA" style="width:100%"/>
 </a>
 </figure>
 
@@ -118,8 +118,8 @@ The layers of *SOA* are:
 ### Domain\-Oriented Microservice Architecture \(DOMA\)
 
 <figure>
-<a href="/Variants/3/DOMA.png" style="outline:none">
-<img src="/Variants/3/DOMA.png" alt="DOMA" style="width:100%"/>
+<a href="/diagrams/Variants/3/DOMA.png" style="outline:none">
+<img src="/diagrams/Variants/3/DOMA.png" alt="DOMA" style="width:100%"/>
 </a>
 </figure>
 
@@ -135,8 +135,8 @@ Uber’s *DOMA* also [makes heavy use](https://www.uber.com/blog/microservice-ar
 ### \(misapplied\) Automotive SOA
 
 <figure>
-<a href="/Variants/3/SOA%20-%20AUTOSAR.png" style="outline:none">
-<img src="/Variants/3/SOA%20-%20AUTOSAR.png" alt="SOA - AUTOSAR" style="width:100%"/>
+<a href="/diagrams/Variants/3/SOA%20-%20AUTOSAR.png" style="outline:none">
+<img src="/diagrams/Variants/3/SOA%20-%20AUTOSAR.png" alt="SOA - AUTOSAR" style="width:100%"/>
 </a>
 </figure>
 
@@ -154,8 +154,8 @@ It seems that some proponents of [*Nanoservices*]({{< relref "../basic-metapatte
 
 
 <figure>
-<a href="/Evolutions/3/SOA%20-%201.png" style="outline:none">
-<img src="/Evolutions/3/SOA%20-%201.png" alt="SOA - 1" style="width:100%"/>
+<a href="/diagrams/Evolutions/3/SOA%20-%201.png" style="outline:none">
+<img src="/diagrams/Evolutions/3/SOA%20-%201.png" alt="SOA - 1" style="width:100%"/>
 </a>
 </figure>
 
@@ -163,8 +163,8 @@ It seems that some proponents of [*Nanoservices*]({{< relref "../basic-metapatte
 
 
 <figure>
-<a href="/Evolutions/3/SOA%20-%202.png" style="outline:none">
-<img src="/Evolutions/3/SOA%20-%202.png" alt="SOA - 2" style="width:100%"/>
+<a href="/diagrams/Evolutions/3/SOA%20-%202.png" style="outline:none">
+<img src="/diagrams/Evolutions/3/SOA%20-%202.png" alt="SOA - 2" style="width:100%"/>
 </a>
 </figure>
 
@@ -179,8 +179,8 @@ Afterwards you may deal with the remaining orchestration\. The idea is to move t
 
 
 <figure>
-<a href="/Evolutions/3/SOA%20-%203.png" style="outline:none">
-<img src="/Evolutions/3/SOA%20-%203.png" alt="SOA - 3" style="width:100%"/>
+<a href="/diagrams/Evolutions/3/SOA%20-%203.png" style="outline:none">
+<img src="/diagrams/Evolutions/3/SOA%20-%203.png" alt="SOA - 3" style="width:100%"/>
 </a>
 </figure>
 

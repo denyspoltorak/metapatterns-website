@@ -2,7 +2,7 @@
 weight = 5
 title = "Comparison of communication styles"
 description = "Orchestration is good when there are many complex scenarios, choreography - for simple highly loaded systems, shared data - for data-centric domains."
-images = ["/Communication/Cell-Based%20Architecture.png"]
+images = ["/diagrams/Communication/Cell-Based%20Architecture.png"]
 +++
 
 # Comparison of communication styles
@@ -18,8 +18,8 @@ We have briefly discussed three approaches to communication: orchestration, chor
 There is advice [from Microsoft](https://learn.microsoft.com/en-us/azure/architecture/patterns/choreography) and \[[DEDS]({{< relref "../../appendices/books-referenced.md#deds" >}})\] which makes perfect sense: use choreography for communication between *bounded contexts* \(subdomains\) but revert to orchestration \(or maybe shared data\) inside each context\. Indeed, subdomains are likely to be loosely coupled while most user requests don’t traverse subdomain boundaries – which kindles hope that their interactions are few and not time\-critical\. If we follow the advice, we get [*Cell\-Based Architecture*]({{< relref "../../fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services" >}}) \([WSO2 definition](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md)\), which collects the best of two worlds: orchestration and/or shared data for strongly coupled parts and choreography between them\.
 
 <figure>
-<a href="/Communication/Cell-Based%20Architecture.png" style="outline:none">
-<img src="/Communication/Cell-Based%20Architecture.png" alt="Cell-Based Architecture" style="width:100%"/>
+<a href="/diagrams/Communication/Cell-Based%20Architecture.png" style="outline:none">
+<img src="/diagrams/Communication/Cell-Based%20Architecture.png" alt="Cell-Based Architecture" style="width:100%"/>
 </a>
 </figure>
 

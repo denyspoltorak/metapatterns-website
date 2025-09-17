@@ -16,8 +16,8 @@ The simplest way to use a shared functionality \(aspect\) is to call the module 
 Sharing data inside a process is similar, but usually requires some kind of protection, like an [RW lock](https://en.wikipedia.org/wiki/Readers–writer_lock), around it to serialize access from multiple threads\.
 
 <figure>
-<a href="/Conclusion/Sharing-DirectCall.png" style="outline:none">
-<img src="/Conclusion/Sharing-DirectCall.png" alt="Sharing-DirectCall" style="width:100%"/>
+<a href="/diagrams/Conclusion/Sharing-DirectCall.png" style="outline:none">
+<img src="/diagrams/Conclusion/Sharing-DirectCall.png" alt="Sharing-DirectCall" style="width:100%"/>
 </a>
 </figure>
 
@@ -26,8 +26,8 @@ Sharing data inside a process is similar, but usually requires some kind of prot
 In a distributed system you can place the functionality or data to share into a separate service to be accessed over the network, yielding [*Service\-Oriented Architecture*]({{< relref "../../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}) for shared utilities or a [*Shared Repository*]({{< relref "../../extension-metapatterns/shared-repository.md" >}}) / [*Polyglot Persistence*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md" >}}) for shared data\.
 
 <figure>
-<a href="/Conclusion/Sharing-DedicatedService.png" style="outline:none">
-<img src="/Conclusion/Sharing-DedicatedService.png" alt="Sharing-DedicatedService" style="width:100%"/>
+<a href="/diagrams/Conclusion/Sharing-DedicatedService.png" style="outline:none">
+<img src="/diagrams/Conclusion/Sharing-DedicatedService.png" alt="Sharing-DedicatedService" style="width:100%"/>
 </a>
 </figure>
 
@@ -38,8 +38,8 @@ A less obvious solution is [delegating](https://datatracker.ietf.org/doc/html/rf
 In a similar way a service may [behave as a function]({{< relref "../../foundations-of-software-architecture/arranging-communication/programming-and-architectural-paradigms.md#functional-decentralized-streaming-paradigm--choreography" >}}): receive all the data it needs in an input message and send back all its work as an output – and let the database access remain the responsibility of its caller\.
 
 <figure>
-<a href="/Conclusion/Sharing-Delegate.png" style="outline:none">
-<img src="/Conclusion/Sharing-Delegate.png" alt="Sharing-Delegate" style="width:100%"/>
+<a href="/diagrams/Conclusion/Sharing-Delegate.png" style="outline:none">
+<img src="/diagrams/Conclusion/Sharing-Delegate.png" alt="Sharing-Delegate" style="width:100%"/>
 </a>
 </figure>
 
@@ -50,8 +50,8 @@ Finally, each user of a component can get its own replica\. This is done implici
 Another case of replication is importing the same code in multiple services, which happens in [single\-layer *Nanoservices*]({{< relref "../../basic-metapatterns/services.md#inexact-nanoservices-api-layer" >}})\.
 
 <figure>
-<a href="/Conclusion/Sharing-Duplicate.png" style="outline:none">
-<img src="/Conclusion/Sharing-Duplicate.png" alt="Sharing-Duplicate" style="width:100%"/>
+<a href="/diagrams/Conclusion/Sharing-Duplicate.png" style="outline:none">
+<img src="/diagrams/Conclusion/Sharing-Duplicate.png" alt="Sharing-Duplicate" style="width:100%"/>
 </a>
 </figure>
 

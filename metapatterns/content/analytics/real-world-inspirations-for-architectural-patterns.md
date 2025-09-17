@@ -19,8 +19,8 @@ The basic patterns lay the foundation for any system by paving ways to *divide* 
 ### Monolith
 
 <figure>
-<a href="/Contents/Monolith.png" style="outline:none">
-<img src="/Contents/Monolith.png" alt="Monolith" style="width:100%"/>
+<a href="/diagrams/Contents/Monolith.png" style="outline:none">
+<img src="/diagrams/Contents/Monolith.png" alt="Monolith" style="width:100%"/>
 </a>
 </figure>
 
@@ -37,8 +37,8 @@ The basic patterns lay the foundation for any system by paving ways to *divide* 
 ### Shards
 
 <figure>
-<a href="/Contents/Shards.png" style="outline:none">
-<img src="/Contents/Shards.png" alt="Shards" style="width:100%"/>
+<a href="/diagrams/Contents/Shards.png" style="outline:none">
+<img src="/diagrams/Contents/Shards.png" alt="Shards" style="width:100%"/>
 </a>
 </figure>
 
@@ -55,8 +55,8 @@ The basic patterns lay the foundation for any system by paving ways to *divide* 
 ### Layers
 
 <figure>
-<a href="/Contents/Layers.png" style="outline:none">
-<img src="/Contents/Layers.png" alt="Layers" style="width:95%"/>
+<a href="/diagrams/Contents/Layers.png" style="outline:none">
+<img src="/diagrams/Contents/Layers.png" alt="Layers" style="width:95%"/>
 </a>
 </figure>
 
@@ -71,8 +71,8 @@ The basic patterns lay the foundation for any system by paving ways to *divide* 
 ### Services
 
 <figure>
-<a href="/Contents/Services.png" style="outline:none">
-<img src="/Contents/Services.png" alt="Services" style="width:95%"/>
+<a href="/diagrams/Contents/Services.png" style="outline:none">
+<img src="/diagrams/Contents/Services.png" alt="Services" style="width:95%"/>
 </a>
 </figure>
 
@@ -89,8 +89,8 @@ The basic patterns lay the foundation for any system by paving ways to *divide* 
 ### Pipeline
 
 <figure>
-<a href="/Contents/Pipeline.png" style="outline:none">
-<img src="/Contents/Pipeline.png" alt="Pipeline" style="width:95%"/>
+<a href="/diagrams/Contents/Pipeline.png" style="outline:none">
+<img src="/diagrams/Contents/Pipeline.png" alt="Pipeline" style="width:95%"/>
 </a>
 </figure>
 
@@ -111,8 +111,8 @@ An extension pattern encapsulates one or two aspects of the system’s implement
 ### Middleware
 
 <figure>
-<a href="/Contents/Middleware.png" style="outline:none">
-<img src="/Contents/Middleware.png" alt="Middleware" style="width:100%"/>
+<a href="/diagrams/Contents/Middleware.png" style="outline:none">
+<img src="/diagrams/Contents/Middleware.png" alt="Middleware" style="width:100%"/>
 </a>
 </figure>
 
@@ -128,8 +128,8 @@ A [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) abstr
 ### Shared Repository
 
 <figure>
-<a href="/Contents/Shared%20Repository.png" style="outline:none">
-<img src="/Contents/Shared%20Repository.png" alt="Shared Repository" style="width:100%"/>
+<a href="/diagrams/Contents/Shared%20Repository.png" style="outline:none">
+<img src="/diagrams/Contents/Shared%20Repository.png" alt="Shared Repository" style="width:100%"/>
 </a>
 </figure>
 
@@ -145,8 +145,8 @@ A [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.
 ### Proxy
 
 <figure>
-<a href="/Contents/Proxy.png" style="outline:none">
-<img src="/Contents/Proxy.png" alt="Proxy" style="width:100%"/>
+<a href="/diagrams/Contents/Proxy.png" style="outline:none">
+<img src="/diagrams/Contents/Proxy.png" alt="Proxy" style="width:100%"/>
 </a>
 </figure>
 
@@ -161,8 +161,8 @@ A [*Proxy*]({{< relref "../extension-metapatterns/proxy.md" >}}) isolates a syst
 ### Orchestrator
 
 <figure>
-<a href="/Contents/Orchestrator.png" style="outline:none">
-<img src="/Contents/Orchestrator.png" alt="Orchestrator" style="width:100%"/>
+<a href="/diagrams/Contents/Orchestrator.png" style="outline:none">
+<img src="/diagrams/Contents/Orchestrator.png" alt="Orchestrator" style="width:100%"/>
 </a>
 </figure>
 
@@ -180,8 +180,8 @@ A fragmented pattern uses small specialized components to approach a case which 
 ### Polyglot Persistence
 
 <figure>
-<a href="/Contents/Polyglot%20Persistence.png" style="outline:none">
-<img src="/Contents/Polyglot%20Persistence.png" alt="Polyglot Persistence" style="width:100%"/>
+<a href="/diagrams/Contents/Polyglot%20Persistence.png" style="outline:none">
+<img src="/diagrams/Contents/Polyglot%20Persistence.png" alt="Polyglot Persistence" style="width:100%"/>
 </a>
 </figure>
 
@@ -195,8 +195,8 @@ A fragmented pattern uses small specialized components to approach a case which 
 ### Backends for Frontends
 
 <figure>
-<a href="/Contents/Backends%20for%20Frontends.png" style="outline:none">
-<img src="/Contents/Backends%20for%20Frontends.png" alt="Backends for Frontends" style="width:100%"/>
+<a href="/diagrams/Contents/Backends%20for%20Frontends.png" style="outline:none">
+<img src="/diagrams/Contents/Backends%20for%20Frontends.png" alt="Backends for Frontends" style="width:100%"/>
 </a>
 </figure>
 
@@ -210,8 +210,8 @@ A fragmented pattern uses small specialized components to approach a case which 
 ### Service\-Oriented Architecture
 
 <figure>
-<a href="/Contents/Service-Oriented%20Architecture.png" style="outline:none">
-<img src="/Contents/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" style="width:100%"/>
+<a href="/diagrams/Contents/Service-Oriented%20Architecture.png" style="outline:none">
+<img src="/diagrams/Contents/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" style="width:100%"/>
 </a>
 </figure>
 
@@ -225,8 +225,8 @@ A fragmented pattern uses small specialized components to approach a case which 
 ### Hierarchy
 
 <figure>
-<a href="/Contents/Hierarchy.png" style="outline:none">
-<img src="/Contents/Hierarchy.png" alt="Hierarchy" style="width:100%"/>
+<a href="/diagrams/Contents/Hierarchy.png" style="outline:none">
+<img src="/diagrams/Contents/Hierarchy.png" alt="Hierarchy" style="width:100%"/>
 </a>
 </figure>
 
@@ -243,8 +243,8 @@ An implementation pattern highlights the peculiar internal arrangements of a com
 ### Plugins
 
 <figure>
-<a href="/Contents/Plugins.png" style="outline:none">
-<img src="/Contents/Plugins.png" alt="Plugins" style="width:100%"/>
+<a href="/diagrams/Contents/Plugins.png" style="outline:none">
+<img src="/diagrams/Contents/Plugins.png" alt="Plugins" style="width:100%"/>
 </a>
 </figure>
 
@@ -257,8 +257,8 @@ An implementation pattern highlights the peculiar internal arrangements of a com
 ### Hexagonal Architecture
 
 <figure>
-<a href="/Contents/Hexagonal%20Architecture.png" style="outline:none">
-<img src="/Contents/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" style="width:100%"/>
+<a href="/diagrams/Contents/Hexagonal%20Architecture.png" style="outline:none">
+<img src="/diagrams/Contents/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" style="width:100%"/>
 </a>
 </figure>
 
@@ -271,8 +271,8 @@ An implementation pattern highlights the peculiar internal arrangements of a com
 ### Microkernel
 
 <figure>
-<a href="/Contents/Microkernel.png" style="outline:none">
-<img src="/Contents/Microkernel.png" alt="Microkernel" style="width:100%"/>
+<a href="/diagrams/Contents/Microkernel.png" style="outline:none">
+<img src="/diagrams/Contents/Microkernel.png" alt="Microkernel" style="width:100%"/>
 </a>
 </figure>
 
@@ -286,8 +286,8 @@ An implementation pattern highlights the peculiar internal arrangements of a com
 ### Mesh
 
 <figure>
-<a href="/Contents/Mesh.png" style="outline:none">
-<img src="/Contents/Mesh.png" alt="Mesh" style="width:100%"/>
+<a href="/diagrams/Contents/Mesh.png" style="outline:none">
+<img src="/diagrams/Contents/Mesh.png" alt="Mesh" style="width:100%"/>
 </a>
 </figure>
 

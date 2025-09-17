@@ -2,14 +2,14 @@
 weight = 8
 title = "Mesh"
 description = "A Mesh or Grid is a virtual layer of interconnected components which makes a distributed Middleware. It features supreme fault tolerance and scalability."
-images = ["/Main/Mesh.png"]
+images = ["/diagrams/Main/Mesh.png"]
 +++
 
 # Mesh
 
 <figure>
-<a href="/Main/Mesh.png" style="outline:none">
-<img src="/Main/Mesh.png" alt="Mesh" style="width:100%"/>
+<a href="/diagrams/Main/Mesh.png" style="outline:none">
+<img src="/diagrams/Main/Mesh.png" alt="Mesh" style="width:100%"/>
 </a>
 </figure>
 
@@ -115,8 +115,8 @@ The connected *nodes* of a *Mesh* may be:
 ### Peer\-to\-Peer Networks
 
 <figure>
-<a href="/Variants/4/P2P.png" style="outline:none">
-<img src="/Variants/4/P2P.png" alt="P2P" style="width:100%"/>
+<a href="/diagrams/Variants/4/P2P.png" style="outline:none">
+<img src="/diagrams/Variants/4/P2P.png" alt="P2P" style="width:100%"/>
 </a>
 </figure>
 
@@ -127,8 +127,8 @@ Examples: torrent, onion routing \(Tor\), blockchain\.
 ### Leaf\-Spine Architecture, Spine\-Leaf Architecture
 
 <figure>
-<a href="/Variants/4/Leaf-Spine.png" style="outline:none">
-<img src="/Variants/4/Leaf-Spine.png" alt="Leaf-Spine" style="width:81%"/>
+<a href="/diagrams/Variants/4/Leaf-Spine.png" style="outline:none">
+<img src="/diagrams/Variants/4/Leaf-Spine.png" alt="Leaf-Spine" style="width:81%"/>
 </a>
 </figure>
 
@@ -137,8 +137,8 @@ This [datacenter network architecture](https://www.geeksforgeeks.org/spine-leaf-
 ### Actors
 
 <figure>
-<a href="/Variants/4/Actors.png" style="outline:none">
-<img src="/Variants/4/Actors.png" alt="Actors" style="width:100%"/>
+<a href="/diagrams/Variants/4/Actors.png" style="outline:none">
+<img src="/diagrams/Variants/4/Actors.png" alt="Actors" style="width:100%"/>
 </a>
 </figure>
 
@@ -147,8 +147,8 @@ A system of *Actors* may be classified as a *fully connected Mesh* with the acto
 ### Service Mesh
 
 <figure>
-<a href="/Variants/4/Service%20Mesh.png" style="outline:none">
-<img src="/Variants/4/Service%20Mesh.png" alt="Service Mesh" style="width:100%"/>
+<a href="/diagrams/Variants/4/Service%20Mesh.png" style="outline:none">
+<img src="/diagrams/Variants/4/Service%20Mesh.png" alt="Service Mesh" style="width:100%"/>
 </a>
 </figure>
 
@@ -168,8 +168,8 @@ Ready\-to\-use *Service Mesh* frameworks are popular with the *Microservices* ar
 ### Space\-Based Architecture
 
 <figure>
-<a href="/Variants/4/Space-Based%20Architecture.png" style="outline:none">
-<img src="/Variants/4/Space-Based%20Architecture.png" alt="Space-Based Architecture" style="width:100%"/>
+<a href="/diagrams/Variants/4/Space-Based%20Architecture.png" style="outline:none">
+<img src="/diagrams/Variants/4/Space-Based%20Architecture.png" alt="Space-Based Architecture" style="width:100%"/>
 </a>
 </figure>
 

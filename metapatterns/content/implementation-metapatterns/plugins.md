@@ -2,14 +2,14 @@
 weight = 5
 title = "Plugins"
 description = "Plugins let a client customize select aspects of a system's behavior. Addons build their application logic on top of whatever the modified system provides."
-images = ["/Main/Plugins.png"]
+images = ["/diagrams/Main/Plugins.png"]
 +++
 
 # Plugins
 
 <figure>
-<a href="/Main/Plugins.png" style="outline:none">
-<img src="/Main/Plugins.png" alt="Plugins" style="width:100%"/>
+<a href="/diagrams/Main/Plugins.png" style="outline:none">
+<img src="/diagrams/Main/Plugins.png" alt="Plugins" style="width:100%"/>
 </a>
 </figure>
 
@@ -46,8 +46,8 @@ The only case for a plugin to improve performance of a system that I can think u
 
 
 <figure>
-<a href="/Performance/Plugins-injection.png" style="outline:none">
-<img src="/Performance/Plugins-injection.png" alt="Plugins-injection" style="width:100%"/>
+<a href="/diagrams/Performance/Plugins-injection.png" style="outline:none">
+<img src="/diagrams/Performance/Plugins-injection.png" alt="Plugins-injection" style="width:100%"/>
 </a>
 </figure>
 
@@ -56,8 +56,8 @@ The only case for a plugin to improve performance of a system that I can think u
 Each *plugin* depends on the *core*’s *API* \(for *Addons*\) or *SPI* \(for *Plugins*\) for the functionality it extends\. That makes the APIs and SPIs nearly impossible to modify, only to extend, as there tend to be many plugins in the field, some of them out of active development, that rely on any given method of the already published interfaces\.
 
 <figure>
-<a href="/Dependencies/Plugins.png" style="outline:none">
-<img src="/Dependencies/Plugins.png" alt="Plugins" style="width:100%"/>
+<a href="/diagrams/Dependencies/Plugins.png" style="outline:none">
+<img src="/diagrams/Dependencies/Plugins.png" alt="Plugins" style="width:100%"/>
 </a>
 </figure>
 
@@ -78,8 +78,8 @@ Each *plugin* depends on the *core*’s *API* \(for *Addons*\) or *SPI* \(for *P
 ### Relations
 
 <figure>
-<a href="/Relations/Plugins.png" style="outline:none">
-<img src="/Relations/Plugins.png" alt="Plugins" style="width:68%"/>
+<a href="/diagrams/Relations/Plugins.png" style="outline:none">
+<img src="/diagrams/Relations/Plugins.png" alt="Plugins" style="width:68%"/>
 </a>
 </figure>
 
