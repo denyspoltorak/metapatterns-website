@@ -2,7 +2,7 @@
 weight = 1
 title = "Modules and complexity"
 description = "Complexity is the number of concepts which one must keep in mind to understand a system. Breaking a system into components may lower its complexity."
-images = ["/Intro/Modules-2.png"]
+images = ["/diagrams/Intro/Modules-2.png"]
 [sitemap]
   priority = 0.5
 +++

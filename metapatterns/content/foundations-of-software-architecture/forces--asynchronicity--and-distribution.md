@@ -2,7 +2,7 @@
 weight = 2
 title = "Forces, asynchronicity, and distribution"
 description = "Forces are non-functional requirements for a system. Conflicting forces are satisfied by splitting a system into asynchronous or distributed components."
-images = ["/Intro/3-Tier.png"]
+images = ["/diagrams/Intro/3-Tier.png"]
 [sitemap]
   priority = 0.5
 +++
