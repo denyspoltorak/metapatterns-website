@@ -1,7 +1,7 @@
 +++
 weight = 6
 title = "Metapatterns"
-description = "A metapattern is a cluster of patterns with related structure and function. We draw designs along the abstractness, subdomain and sharding axes."
+description = "A metapattern is a cluster of patterns with related structure and function. We sketch designs along the abstractness, subdomain, and sharding axes."
 images = ["/diagrams/Intro/Example-Defined.png"]
 [sitemap]
   priority = 0.8

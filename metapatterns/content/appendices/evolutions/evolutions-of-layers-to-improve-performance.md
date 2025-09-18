@@ -1,7 +1,7 @@
 +++
 weight = 9
 title = "Evolutions of Layers to improve performance"
-description = "There are a few ways to improve performance of a layered system: merge the layers, scale them, or use specialized databases (Polyglot Persistence)."
+description = "There are a few ways to improve the performance of a layered system: merge the layers, scale them, or use specialized databases (Polyglot Persistence)."
 images = ["/diagrams/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.png"]
 [sitemap]
   priority = 0.3

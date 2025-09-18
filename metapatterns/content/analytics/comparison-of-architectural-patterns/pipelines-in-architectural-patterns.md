@@ -1,7 +1,7 @@
 +++
 weight = 2
 title = "Pipelines in architectural patterns"
-description = "Pipeline is a unidirectional data flow. Depending on pattern, it may or may not preserve: data type, data identity and temporal order of the data stream."
+description = "Pipeline is a unidirectional data flow. Depending on the pattern, it may preserve the data type, data identity, or temporal order of the data stream."
 images = ["/diagrams/Conclusion/Pipelineliness-EventDrivenArchitecture.png"]
 [sitemap]
   priority = 0.5
