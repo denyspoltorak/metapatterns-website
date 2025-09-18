@@ -1,7 +1,7 @@
 +++
 weight = 6
 title = "Implementation metapatterns"
-description = "Implementation patterns study internals of a component. Plugins, Microkernel and Hexagonal Architecture grant flexibility while Mesh provides fault tolerance."
+description = "Implementation patterns study the internals of a component. Plugins, Microkernel and Hexagonal Architecture grant flexibility while Mesh provides resilience."
 bookCollapseSection = true
 [sitemap]
   priority = 0.2
