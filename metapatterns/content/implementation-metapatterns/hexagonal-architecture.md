@@ -11,7 +11,7 @@ images = ["/diagrams/Main/Hexagonal%20Architecture.png"]
 
 <figure>
 <a href="/diagrams/Main/Hexagonal%20Architecture.png" style="outline:none">
-<img src="/diagrams/Main/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" width="1864" height="1086" style="width:100%"/>
+<img src="/diagrams/Main/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" loading="lazy" width="1864" height="1086" style="width:100%"/>
 </a>
 </figure>
 
@@ -68,7 +68,7 @@ In rare cases the system may benefit from direct communication between the adapt
 
 <figure>
 <a href="/diagrams/Performance/Hexagonal%20Architecture.png" style="outline:none">
-<img src="/diagrams/Performance/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" width="1311" height="788" style="width:90%"/>
+<img src="/diagrams/Performance/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" loading="lazy" width="1311" height="788" style="width:90%"/>
 </a>
 </figure>
 
@@ -78,7 +78,7 @@ Each [adapter]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorrup
 
 <figure>
 <a href="/diagrams/Dependencies/Hexagonal%20Architecture.png" style="outline:none">
-<img src="/diagrams/Dependencies/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" width="1481" height="938" style="width:84%"/>
+<img src="/diagrams/Dependencies/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" loading="lazy" width="1481" height="938" style="width:84%"/>
 </a>
 </figure>
 
@@ -106,7 +106,7 @@ Each [adapter]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorrup
 
 <figure>
 <a href="/diagrams/Relations/Hexagonal%20Architecture.png" style="outline:none">
-<img src="/diagrams/Relations/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" width="1952" height="1134" style="width:100%"/>
+<img src="/diagrams/Relations/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" loading="lazy" width="1952" height="1134" style="width:100%"/>
 </a>
 </figure>
 
@@ -127,7 +127,7 @@ One possible variation in a distributed or asynchronous *Hexagonal Architecture*
 
 <figure>
 <a href="/diagrams/Variants/4/Hexagonal%20-%20Adapters%20with%20Components.png" style="outline:none">
-<img src="/diagrams/Variants/4/Hexagonal%20-%20Adapters%20with%20Components.png" alt="Hexagonal - Adapters with Components" width="1543" height="938" style="width:93%"/>
+<img src="/diagrams/Variants/4/Hexagonal%20-%20Adapters%20with%20Components.png" alt="Hexagonal - Adapters with Components" loading="lazy" width="1543" height="938" style="width:93%"/>
 </a>
 </figure>
 
@@ -139,7 +139,7 @@ This resembles [*Sidecar*](https://docs.google.com/document/d/1hzBn-RzzNDcArAWcv
 
 <figure>
 <a href="/diagrams/Variants/4/Hexagonal%20-%20Adapters%20with%20the%20Core.png" style="outline:none">
-<img src="/diagrams/Variants/4/Hexagonal%20-%20Adapters%20with%20the%20Core.png" alt="Hexagonal - Adapters with the Core" width="1982" height="643" style="width:100%"/>
+<img src="/diagrams/Variants/4/Hexagonal%20-%20Adapters%20with%20the%20Core.png" alt="Hexagonal - Adapters with the Core" loading="lazy" width="1982" height="643" style="width:100%"/>
 </a>
 </figure>
 
@@ -155,7 +155,7 @@ This approach resembles [*Ambassador*](https://docs.google.com/document/d/1hzBn-
 
 <figure>
 <a href="/diagrams/Variants/4/Monolithic%20Hexagonal.png" style="outline:none">
-<img src="/diagrams/Variants/4/Monolithic%20Hexagonal.png" alt="Monolithic Hexagonal" width="1622" height="718" style="width:100%"/>
+<img src="/diagrams/Variants/4/Monolithic%20Hexagonal.png" alt="Monolithic Hexagonal" loading="lazy" width="1622" height="718" style="width:100%"/>
 </a>
 </figure>
 
@@ -165,7 +165,7 @@ Just like [*MVC*]({{< relref "#model-view-controller-mvc-action-domain-responder
 
 <figure>
 <a href="/diagrams/Variants/4/Layered%20Hexagonal.png" style="outline:none">
-<img src="/diagrams/Variants/4/Layered%20Hexagonal.png" alt="Layered Hexagonal" width="1916" height="1024" style="width:100%"/>
+<img src="/diagrams/Variants/4/Layered%20Hexagonal.png" alt="Layered Hexagonal" loading="lazy" width="1916" height="1024" style="width:100%"/>
 </a>
 </figure>
 
@@ -192,7 +192,7 @@ All of them aim at making the business logic presentation\-agnostic \(thus cross
 
 <figure>
 <a href="/diagrams/Variants/4/MVP.png" style="outline:none">
-<img src="/diagrams/Variants/4/MVP.png" alt="MVP" width="1736" height="713" style="width:100%"/>
+<img src="/diagrams/Variants/4/MVP.png" alt="MVP" loading="lazy" width="1736" height="713" style="width:100%"/>
 </a>
 </figure>
 
@@ -215,7 +215,7 @@ All those patterns exploit modern OS or GUI frameworks’ widgets which handle a
 
 <figure>
 <a href="/diagrams/Variants/4/MVP%20-%20subtypes.png" style="outline:none">
-<img src="/diagrams/Variants/4/MVP%20-%20subtypes.png" alt="MVP - subtypes" width="2398" height="1639" style="width:100%"/>
+<img src="/diagrams/Variants/4/MVP%20-%20subtypes.png" alt="MVP - subtypes" loading="lazy" width="2398" height="1639" style="width:100%"/>
 </a>
 </figure>
 
@@ -223,7 +223,7 @@ All those patterns exploit modern OS or GUI frameworks’ widgets which handle a
 
 <figure>
 <a href="/diagrams/Variants/4/MVC.png" style="outline:none">
-<img src="/diagrams/Variants/4/MVC.png" alt="MVC" width="1766" height="594" style="width:100%"/>
+<img src="/diagrams/Variants/4/MVC.png" alt="MVC" loading="lazy" width="1766" height="594" style="width:100%"/>
 </a>
 </figure>
 
@@ -252,7 +252,7 @@ Another difference is that while *MVC* provides for changing target platforms by
 
 <figure>
 <a href="/diagrams/Variants/4/MVC%20-%20subtypes.png" style="outline:none">
-<img src="/diagrams/Variants/4/MVC%20-%20subtypes.png" alt="MVC - subtypes" width="2434" height="1524" style="width:100%"/>
+<img src="/diagrams/Variants/4/MVC%20-%20subtypes.png" alt="MVC - subtypes" loading="lazy" width="2434" height="1524" style="width:100%"/>
 </a>
 </figure>
 

@@ -21,7 +21,7 @@ There is advice [from Microsoft](https://learn.microsoft.com/en-us/azure/archite
 
 <figure>
 <a href="/diagrams/Communication/Cell-Based%20Architecture.png" style="outline:none">
-<img src="/diagrams/Communication/Cell-Based%20Architecture.png" alt="Cell-Based Architecture" width="1763" height="744" style="width:100%"/>
+<img src="/diagrams/Communication/Cell-Based%20Architecture.png" alt="Cell-Based Architecture" loading="lazy" width="1763" height="744" style="width:100%"/>
 </a>
 </figure>
 

@@ -15,7 +15,7 @@ We’ve seen a single pattern come under many names, as happens with [*Orchestra
 
 <figure>
 <a href="/diagrams/Conclusion/Ambiguous-Monolith.png" style="outline:none">
-<img src="/diagrams/Conclusion/Ambiguous-Monolith.png" alt="Ambiguous-Monolith" width="2031" height="1419" style="width:100%"/>
+<img src="/diagrams/Conclusion/Ambiguous-Monolith.png" alt="Ambiguous-Monolith" loading="lazy" width="2031" height="1419" style="width:100%"/>
 </a>
 </figure>
 
@@ -31,7 +31,7 @@ The novel misnomers, [*Layered Monolith*]({{< relref "../basic-metapatterns/laye
 
 <figure>
 <a href="/diagrams/Variants/1/Subtypes%20of%20Monolith.png" style="outline:none">
-<img src="/diagrams/Variants/1/Subtypes%20of%20Monolith.png" alt="Subtypes of Monolith" width="1643" height="716" style="width:100%"/>
+<img src="/diagrams/Variants/1/Subtypes%20of%20Monolith.png" alt="Subtypes of Monolith" loading="lazy" width="1643" height="716" style="width:100%"/>
 </a>
 </figure>
 
@@ -48,7 +48,7 @@ In most cases we’ll hear of *Proactor* being called *Reactor* – probably bec
 
 <figure>
 <a href="/diagrams/Conclusion/Ambiguous-Microkernel.png" style="outline:none">
-<img src="/diagrams/Conclusion/Ambiguous-Microkernel.png" alt="Ambiguous-Microkernel" width="1271" height="1161" style="width:80%"/>
+<img src="/diagrams/Conclusion/Ambiguous-Microkernel.png" alt="Ambiguous-Microkernel" loading="lazy" width="1271" height="1161" style="width:80%"/>
 </a>
 </figure>
 
@@ -64,7 +64,7 @@ Thus, here we have two architectural patterns of arguably similar structure \([*
 
 <figure>
 <a href="/diagrams/Conclusion/Ambiguous-DomainServices.png" style="outline:none">
-<img src="/diagrams/Conclusion/Ambiguous-DomainServices.png" alt="Ambiguous-DomainServices" width="1215" height="846" style="width:74%"/>
+<img src="/diagrams/Conclusion/Ambiguous-DomainServices.png" alt="Ambiguous-DomainServices" loading="lazy" width="1215" height="846" style="width:74%"/>
 </a>
 </figure>
 
@@ -76,7 +76,7 @@ I believe that both definitions are technically correct, if the difference in th
 
 <figure>
 <a href="/diagrams/Conclusion/Ambiguous-ServiceBasedArchitecture.png" style="outline:none">
-<img src="/diagrams/Conclusion/Ambiguous-ServiceBasedArchitecture.png" alt="Ambiguous-ServiceBasedArchitecture" width="2666" height="853" style="width:100%"/>
+<img src="/diagrams/Conclusion/Ambiguous-ServiceBasedArchitecture.png" alt="Ambiguous-ServiceBasedArchitecture" loading="lazy" width="2666" height="853" style="width:100%"/>
 </a>
 </figure>
 
@@ -90,7 +90,7 @@ Both definitions are technically correct\. One is wider than the other\.
 
 <figure>
 <a href="/diagrams/Conclusion/Ambiguous-FrontController.png" style="outline:none">
-<img src="/diagrams/Conclusion/Ambiguous-FrontController.png" alt="Ambiguous-FrontController" width="1236" height="711" style="width:70%"/>
+<img src="/diagrams/Conclusion/Ambiguous-FrontController.png" alt="Ambiguous-FrontController" loading="lazy" width="1236" height="711" style="width:70%"/>
 </a>
 </figure>
 
@@ -102,7 +102,7 @@ The definition from \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp"
 
 <figure>
 <a href="/diagrams/Conclusion/Ambiguous-Cells.png" style="outline:none">
-<img src="/diagrams/Conclusion/Ambiguous-Cells.png" alt="Ambiguous-Cells" width="2284" height="859" style="width:100%"/>
+<img src="/diagrams/Conclusion/Ambiguous-Cells.png" alt="Ambiguous-Cells" loading="lazy" width="2284" height="859" style="width:100%"/>
 </a>
 </figure>
 
@@ -118,7 +118,7 @@ This case looks like Amazon’s hijacking and redefining a popular emerging tech
 
 <figure>
 <a href="/diagrams/Conclusion/Ambiguous-Nanoservices.png" style="outline:none">
-<img src="/diagrams/Conclusion/Ambiguous-Nanoservices.png" alt="Ambiguous-Nanoservices" width="2404" height="1661" style="width:100%"/>
+<img src="/diagrams/Conclusion/Ambiguous-Nanoservices.png" alt="Ambiguous-Nanoservices" loading="lazy" width="2404" height="1661" style="width:100%"/>
 </a>
 </figure>
 

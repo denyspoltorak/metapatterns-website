@@ -31,7 +31,7 @@ Those layers may also be merged into [*Combined Components*]({{< relref "../../e
 
 <figure>
 <a href="/diagrams/Evolutions/Services/Services%20add%20Middleware.png" style="outline:none">
-<img src="/diagrams/Evolutions/Services/Services%20add%20Middleware.png" alt="Services add Middleware" width="2447" height="604" style="width:100%"/>
+<img src="/diagrams/Evolutions/Services/Services%20add%20Middleware.png" alt="Services add Middleware" loading="lazy" width="2447" height="604" style="width:100%"/>
 </a>
 </figure>
 
@@ -64,7 +64,7 @@ Distributed systems may fail in a zillion ways\. You want to ruminate neither on
 
 <figure>
 <a href="/diagrams/Variants/2/Multifunctional%20-%20Service%20Mesh.png" style="outline:none">
-<img src="/diagrams/Variants/2/Multifunctional%20-%20Service%20Mesh.png" alt="Multifunctional - Service Mesh" width="2018" height="630" style="width:100%"/>
+<img src="/diagrams/Variants/2/Multifunctional%20-%20Service%20Mesh.png" alt="Multifunctional - Service Mesh" loading="lazy" width="2018" height="630" style="width:100%"/>
 </a>
 </figure>
 
@@ -93,7 +93,7 @@ The [*Microservices*]({{< relref "../../basic-metapatterns/services.md#microserv
 
 <figure>
 <a href="/diagrams/Evolutions/Services/Services%20to%20Shared%20Database.png" style="outline:none">
-<img src="/diagrams/Evolutions/Services/Services%20to%20Shared%20Database.png" alt="Services to Shared Database" width="2385" height="564" style="width:100%"/>
+<img src="/diagrams/Evolutions/Services/Services%20to%20Shared%20Database.png" alt="Services to Shared Database" loading="lazy" width="2385" height="564" style="width:100%"/>
 </a>
 </figure>
 
@@ -128,7 +128,7 @@ You don’t really need every service to have a private database\. A shared one 
 
 <figure>
 <a href="/diagrams/Evolutions/Services/Services%20add%20Proxy.png" style="outline:none">
-<img src="/diagrams/Evolutions/Services/Services%20add%20Proxy.png" alt="Services add Proxy" width="2447" height="748" style="width:100%"/>
+<img src="/diagrams/Evolutions/Services/Services%20add%20Proxy.png" alt="Services add Proxy" loading="lazy" width="2447" height="748" style="width:100%"/>
 </a>
 </figure>
 
@@ -162,7 +162,7 @@ Putting a generic component between the system and its clients helps the program
 
 <figure>
 <a href="/diagrams/Evolutions/Services/Services%20use%20Orchestrator.png" style="outline:none">
-<img src="/diagrams/Evolutions/Services/Services%20use%20Orchestrator.png" alt="Services use Orchestrator" width="2451" height="748" style="width:100%"/>
+<img src="/diagrams/Evolutions/Services/Services%20use%20Orchestrator.png" alt="Services use Orchestrator" loading="lazy" width="2451" height="748" style="width:100%"/>
 </a>
 </figure>
 

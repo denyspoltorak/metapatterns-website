@@ -11,7 +11,7 @@ images = ["/diagrams/Main/Polyglot%20Persistence.png"]
 
 <figure>
 <a href="/diagrams/Main/Polyglot%20Persistence.png" style="outline:none">
-<img src="/diagrams/Main/Polyglot%20Persistence.png" alt="Polyglot Persistence" width="1798" height="902" style="width:100%"/>
+<img src="/diagrams/Main/Polyglot%20Persistence.png" alt="Polyglot Persistence" loading="lazy" width="1798" height="902" style="width:100%"/>
 </a>
 </figure>
 
@@ -77,7 +77,7 @@ In general, each service depends on all of the databases which it uses\. There m
 
 <figure>
 <a href="/diagrams/Dependencies/PolyglotPersistence.png" style="outline:none">
-<img src="/diagrams/Dependencies/PolyglotPersistence.png" alt="PolyglotPersistence" width="2319" height="476" style="width:100%"/>
+<img src="/diagrams/Dependencies/PolyglotPersistence.png" alt="PolyglotPersistence" loading="lazy" width="2319" height="476" style="width:100%"/>
 </a>
 </figure>
 
@@ -101,7 +101,7 @@ In general, each service depends on all of the databases which it uses\. There m
 
 <figure>
 <a href="/diagrams/Relations/Polyglot%20Persistence.png" style="outline:none">
-<img src="/diagrams/Relations/Polyglot%20Persistence.png" alt="Polyglot Persistence" width="2513" height="876" style="width:100%"/>
+<img src="/diagrams/Relations/Polyglot%20Persistence.png" alt="Polyglot Persistence" loading="lazy" width="2513" height="876" style="width:100%"/>
 </a>
 </figure>
 
@@ -120,7 +120,7 @@ Many cases of *Polyglot Persistence* use multiple datastores just because there 
 
 <figure>
 <a href="/diagrams/Variants/3/PP%20-%20Specialized.png" style="outline:none">
-<img src="/diagrams/Variants/3/PP%20-%20Specialized.png" alt="PP - Specialized" width="1599" height="540" style="width:100%"/>
+<img src="/diagrams/Variants/3/PP%20-%20Specialized.png" alt="PP - Specialized" loading="lazy" width="1599" height="540" style="width:100%"/>
 </a>
 </figure>
 
@@ -130,7 +130,7 @@ Databases [vary in their optimal use cases](https://www.jamesserra.com/archive/2
 
 <figure>
 <a href="/diagrams/Variants/3/PP%20-%20Private%20and%20Shared.png" style="outline:none">
-<img src="/diagrams/Variants/3/PP%20-%20Private%20and%20Shared.png" alt="PP - Private and Shared" width="2428" height="583" style="width:100%"/>
+<img src="/diagrams/Variants/3/PP%20-%20Private%20and%20Shared.png" alt="PP - Private and Shared" loading="lazy" width="2428" height="583" style="width:100%"/>
 </a>
 </figure>
 
@@ -140,7 +140,7 @@ If several services or shards become coupled through a subset of the system’s 
 
 <figure>
 <a href="/diagrams/Variants/3/PP%20-%20File%20Storage.png" style="outline:none">
-<img src="/diagrams/Variants/3/PP%20-%20File%20Storage.png" alt="PP - File Storage" width="1611" height="480" style="width:100%"/>
+<img src="/diagrams/Variants/3/PP%20-%20File%20Storage.png" alt="PP - File Storage" loading="lazy" width="1611" height="480" style="width:100%"/>
 </a>
 </figure>
 
@@ -160,7 +160,7 @@ The updates to the derived databases may come from:
 
 <figure>
 <a href="/diagrams/Variants/3/PP%20-%20Derived%20Storage.png" style="outline:none">
-<img src="/diagrams/Variants/3/PP%20-%20Derived%20Storage.png" alt="PP - Derived Storage" width="2503" height="1322" style="width:100%"/>
+<img src="/diagrams/Variants/3/PP%20-%20Derived%20Storage.png" alt="PP - Derived Storage" loading="lazy" width="2503" height="1322" style="width:100%"/>
 </a>
 </figure>
 
@@ -168,7 +168,7 @@ The updates to the derived databases may come from:
 
 <figure>
 <a href="/diagrams/Variants/3/Read-only%20Replica.png" style="outline:none">
-<img src="/diagrams/Variants/3/Read-only%20Replica.png" alt="Read-only Replica" width="1311" height="752" style="width:71%"/>
+<img src="/diagrams/Variants/3/Read-only%20Replica.png" alt="Read-only Replica" loading="lazy" width="1311" height="752" style="width:71%"/>
 </a>
 </figure>
 
@@ -178,7 +178,7 @@ Multiple instances of the database are deployed and one of them is the *leader* 
 
 <figure>
 <a href="/diagrams/Variants/3/Reporting%20DB%20and%20CQRS%20View.png" style="outline:none">
-<img src="/diagrams/Variants/3/Reporting%20DB%20and%20CQRS%20View.png" alt="Reporting DB and CQRS View" width="2424" height="564" style="width:100%"/>
+<img src="/diagrams/Variants/3/Reporting%20DB%20and%20CQRS%20View.png" alt="Reporting DB and CQRS View" loading="lazy" width="2424" height="564" style="width:100%"/>
 </a>
 </figure>
 
@@ -190,7 +190,7 @@ A [*Reporting Database*](https://martinfowler.com/bliki/ReportingDatabase.html) 
 
 <figure>
 <a href="/diagrams/Variants/3/Memory%20Image.png" style="outline:none">
-<img src="/diagrams/Variants/3/Memory%20Image.png" alt="Memory Image" width="2424" height="572" style="width:100%"/>
+<img src="/diagrams/Variants/3/Memory%20Image.png" alt="Memory Image" loading="lazy" width="2424" height="572" style="width:100%"/>
 </a>
 </figure>
 
@@ -200,7 +200,7 @@ A [*Reporting Database*](https://martinfowler.com/bliki/ReportingDatabase.html) 
 
 <figure>
 <a href="/diagrams/Variants/3/Query%20Service.png" style="outline:none">
-<img src="/diagrams/Variants/3/Query%20Service.png" alt="Query Service" width="2344" height="568" style="width:100%"/>
+<img src="/diagrams/Variants/3/Query%20Service.png" alt="Query Service" loading="lazy" width="2344" height="568" style="width:100%"/>
 </a>
 </figure>
 
@@ -214,7 +214,7 @@ A [*Front Controller*]({{< relref "../extension-metapatterns/combined-component.
 
 <figure>
 <a href="/diagrams/Variants/3/Search%20Index.png" style="outline:none">
-<img src="/diagrams/Variants/3/Search%20Index.png" alt="Search Index" width="2314" height="602" style="width:100%"/>
+<img src="/diagrams/Variants/3/Search%20Index.png" alt="Search Index" loading="lazy" width="2314" height="602" style="width:100%"/>
 </a>
 </figure>
 
@@ -224,7 +224,7 @@ Some domains require a kind of search which is not naturally supported by ordina
 
 <figure>
 <a href="/diagrams/Variants/3/Historical%20Data.png" style="outline:none">
-<img src="/diagrams/Variants/3/Historical%20Data.png" alt="Historical Data" width="1821" height="546" style="width:92%"/>
+<img src="/diagrams/Variants/3/Historical%20Data.png" alt="Historical Data" loading="lazy" width="1821" height="546" style="width:92%"/>
 </a>
 </figure>
 
@@ -234,7 +234,7 @@ It is common to store the history of sales in a database\. However, once a month
 
 <figure>
 <a href="/diagrams/Variants/3/Cache-Aside.png" style="outline:none">
-<img src="/diagrams/Variants/3/Cache-Aside.png" alt="Cache-Aside" width="1331" height="572" style="width:80%"/>
+<img src="/diagrams/Variants/3/Cache-Aside.png" alt="Cache-Aside" loading="lazy" width="1331" height="572" style="width:80%"/>
 </a>
 </figure>
 
@@ -251,7 +251,7 @@ Keeping the cache consistent with the main database is the hard part\. There are
 
 <figure>
 <a href="/diagrams/Evolutions/3/Polyglor%20Persistence%20-%201.png" style="outline:none">
-<img src="/diagrams/Evolutions/3/Polyglor%20Persistence%20-%201.png" alt="Polyglor Persistence - 1" width="2119" height="529" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/Polyglor%20Persistence%20-%201.png" alt="Polyglor Persistence - 1" loading="lazy" width="2119" height="529" style="width:100%"/>
 </a>
 </figure>
 
