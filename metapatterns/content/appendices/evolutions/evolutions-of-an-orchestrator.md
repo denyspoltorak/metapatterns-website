@@ -26,7 +26,7 @@ There is one way to counter the first point and more ways to solve the second on
 
 <figure>
 <a href="/diagrams/Evolutions/2/Orchestrator%20to%20Layered%20Services.png" style="outline:none">
-<img src="/diagrams/Evolutions/2/Orchestrator%20to%20Layered%20Services.png" alt="Orchestrator to Layered Services" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Orchestrator%20to%20Layered%20Services.png" alt="Orchestrator to Layered Services" loading="lazy" width="2529" height="788" style="width:100%"/>
 </a>
 </figure>
 
@@ -61,7 +61,7 @@ If the *orchestration* logic mostly follows the subdomains, it may be possible t
 
 <figure>
 <a href="/diagrams/Evolutions/2/Orchestrator%20to%20Backends%20for%20Frontends.png" style="outline:none">
-<img src="/diagrams/Evolutions/2/Orchestrator%20to%20Backends%20for%20Frontends.png" alt="Orchestrator to Backends for Frontends" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Orchestrator%20to%20Backends%20for%20Frontends.png" alt="Orchestrator to Backends for Frontends" loading="lazy" width="2411" height="752" style="width:100%"/>
 </a>
 </figure>
 
@@ -95,7 +95,7 @@ When use cases for clients vary, it makes sense for each kind of client to have 
 
 <figure>
 <a href="/diagrams/Evolutions/2/Orchestrator%20add%20Orchestrator.png" style="outline:none">
-<img src="/diagrams/Evolutions/2/Orchestrator%20add%20Orchestrator.png" alt="Orchestrator add Orchestrator" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Orchestrator%20add%20Orchestrator.png" alt="Orchestrator add Orchestrator" loading="lazy" width="2451" height="898" style="width:100%"/>
 </a>
 </figure>
 
@@ -129,7 +129,7 @@ You may use two or three *orchestration frameworks* \(engines\) which differ in 
 
 <figure>
 <a href="/diagrams/Evolutions/2/Orchestrator%20to%20Hierarchy.png" style="outline:none">
-<img src="/diagrams/Evolutions/2/Orchestrator%20to%20Hierarchy.png" alt="Orchestrator to Hierarchy" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Orchestrator%20to%20Hierarchy.png" alt="Orchestrator to Hierarchy" loading="lazy" width="2513" height="604" style="width:100%"/>
 </a>
 </figure>
 

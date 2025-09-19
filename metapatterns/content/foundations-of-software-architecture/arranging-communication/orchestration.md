@@ -13,7 +13,7 @@ The most straightforward way to integrate services is to add a coordinating laye
 
 <figure>
 <a href="/diagrams/Communication/Services%20to%20Orchestrator.png" style="outline:none">
-<img src="/diagrams/Communication/Services%20to%20Orchestrator.png" alt="Services to Orchestrator" style="width:100%"/>
+<img src="/diagrams/Communication/Services%20to%20Orchestrator.png" alt="Services to Orchestrator" loading="lazy" width="1995" height="561" style="width:100%"/>
 </a>
 </figure>
 
@@ -27,7 +27,7 @@ In a backend which serves client requests an *Orchestrator* takes the role of *F
 
 <figure>
 <a href="/diagrams/Communication/Facade.png" style="outline:none">
-<img src="/diagrams/Communication/Facade.png" alt="Facade" style="width:100%"/>
+<img src="/diagrams/Communication/Facade.png" alt="Facade" loading="lazy" width="1838" height="604" style="width:100%"/>
 </a>
 </figure>
 
@@ -35,7 +35,7 @@ A *Facade* also supports querying the services in parallel and collecting the da
 
 <figure>
 <a href="/diagrams/Communication/Facade%20-%20Parallel.png" style="outline:none">
-<img src="/diagrams/Communication/Facade%20-%20Parallel.png" alt="Facade - Parallel" style="width:90%"/>
+<img src="/diagrams/Communication/Facade%20-%20Parallel.png" alt="Facade - Parallel" loading="lazy" width="1474" height="600" style="width:90%"/>
 </a>
 </figure>
 
@@ -43,7 +43,7 @@ Embedded and system programming – the areas that deal with automating [*contro
 
 <figure>
 <a href="/diagrams/Communication/Mediator.png" style="outline:none">
-<img src="/diagrams/Communication/Mediator.png" alt="Mediator" style="width:100%"/>
+<img src="/diagrams/Communication/Mediator.png" alt="Mediator" loading="lazy" width="1671" height="587" style="width:100%"/>
 </a>
 </figure>
 
@@ -55,7 +55,7 @@ By default an *Orchestrator* depends on each service which it manages – that m
 
 <figure>
 <a href="/diagrams/Communication/Orchestrator%20-%20Dependencies.png" style="outline:none">
-<img src="/diagrams/Communication/Orchestrator%20-%20Dependencies.png" alt="Orchestrator - Dependencies" style="width:100%"/>
+<img src="/diagrams/Communication/Orchestrator%20-%20Dependencies.png" alt="Orchestrator - Dependencies" loading="lazy" width="1753" height="407" style="width:100%"/>
 </a>
 </figure>
 
@@ -63,7 +63,7 @@ Another option, which appears in [*Plugins*]({{< relref "../../implementation-me
 
 <figure>
 <a href="/diagrams/Communication/Microkernel%20-%20Dependencies.png" style="outline:none">
-<img src="/diagrams/Communication/Microkernel%20-%20Dependencies.png" alt="Microkernel - Dependencies" style="width:100%"/>
+<img src="/diagrams/Communication/Microkernel%20-%20Dependencies.png" alt="Microkernel - Dependencies" loading="lazy" width="1793" height="411" style="width:100%"/>
 </a>
 </figure>
 
@@ -71,7 +71,7 @@ Furthermore, some domains develop that idea into a [*Hierarchy*]({{< relref "../
 
 <figure>
 <a href="/diagrams/Communication/Hierarchy%20-%20Dependencies.png" style="outline:none">
-<img src="/diagrams/Communication/Hierarchy%20-%20Dependencies.png" alt="Hierarchy - Dependencies" style="width:100%"/>
+<img src="/diagrams/Communication/Hierarchy%20-%20Dependencies.png" alt="Hierarchy - Dependencies" loading="lazy" width="1697" height="407" style="width:100%"/>
 </a>
 </figure>
 
@@ -79,7 +79,7 @@ All kinds of orchestration allow for an easy addition of new use cases which may
 
 <figure>
 <a href="/diagrams/Communication/Orchestrator%20add%20a%20Use%20Case.png" style="outline:none">
-<img src="/diagrams/Communication/Orchestrator%20add%20a%20Use%20Case.png" alt="Orchestrator add a Use Case" style="width:100%"/>
+<img src="/diagrams/Communication/Orchestrator%20add%20a%20Use%20Case.png" alt="Orchestrator add a Use Case" loading="lazy" width="2113" height="591" style="width:100%"/>
 </a>
 </figure>
 
@@ -89,7 +89,7 @@ In some systems there are several services that have their own kinds of clients 
 
 <figure>
 <a href="/diagrams/Communication/Mutual%20Orchestration%20-%201.png" style="outline:none">
-<img src="/diagrams/Communication/Mutual%20Orchestration%20-%201.png" alt="Mutual Orchestration - 1" style="width:100%"/>
+<img src="/diagrams/Communication/Mutual%20Orchestration%20-%201.png" alt="Mutual Orchestration - 1" loading="lazy" width="1661" height="516" style="width:100%"/>
 </a>
 </figure>
 
@@ -97,7 +97,7 @@ As each of the services depends on the APIs of the others, any change to any int
 
 <figure>
 <a href="/diagrams/Communication/Mutual%20Orchestration%20-%202.png" style="outline:none">
-<img src="/diagrams/Communication/Mutual%20Orchestration%20-%202.png" alt="Mutual Orchestration - 2" style="width:100%"/>
+<img src="/diagrams/Communication/Mutual%20Orchestration%20-%202.png" alt="Mutual Orchestration - 2" loading="lazy" width="1667" height="371" style="width:100%"/>
 </a>
 </figure>
 
@@ -105,13 +105,13 @@ In real life services are likely to be layered, with their upper layers acting a
 
 <figure>
 <a href="/diagrams/Communication/Mutual%20Orchestration%20-%203.png" style="outline:none">
-<img src="/diagrams/Communication/Mutual%20Orchestration%20-%203.png" alt="Mutual Orchestration - 3" style="width:100%"/>
+<img src="/diagrams/Communication/Mutual%20Orchestration%20-%203.png" alt="Mutual Orchestration - 3" loading="lazy" width="1907" height="713" style="width:100%"/>
 </a>
 </figure>
 
 <figure>
 <a href="/diagrams/Communication/Mutual%20Orchestration%20-%204.png" style="outline:none">
-<img src="/diagrams/Communication/Mutual%20Orchestration%20-%204.png" alt="Mutual Orchestration - 4" style="width:100%"/>
+<img src="/diagrams/Communication/Mutual%20Orchestration%20-%204.png" alt="Mutual Orchestration - 4" loading="lazy" width="1926" height="578" style="width:100%"/>
 </a>
 </figure>
 

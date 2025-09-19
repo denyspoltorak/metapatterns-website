@@ -11,7 +11,7 @@ images = ["/diagrams/Main/Services.png"]
 
 <figure>
 <a href="/diagrams/Main/Services.png" style="outline:none">
-<img src="/diagrams/Main/Services.png" alt="Services" style="width:100%"/>
+<img src="/diagrams/Main/Services.png" alt="Services" loading="lazy" width="1995" height="774" style="width:100%"/>
 </a>
 </figure>
 
@@ -92,7 +92,7 @@ Interservice communication is relatively slow and resource\-consuming, therefore
 
 <figure>
 <a href="/diagrams/Performance/Services.png" style="outline:none">
-<img src="/diagrams/Performance/Services.png" alt="Services" style="width:100%"/>
+<img src="/diagrams/Performance/Services.png" alt="Services" loading="lazy" width="2741" height="1416" style="width:100%"/>
 </a>
 </figure>
 
@@ -110,7 +110,7 @@ When we see a service to *request* help from other services and then receive the
 
 <figure>
 <a href="/diagrams/Dependencies/Services-1.png" style="outline:none">
-<img src="/diagrams/Dependencies/Services-1.png" alt="Services-1" style="width:100%"/>
+<img src="/diagrams/Dependencies/Services-1.png" alt="Services-1" loading="lazy" width="1913" height="489" style="width:100%"/>
 </a>
 </figure>
 
@@ -118,7 +118,7 @@ Another way for services to communicate is [*choreography*]({{< relref "../found
 
 <figure>
 <a href="/diagrams/Dependencies/Services-2.png" style="outline:none">
-<img src="/diagrams/Dependencies/Services-2.png" alt="Services-2" style="width:100%"/>
+<img src="/diagrams/Dependencies/Services-2.png" alt="Services-2" loading="lazy" width="1903" height="486" style="width:100%"/>
 </a>
 </figure>
 
@@ -126,7 +126,7 @@ If the system relies on notifications \(services publish *domain events*\), it i
 
 <figure>
 <a href="/diagrams/Dependencies/Services-3.png" style="outline:none">
-<img src="/diagrams/Dependencies/Services-3.png" alt="Services-3" style="width:100%"/>
+<img src="/diagrams/Dependencies/Services-3.png" alt="Services-3" loading="lazy" width="1916" height="561" style="width:100%"/>
 </a>
 </figure>
 
@@ -134,7 +134,7 @@ In general, a large service should wrap its dependencies with an [*Anticorruptio
 
 <figure>
 <a href="/diagrams/Dependencies/Services-4.png" style="outline:none">
-<img src="/diagrams/Dependencies/Services-4.png" alt="Services-4" style="width:100%"/>
+<img src="/diagrams/Dependencies/Services-4.png" alt="Services-4" loading="lazy" width="2211" height="555" style="width:100%"/>
 </a>
 </figure>
 
@@ -160,7 +160,7 @@ In general, a large service should wrap its dependencies with an [*Anticorruptio
 
 <figure>
 <a href="/diagrams/Relations/Services.png" style="outline:none">
-<img src="/diagrams/Relations/Services.png" alt="Services" style="width:100%"/>
+<img src="/diagrams/Relations/Services.png" alt="Services" loading="lazy" width="2025" height="594" style="width:100%"/>
 </a>
 </figure>
 
@@ -303,7 +303,7 @@ A service is not necessarily monolithic inside\. Because a service is encapsulat
 
 <figure>
 <a href="/diagrams/Variants/1/Subtypes%20of%20Services.png" style="outline:none">
-<img src="/diagrams/Variants/1/Subtypes%20of%20Services.png" alt="Subtypes of Services" style="width:100%"/>
+<img src="/diagrams/Variants/1/Subtypes%20of%20Services.png" alt="Subtypes of Services" loading="lazy" width="2411" height="941" style="width:100%"/>
 </a>
 </figure>
 
@@ -311,7 +311,7 @@ A service is not necessarily monolithic inside\. Because a service is encapsulat
 
 <figure>
 <a href="/diagrams/Variants/1/Service%20-%20Monolithic.png" style="outline:none">
-<img src="/diagrams/Variants/1/Service%20-%20Monolithic.png" alt="Service - Monolithic" style="width:27%"/>
+<img src="/diagrams/Variants/1/Service%20-%20Monolithic.png" alt="Service - Monolithic" loading="lazy" width="482" height="600" style="width:27%"/>
 </a>
 </figure>
 
@@ -321,7 +321,7 @@ A *monolithic service* is a service with no definite internal structure, probabl
 
 <figure>
 <a href="/diagrams/Variants/1/Service%20-%20Layered.png" style="outline:none">
-<img src="/diagrams/Variants/1/Service%20-%20Layered.png" alt="Service - Layered" style="width:83%"/>
+<img src="/diagrams/Variants/1/Service%20-%20Layered.png" alt="Service - Layered" loading="lazy" width="1369" height="660" style="width:83%"/>
 </a>
 </figure>
 
@@ -335,7 +335,7 @@ Another benefit comes from the existence of the upper integration layer which ma
 
 <figure>
 <a href="/diagrams/Variants/1/Service%20-%20Hexagonal.png" style="outline:none">
-<img src="/diagrams/Variants/1/Service%20-%20Hexagonal.png" alt="Service - Hexagonal" style="width:100%"/>
+<img src="/diagrams/Variants/1/Service%20-%20Hexagonal.png" alt="Service - Hexagonal" loading="lazy" width="1680" height="778" style="width:100%"/>
 </a>
 </figure>
 
@@ -347,7 +347,7 @@ This is a real\-world application of [*Hexagonal Architecture*]({{< relref "../i
 
 <figure>
 <a href="/diagrams/Variants/1/Service%20-%20Scaled.png" style="outline:none">
-<img src="/diagrams/Variants/1/Service%20-%20Scaled.png" alt="Service - Scaled" style="width:100%"/>
+<img src="/diagrams/Variants/1/Service%20-%20Scaled.png" alt="Service - Scaled" loading="lazy" width="2539" height="778" style="width:100%"/>
 </a>
 </figure>
 
@@ -357,7 +357,7 @@ With *scaled services* there are multiple [*instances*]({{< relref "../basic-met
 
 <figure>
 <a href="/diagrams/Variants/1/Service%20-%20Cell.png" style="outline:none">
-<img src="/diagrams/Variants/1/Service%20-%20Cell.png" alt="Service - Cell" style="width:100%"/>
+<img src="/diagrams/Variants/1/Service%20-%20Cell.png" alt="Service - Cell" loading="lazy" width="1697" height="819" style="width:100%"/>
 </a>
 </figure>
 
@@ -377,7 +377,7 @@ Examples of *Services* include:
 
 <figure>
 <a href="/diagrams/Variants/1/Service-Based%20Architecture.png" style="outline:none">
-<img src="/diagrams/Variants/1/Service-Based%20Architecture.png" alt="Service-Based Architecture" style="width:100%"/>
+<img src="/diagrams/Variants/1/Service-Based%20Architecture.png" alt="Service-Based Architecture" loading="lazy" width="1539" height="480" style="width:100%"/>
 </a>
 </figure>
 
@@ -387,7 +387,7 @@ This is the simplest use of *Services* where each subdomain gets a dedicated com
 
 <figure>
 <a href="/diagrams/Variants/1/Microservices.png" style="outline:none">
-<img src="/diagrams/Variants/1/Microservices.png" alt="Microservices" style="width:100%"/>
+<img src="/diagrams/Variants/1/Microservices.png" alt="Microservices" loading="lazy" width="2451" height="833" style="width:100%"/>
 </a>
 </figure>
 
@@ -409,7 +409,7 @@ This architecture usually relies on a [*Service Mesh*]({{< relref "../extension-
 
 <figure>
 <a href="/diagrams/Variants/1/Actors.png" style="outline:none">
-<img src="/diagrams/Variants/1/Actors.png" alt="Actors" style="width:100%"/>
+<img src="/diagrams/Variants/1/Actors.png" alt="Actors" loading="lazy" width="1350" height="463" style="width:100%"/>
 </a>
 </figure>
 
@@ -429,7 +429,7 @@ If we apply a bit of generalization, we can deduce that any server or backend se
 
 <figure>
 <a href="/diagrams/Variants/1/Nanoservices%20-%20API%20Layer.png" style="outline:none">
-<img src="/diagrams/Variants/1/Nanoservices%20-%20API%20Layer.png" alt="Nanoservices - API Layer" style="width:82%"/>
+<img src="/diagrams/Variants/1/Nanoservices%20-%20API%20Layer.png" alt="Nanoservices - API Layer" loading="lazy" width="1500" height="564" style="width:82%"/>
 </a>
 </figure>
 
@@ -439,7 +439,7 @@ Though *Nanoservices* are defined by their size \(a single function\), not syste
 
 <figure>
 <a href="/diagrams/Variants/1/Drivers.png" style="outline:none">
-<img src="/diagrams/Variants/1/Drivers.png" alt="Drivers" style="width:100%"/>
+<img src="/diagrams/Variants/1/Drivers.png" alt="Drivers" loading="lazy" width="1474" height="669" style="width:100%"/>
 </a>
 </figure>
 
@@ -465,7 +465,7 @@ The whole system of kernel, drivers, and user applications comprises the [*Micro
 
 <figure>
 <a href="/diagrams/Evolutions/Services/Services_%20Split.png" style="outline:none">
-<img src="/diagrams/Evolutions/Services/Services_%20Split.png" alt="Services: Split" style="width:100%"/>
+<img src="/diagrams/Evolutions/Services/Services_%20Split.png" alt="Services: Split" loading="lazy" width="2469" height="489" style="width:100%"/>
 </a>
 </figure>
 
@@ -474,7 +474,7 @@ The whole system of kernel, drivers, and user applications comprises the [*Micro
 
 <figure>
 <a href="/diagrams/Evolutions/Services/Services_%20Merge.png" style="outline:none">
-<img src="/diagrams/Evolutions/Services/Services_%20Merge.png" alt="Services: Merge" style="width:100%"/>
+<img src="/diagrams/Evolutions/Services/Services_%20Merge.png" alt="Services: Merge" loading="lazy" width="2057" height="476" style="width:100%"/>
 </a>
 </figure>
 
@@ -487,7 +487,7 @@ The most common modifications of a system of *Services* involve supplementary sy
 
 <figure>
 <a href="/diagrams/Evolutions/Services/Services%20add%20Middleware.png" style="outline:none">
-<img src="/diagrams/Evolutions/Services/Services%20add%20Middleware.png" alt="Services add Middleware" style="width:100%"/>
+<img src="/diagrams/Evolutions/Services/Services%20add%20Middleware.png" alt="Services add Middleware" loading="lazy" width="2447" height="604" style="width:100%"/>
 </a>
 </figure>
 
@@ -496,7 +496,7 @@ The most common modifications of a system of *Services* involve supplementary sy
 
 <figure>
 <a href="/diagrams/Variants/2/Multifunctional%20-%20Service%20Mesh.png" style="outline:none">
-<img src="/diagrams/Variants/2/Multifunctional%20-%20Service%20Mesh.png" alt="Multifunctional - Service Mesh" style="width:100%"/>
+<img src="/diagrams/Variants/2/Multifunctional%20-%20Service%20Mesh.png" alt="Multifunctional - Service Mesh" loading="lazy" width="2018" height="630" style="width:100%"/>
 </a>
 </figure>
 
@@ -505,7 +505,7 @@ The most common modifications of a system of *Services* involve supplementary sy
 
 <figure>
 <a href="/diagrams/Evolutions/Services/Services%20to%20Shared%20Database.png" style="outline:none">
-<img src="/diagrams/Evolutions/Services/Services%20to%20Shared%20Database.png" alt="Services to Shared Database" style="width:100%"/>
+<img src="/diagrams/Evolutions/Services/Services%20to%20Shared%20Database.png" alt="Services to Shared Database" loading="lazy" width="2385" height="564" style="width:100%"/>
 </a>
 </figure>
 
@@ -514,7 +514,7 @@ The most common modifications of a system of *Services* involve supplementary sy
 
 <figure>
 <a href="/diagrams/Evolutions/Services/Services%20add%20Proxy.png" style="outline:none">
-<img src="/diagrams/Evolutions/Services/Services%20add%20Proxy.png" alt="Services add Proxy" style="width:100%"/>
+<img src="/diagrams/Evolutions/Services/Services%20add%20Proxy.png" alt="Services add Proxy" loading="lazy" width="2447" height="748" style="width:100%"/>
 </a>
 </figure>
 
@@ -523,7 +523,7 @@ The most common modifications of a system of *Services* involve supplementary sy
 
 <figure>
 <a href="/diagrams/Evolutions/Services/Services%20use%20Orchestrator.png" style="outline:none">
-<img src="/diagrams/Evolutions/Services/Services%20use%20Orchestrator.png" alt="Services use Orchestrator" style="width:100%"/>
+<img src="/diagrams/Evolutions/Services/Services%20use%20Orchestrator.png" alt="Services use Orchestrator" loading="lazy" width="2451" height="748" style="width:100%"/>
 </a>
 </figure>
 

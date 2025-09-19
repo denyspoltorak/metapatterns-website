@@ -19,7 +19,7 @@ Sharing data inside a process is similar, but usually requires some kind of prot
 
 <figure>
 <a href="/diagrams/Conclusion/Sharing-DirectCall.png" style="outline:none">
-<img src="/diagrams/Conclusion/Sharing-DirectCall.png" alt="Sharing-DirectCall" style="width:100%"/>
+<img src="/diagrams/Conclusion/Sharing-DirectCall.png" alt="Sharing-DirectCall" loading="lazy" width="2201" height="581" style="width:100%"/>
 </a>
 </figure>
 
@@ -29,7 +29,7 @@ In a distributed system you can place the functionality or data to share into a 
 
 <figure>
 <a href="/diagrams/Conclusion/Sharing-DedicatedService.png" style="outline:none">
-<img src="/diagrams/Conclusion/Sharing-DedicatedService.png" alt="Sharing-DedicatedService" style="width:100%"/>
+<img src="/diagrams/Conclusion/Sharing-DedicatedService.png" alt="Sharing-DedicatedService" loading="lazy" width="2267" height="587" style="width:100%"/>
 </a>
 </figure>
 
@@ -41,7 +41,7 @@ In a similar way a service may [behave as a function]({{< relref "../../foundati
 
 <figure>
 <a href="/diagrams/Conclusion/Sharing-Delegate.png" style="outline:none">
-<img src="/diagrams/Conclusion/Sharing-Delegate.png" alt="Sharing-Delegate" style="width:100%"/>
+<img src="/diagrams/Conclusion/Sharing-Delegate.png" alt="Sharing-Delegate" loading="lazy" width="2490" height="840" style="width:100%"/>
 </a>
 </figure>
 
@@ -53,7 +53,7 @@ Another case of replication is importing the same code in multiple services, whi
 
 <figure>
 <a href="/diagrams/Conclusion/Sharing-Duplicate.png" style="outline:none">
-<img src="/diagrams/Conclusion/Sharing-Duplicate.png" alt="Sharing-Duplicate" style="width:100%"/>
+<img src="/diagrams/Conclusion/Sharing-Duplicate.png" alt="Sharing-Duplicate" loading="lazy" width="2543" height="1174" style="width:100%"/>
 </a>
 </figure>
 
