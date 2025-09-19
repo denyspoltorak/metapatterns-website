@@ -62,7 +62,7 @@ We’ll draw the abstractness axis vertically with higher\-level modules positio
 
 <figure>
 <a href="/diagrams/Intro/CQRS%20with%20notes.png" style="outline:none">
-<img src="/diagrams/Intro/CQRS%20with%20notes.png" alt="CQRS with notes" style="width:100%"/>
+<img src="/diagrams/Intro/CQRS%20with%20notes.png" alt="CQRS with notes" width="1759" height="1191" style="width:100%"/>
 </a>
 </figure>
 
@@ -82,7 +82,7 @@ Let’s consider the following structure:
 
 <figure>
 <a href="/diagrams/Intro/Example-Undefined.png" style="outline:none">
-<img src="/diagrams/Intro/Example-Undefined.png" alt="Example-Undefined" style="width:93%"/>
+<img src="/diagrams/Intro/Example-Undefined.png" alt="Example-Undefined" width="1749" height="450" style="width:93%"/>
 </a>
 </figure>
 
@@ -95,7 +95,7 @@ It features two \(or more in real life\) high\-level modules that communicate wi
 
 <figure>
 <a href="/diagrams/Intro/Example-Defined.png" style="outline:none">
-<img src="/diagrams/Intro/Example-Defined.png" alt="Example-Defined" style="width:100%"/>
+<img src="/diagrams/Intro/Example-Defined.png" alt="Example-Defined" width="1654" height="454" style="width:100%"/>
 </a>
 </figure>
 

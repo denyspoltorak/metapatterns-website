@@ -11,7 +11,7 @@ images = ["/diagrams/Main/Plugins.png"]
 
 <figure>
 <a href="/diagrams/Main/Plugins.png" style="outline:none">
-<img src="/diagrams/Main/Plugins.png" alt="Plugins" style="width:100%"/>
+<img src="/diagrams/Main/Plugins.png" alt="Plugins" width="1785" height="964" style="width:100%"/>
 </a>
 </figure>
 
@@ -49,7 +49,7 @@ The only case for a plugin to improve performance of a system that I can think u
 
 <figure>
 <a href="/diagrams/Performance/Plugins-injection.png" style="outline:none">
-<img src="/diagrams/Performance/Plugins-injection.png" alt="Plugins-injection" style="width:100%"/>
+<img src="/diagrams/Performance/Plugins-injection.png" alt="Plugins-injection" width="1864" height="621" style="width:100%"/>
 </a>
 </figure>
 
@@ -59,7 +59,7 @@ Each *plugin* depends on the *core*’s *API* \(for *Addons*\) or *SPI* \(for *P
 
 <figure>
 <a href="/diagrams/Dependencies/Plugins.png" style="outline:none">
-<img src="/diagrams/Dependencies/Plugins.png" alt="Plugins" style="width:100%"/>
+<img src="/diagrams/Dependencies/Plugins.png" alt="Plugins" width="1389" height="639" style="width:100%"/>
 </a>
 </figure>
 
@@ -81,7 +81,7 @@ Each *plugin* depends on the *core*’s *API* \(for *Addons*\) or *SPI* \(for *P
 
 <figure>
 <a href="/diagrams/Relations/Plugins.png" style="outline:none">
-<img src="/diagrams/Relations/Plugins.png" alt="Plugins" style="width:68%"/>
+<img src="/diagrams/Relations/Plugins.png" alt="Plugins" width="1232" height="1131" style="width:68%"/>
 </a>
 </figure>
 

@@ -11,7 +11,7 @@ images = ["/diagrams/Main/Layers.png"]
 
 <figure>
 <a href="/diagrams/Main/Layers.png" style="outline:none">
-<img src="/diagrams/Main/Layers.png" alt="Layers" style="width:100%"/>
+<img src="/diagrams/Main/Layers.png" alt="Layers" width="1789" height="863" style="width:100%"/>
 </a>
 </figure>
 
@@ -61,7 +61,7 @@ Many patterns have one or more of their layers split by subdomain, resulting in 
 
 <figure>
 <a href="/diagrams/Misc/Layers%20of%20Services.png" style="outline:none">
-<img src="/diagrams/Misc/Layers%20of%20Services.png" alt="Layers of Services" style="width:100%"/>
+<img src="/diagrams/Misc/Layers%20of%20Services.png" alt="Layers of Services" width="3060" height="849" style="width:100%"/>
 </a>
 </figure>
 
@@ -89,7 +89,7 @@ There is a number of optimizations to skip interlayer calls:
 
 <figure>
 <a href="/diagrams/Performance/Layers-caching.png" style="outline:none">
-<img src="/diagrams/Performance/Layers-caching.png" alt="Layers-caching" style="width:100%"/>
+<img src="/diagrams/Performance/Layers-caching.png" alt="Layers-caching" width="2096" height="561" style="width:100%"/>
 </a>
 </figure>
 
@@ -97,7 +97,7 @@ There is a number of optimizations to skip interlayer calls:
 
 <figure>
 <a href="/diagrams/Performance/Layers-aggregation.png" style="outline:none">
-<img src="/diagrams/Performance/Layers-aggregation.png" alt="Layers-aggregation" style="width:100%"/>
+<img src="/diagrams/Performance/Layers-aggregation.png" alt="Layers-aggregation" width="2126" height="564" style="width:100%"/>
 </a>
 </figure>
 
@@ -105,7 +105,7 @@ There is a number of optimizations to skip interlayer calls:
 
 <figure>
 <a href="/diagrams/Performance/Layers-batching.png" style="outline:none">
-<img src="/diagrams/Performance/Layers-batching.png" alt="Layers-batching" style="width:100%"/>
+<img src="/diagrams/Performance/Layers-batching.png" alt="Layers-batching" width="1965" height="555" style="width:100%"/>
 </a>
 </figure>
 
@@ -113,7 +113,7 @@ There is a number of optimizations to skip interlayer calls:
 
 <figure>
 <a href="/diagrams/Performance/Layers-injection.png" style="outline:none">
-<img src="/diagrams/Performance/Layers-injection.png" alt="Layers-injection" style="width:100%"/>
+<img src="/diagrams/Performance/Layers-injection.png" alt="Layers-injection" width="2012" height="561" style="width:100%"/>
 </a>
 </figure>
 
@@ -131,7 +131,7 @@ There may also be an [*Adapter*]({{< relref "../extension-metapatterns/proxy.md#
 
 <figure>
 <a href="/diagrams/Dependencies/Layers-1.png" style="outline:none">
-<img src="/diagrams/Dependencies/Layers-1.png" alt="Layers-1" style="width:89%"/>
+<img src="/diagrams/Dependencies/Layers-1.png" alt="Layers-1" width="1834" height="613" style="width:89%"/>
 </a>
 </figure>
 
@@ -139,7 +139,7 @@ A layer can be *closed* \(*strict*\) or *open* \(*relaxed*\)\. A layer above a c
 
 <figure>
 <a href="/diagrams/Dependencies/Layers-2.png" style="outline:none">
-<img src="/diagrams/Dependencies/Layers-2.png" alt="Layers-2" style="width:93%"/>
+<img src="/diagrams/Dependencies/Layers-2.png" alt="Layers-2" width="2126" height="506" style="width:93%"/>
 </a>
 </figure>
 
@@ -147,7 +147,7 @@ If you ever need to *scale* \(run multiple instances of\) a layer, you may notic
 
 <figure>
 <a href="/diagrams/Dependencies/Layers-3.png" style="outline:none">
-<img src="/diagrams/Dependencies/Layers-3.png" alt="Layers-3" style="width:93%"/>
+<img src="/diagrams/Dependencies/Layers-3.png" alt="Layers-3" width="1517" height="703" style="width:93%"/>
 </a>
 </figure>
 
@@ -172,7 +172,7 @@ If you ever need to *scale* \(run multiple instances of\) a layer, you may notic
 
 <figure>
 <a href="/diagrams/Relations/Layers.png" style="outline:none">
-<img src="/diagrams/Relations/Layers.png" alt="Layers" style="width:100%"/>
+<img src="/diagrams/Relations/Layers.png" alt="Layers" width="1986" height="898" style="width:100%"/>
 </a>
 </figure>
 
@@ -248,7 +248,7 @@ The notion of layering seems to be so natural to our minds that most known archi
 
 <figure>
 <a href="/diagrams/Variants/1/DDD.png" style="outline:none">
-<img src="/diagrams/Variants/1/DDD.png" alt="DDD" style="width:86%"/>
+<img src="/diagrams/Variants/1/DDD.png" alt="DDD" width="1386" height="849" style="width:86%"/>
 </a>
 </figure>
 
@@ -276,7 +276,7 @@ We will often use the DDD naming convention while describing more complex archit
 
 <figure>
 <a href="/diagrams/Variants/1/Three-Tier.png" style="outline:none">
-<img src="/diagrams/Variants/1/Three-Tier.png" alt="Three-Tier" style="width:100%"/>
+<img src="/diagrams/Variants/1/Three-Tier.png" alt="Three-Tier" width="1412" height="709" style="width:100%"/>
 </a>
 </figure>
 
@@ -299,7 +299,7 @@ In this case the division into layers resolves the conflict between scalability,
 
 <figure>
 <a href="/diagrams/Variants/1/Embedded.png" style="outline:none">
-<img src="/diagrams/Variants/1/Embedded.png" alt="Embedded" style="width:100%"/>
+<img src="/diagrams/Variants/1/Embedded.png" alt="Embedded" width="1403" height="713" style="width:100%"/>
 </a>
 </figure>
 
@@ -332,7 +332,7 @@ Not all the layered architectures are equally layered\. A [*Monolith*]({{< relre
 
 <figure>
 <a href="/diagrams/Evolutions/Layers/Layers%20to%20Layers.png" style="outline:none">
-<img src="/diagrams/Evolutions/Layers/Layers%20to%20Layers.png" alt="Layers to Layers" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20to%20Layers.png" alt="Layers to Layers" width="1759" height="833" style="width:100%"/>
 </a>
 </figure>
 
@@ -343,7 +343,7 @@ It is also common to:
 
 <figure>
 <a href="/diagrams/Evolutions/Layers/Layers%20Split%20in%20Two.png" style="outline:none">
-<img src="/diagrams/Evolutions/Layers/Layers%20Split%20in%20Two.png" alt="Layers Split in Two" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20Split%20in%20Two.png" alt="Layers Split in Two" width="1916" height="476" style="width:100%"/>
 </a>
 </figure>
 
@@ -356,7 +356,7 @@ The main drawback \(and benefit as well\) of *Layers* is that much or all of the
 
 <figure>
 <a href="/diagrams/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.png" style="outline:none">
-<img src="/diagrams/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.png" alt="Layers Split Domain to Services" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.png" alt="Layers Split Domain to Services" width="2048" height="486" style="width:100%"/>
 </a>
 </figure>
 
@@ -365,7 +365,7 @@ The main drawback \(and benefit as well\) of *Layers* is that much or all of the
 
 <figure>
 <a href="/diagrams/Evolutions/Layers/Layers%20Split%20to%20Event-Driven%20Architecture.png" style="outline:none">
-<img src="/diagrams/Evolutions/Layers/Layers%20Split%20to%20Event-Driven%20Architecture.png" alt="Layers Split to Event-Driven Architecture" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20Split%20to%20Event-Driven%20Architecture.png" alt="Layers Split to Event-Driven Architecture" width="2192" height="529" style="width:100%"/>
 </a>
 </figure>
 
@@ -374,7 +374,7 @@ The main drawback \(and benefit as well\) of *Layers* is that much or all of the
 
 <figure>
 <a href="/diagrams/Evolutions/Layers/Layers%20to%20Hierarchy.png" style="outline:none">
-<img src="/diagrams/Evolutions/Layers/Layers%20to%20Hierarchy.png" alt="Layers to Hierarchy" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20to%20Hierarchy.png" alt="Layers to Hierarchy" width="2074" height="486" style="width:100%"/>
 </a>
 </figure>
 
@@ -387,7 +387,7 @@ There are several ways to improve the performance of a layered system\. One we h
 
 <figure>
 <a href="/diagrams/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.png" style="outline:none">
-<img src="/diagrams/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.png" alt="Layers to Space-Based Architecture" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.png" alt="Layers to Space-Based Architecture" width="1991" height="519" style="width:100%"/>
 </a>
 </figure>
 
@@ -398,7 +398,7 @@ Others are new:
 
 <figure>
 <a href="/diagrams/Evolutions/Layers/Layers%20Merge.png" style="outline:none">
-<img src="/diagrams/Evolutions/Layers/Layers%20Merge.png" alt="Layers Merge" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20Merge.png" alt="Layers Merge" width="1916" height="486" style="width:100%"/>
 </a>
 </figure>
 
@@ -407,7 +407,7 @@ Others are new:
 
 <figure>
 <a href="/diagrams/Evolutions/Layers/Layers_%20Shard.png" style="outline:none">
-<img src="/diagrams/Evolutions/Layers/Layers_%20Shard.png" alt="Layers: Shard" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers_%20Shard.png" alt="Layers: Shard" width="1860" height="604" style="width:100%"/>
 </a>
 </figure>
 
@@ -416,7 +416,7 @@ Others are new:
 
 <figure>
 <a href="/diagrams/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.png" style="outline:none">
-<img src="/diagrams/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.png" alt="Layers to Polyglot Persistence" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.png" alt="Layers to Polyglot Persistence" width="1926" height="480" style="width:100%"/>
 </a>
 </figure>
 
@@ -431,7 +431,7 @@ The last group of evolutions to consider is about making the system more adaptab
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png" style="outline:none">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png" alt="Monolith to Layers - Further 2" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png" alt="Monolith to Layers - Further 2" width="1834" height="849" style="width:100%"/>
 </a>
 </figure>
 
@@ -442,7 +442,7 @@ There is one new evolution which modifies the upper \(*orchestration*\) layer:
 
 <figure>
 <a href="/diagrams/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.png" style="outline:none">
-<img src="/diagrams/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.png" alt="Layers to Backends for Frontends" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.png" alt="Layers to Backends for Frontends" width="1894" height="639" style="width:100%"/>
 </a>
 </figure>
 

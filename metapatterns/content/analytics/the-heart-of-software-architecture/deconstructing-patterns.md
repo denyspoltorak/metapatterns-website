@@ -77,7 +77,7 @@ Finally, let’s close the book by iterating over the metapatterns and looking i
 
 <figure>
 <a href="/diagrams/Heart/Basic.png" style="outline:none">
-<img src="/diagrams/Heart/Basic.png" alt="Basic" style="width:100%"/>
+<img src="/diagrams/Heart/Basic.png" alt="Basic" width="2293" height="1224" style="width:100%"/>
 </a>
 </figure>
 
@@ -99,7 +99,7 @@ Basic architectures:
 
 <figure>
 <a href="/diagrams/Heart/Extension.png" style="outline:none">
-<img src="/diagrams/Heart/Extension.png" alt="Extension" style="width:100%"/>
+<img src="/diagrams/Heart/Extension.png" alt="Extension" width="2183" height="1391" style="width:100%"/>
 </a>
 </figure>
 
@@ -123,7 +123,7 @@ Grouping related functionality:
 
 <figure>
 <a href="/diagrams/Heart/Fragmented.png" style="outline:none">
-<img src="/diagrams/Heart/Fragmented.png" alt="Fragmented" style="width:100%"/>
+<img src="/diagrams/Heart/Fragmented.png" alt="Fragmented" width="2739" height="1697" style="width:100%"/>
 </a>
 </figure>
 
@@ -144,7 +144,7 @@ Decoupled systems:
 
 <figure>
 <a href="/diagrams/Heart/Implementation.png" style="outline:none">
-<img src="/diagrams/Heart/Implementation.png" alt="Implementation" style="width:100%"/>
+<img src="/diagrams/Heart/Implementation.png" alt="Implementation" width="2661" height="801" style="width:100%"/>
 </a>
 </figure>
 

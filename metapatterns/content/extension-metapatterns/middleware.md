@@ -11,7 +11,7 @@ images = ["/diagrams/Main/Middleware.png"]
 
 <figure>
 <a href="/diagrams/Main/Middleware.png" style="outline:none">
-<img src="/diagrams/Main/Middleware.png" alt="Middleware" style="width:100%"/>
+<img src="/diagrams/Main/Middleware.png" alt="Middleware" width="2008" height="889" style="width:100%"/>
 </a>
 </figure>
 
@@ -70,7 +70,7 @@ Each service depends both on the *Middleware* and on the API of every service it
 
 <figure>
 <a href="/diagrams/Dependencies/Middleware.png" style="outline:none">
-<img src="/diagrams/Dependencies/Middleware.png" alt="Middleware" style="width:100%"/>
+<img src="/diagrams/Dependencies/Middleware.png" alt="Middleware" width="1873" height="525" style="width:100%"/>
 </a>
 </figure>
 
@@ -95,7 +95,7 @@ You may decide to use an [*Anticorruption Layer*]({{< relref "../extension-metap
 
 <figure>
 <a href="/diagrams/Relations/Middleware.png" style="outline:none">
-<img src="/diagrams/Relations/Middleware.png" alt="Middleware" style="width:100%"/>
+<img src="/diagrams/Relations/Middleware.png" alt="Middleware" width="2329" height="863" style="width:100%"/>
 </a>
 </figure>
 
@@ -155,7 +155,7 @@ If the messages are stored indefinitely, the *Middleware* becomes a *Persistent*
 
 <figure>
 <a href="/diagrams/Misc/Middleware.png" style="outline:none">
-<img src="/diagrams/Misc/Middleware.png" alt="Middleware" style="width:100%"/>
+<img src="/diagrams/Misc/Middleware.png" alt="Middleware" width="2968" height="660" style="width:100%"/>
 </a>
 </figure>
 
@@ -176,7 +176,7 @@ There are several patterns which extend *Middleware* with other functions:
 
 <figure>
 <a href="/diagrams/Variants/2/Message%20Bus.png" style="outline:none">
-<img src="/diagrams/Variants/2/Message%20Bus.png" alt="Message Bus" style="width:100%"/>
+<img src="/diagrams/Variants/2/Message%20Bus.png" alt="Message Bus" width="1631" height="568" style="width:100%"/>
 </a>
 </figure>
 
@@ -186,7 +186,7 @@ A *Message Bus* \[[EIP]({{< relref "../appendices/books-referenced.md#eip" >}})\
 
 <figure>
 <a href="/diagrams/Variants/1/Microservices.png" style="outline:none">
-<img src="/diagrams/Variants/1/Microservices.png" alt="Microservices" style="width:100%"/>
+<img src="/diagrams/Variants/1/Microservices.png" alt="Microservices" width="2451" height="833" style="width:100%"/>
 </a>
 </figure>
 
@@ -198,7 +198,7 @@ The internals of [*Service Mesh*]({{< relref "../implementation-metapatterns/mes
 
 <figure>
 <a href="/diagrams/Variants/2/Event%20Mediator.png" style="outline:none">
-<img src="/diagrams/Variants/2/Event%20Mediator.png" alt="Event Mediator" style="width:100%"/>
+<img src="/diagrams/Variants/2/Event%20Mediator.png" alt="Event Mediator" width="2064" height="758" style="width:100%"/>
 </a>
 </figure>
 
@@ -210,7 +210,7 @@ Slightly more details on the *Event Mediator* are [provided in the *Orchestrator
 
 <figure>
 <a href="/diagrams/Variants/2/Middleware%20-%20Shared%20Event%20Store.png" style="outline:none">
-<img src="/diagrams/Variants/2/Middleware%20-%20Shared%20Event%20Store.png" alt="Middleware - Shared Event Store" style="width:100%"/>
+<img src="/diagrams/Variants/2/Middleware%20-%20Shared%20Event%20Store.png" alt="Middleware - Shared Event Store" width="2368" height="489" style="width:100%"/>
 </a>
 </figure>
 
@@ -222,7 +222,7 @@ This pattern is detailed in the [*Combined Component* chapter]({{< relref "../ex
 
 <figure>
 <a href="/diagrams/Variants/2/Enterprise%20Service%20Bus.png" style="outline:none">
-<img src="/diagrams/Variants/2/Enterprise%20Service%20Bus.png" alt="Enterprise Service Bus" style="width:100%"/>
+<img src="/diagrams/Variants/2/Enterprise%20Service%20Bus.png" alt="Enterprise Service Bus" width="2469" height="1056" style="width:100%"/>
 </a>
 </figure>
 
@@ -239,7 +239,7 @@ A *Middleware* is unlikely to be removed \(though it may be replaced\) once it i
 
 <figure>
 <a href="/diagrams/Evolutions/2/Middleware%20add%20Middleware.png" style="outline:none">
-<img src="/diagrams/Evolutions/2/Middleware%20add%20Middleware.png" alt="Middleware add Middleware" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Middleware%20add%20Middleware.png" alt="Middleware add Middleware" width="2310" height="679" style="width:100%"/>
 </a>
 </figure>
 
@@ -248,7 +248,7 @@ A *Middleware* is unlikely to be removed \(though it may be replaced\) once it i
 
 <figure>
 <a href="/diagrams/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.png" style="outline:none">
-<img src="/diagrams/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.png" alt="Middleware to Bus of Buses" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.png" alt="Middleware to Bus of Buses" width="3628" height="825" style="width:100%"/>
 </a>
 </figure>
 

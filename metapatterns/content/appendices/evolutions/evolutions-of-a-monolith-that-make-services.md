@@ -19,7 +19,7 @@ The final major drawback of [*Monolith*]({{< relref "../../basic-metapatterns/mo
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith_%20Services%20and%20Pipeline.png" style="outline:none">
-<img src="/diagrams/Evolutions/Monolith/Monolith_%20Services%20and%20Pipeline.png" alt="Monolith: Services and Pipeline" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith_%20Services%20and%20Pipeline.png" alt="Monolith: Services and Pipeline" width="2349" height="568" style="width:100%"/>
 </a>
 </figure>
 
@@ -27,7 +27,7 @@ The final major drawback of [*Monolith*]({{< relref "../../basic-metapatterns/mo
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Services.png" style="outline:none">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Services.png" alt="Monolith to Services" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Services.png" alt="Monolith to Services" width="2166" height="489" style="width:100%"/>
 </a>
 </figure>
 
@@ -62,7 +62,7 @@ Splitting a *Monolith* into *Services* by subdomain [is risky in the early stage
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20Split%20Service.png" style="outline:none">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20Split%20Service.png" alt="Monolith Split Service" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20Split%20Service.png" alt="Monolith Split Service" width="2113" height="489" style="width:100%"/>
 </a>
 </figure>
 
@@ -102,7 +102,7 @@ If you are not adding a new feature but need to change an old one – use the ch
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Pipeline.png" style="outline:none">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Pipeline.png" alt="Monolith to Pipeline" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Pipeline.png" alt="Monolith to Pipeline" width="2158" height="480" style="width:100%"/>
 </a>
 </figure>
 
@@ -145,7 +145,7 @@ Systems of [*Services*]({{< relref "../../basic-metapatterns/services.md" >}}) o
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Services%20-%20Further%201.png" style="outline:none">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Services%20-%20Further%201.png" alt="Monolith to Services - Further 1" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Services%20-%20Further%201.png" alt="Monolith to Services - Further 1" width="2893" height="1560" style="width:100%"/>
 </a>
 </figure>
 
@@ -159,7 +159,7 @@ Each service, being a smaller *Monolith*, may evolve on its own\. Most of the ev
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Services%20-%20Further%202.png" style="outline:none">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Services%20-%20Further%202.png" alt="Monolith to Services - Further 2" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Services%20-%20Further%202.png" alt="Monolith to Services - Further 2" width="2477" height="744" style="width:100%"/>
 </a>
 </figure>
 

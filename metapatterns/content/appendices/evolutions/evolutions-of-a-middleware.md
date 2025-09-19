@@ -18,7 +18,7 @@ A [*Middleware*]({{< relref "../../extension-metapatterns/middleware.md" >}}) is
 
 <figure>
 <a href="/diagrams/Evolutions/2/Middleware%20add%20Middleware.png" style="outline:none">
-<img src="/diagrams/Evolutions/2/Middleware%20add%20Middleware.png" alt="Middleware add Middleware" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Middleware%20add%20Middleware.png" alt="Middleware add Middleware" width="2310" height="679" style="width:100%"/>
 </a>
 </figure>
 
@@ -45,7 +45,7 @@ If the current *Middleware* is too generic for the system’s needs, you can add
 
 <figure>
 <a href="/diagrams/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.png" style="outline:none">
-<img src="/diagrams/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.png" alt="Middleware to Bus of Buses" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.png" alt="Middleware to Bus of Buses" width="3628" height="825" style="width:100%"/>
 </a>
 </figure>
 

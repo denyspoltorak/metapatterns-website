@@ -11,7 +11,7 @@ images = ["/diagrams/Main/Service-Oriented%20Architecture.png"]
 
 <figure>
 <a href="/diagrams/Main/Service-Oriented%20Architecture.png" style="outline:none">
-<img src="/diagrams/Main/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" style="width:100%"/>
+<img src="/diagrams/Main/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" width="1766" height="1269" style="width:100%"/>
 </a>
 </figure>
 
@@ -58,7 +58,7 @@ Each service of each layer depends on everything it uses\. As a result, developm
 
 <figure>
 <a href="/diagrams/Dependencies/Service-Oriented%20Architecture.png" style="outline:none">
-<img src="/diagrams/Dependencies/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" style="width:88%"/>
+<img src="/diagrams/Dependencies/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" width="1838" height="788" style="width:88%"/>
 </a>
 </figure>
 
@@ -94,7 +94,7 @@ This architecture was hyped at the time when enterprises were expanding by acqui
 
 <figure>
 <a href="/diagrams/Variants/3/Distributed%20Monolith.png" style="outline:none">
-<img src="/diagrams/Variants/3/Distributed%20Monolith.png" alt="Distributed Monolith" style="width:100%"/>
+<img src="/diagrams/Variants/3/Distributed%20Monolith.png" alt="Distributed Monolith" width="1789" height="819" style="width:100%"/>
 </a>
 </figure>
 
@@ -104,7 +104,7 @@ If a [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) gets too c
 
 <figure>
 <a href="/diagrams/Variants/3/Enterprise%20SOA.png" style="outline:none">
-<img src="/diagrams/Variants/3/Enterprise%20SOA.png" alt="Enterprise SOA" style="width:100%"/>
+<img src="/diagrams/Variants/3/Enterprise%20SOA.png" alt="Enterprise SOA" width="2614" height="1046" style="width:100%"/>
 </a>
 </figure>
 
@@ -121,7 +121,7 @@ The layers of *SOA* are:
 
 <figure>
 <a href="/diagrams/Variants/3/DOMA.png" style="outline:none">
-<img src="/diagrams/Variants/3/DOMA.png" alt="DOMA" style="width:100%"/>
+<img src="/diagrams/Variants/3/DOMA.png" alt="DOMA" width="1886" height="1541" style="width:100%"/>
 </a>
 </figure>
 
@@ -138,7 +138,7 @@ Uber’s *DOMA* also [makes heavy use](https://www.uber.com/blog/microservice-ar
 
 <figure>
 <a href="/diagrams/Variants/3/SOA%20-%20AUTOSAR.png" style="outline:none">
-<img src="/diagrams/Variants/3/SOA%20-%20AUTOSAR.png" alt="SOA - AUTOSAR" style="width:100%"/>
+<img src="/diagrams/Variants/3/SOA%20-%20AUTOSAR.png" alt="SOA - AUTOSAR" width="2254" height="938" style="width:100%"/>
 </a>
 </figure>
 
@@ -157,7 +157,7 @@ It seems that some proponents of [*Nanoservices*]({{< relref "../basic-metapatte
 
 <figure>
 <a href="/diagrams/Evolutions/3/SOA%20-%201.png" style="outline:none">
-<img src="/diagrams/Evolutions/3/SOA%20-%201.png" alt="SOA - 1" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/SOA%20-%201.png" alt="SOA - 1" width="2477" height="752" style="width:100%"/>
 </a>
 </figure>
 
@@ -166,7 +166,7 @@ It seems that some proponents of [*Nanoservices*]({{< relref "../basic-metapatte
 
 <figure>
 <a href="/diagrams/Evolutions/3/SOA%20-%202.png" style="outline:none">
-<img src="/diagrams/Evolutions/3/SOA%20-%202.png" alt="SOA - 2" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/SOA%20-%202.png" alt="SOA - 2" width="2614" height="752" style="width:100%"/>
 </a>
 </figure>
 
@@ -182,7 +182,7 @@ Afterwards you may deal with the remaining orchestration\. The idea is to move t
 
 <figure>
 <a href="/diagrams/Evolutions/3/SOA%20-%203.png" style="outline:none">
-<img src="/diagrams/Evolutions/3/SOA%20-%203.png" alt="SOA - 3" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/SOA%20-%203.png" alt="SOA - 3" width="2469" height="810" style="width:100%"/>
 </a>
 </figure>
 

@@ -19,7 +19,7 @@ Therefore, a one day task will likely be [*monolithic*]({{< relref "../../basic-
 
 <figure>
 <a href="/diagrams/Heart/Size-1.png" style="outline:none">
-<img src="/diagrams/Heart/Size-1.png" alt="Size-1" style="width:100%"/>
+<img src="/diagrams/Heart/Size-1.png" alt="Size-1" width="2019" height="2445" style="width:100%"/>
 </a>
 </figure>
 
@@ -27,7 +27,7 @@ Any inherent decoupling within your domain is another factor to consider in the 
 
 <figure>
 <a href="/diagrams/Heart/Size-2.png" style="outline:none">
-<img src="/diagrams/Heart/Size-2.png" alt="Size-2" style="width:100%"/>
+<img src="/diagrams/Heart/Size-2.png" alt="Size-2" width="2349" height="630" style="width:100%"/>
 </a>
 </figure>
 
@@ -43,7 +43,7 @@ Sometimes you expect to have many complex use cases which cannot be matched to y
 
 <figure>
 <a href="/diagrams/Heart/Features-1.png" style="outline:none">
-<img src="/diagrams/Heart/Features-1.png" alt="Features-1" style="width:100%"/>
+<img src="/diagrams/Heart/Features-1.png" alt="Features-1" width="2513" height="1941" style="width:100%"/>
 </a>
 </figure>
 
@@ -51,7 +51,7 @@ Other systems are built around data\. You cannot split it into private databases
 
 <figure>
 <a href="/diagrams/Heart/Features-2.png" style="outline:none">
-<img src="/diagrams/Heart/Features-2.png" alt="Features-2" style="width:100%"/>
+<img src="/diagrams/Heart/Features-2.png" alt="Features-2" width="1907" height="1399" style="width:100%"/>
 </a>
 </figure>
 
@@ -59,7 +59,7 @@ Once you go distributed, you will likely employ a [*Middleware*]({{< relref "../
 
 <figure>
 <a href="/diagrams/Heart/Features-3.png" style="outline:none">
-<img src="/diagrams/Heart/Features-3.png" alt="Features-3" style="width:100%"/>
+<img src="/diagrams/Heart/Features-3.png" alt="Features-3" width="2593" height="887" style="width:100%"/>
 </a>
 </figure>
 
@@ -71,7 +71,7 @@ High throughput is achieved by [*sharding*]({{< relref "../../basic-metapatterns
 
 <figure>
 <a href="/diagrams/Heart/Performance-1.png" style="outline:none">
-<img src="/diagrams/Heart/Performance-1.png" alt="Performance-1" style="width:100%"/>
+<img src="/diagrams/Heart/Performance-1.png" alt="Performance-1" width="997" height="449" style="width:100%"/>
 </a>
 </figure>
 
@@ -79,7 +79,7 @@ Alternatively, you may use several specialized databases \([*Polyglot Persistenc
 
 <figure>
 <a href="/diagrams/Heart/Performance-2.png" style="outline:none">
-<img src="/diagrams/Heart/Performance-2.png" alt="Performance-2" style="width:100%"/>
+<img src="/diagrams/Heart/Performance-2.png" alt="Performance-2" width="2093" height="774" style="width:100%"/>
 </a>
 </figure>
 
@@ -87,7 +87,7 @@ Scalability under uneven load is achieved through [*Function as a Service*]({{< 
 
 <figure>
 <a href="/diagrams/Heart/Performance-3.png" style="outline:none">
-<img src="/diagrams/Heart/Performance-3.png" alt="Performance-3" style="width:100%"/>
+<img src="/diagrams/Heart/Performance-3.png" alt="Performance-3" width="2586" height="1157" style="width:100%"/>
 </a>
 </figure>
 
@@ -95,7 +95,7 @@ Fault tolerance requires you to have [*replicas*]({{< relref "../../basic-metapa
 
 <figure>
 <a href="/diagrams/Heart/Performance-4.png" style="outline:none">
-<img src="/diagrams/Heart/Performance-4.png" alt="Performance-4" style="width:100%"/>
+<img src="/diagrams/Heart/Performance-4.png" alt="Performance-4" width="2132" height="758" style="width:100%"/>
 </a>
 </figure>
 
@@ -108,7 +108,7 @@ Low latency makes you place simplified first response logic close to your input,
 
 <figure>
 <a href="/diagrams/Heart/Performance-5.png" style="outline:none">
-<img src="/diagrams/Heart/Performance-5.png" alt="Performance-5" style="width:100%"/>
+<img src="/diagrams/Heart/Performance-5.png" alt="Performance-5" width="2083" height="1763" style="width:100%"/>
 </a>
 </figure>
 
@@ -122,7 +122,7 @@ If you mediate between resource or service providers and consumers, you build a 
 
 <figure>
 <a href="/diagrams/Heart/Flexibility-1.png" style="outline:none">
-<img src="/diagrams/Heart/Flexibility-1.png" alt="Flexibility-1" style="width:100%"/>
+<img src="/diagrams/Heart/Flexibility-1.png" alt="Flexibility-1" width="1943" height="803" style="width:100%"/>
 </a>
 </figure>
 
@@ -130,7 +130,7 @@ When your teams develop services and you want them to be [less interdependent]({
 
 <figure>
 <a href="/diagrams/Heart/Flexibility-2.png" style="outline:none">
-<img src="/diagrams/Heart/Flexibility-2.png" alt="Flexibility-2" style="width:100%"/>
+<img src="/diagrams/Heart/Flexibility-2.png" alt="Flexibility-2" width="1716" height="801" style="width:100%"/>
 </a>
 </figure>
 
@@ -138,7 +138,7 @@ When you have built a large system and really need that thorough data analytics,
 
 <figure>
 <a href="/diagrams/Variants/1/Data%20Mesh.png" style="outline:none">
-<img src="/diagrams/Variants/1/Data%20Mesh.png" alt="Data Mesh" style="width:100%"/>
+<img src="/diagrams/Variants/1/Data%20Mesh.png" alt="Data Mesh" width="2038" height="534" style="width:100%"/>
 </a>
 </figure>
 

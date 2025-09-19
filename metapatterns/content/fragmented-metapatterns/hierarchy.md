@@ -11,7 +11,7 @@ images = ["/diagrams/Main/Hierarchy.png"]
 
 <figure>
 <a href="/diagrams/Main/Hierarchy.png" style="outline:none">
-<img src="/diagrams/Main/Hierarchy.png" alt="Hierarchy" style="width:100%"/>
+<img src="/diagrams/Main/Hierarchy.png" alt="Hierarchy" width="2038" height="928" style="width:100%"/>
 </a>
 </figure>
 
@@ -55,7 +55,7 @@ No kind of distributed hierarchy is latency\-friendly as many use cases involve 
 
 <figure>
 <a href="/diagrams/Performance/Hierarchy%20-%20speed.png" style="outline:none">
-<img src="/diagrams/Performance/Hierarchy%20-%20speed.png" alt="Hierarchy - speed" style="width:100%"/>
+<img src="/diagrams/Performance/Hierarchy%20-%20speed.png" alt="Hierarchy - speed" width="2916" height="1076" style="width:100%"/>
 </a>
 </figure>
 
@@ -68,7 +68,7 @@ Maintaining high throughput usually requires deploying multiple instances of the
 
 <figure>
 <a href="/diagrams/Performance/Hierarchy%20-%20optimizations.png" style="outline:none">
-<img src="/diagrams/Performance/Hierarchy%20-%20optimizations.png" alt="Hierarchy - optimizations" style="width:100%"/>
+<img src="/diagrams/Performance/Hierarchy%20-%20optimizations.png" alt="Hierarchy - optimizations" width="2775" height="906" style="width:100%"/>
 </a>
 </figure>
 
@@ -78,7 +78,7 @@ A parent node would usually define one \(for polymorphic children\) or more \(ot
 
 <figure>
 <a href="/diagrams/Dependencies/Hierarchy.png" style="outline:none">
-<img src="/diagrams/Dependencies/Hierarchy.png" alt="Hierarchy" style="width:100%"/>
+<img src="/diagrams/Dependencies/Hierarchy.png" alt="Hierarchy" width="2096" height="778" style="width:100%"/>
 </a>
 </figure>
 
@@ -103,7 +103,7 @@ A parent node would usually define one \(for polymorphic children\) or more \(ot
 
 <figure>
 <a href="/diagrams/Relations/Hierarchy.png" style="outline:none">
-<img src="/diagrams/Relations/Hierarchy.png" alt="Hierarchy" style="width:100%"/>
+<img src="/diagrams/Relations/Hierarchy.png" alt="Hierarchy" width="2775" height="797" style="width:100%"/>
 </a>
 </figure>
 
@@ -134,7 +134,7 @@ Example: an intrusion alarm logic may need to discern between cat\-affected IR s
 
 <figure>
 <a href="/diagrams/Variants/3/Hierarchy%20-%20Top-down.png" style="outline:none">
-<img src="/diagrams/Variants/3/Hierarchy%20-%20Top-down.png" alt="Hierarchy - Top-down" style="width:100%"/>
+<img src="/diagrams/Variants/3/Hierarchy%20-%20Top-down.png" alt="Hierarchy - Top-down" width="1688" height="666" style="width:100%"/>
 </a>
 </figure>
 
@@ -146,7 +146,7 @@ In the most common case *Hierarchy* is applied to business logic to build a laye
 
 <figure>
 <a href="/diagrams/Variants/3/PAC.png" style="outline:none">
-<img src="/diagrams/Variants/3/PAC.png" alt="PAC" style="width:100%"/>
+<img src="/diagrams/Variants/3/PAC.png" alt="PAC" width="2781" height="1508" style="width:100%"/>
 </a>
 </figure>
 
@@ -154,7 +154,7 @@ In the most common case *Hierarchy* is applied to business logic to build a laye
 
 <figure>
 <a href="/diagrams/Variants/3/Hierarchy%20-%20Bottom-up.png" style="outline:none">
-<img src="/diagrams/Variants/3/Hierarchy%20-%20Bottom-up.png" alt="Hierarchy - Bottom-up" style="width:100%"/>
+<img src="/diagrams/Variants/3/Hierarchy%20-%20Bottom-up.png" alt="Hierarchy - Bottom-up" width="2319" height="758" style="width:100%"/>
 </a>
 </figure>
 
@@ -166,7 +166,7 @@ Example: [Automotive networks](https://www.mdpi.com/1424-8220/21/23/7917), integ
 
 <figure>
 <a href="/diagrams/Variants/3/Cell-Based%20Architecture.png" style="outline:none">
-<img src="/diagrams/Variants/3/Cell-Based%20Architecture.png" alt="Cell-Based Architecture" style="width:100%"/>
+<img src="/diagrams/Variants/3/Cell-Based%20Architecture.png" alt="Cell-Based Architecture" width="2214" height="1108" style="width:100%"/>
 </a>
 </figure>
 
@@ -183,7 +183,7 @@ Uber [compacted](https://www.uber.com/blog/microservice-architecture/) 2200 [*Mi
 
 <figure>
 <a href="/diagrams/Evolutions/3/Hierarchy%20-%201.png" style="outline:none">
-<img src="/diagrams/Evolutions/3/Hierarchy%20-%201.png" alt="Hierarchy - 1" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/Hierarchy%20-%201.png" alt="Hierarchy - 1" width="2306" height="761" style="width:100%"/>
 </a>
 </figure>
 

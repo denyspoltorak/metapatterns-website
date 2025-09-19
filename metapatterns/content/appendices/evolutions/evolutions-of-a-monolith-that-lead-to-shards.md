@@ -20,7 +20,7 @@ One of the main drawbacks of the monolithic architecture is its lack of scalabil
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Mesh%20of%20Shards.png" style="outline:none">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Mesh%20of%20Shards.png" alt="Monolith to Mesh of Shards" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Mesh%20of%20Shards.png" alt="Monolith to Mesh of Shards" width="2074" height="679" style="width:100%"/>
 </a>
 </figure>
 
@@ -50,7 +50,7 @@ It is possible to run several instances of an application \(*shards*\), with eac
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Isolated%20Shards%20with%20Load%20Balancer.png" style="outline:none">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Isolated%20Shards%20with%20Load%20Balancer.png" alt="Monolith to Isolated Shards with Load Balancer" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Isolated%20Shards%20with%20Load%20Balancer.png" alt="Monolith to Isolated Shards with Load Balancer" width="2025" height="827" style="width:100%"/>
 </a>
 </figure>
 
@@ -78,7 +78,7 @@ If all the data a user operates on, directly or indirectly, is never accessed by
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Stateless%20Shards%20with%20Shared%20DB.png" style="outline:none">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Stateless%20Shards%20with%20Shared%20DB.png" alt="Monolith to Stateless Shards with Shared DB" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Stateless%20Shards%20with%20Shared%20DB.png" alt="Monolith to Stateless Shards with Shared DB" width="2048" height="819" style="width:100%"/>
 </a>
 </figure>
 
@@ -108,7 +108,7 @@ As data moves into a dedicated layer, the application becomes stateless and inst
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Instance%20per%20Client.png" style="outline:none">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Instance%20per%20Client.png" alt="Monolith to Instance per Client" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Instance%20per%20Client.png" alt="Monolith to Instance per Client" width="2083" height="679" style="width:100%"/>
 </a>
 </figure>
 
@@ -146,7 +146,7 @@ In most cases *sharding* does not change much inside the application, thus the c
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%201.png" style="outline:none">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%201.png" alt="Monolith to Shards - Further 1" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%201.png" alt="Monolith to Shards - Further 1" width="2359" height="669" style="width:100%"/>
 </a>
 </figure>
 
@@ -158,7 +158,7 @@ There are specific evolutions of [*Shards*]({{< relref "../../basic-metapatterns
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%202.png" style="outline:none">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%202.png" alt="Monolith to Shards - Further 2" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%202.png" alt="Monolith to Shards - Further 2" width="2319" height="653" style="width:100%"/>
 </a>
 </figure>
 

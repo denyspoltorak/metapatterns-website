@@ -14,7 +14,7 @@ As a project grows, it tends to become subdivided into services, modules, or wha
 
 <figure>
 <a href="/diagrams/Communication/Monolith%20to%20Services.png" style="outline:none">
-<img src="/diagrams/Communication/Monolith%20to%20Services.png" alt="Monolith to Services" style="width:100%"/>
+<img src="/diagrams/Communication/Monolith%20to%20Services.png" alt="Monolith to Services" width="2031" height="459" style="width:100%"/>
 </a>
 </figure>
 
