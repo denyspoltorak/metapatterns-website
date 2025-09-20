@@ -34,3 +34,13 @@ disableKinds = ['taxonomy', 'term']
   anchor = "Center"
   hint = "drawing"
   quality = 100
+  
+[server]
+  [server.headers]
+    for = '/**.svgz'
+    [server.headers.values]
+      Content-Encoding = 'gzip'
+      Vary = 'Accept-Encoding'
+
+[mediaTypes."image/svg+xml"]
+  suffixes = ["svg","svgz"]
