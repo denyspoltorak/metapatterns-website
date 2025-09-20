@@ -195,7 +195,7 @@ First you separate the high\-level logic from low\-level implementation details\
 
 | *Benefits* | *Drawbacks* |
 | --- | --- |
-| <span style="color:green">Structured code</span> | <span style="color:red">Lost opportunities for optimization</span> |
+| <span style="color:green">Structured code</span> | <span style="color:crimson">Lost opportunities for optimization</span> |
 | <span style="color:green">Two or three teams</span> |  |
 
 ### Asynchronous layers
@@ -204,8 +204,8 @@ For the next step you may decide to take will be to isolate the layers’ execut
 
 | *Benefits* | *Drawbacks* |
 | --- | --- |
-| Structured code | <span style="color:red">No</span> opportunities for optimization |
-| Two or three teams | <span style="color:red">Some troubles with debugging</span> |
+| Structured code | <span style="color:crimson">No</span> opportunities for optimization |
+| Two or three teams | <span style="color:crimson">Some troubles with debugging</span> |
 | <span style="color:green">The layers may differ in latency</span> |  |
 
 ### A process per layer
@@ -215,9 +215,9 @@ Next, you may run each layer in a separate process\. You have to devise an effic
 | *Benefits* | *Drawbacks* |
 | --- | --- |
 | Structured code | No opportunities for optimization |
-| Two or three teams | <span style="color:red">Troublesome</span> debugging |
-| The layers may differ in latency | <span style="color:red">Some performance penalty</span> |
-| <span style="color:green">The layers may differ in technologies</span> | <span style="color:red">Error recovery must be addressed</span> |
+| Two or three teams | <span style="color:crimson">Troublesome</span> debugging |
+| The layers may differ in latency | <span style="color:crimson">Some performance penalty</span> |
+| <span style="color:green">The layers may differ in technologies</span> | <span style="color:crimson">Error recovery must be addressed</span> |
 | <span style="color:green">The layers are deployed independently</span> |  |
 | <span style="color:green">Software security isolation</span> |  |
 | <span style="color:green">Software fault isolation</span> |  |
@@ -230,8 +230,8 @@ Finally, you may separate the hardware which the processes run on – going all 
 | *Benefits* | *Drawbacks* |
 | --- | --- |
 | Structured code | No opportunities for optimization |
-| Two or three teams | <span style="color:red">Even worse</span> debugging |
-| The layers may differ in latency | <span style="color:red">Definite</span> performance penalty |
+| Two or three teams | <span style="color:crimson">Even worse</span> debugging |
+| The layers may differ in latency | <span style="color:crimson">Definite</span> performance penalty |
 | The layers may differ in technologies | Error recovery must be addressed |
 | The layers are deployed independently |  |
 | <span style="color:green">Full</span> security isolation |  |
