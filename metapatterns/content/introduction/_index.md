@@ -10,17 +10,17 @@ bookCollapseSection = true
 
 # Introduction
 
-**<span style="color:green">Architectural Metapatterns</span>**
+**<span class="book-green">Architectural Metapatterns</span>**
 
-*<span style="color:green">The Pattern Language</span>* 
+*<span class="book-green">The Pattern Language</span>* 
 
-*<span style="color:green">of Software Architecture</span>*
+*<span class="book-green">of Software Architecture</span>*
 
-*<span style="color:green">v 1\.1\.1 \(09\-2025\)</span>*
+*<span class="book-green">v 1\.1\.1 \(09\-2025\)</span>*
 
-<span style="color:green">Denys Poltorak \(author\)</span>
+<span class="book-green">Denys Poltorak \(author\)</span>
 
-<span style="color:green">Lars Noodén \(editor\)</span>
+<span class="book-green">Lars Noodén \(editor\)</span>
 
 <figure>
 <a href="../Pictures/image000.png" style="outline:none">

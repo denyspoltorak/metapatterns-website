@@ -114,7 +114,7 @@ The first and very common advance towards scaling a component is running multipl
 
 | *Benefits* | *Drawbacks* |
 | --- | --- |
-| <span style="color:green">Limited scalability</span> | <span style="color:crimson">More complex data access</span> |
+| <span class="book-green">Limited scalability</span> | <span class="book-red">More complex data access</span> |
 
 ### Multiple processes
 
@@ -122,8 +122,8 @@ The next stage is running several \(usually single\-threaded\) instances of the 
 
 | *Benefits* | *Drawbacks* |
 | --- | --- |
-| Limited scalability | <span style="color:crimson">Non\-trivial</span> shared data access |
-| <span style="color:green">Software fault isolation</span> | <span style="color:crimson">Troublesome multi\-instance debugging</span> |
+| Limited scalability | <span class="book-red">Non\-trivial</span> shared data access |
+| <span class="book-green">Software fault isolation</span> | <span class="book-red">Troublesome multi\-instance debugging</span> |
 
 ### Distributed instances
 
@@ -131,9 +131,9 @@ Finally, instances of the subsystem may be distributed over a network to achieve
 
 | *Benefits* | *Drawbacks* |
 | --- | --- |
-| <span style="color:green">Full</span> scalability | <span style="color:crimson">No</span> shared data access |
-| <span style="color:green">Full</span> fault isolation | <span style="color:crimson">Hard</span> multi\-instance debugging |
-|  | <span style="color:crimson">No good way to synchronize state of the instances</span> |
+| <span class="book-green">Full</span> scalability | <span class="book-red">No</span> shared data access |
+| <span class="book-green">Full</span> fault isolation | <span class="book-red">Hard</span> multi\-instance debugging |
+|  | <span class="book-red">No good way to synchronize state of the instances</span> |
 
 ## Variants by state
 

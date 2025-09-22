@@ -187,7 +187,7 @@ The first stage to take when designing a large project is the division of the co
 
 | *Benefits* | *Drawbacks* |
 | --- | --- |
-| <span style="color:green">Multi\-team development</span> | <span style="color:crimson">Subdomain boundaries are settled</span> |
+| <span class="book-green">Multi\-team development</span> | <span class="book-red">Subdomain boundaries are settled</span> |
 
 ### Asynchronous modules: Modular Monolith \(Modulith\), Embedded Actors
 
@@ -196,8 +196,8 @@ The next stage is separating the modules’ execution threads and data\. Each mo
 | *Benefits* | *Drawbacks* |
 | --- | --- |
 | Multi\-team development | Subdomain boundaries are settled |
-| <span style="color:green">Event replay</span> | <span style="color:crimson">No good way to share data or synchronize state</span> |
-| <span style="color:green">Some independence of module qualities</span> | <span style="color:crimson">Hard to debug</span> |
+| <span class="book-green">Event replay</span> | <span class="book-red">No good way to share data or synchronize state</span> |
+| <span class="book-green">Some independence of module qualities</span> | <span class="book-red">Hard to debug</span> |
 
 ### Multiple processes
 
@@ -205,12 +205,12 @@ There is also the option of running system components as separate binaries which
 
 | *Benefits* | *Drawbacks* |
 | --- | --- |
-| Multi\-team development | Subdomain boundaries are <span style="color:crimson">frozen</span> |
+| Multi\-team development | Subdomain boundaries are <span class="book-red">frozen</span> |
 | Event replay | No good way to share data or synchronize state |
-| Independence of component qualities <span style="color:green">and technologies</span> | Hard to debug |
-| <span style="color:green">Single\-component updates</span> | <span style="color:crimson">Needs error recovery routines</span> |
-| <span style="color:green">Software fault isolation</span> | <span style="color:crimson">Data inconsistencies after partial crashes</span> |
-| <span style="color:green">Limited granular scalability</span> |  |
+| Independence of component qualities <span class="book-green">and technologies</span> | Hard to debug |
+| <span class="book-green">Single\-component updates</span> | <span class="book-red">Needs error recovery routines</span> |
+| <span class="book-green">Software fault isolation</span> | <span class="book-red">Data inconsistencies after partial crashes</span> |
+| <span class="book-green">Limited granular scalability</span> |  |
 
 ### Distributed runtime: Function as a Service \(FaaS\) \(including Nanoservices\), Backend Actors
 
@@ -222,10 +222,10 @@ Modern distributed [runtimes](https://en.wikipedia.org/wiki/Runtime_system) crea
 | Event replay | No good way to share data or synchronize state |
 | Independence of component qualities ~and technologies~ | Hard to debug |
 | Single\-component updates | Needs error recovery routines |
-| <span style="color:green">Full</span> fault isolation | ~Data inconsistencies after partial crashes~ |
-| <span style="color:green">Full dynamic</span> granular scalability | <span style="color:crimson">Vendor lock\-in</span> |
-|  | <span style="color:crimson">Moderate communication overhead</span> |
-|  | <span style="color:crimson">Moderate performance overhead caused by the framework</span> |
+| <span class="book-green">Full</span> fault isolation | ~Data inconsistencies after partial crashes~ |
+| <span class="book-green">Full dynamic</span> granular scalability | <span class="book-red">Vendor lock\-in</span> |
+|  | <span class="book-red">Moderate communication overhead</span> |
+|  | <span class="book-red">Moderate performance overhead caused by the framework</span> |
 
 ### Distributed services: Service\-Based Architecture, Space\-Based Architecture, Microservices
 
@@ -234,11 +234,11 @@ Fully autonomous services run on dedicated servers or virtual machines\. This wa
 | *Benefits* | *Drawbacks* |
 | --- | --- |
 | Multi\-team development | Subdomain boundaries are frozen |
-| Event replay | No ~<span style="color:crimson">good</span>~ way to share data or synchronize state |
-| Independence of component qualities and technologies | <span style="color:crimson">Very</span> hard to debug |
+| Event replay | No ~<span class="book-red">good</span>~ way to share data or synchronize state |
+| Independence of component qualities and technologies | <span class="book-red">Very</span> hard to debug |
 | Single\-component updates | Needs error recovery routines |
-| <span style="color:green">Full</span> fault isolation | Data inconsistencies after partial crashes |
-| <span style="color:green">Full \(dynamic for *Mesh*\)</span> granular scalability | <span style="color:crimson">High communication overhead</span> |
+| <span class="book-green">Full</span> fault isolation | Data inconsistencies after partial crashes |
+| <span class="book-green">Full \(dynamic for *Mesh*\)</span> granular scalability | <span class="book-red">High communication overhead</span> |
 
 ## Variants by communication
 
