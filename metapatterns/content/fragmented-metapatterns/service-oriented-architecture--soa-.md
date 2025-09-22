@@ -10,7 +10,7 @@ images = ["/diagrams/Main/Service-Oriented%20Architecture.png"]
 # Service\-Oriented Architecture \(SOA\)
 
 <figure>
-<a href="/diagrams/Main/Service-Oriented%20Architecture.png" style="outline:none">
+<a href="/diagrams/Main/Service-Oriented%20Architecture.png">
 <img src="/diagrams/Main/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" loading="lazy" width="1766" height="1269" style="width:100%"/>
 </a>
 </figure>
@@ -57,7 +57,7 @@ Nevertheless, the pattern allows for good throughput as its stateless components
 Each service of each layer depends on everything it uses\. As a result, development of a low\-level \(utility\) component may be paralyzed because too many services already use it, thus no changes are welcome\. Hence, the team writes a new version of their utility as a new service, which defeats the very idea of component reuse that *SOA* was based on\.
 
 <figure>
-<a href="/diagrams/Dependencies/Service-Oriented%20Architecture.png" style="outline:none">
+<a href="/diagrams/Dependencies/Service-Oriented%20Architecture.png">
 <img src="/diagrams/Dependencies/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" loading="lazy" width="1838" height="788" style="width:88%"/>
 </a>
 </figure>
@@ -93,7 +93,7 @@ This architecture was hyped at the time when enterprises were expanding by acqui
 ### Distributed Monolith
 
 <figure>
-<a href="/diagrams/Variants/3/Distributed%20Monolith.png" style="outline:none">
+<a href="/diagrams/Variants/3/Distributed%20Monolith.png">
 <img src="/diagrams/Variants/3/Distributed%20Monolith.png" alt="Distributed Monolith" loading="lazy" width="1789" height="819" style="width:100%"/>
 </a>
 </figure>
@@ -103,7 +103,7 @@ If a [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) gets too c
 ### Enterprise SOA
 
 <figure>
-<a href="/diagrams/Variants/3/Enterprise%20SOA.png" style="outline:none">
+<a href="/diagrams/Variants/3/Enterprise%20SOA.png">
 <img src="/diagrams/Variants/3/Enterprise%20SOA.png" alt="Enterprise SOA" loading="lazy" width="2614" height="1046" style="width:100%"/>
 </a>
 </figure>
@@ -120,7 +120,7 @@ The layers of *SOA* are:
 ### Domain\-Oriented Microservice Architecture \(DOMA\)
 
 <figure>
-<a href="/diagrams/Variants/3/DOMA.png" style="outline:none">
+<a href="/diagrams/Variants/3/DOMA.png">
 <img src="/diagrams/Variants/3/DOMA.png" alt="DOMA" loading="lazy" width="1886" height="1541" style="width:100%"/>
 </a>
 </figure>
@@ -137,7 +137,7 @@ Uber’s *DOMA* also [makes heavy use](https://www.uber.com/blog/microservice-ar
 ### \(misapplied\) Automotive SOA
 
 <figure>
-<a href="/diagrams/Variants/3/SOA%20-%20AUTOSAR.png" style="outline:none">
+<a href="/diagrams/Variants/3/SOA%20-%20AUTOSAR.png">
 <img src="/diagrams/Variants/3/SOA%20-%20AUTOSAR.png" alt="SOA - AUTOSAR" loading="lazy" width="2254" height="938" style="width:100%"/>
 </a>
 </figure>
@@ -156,7 +156,7 @@ It seems that some proponents of [*Nanoservices*]({{< relref "../basic-metapatte
 
 
 <figure>
-<a href="/diagrams/Evolutions/3/SOA%20-%201.png" style="outline:none">
+<a href="/diagrams/Evolutions/3/SOA%20-%201.png">
 <img src="/diagrams/Evolutions/3/SOA%20-%201.png" alt="SOA - 1" loading="lazy" width="2477" height="752" style="width:100%"/>
 </a>
 </figure>
@@ -165,7 +165,7 @@ It seems that some proponents of [*Nanoservices*]({{< relref "../basic-metapatte
 
 
 <figure>
-<a href="/diagrams/Evolutions/3/SOA%20-%202.png" style="outline:none">
+<a href="/diagrams/Evolutions/3/SOA%20-%202.png">
 <img src="/diagrams/Evolutions/3/SOA%20-%202.png" alt="SOA - 2" loading="lazy" width="2614" height="752" style="width:100%"/>
 </a>
 </figure>
@@ -181,7 +181,7 @@ Afterwards you may deal with the remaining orchestration\. The idea is to move t
 
 
 <figure>
-<a href="/diagrams/Evolutions/3/SOA%20-%203.png" style="outline:none">
+<a href="/diagrams/Evolutions/3/SOA%20-%203.png">
 <img src="/diagrams/Evolutions/3/SOA%20-%203.png" alt="SOA - 3" loading="lazy" width="2469" height="810" style="width:100%"/>
 </a>
 </figure>

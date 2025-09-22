@@ -14,7 +14,7 @@ Basic metapatterns are both common stand\-alone architectures and building block
 ### [Monolith]({{< relref "../basic-metapatterns/monolith.md" >}})
 
 <figure>
-<a href="/diagrams/Contents/Monolith.png" style="outline:none">
+<a href="/diagrams/Contents/Monolith.png">
 <img src="/diagrams/Contents/Monolith.png" alt="Monolith" loading="lazy" width="1881" height="480" style="width:100%"/>
 </a>
 </figure>
@@ -26,7 +26,7 @@ Basic metapatterns are both common stand\-alone architectures and building block
 ### [Shards]({{< relref "../basic-metapatterns/shards.md" >}})
 
 <figure>
-<a href="/diagrams/Contents/Shards.png" style="outline:none">
+<a href="/diagrams/Contents/Shards.png">
 <img src="/diagrams/Contents/Shards.png" alt="Shards" loading="lazy" width="1461" height="489" style="width:100%"/>
 </a>
 </figure>
@@ -38,7 +38,7 @@ Basic metapatterns are both common stand\-alone architectures and building block
 ### [Layers]({{< relref "../basic-metapatterns/layers.md" >}})
 
 <figure>
-<a href="/diagrams/Contents/Layers.png" style="outline:none">
+<a href="/diagrams/Contents/Layers.png">
 <img src="/diagrams/Contents/Layers.png" alt="Layers" loading="lazy" width="1448" height="486" style="width:100%"/>
 </a>
 </figure>
@@ -50,7 +50,7 @@ Basic metapatterns are both common stand\-alone architectures and building block
 ### [Services]({{< relref "../basic-metapatterns/services.md" >}})
 
 <figure>
-<a href="/diagrams/Contents/Services.png" style="outline:none">
+<a href="/diagrams/Contents/Services.png">
 <img src="/diagrams/Contents/Services.png" alt="Services" loading="lazy" width="1763" height="489" style="width:93%"/>
 </a>
 </figure>
@@ -62,7 +62,7 @@ Basic metapatterns are both common stand\-alone architectures and building block
 ### [Pipeline]({{< relref "../basic-metapatterns/pipeline.md" >}})
 
 <figure>
-<a href="/diagrams/Contents/Pipeline.png" style="outline:none">
+<a href="/diagrams/Contents/Pipeline.png">
 <img src="/diagrams/Contents/Pipeline.png" alt="Pipeline" loading="lazy" width="1873" height="411" style="width:100%"/>
 </a>
 </figure>

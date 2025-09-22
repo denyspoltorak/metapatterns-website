@@ -19,7 +19,7 @@ Once a database appears, it is unlikely to go away\. I see the following evoluti
 ## Shard the database
 
 <figure>
-<a href="/diagrams/Evolutions/2/Shared%20Database_%20Shard.png" style="outline:none">
+<a href="/diagrams/Evolutions/2/Shared%20Database_%20Shard.png">
 <img src="/diagrams/Evolutions/2/Shared%20Database_%20Shard.png" alt="Shared Database: Shard" loading="lazy" width="2464" height="639" style="width:100%"/>
 </a>
 </figure>
@@ -57,7 +57,7 @@ Modern distributed databases support sharding out of the box, but an overgrown t
 ## Use Space\-Based Architecture
 
 <figure>
-<a href="/diagrams/Evolutions/2/Shared%20Database%20to%20Space-Based%20Architecture.png" style="outline:none">
+<a href="/diagrams/Evolutions/2/Shared%20Database%20to%20Space-Based%20Architecture.png">
 <img src="/diagrams/Evolutions/2/Shared%20Database%20to%20Space-Based%20Architecture.png" alt="Shared Database to Space-Based Architecture" loading="lazy" width="2483" height="758" style="width:100%"/>
 </a>
 </figure>
@@ -88,7 +88,7 @@ Modern distributed databases support sharding out of the box, but an overgrown t
 ## Move the data to private databases of services
 
 <figure>
-<a href="/diagrams/Evolutions/2/Shared%20Database%20to%20Services.png" style="outline:none">
+<a href="/diagrams/Evolutions/2/Shared%20Database%20to%20Services.png">
 <img src="/diagrams/Evolutions/2/Shared%20Database%20to%20Services.png" alt="Shared Database to Services" loading="lazy" width="2483" height="564" style="width:100%"/>
 </a>
 </figure>
@@ -123,7 +123,7 @@ If the data clearly follows subdomains, it may be possible to subdivide it accor
 ## Deploy specialized databases
 
 <figure>
-<a href="/diagrams/Evolutions/2/Shared%20Database%20to%20Polyglot%20Persistence.png" style="outline:none">
+<a href="/diagrams/Evolutions/2/Shared%20Database%20to%20Polyglot%20Persistence.png">
 <img src="/diagrams/Evolutions/2/Shared%20Database%20to%20Polyglot%20Persistence.png" alt="Shared Database to Polyglot Persistence" loading="lazy" width="2522" height="555" style="width:100%"/>
 </a>
 </figure>

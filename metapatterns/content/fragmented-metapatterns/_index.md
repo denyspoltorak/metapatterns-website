@@ -14,7 +14,7 @@ There are several patterns with no system\-wide layers\. Some of them incorporat
 ### [Layered Services]({{< relref "../fragmented-metapatterns/layered-services.md" >}})
 
 <figure>
-<a href="/diagrams/Contents/Layered%20Services.png" style="outline:none">
+<a href="/diagrams/Contents/Layered%20Services.png">
 <img src="/diagrams/Contents/Layered%20Services.png" alt="Layered Services" loading="lazy" width="2109" height="634" style="width:100%"/>
 </a>
 </figure>
@@ -26,7 +26,7 @@ There are several patterns with no system\-wide layers\. Some of them incorporat
 ### [Polyglot Persistence]({{< relref "../fragmented-metapatterns/polyglot-persistence.md" >}})
 
 <figure>
-<a href="/diagrams/Contents/Polyglot%20Persistence.png" style="outline:none">
+<a href="/diagrams/Contents/Polyglot%20Persistence.png">
 <img src="/diagrams/Contents/Polyglot%20Persistence.png" alt="Polyglot Persistence" loading="lazy" width="1903" height="604" style="width:100%"/>
 </a>
 </figure>
@@ -38,7 +38,7 @@ There are several patterns with no system\-wide layers\. Some of them incorporat
 ### [Backends for Frontends]({{< relref "../fragmented-metapatterns/backends-for-frontends--bff-.md" >}})
 
 <figure>
-<a href="/diagrams/Contents/Backends%20for%20Frontends.png" style="outline:none">
+<a href="/diagrams/Contents/Backends%20for%20Frontends.png">
 <img src="/diagrams/Contents/Backends%20for%20Frontends.png" alt="Backends for Frontends" loading="lazy" width="1877" height="735" style="width:100%"/>
 </a>
 </figure>
@@ -50,7 +50,7 @@ There are several patterns with no system\-wide layers\. Some of them incorporat
 ### [Service\-Oriented Architecture]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}})
 
 <figure>
-<a href="/diagrams/Contents/Service-Oriented%20Architecture.png" style="outline:none">
+<a href="/diagrams/Contents/Service-Oriented%20Architecture.png">
 <img src="/diagrams/Contents/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" loading="lazy" width="1847" height="784" style="width:100%"/>
 </a>
 </figure>
@@ -62,7 +62,7 @@ There are several patterns with no system\-wide layers\. Some of them incorporat
 ### [Hierarchy]({{< relref "../fragmented-metapatterns/hierarchy.md" >}})
 
 <figure>
-<a href="/diagrams/Contents/Hierarchy.png" style="outline:none">
+<a href="/diagrams/Contents/Hierarchy.png">
 <img src="/diagrams/Contents/Hierarchy.png" alt="Hierarchy" loading="lazy" width="1714" height="594" style="width:100%"/>
 </a>
 </figure>

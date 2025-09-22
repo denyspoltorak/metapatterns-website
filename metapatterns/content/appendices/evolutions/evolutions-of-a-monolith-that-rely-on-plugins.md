@@ -18,7 +18,7 @@ The last group of evolutions which we review does not really change the monolith
 ## Support plugins
 
 <figure>
-<a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Plugins.png" style="outline:none">
+<a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Plugins.png">
 <img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Plugins.png" alt="Monolith to Plugins" loading="lazy" width="1903" height="718" style="width:100%"/>
 </a>
 </figure>
@@ -47,7 +47,7 @@ The last group of evolutions which we review does not really change the monolith
 ## Isolate dependencies with Hexagonal Architecture
 
 <figure>
-<a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Hexagonal.png" style="outline:none">
+<a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Hexagonal.png">
 <img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Hexagonal.png" alt="Monolith to Hexagonal" loading="lazy" width="1886" height="634" style="width:100%"/>
 </a>
 </figure>
@@ -77,7 +77,7 @@ The main business logic will communicate with all the external components throug
 ## Add an Interpreter \(support Scripts\)
 
 <figure>
-<a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Interpreter.png" style="outline:none">
+<a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Interpreter.png">
 <img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Interpreter.png" alt="Monolith to Interpreter" loading="lazy" width="2044" height="630" style="width:100%"/>
 </a>
 </figure>

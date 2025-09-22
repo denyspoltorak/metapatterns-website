@@ -19,7 +19,7 @@ One issue peculiar to [*Shards*]({{< relref "../../basic-metapatterns/shards.md"
 ## Move all the data to a Shared Repository
 
 <figure>
-<a href="/diagrams/Evolutions/Shards/Shards%20to%20Shared%20DB.png" style="outline:none">
+<a href="/diagrams/Evolutions/Shards/Shards%20to%20Shared%20DB.png">
 <img src="/diagrams/Evolutions/Shards/Shards%20to%20Shared%20DB.png" alt="Shards to Shared DB" loading="lazy" width="1986" height="634" style="width:100%"/>
 </a>
 </figure>
@@ -57,7 +57,7 @@ In case a shard needs to access data owned by any other shard, the prerequisite 
 ## Use Space\-Based Architecture
 
 <figure>
-<a href="/diagrams/Evolutions/Shards/Shards%20to%20Space-Based%20Architecture.png" style="outline:none">
+<a href="/diagrams/Evolutions/Shards/Shards%20to%20Space-Based%20Architecture.png">
 <img src="/diagrams/Evolutions/Shards/Shards%20to%20Space-Based%20Architecture.png" alt="Shards to Space-Based Architecture" loading="lazy" width="2078" height="534" style="width:100%"/>
 </a>
 </figure>
@@ -90,7 +90,7 @@ Though *Space\-Based Architecture* may provide multiple modes of action, includi
 ## Use a Shared Repository for a coupled subset of the data
 
 <figure>
-<a href="/diagrams/Evolutions/Shards/Shards%20add%20Shared%20DB.png" style="outline:none">
+<a href="/diagrams/Evolutions/Shards/Shards%20add%20Shared%20DB.png">
 <img src="/diagrams/Evolutions/Shards/Shards%20add%20Shared%20DB.png" alt="Shards add Shared DB" loading="lazy" width="1969" height="489" style="width:100%"/>
 </a>
 </figure>
@@ -118,7 +118,7 @@ This approach resembles [*Shared Kernel*](https://ddd-practitioners.com/home/glo
 ## Split a service with the coupled data
 
 <figure>
-<a href="/diagrams/Evolutions/Shards/Shards%20split%20Shared%20Service.png" style="outline:none">
+<a href="/diagrams/Evolutions/Shards/Shards%20split%20Shared%20Service.png">
 <img src="/diagrams/Evolutions/Shards/Shards%20split%20Shared%20Service.png" alt="Shards split Shared Service" loading="lazy" width="2048" height="480" style="width:100%"/>
 </a>
 </figure>

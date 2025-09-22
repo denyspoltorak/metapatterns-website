@@ -76,7 +76,7 @@ As we see, every \[[GoF]({{< relref "../../appendices/books-referenced.md#gof" >
 Finally, let’s close the book by iterating over the metapatterns and looking into their roots through the lens of unification and separation\.
 
 <figure>
-<a href="/diagrams/Heart/Basic.png" style="outline:none">
+<a href="/diagrams/Heart/Basic.png">
 <img src="/diagrams/Heart/Basic.png" alt="Basic" loading="lazy" width="2293" height="1224" style="width:100%"/>
 </a>
 </figure>
@@ -98,7 +98,7 @@ Basic architectures:
 
 
 <figure>
-<a href="/diagrams/Heart/Extension.png" style="outline:none">
+<a href="/diagrams/Heart/Extension.png">
 <img src="/diagrams/Heart/Extension.png" alt="Extension" loading="lazy" width="2183" height="1391" style="width:100%"/>
 </a>
 </figure>
@@ -122,7 +122,7 @@ Grouping related functionality:
 
 
 <figure>
-<a href="/diagrams/Heart/Fragmented.png" style="outline:none">
+<a href="/diagrams/Heart/Fragmented.png">
 <img src="/diagrams/Heart/Fragmented.png" alt="Fragmented" loading="lazy" width="2739" height="1697" style="width:100%"/>
 </a>
 </figure>
@@ -143,7 +143,7 @@ Decoupled systems:
 
 
 <figure>
-<a href="/diagrams/Heart/Implementation.png" style="outline:none">
+<a href="/diagrams/Heart/Implementation.png">
 <img src="/diagrams/Heart/Implementation.png" alt="Implementation" loading="lazy" width="2661" height="801" style="width:100%"/>
 </a>
 </figure>

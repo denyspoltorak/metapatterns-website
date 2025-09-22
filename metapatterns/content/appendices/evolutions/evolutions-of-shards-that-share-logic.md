@@ -19,7 +19,7 @@ Other cases are better solved by extracting the logic that manipulates multiple 
 ## Add a Middleware
 
 <figure>
-<a href="/diagrams/Evolutions/Shards/Shards%20add%20Middleware.png" style="outline:none">
+<a href="/diagrams/Evolutions/Shards/Shards%20add%20Middleware.png">
 <img src="/diagrams/Evolutions/Shards/Shards%20add%20Middleware.png" alt="Shards add Middleware" loading="lazy" width="2004" height="634" style="width:100%"/>
 </a>
 </figure>
@@ -47,7 +47,7 @@ A *Middleware* transports messages between shards, checks their health and recov
 ## Add a Sharding Proxy
 
 <figure>
-<a href="/diagrams/Evolutions/Shards/Shards%20add%20Load%20Balancer.png" style="outline:none">
+<a href="/diagrams/Evolutions/Shards/Shards%20add%20Load%20Balancer.png">
 <img src="/diagrams/Evolutions/Shards/Shards%20add%20Load%20Balancer.png" alt="Shards add Load Balancer" loading="lazy" width="1920" height="823" style="width:100%"/>
 </a>
 </figure>
@@ -76,7 +76,7 @@ The client application may know the address of the shard which serves it and con
 ## Move the integration logic into an Orchestrator
 
 <figure>
-<a href="/diagrams/Evolutions/Shards/Shards%20use%20Orchestrator.png" style="outline:none">
+<a href="/diagrams/Evolutions/Shards/Shards%20use%20Orchestrator.png">
 <img src="/diagrams/Evolutions/Shards/Shards%20use%20Orchestrator.png" alt="Shards use Orchestrator" loading="lazy" width="1959" height="489" style="width:100%"/>
 </a>
 </figure>

@@ -10,7 +10,7 @@ images = ["/diagrams/Main/Microkernel.png"]
 # Microkernel
 
 <figure>
-<a href="/diagrams/Main/Microkernel.png" style="outline:none">
+<a href="/diagrams/Main/Microkernel.png">
 <img src="/diagrams/Main/Microkernel.png" alt="Microkernel" loading="lazy" width="1609" height="932" style="width:100%"/>
 </a>
 </figure>
@@ -66,7 +66,7 @@ It is common to see system components communicate directly via shared memory or 
 The *applications* depend on the *API* of the *microkernel* while the *providers* depend on its *SPIs*\. On one hand, that isolates the applications and providers from each other, letting them develop independently\. On the other hand, the microkernel’s API and SPIs should be very stable to support older versions of the components which the microkernel integrates\.
 
 <figure>
-<a href="/diagrams/Dependencies/Microkernel.png" style="outline:none">
+<a href="/diagrams/Dependencies/Microkernel.png">
 <img src="/diagrams/Dependencies/Microkernel.png" alt="Microkernel" loading="lazy" width="1601" height="564" style="width:100%"/>
 </a>
 </figure>
@@ -88,7 +88,7 @@ The *applications* depend on the *API* of the *microkernel* while the *providers
 ### Relations
 
 <figure>
-<a href="/diagrams/Relations/Microkernel.png" style="outline:none">
+<a href="/diagrams/Relations/Microkernel.png">
 <img src="/diagrams/Relations/Microkernel.png" alt="Microkernel" loading="lazy" width="2171" height="977" style="width:100%"/>
 </a>
 </figure>
@@ -109,7 +109,7 @@ The *applications* depend on the *API* of the *microkernel* while the *providers
 ### Operating System
 
 <figure>
-<a href="/diagrams/Variants/4/OS.png" style="outline:none">
+<a href="/diagrams/Variants/4/OS.png">
 <img src="/diagrams/Variants/4/OS.png" alt="OS" loading="lazy" width="1684" height="713" style="width:100%"/>
 </a>
 </figure>
@@ -119,7 +119,7 @@ The original inspiration for *Microkernel*, namely *operating systems*, provides
 ### Software Framework
 
 <figure>
-<a href="/diagrams/Variants/4/Framework.png" style="outline:none">
+<a href="/diagrams/Variants/4/Framework.png">
 <img src="/diagrams/Variants/4/Framework.png" alt="Framework" loading="lazy" width="1680" height="608" style="width:100%"/>
 </a>
 </figure>
@@ -129,7 +129,7 @@ The *microkernel* is a [*Facade*]({{< relref "../extension-metapatterns/orchestr
 ### Virtualizer, Hypervisor, Container Orchestrator, Distributed Runtime
 
 <figure>
-<a href="/diagrams/Variants/4/Virtualizer.png" style="outline:none">
+<a href="/diagrams/Variants/4/Virtualizer.png">
 <img src="/diagrams/Variants/4/Virtualizer.png" alt="Virtualizer" loading="lazy" width="1562" height="752" style="width:100%"/>
 </a>
 </figure>
@@ -139,7 +139,7 @@ The *microkernel* is a [*Facade*]({{< relref "../extension-metapatterns/orchestr
 ### Interpreter, Script, Domain\-Specific Language \(DSL\)
 
 <figure>
-<a href="/diagrams/Variants/4/Interpreter.png" style="outline:none">
+<a href="/diagrams/Variants/4/Interpreter.png">
 <img src="/diagrams/Variants/4/Interpreter.png" alt="Interpreter" loading="lazy" width="1688" height="604" style="width:100%"/>
 </a>
 </figure>
@@ -149,7 +149,7 @@ User\-provided *scripts* are run by an *Interpreter* \[[GoF]({{< relref "../appe
 ### Configurator, Configuration File
 
 <figure>
-<a href="/diagrams/Variants/4/Config%20file.png" style="outline:none">
+<a href="/diagrams/Variants/4/Config%20file.png">
 <img src="/diagrams/Variants/4/Config%20file.png" alt="Config file" loading="lazy" width="1667" height="718" style="width:100%"/>
 </a>
 </figure>
@@ -159,7 +159,7 @@ User\-provided *scripts* are run by an *Interpreter* \[[GoF]({{< relref "../appe
 ### Saga Engine
 
 <figure>
-<a href="/diagrams/Variants/4/Saga%20engine.png" style="outline:none">
+<a href="/diagrams/Variants/4/Saga%20engine.png">
 <img src="/diagrams/Variants/4/Saga%20engine.png" alt="Saga engine" loading="lazy" width="1749" height="748" style="width:100%"/>
 </a>
 </figure>
@@ -169,7 +169,7 @@ A [*Saga*]({{< relref "../extension-metapatterns/orchestrator.md#orchestrated-sa
 ### AUTOSAR Classic Platform
 
 <figure>
-<a href="/diagrams/Variants/4/AUTOSAR%20classic.png" style="outline:none">
+<a href="/diagrams/Variants/4/AUTOSAR%20classic.png">
 <img src="/diagrams/Variants/4/AUTOSAR%20classic.png" alt="AUTOSAR classic" loading="lazy" width="1873" height="1183" style="width:100%"/>
 </a>
 </figure>

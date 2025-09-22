@@ -10,7 +10,7 @@ images = ["/diagrams/Main/Plugins.png"]
 # Plugins
 
 <figure>
-<a href="/diagrams/Main/Plugins.png" style="outline:none">
+<a href="/diagrams/Main/Plugins.png">
 <img src="/diagrams/Main/Plugins.png" alt="Plugins" loading="lazy" width="1785" height="964" style="width:100%"/>
 </a>
 </figure>
@@ -48,7 +48,7 @@ The only case for a plugin to improve performance of a system that I can think u
 
 
 <figure>
-<a href="/diagrams/Performance/Plugins-injection.png" style="outline:none">
+<a href="/diagrams/Performance/Plugins-injection.png">
 <img src="/diagrams/Performance/Plugins-injection.png" alt="Plugins-injection" loading="lazy" width="1864" height="621" style="width:100%"/>
 </a>
 </figure>
@@ -58,7 +58,7 @@ The only case for a plugin to improve performance of a system that I can think u
 Each *plugin* depends on the *core*’s *API* \(for *Addons*\) or *SPI* \(for *Plugins*\) for the functionality it extends\. That makes the APIs and SPIs nearly impossible to modify, only to extend, as there tend to be many plugins in the field, some of them out of active development, that rely on any given method of the already published interfaces\.
 
 <figure>
-<a href="/diagrams/Dependencies/Plugins.png" style="outline:none">
+<a href="/diagrams/Dependencies/Plugins.png">
 <img src="/diagrams/Dependencies/Plugins.png" alt="Plugins" loading="lazy" width="1389" height="639" style="width:100%"/>
 </a>
 </figure>
@@ -80,7 +80,7 @@ Each *plugin* depends on the *core*’s *API* \(for *Addons*\) or *SPI* \(for *P
 ### Relations
 
 <figure>
-<a href="/diagrams/Relations/Plugins.png" style="outline:none">
+<a href="/diagrams/Relations/Plugins.png">
 <img src="/diagrams/Relations/Plugins.png" alt="Plugins" loading="lazy" width="1232" height="1131" style="width:68%"/>
 </a>
 </figure>
