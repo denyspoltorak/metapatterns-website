@@ -3,7 +3,6 @@ languageCode = 'en-us'
 title = 'Architectural Metapatterns'
 theme = 'hugo-book'
 BookComments = false
-BookFavicon = 'favicon.png'
 
 enableRobotsTXT = true
 printPathWarnings = true
