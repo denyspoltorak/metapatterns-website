@@ -10,7 +10,7 @@ images = ["/diagrams/Main/Pipeline.png"]
 # Pipeline
 
 <figure>
-<a href="/diagrams/Main/Pipeline.png" style="outline:none">
+<a href="/diagrams/Main/Pipeline.png">
 <img src="/diagrams/Main/Pipeline.png" alt="Pipeline" loading="lazy" width="2231" height="752" style="width:100%"/>
 </a>
 </figure>
@@ -67,7 +67,7 @@ There are three ways to build communication in a pipeline, each with different d
 
 
 <figure>
-<a href="/diagrams/Dependencies/Pipeline.png" style="outline:none">
+<a href="/diagrams/Dependencies/Pipeline.png">
 <img src="/diagrams/Dependencies/Pipeline.png" alt="Pipeline" loading="lazy" width="2364" height="638" style="width:100%"/>
 </a>
 </figure>
@@ -120,7 +120,7 @@ Such a variety of options enables the use of pipelines in a wide range of domain
 ### Pipes and Filters, Workflow System
 
 <figure>
-<a href="/diagrams/Variants/1/Pipes%20and%20Filters.png" style="outline:none">
+<a href="/diagrams/Variants/1/Pipes%20and%20Filters.png">
 <img src="/diagrams/Variants/1/Pipes%20and%20Filters.png" alt="Pipes and Filters" loading="lazy" width="1749" height="548" style="width:100%"/>
 </a>
 </figure>
@@ -136,7 +136,7 @@ Examples: Unix shell pipes, processing of video streams, many types of hardware\
 ### Choreographed \(Broker Topology\) Event\-Driven Architecture \(EDA\), Event Collaboration
 
 <figure>
-<a href="/diagrams/Variants/1/Event-Driven%20Architecture.png" style="outline:none">
+<a href="/diagrams/Variants/1/Event-Driven%20Architecture.png">
 <img src="/diagrams/Variants/1/Event-Driven%20Architecture.png" alt="Event-Driven Architecture" loading="lazy" width="1566" height="538" style="width:100%"/>
 </a>
 </figure>
@@ -169,7 +169,7 @@ Examples: high performance web services\.
 ### Data Mesh
 
 <figure>
-<a href="/diagrams/Variants/1/Data%20Mesh.png" style="outline:none">
+<a href="/diagrams/Variants/1/Data%20Mesh.png">
 <img src="/diagrams/Variants/1/Data%20Mesh.png" alt="Data Mesh" loading="lazy" width="2038" height="534" style="width:100%"/>
 </a>
 </figure>
@@ -190,7 +190,7 @@ There is a pragmatic option to allow an operational service to resort to the ana
 ### Function as a Service \(FaaS\), Nanoservices \(pipelined\)
 
 <figure>
-<a href="/diagrams/Variants/1/Nanoservices.png" style="outline:none">
+<a href="/diagrams/Variants/1/Nanoservices.png">
 <img src="/diagrams/Variants/1/Nanoservices.png" alt="Nanoservices" loading="lazy" width="2281" height="534" style="width:100%"/>
 </a>
 </figure>
@@ -209,7 +209,7 @@ There are a couple of [pipeline\-specific evolutions]({{< relref "../appendices/
 
 
 <figure>
-<a href="/diagrams/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png" style="outline:none">
+<a href="/diagrams/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png">
 <img src="/diagrams/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png" alt="Pipeline promote Front Controller" loading="lazy" width="2424" height="673" style="width:100%"/>
 </a>
 </figure>
@@ -218,7 +218,7 @@ There are a couple of [pipeline\-specific evolutions]({{< relref "../appendices/
 
 
 <figure>
-<a href="/diagrams/Evolutions/Services/Pipeline%20use%20Orchestrator.png" style="outline:none">
+<a href="/diagrams/Evolutions/Services/Pipeline%20use%20Orchestrator.png">
 <img src="/diagrams/Evolutions/Services/Pipeline%20use%20Orchestrator.png" alt="Pipeline use Orchestrator" loading="lazy" width="2456" height="758" style="width:100%"/>
 </a>
 </figure>

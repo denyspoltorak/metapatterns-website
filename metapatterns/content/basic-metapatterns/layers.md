@@ -10,7 +10,7 @@ images = ["/diagrams/Main/Layers.png"]
 # Layers
 
 <figure>
-<a href="/diagrams/Main/Layers.png" style="outline:none">
+<a href="/diagrams/Main/Layers.png">
 <img src="/diagrams/Main/Layers.png" alt="Layers" loading="lazy" width="1789" height="863" style="width:100%"/>
 </a>
 </figure>
@@ -60,7 +60,7 @@ Splitting a system into layers tends to resolve conflicts of forces between its 
 Many patterns have one or more of their layers split by subdomain, resulting in a layer of *services*\. That causes no penalties as long as the services are completely independent \(the original layer had zero coupling between its subdomains\), which happens if each of them deals with a separate subset of requests \(as in [*Backends for Frontends*]({{< relref "../fragmented-metapatterns/backends-for-frontends--bff-.md" >}})\) or is choreographed by an upper layer \(as in [*Polyglot Persistence*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md" >}}), [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) or [*Hierarchy*]({{< relref "../fragmented-metapatterns/hierarchy.md" >}})\) which boils down to the same “separate subset of subrequests” under the hood\. However, if the services which form a layer need to intercommunicate, you immediately get a whole set of troubles with debugging, sharing data, and performance characteristic of the [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) architecture\.
 
 <figure>
-<a href="/diagrams/Misc/Layers%20of%20Services.png" style="outline:none">
+<a href="/diagrams/Misc/Layers%20of%20Services.png">
 <img src="/diagrams/Misc/Layers%20of%20Services.png" alt="Layers of Services" loading="lazy" width="3060" height="849" style="width:100%"/>
 </a>
 </figure>
@@ -88,7 +88,7 @@ The performance of a layered system is shaped by two factors:
 There is a number of optimizations to skip interlayer calls:
 
 <figure>
-<a href="/diagrams/Performance/Layers-caching.png" style="outline:none">
+<a href="/diagrams/Performance/Layers-caching.png">
 <img src="/diagrams/Performance/Layers-caching.png" alt="Layers-caching" loading="lazy" width="2096" height="561" style="width:100%"/>
 </a>
 </figure>
@@ -96,7 +96,7 @@ There is a number of optimizations to skip interlayer calls:
 *Caching*: an upper layer tends to *model* \(cache last known state of\) the layers below it\. This way it can behave as if it knew the state of the whole system without querying the actual state from the hardware below all the layers\. Such an approach is universal for [*control software*]({{< relref "../foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}})\. For example, a network monitoring suite shows you the last known state of all the components it observes without actually querying them – it is subscribed to notifications and remembers what each device has previously reported\.
 
 <figure>
-<a href="/diagrams/Performance/Layers-aggregation.png" style="outline:none">
+<a href="/diagrams/Performance/Layers-aggregation.png">
 <img src="/diagrams/Performance/Layers-aggregation.png" alt="Layers-aggregation" loading="lazy" width="2126" height="564" style="width:100%"/>
 </a>
 </figure>
@@ -104,7 +104,7 @@ There is a number of optimizations to skip interlayer calls:
 *Aggregation*: a lower layer collects multiple events before notifying the layer above it to avoid being overly chatty\. An example is an [IIoT](https://en.wikipedia.org/wiki/Industrial_internet_of_things) field gateway that collects data from all the sensors in the building and sends it in a single report to the server\. Or consider a data transfer over a network where a low\-level driver collects multiple data packets that come from the hardware and sends an acknowledgement for each of them while waiting for a datagram or file transfer to complete\. It notifies its client only once when all the data has been collected and its integrity confirmed\.
 
 <figure>
-<a href="/diagrams/Performance/Layers-batching.png" style="outline:none">
+<a href="/diagrams/Performance/Layers-batching.png">
 <img src="/diagrams/Performance/Layers-batching.png" alt="Layers-batching" loading="lazy" width="1965" height="555" style="width:100%"/>
 </a>
 </figure>
@@ -112,7 +112,7 @@ There is a number of optimizations to skip interlayer calls:
 *Batching*: an upper layer forms a queue of commands and sends it as a single job to the layer below it\. This takes place in drivers for complex low\-level hardware, like printers, or in database access as *stored procedures*\. \[[POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\] describes the approach as *Combined Method*, *Enumeration Method* and *Batch Method* patterns\. Programming languages and frameworks may implement *foreach* and *map/reduce* which allow for a single command to operate on multiple pieces of data\.
 
 <figure>
-<a href="/diagrams/Performance/Layers-injection.png" style="outline:none">
+<a href="/diagrams/Performance/Layers-injection.png">
 <img src="/diagrams/Performance/Layers-injection.png" alt="Layers-injection" loading="lazy" width="2012" height="561" style="width:100%"/>
 </a>
 </figure>
@@ -130,7 +130,7 @@ Some domains, including embedded systems and telecom, require their lower layers
 There may also be an [*Adapter*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) layer between your system’s SPI and an external API\. It is called *Anticorruption Layer* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\], [*Database Abstraction Layer*](https://en.wikipedia.org/wiki/Database_abstraction_layer) / *Database Access Layer* \[[POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\] / *Data Mapper* \[[PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\], *OS Abstraction Layer* or *Platform Abstraction Layer / Hardware Abstraction Layer*, depending on what kind of component it adapts\.
 
 <figure>
-<a href="/diagrams/Dependencies/Layers-1.png" style="outline:none">
+<a href="/diagrams/Dependencies/Layers-1.png">
 <img src="/diagrams/Dependencies/Layers-1.png" alt="Layers-1" loading="lazy" width="1834" height="613" style="width:89%"/>
 </a>
 </figure>
@@ -138,7 +138,7 @@ There may also be an [*Adapter*]({{< relref "../extension-metapatterns/proxy.md#
 A layer can be *closed* \(*strict*\) or *open* \(*relaxed*\)\. A layer above a closed layer depends only on the closed layer right below it – it does not see through it\. Conversely, a layer above an open layer depends on both the open layer and the layer below it\. The open layer is transparent\. That helps keep a layer which encapsulates one or two subdomains small: if such a layer were closed, it would have to copy much of the interface of the layer below it just to pass the incoming requests which it does not handle through to the layer below\. The optimization of the open layer has a cost: the team that works on the layer above an open layer needs to learn two APIs which may have incompatible terminology\.
 
 <figure>
-<a href="/diagrams/Dependencies/Layers-2.png" style="outline:none">
+<a href="/diagrams/Dependencies/Layers-2.png">
 <img src="/diagrams/Dependencies/Layers-2.png" alt="Layers-2" loading="lazy" width="2126" height="506" style="width:93%"/>
 </a>
 </figure>
@@ -146,7 +146,7 @@ A layer can be *closed* \(*strict*\) or *open* \(*relaxed*\)\. A layer above a c
 If you ever need to *scale* \(run multiple instances of\) a layer, you may notice that a layer which sends requests naturally supports multiple instances, with the instance address being appended to each request so that its destination layer knows where to send the response\. On the other hand, if there are multiple instances of a layer you call into, you need a kind of [*Load Balancer*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) to dispatch requests among the instances\.
 
 <figure>
-<a href="/diagrams/Dependencies/Layers-3.png" style="outline:none">
+<a href="/diagrams/Dependencies/Layers-3.png">
 <img src="/diagrams/Dependencies/Layers-3.png" alt="Layers-3" loading="lazy" width="1517" height="703" style="width:93%"/>
 </a>
 </figure>
@@ -171,7 +171,7 @@ If you ever need to *scale* \(run multiple instances of\) a layer, you may notic
 ### Relations
 
 <figure>
-<a href="/diagrams/Relations/Layers.png" style="outline:none">
+<a href="/diagrams/Relations/Layers.png">
 <img src="/diagrams/Relations/Layers.png" alt="Layers" loading="lazy" width="1986" height="898" style="width:100%"/>
 </a>
 </figure>
@@ -195,8 +195,8 @@ First you separate the high\-level logic from low\-level implementation details\
 
 | *Benefits* | *Drawbacks* |
 | --- | --- |
-| <span style="color:green">Structured code</span> | <span style="color:crimson">Lost opportunities for optimization</span> |
-| <span style="color:green">Two or three teams</span> |  |
+| <span class="book-green">Structured code</span> | <span class="book-red">Lost opportunities for optimization</span> |
+| <span class="book-green">Two or three teams</span> |  |
 
 ### Asynchronous layers
 
@@ -204,9 +204,9 @@ For the next step you may decide to take will be to isolate the layers’ execut
 
 | *Benefits* | *Drawbacks* |
 | --- | --- |
-| Structured code | <span style="color:crimson">No</span> opportunities for optimization |
-| Two or three teams | <span style="color:crimson">Some troubles with debugging</span> |
-| <span style="color:green">The layers may differ in latency</span> |  |
+| Structured code | <span class="book-red">No</span> opportunities for optimization |
+| Two or three teams | <span class="book-red">Some troubles with debugging</span> |
+| <span class="book-green">The layers may differ in latency</span> |  |
 
 ### A process per layer
 
@@ -215,13 +215,13 @@ Next, you may run each layer in a separate process\. You have to devise an effic
 | *Benefits* | *Drawbacks* |
 | --- | --- |
 | Structured code | No opportunities for optimization |
-| Two or three teams | <span style="color:crimson">Troublesome</span> debugging |
-| The layers may differ in latency | <span style="color:crimson">Some performance penalty</span> |
-| <span style="color:green">The layers may differ in technologies</span> | <span style="color:crimson">Error recovery must be addressed</span> |
-| <span style="color:green">The layers are deployed independently</span> |  |
-| <span style="color:green">Software security isolation</span> |  |
-| <span style="color:green">Software fault isolation</span> |  |
-| <span style="color:green">Limited scalability</span> |  |
+| Two or three teams | <span class="book-red">Troublesome</span> debugging |
+| The layers may differ in latency | <span class="book-red">Some performance penalty</span> |
+| <span class="book-green">The layers may differ in technologies</span> | <span class="book-red">Error recovery must be addressed</span> |
+| <span class="book-green">The layers are deployed independently</span> |  |
+| <span class="book-green">Software security isolation</span> |  |
+| <span class="book-green">Software fault isolation</span> |  |
+| <span class="book-green">Limited scalability</span> |  |
 
 ### Distributed tiers
 
@@ -230,15 +230,15 @@ Finally, you may separate the hardware which the processes run on – going all 
 | *Benefits* | *Drawbacks* |
 | --- | --- |
 | Structured code | No opportunities for optimization |
-| Two or three teams | <span style="color:crimson">Even worse</span> debugging |
-| The layers may differ in latency | <span style="color:crimson">Definite</span> performance penalty |
+| Two or three teams | <span class="book-red">Even worse</span> debugging |
+| The layers may differ in latency | <span class="book-red">Definite</span> performance penalty |
 | The layers may differ in technologies | Error recovery must be addressed |
 | The layers are deployed independently |  |
-| <span style="color:green">Full</span> security isolation |  |
-| <span style="color:green">Full</span> fault isolation |  |
-| <span style="color:green">Full</span> scalability |  |
-| <span style="color:green">Layers vary in hardware setup</span> |  |
-| <span style="color:green">Deployment close to clients</span> |  |
+| <span class="book-green">Full</span> security isolation |  |
+| <span class="book-green">Full</span> fault isolation |  |
+| <span class="book-green">Full</span> scalability |  |
+| <span class="book-green">Layers vary in hardware setup</span> |  |
+| <span class="book-green">Deployment close to clients</span> |  |
 
 ## Examples
 
@@ -247,7 +247,7 @@ The notion of layering seems to be so natural to our minds that most known archi
 ### Domain\-Driven Design \(DDD\) Layers
 
 <figure>
-<a href="/diagrams/Variants/1/DDD.png" style="outline:none">
+<a href="/diagrams/Variants/1/DDD.png">
 <img src="/diagrams/Variants/1/DDD.png" alt="DDD" loading="lazy" width="1386" height="849" style="width:86%"/>
 </a>
 </figure>
@@ -275,7 +275,7 @@ We will often use the DDD naming convention while describing more complex archit
 ### Three\-Tier Architecture
 
 <figure>
-<a href="/diagrams/Variants/1/Three-Tier.png" style="outline:none">
+<a href="/diagrams/Variants/1/Three-Tier.png">
 <img src="/diagrams/Variants/1/Three-Tier.png" alt="Three-Tier" loading="lazy" width="1412" height="709" style="width:100%"/>
 </a>
 </figure>
@@ -298,7 +298,7 @@ In this case the division into layers resolves the conflict between scalability,
 ### Embedded systems
 
 <figure>
-<a href="/diagrams/Variants/1/Embedded.png" style="outline:none">
+<a href="/diagrams/Variants/1/Embedded.png">
 <img src="/diagrams/Variants/1/Embedded.png" alt="Embedded" loading="lazy" width="1403" height="713" style="width:100%"/>
 </a>
 </figure>
@@ -331,7 +331,7 @@ Not all the layered architectures are equally layered\. A [*Monolith*]({{< relre
 
 
 <figure>
-<a href="/diagrams/Evolutions/Layers/Layers%20to%20Layers.png" style="outline:none">
+<a href="/diagrams/Evolutions/Layers/Layers%20to%20Layers.png">
 <img src="/diagrams/Evolutions/Layers/Layers%20to%20Layers.png" alt="Layers to Layers" loading="lazy" width="1759" height="833" style="width:100%"/>
 </a>
 </figure>
@@ -342,7 +342,7 @@ It is also common to:
 
 
 <figure>
-<a href="/diagrams/Evolutions/Layers/Layers%20Split%20in%20Two.png" style="outline:none">
+<a href="/diagrams/Evolutions/Layers/Layers%20Split%20in%20Two.png">
 <img src="/diagrams/Evolutions/Layers/Layers%20Split%20in%20Two.png" alt="Layers Split in Two" loading="lazy" width="1916" height="476" style="width:100%"/>
 </a>
 </figure>
@@ -355,7 +355,7 @@ The main drawback \(and benefit as well\) of *Layers* is that much or all of the
 
 
 <figure>
-<a href="/diagrams/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.png" style="outline:none">
+<a href="/diagrams/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.png">
 <img src="/diagrams/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.png" alt="Layers Split Domain to Services" loading="lazy" width="2048" height="486" style="width:100%"/>
 </a>
 </figure>
@@ -364,7 +364,7 @@ The main drawback \(and benefit as well\) of *Layers* is that much or all of the
 
 
 <figure>
-<a href="/diagrams/Evolutions/Layers/Layers%20Split%20to%20Event-Driven%20Architecture.png" style="outline:none">
+<a href="/diagrams/Evolutions/Layers/Layers%20Split%20to%20Event-Driven%20Architecture.png">
 <img src="/diagrams/Evolutions/Layers/Layers%20Split%20to%20Event-Driven%20Architecture.png" alt="Layers Split to Event-Driven Architecture" loading="lazy" width="2192" height="529" style="width:100%"/>
 </a>
 </figure>
@@ -373,7 +373,7 @@ The main drawback \(and benefit as well\) of *Layers* is that much or all of the
 
 
 <figure>
-<a href="/diagrams/Evolutions/Layers/Layers%20to%20Hierarchy.png" style="outline:none">
+<a href="/diagrams/Evolutions/Layers/Layers%20to%20Hierarchy.png">
 <img src="/diagrams/Evolutions/Layers/Layers%20to%20Hierarchy.png" alt="Layers to Hierarchy" loading="lazy" width="2074" height="486" style="width:100%"/>
 </a>
 </figure>
@@ -386,7 +386,7 @@ There are several ways to improve the performance of a layered system\. One we h
 
 
 <figure>
-<a href="/diagrams/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.png" style="outline:none">
+<a href="/diagrams/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.png">
 <img src="/diagrams/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.png" alt="Layers to Space-Based Architecture" loading="lazy" width="1991" height="519" style="width:100%"/>
 </a>
 </figure>
@@ -397,7 +397,7 @@ Others are new:
 
 
 <figure>
-<a href="/diagrams/Evolutions/Layers/Layers%20Merge.png" style="outline:none">
+<a href="/diagrams/Evolutions/Layers/Layers%20Merge.png">
 <img src="/diagrams/Evolutions/Layers/Layers%20Merge.png" alt="Layers Merge" loading="lazy" width="1916" height="486" style="width:100%"/>
 </a>
 </figure>
@@ -406,7 +406,7 @@ Others are new:
 
 
 <figure>
-<a href="/diagrams/Evolutions/Layers/Layers_%20Shard.png" style="outline:none">
+<a href="/diagrams/Evolutions/Layers/Layers_%20Shard.png">
 <img src="/diagrams/Evolutions/Layers/Layers_%20Shard.png" alt="Layers: Shard" loading="lazy" width="1860" height="604" style="width:100%"/>
 </a>
 </figure>
@@ -415,7 +415,7 @@ Others are new:
 
 
 <figure>
-<a href="/diagrams/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.png" style="outline:none">
+<a href="/diagrams/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.png">
 <img src="/diagrams/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.png" alt="Layers to Polyglot Persistence" loading="lazy" width="1926" height="480" style="width:100%"/>
 </a>
 </figure>
@@ -430,7 +430,7 @@ The last group of evolutions to consider is about making the system more adaptab
 
 
 <figure>
-<a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png" style="outline:none">
+<a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png">
 <img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png" alt="Monolith to Layers - Further 2" loading="lazy" width="1834" height="849" style="width:100%"/>
 </a>
 </figure>
@@ -441,7 +441,7 @@ There is one new evolution which modifies the upper \(*orchestration*\) layer:
 
 
 <figure>
-<a href="/diagrams/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.png" style="outline:none">
+<a href="/diagrams/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.png">
 <img src="/diagrams/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.png" alt="Layers to Backends for Frontends" loading="lazy" width="1894" height="639" style="width:100%"/>
 </a>
 </figure>

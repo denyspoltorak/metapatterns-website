@@ -26,7 +26,7 @@ In the code high\-level concepts are embodied as services, modules or directorie
 Concepts are important because it is their number \(or the number of the corresponding classes and methods\) that defines the *complexity* of a system – the cognitive load which developers of the system face\. If the programmers grasp the behavior of a component they work on in detail they tend to [become extremely productive](https://www.quora.com/What-are-some-habits-of-10x-programmers) and are often able to find [simple solutions for seemingly complex tasks](https://realmensch.org/2017/08/25/the-parable-of-the-two-programmers/)\. Otherwise the development is slow and requires extensive testing because the programmers are [unsure of how their changes affect the system’s behavior](https://news.ycombinator.com/item?id=18442941)\.
 
 <figure>
-<a href="/diagrams/Intro/Modules-1.png" style="outline:none">
+<a href="/diagrams/Intro/Modules-1.png">
 <img src="/diagrams/Intro/Modules-1.png" alt="Modules-1" loading="lazy" width="1089" height="994" style="width:52%"/>
 </a>
 <figcaption>Figure 1: Complexity correlates with the number of entities.</figcaption>
@@ -39,7 +39,7 @@ Let’s return to our example\. As you implement the phonebook you find out that
 Enter *modules*\. A module wraps several concepts, effectively hiding them from external users, and exposes a simplified view of its contents\. Introducing modules splits a complex system into several, usually less complex, parts\.
 
 <figure>
-<a href="/diagrams/Intro/Modules-2.png" style="outline:none">
+<a href="/diagrams/Intro/Modules-2.png">
 <img src="/diagrams/Intro/Modules-2.png" alt="Modules-2" loading="lazy" width="1256" height="1093" style="width:66%"/>
 </a>
 <figcaption>Figure 2: Dividing a system into modules, bounded contexts highlighted.</figcaption>
@@ -66,7 +66,7 @@ Apart from dividing the problem into simpler subproblems, modules open the path 
 
 
 <figure>
-<a href="/diagrams/Intro/Modules-3.png" style="outline:none">
+<a href="/diagrams/Intro/Modules-3.png">
 <img src="/diagrams/Intro/Modules-3.png" alt="Modules-3" loading="lazy" width="1264" height="1099" style="width:64%"/>
 </a>
 <figcaption>Figure 3: Merged two API concepts in the green module.</figcaption>
@@ -85,7 +85,7 @@ We need to learn a couple of new concepts in order to use modules efficiently:
 The rule of thumb is to aim for *low coupling and high cohesion*, meaning that each module should encapsulate a cluster of related \(intensely interacting\) concepts\. This is how we have split the system in figures 2 and 3\. Now let’s see what happens if we violate the rules:
 
 <figure>
-<a href="/diagrams/Intro/Modules-4.png" style="outline:none">
+<a href="/diagrams/Intro/Modules-4.png">
 <img src="/diagrams/Intro/Modules-4.png" alt="Modules-4" loading="lazy" width="1534" height="1121" style="width:75%"/>
 </a>
 <figcaption>Figure 4: The upper modules are tightly coupled.</figcaption>
@@ -94,7 +94,7 @@ The rule of thumb is to aim for *low coupling and high cohesion*, meaning that e
 Splitting a cohesive module \(a cluster of concepts that interact with each other\) yields two strongly coupled modules\. That’s what we wanted, except that each of the new modules is nearly as complex as the original one\. Meaning, that we now face two hard tasks instead of one\. Also, the system’s performance may be poor because communication between modules is rarely optimal, and we’ve got too much of that\.
 
 <figure>
-<a href="/diagrams/Intro/Modules-5.png" style="outline:none">
+<a href="/diagrams/Intro/Modules-5.png">
 <img src="/diagrams/Intro/Modules-5.png" alt="Modules-5" loading="lazy" width="1213" height="1101" style="width:64%"/>
 </a>
 <figcaption>Figure 5: The lower module has low cohesion.</figcaption>
@@ -123,7 +123,7 @@ When there are hundreds or thousands of modules deployed nobody knows the answer
 A module may encapsulate not only individual concepts, but even other modules\. That is not surprising as an OOP class is a kind of module – it also has public methods and private members\. Hiding a module inside another one removes it from the global scope, decreasing the operational complexity of the system – now it is not the system’s architect’s responsibility but the responsibility of the maintainer of the outer module who cares about the inner module\. On one hand, that builds a manageable hierarchy in both the organization and the code\. On the other hand, code reuse and many optimizations become nearly impossible as internal modules are hardly known organization\-wide:
 
 <figure>
-<a href="/diagrams/Intro/Modules-6.png" style="outline:none">
+<a href="/diagrams/Intro/Modules-6.png">
 <img src="/diagrams/Intro/Modules-6.png" alt="Modules-6" loading="lazy" width="1050" height="1239" style="width:58%"/>
 </a>
 <figcaption>Figure 6: Composition of modules prevents reuse.</figcaption>
@@ -134,7 +134,7 @@ If the functionality of our internal module is needed by our clients, we have tw
 ## Forwarding and duplication
 
 <figure>
-<a href="/diagrams/Intro/Modules-7.png" style="outline:none">
+<a href="/diagrams/Intro/Modules-7.png">
 <img src="/diagrams/Intro/Modules-7.png" alt="Modules-7" loading="lazy" width="1061" height="1286" style="width:59%"/>
 </a>
 <figcaption>Figure 7: Forwarding the API of an internal module.</figcaption>
@@ -143,7 +143,7 @@ If the functionality of our internal module is needed by our clients, we have tw
 We can add the API of a module which we encapsulate to our public API and forward its calls to the internal module\. However, that increases the complexity and lowers the cohesion of our module – now each client of our module is also exposed to the details of the methods of the module we have encapsulated even if they are not interested in using it\.
 
 <figure>
-<a href="/diagrams/Intro/Modules-8.png" style="outline:none">
+<a href="/diagrams/Intro/Modules-8.png">
 <img src="/diagrams/Intro/Modules-8.png" alt="Modules-8" loading="lazy" width="1395" height="1245" style="width:78%"/>
 </a>
 <figcaption>Figure 8: Duplicating an internal module.</figcaption>

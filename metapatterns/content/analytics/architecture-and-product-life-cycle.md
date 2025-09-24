@@ -14,7 +14,7 @@ In my practice, a product’s architecture changes over its lifetime\. For a R&D
 ### Infancy \(proof of concept\) – Monolith
 
 <figure>
-<a href="/diagrams/Conclusion/Lifecycle-1.png" style="outline:none">
+<a href="/diagrams/Conclusion/Lifecycle-1.png">
 <img src="/diagrams/Conclusion/Lifecycle-1.png" alt="Lifecycle-1" loading="lazy" width="1508" height="405" style="width:100%"/>
 </a>
 </figure>
@@ -24,7 +24,7 @@ A project in an unknown domain starts humble and small, likely as a proof of con
 ### Childhood \(prototype\) – Layers
 
 <figure>
-<a href="/diagrams/Conclusion/Lifecycle-2.png" style="outline:none">
+<a href="/diagrams/Conclusion/Lifecycle-2.png">
 <img src="/diagrams/Conclusion/Lifecycle-2.png" alt="Lifecycle-2" loading="lazy" width="1515" height="598" style="width:89%"/>
 </a>
 </figure>
@@ -34,7 +34,7 @@ When you have the thing working, you may start reflecting on the rules and the c
 ### Youth \(development of features\) – fragmented architectures
 
 <figure>
-<a href="/diagrams/Conclusion/Lifecycle-3.png" style="outline:none">
+<a href="/diagrams/Conclusion/Lifecycle-3.png">
 <img src="/diagrams/Conclusion/Lifecycle-3.png" alt="Lifecycle-3" loading="lazy" width="2589" height="750" style="width:100%"/>
 </a>
 </figure>
@@ -44,7 +44,7 @@ As you acquire domain experience, you start discerning subdomains \(or *bounded 
 ### Adulthood \(production\) – ad\-hoc composition
 
 <figure>
-<a href="/diagrams/Conclusion/Lifecycle-4.png" style="outline:none">
+<a href="/diagrams/Conclusion/Lifecycle-4.png">
 <img src="/diagrams/Conclusion/Lifecycle-4.png" alt="Lifecycle-4" loading="lazy" width="2126" height="748" style="width:100%"/>
 </a>
 </figure>
@@ -54,7 +54,7 @@ As the product enters the market, its development tends to slow down with more a
 ### Old age \(support\) – back to Layers
 
 <figure>
-<a href="/diagrams/Conclusion/Lifecycle-5.png" style="outline:none">
+<a href="/diagrams/Conclusion/Lifecycle-5.png">
 <img src="/diagrams/Conclusion/Lifecycle-5.png" alt="Lifecycle-5" loading="lazy" width="904" height="604" style="width:54%"/>
 </a>
 </figure>
@@ -64,7 +64,7 @@ When active development ceases, you lose even more people and funding as you dri
 ### Death \(the ultimate release\) – Monolith
 
 <figure>
-<a href="/diagrams/Conclusion/Lifecycle-6.png" style="outline:none">
+<a href="/diagrams/Conclusion/Lifecycle-6.png">
 <img src="/diagrams/Conclusion/Lifecycle-6.png" alt="Lifecycle-6" loading="lazy" width="904" height="506" style="width:55%"/>
 </a>
 </figure>

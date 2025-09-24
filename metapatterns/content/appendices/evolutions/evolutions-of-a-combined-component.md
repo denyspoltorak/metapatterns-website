@@ -16,7 +16,7 @@ The patterns that involve *orchestration* \([*API Gateway*]({{< relref "../../ex
 ## Divide into specialized layers
 
 <figure>
-<a href="/diagrams/Evolutions/2/Multifunctional_%20Split.png" style="outline:none">
+<a href="/diagrams/Evolutions/2/Multifunctional_%20Split.png">
 <img src="/diagrams/Evolutions/2/Multifunctional_%20Split.png" alt="Multifunctional: Split" loading="lazy" width="2368" height="898" style="width:100%"/>
 </a>
 </figure>

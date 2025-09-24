@@ -10,7 +10,7 @@ images = ["/diagrams/Main/Services.png"]
 # Services
 
 <figure>
-<a href="/diagrams/Main/Services.png" style="outline:none">
+<a href="/diagrams/Main/Services.png">
 <img src="/diagrams/Main/Services.png" alt="Services" loading="lazy" width="1995" height="774" style="width:100%"/>
 </a>
 </figure>
@@ -91,7 +91,7 @@ Splitting a [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) by 
 Interservice communication is relatively slow and resource\-consuming, therefore it should be kept to a minimum\.
 
 <figure>
-<a href="/diagrams/Performance/Services.png" style="outline:none">
+<a href="/diagrams/Performance/Services.png">
 <img src="/diagrams/Performance/Services.png" alt="Services" loading="lazy" width="2741" height="1416" style="width:100%"/>
 </a>
 </figure>
@@ -109,7 +109,7 @@ Multiple [instances]({{< relref "../basic-metapatterns/shards.md#stateless-pool-
 When we see a service to *request* help from other services and then receive the results \(in a *confirmation* message\), that service [*orchestrates*]({{< relref "../foundations-of-software-architecture/arranging-communication/orchestration.md" >}}) the services it uses\. Services often orchestrate each other because the subdomain a service is dedicated to is not independent of other subdomains\.
 
 <figure>
-<a href="/diagrams/Dependencies/Services-1.png" style="outline:none">
+<a href="/diagrams/Dependencies/Services-1.png">
 <img src="/diagrams/Dependencies/Services-1.png" alt="Services-1" loading="lazy" width="1913" height="489" style="width:100%"/>
 </a>
 </figure>
@@ -117,7 +117,7 @@ When we see a service to *request* help from other services and then receive the
 Another way for services to communicate is [*choreography*]({{< relref "../foundations-of-software-architecture/arranging-communication/choreography.md" >}}) – when a service sends a *command* or publishes a *notification* and does not expect any response\. This is characteristic of [*Pipelines*]({{< relref "../basic-metapatterns/pipeline.md" >}}) which are covered in the next chapter\. Right now we should note that orchestration and choreography may be intermixed, in which case a service depends on all the services it uses or subscribes to\.
 
 <figure>
-<a href="/diagrams/Dependencies/Services-2.png" style="outline:none">
+<a href="/diagrams/Dependencies/Services-2.png">
 <img src="/diagrams/Dependencies/Services-2.png" alt="Services-2" loading="lazy" width="1903" height="486" style="width:100%"/>
 </a>
 </figure>
@@ -125,7 +125,7 @@ Another way for services to communicate is [*choreography*]({{< relref "../found
 If the system relies on notifications \(services publish *domain events*\), it is possible to avoid interservice *queries* \(pairs of a *read* request and confirmation with the data retrieved\) by aggregating data from notifications in a [*CQRS* \(or *materialized*\) *View*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\], which can reside [in memory](https://martinfowler.com/bliki/MemoryImage.html) or in a database\. Views can be planted inside every service that needs data owned by other services or can be gathered into a dedicated [*Query Service*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#query-service-front-controller-data-warehouse-data-lake-aggregate-data-product-quantum-dpq-of-data-mesh" >}}) \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\]\. Though the main goal of *CQRS Views* is to resolve distributed joins from databases of multiple services, they also help [remove dependencies]({{< relref "../analytics/comparison-of-architectural-patterns/indirection-in-commands-and-queries.md#query-olap-systems" >}}) in the code of services and optimize out interservice queries, simplifying APIs and improving performance\. Further examples will be discussed in the chapter on [*Polyglot Persistence*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md" >}})\.
 
 <figure>
-<a href="/diagrams/Dependencies/Services-3.png" style="outline:none">
+<a href="/diagrams/Dependencies/Services-3.png">
 <img src="/diagrams/Dependencies/Services-3.png" alt="Services-3" loading="lazy" width="1916" height="561" style="width:100%"/>
 </a>
 </figure>
@@ -133,7 +133,7 @@ If the system relies on notifications \(services publish *domain events*\), it i
 In general, a large service should wrap its dependencies with an [*Anticorruption Layer*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\], following the ideas of [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}})\. The layer consists of *Adapters* \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] between the internal domain model of the service and the APIs of the components it uses\. The *Adapters* isolate the business logic from the external environment, granting that no change in the interface of an external service or library may ever take much work to support on the side of the team that writes our business logic as all the ensuing updates are limited to a small adapter\.
 
 <figure>
-<a href="/diagrams/Dependencies/Services-4.png" style="outline:none">
+<a href="/diagrams/Dependencies/Services-4.png">
 <img src="/diagrams/Dependencies/Services-4.png" alt="Services-4" loading="lazy" width="2211" height="555" style="width:100%"/>
 </a>
 </figure>
@@ -159,7 +159,7 @@ In general, a large service should wrap its dependencies with an [*Anticorruptio
 ### Relations
 
 <figure>
-<a href="/diagrams/Relations/Services.png" style="outline:none">
+<a href="/diagrams/Relations/Services.png">
 <img src="/diagrams/Relations/Services.png" alt="Services" loading="lazy" width="2025" height="594" style="width:100%"/>
 </a>
 </figure>
@@ -187,7 +187,7 @@ The first stage to take when designing a large project is the division of the co
 
 | *Benefits* | *Drawbacks* |
 | --- | --- |
-| <span style="color:green">Multi\-team development</span> | <span style="color:crimson">Subdomain boundaries are settled</span> |
+| <span class="book-green">Multi\-team development</span> | <span class="book-red">Subdomain boundaries are settled</span> |
 
 ### Asynchronous modules: Modular Monolith \(Modulith\), Embedded Actors
 
@@ -196,8 +196,8 @@ The next stage is separating the modules’ execution threads and data\. Each mo
 | *Benefits* | *Drawbacks* |
 | --- | --- |
 | Multi\-team development | Subdomain boundaries are settled |
-| <span style="color:green">Event replay</span> | <span style="color:crimson">No good way to share data or synchronize state</span> |
-| <span style="color:green">Some independence of module qualities</span> | <span style="color:crimson">Hard to debug</span> |
+| <span class="book-green">Event replay</span> | <span class="book-red">No good way to share data or synchronize state</span> |
+| <span class="book-green">Some independence of module qualities</span> | <span class="book-red">Hard to debug</span> |
 
 ### Multiple processes
 
@@ -205,12 +205,12 @@ There is also the option of running system components as separate binaries which
 
 | *Benefits* | *Drawbacks* |
 | --- | --- |
-| Multi\-team development | Subdomain boundaries are <span style="color:crimson">frozen</span> |
+| Multi\-team development | Subdomain boundaries are <span class="book-red">frozen</span> |
 | Event replay | No good way to share data or synchronize state |
-| Independence of component qualities <span style="color:green">and technologies</span> | Hard to debug |
-| <span style="color:green">Single\-component updates</span> | <span style="color:crimson">Needs error recovery routines</span> |
-| <span style="color:green">Software fault isolation</span> | <span style="color:crimson">Data inconsistencies after partial crashes</span> |
-| <span style="color:green">Limited granular scalability</span> |  |
+| Independence of component qualities <span class="book-green">and technologies</span> | Hard to debug |
+| <span class="book-green">Single\-component updates</span> | <span class="book-red">Needs error recovery routines</span> |
+| <span class="book-green">Software fault isolation</span> | <span class="book-red">Data inconsistencies after partial crashes</span> |
+| <span class="book-green">Limited granular scalability</span> |  |
 
 ### Distributed runtime: Function as a Service \(FaaS\) \(including Nanoservices\), Backend Actors
 
@@ -222,10 +222,10 @@ Modern distributed [runtimes](https://en.wikipedia.org/wiki/Runtime_system) crea
 | Event replay | No good way to share data or synchronize state |
 | Independence of component qualities ~and technologies~ | Hard to debug |
 | Single\-component updates | Needs error recovery routines |
-| <span style="color:green">Full</span> fault isolation | ~Data inconsistencies after partial crashes~ |
-| <span style="color:green">Full dynamic</span> granular scalability | <span style="color:crimson">Vendor lock\-in</span> |
-|  | <span style="color:crimson">Moderate communication overhead</span> |
-|  | <span style="color:crimson">Moderate performance overhead caused by the framework</span> |
+| <span class="book-green">Full</span> fault isolation | ~Data inconsistencies after partial crashes~ |
+| <span class="book-green">Full dynamic</span> granular scalability | <span class="book-red">Vendor lock\-in</span> |
+|  | <span class="book-red">Moderate communication overhead</span> |
+|  | <span class="book-red">Moderate performance overhead caused by the framework</span> |
 
 ### Distributed services: Service\-Based Architecture, Space\-Based Architecture, Microservices
 
@@ -234,11 +234,11 @@ Fully autonomous services run on dedicated servers or virtual machines\. This wa
 | *Benefits* | *Drawbacks* |
 | --- | --- |
 | Multi\-team development | Subdomain boundaries are frozen |
-| Event replay | No ~<span style="color:crimson">good</span>~ way to share data or synchronize state |
-| Independence of component qualities and technologies | <span style="color:crimson">Very</span> hard to debug |
+| Event replay | No ~<span class="book-red">good</span>~ way to share data or synchronize state |
+| Independence of component qualities and technologies | <span class="book-red">Very</span> hard to debug |
 | Single\-component updates | Needs error recovery routines |
-| <span style="color:green">Full</span> fault isolation | Data inconsistencies after partial crashes |
-| <span style="color:green">Full \(dynamic for *Mesh*\)</span> granular scalability | <span style="color:crimson">High communication overhead</span> |
+| <span class="book-green">Full</span> fault isolation | Data inconsistencies after partial crashes |
+| <span class="book-green">Full \(dynamic for *Mesh*\)</span> granular scalability | <span class="book-red">High communication overhead</span> |
 
 ## Variants by communication
 
@@ -302,7 +302,7 @@ A [*nanoservice*](https://medium.com/@ido.vapner/unlocking-the-power-of-nano-ser
 A service is not necessarily monolithic inside\. Because a service is encapsulated from its users by its interface, it can have any kind of internal structure\. The most common cases, which can be intermixed together, are:
 
 <figure>
-<a href="/diagrams/Variants/1/Subtypes%20of%20Services.png" style="outline:none">
+<a href="/diagrams/Variants/1/Subtypes%20of%20Services.png">
 <img src="/diagrams/Variants/1/Subtypes%20of%20Services.png" alt="Subtypes of Services" loading="lazy" width="2411" height="941" style="width:100%"/>
 </a>
 </figure>
@@ -310,7 +310,7 @@ A service is not necessarily monolithic inside\. Because a service is encapsulat
 ### Monolithic service
 
 <figure>
-<a href="/diagrams/Variants/1/Service%20-%20Monolithic.png" style="outline:none">
+<a href="/diagrams/Variants/1/Service%20-%20Monolithic.png">
 <img src="/diagrams/Variants/1/Service%20-%20Monolithic.png" alt="Service - Monolithic" loading="lazy" width="482" height="600" style="width:27%"/>
 </a>
 </figure>
@@ -320,7 +320,7 @@ A *monolithic service* is a service with no definite internal structure, probabl
 ### Layered service
 
 <figure>
-<a href="/diagrams/Variants/1/Service%20-%20Layered.png" style="outline:none">
+<a href="/diagrams/Variants/1/Service%20-%20Layered.png">
 <img src="/diagrams/Variants/1/Service%20-%20Layered.png" alt="Service - Layered" loading="lazy" width="1369" height="660" style="width:83%"/>
 </a>
 </figure>
@@ -334,7 +334,7 @@ Another benefit comes from the existence of the upper integration layer which ma
 ### Hexagonal service
 
 <figure>
-<a href="/diagrams/Variants/1/Service%20-%20Hexagonal.png" style="outline:none">
+<a href="/diagrams/Variants/1/Service%20-%20Hexagonal.png">
 <img src="/diagrams/Variants/1/Service%20-%20Hexagonal.png" alt="Service - Hexagonal" loading="lazy" width="1680" height="778" style="width:100%"/>
 </a>
 </figure>
@@ -346,7 +346,7 @@ This is a real\-world application of [*Hexagonal Architecture*]({{< relref "../i
 ### Scaled service
 
 <figure>
-<a href="/diagrams/Variants/1/Service%20-%20Scaled.png" style="outline:none">
+<a href="/diagrams/Variants/1/Service%20-%20Scaled.png">
 <img src="/diagrams/Variants/1/Service%20-%20Scaled.png" alt="Service - Scaled" loading="lazy" width="2539" height="778" style="width:100%"/>
 </a>
 </figure>
@@ -356,7 +356,7 @@ With *scaled services* there are multiple [*instances*]({{< relref "../basic-met
 ### Cell \(WSO2 definition\) \(service of services\), Domain \(Uber definition\), Cluster
 
 <figure>
-<a href="/diagrams/Variants/1/Service%20-%20Cell.png" style="outline:none">
+<a href="/diagrams/Variants/1/Service%20-%20Cell.png">
 <img src="/diagrams/Variants/1/Service%20-%20Cell.png" alt="Service - Cell" loading="lazy" width="1697" height="819" style="width:100%"/>
 </a>
 </figure>
@@ -376,7 +376,7 @@ Examples of *Services* include:
 ### Service\-Based Architecture
 
 <figure>
-<a href="/diagrams/Variants/1/Service-Based%20Architecture.png" style="outline:none">
+<a href="/diagrams/Variants/1/Service-Based%20Architecture.png">
 <img src="/diagrams/Variants/1/Service-Based%20Architecture.png" alt="Service-Based Architecture" loading="lazy" width="1539" height="480" style="width:100%"/>
 </a>
 </figure>
@@ -386,7 +386,7 @@ This is the simplest use of *Services* where each subdomain gets a dedicated com
 ### Microservices
 
 <figure>
-<a href="/diagrams/Variants/1/Microservices.png" style="outline:none">
+<a href="/diagrams/Variants/1/Microservices.png">
 <img src="/diagrams/Variants/1/Microservices.png" alt="Microservices" loading="lazy" width="2451" height="833" style="width:100%"/>
 </a>
 </figure>
@@ -408,7 +408,7 @@ This architecture usually relies on a [*Service Mesh*]({{< relref "../extension-
 ### Actors
 
 <figure>
-<a href="/diagrams/Variants/1/Actors.png" style="outline:none">
+<a href="/diagrams/Variants/1/Actors.png">
 <img src="/diagrams/Variants/1/Actors.png" alt="Actors" loading="lazy" width="1350" height="463" style="width:100%"/>
 </a>
 </figure>
@@ -428,7 +428,7 @@ If we apply a bit of generalization, we can deduce that any server or backend se
 ### \(inexact\) Nanoservices \(API layer\)
 
 <figure>
-<a href="/diagrams/Variants/1/Nanoservices%20-%20API%20Layer.png" style="outline:none">
+<a href="/diagrams/Variants/1/Nanoservices%20-%20API%20Layer.png">
 <img src="/diagrams/Variants/1/Nanoservices%20-%20API%20Layer.png" alt="Nanoservices - API Layer" loading="lazy" width="1500" height="564" style="width:82%"/>
 </a>
 </figure>
@@ -438,7 +438,7 @@ Though *Nanoservices* are defined by their size \(a single function\), not syste
 ### \(inexact\) Device Drivers
 
 <figure>
-<a href="/diagrams/Variants/1/Drivers.png" style="outline:none">
+<a href="/diagrams/Variants/1/Drivers.png">
 <img src="/diagrams/Variants/1/Drivers.png" alt="Drivers" loading="lazy" width="1474" height="669" style="width:100%"/>
 </a>
 </figure>
@@ -464,7 +464,7 @@ The whole system of kernel, drivers, and user applications comprises the [*Micro
 
 
 <figure>
-<a href="/diagrams/Evolutions/Services/Services_%20Split.png" style="outline:none">
+<a href="/diagrams/Evolutions/Services/Services_%20Split.png">
 <img src="/diagrams/Evolutions/Services/Services_%20Split.png" alt="Services: Split" loading="lazy" width="2469" height="489" style="width:100%"/>
 </a>
 </figure>
@@ -473,7 +473,7 @@ The whole system of kernel, drivers, and user applications comprises the [*Micro
 
 
 <figure>
-<a href="/diagrams/Evolutions/Services/Services_%20Merge.png" style="outline:none">
+<a href="/diagrams/Evolutions/Services/Services_%20Merge.png">
 <img src="/diagrams/Evolutions/Services/Services_%20Merge.png" alt="Services: Merge" loading="lazy" width="2057" height="476" style="width:100%"/>
 </a>
 </figure>
@@ -486,7 +486,7 @@ The most common modifications of a system of *Services* involve supplementary sy
 
 
 <figure>
-<a href="/diagrams/Evolutions/Services/Services%20add%20Middleware.png" style="outline:none">
+<a href="/diagrams/Evolutions/Services/Services%20add%20Middleware.png">
 <img src="/diagrams/Evolutions/Services/Services%20add%20Middleware.png" alt="Services add Middleware" loading="lazy" width="2447" height="604" style="width:100%"/>
 </a>
 </figure>
@@ -495,7 +495,7 @@ The most common modifications of a system of *Services* involve supplementary sy
 
 
 <figure>
-<a href="/diagrams/Variants/2/Multifunctional%20-%20Service%20Mesh.png" style="outline:none">
+<a href="/diagrams/Variants/2/Multifunctional%20-%20Service%20Mesh.png">
 <img src="/diagrams/Variants/2/Multifunctional%20-%20Service%20Mesh.png" alt="Multifunctional - Service Mesh" loading="lazy" width="2018" height="630" style="width:100%"/>
 </a>
 </figure>
@@ -504,7 +504,7 @@ The most common modifications of a system of *Services* involve supplementary sy
 
 
 <figure>
-<a href="/diagrams/Evolutions/Services/Services%20to%20Shared%20Database.png" style="outline:none">
+<a href="/diagrams/Evolutions/Services/Services%20to%20Shared%20Database.png">
 <img src="/diagrams/Evolutions/Services/Services%20to%20Shared%20Database.png" alt="Services to Shared Database" loading="lazy" width="2385" height="564" style="width:100%"/>
 </a>
 </figure>
@@ -513,7 +513,7 @@ The most common modifications of a system of *Services* involve supplementary sy
 
 
 <figure>
-<a href="/diagrams/Evolutions/Services/Services%20add%20Proxy.png" style="outline:none">
+<a href="/diagrams/Evolutions/Services/Services%20add%20Proxy.png">
 <img src="/diagrams/Evolutions/Services/Services%20add%20Proxy.png" alt="Services add Proxy" loading="lazy" width="2447" height="748" style="width:100%"/>
 </a>
 </figure>
@@ -522,7 +522,7 @@ The most common modifications of a system of *Services* involve supplementary sy
 
 
 <figure>
-<a href="/diagrams/Evolutions/Services/Services%20use%20Orchestrator.png" style="outline:none">
+<a href="/diagrams/Evolutions/Services/Services%20use%20Orchestrator.png">
 <img src="/diagrams/Evolutions/Services/Services%20use%20Orchestrator.png" alt="Services use Orchestrator" loading="lazy" width="2451" height="748" style="width:100%"/>
 </a>
 </figure>

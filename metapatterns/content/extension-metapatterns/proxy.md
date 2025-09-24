@@ -10,7 +10,7 @@ images = ["/diagrams/Main/Proxy.png"]
 # Proxy
 
 <figure>
-<a href="/diagrams/Main/Proxy.png" style="outline:none">
+<a href="/diagrams/Main/Proxy.png">
 <img src="/diagrams/Main/Proxy.png" alt="Proxy" loading="lazy" width="2048" height="1033" style="width:100%"/>
 </a>
 </figure>
@@ -106,7 +106,7 @@ In fact, because *Proxies* tend to have their dependencies configured on startup
 ### Relations
 
 <figure>
-<a href="/diagrams/Relations/Proxy.png" style="outline:none">
+<a href="/diagrams/Relations/Proxy.png">
 <img src="/diagrams/Relations/Proxy.png" alt="Proxy" loading="lazy" width="2404" height="872" style="width:100%"/>
 </a>
 </figure>
@@ -126,7 +126,7 @@ A *Proxy* [may either fully isolate the system it represents or merely help esta
 ### Full Proxy
 
 <figure>
-<a href="/diagrams/Variants/2/Full%20Proxy.png" style="outline:none">
+<a href="/diagrams/Variants/2/Full%20Proxy.png">
 <img src="/diagrams/Variants/2/Full%20Proxy.png" alt="Full Proxy" loading="lazy" width="1299" height="662" style="width:94%"/>
 </a>
 </figure>
@@ -136,7 +136,7 @@ A *Full Proxy* processes every message between the system and its clients\. It c
 ### Half\-Proxy
 
 <figure>
-<a href="/diagrams/Variants/2/Half%20Proxy.png" style="outline:none">
+<a href="/diagrams/Variants/2/Half%20Proxy.png">
 <img src="/diagrams/Variants/2/Half%20Proxy.png" alt="Half Proxy" loading="lazy" width="1328" height="658" style="width:100%"/>
 </a>
 </figure>
@@ -150,7 +150,7 @@ As a *Proxy* stands between a \(sub\)system and its client\(s\), we can imagine 
 ### Separate deployment: Standalone
 
 <figure>
-<a href="/diagrams/Variants/2/Proxy%20placement%20-%20Standalone.png" style="outline:none">
+<a href="/diagrams/Variants/2/Proxy%20placement%20-%20Standalone.png">
 <img src="/diagrams/Variants/2/Proxy%20placement%20-%20Standalone.png" alt="Proxy placement - Standalone" loading="lazy" width="1793" height="683" style="width:100%"/>
 </a>
 </figure>
@@ -164,7 +164,7 @@ We can deploy a *Proxy* as a separate system component\. This has the downside o
 ### On the system side: Sidecar
 
 <figure>
-<a href="/diagrams/Variants/2/Proxy%20placement%20-%20Sidecar.png" style="outline:none">
+<a href="/diagrams/Variants/2/Proxy%20placement%20-%20Sidecar.png">
 <img src="/diagrams/Variants/2/Proxy%20placement%20-%20Sidecar.png" alt="Proxy placement - Sidecar" loading="lazy" width="1416" height="516" style="width:100%"/>
 </a>
 </figure>
@@ -180,7 +180,7 @@ It should be noted that *Sidecar* – co\-locating a generic component and busin
 
 
 <figure>
-<a href="/diagrams/Variants/2/Sidecars.png" style="outline:none">
+<a href="/diagrams/Variants/2/Sidecars.png">
 <img src="/diagrams/Variants/2/Sidecars.png" alt="Sidecars" loading="lazy" width="2280" height="529" style="width:100%"/>
 </a>
 </figure>
@@ -190,7 +190,7 @@ It should be noted that *Sidecar* – co\-locating a generic component and busin
 ### On the client side: Ambassador
 
 <figure>
-<a href="/diagrams/Variants/2/Proxy%20placement%20-%20Ambassador.png" style="outline:none">
+<a href="/diagrams/Variants/2/Proxy%20placement%20-%20Ambassador.png">
 <img src="/diagrams/Variants/2/Proxy%20placement%20-%20Ambassador.png" alt="Proxy placement - Ambassador" loading="lazy" width="1461" height="525" style="width:100%"/>
 </a>
 </figure>
@@ -216,7 +216,7 @@ As *Proxies* are used for many purposes, there are a variety of their specializa
 ### Firewall, \(API\) Rate Limiter, API Throttling
 
 <figure>
-<a href="/diagrams/Variants/2/Firewall.png" style="outline:none">
+<a href="/diagrams/Variants/2/Firewall.png">
 <img src="/diagrams/Variants/2/Firewall.png" alt="Firewall" loading="lazy" width="1688" height="833" style="width:92%"/>
 </a>
 </figure>
@@ -230,7 +230,7 @@ The *Firewall* is a component for white\- and black\-listing network traffic, mo
 ### Response Cache, Read\-Through Cache, Write\-Through Cache, Write\-Behind Cache, Cache, Caching Layer, Distributed Cache, Replicated Cache
 
 <figure>
-<a href="/diagrams/Variants/2/Cache.png" style="outline:none">
+<a href="/diagrams/Variants/2/Cache.png">
 <img src="/diagrams/Variants/2/Cache.png" alt="Cache" loading="lazy" width="2132" height="823" style="width:100%"/>
 </a>
 </figure>
@@ -256,7 +256,7 @@ It is possible to combine multiple servers into a virtual *Caching Layer* \[[DDS
 ### Load Balancer, Sharding Proxy, Cell Router, Messaging Grid, Scheduler
 
 <figure>
-<a href="/diagrams/Variants/2/Load%20Balancer.png" style="outline:none">
+<a href="/diagrams/Variants/2/Load%20Balancer.png">
 <img src="/diagrams/Variants/2/Load%20Balancer.png" alt="Load Balancer" loading="lazy" width="2184" height="722" style="width:100%"/>
 </a>
 </figure>
@@ -274,7 +274,7 @@ Here we have a hardware or software component which distributes user traffic amo
 ### Dispatcher, Reverse Proxy, Ingress Controller, Edge Service, Microgateway
 
 <figure>
-<a href="/diagrams/Variants/2/Dispatcher.png" style="outline:none">
+<a href="/diagrams/Variants/2/Dispatcher.png">
 <img src="/diagrams/Variants/2/Dispatcher.png" alt="Dispatcher" loading="lazy" width="1434" height="630" style="width:100%"/>
 </a>
 </figure>
@@ -288,7 +288,7 @@ You could have noticed that *Dispatcher* or *Reverse Proxy* is quite similar to 
 ### Adapter, Anticorruption Layer, Open Host Service, Gateway, Message Translator, API Service, Cell Gateway, \(inexact\) Backend for Frontend, Hardware Abstraction Layer \(HAL\), Operating System Abstraction Layer \(OSAL\), Platform Abstraction Layer \(PAL\), Database Abstraction Layer \(DBAL or DAL\), Database Access Layer, Data Mapper, Repository
 
 <figure>
-<a href="/diagrams/Variants/2/Adapter.png" style="outline:none">
+<a href="/diagrams/Variants/2/Adapter.png">
 <img src="/diagrams/Variants/2/Adapter.png" alt="Adapter" loading="lazy" width="1408" height="634" style="width:100%"/>
 </a>
 </figure>
@@ -322,7 +322,7 @@ There is also a whole bunch of *Adapters* that aim to protect the business logic
 ### API Gateway
 
 <figure>
-<a href="/diagrams/Variants/2/API%20Gateway.png" style="outline:none">
+<a href="/diagrams/Variants/2/API%20Gateway.png">
 <img src="/diagrams/Variants/2/API%20Gateway.png" alt="API Gateway" loading="lazy" width="1727" height="722" style="width:100%"/>
 </a>
 </figure>
@@ -341,7 +341,7 @@ As *Proxies* are usually third\-party products, there is not much [we can change
 
 
 <figure>
-<a href="/diagrams/Evolutions/2/Proxy%20add%20Proxy.png" style="outline:none">
+<a href="/diagrams/Evolutions/2/Proxy%20add%20Proxy.png">
 <img src="/diagrams/Evolutions/2/Proxy%20add%20Proxy.png" alt="Proxy add Proxy" loading="lazy" width="2368" height="823" style="width:100%"/>
 </a>
 </figure>
@@ -350,7 +350,7 @@ As *Proxies* are usually third\-party products, there is not much [we can change
 
 
 <figure>
-<a href="/diagrams/Evolutions/2/Proxy%20to%20Backends%20for%20Frontends.png" style="outline:none">
+<a href="/diagrams/Evolutions/2/Proxy%20to%20Backends%20for%20Frontends.png">
 <img src="/diagrams/Evolutions/2/Proxy%20to%20Backends%20for%20Frontends.png" alt="Proxy to Backends for Frontends" loading="lazy" width="2417" height="739" style="width:100%"/>
 </a>
 </figure>

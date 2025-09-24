@@ -12,7 +12,7 @@ images = ["/diagrams/Communication/Services%20to%20Orchestrator.png"]
 The most straightforward way to integrate services is to add a coordinating layer \([*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}})\) on top of them:
 
 <figure>
-<a href="/diagrams/Communication/Services%20to%20Orchestrator.png" style="outline:none">
+<a href="/diagrams/Communication/Services%20to%20Orchestrator.png">
 <img src="/diagrams/Communication/Services%20to%20Orchestrator.png" alt="Services to Orchestrator" loading="lazy" width="1995" height="561" style="width:100%"/>
 </a>
 </figure>
@@ -26,7 +26,7 @@ Orchestration is the default approach for single\-process \(desktop\) applicatio
 In a backend which serves client requests an *Orchestrator* takes the role of *Facade* \[[GoF]({{< relref "../../appendices/books-referenced.md#gof" >}})\] – a module that provides and implements a high\-level interface for a multicomponent system\. It sends requests to the underlying services and waits for their confirmations – the mode of action that can be wrapped in an [*RPC*](https://en.wikipedia.org/wiki/Remote_procedure_call) \(*remote procedure call*\)\. The state of each scenario that the facade runs resides in the associated thread’s or coroutine’s call stack \(for [*Reactor*]({{< relref "../../basic-metapatterns/monolith.md#single-threaded-reactor-one-thread-one-task" >}}) \[[POSA2]({{< relref "../../appendices/books-referenced.md#posa2" >}})\] or [*Half\-Sync/Half\-Async*]({{< relref "../../basic-metapatterns/monolith.md#inexact-half-synchalf-async-coroutines-or-fibers" >}}) \[[POSA2]({{< relref "../../appendices/books-referenced.md#posa2" >}})\] implementations, correspondingly\) or in a dedicated object \(for [*Proactor*]({{< relref "../../basic-metapatterns/monolith.md#proactor-one-thread-many-tasks" >}}) \[[POSA2]({{< relref "../../appendices/books-referenced.md#posa2" >}})\]\)\.
 
 <figure>
-<a href="/diagrams/Communication/Facade.png" style="outline:none">
+<a href="/diagrams/Communication/Facade.png">
 <img src="/diagrams/Communication/Facade.png" alt="Facade" loading="lazy" width="1838" height="604" style="width:100%"/>
 </a>
 </figure>
@@ -34,7 +34,7 @@ In a backend which serves client requests an *Orchestrator* takes the role of *F
 A *Facade* also supports querying the services in parallel and collecting the data returned into a single message through the *Splitter* and *Aggregator* patterns of \[[EIP]({{< relref "../../appendices/books-referenced.md#eip" >}})\]\. That reduces latency \(and resource consumption as the whole task is completed faster\) for [scatter or gather](https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/scatter-gather.html) requests when compared to sequential execution\.
 
 <figure>
-<a href="/diagrams/Communication/Facade%20-%20Parallel.png" style="outline:none">
+<a href="/diagrams/Communication/Facade%20-%20Parallel.png">
 <img src="/diagrams/Communication/Facade%20-%20Parallel.png" alt="Facade - Parallel" loading="lazy" width="1474" height="600" style="width:90%"/>
 </a>
 </figure>
@@ -42,7 +42,7 @@ A *Facade* also supports querying the services in parallel and collecting the da
 Embedded and system programming – the areas that deal with automating [*control*]({{< relref "../../foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}}) of hardware or distributed software – employ *Orchestrators* as *Mediators* \[[GoF]({{< relref "../../appendices/books-referenced.md#gof" >}})\]  – components that keep the state of the whole system \(and, by implication, any hardware it may manage\) consistent by enacting a system\-wide reaction to any observable change in any of the system’s constituents\. A mediator operates in non\-blocking, fire\-and\-forget mode which is more characteristic of choreography, to be discussed [below]({{< relref "../../foundations-of-software-architecture/arranging-communication/choreography.md" >}})\. This also means that you will not be able to debug a use case as a thread – because [there are no predefined scenarios in control software](https://medium.com/itnext/control-and-processing-software-9011fee8bc66)\!
 
 <figure>
-<a href="/diagrams/Communication/Mediator.png" style="outline:none">
+<a href="/diagrams/Communication/Mediator.png">
 <img src="/diagrams/Communication/Mediator.png" alt="Mediator" loading="lazy" width="1671" height="587" style="width:100%"/>
 </a>
 </figure>
@@ -54,7 +54,7 @@ Such a difference may be rooted in the direction of the control and information 
 By default an *Orchestrator* depends on each service which it manages – that means that a change in a service’s interface or contract – caused by fixing a bug, adding a feature, or optimizing performance – requires corresponding changes in the *Orchestrator*\. That is acceptable as the *Orchestrator*’s client\-facing, high\-level logic tends to evolve much faster than the business rules of the lower layer of services, therefore the team behind the orchestrator, unrestricted by other components depending on it, will likely release way more often than any other team\. However, as the number of the managed services and the lengths of their APIs increase, so does the amount of information that the *Orchestrator*’s team must remember and the influx of changes they must integrate in their code\. For a large project the workload of supporting the *orchestration layer* may paralyze its development – that was a major reason behind the decline of [*Enterprise SOA*]({{< relref "../../fragmented-metapatterns/service-oriented-architecture--soa-.md#enterprise-soa" >}}) \[[FSA]({{< relref "../../appendices/books-referenced.md#fsa" >}})\] where [*ESB*]({{< relref "../../extension-metapatterns/combined-component.md#enterprise-service-bus-esb" >}}) used to orchestrate all the interactions in the system, including those between domain\-level services and components of the utility layer\.
 
 <figure>
-<a href="/diagrams/Communication/Orchestrator%20-%20Dependencies.png" style="outline:none">
+<a href="/diagrams/Communication/Orchestrator%20-%20Dependencies.png">
 <img src="/diagrams/Communication/Orchestrator%20-%20Dependencies.png" alt="Orchestrator - Dependencies" loading="lazy" width="1753" height="407" style="width:100%"/>
 </a>
 </figure>
@@ -62,7 +62,7 @@ By default an *Orchestrator* depends on each service which it manages – that m
 Another option, which appears in [*Plugins*]({{< relref "../../implementation-metapatterns/plugins.md" >}}) and develops in [*Microkernel*]({{< relref "../../implementation-metapatterns/microkernel.md" >}}) and [*Hexagonal Architecture*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md" >}}) stems from [*dependency inversion*](https://en.wikipedia.org/wiki/Dependency_inversion_principle): the *Orchestrator* defines an [*SPI*](https://en.wikipedia.org/wiki/Service_provider_interface) \(*service provider interface*\) for every service\. That makes each service depend on the *Orchestrator* so that a single *Orchestrator*’s team does not need to follow updates of the multiple services’ APIs – instead it initiates the changes at its own pace\. However, with that approach the design of an SPI requires coordination from the teams on both sides of it and the once settled interface becomes hard to change\. The most famous example of modules that implement SPIs are OS drivers\.
 
 <figure>
-<a href="/diagrams/Communication/Microkernel%20-%20Dependencies.png" style="outline:none">
+<a href="/diagrams/Communication/Microkernel%20-%20Dependencies.png">
 <img src="/diagrams/Communication/Microkernel%20-%20Dependencies.png" alt="Microkernel - Dependencies" loading="lazy" width="1793" height="411" style="width:100%"/>
 </a>
 </figure>
@@ -70,7 +70,7 @@ Another option, which appears in [*Plugins*]({{< relref "../../implementation-me
 Furthermore, some domains develop that idea into a [*Hierarchy*]({{< relref "../../fragmented-metapatterns/hierarchy.md" >}}): when services implement related concepts, they may match a single SPI, making the *Orchestrator* simpler \(as there is no more need to remember multiple interfaces\)\. That is the case with telecom or payment gateways and it may also be found with trees of product categories in online marketplaces\.
 
 <figure>
-<a href="/diagrams/Communication/Hierarchy%20-%20Dependencies.png" style="outline:none">
+<a href="/diagrams/Communication/Hierarchy%20-%20Dependencies.png">
 <img src="/diagrams/Communication/Hierarchy%20-%20Dependencies.png" alt="Hierarchy - Dependencies" loading="lazy" width="1697" height="407" style="width:100%"/>
 </a>
 </figure>
@@ -78,7 +78,7 @@ Furthermore, some domains develop that idea into a [*Hierarchy*]({{< relref "../
 All kinds of orchestration allow for an easy addition of new use cases which may even involve new services as that changes nothing in the existing code\. However, removing or restructuring \(splitting or merging\) previously integrated services requires much work within the orchestrator, except for in a *Hierarchy* where all the services implement the same interface which means that the code in the *Orchestrator* does not depend \(much\) on any specific child\.
 
 <figure>
-<a href="/diagrams/Communication/Orchestrator%20add%20a%20Use%20Case.png" style="outline:none">
+<a href="/diagrams/Communication/Orchestrator%20add%20a%20Use%20Case.png">
 <img src="/diagrams/Communication/Orchestrator%20add%20a%20Use%20Case.png" alt="Orchestrator add a Use Case" loading="lazy" width="2113" height="591" style="width:100%"/>
 </a>
 </figure>
@@ -88,7 +88,7 @@ All kinds of orchestration allow for an easy addition of new use cases which may
 In some systems there are several services that have their own kinds of clients \(for example, employees of different departments\)\. Each of the services tries hard to process its clients’ requests on its own but occasionally still needs help from other parts of the system\. This creates a paradoxical case where several services orchestrate each other:
 
 <figure>
-<a href="/diagrams/Communication/Mutual%20Orchestration%20-%201.png" style="outline:none">
+<a href="/diagrams/Communication/Mutual%20Orchestration%20-%201.png">
 <img src="/diagrams/Communication/Mutual%20Orchestration%20-%201.png" alt="Mutual Orchestration - 1" loading="lazy" width="1661" height="516" style="width:100%"/>
 </a>
 </figure>
@@ -96,7 +96,7 @@ In some systems there are several services that have their own kinds of clients 
 As each of the services depends on the APIs of the others, any change to any interface or composition of such a system requires consent and collaboration from every team as it impacts the code of all the services\.
 
 <figure>
-<a href="/diagrams/Communication/Mutual%20Orchestration%20-%202.png" style="outline:none">
+<a href="/diagrams/Communication/Mutual%20Orchestration%20-%202.png">
 <img src="/diagrams/Communication/Mutual%20Orchestration%20-%202.png" alt="Mutual Orchestration - 2" loading="lazy" width="1667" height="371" style="width:100%"/>
 </a>
 </figure>
@@ -104,13 +104,13 @@ As each of the services depends on the APIs of the others, any change to any int
 In real life services are likely to be layered, with their upper layers acting as both internal and external *Orchestrators*\. Layering isolates interdependencies to the relatively small application\-level components and resolves, to an extent, the seemingly counterintuitive case of mutual orchestration as now there is an explicit, though fragmented, system\-wide orchestration layer\.
 
 <figure>
-<a href="/diagrams/Communication/Mutual%20Orchestration%20-%203.png" style="outline:none">
+<a href="/diagrams/Communication/Mutual%20Orchestration%20-%203.png">
 <img src="/diagrams/Communication/Mutual%20Orchestration%20-%203.png" alt="Mutual Orchestration - 3" loading="lazy" width="1907" height="713" style="width:100%"/>
 </a>
 </figure>
 
 <figure>
-<a href="/diagrams/Communication/Mutual%20Orchestration%20-%204.png" style="outline:none">
+<a href="/diagrams/Communication/Mutual%20Orchestration%20-%204.png">
 <img src="/diagrams/Communication/Mutual%20Orchestration%20-%204.png" alt="Mutual Orchestration - 4" loading="lazy" width="1926" height="578" style="width:100%"/>
 </a>
 </figure>

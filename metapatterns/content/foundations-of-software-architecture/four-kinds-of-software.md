@@ -26,7 +26,7 @@ Other programs are not that time\-constrained – they run a single task for a l
 Those dimensions make four corner cases that vary in architectural styles:
 
 <figure>
-<a href="/diagrams/4Kinds/4%20Kinds.png" style="outline:none">
+<a href="/diagrams/4Kinds/4%20Kinds.png">
 <img src="/diagrams/4Kinds/4%20Kinds.png" alt="4 Kinds" loading="lazy" width="2509" height="1236" style="width:100%"/>
 </a>
 </figure>
@@ -34,7 +34,7 @@ Those dimensions make four corner cases that vary in architectural styles:
 ## Control \(real\-time, hardware input\)
 
 <figure>
-<a href="/diagrams/4Kinds/Control%20-%20main.png" style="outline:none">
+<a href="/diagrams/4Kinds/Control%20-%20main.png">
 <img src="/diagrams/4Kinds/Control%20-%20main.png" alt="Control - main" loading="lazy" width="1821" height="739" style="width:100%"/>
 </a>
 </figure>
@@ -80,7 +80,7 @@ At the architectural level, control systems are [event\-driven](https://en.wikip
 
 
 <figure>
-<a href="/diagrams/4Kinds/Control%20-%20variants.png" style="outline:none">
+<a href="/diagrams/4Kinds/Control%20-%20variants.png">
 <img src="/diagrams/4Kinds/Control%20-%20variants.png" alt="Control - variants" loading="lazy" width="2303" height="1213" style="width:100%"/>
 </a>
 </figure>
@@ -107,7 +107,7 @@ Messages may be dispatched through multilevel index arrays or *Visitors* \[[GoF]
 ## Interactive \(soft real\-time, user input\)
 
 <figure>
-<a href="/diagrams/4Kinds/Interactive%20-%20main.png" style="outline:none">
+<a href="/diagrams/4Kinds/Interactive%20-%20main.png">
 <img src="/diagrams/4Kinds/Interactive%20-%20main.png" alt="Interactive - main" loading="lazy" width="1749" height="626" style="width:100%"/>
 </a>
 </figure>
@@ -129,7 +129,7 @@ Interactive systems vary in a couple of ways:
 
 
 <figure>
-<a href="/diagrams/4Kinds/Interactive%20-%20variants%201.png" style="outline:none">
+<a href="/diagrams/4Kinds/Interactive%20-%20variants%201.png">
 <img src="/diagrams/4Kinds/Interactive%20-%20variants%201.png" alt="Interactive - variants 1" loading="lazy" width="2126" height="538" style="width:100%"/>
 </a>
 </figure>
@@ -138,7 +138,7 @@ Interactive systems vary in a couple of ways:
 
 
 <figure>
-<a href="/diagrams/4Kinds/Interactive%20-%20variants%202.png" style="outline:none">
+<a href="/diagrams/4Kinds/Interactive%20-%20variants%202.png">
 <img src="/diagrams/4Kinds/Interactive%20-%20variants%202.png" alt="Interactive - variants 2" loading="lazy" width="2048" height="660" style="width:100%"/>
 </a>
 </figure>
@@ -166,7 +166,7 @@ The presentation would usually subscribe to updates from the business logic\.
 ## Streaming \(continuous, raw data input\)
 
 <figure>
-<a href="/diagrams/4Kinds/Streaming%20-%20main.png" style="outline:none">
+<a href="/diagrams/4Kinds/Streaming%20-%20main.png">
 <img src="/diagrams/4Kinds/Streaming%20-%20main.png" alt="Streaming - main" loading="lazy" width="2113" height="516" style="width:100%"/>
 </a>
 </figure>
@@ -206,7 +206,7 @@ Every filter is likely to run in its own thread and be unaware of other filters 
 ## Computational \(single run, user input\)
 
 <figure>
-<a href="/diagrams/4Kinds/Computational%20-%20main.png" style="outline:none">
+<a href="/diagrams/4Kinds/Computational%20-%20main.png">
 <img src="/diagrams/4Kinds/Computational%20-%20main.png" alt="Computational - main" loading="lazy" width="1744" height="587" style="width:100%"/>
 </a>
 </figure>
@@ -247,7 +247,7 @@ Most real\-life software is too complex to fit the classification outlined above
 ### Camera
 
 <figure>
-<a href="/diagrams/4Kinds/Camera.png" style="outline:none">
+<a href="/diagrams/4Kinds/Camera.png">
 <img src="/diagrams/4Kinds/Camera.png" alt="Camera" loading="lazy" width="1956" height="1007" style="width:100%"/>
 </a>
 </figure>
@@ -262,7 +262,7 @@ A digital camera incorporates subsystems of different kinds:
 ### 3D action game
 
 <figure>
-<a href="/diagrams/4Kinds/3D%20action.png" style="outline:none">
+<a href="/diagrams/4Kinds/3D%20action.png">
 <img src="/diagrams/4Kinds/3D%20action.png" alt="3D action" loading="lazy" width="1926" height="643" style="width:100%"/>
 </a>
 </figure>
@@ -272,7 +272,7 @@ Games with 3D graphics often bypass the host OS’ [desktop environment](https:/
 ### SQL database
 
 <figure>
-<a href="/diagrams/4Kinds/Database.png" style="outline:none">
+<a href="/diagrams/4Kinds/Database.png">
 <img src="/diagrams/4Kinds/Database.png" alt="Database" loading="lazy" width="2091" height="1354" style="width:100%"/>
 </a>
 </figure>

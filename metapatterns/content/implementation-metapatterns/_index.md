@@ -14,7 +14,7 @@ There are patterns that describe implementation of components:
 ### [Plugins]({{< relref "../implementation-metapatterns/plugins.md" >}})
 
 <figure>
-<a href="/diagrams/Contents/Plugins.png" style="outline:none">
+<a href="/diagrams/Contents/Plugins.png">
 <img src="/diagrams/Contents/Plugins.png" alt="Plugins" loading="lazy" width="1579" height="778" style="width:100%"/>
 </a>
 </figure>
@@ -26,7 +26,7 @@ The *Plugins* pattern is about separating a system’s main logic from the custo
 ### [Hexagonal Architecture]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}})
 
 <figure>
-<a href="/diagrams/Contents/Hexagonal%20Architecture.png" style="outline:none">
+<a href="/diagrams/Contents/Hexagonal%20Architecture.png">
 <img src="/diagrams/Contents/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" loading="lazy" width="1824" height="713" style="width:100%"/>
 </a>
 </figure>
@@ -38,7 +38,7 @@ The *Plugins* pattern is about separating a system’s main logic from the custo
 ### [Microkernel]({{< relref "../implementation-metapatterns/microkernel.md" >}})
 
 <figure>
-<a href="/diagrams/Contents/Microkernel.png" style="outline:none">
+<a href="/diagrams/Contents/Microkernel.png">
 <img src="/diagrams/Contents/Microkernel.png" alt="Microkernel" loading="lazy" width="1916" height="594" style="width:100%"/>
 </a>
 </figure>
@@ -50,7 +50,7 @@ This is another derivation of *Plugins*, with a rudimentary *core* component whi
 ### [Mesh]({{< relref "../implementation-metapatterns/mesh.md" >}})
 
 <figure>
-<a href="/diagrams/Contents/Mesh.png" style="outline:none">
+<a href="/diagrams/Contents/Mesh.png">
 <img src="/diagrams/Contents/Mesh.png" alt="Mesh" loading="lazy" width="1583" height="454" style="width:100%"/>
 </a>
 </figure>

@@ -10,7 +10,7 @@ images = ["/diagrams/Main/Mesh.png"]
 # Mesh
 
 <figure>
-<a href="/diagrams/Main/Mesh.png" style="outline:none">
+<a href="/diagrams/Main/Mesh.png">
 <img src="/diagrams/Main/Mesh.png" alt="Mesh" loading="lazy" width="1508" height="744" style="width:100%"/>
 </a>
 </figure>
@@ -117,7 +117,7 @@ The connected *nodes* of a *Mesh* may be:
 ### Peer\-to\-Peer Networks
 
 <figure>
-<a href="/diagrams/Variants/4/P2P.png" style="outline:none">
+<a href="/diagrams/Variants/4/P2P.png">
 <img src="/diagrams/Variants/4/P2P.png" alt="P2P" loading="lazy" width="1508" height="722" style="width:100%"/>
 </a>
 </figure>
@@ -129,7 +129,7 @@ Examples: torrent, onion routing \(Tor\), blockchain\.
 ### Leaf\-Spine Architecture, Spine\-Leaf Architecture
 
 <figure>
-<a href="/diagrams/Variants/4/Leaf-Spine.png" style="outline:none">
+<a href="/diagrams/Variants/4/Leaf-Spine.png">
 <img src="/diagrams/Variants/4/Leaf-Spine.png" alt="Leaf-Spine" loading="lazy" width="1136" height="692" style="width:81%"/>
 </a>
 </figure>
@@ -139,7 +139,7 @@ This [datacenter network architecture](https://www.geeksforgeeks.org/spine-leaf-
 ### Actors
 
 <figure>
-<a href="/diagrams/Variants/4/Actors.png" style="outline:none">
+<a href="/diagrams/Variants/4/Actors.png">
 <img src="/diagrams/Variants/4/Actors.png" alt="Actors" loading="lazy" width="1622" height="591" style="width:100%"/>
 </a>
 </figure>
@@ -149,7 +149,7 @@ A system of *Actors* may be classified as a *fully connected Mesh* with the acto
 ### Service Mesh
 
 <figure>
-<a href="/diagrams/Variants/4/Service%20Mesh.png" style="outline:none">
+<a href="/diagrams/Variants/4/Service%20Mesh.png">
 <img src="/diagrams/Variants/4/Service%20Mesh.png" alt="Service Mesh" loading="lazy" width="1556" height="1029" style="width:100%"/>
 </a>
 </figure>
@@ -170,7 +170,7 @@ Ready\-to\-use *Service Mesh* frameworks are popular with the *Microservices* ar
 ### Space\-Based Architecture
 
 <figure>
-<a href="/diagrams/Variants/4/Space-Based%20Architecture.png" style="outline:none">
+<a href="/diagrams/Variants/4/Space-Based%20Architecture.png">
 <img src="/diagrams/Variants/4/Space-Based%20Architecture.png" alt="Space-Based Architecture" loading="lazy" width="1386" height="915" style="width:100%"/>
 </a>
 </figure>

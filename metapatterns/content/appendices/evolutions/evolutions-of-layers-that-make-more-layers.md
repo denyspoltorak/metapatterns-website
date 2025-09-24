@@ -17,7 +17,7 @@ Not all the layered architectures are equally layered\. A [*Monolith*]({{< relre
 
 
 <figure>
-<a href="/diagrams/Evolutions/Layers/Layers%20to%20Layers.png" style="outline:none">
+<a href="/diagrams/Evolutions/Layers/Layers%20to%20Layers.png">
 <img src="/diagrams/Evolutions/Layers/Layers%20to%20Layers.png" alt="Layers to Layers" loading="lazy" width="1759" height="833" style="width:100%"/>
 </a>
 </figure>
@@ -30,7 +30,7 @@ It is also common to:
 ## Split the business logic into two layers
 
 <figure>
-<a href="/diagrams/Evolutions/Layers/Layers%20Split%20in%20Two.png" style="outline:none">
+<a href="/diagrams/Evolutions/Layers/Layers%20Split%20in%20Two.png">
 <img src="/diagrams/Evolutions/Layers/Layers%20Split%20in%20Two.png" alt="Layers Split in Two" loading="lazy" width="1916" height="476" style="width:100%"/>
 </a>
 </figure>

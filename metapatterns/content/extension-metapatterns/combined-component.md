@@ -69,7 +69,7 @@ Combined components vary in their structure and properties:
 ### Message Bus
 
 <figure>
-<a href="/diagrams/Variants/2/Message%20Bus.png" style="outline:none">
+<a href="/diagrams/Variants/2/Message%20Bus.png">
 <img src="/diagrams/Variants/2/Message%20Bus.png" alt="Message Bus" loading="lazy" width="1631" height="568" style="width:100%"/>
 </a>
 </figure>
@@ -79,7 +79,7 @@ A *Message Bus* \[[EIP]({{< relref "../appendices/books-referenced.md#eip" >}})\
 ### API Gateway
 
 <figure>
-<a href="/diagrams/Variants/2/Multifunctional%20-%20API%20Gateway.png" style="outline:none">
+<a href="/diagrams/Variants/2/Multifunctional%20-%20API%20Gateway.png">
 <img src="/diagrams/Variants/2/Multifunctional%20-%20API%20Gateway.png" alt="Multifunctional - API Gateway" loading="lazy" width="1618" height="784" style="width:100%"/>
 </a>
 </figure>
@@ -93,7 +93,7 @@ Example: a thorough article from [Microsoft](https://learn.microsoft.com/en-us/a
 ### Event Mediator
 
 <figure>
-<a href="/diagrams/Variants/2/Multifunctional%20-%20Event%20Mediator.png" style="outline:none">
+<a href="/diagrams/Variants/2/Multifunctional%20-%20Event%20Mediator.png">
 <img src="/diagrams/Variants/2/Multifunctional%20-%20Event%20Mediator.png" alt="Multifunctional - Event Mediator" loading="lazy" width="1881" height="774" style="width:100%"/>
 </a>
 </figure>
@@ -113,7 +113,7 @@ Example: Mediator Topology in the \[[FSA]({{< relref "../appendices/books-refere
 ### Persistent Event Log, Shared Event Store
 
 <figure>
-<a href="/diagrams/Variants/2/Multifunctional%20-%20Shared%20Event%20Store.png" style="outline:none">
+<a href="/diagrams/Variants/2/Multifunctional%20-%20Shared%20Event%20Store.png">
 <img src="/diagrams/Variants/2/Multifunctional%20-%20Shared%20Event%20Store.png" alt="Multifunctional - Shared Event Store" loading="lazy" width="2460" height="476" style="width:100%"/>
 </a>
 </figure>
@@ -129,7 +129,7 @@ Example: \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\] sho
 ### Front Controller
 
 <figure>
-<a href="/diagrams/Variants/2/Front%20Controller.png" style="outline:none">
+<a href="/diagrams/Variants/2/Front%20Controller.png">
 <img src="/diagrams/Variants/2/Front%20Controller.png" alt="Front Controller" loading="lazy" width="1661" height="564" style="width:100%"/>
 </a>
 </figure>
@@ -139,7 +139,7 @@ Example: \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\] sho
 ### Enterprise Service Bus \(ESB\)
 
 <figure>
-<a href="/diagrams/Variants/2/Multifunctional%20-%20Enterprise%20Service%20Bus.png" style="outline:none">
+<a href="/diagrams/Variants/2/Multifunctional%20-%20Enterprise%20Service%20Bus.png">
 <img src="/diagrams/Variants/2/Multifunctional%20-%20Enterprise%20Service%20Bus.png" alt="Multifunctional - Enterprise Service Bus" loading="lazy" width="2456" height="1104" style="width:100%"/>
 </a>
 </figure>
@@ -151,7 +151,7 @@ Example: Orchestration\-Driven Service\-Oriented Architecture in \[[FSA]({{< rel
 ### Service Mesh
 
 <figure>
-<a href="/diagrams/Variants/2/Multifunctional%20-%20Service%20Mesh.png" style="outline:none">
+<a href="/diagrams/Variants/2/Multifunctional%20-%20Service%20Mesh.png">
 <img src="/diagrams/Variants/2/Multifunctional%20-%20Service%20Mesh.png" alt="Multifunctional - Service Mesh" loading="lazy" width="2018" height="630" style="width:100%"/>
 </a>
 </figure>
@@ -163,7 +163,7 @@ A *Service* [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}}) is
 ### Middleware of Space\-Based Architecture
 
 <figure>
-<a href="/diagrams/Variants/2/Multifunctional%20-%20Space-Based%20Architecture.png" style="outline:none">
+<a href="/diagrams/Variants/2/Multifunctional%20-%20Space-Based%20Architecture.png">
 <img src="/diagrams/Variants/2/Multifunctional%20-%20Space-Based%20Architecture.png" alt="Multifunctional - Space-Based Architecture" loading="lazy" width="2417" height="1056" style="width:100%"/>
 </a>
 </figure>
@@ -186,7 +186,7 @@ The patterns that involve [*orchestration*]({{< relref "../foundations-of-softwa
 
 
 <figure>
-<a href="/diagrams/Evolutions/2/Multifunctional_%20Split.png" style="outline:none">
+<a href="/diagrams/Evolutions/2/Multifunctional_%20Split.png">
 <img src="/diagrams/Evolutions/2/Multifunctional_%20Split.png" alt="Multifunctional: Split" loading="lazy" width="2368" height="898" style="width:100%"/>
 </a>
 </figure>

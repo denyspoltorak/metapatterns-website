@@ -15,7 +15,7 @@ There are several ways to improve the performance of a [*layered system*]({{< re
 
 
 <figure>
-<a href="/diagrams/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.png" style="outline:none">
+<a href="/diagrams/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.png">
 <img src="/diagrams/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.png" alt="Layers to Space-Based Architecture" loading="lazy" width="1991" height="519" style="width:100%"/>
 </a>
 </figure>
@@ -30,7 +30,7 @@ Others are new here and thus deserve more attention:
 ## Merge several layers
 
 <figure>
-<a href="/diagrams/Evolutions/Layers/Layers%20Merge.png" style="outline:none">
+<a href="/diagrams/Evolutions/Layers/Layers%20Merge.png">
 <img src="/diagrams/Evolutions/Layers/Layers%20Merge.png" alt="Layers Merge" loading="lazy" width="1916" height="486" style="width:100%"/>
 </a>
 </figure>
@@ -63,7 +63,7 @@ If your system’s development [is finished]({{< relref "../../analytics/archite
 ## Scale individual layers
 
 <figure>
-<a href="/diagrams/Evolutions/Layers/Layers_%20Shard.png" style="outline:none">
+<a href="/diagrams/Evolutions/Layers/Layers_%20Shard.png">
 <img src="/diagrams/Evolutions/Layers/Layers_%20Shard.png" alt="Layers: Shard" loading="lazy" width="1860" height="604" style="width:100%"/>
 </a>
 </figure>
@@ -97,7 +97,7 @@ Multiple instances or layers can be created, with their number and deployment [v
 ## Use multiple databases
 
 <figure>
-<a href="/diagrams/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.png" style="outline:none">
+<a href="/diagrams/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.png">
 <img src="/diagrams/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.png" alt="Layers to Polyglot Persistence" loading="lazy" width="1926" height="480" style="width:100%"/>
 </a>
 </figure>

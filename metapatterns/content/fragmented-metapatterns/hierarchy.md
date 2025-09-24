@@ -10,7 +10,7 @@ images = ["/diagrams/Main/Hierarchy.png"]
 # Hierarchy
 
 <figure>
-<a href="/diagrams/Main/Hierarchy.png" style="outline:none">
+<a href="/diagrams/Main/Hierarchy.png">
 <img src="/diagrams/Main/Hierarchy.png" alt="Hierarchy" loading="lazy" width="2038" height="928" style="width:100%"/>
 </a>
 </figure>
@@ -54,7 +54,7 @@ This architecture is not ubiquitous because few domains are truly hierarchical\.
 No kind of distributed hierarchy is latency\-friendly as many use cases involve several network hops\. The fewer layers of the hierarchy are involved in a task, the better its performance\.
 
 <figure>
-<a href="/diagrams/Performance/Hierarchy%20-%20speed.png" style="outline:none">
+<a href="/diagrams/Performance/Hierarchy%20-%20speed.png">
 <img src="/diagrams/Performance/Hierarchy%20-%20speed.png" alt="Hierarchy - speed" loading="lazy" width="2916" height="1076" style="width:100%"/>
 </a>
 </figure>
@@ -67,7 +67,7 @@ Maintaining high throughput usually requires deploying multiple instances of the
 
 
 <figure>
-<a href="/diagrams/Performance/Hierarchy%20-%20optimizations.png" style="outline:none">
+<a href="/diagrams/Performance/Hierarchy%20-%20optimizations.png">
 <img src="/diagrams/Performance/Hierarchy%20-%20optimizations.png" alt="Hierarchy - optimizations" loading="lazy" width="2775" height="906" style="width:100%"/>
 </a>
 </figure>
@@ -77,7 +77,7 @@ Maintaining high throughput usually requires deploying multiple instances of the
 A parent node would usually define one \(for polymorphic children\) or more \(otherwise\) [*SPIs*](https://en.wikipedia.org/wiki/Service_provider_interface) for its child nodes to implement\. The interfaces reside on the parent side because low\-level nodes tend to be less stable \(new types of them are often added and old ones replaced\) therefore we don’t want our main business logic to depend on them\.
 
 <figure>
-<a href="/diagrams/Dependencies/Hierarchy.png" style="outline:none">
+<a href="/diagrams/Dependencies/Hierarchy.png">
 <img src="/diagrams/Dependencies/Hierarchy.png" alt="Hierarchy" loading="lazy" width="2096" height="778" style="width:100%"/>
 </a>
 </figure>
@@ -102,7 +102,7 @@ A parent node would usually define one \(for polymorphic children\) or more \(ot
 ### Relations
 
 <figure>
-<a href="/diagrams/Relations/Hierarchy.png" style="outline:none">
+<a href="/diagrams/Relations/Hierarchy.png">
 <img src="/diagrams/Relations/Hierarchy.png" alt="Hierarchy" loading="lazy" width="2775" height="797" style="width:100%"/>
 </a>
 </figure>
@@ -133,7 +133,7 @@ Example: an intrusion alarm logic may need to discern between cat\-affected IR s
 ### Top\-Down Hierarchy, Orchestrator of Orchestrators, Presentation\-Abstraction\-Control \(PAC\), Hierarchical Model\-View\-Controller \(HMVC\)
 
 <figure>
-<a href="/diagrams/Variants/3/Hierarchy%20-%20Top-down.png" style="outline:none">
+<a href="/diagrams/Variants/3/Hierarchy%20-%20Top-down.png">
 <img src="/diagrams/Variants/3/Hierarchy%20-%20Top-down.png" alt="Hierarchy - Top-down" loading="lazy" width="1688" height="666" style="width:100%"/>
 </a>
 </figure>
@@ -145,7 +145,7 @@ In the most common case *Hierarchy* is applied to business logic to build a laye
 [*Hierarchical Model\-View\-Controller*](https://herbertograca.com/2017/08/17/mvc-and-its-variants/#hierarchical-model-view-controller) \(*HMVC*\) is similar, but its views access models directly, like in [*MVC*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}}), and every model synchronizes with the global data\. This pattern [was used](https://web.archive.org/web/20060319064042/http://www.javaworld.com/javaworld/jw-09-2000/jw-0908-letters.html) in [rich clients](https://en.wikipedia.org/wiki/Rich_client)\.
 
 <figure>
-<a href="/diagrams/Variants/3/PAC.png" style="outline:none">
+<a href="/diagrams/Variants/3/PAC.png">
 <img src="/diagrams/Variants/3/PAC.png" alt="PAC" loading="lazy" width="2781" height="1508" style="width:100%"/>
 </a>
 </figure>
@@ -153,7 +153,7 @@ In the most common case *Hierarchy* is applied to business logic to build a laye
 ### Bottom\-Up Hierarchy, Bus of Buses, Network of Networks
 
 <figure>
-<a href="/diagrams/Variants/3/Hierarchy%20-%20Bottom-up.png" style="outline:none">
+<a href="/diagrams/Variants/3/Hierarchy%20-%20Bottom-up.png">
 <img src="/diagrams/Variants/3/Hierarchy%20-%20Bottom-up.png" alt="Hierarchy - Bottom-up" loading="lazy" width="2319" height="758" style="width:100%"/>
 </a>
 </figure>
@@ -165,7 +165,7 @@ Example: [Automotive networks](https://www.mdpi.com/1424-8220/21/23/7917), integ
 ### In\-Depth Hierarchy, Cell\-Based \(Microservice\) Architecture \(WSO2 version\), Segmented Microservice Architecture, Services of Services, Clusters of Services
 
 <figure>
-<a href="/diagrams/Variants/3/Cell-Based%20Architecture.png" style="outline:none">
+<a href="/diagrams/Variants/3/Cell-Based%20Architecture.png">
 <img src="/diagrams/Variants/3/Cell-Based%20Architecture.png" alt="Cell-Based Architecture" loading="lazy" width="2214" height="1108" style="width:100%"/>
 </a>
 </figure>
@@ -182,7 +182,7 @@ Uber [compacted](https://www.uber.com/blog/microservice-architecture/) 2200 [*Mi
 
 
 <figure>
-<a href="/diagrams/Evolutions/3/Hierarchy%20-%201.png" style="outline:none">
+<a href="/diagrams/Evolutions/3/Hierarchy%20-%201.png">
 <img src="/diagrams/Evolutions/3/Hierarchy%20-%201.png" alt="Hierarchy - 1" loading="lazy" width="2306" height="761" style="width:100%"/>
 </a>
 </figure>
