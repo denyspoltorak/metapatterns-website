@@ -2,7 +2,7 @@
 weight = 7
 title = "Evolutions of Layers that make more layers"
 description = "It is often possible to split the business logic layer in two, namely, integration or application logic (scenarios) and domain logic (business rules)."
-images = ["/diagrams/Evolutions/Layers/Layers%20to%20Layers.png"]
+images = ["/diagrams/Evolutions/Layers/Layers%20to%20Layers.svg"]
 [sitemap]
   priority = 0.3
 +++
@@ -18,7 +18,7 @@ Not all the layered architectures are equally layered\. A [*Monolith*]({{< relre
 
 <figure>
 <a href="/diagrams/Evolutions/Layers/Layers%20to%20Layers.png">
-<img src="/diagrams/Evolutions/Layers/Layers%20to%20Layers.png" alt="Layers to Layers" loading="lazy" width="1759" height="833" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20to%20Layers.svg" alt="Layers to Layers" loading="lazy" width="943" height="424" style="width:100%"/>
 </a>
 </figure>
 
@@ -31,7 +31,7 @@ It is also common to:
 
 <figure>
 <a href="/diagrams/Evolutions/Layers/Layers%20Split%20in%20Two.png">
-<img src="/diagrams/Evolutions/Layers/Layers%20Split%20in%20Two.png" alt="Layers Split in Two" loading="lazy" width="1916" height="476" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20Split%20in%20Two.svg" alt="Layers Split in Two" loading="lazy" width="1027" height="243" style="width:100%"/>
 </a>
 </figure>
 

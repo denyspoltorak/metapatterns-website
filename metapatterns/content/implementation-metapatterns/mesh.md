@@ -2,7 +2,7 @@
 weight = 8
 title = "Mesh"
 description = "A Mesh or Grid is a virtual layer of interconnected components which makes a distributed Middleware. It features supreme fault tolerance and scalability."
-images = ["/diagrams/Main/Mesh.png"]
+images = ["/diagrams/Main/Mesh.svg"]
 [sitemap]
   priority = 0.8
 +++
@@ -11,7 +11,7 @@ images = ["/diagrams/Main/Mesh.png"]
 
 <figure>
 <a href="/diagrams/Main/Mesh.png">
-<img src="/diagrams/Main/Mesh.png" alt="Mesh" loading="lazy" width="1508" height="744" style="width:100%"/>
+<img src="/diagrams/Main/Mesh.svg" alt="Mesh" loading="lazy" width="804" height="436" style="width:100%"/>
 </a>
 </figure>
 
@@ -118,7 +118,7 @@ The connected *nodes* of a *Mesh* may be:
 
 <figure>
 <a href="/diagrams/Variants/4/P2P.png">
-<img src="/diagrams/Variants/4/P2P.png" alt="P2P" loading="lazy" width="1508" height="722" style="width:100%"/>
+<img src="/diagrams/Variants/4/P2P.svg" alt="P2P" loading="lazy" width="802" height="403" style="width:100%"/>
 </a>
 </figure>
 
@@ -130,7 +130,7 @@ Examples: torrent, onion routing \(Tor\), blockchain\.
 
 <figure>
 <a href="/diagrams/Variants/4/Leaf-Spine.png">
-<img src="/diagrams/Variants/4/Leaf-Spine.png" alt="Leaf-Spine" loading="lazy" width="1136" height="692" style="width:81%"/>
+<img src="/diagrams/Variants/4/Leaf-Spine.svg" alt="Leaf-Spine" loading="lazy" width="603" height="361" style="width:81%"/>
 </a>
 </figure>
 
@@ -140,7 +140,7 @@ This [datacenter network architecture](https://www.geeksforgeeks.org/spine-leaf-
 
 <figure>
 <a href="/diagrams/Variants/4/Actors.png">
-<img src="/diagrams/Variants/4/Actors.png" alt="Actors" loading="lazy" width="1622" height="591" style="width:100%"/>
+<img src="/diagrams/Variants/4/Actors.svg" alt="Actors" loading="lazy" width="862" height="304" style="width:100%"/>
 </a>
 </figure>
 
@@ -150,7 +150,7 @@ A system of *Actors* may be classified as a *fully connected Mesh* with the acto
 
 <figure>
 <a href="/diagrams/Variants/4/Service%20Mesh.png">
-<img src="/diagrams/Variants/4/Service%20Mesh.png" alt="Service Mesh" loading="lazy" width="1556" height="1029" style="width:100%"/>
+<img src="/diagrams/Variants/4/Service%20Mesh.svg" alt="Service Mesh" loading="lazy" width="822" height="549" style="width:100%"/>
 </a>
 </figure>
 
@@ -171,7 +171,7 @@ Ready\-to\-use *Service Mesh* frameworks are popular with the *Microservices* ar
 
 <figure>
 <a href="/diagrams/Variants/4/Space-Based%20Architecture.png">
-<img src="/diagrams/Variants/4/Space-Based%20Architecture.png" alt="Space-Based Architecture" loading="lazy" width="1386" height="915" style="width:100%"/>
+<img src="/diagrams/Variants/4/Space-Based%20Architecture.svg" alt="Space-Based Architecture" loading="lazy" width="743" height="483" style="width:100%"/>
 </a>
 </figure>
 

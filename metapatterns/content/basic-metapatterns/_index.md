@@ -15,7 +15,7 @@ Basic metapatterns are both common stand\-alone architectures and building block
 
 <figure>
 <a href="/diagrams/Contents/Monolith.png">
-<img src="/diagrams/Contents/Monolith.png" alt="Monolith" loading="lazy" width="1881" height="480" style="width:100%"/>
+<img src="/diagrams/Contents/Monolith.svg" alt="Monolith" loading="lazy" width="1003" height="243" style="width:100%"/>
 </a>
 </figure>
 
@@ -27,7 +27,7 @@ Basic metapatterns are both common stand\-alone architectures and building block
 
 <figure>
 <a href="/diagrams/Contents/Shards.png">
-<img src="/diagrams/Contents/Shards.png" alt="Shards" loading="lazy" width="1461" height="489" style="width:100%"/>
+<img src="/diagrams/Contents/Shards.svg" alt="Shards" loading="lazy" width="783" height="243" style="width:100%"/>
 </a>
 </figure>
 
@@ -39,7 +39,7 @@ Basic metapatterns are both common stand\-alone architectures and building block
 
 <figure>
 <a href="/diagrams/Contents/Layers.png">
-<img src="/diagrams/Contents/Layers.png" alt="Layers" loading="lazy" width="1448" height="486" style="width:100%"/>
+<img src="/diagrams/Contents/Layers.svg" alt="Layers" loading="lazy" width="783" height="243" style="width:100%"/>
 </a>
 </figure>
 
@@ -51,7 +51,7 @@ Basic metapatterns are both common stand\-alone architectures and building block
 
 <figure>
 <a href="/diagrams/Contents/Services.png">
-<img src="/diagrams/Contents/Services.png" alt="Services" loading="lazy" width="1763" height="489" style="width:93%"/>
+<img src="/diagrams/Contents/Services.svg" alt="Services" loading="lazy" width="943" height="246" style="width:93%"/>
 </a>
 </figure>
 
@@ -63,7 +63,7 @@ Basic metapatterns are both common stand\-alone architectures and building block
 
 <figure>
 <a href="/diagrams/Contents/Pipeline.png">
-<img src="/diagrams/Contents/Pipeline.png" alt="Pipeline" loading="lazy" width="1873" height="411" style="width:100%"/>
+<img src="/diagrams/Contents/Pipeline.svg" alt="Pipeline" loading="lazy" width="1003" height="203" style="width:100%"/>
 </a>
 </figure>
 

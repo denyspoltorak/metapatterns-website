@@ -2,7 +2,7 @@
 weight = 6
 title = "Monolith"
 description = "A Monolith is a cohesive system which keeps all of its business logic, generic code and data together. This architecture fits short-lived tiny projects."
-images = ["/diagrams/Main/Monolith.png"]
+images = ["/diagrams/Main/Monolith.svg"]
 [sitemap]
   priority = 0.8
 +++
@@ -13,7 +13,7 @@ Let’s take a look at the simplest possible [metapattern]({{< relref "../introd
 
 <figure>
 <a href="/diagrams/Main/Monolith.png">
-<img src="/diagrams/Main/Monolith.png" alt="Monolith" loading="lazy" width="1798" height="819" style="width:100%"/>
+<img src="/diagrams/Main/Monolith.svg" alt="Monolith" loading="lazy" width="942" height="474" style="width:100%"/>
 </a>
 </figure>
 
@@ -99,7 +99,7 @@ Even though a *Monolith* is a single module, meaning that there are no dependenc
 
 <figure>
 <a href="/diagrams/Relations/Monolith.png">
-<img src="/diagrams/Relations/Monolith.png" alt="Monolith" loading="lazy" width="1649" height="1619" style="width:100%"/>
+<img src="/diagrams/Relations/Monolith.svg" alt="Monolith" loading="lazy" width="1623" height="1620" style="width:100%"/>
 </a>
 </figure>
 
@@ -116,7 +116,7 @@ Even though a *Monolith* is a single module, meaning that there are no dependenc
 
 <figure>
 <a href="/diagrams/Variants/1/MonolithAsUnzoomed.png">
-<img src="/diagrams/Variants/1/MonolithAsUnzoomed.png" alt="MonolithAsUnzoomed" loading="lazy" width="2833" height="911" style="width:100%"/>
+<img src="/diagrams/Variants/1/MonolithAsUnzoomed.svg" alt="MonolithAsUnzoomed" loading="lazy" width="1523" height="466" style="width:100%"/>
 </a>
 </figure>
 
@@ -128,7 +128,7 @@ As we aspire to build a unified classification for both distributed and local sy
 
 <figure>
 <a href="/diagrams/Variants/1/True%20Monolith.png">
-<img src="/diagrams/Variants/1/True%20Monolith.png" alt="True Monolith" loading="lazy" width="1468" height="486" style="width:83%"/>
+<img src="/diagrams/Variants/1/True%20Monolith.svg" alt="True Monolith" loading="lazy" width="783" height="243" style="width:83%"/>
 </a>
 </figure>
 
@@ -138,7 +138,7 @@ A true *Monolith* features [no clear internal structure](http://laputan.org/mud/
 
 <figure>
 <a href="/diagrams/Variants/1/Layered%20Monolith.png">
-<img src="/diagrams/Variants/1/Layered%20Monolith.png" alt="Layered Monolith" loading="lazy" width="1448" height="489" style="width:81%"/>
+<img src="/diagrams/Variants/1/Layered%20Monolith.svg" alt="Layered Monolith" loading="lazy" width="783" height="243" style="width:81%"/>
 </a>
 </figure>
 
@@ -148,7 +148,7 @@ When they say [*Layered Monolith*]({{< relref "../basic-metapatterns/layers.md#s
 
 <figure>
 <a href="/diagrams/Variants/1/Modular%20Monolith.png">
-<img src="/diagrams/Variants/1/Modular%20Monolith.png" alt="Modular Monolith" loading="lazy" width="1658" height="411" style="width:88%"/>
+<img src="/diagrams/Variants/1/Modular%20Monolith.svg" alt="Modular Monolith" loading="lazy" width="903" height="204" style="width:88%"/>
 </a>
 </figure>
 
@@ -158,7 +158,7 @@ A [*Modular Monolith*]({{< relref "../basic-metapatterns/services.md#asynchronou
 
 <figure>
 <a href="/diagrams/Variants/1/Hexagonal%20Monolith.png">
-<img src="/diagrams/Variants/1/Hexagonal%20Monolith.png" alt="Hexagonal Monolith" loading="lazy" width="1680" height="709" style="width:91%"/>
+<img src="/diagrams/Variants/1/Hexagonal%20Monolith.svg" alt="Hexagonal Monolith" loading="lazy" width="903" height="364" style="width:91%"/>
 </a>
 </figure>
 
@@ -172,7 +172,7 @@ Any software module reacts to incoming events or data and produces outgoing even
 
 <figure>
 <a href="/diagrams/Variants/1/Subtypes%20of%20Monolith.png">
-<img src="/diagrams/Variants/1/Subtypes%20of%20Monolith.png" alt="Subtypes of Monolith" loading="lazy" width="1643" height="716" style="width:100%"/>
+<img src="/diagrams/Variants/1/Subtypes%20of%20Monolith.svg" alt="Subtypes of Monolith" loading="lazy" width="848" height="366" style="width:100%"/>
 </a>
 </figure>
 
@@ -180,7 +180,7 @@ Any software module reacts to incoming events or data and produces outgoing even
 
 <figure>
 <a href="/diagrams/Variants/1/Reactor%20-%20Single%20Thread.png">
-<img src="/diagrams/Variants/1/Reactor%20-%20Single%20Thread.png" alt="Reactor - Single Thread" loading="lazy" width="1583" height="778" style="width:100%"/>
+<img src="/diagrams/Variants/1/Reactor%20-%20Single%20Thread.svg" alt="Reactor - Single Thread" loading="lazy" width="862" height="442" style="width:100%"/>
 </a>
 </figure>
 
@@ -192,7 +192,7 @@ That makes sense when the module owns and provides access to a hardware componen
 
 <figure>
 <a href="/diagrams/Variants/1/Reactor%20-%20Multiple%20Threads.png">
-<img src="/diagrams/Variants/1/Reactor%20-%20Multiple%20Threads.png" alt="Reactor - Multiple Threads" loading="lazy" width="1438" height="690" style="width:100%"/>
+<img src="/diagrams/Variants/1/Reactor%20-%20Multiple%20Threads.svg" alt="Reactor - Multiple Threads" loading="lazy" width="781" height="382" style="width:100%"/>
 </a>
 </figure>
 
@@ -204,7 +204,7 @@ This is the default simple & stupid implementation of backend services\. Its pit
 
 <figure>
 <a href="/diagrams/Variants/1/Proactor.png">
-<img src="/diagrams/Variants/1/Proactor.png" alt="Proactor" loading="lazy" width="1457" height="690" style="width:100%"/>
+<img src="/diagrams/Variants/1/Proactor.svg" alt="Proactor" loading="lazy" width="782" height="382" style="width:100%"/>
 </a>
 </figure>
 
@@ -216,7 +216,7 @@ This approach is good for real\-time systems where thread synchronization is lar
 
 <figure>
 <a href="/diagrams/Variants/1/Half-Sync%20Half-Async.png">
-<img src="/diagrams/Variants/1/Half-Sync%20Half-Async.png" alt="Half-Sync Half-Async" loading="lazy" width="1483" height="763" style="width:100%"/>
+<img src="/diagrams/Variants/1/Half-Sync%20Half-Async.svg" alt="Half-Sync Half-Async" loading="lazy" width="785" height="423" style="width:100%"/>
 </a>
 </figure>
 
@@ -236,7 +236,7 @@ Moreover, people [often call]({{< relref "../analytics/ambiguous-patterns.md#rea
 
 <figure>
 <a href="/diagrams/Variants/1/Reactor%20with%20Extractors.png">
-<img src="/diagrams/Variants/1/Reactor%20with%20Extractors.png" alt="Reactor with Extractors" loading="lazy" width="1434" height="1080" style="width:100%"/>
+<img src="/diagrams/Variants/1/Reactor%20with%20Extractors.svg" alt="Reactor with Extractors" loading="lazy" width="783" height="583" style="width:100%"/>
 </a>
 </figure>
 
@@ -273,7 +273,7 @@ One of the main drawbacks of monolithic architecture is its lack of scalability 
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Mesh%20of%20Shards.png">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Mesh%20of%20Shards.png" alt="Monolith to Mesh of Shards" loading="lazy" width="2074" height="679" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Mesh%20of%20Shards.svg" alt="Monolith to Mesh of Shards" loading="lazy" width="1103" height="343" style="width:100%"/>
 </a>
 </figure>
 
@@ -282,7 +282,7 @@ One of the main drawbacks of monolithic architecture is its lack of scalability 
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Isolated%20Shards%20with%20Load%20Balancer.png">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Isolated%20Shards%20with%20Load%20Balancer.png" alt="Monolith to Isolated Shards with Load Balancer" loading="lazy" width="2025" height="827" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Isolated%20Shards%20with%20Load%20Balancer.svg" alt="Monolith to Isolated Shards with Load Balancer" loading="lazy" width="1073" height="423" style="width:100%"/>
 </a>
 </figure>
 
@@ -291,7 +291,7 @@ One of the main drawbacks of monolithic architecture is its lack of scalability 
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Stateless%20Shards%20with%20Shared%20DB.png">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Stateless%20Shards%20with%20Shared%20DB.png" alt="Monolith to Stateless Shards with Shared DB" loading="lazy" width="2048" height="819" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Stateless%20Shards%20with%20Shared%20DB.svg" alt="Monolith to Stateless Shards with Shared DB" loading="lazy" width="1083" height="423" style="width:100%"/>
 </a>
 </figure>
 
@@ -300,7 +300,7 @@ One of the main drawbacks of monolithic architecture is its lack of scalability 
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Instance%20per%20Client.png">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Instance%20per%20Client.png" alt="Monolith to Instance per Client" loading="lazy" width="2083" height="679" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Instance%20per%20Client.svg" alt="Monolith to Instance per Client" loading="lazy" width="1103" height="343" style="width:100%"/>
 </a>
 </figure>
 
@@ -313,7 +313,7 @@ Another drawback of *Monolith* is its… er… monolithism\. The entire applicat
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers.png">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers.png" alt="Monolith to Layers" loading="lazy" width="2038" height="564" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers.svg" alt="Monolith to Layers" loading="lazy" width="1087" height="285" style="width:100%"/>
 </a>
 </figure>
 
@@ -322,7 +322,7 @@ Another drawback of *Monolith* is its… er… monolithism\. The entire applicat
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20add%20Database.png">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20add%20Database.png" alt="Monolith add Database" loading="lazy" width="2078" height="486" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20add%20Database.svg" alt="Monolith add Database" loading="lazy" width="1107" height="244" style="width:100%"/>
 </a>
 </figure>
 
@@ -331,7 +331,7 @@ Another drawback of *Monolith* is its… er… monolithism\. The entire applicat
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20add%20Proxy.png">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20add%20Proxy.png" alt="Monolith add Proxy" loading="lazy" width="2038" height="709" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20add%20Proxy.svg" alt="Monolith add Proxy" loading="lazy" width="1087" height="361" style="width:100%"/>
 </a>
 </figure>
 
@@ -340,7 +340,7 @@ Another drawback of *Monolith* is its… er… monolithism\. The entire applicat
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20add%20Orchestrator.png">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20add%20Orchestrator.png" alt="Monolith add Orchestrator" loading="lazy" width="1973" height="604" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20add%20Orchestrator.svg" alt="Monolith add Orchestrator" loading="lazy" width="1047" height="323" style="width:100%"/>
 </a>
 </figure>
 
@@ -353,7 +353,7 @@ The final major drawback of *Monolith* is the cohesiveness of its code\. The rap
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Services.png">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Services.png" alt="Monolith to Services" loading="lazy" width="2166" height="489" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Services.svg" alt="Monolith to Services" loading="lazy" width="1143" height="251" style="width:100%"/>
 </a>
 </figure>
 
@@ -362,7 +362,7 @@ The final major drawback of *Monolith* is the cohesiveness of its code\. The rap
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20Split%20Service.png">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20Split%20Service.png" alt="Monolith Split Service" loading="lazy" width="2113" height="489" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20Split%20Service.svg" alt="Monolith Split Service" loading="lazy" width="1123" height="251" style="width:100%"/>
 </a>
 </figure>
 
@@ -371,7 +371,7 @@ The final major drawback of *Monolith* is the cohesiveness of its code\. The rap
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Pipeline.png">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Pipeline.png" alt="Monolith to Pipeline" loading="lazy" width="2158" height="480" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Pipeline.svg" alt="Monolith to Pipeline" loading="lazy" width="1147" height="247" style="width:100%"/>
 </a>
 </figure>
 
@@ -384,7 +384,7 @@ The last group of evolutions does not really change the monolithic nature of the
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Plugins.png">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Plugins.png" alt="Monolith to Plugins" loading="lazy" width="1903" height="718" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Plugins.svg" alt="Monolith to Plugins" loading="lazy" width="1003" height="363" style="width:100%"/>
 </a>
 </figure>
 
@@ -393,7 +393,7 @@ The last group of evolutions does not really change the monolithic nature of the
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Hexagonal.png">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Hexagonal.png" alt="Monolith to Hexagonal" loading="lazy" width="1886" height="634" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Hexagonal.svg" alt="Monolith to Hexagonal" loading="lazy" width="1007" height="323" style="width:100%"/>
 </a>
 </figure>
 
@@ -402,7 +402,7 @@ The last group of evolutions does not really change the monolithic nature of the
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Interpreter.png">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Interpreter.png" alt="Monolith to Interpreter" loading="lazy" width="2044" height="630" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Interpreter.svg" alt="Monolith to Interpreter" loading="lazy" width="1087" height="323" style="width:100%"/>
 </a>
 </figure>
 

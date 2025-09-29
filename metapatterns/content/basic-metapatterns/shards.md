@@ -2,7 +2,7 @@
 weight = 7
 title = "Shards"
 description = "Shards are multiple instances of a subsystem or component. They can be stateful or stateless. Stateful shards with identical data are called replicas."
-images = ["/diagrams/Main/Shards.png"]
+images = ["/diagrams/Main/Shards.svg"]
 [sitemap]
   priority = 0.8
 +++
@@ -11,7 +11,7 @@ images = ["/diagrams/Main/Shards.png"]
 
 <figure>
 <a href="/diagrams/Main/Shards.png">
-<img src="/diagrams/Main/Shards.png" alt="Shards" loading="lazy" width="1789" height="823" style="width:100%"/>
+<img src="/diagrams/Main/Shards.svg" alt="Shards" loading="lazy" width="942" height="474" style="width:100%"/>
 </a>
 </figure>
 
@@ -61,7 +61,7 @@ A *shard* retains the performance of the original subsystem \(a [*Monolith*]({{<
 
 <figure>
 <a href="/diagrams/Performance/Shards.png">
-<img src="/diagrams/Performance/Shards.png" alt="Shards" loading="lazy" width="2372" height="902" style="width:100%"/>
+<img src="/diagrams/Performance/Shards.svg" alt="Shards" loading="lazy" width="1273" height="483" style="width:100%"/>
 </a>
 </figure>
 
@@ -93,7 +93,7 @@ A *sharded* system features properties of a pattern it replicates \(a single\-co
 
 <figure>
 <a href="/diagrams/Relations/Shards.png">
-<img src="/diagrams/Relations/Shards.png" alt="Shards" loading="lazy" width="2578" height="819" style="width:100%"/>
+<img src="/diagrams/Relations/Shards.svg" alt="Shards" loading="lazy" width="1383" height="428" style="width:100%"/>
 </a>
 </figure>
 
@@ -149,7 +149,7 @@ There are several subtypes of sharding that differ in the way they handle state:
 
 <figure>
 <a href="/diagrams/Variants/1/Shards%20-%20Sharding.png">
-<img src="/diagrams/Variants/1/Shards%20-%20Sharding.png" alt="Shards - Sharding" loading="lazy" width="2064" height="752" style="width:100%"/>
+<img src="/diagrams/Variants/1/Shards%20-%20Sharding.svg" alt="Shards - Sharding" loading="lazy" width="1104" height="383" style="width:100%"/>
 </a>
 </figure>
 
@@ -176,7 +176,7 @@ It usually takes a stand\-alone [*Sharding Proxy*]({{< relref "../extension-meta
 
 <figure>
 <a href="/diagrams/Variants/1/Shards%20-%20Replica.png">
-<img src="/diagrams/Variants/1/Shards%20-%20Replica.png" alt="Shards - Replica" loading="lazy" width="2064" height="748" style="width:100%"/>
+<img src="/diagrams/Variants/1/Shards%20-%20Replica.svg" alt="Shards - Replica" loading="lazy" width="1097" height="383" style="width:100%"/>
 </a>
 </figure>
 
@@ -194,7 +194,7 @@ Finally, you can mix sharding and replication to make sure that the data of each
 
 <figure>
 <a href="/diagrams/Variants/1/Shards%20-%20Pool.png">
-<img src="/diagrams/Variants/1/Shards%20-%20Pool.png" alt="Shards - Pool" loading="lazy" width="1834" height="758" style="width:100%"/>
+<img src="/diagrams/Variants/1/Shards%20-%20Pool.svg" alt="Shards - Pool" loading="lazy" width="966" height="404" style="width:100%"/>
 </a>
 </figure>
 
@@ -208,7 +208,7 @@ Many cloud services implement dynamic pools, the number of instances growing and
 
 <figure>
 <a href="/diagrams/Variants/1/Shards%20-%20Create%20on%20Demand.png">
-<img src="/diagrams/Variants/1/Shards%20-%20Create%20on%20Demand.png" alt="Shards - Create on Demand" loading="lazy" width="1864" height="833" style="width:100%"/>
+<img src="/diagrams/Variants/1/Shards%20-%20Create%20on%20Demand.svg" alt="Shards - Create on Demand" loading="lazy" width="993" height="423" style="width:100%"/>
 </a>
 </figure>
 
@@ -231,7 +231,7 @@ When *Shards* are applied to a single component, which is a [*Monolith*]({{< rel
 
 <figure>
 <a href="/diagrams/Evolutions/Shards/Shards%20-%20General.png">
-<img src="/diagrams/Evolutions/Shards/Shards%20-%20General.png" alt="Shards - General" loading="lazy" width="2323" height="1633" style="width:100%"/>
+<img src="/diagrams/Evolutions/Shards/Shards%20-%20General.svg" alt="Shards - General" loading="lazy" width="1242" height="884" style="width:100%"/>
 </a>
 </figure>
 
@@ -246,7 +246,7 @@ The issue peculiar to *Shards* is that of coordinating deployed instances, espec
 
 <figure>
 <a href="/diagrams/Evolutions/Shards/Shards%20to%20Shared%20DB.png">
-<img src="/diagrams/Evolutions/Shards/Shards%20to%20Shared%20DB.png" alt="Shards to Shared DB" loading="lazy" width="1986" height="634" style="width:100%"/>
+<img src="/diagrams/Evolutions/Shards/Shards%20to%20Shared%20DB.svg" alt="Shards to Shared DB" loading="lazy" width="1055" height="324" style="width:100%"/>
 </a>
 </figure>
 
@@ -255,7 +255,7 @@ The issue peculiar to *Shards* is that of coordinating deployed instances, espec
 
 <figure>
 <a href="/diagrams/Evolutions/Shards/Shards%20to%20Space-Based%20Architecture.png">
-<img src="/diagrams/Evolutions/Shards/Shards%20to%20Space-Based%20Architecture.png" alt="Shards to Space-Based Architecture" loading="lazy" width="2078" height="534" style="width:100%"/>
+<img src="/diagrams/Evolutions/Shards/Shards%20to%20Space-Based%20Architecture.svg" alt="Shards to Space-Based Architecture" loading="lazy" width="1107" height="264" style="width:100%"/>
 </a>
 </figure>
 
@@ -264,7 +264,7 @@ The issue peculiar to *Shards* is that of coordinating deployed instances, espec
 
 <figure>
 <a href="/diagrams/Evolutions/Shards/Shards%20add%20Shared%20DB.png">
-<img src="/diagrams/Evolutions/Shards/Shards%20add%20Shared%20DB.png" alt="Shards add Shared DB" loading="lazy" width="1969" height="489" style="width:100%"/>
+<img src="/diagrams/Evolutions/Shards/Shards%20add%20Shared%20DB.svg" alt="Shards add Shared DB" loading="lazy" width="1041" height="248" style="width:100%"/>
 </a>
 </figure>
 
@@ -273,7 +273,7 @@ The issue peculiar to *Shards* is that of coordinating deployed instances, espec
 
 <figure>
 <a href="/diagrams/Evolutions/Shards/Shards%20split%20Shared%20Service.png">
-<img src="/diagrams/Evolutions/Shards/Shards%20split%20Shared%20Service.png" alt="Shards split Shared Service" loading="lazy" width="2048" height="480" style="width:100%"/>
+<img src="/diagrams/Evolutions/Shards/Shards%20split%20Shared%20Service.svg" alt="Shards split Shared Service" loading="lazy" width="1081" height="247" style="width:100%"/>
 </a>
 </figure>
 
@@ -287,7 +287,7 @@ Other cases are better solved by extracting the logic that manipulates multiple 
 
 <figure>
 <a href="/diagrams/Evolutions/Shards/Shards%20add%20Middleware.png">
-<img src="/diagrams/Evolutions/Shards/Shards%20add%20Middleware.png" alt="Shards add Middleware" loading="lazy" width="2004" height="634" style="width:100%"/>
+<img src="/diagrams/Evolutions/Shards/Shards%20add%20Middleware.svg" alt="Shards add Middleware" loading="lazy" width="1065" height="324" style="width:100%"/>
 </a>
 </figure>
 
@@ -296,7 +296,7 @@ Other cases are better solved by extracting the logic that manipulates multiple 
 
 <figure>
 <a href="/diagrams/Evolutions/Shards/Shards%20add%20Load%20Balancer.png">
-<img src="/diagrams/Evolutions/Shards/Shards%20add%20Load%20Balancer.png" alt="Shards add Load Balancer" loading="lazy" width="1920" height="823" style="width:100%"/>
+<img src="/diagrams/Evolutions/Shards/Shards%20add%20Load%20Balancer.svg" alt="Shards add Load Balancer" loading="lazy" width="1026" height="423" style="width:100%"/>
 </a>
 </figure>
 
@@ -305,7 +305,7 @@ Other cases are better solved by extracting the logic that manipulates multiple 
 
 <figure>
 <a href="/diagrams/Evolutions/Shards/Shards%20use%20Orchestrator.png">
-<img src="/diagrams/Evolutions/Shards/Shards%20use%20Orchestrator.png" alt="Shards use Orchestrator" loading="lazy" width="1959" height="489" style="width:100%"/>
+<img src="/diagrams/Evolutions/Shards/Shards%20use%20Orchestrator.svg" alt="Shards use Orchestrator" loading="lazy" width="1045" height="244" style="width:100%"/>
 </a>
 </figure>
 

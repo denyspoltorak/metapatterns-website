@@ -2,7 +2,7 @@
 weight = 4
 title = "Arranging communication"
 description = "Components can be integrated through orchestration, choreography, or shared data. These approaches emerge at every level, from code to system design."
-images = ["/diagrams/Communication/Monolith%20to%20Services.png"]
+images = ["/diagrams/Communication/Monolith%20to%20Services.svg"]
 bookCollapseSection = true
 [sitemap]
   priority = 0.2
@@ -14,7 +14,7 @@ As a project grows, it tends to become subdivided into services, modules, or wha
 
 <figure>
 <a href="/diagrams/Communication/Monolith%20to%20Services.png">
-<img src="/diagrams/Communication/Monolith%20to%20Services.png" alt="Monolith to Services" loading="lazy" width="2031" height="459" style="width:100%"/>
+<img src="/diagrams/Communication/Monolith%20to%20Services.svg" alt="Monolith to Services" loading="lazy" width="1062" height="227" style="width:100%"/>
 </a>
 </figure>
 

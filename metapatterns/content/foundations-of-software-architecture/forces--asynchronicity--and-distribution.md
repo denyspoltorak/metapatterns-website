@@ -41,7 +41,7 @@ Remember how old Windows used to freeze on formatting a floppy or when it encoun
 
 <figure>
 <a href="/diagrams/Intro/Floppy-Sync.png">
-<img src="/diagrams/Intro/Floppy-Sync.png" alt="Floppy-Sync" loading="lazy" width="1110" height="1151" style="width:80%"/>
+<img src="/diagrams/Intro/Floppy-Sync.svg" alt="Floppy-Sync" loading="lazy" width="625" height="606" style="width:80%"/>
 </a>
 </figure>
 
@@ -53,7 +53,7 @@ If the modules cannot communicate directly \(call each other and wait for the re
 
 <figure>
 <a href="/diagrams/Intro/Floppy-Async.png">
-<img src="/diagrams/Intro/Floppy-Async.png" alt="Floppy-Async" loading="lazy" width="1391" height="1104" style="width:100%"/>
+<img src="/diagrams/Intro/Floppy-Async.svg" alt="Floppy-Async" loading="lazy" width="745" height="602" style="width:100%"/>
 </a>
 </figure>
 
@@ -72,7 +72,7 @@ This common division makes quite a lot of sense:
 
 <figure>
 <a href="/diagrams/Intro/3-Tier.png">
-<img src="/diagrams/Intro/3-Tier.png" alt="3-Tier" loading="lazy" width="947" height="823" style="width:72%"/>
+<img src="/diagrams/Intro/3-Tier.svg" alt="3-Tier" loading="lazy" width="521" height="423" style="width:72%"/>
 </a>
 </figure>
 
@@ -97,7 +97,7 @@ Here reliability conflicts with accuracy: a human operator makes an accurate est
 
 <figure>
 <a href="/diagrams/Intro/Field%20Gateway.png">
-<img src="/diagrams/Intro/Field%20Gateway.png" alt="Field Gateway" loading="lazy" width="1969" height="836" style="width:100%"/>
+<img src="/diagrams/Intro/Field%20Gateway.svg" alt="Field Gateway" loading="lazy" width="1060" height="453" style="width:100%"/>
 </a>
 </figure>
 

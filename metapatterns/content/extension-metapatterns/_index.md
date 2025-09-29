@@ -15,7 +15,7 @@ These patterns extend *Services*, *Shards*, or even a *Monolith* with a layer th
 
 <figure>
 <a href="/diagrams/Contents/Middleware.png">
-<img src="/diagrams/Contents/Middleware.png" alt="Middleware" loading="lazy" width="1868" height="519" style="width:100%"/>
+<img src="/diagrams/Contents/Middleware.svg" alt="Middleware" loading="lazy" width="1003" height="263" style="width:100%"/>
 </a>
 </figure>
 
@@ -27,7 +27,7 @@ These patterns extend *Services*, *Shards*, or even a *Monolith* with a layer th
 
 <figure>
 <a href="/diagrams/Contents/Shared%20Repository.png">
-<img src="/diagrams/Contents/Shared%20Repository.png" alt="Shared Repository" loading="lazy" width="1806" height="486" style="width:100%"/>
+<img src="/diagrams/Contents/Shared%20Repository.svg" alt="Shared Repository" loading="lazy" width="963" height="243" style="width:100%"/>
 </a>
 </figure>
 
@@ -39,7 +39,7 @@ A *Shared Repository* stores the system’s data, maintains its integrity throug
 
 <figure>
 <a href="/diagrams/Contents/Proxy.png">
-<img src="/diagrams/Contents/Proxy.png" alt="Proxy" loading="lazy" width="1894" height="713" style="width:100%"/>
+<img src="/diagrams/Contents/Proxy.svg" alt="Proxy" loading="lazy" width="1023" height="363" style="width:100%"/>
 </a>
 </figure>
 
@@ -51,7 +51,7 @@ A *Proxy* mediates between a system and its clients, transparently taking care o
 
 <figure>
 <a href="/diagrams/Contents/Orchestrator.png">
-<img src="/diagrams/Contents/Orchestrator.png" alt="Orchestrator" loading="lazy" width="1894" height="525" style="width:100%"/>
+<img src="/diagrams/Contents/Orchestrator.svg" alt="Orchestrator" loading="lazy" width="1023" height="263" style="width:100%"/>
 </a>
 </figure>
 

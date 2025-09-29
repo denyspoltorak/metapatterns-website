@@ -2,7 +2,7 @@
 weight = 3
 title = "Evolutions of a Monolith that make Services"
 description = "A Monolith can be divided into modules, Services, or a Pipeline to support development by multiple teams, improve its codebase, and employ more hardware."
-images = ["/diagrams/Evolutions/Monolith/Monolith_%20Services%20and%20Pipeline.png"]
+images = ["/diagrams/Evolutions/Monolith/Monolith_%20Services%20and%20Pipeline.svg"]
 [sitemap]
   priority = 0.3
 +++
@@ -19,7 +19,7 @@ The final major drawback of [*Monolith*]({{< relref "../../basic-metapatterns/mo
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith_%20Services%20and%20Pipeline.png">
-<img src="/diagrams/Evolutions/Monolith/Monolith_%20Services%20and%20Pipeline.png" alt="Monolith: Services and Pipeline" loading="lazy" width="2349" height="568" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith_%20Services%20and%20Pipeline.svg" alt="Monolith: Services and Pipeline" loading="lazy" width="1263" height="323" style="width:100%"/>
 </a>
 </figure>
 
@@ -27,7 +27,7 @@ The final major drawback of [*Monolith*]({{< relref "../../basic-metapatterns/mo
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Services.png">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Services.png" alt="Monolith to Services" loading="lazy" width="2166" height="489" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Services.svg" alt="Monolith to Services" loading="lazy" width="1143" height="251" style="width:100%"/>
 </a>
 </figure>
 
@@ -62,7 +62,7 @@ Splitting a *Monolith* into *Services* by subdomain [is risky in the early stage
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20Split%20Service.png">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20Split%20Service.png" alt="Monolith Split Service" loading="lazy" width="2113" height="489" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20Split%20Service.svg" alt="Monolith Split Service" loading="lazy" width="1123" height="251" style="width:100%"/>
 </a>
 </figure>
 
@@ -102,7 +102,7 @@ If you are not adding a new feature but need to change an old one – use the ch
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Pipeline.png">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Pipeline.png" alt="Monolith to Pipeline" loading="lazy" width="2158" height="480" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Pipeline.svg" alt="Monolith to Pipeline" loading="lazy" width="1147" height="247" style="width:100%"/>
 </a>
 </figure>
 
@@ -145,7 +145,7 @@ Systems of [*Services*]({{< relref "../../basic-metapatterns/services.md" >}}) o
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Services%20-%20Further%201.png">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Services%20-%20Further%201.png" alt="Monolith to Services - Further 1" loading="lazy" width="2893" height="1560" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Services%20-%20Further%201.svg" alt="Monolith to Services - Further 1" loading="lazy" width="1543" height="844" style="width:100%"/>
 </a>
 </figure>
 
@@ -159,7 +159,7 @@ Each service, being a smaller *Monolith*, may evolve on its own\. Most of the ev
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Services%20-%20Further%202.png">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Services%20-%20Further%202.png" alt="Monolith to Services - Further 2" loading="lazy" width="2477" height="744" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Services%20-%20Further%202.svg" alt="Monolith to Services - Further 2" loading="lazy" width="1343" height="412" style="width:100%"/>
 </a>
 </figure>
 

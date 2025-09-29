@@ -19,7 +19,7 @@ The main drawback \(and benefit\) of [*Layers*]({{< relref "../../basic-metapatt
 
 <figure>
 <a href="/diagrams/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.png">
-<img src="/diagrams/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.png" alt="Layers Split Domain to Services" loading="lazy" width="2048" height="486" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.svg" alt="Layers Split Domain to Services" loading="lazy" width="1083" height="243" style="width:100%"/>
 </a>
 </figure>
 
@@ -57,7 +57,7 @@ It is very common for a system’s domain to consist of weakly interacting *boun
 
 <figure>
 <a href="/diagrams/Evolutions/Layers/Layers%20Split%20to%20Event-Driven%20Architecture.png">
-<img src="/diagrams/Evolutions/Layers/Layers%20Split%20to%20Event-Driven%20Architecture.png" alt="Layers Split to Event-Driven Architecture" loading="lazy" width="2192" height="529" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20Split%20to%20Event-Driven%20Architecture.svg" alt="Layers Split to Event-Driven Architecture" loading="lazy" width="1166" height="264" style="width:100%"/>
 </a>
 </figure>
 
@@ -98,7 +98,7 @@ If your system has a well\-defined workflow for processing every kind of input r
 
 <figure>
 <a href="/diagrams/Evolutions/Layers/Layers%20to%20Hierarchy.png">
-<img src="/diagrams/Evolutions/Layers/Layers%20to%20Hierarchy.png" alt="Layers to Hierarchy" loading="lazy" width="2074" height="486" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20to%20Hierarchy.svg" alt="Layers to Hierarchy" loading="lazy" width="1103" height="249" style="width:100%"/>
 </a>
 </figure>
 

@@ -2,7 +2,7 @@
 weight = 8
 title = "Layers"
 description = "A layered system is subdivided by the level of abstraction. It is common to have presentation, application, domain, and infrastructure layers."
-images = ["/diagrams/Main/Layers.png"]
+images = ["/diagrams/Main/Layers.svg"]
 [sitemap]
   priority = 0.8
 +++
@@ -11,7 +11,7 @@ images = ["/diagrams/Main/Layers.png"]
 
 <figure>
 <a href="/diagrams/Main/Layers.png">
-<img src="/diagrams/Main/Layers.png" alt="Layers" loading="lazy" width="1789" height="863" style="width:100%"/>
+<img src="/diagrams/Main/Layers.svg" alt="Layers" loading="lazy" width="942" height="494" style="width:100%"/>
 </a>
 </figure>
 
@@ -61,7 +61,7 @@ Many patterns have one or more of their layers split by subdomain, resulting in 
 
 <figure>
 <a href="/diagrams/Misc/Layers%20of%20Services.png">
-<img src="/diagrams/Misc/Layers%20of%20Services.png" alt="Layers of Services" loading="lazy" width="3060" height="849" style="width:100%"/>
+<img src="/diagrams/Misc/Layers%20of%20Services.svg" alt="Layers of Services" loading="lazy" width="1643" height="477" style="width:100%"/>
 </a>
 </figure>
 
@@ -89,7 +89,7 @@ There is a number of optimizations to skip interlayer calls:
 
 <figure>
 <a href="/diagrams/Performance/Layers-caching.png">
-<img src="/diagrams/Performance/Layers-caching.png" alt="Layers-caching" loading="lazy" width="2096" height="561" style="width:100%"/>
+<img src="/diagrams/Performance/Layers-caching.svg" alt="Layers-caching" loading="lazy" width="1123" height="303" style="width:100%"/>
 </a>
 </figure>
 
@@ -97,7 +97,7 @@ There is a number of optimizations to skip interlayer calls:
 
 <figure>
 <a href="/diagrams/Performance/Layers-aggregation.png">
-<img src="/diagrams/Performance/Layers-aggregation.png" alt="Layers-aggregation" loading="lazy" width="2126" height="564" style="width:100%"/>
+<img src="/diagrams/Performance/Layers-aggregation.svg" alt="Layers-aggregation" loading="lazy" width="1143" height="284" style="width:100%"/>
 </a>
 </figure>
 
@@ -105,7 +105,7 @@ There is a number of optimizations to skip interlayer calls:
 
 <figure>
 <a href="/diagrams/Performance/Layers-batching.png">
-<img src="/diagrams/Performance/Layers-batching.png" alt="Layers-batching" loading="lazy" width="1965" height="555" style="width:100%"/>
+<img src="/diagrams/Performance/Layers-batching.svg" alt="Layers-batching" loading="lazy" width="1063" height="283" style="width:100%"/>
 </a>
 </figure>
 
@@ -113,7 +113,7 @@ There is a number of optimizations to skip interlayer calls:
 
 <figure>
 <a href="/diagrams/Performance/Layers-injection.png">
-<img src="/diagrams/Performance/Layers-injection.png" alt="Layers-injection" loading="lazy" width="2012" height="561" style="width:100%"/>
+<img src="/diagrams/Performance/Layers-injection.svg" alt="Layers-injection" loading="lazy" width="1083" height="281" style="width:100%"/>
 </a>
 </figure>
 
@@ -131,7 +131,7 @@ There may also be an [*Adapter*]({{< relref "../extension-metapatterns/proxy.md#
 
 <figure>
 <a href="/diagrams/Dependencies/Layers-1.png">
-<img src="/diagrams/Dependencies/Layers-1.png" alt="Layers-1" loading="lazy" width="1834" height="613" style="width:89%"/>
+<img src="/diagrams/Dependencies/Layers-1.svg" alt="Layers-1" loading="lazy" width="967" height="323" style="width:89%"/>
 </a>
 </figure>
 
@@ -139,7 +139,7 @@ A layer can be *closed* \(*strict*\) or *open* \(*relaxed*\)\. A layer above a c
 
 <figure>
 <a href="/diagrams/Dependencies/Layers-2.png">
-<img src="/diagrams/Dependencies/Layers-2.png" alt="Layers-2" loading="lazy" width="2126" height="506" style="width:93%"/>
+<img src="/diagrams/Dependencies/Layers-2.svg" alt="Layers-2" loading="lazy" width="1143" height="302" style="width:93%"/>
 </a>
 </figure>
 
@@ -147,7 +147,7 @@ If you ever need to *scale* \(run multiple instances of\) a layer, you may notic
 
 <figure>
 <a href="/diagrams/Dependencies/Layers-3.png">
-<img src="/diagrams/Dependencies/Layers-3.png" alt="Layers-3" loading="lazy" width="1517" height="703" style="width:93%"/>
+<img src="/diagrams/Dependencies/Layers-3.svg" alt="Layers-3" loading="lazy" width="823" height="363" style="width:93%"/>
 </a>
 </figure>
 
@@ -172,7 +172,7 @@ If you ever need to *scale* \(run multiple instances of\) a layer, you may notic
 
 <figure>
 <a href="/diagrams/Relations/Layers.png">
-<img src="/diagrams/Relations/Layers.png" alt="Layers" loading="lazy" width="1986" height="898" style="width:100%"/>
+<img src="/diagrams/Relations/Layers.svg" alt="Layers" loading="lazy" width="1063" height="462" style="width:100%"/>
 </a>
 </figure>
 
@@ -248,7 +248,7 @@ The notion of layering seems to be so natural to our minds that most known archi
 
 <figure>
 <a href="/diagrams/Variants/1/DDD.png">
-<img src="/diagrams/Variants/1/DDD.png" alt="DDD" loading="lazy" width="1386" height="849" style="width:86%"/>
+<img src="/diagrams/Variants/1/DDD.svg" alt="DDD" loading="lazy" width="743" height="476" style="width:86%"/>
 </a>
 </figure>
 
@@ -276,7 +276,7 @@ We will often use the DDD naming convention while describing more complex archit
 
 <figure>
 <a href="/diagrams/Variants/1/Three-Tier.png">
-<img src="/diagrams/Variants/1/Three-Tier.png" alt="Three-Tier" loading="lazy" width="1412" height="709" style="width:100%"/>
+<img src="/diagrams/Variants/1/Three-Tier.svg" alt="Three-Tier" loading="lazy" width="760" height="394" style="width:100%"/>
 </a>
 </figure>
 
@@ -299,7 +299,7 @@ In this case the division into layers resolves the conflict between scalability,
 
 <figure>
 <a href="/diagrams/Variants/1/Embedded.png">
-<img src="/diagrams/Variants/1/Embedded.png" alt="Embedded" loading="lazy" width="1403" height="713" style="width:100%"/>
+<img src="/diagrams/Variants/1/Embedded.svg" alt="Embedded" loading="lazy" width="763" height="373" style="width:100%"/>
 </a>
 </figure>
 
@@ -332,7 +332,7 @@ Not all the layered architectures are equally layered\. A [*Monolith*]({{< relre
 
 <figure>
 <a href="/diagrams/Evolutions/Layers/Layers%20to%20Layers.png">
-<img src="/diagrams/Evolutions/Layers/Layers%20to%20Layers.png" alt="Layers to Layers" loading="lazy" width="1759" height="833" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20to%20Layers.svg" alt="Layers to Layers" loading="lazy" width="943" height="424" style="width:100%"/>
 </a>
 </figure>
 
@@ -343,7 +343,7 @@ It is also common to:
 
 <figure>
 <a href="/diagrams/Evolutions/Layers/Layers%20Split%20in%20Two.png">
-<img src="/diagrams/Evolutions/Layers/Layers%20Split%20in%20Two.png" alt="Layers Split in Two" loading="lazy" width="1916" height="476" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20Split%20in%20Two.svg" alt="Layers Split in Two" loading="lazy" width="1027" height="243" style="width:100%"/>
 </a>
 </figure>
 
@@ -356,7 +356,7 @@ The main drawback \(and benefit as well\) of *Layers* is that much or all of the
 
 <figure>
 <a href="/diagrams/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.png">
-<img src="/diagrams/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.png" alt="Layers Split Domain to Services" loading="lazy" width="2048" height="486" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.svg" alt="Layers Split Domain to Services" loading="lazy" width="1083" height="243" style="width:100%"/>
 </a>
 </figure>
 
@@ -365,7 +365,7 @@ The main drawback \(and benefit as well\) of *Layers* is that much or all of the
 
 <figure>
 <a href="/diagrams/Evolutions/Layers/Layers%20Split%20to%20Event-Driven%20Architecture.png">
-<img src="/diagrams/Evolutions/Layers/Layers%20Split%20to%20Event-Driven%20Architecture.png" alt="Layers Split to Event-Driven Architecture" loading="lazy" width="2192" height="529" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20Split%20to%20Event-Driven%20Architecture.svg" alt="Layers Split to Event-Driven Architecture" loading="lazy" width="1166" height="264" style="width:100%"/>
 </a>
 </figure>
 
@@ -374,7 +374,7 @@ The main drawback \(and benefit as well\) of *Layers* is that much or all of the
 
 <figure>
 <a href="/diagrams/Evolutions/Layers/Layers%20to%20Hierarchy.png">
-<img src="/diagrams/Evolutions/Layers/Layers%20to%20Hierarchy.png" alt="Layers to Hierarchy" loading="lazy" width="2074" height="486" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20to%20Hierarchy.svg" alt="Layers to Hierarchy" loading="lazy" width="1103" height="249" style="width:100%"/>
 </a>
 </figure>
 
@@ -387,7 +387,7 @@ There are several ways to improve the performance of a layered system\. One we h
 
 <figure>
 <a href="/diagrams/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.png">
-<img src="/diagrams/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.png" alt="Layers to Space-Based Architecture" loading="lazy" width="1991" height="519" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.svg" alt="Layers to Space-Based Architecture" loading="lazy" width="1051" height="264" style="width:100%"/>
 </a>
 </figure>
 
@@ -398,7 +398,7 @@ Others are new:
 
 <figure>
 <a href="/diagrams/Evolutions/Layers/Layers%20Merge.png">
-<img src="/diagrams/Evolutions/Layers/Layers%20Merge.png" alt="Layers Merge" loading="lazy" width="1916" height="486" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20Merge.svg" alt="Layers Merge" loading="lazy" width="1023" height="243" style="width:100%"/>
 </a>
 </figure>
 
@@ -407,7 +407,7 @@ Others are new:
 
 <figure>
 <a href="/diagrams/Evolutions/Layers/Layers_%20Shard.png">
-<img src="/diagrams/Evolutions/Layers/Layers_%20Shard.png" alt="Layers: Shard" loading="lazy" width="1860" height="604" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers_%20Shard.svg" alt="Layers: Shard" loading="lazy" width="983" height="305" style="width:100%"/>
 </a>
 </figure>
 
@@ -416,7 +416,7 @@ Others are new:
 
 <figure>
 <a href="/diagrams/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.png">
-<img src="/diagrams/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.png" alt="Layers to Polyglot Persistence" loading="lazy" width="1926" height="480" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.svg" alt="Layers to Polyglot Persistence" loading="lazy" width="1023" height="248" style="width:100%"/>
 </a>
 </figure>
 
@@ -431,7 +431,7 @@ The last group of evolutions to consider is about making the system more adaptab
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png" alt="Monolith to Layers - Further 2" loading="lazy" width="1834" height="849" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.svg" alt="Monolith to Layers - Further 2" loading="lazy" width="983" height="461" style="width:100%"/>
 </a>
 </figure>
 
@@ -442,7 +442,7 @@ There is one new evolution which modifies the upper \(*orchestration*\) layer:
 
 <figure>
 <a href="/diagrams/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.png">
-<img src="/diagrams/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.png" alt="Layers to Backends for Frontends" loading="lazy" width="1894" height="639" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.svg" alt="Layers to Backends for Frontends" loading="lazy" width="1003" height="323" style="width:100%"/>
 </a>
 </figure>
 

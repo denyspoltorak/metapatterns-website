@@ -2,7 +2,7 @@
 weight = 6
 title = "Layered Services"
 description = "Layered Services may orchestrate each other, rely on choreography, or make a CQRS system. The communication between services happens at different layers."
-images = ["/diagrams/Main/Layered%20Services.png"]
+images = ["/diagrams/Main/Layered%20Services.svg"]
 [sitemap]
   priority = 0.8
 +++
@@ -11,7 +11,7 @@ images = ["/diagrams/Main/Layered%20Services.png"]
 
 <figure>
 <a href="/diagrams/Main/Layered%20Services.png">
-<img src="/diagrams/Main/Layered%20Services.png" alt="Layered Services" loading="lazy" width="2126" height="938" style="width:100%"/>
+<img src="/diagrams/Main/Layered%20Services.svg" alt="Layered Services" loading="lazy" width="1122" height="534" style="width:100%"/>
 </a>
 </figure>
 
@@ -41,7 +41,7 @@ Remarkable features of *Layered Services* include:
 
 <figure>
 <a href="/diagrams/Performance/Layered%20Services%20-%20sharding.png">
-<img src="/diagrams/Performance/Layered%20Services%20-%20sharding.png" alt="Layered Services - sharding" loading="lazy" width="1881" height="814" style="width:100%"/>
+<img src="/diagrams/Performance/Layered%20Services%20-%20sharding.svg" alt="Layered Services - sharding" loading="lazy" width="1003" height="423" style="width:100%"/>
 </a>
 </figure>
 
@@ -50,7 +50,7 @@ Remarkable features of *Layered Services* include:
 
 <figure>
 <a href="/diagrams/Performance/Layered%20Services%20-%20channels.png">
-<img src="/diagrams/Performance/Layered%20Services%20-%20channels.png" alt="Layered Services - channels" loading="lazy" width="2139" height="788" style="width:100%"/>
+<img src="/diagrams/Performance/Layered%20Services%20-%20channels.svg" alt="Layered Services - channels" loading="lazy" width="1123" height="423" style="width:100%"/>
 </a>
 </figure>
 
@@ -62,7 +62,7 @@ Remarkable features of *Layered Services* include:
 
 <figure>
 <a href="/diagrams/Variants/3/Three-Layered%20Services.png">
-<img src="/diagrams/Variants/3/Three-Layered%20Services.png" alt="Three-Layered Services" loading="lazy" width="1733" height="656" style="width:100%"/>
+<img src="/diagrams/Variants/3/Three-Layered%20Services.svg" alt="Three-Layered Services" loading="lazy" width="923" height="332" style="width:100%"/>
 </a>
 </figure>
 
@@ -76,7 +76,7 @@ The upper \(application\) layer of each service orchestrates both its middle \(d
 
 <figure>
 <a href="/diagrams/Communication/Mutual%20Orchestration%20-%204.png">
-<img src="/diagrams/Communication/Mutual%20Orchestration%20-%204.png" alt="Mutual Orchestration - 4" loading="lazy" width="1926" height="578" style="width:100%"/>
+<img src="/diagrams/Communication/Mutual%20Orchestration%20-%204.svg" alt="Mutual Orchestration - 4" loading="lazy" width="1023" height="294" style="width:100%"/>
 </a>
 </figure>
 
@@ -101,7 +101,7 @@ The good thing is that the majority of the code belongs to the domain layer whic
 
 <figure>
 <a href="/diagrams/Evolutions/3/Three-Layered%20Services%20-%201.png">
-<img src="/diagrams/Evolutions/3/Three-Layered%20Services%20-%201.png" alt="Three-Layered Services - 1" loading="lazy" width="2889" height="778" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/Three-Layered%20Services%20-%201.svg" alt="Three-Layered Services - 1" loading="lazy" width="1544" height="424" style="width:100%"/>
 </a>
 </figure>
 
@@ -113,7 +113,7 @@ or by building derived datasets:
 
 <figure>
 <a href="/diagrams/Evolutions/3/Three-Layered%20Services%20-%202.png">
-<img src="/diagrams/Evolutions/3/Three-Layered%20Services%20-%202.png" alt="Three-Layered Services - 2" loading="lazy" width="2214" height="915" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/Three-Layered%20Services%20-%202.svg" alt="Three-Layered Services - 2" loading="lazy" width="1163" height="504" style="width:100%"/>
 </a>
 </figure>
 
@@ -124,7 +124,7 @@ If the services become too large:
 
 <figure>
 <a href="/diagrams/Evolutions/3/Three-Layered%20Services%20-%203.png">
-<img src="/diagrams/Evolutions/3/Three-Layered%20Services%20-%203.png" alt="Three-Layered Services - 3" loading="lazy" width="2833" height="673" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/Three-Layered%20Services%20-%203.svg" alt="Three-Layered Services - 3" loading="lazy" width="1503" height="344" style="width:100%"/>
 </a>
 </figure>
 
@@ -132,7 +132,7 @@ If the services become too large:
 
 <figure>
 <a href="/diagrams/Variants/3/Two-Layered%20Services.png">
-<img src="/diagrams/Variants/3/Two-Layered%20Services.png" alt="Two-Layered Services" loading="lazy" width="1802" height="446" style="width:100%"/>
+<img src="/diagrams/Variants/3/Two-Layered%20Services.svg" alt="Two-Layered Services" loading="lazy" width="963" height="245" style="width:100%"/>
 </a>
 </figure>
 
@@ -160,7 +160,7 @@ If *Choreographed Layered Services* become coupled:
 
 <figure>
 <a href="/diagrams/Evolutions/3/Two-Layered%20Services%20-%201.png">
-<img src="/diagrams/Evolutions/3/Two-Layered%20Services%20-%201.png" alt="Two-Layered Services - 1" loading="lazy" width="2513" height="587" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/Two-Layered%20Services%20-%201.svg" alt="Two-Layered Services - 1" loading="lazy" width="1324" height="324" style="width:100%"/>
 </a>
 </figure>
 
@@ -168,7 +168,7 @@ If *Choreographed Layered Services* become coupled:
 
 <figure>
 <a href="/diagrams/Evolutions/3/Two-Layered%20Services%20-%202.png">
-<img src="/diagrams/Evolutions/3/Two-Layered%20Services%20-%202.png" alt="Two-Layered Services - 2" loading="lazy" width="2132" height="709" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/Two-Layered%20Services%20-%202.svg" alt="Two-Layered Services - 2" loading="lazy" width="1124" height="404" style="width:100%"/>
 </a>
 </figure>
 
@@ -179,7 +179,7 @@ An overgrown service can be:
 
 <figure>
 <a href="/diagrams/Evolutions/3/Two-Layered%20Services%20-%203.png">
-<img src="/diagrams/Evolutions/3/Two-Layered%20Services%20-%203.png" alt="Two-Layered Services - 3" loading="lazy" width="2837" height="480" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/Two-Layered%20Services%20-%203.svg" alt="Two-Layered Services - 3" loading="lazy" width="1503" height="301" style="width:100%"/>
 </a>
 </figure>
 
@@ -187,7 +187,7 @@ An overgrown service can be:
 
 <figure>
 <a href="/diagrams/Variants/3/CQRS.png">
-<img src="/diagrams/Variants/3/CQRS.png" alt="CQRS" loading="lazy" width="1873" height="634" style="width:100%"/>
+<img src="/diagrams/Variants/3/CQRS.svg" alt="CQRS" loading="lazy" width="1007" height="324" style="width:100%"/>
 </a>
 </figure>
 
@@ -195,7 +195,7 @@ An overgrown service can be:
 
 <figure>
 <a href="/diagrams/Variants/3/CQRS%20-%20pipeline%20view.png">
-<img src="/diagrams/Variants/3/CQRS%20-%20pipeline%20view.png" alt="CQRS - pipeline view" loading="lazy" width="1916" height="639" style="width:100%"/>
+<img src="/diagrams/Variants/3/CQRS%20-%20pipeline%20view.svg" alt="CQRS - pipeline view" loading="lazy" width="1003" height="323" style="width:100%"/>
 </a>
 </figure>
 
@@ -209,7 +209,7 @@ This separation brings in the pros and cons of [*Services*]({{< relref "../basic
 
 <figure>
 <a href="/diagrams/Variants/3/CQRS%20-%20subtypes.png">
-<img src="/diagrams/Variants/3/CQRS%20-%20subtypes.png" alt="CQRS - subtypes" loading="lazy" width="2473" height="833" style="width:100%"/>
+<img src="/diagrams/Variants/3/CQRS%20-%20subtypes.svg" alt="CQRS - subtypes" loading="lazy" width="1303" height="446" style="width:100%"/>
 </a>
 </figure>
 
@@ -223,7 +223,7 @@ Each backend depends on its database \(its technology and schema\)\. The OLTP to
 
 <figure>
 <a href="/diagrams/Dependencies/CQRS.png">
-<img src="/diagrams/Dependencies/CQRS.png" alt="CQRS" loading="lazy" width="2359" height="621" style="width:100%"/>
+<img src="/diagrams/Dependencies/CQRS.svg" alt="CQRS" loading="lazy" width="1243" height="326" style="width:100%"/>
 </a>
 </figure>
 
@@ -247,7 +247,7 @@ Each backend depends on its database \(its technology and schema\)\. The OLTP to
 
 <figure>
 <a href="/diagrams/Evolutions/3/CQRS.png">
-<img src="/diagrams/Evolutions/3/CQRS.png" alt="CQRS" loading="lazy" width="2404" height="1901" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/CQRS.svg" alt="CQRS" loading="lazy" width="1284" height="1023" style="width:100%"/>
 </a>
 </figure>
 

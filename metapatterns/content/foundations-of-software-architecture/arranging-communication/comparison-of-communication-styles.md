@@ -2,7 +2,7 @@
 weight = 5
 title = "Comparison of communication styles"
 description = "Orchestration is good when there are many complex scenarios, choreography - for simple highly loaded systems, shared data - for data-centric domains."
-images = ["/diagrams/Communication/Cell-Based%20Architecture.png"]
+images = ["/diagrams/Communication/Cell-Based%20Architecture.svg"]
 [sitemap]
   priority = 0.5
 +++
@@ -21,7 +21,7 @@ There is advice [from Microsoft](https://learn.microsoft.com/en-us/azure/archite
 
 <figure>
 <a href="/diagrams/Communication/Cell-Based%20Architecture.png">
-<img src="/diagrams/Communication/Cell-Based%20Architecture.png" alt="Cell-Based Architecture" loading="lazy" width="1763" height="744" style="width:100%"/>
+<img src="/diagrams/Communication/Cell-Based%20Architecture.svg" alt="Cell-Based Architecture" loading="lazy" width="923" height="374" style="width:100%"/>
 </a>
 </figure>
 

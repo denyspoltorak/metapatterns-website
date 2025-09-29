@@ -70,7 +70,7 @@ Combined components vary in their structure and properties:
 
 <figure>
 <a href="/diagrams/Variants/2/Message%20Bus.png">
-<img src="/diagrams/Variants/2/Message%20Bus.png" alt="Message Bus" loading="lazy" width="1631" height="568" style="width:100%"/>
+<img src="/diagrams/Variants/2/Message%20Bus.svg" alt="Message Bus" loading="lazy" width="883" height="283" style="width:100%"/>
 </a>
 </figure>
 
@@ -80,7 +80,7 @@ A *Message Bus* \[[EIP]({{< relref "../appendices/books-referenced.md#eip" >}})\
 
 <figure>
 <a href="/diagrams/Variants/2/Multifunctional%20-%20API%20Gateway.png">
-<img src="/diagrams/Variants/2/Multifunctional%20-%20API%20Gateway.png" alt="Multifunctional - API Gateway" loading="lazy" width="1618" height="784" style="width:100%"/>
+<img src="/diagrams/Variants/2/Multifunctional%20-%20API%20Gateway.svg" alt="Multifunctional - API Gateway" loading="lazy" width="863" height="403" style="width:100%"/>
 </a>
 </figure>
 
@@ -94,7 +94,7 @@ Example: a thorough article from [Microsoft](https://learn.microsoft.com/en-us/a
 
 <figure>
 <a href="/diagrams/Variants/2/Multifunctional%20-%20Event%20Mediator.png">
-<img src="/diagrams/Variants/2/Multifunctional%20-%20Event%20Mediator.png" alt="Multifunctional - Event Mediator" loading="lazy" width="1881" height="774" style="width:100%"/>
+<img src="/diagrams/Variants/2/Multifunctional%20-%20Event%20Mediator.svg" alt="Multifunctional - Event Mediator" loading="lazy" width="1003" height="403" style="width:100%"/>
 </a>
 </figure>
 
@@ -114,7 +114,7 @@ Example: Mediator Topology in the \[[FSA]({{< relref "../appendices/books-refere
 
 <figure>
 <a href="/diagrams/Variants/2/Multifunctional%20-%20Shared%20Event%20Store.png">
-<img src="/diagrams/Variants/2/Multifunctional%20-%20Shared%20Event%20Store.png" alt="Multifunctional - Shared Event Store" loading="lazy" width="2460" height="476" style="width:100%"/>
+<img src="/diagrams/Variants/2/Multifunctional%20-%20Shared%20Event%20Store.svg" alt="Multifunctional - Shared Event Store" loading="lazy" width="1303" height="252" style="width:100%"/>
 </a>
 </figure>
 
@@ -130,7 +130,7 @@ Example: \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\] sho
 
 <figure>
 <a href="/diagrams/Variants/2/Front%20Controller.png">
-<img src="/diagrams/Variants/2/Front%20Controller.png" alt="Front Controller" loading="lazy" width="1661" height="564" style="width:100%"/>
+<img src="/diagrams/Variants/2/Front%20Controller.svg" alt="Front Controller" loading="lazy" width="883" height="283" style="width:100%"/>
 </a>
 </figure>
 
@@ -140,7 +140,7 @@ Example: \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\] sho
 
 <figure>
 <a href="/diagrams/Variants/2/Multifunctional%20-%20Enterprise%20Service%20Bus.png">
-<img src="/diagrams/Variants/2/Multifunctional%20-%20Enterprise%20Service%20Bus.png" alt="Multifunctional - Enterprise Service Bus" loading="lazy" width="2456" height="1104" style="width:100%"/>
+<img src="/diagrams/Variants/2/Multifunctional%20-%20Enterprise%20Service%20Bus.svg" alt="Multifunctional - Enterprise Service Bus" loading="lazy" width="1323" height="581" style="width:100%"/>
 </a>
 </figure>
 
@@ -152,7 +152,7 @@ Example: Orchestration\-Driven Service\-Oriented Architecture in \[[FSA]({{< rel
 
 <figure>
 <a href="/diagrams/Variants/2/Multifunctional%20-%20Service%20Mesh.png">
-<img src="/diagrams/Variants/2/Multifunctional%20-%20Service%20Mesh.png" alt="Multifunctional - Service Mesh" loading="lazy" width="2018" height="630" style="width:100%"/>
+<img src="/diagrams/Variants/2/Multifunctional%20-%20Service%20Mesh.svg" alt="Multifunctional - Service Mesh" loading="lazy" width="1083" height="323" style="width:100%"/>
 </a>
 </figure>
 
@@ -164,7 +164,7 @@ A *Service* [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}}) is
 
 <figure>
 <a href="/diagrams/Variants/2/Multifunctional%20-%20Space-Based%20Architecture.png">
-<img src="/diagrams/Variants/2/Multifunctional%20-%20Space-Based%20Architecture.png" alt="Multifunctional - Space-Based Architecture" loading="lazy" width="2417" height="1056" style="width:100%"/>
+<img src="/diagrams/Variants/2/Multifunctional%20-%20Space-Based%20Architecture.svg" alt="Multifunctional - Space-Based Architecture" loading="lazy" width="1283" height="543" style="width:100%"/>
 </a>
 </figure>
 
@@ -187,7 +187,7 @@ The patterns that involve [*orchestration*]({{< relref "../foundations-of-softwa
 
 <figure>
 <a href="/diagrams/Evolutions/2/Multifunctional_%20Split.png">
-<img src="/diagrams/Evolutions/2/Multifunctional_%20Split.png" alt="Multifunctional: Split" loading="lazy" width="2368" height="898" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Multifunctional_%20Split.svg" alt="Multifunctional: Split" loading="lazy" width="1267" height="464" style="width:100%"/>
 </a>
 </figure>
 

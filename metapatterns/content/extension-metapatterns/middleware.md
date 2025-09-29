@@ -2,7 +2,7 @@
 weight = 6
 title = "Middleware"
 description = "A Middleware provides system components with a means of communication. It may also manage their deployment, scaling, and failure recovery."
-images = ["/diagrams/Main/Middleware.png"]
+images = ["/diagrams/Main/Middleware.svg"]
 [sitemap]
   priority = 0.8
 +++
@@ -11,7 +11,7 @@ images = ["/diagrams/Main/Middleware.png"]
 
 <figure>
 <a href="/diagrams/Main/Middleware.png">
-<img src="/diagrams/Main/Middleware.png" alt="Middleware" loading="lazy" width="2008" height="889" style="width:100%"/>
+<img src="/diagrams/Main/Middleware.svg" alt="Middleware" loading="lazy" width="1062" height="494" style="width:100%"/>
 </a>
 </figure>
 
@@ -70,7 +70,7 @@ Each service depends both on the *Middleware* and on the API of every service it
 
 <figure>
 <a href="/diagrams/Dependencies/Middleware.png">
-<img src="/diagrams/Dependencies/Middleware.png" alt="Middleware" loading="lazy" width="1873" height="525" style="width:100%"/>
+<img src="/diagrams/Dependencies/Middleware.svg" alt="Middleware" loading="lazy" width="986" height="264" style="width:100%"/>
 </a>
 </figure>
 
@@ -95,7 +95,7 @@ You may decide to use an [*Anticorruption Layer*]({{< relref "../extension-metap
 
 <figure>
 <a href="/diagrams/Relations/Middleware.png">
-<img src="/diagrams/Relations/Middleware.png" alt="Middleware" loading="lazy" width="2329" height="863" style="width:100%"/>
+<img src="/diagrams/Relations/Middleware.svg" alt="Middleware" loading="lazy" width="1226" height="463" style="width:100%"/>
 </a>
 </figure>
 
@@ -155,7 +155,7 @@ If the messages are stored indefinitely, the *Middleware* becomes a *Persistent*
 
 <figure>
 <a href="/diagrams/Misc/Middleware.png">
-<img src="/diagrams/Misc/Middleware.png" alt="Middleware" loading="lazy" width="2968" height="660" style="width:100%"/>
+<img src="/diagrams/Misc/Middleware.svg" alt="Middleware" loading="lazy" width="1583" height="343" style="width:100%"/>
 </a>
 </figure>
 
@@ -176,7 +176,7 @@ There are several patterns which extend *Middleware* with other functions:
 
 <figure>
 <a href="/diagrams/Variants/2/Message%20Bus.png">
-<img src="/diagrams/Variants/2/Message%20Bus.png" alt="Message Bus" loading="lazy" width="1631" height="568" style="width:100%"/>
+<img src="/diagrams/Variants/2/Message%20Bus.svg" alt="Message Bus" loading="lazy" width="883" height="283" style="width:100%"/>
 </a>
 </figure>
 
@@ -186,7 +186,7 @@ A *Message Bus* \[[EIP]({{< relref "../appendices/books-referenced.md#eip" >}})\
 
 <figure>
 <a href="/diagrams/Variants/1/Microservices.png">
-<img src="/diagrams/Variants/1/Microservices.png" alt="Microservices" loading="lazy" width="2451" height="833" style="width:100%"/>
+<img src="/diagrams/Variants/1/Microservices.svg" alt="Microservices" loading="lazy" width="1303" height="421" style="width:100%"/>
 </a>
 </figure>
 
@@ -198,7 +198,7 @@ The internals of [*Service Mesh*]({{< relref "../implementation-metapatterns/mes
 
 <figure>
 <a href="/diagrams/Variants/2/Event%20Mediator.png">
-<img src="/diagrams/Variants/2/Event%20Mediator.png" alt="Event Mediator" loading="lazy" width="2064" height="758" style="width:100%"/>
+<img src="/diagrams/Variants/2/Event%20Mediator.svg" alt="Event Mediator" loading="lazy" width="1103" height="385" style="width:100%"/>
 </a>
 </figure>
 
@@ -210,7 +210,7 @@ Slightly more details on the *Event Mediator* are [provided in the *Orchestrator
 
 <figure>
 <a href="/diagrams/Variants/2/Middleware%20-%20Shared%20Event%20Store.png">
-<img src="/diagrams/Variants/2/Middleware%20-%20Shared%20Event%20Store.png" alt="Middleware - Shared Event Store" loading="lazy" width="2368" height="489" style="width:100%"/>
+<img src="/diagrams/Variants/2/Middleware%20-%20Shared%20Event%20Store.svg" alt="Middleware - Shared Event Store" loading="lazy" width="1263" height="244" style="width:100%"/>
 </a>
 </figure>
 
@@ -222,7 +222,7 @@ This pattern is detailed in the [*Combined Component* chapter]({{< relref "../ex
 
 <figure>
 <a href="/diagrams/Variants/2/Enterprise%20Service%20Bus.png">
-<img src="/diagrams/Variants/2/Enterprise%20Service%20Bus.png" alt="Enterprise Service Bus" loading="lazy" width="2469" height="1056" style="width:100%"/>
+<img src="/diagrams/Variants/2/Enterprise%20Service%20Bus.svg" alt="Enterprise Service Bus" loading="lazy" width="1323" height="552" style="width:100%"/>
 </a>
 </figure>
 
@@ -239,7 +239,7 @@ A *Middleware* is unlikely to be removed \(though it may be replaced\) once it i
 
 <figure>
 <a href="/diagrams/Evolutions/2/Middleware%20add%20Middleware.png">
-<img src="/diagrams/Evolutions/2/Middleware%20add%20Middleware.png" alt="Middleware add Middleware" loading="lazy" width="2310" height="679" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Middleware%20add%20Middleware.svg" alt="Middleware add Middleware" loading="lazy" width="1223" height="344" style="width:100%"/>
 </a>
 </figure>
 
@@ -248,7 +248,7 @@ A *Middleware* is unlikely to be removed \(though it may be replaced\) once it i
 
 <figure>
 <a href="/diagrams/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.png">
-<img src="/diagrams/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.png" alt="Middleware to Bus of Buses" loading="lazy" width="3628" height="825" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.svg" alt="Middleware to Bus of Buses" loading="lazy" width="1903" height="405" style="width:100%"/>
 </a>
 </figure>
 

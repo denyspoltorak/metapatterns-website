@@ -17,7 +17,7 @@ Let’s explore how a force influences the structure of a project\. Consider the
 
 <figure>
 <a href="/diagrams/Heart/Pain.png">
-<img src="/diagrams/Heart/Pain.png" alt="Pain" loading="lazy" width="1472" height="649" style="width:100%"/>
+<img src="/diagrams/Heart/Pain.svg" alt="Pain" loading="lazy" width="787" height="364" style="width:100%"/>
 </a>
 </figure>
 
@@ -37,7 +37,7 @@ Such a behavior is common for forces and, by the way, it is also the case with e
 
 <figure>
 <a href="/diagrams/Heart/Hierarchy.png">
-<img src="/diagrams/Heart/Hierarchy.png" alt="Hierarchy" loading="lazy" width="2419" height="523" style="width:100%"/>
+<img src="/diagrams/Heart/Hierarchy.svg" alt="Hierarchy" loading="lazy" width="1283" height="273" style="width:100%"/>
 </a>
 </figure>
 
@@ -76,7 +76,7 @@ And there are forces that try to keep your code fragmented:
 
 <figure>
 <a href="/diagrams/Heart/Lifecycle.png">
-<img src="/diagrams/Heart/Lifecycle.png" alt="Lifecycle" loading="lazy" width="3403" height="636" style="width:100%"/>
+<img src="/diagrams/Heart/Lifecycle.svg" alt="Lifecycle" loading="lazy" width="1803" height="323" style="width:100%"/>
 </a>
 </figure>
 
