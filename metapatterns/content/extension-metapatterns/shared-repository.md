@@ -11,7 +11,11 @@ images = ["/diagrams/Main/Shared%20Repository.svg"]
 
 <figure>
 <a href="/diagrams/Main/Shared%20Repository.png">
-<img src="/diagrams/Main/Shared%20Repository.svg" alt="Shared Repository" loading="lazy" width="1062" height="500" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Main/Shared%20Repository.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Main/Shared%20Repository.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Main/Shared%20Repository.png" alt="Shared Repository" loading="lazy" width="1062" height="500" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -73,7 +77,11 @@ Normally, every service depends on the repository\. If the repository does not p
 
 <figure>
 <a href="/diagrams/Dependencies/SharedRepository-1.png">
-<img src="/diagrams/Dependencies/SharedRepository-1.svg" alt="SharedRepository-1" loading="lazy" width="1065" height="624" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Dependencies/SharedRepository-1.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Dependencies/SharedRepository-1.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Dependencies/SharedRepository-1.png" alt="SharedRepository-1" loading="lazy" width="1065" height="624" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -81,7 +89,11 @@ The dependency on repository technology and a data schema is dangerous for long\
 
 <figure>
 <a href="/diagrams/Dependencies/SharedRepository-2.png">
-<img src="/diagrams/Dependencies/SharedRepository-2.svg" alt="SharedRepository-2" loading="lazy" width="1059" height="661" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Dependencies/SharedRepository-2.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Dependencies/SharedRepository-2.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Dependencies/SharedRepository-2.png" alt="SharedRepository-2" loading="lazy" width="1059" height="661" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -108,7 +120,11 @@ Still, the DAL does not remove shared dependencies and only adds some flexibilit
 
 <figure>
 <a href="/diagrams/Relations/Shared%20Repository.png">
-<img src="/diagrams/Relations/Shared%20Repository.svg" alt="Shared Repository" loading="lazy" width="1226" height="462" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Relations/Shared%20Repository.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Relations/Shared%20Repository.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Relations/Shared%20Repository.png" alt="Shared Repository" loading="lazy" width="1226" height="462" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -130,7 +146,11 @@ A *Shared Repository* may provide a generic interface \(e\.g\. SQL\) or a custom
 
 <figure>
 <a href="/diagrams/Variants/2/Shared%20Database.png">
-<img src="/diagrams/Variants/2/Shared%20Database.svg" alt="Shared Database" loading="lazy" width="983" height="243" style="width:93%"/>
+<picture>
+<source srcset="/diagrams/Variants/2/Shared%20Database.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/Shared%20Database.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/2/Shared%20Database.png" alt="Shared Database" loading="lazy" width="983" height="243" style="width:93%"/>
+</picture>
 </a>
 </figure>
 
@@ -140,7 +160,11 @@ A *Shared Repository* may provide a generic interface \(e\.g\. SQL\) or a custom
 
 <figure>
 <a href="/diagrams/Variants/2/Blackboard.png">
-<img src="/diagrams/Variants/2/Blackboard.svg" alt="Blackboard" loading="lazy" width="1063" height="325" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/2/Blackboard.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/Blackboard.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/2/Blackboard.png" alt="Blackboard" loading="lazy" width="1063" height="325" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -152,7 +176,11 @@ Examples: several use cases are [mentioned on Wikipedia](https://en.wikipedia.or
 
 <figure>
 <a href="/diagrams/Variants/2/Data%20Grid.png">
-<img src="/diagrams/Variants/2/Data%20Grid.svg" alt="Data Grid" loading="lazy" width="1283" height="684" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/2/Data%20Grid.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/Data%20Grid.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/2/Data%20Grid.png" alt="Data Grid" loading="lazy" width="1283" height="684" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -181,7 +209,11 @@ The drawbacks of this architecture include:
 
 <figure>
 <a href="/diagrams/Variants/2/Shared%20memory.png">
-<img src="/diagrams/Variants/2/Shared%20memory.svg" alt="Shared memory" loading="lazy" width="943" height="424" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/2/Shared%20memory.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/Shared%20memory.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/2/Shared%20memory.png" alt="Shared memory" loading="lazy" width="943" height="424" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -191,7 +223,11 @@ Several actors \(processes, modules, device drivers\) communicate through one or
 
 <figure>
 <a href="/diagrams/Variants/2/Shared%20files.png">
-<img src="/diagrams/Variants/2/Shared%20files.svg" alt="Shared files" loading="lazy" width="1083" height="803" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/2/Shared%20files.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/Shared%20files.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/2/Shared%20files.png" alt="Shared files" loading="lazy" width="1083" height="803" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -201,7 +237,11 @@ As a file system is a kind of shared dictionary, writing and reading files can b
 
 <figure>
 <a href="/diagrams/Variants/2/Shared%20Database%20-%20Event%20Log.png">
-<img src="/diagrams/Variants/2/Shared%20Database%20-%20Event%20Log.svg" alt="Shared Database - Event Log" loading="lazy" width="843" height="283" style="width:95%"/>
+<picture>
+<source srcset="/diagrams/Variants/2/Shared%20Database%20-%20Event%20Log.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/Shared%20Database%20-%20Event%20Log.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/2/Shared%20Database%20-%20Event%20Log.png" alt="Shared Database - Event Log" loading="lazy" width="843" height="283" style="width:95%"/>
+</picture>
 </a>
 </figure>
 
@@ -213,7 +253,11 @@ More details are [available]({{< relref "../extension-metapatterns/combined-comp
 
 <figure>
 <a href="/diagrams/Variants/2/Stamp%20Coupling.png">
-<img src="/diagrams/Variants/2/Stamp%20Coupling.svg" alt="Stamp Coupling" loading="lazy" width="843" height="223" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/2/Stamp%20Coupling.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/Stamp%20Coupling.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/2/Stamp%20Coupling.png" alt="Stamp Coupling" loading="lazy" width="843" height="223" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -230,7 +274,11 @@ Once a database appears, it is unlikely to go away\. I see the [following evolut
 
 <figure>
 <a href="/diagrams/Evolutions/2/Shared%20Database_%20Shard.png">
-<img src="/diagrams/Evolutions/2/Shared%20Database_%20Shard.svg" alt="Shared Database: Shard" loading="lazy" width="1303" height="324" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Evolutions/2/Shared%20Database_%20Shard.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/2/Shared%20Database_%20Shard.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Evolutions/2/Shared%20Database_%20Shard.png" alt="Shared Database: Shard" loading="lazy" width="1303" height="324" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -239,7 +287,11 @@ Once a database appears, it is unlikely to go away\. I see the [following evolut
 
 <figure>
 <a href="/diagrams/Evolutions/2/Shared%20Database%20to%20Space-Based%20Architecture.png">
-<img src="/diagrams/Evolutions/2/Shared%20Database%20to%20Space-Based%20Architecture.svg" alt="Shared Database to Space-Based Architecture" loading="lazy" width="1323" height="385" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Evolutions/2/Shared%20Database%20to%20Space-Based%20Architecture.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/2/Shared%20Database%20to%20Space-Based%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Evolutions/2/Shared%20Database%20to%20Space-Based%20Architecture.png" alt="Shared Database to Space-Based Architecture" loading="lazy" width="1323" height="385" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -248,7 +300,11 @@ Once a database appears, it is unlikely to go away\. I see the [following evolut
 
 <figure>
 <a href="/diagrams/Evolutions/2/Shared%20Database%20to%20Services.png">
-<img src="/diagrams/Evolutions/2/Shared%20Database%20to%20Services.svg" alt="Shared Database to Services" loading="lazy" width="1323" height="289" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Evolutions/2/Shared%20Database%20to%20Services.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/2/Shared%20Database%20to%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Evolutions/2/Shared%20Database%20to%20Services.png" alt="Shared Database to Services" loading="lazy" width="1323" height="289" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -257,7 +313,11 @@ Once a database appears, it is unlikely to go away\. I see the [following evolut
 
 <figure>
 <a href="/diagrams/Evolutions/2/Shared%20Database%20to%20Polyglot%20Persistence.png">
-<img src="/diagrams/Evolutions/2/Shared%20Database%20to%20Polyglot%20Persistence.svg" alt="Shared Database to Polyglot Persistence" loading="lazy" width="1343" height="289" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Evolutions/2/Shared%20Database%20to%20Polyglot%20Persistence.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/2/Shared%20Database%20to%20Polyglot%20Persistence.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Evolutions/2/Shared%20Database%20to%20Polyglot%20Persistence.png" alt="Shared Database to Polyglot Persistence" loading="lazy" width="1343" height="289" style="width:100%"/>
+</picture>
 </a>
 </figure>
 

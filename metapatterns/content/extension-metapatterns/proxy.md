@@ -11,7 +11,11 @@ images = ["/diagrams/Main/Proxy.svg"]
 
 <figure>
 <a href="/diagrams/Main/Proxy.png">
-<img src="/diagrams/Main/Proxy.svg" alt="Proxy" loading="lazy" width="1082" height="574" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Main/Proxy.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Main/Proxy.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Main/Proxy.png" alt="Proxy" loading="lazy" width="1082" height="574" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -107,7 +111,11 @@ In fact, because *Proxies* tend to have their dependencies configured on startup
 
 <figure>
 <a href="/diagrams/Relations/Proxy.png">
-<img src="/diagrams/Relations/Proxy.svg" alt="Proxy" loading="lazy" width="1263" height="462" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Relations/Proxy.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Relations/Proxy.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Relations/Proxy.png" alt="Proxy" loading="lazy" width="1263" height="462" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -127,7 +135,11 @@ A *Proxy* [may either fully isolate the system it represents or merely help esta
 
 <figure>
 <a href="/diagrams/Variants/2/Full%20Proxy.png">
-<img src="/diagrams/Variants/2/Full%20Proxy.svg" alt="Full Proxy" loading="lazy" width="703" height="363" style="width:94%"/>
+<picture>
+<source srcset="/diagrams/Variants/2/Full%20Proxy.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/Full%20Proxy.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/2/Full%20Proxy.png" alt="Full Proxy" loading="lazy" width="703" height="363" style="width:94%"/>
+</picture>
 </a>
 </figure>
 
@@ -137,7 +149,11 @@ A *Full Proxy* processes every message between the system and its clients\. It c
 
 <figure>
 <a href="/diagrams/Variants/2/Half%20Proxy.png">
-<img src="/diagrams/Variants/2/Half%20Proxy.svg" alt="Half Proxy" loading="lazy" width="707" height="363" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/2/Half%20Proxy.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/Half%20Proxy.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/2/Half%20Proxy.png" alt="Half Proxy" loading="lazy" width="707" height="363" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -151,7 +167,11 @@ As a *Proxy* stands between a \(sub\)system and its client\(s\), we can imagine 
 
 <figure>
 <a href="/diagrams/Variants/2/Proxy%20placement%20-%20Standalone.png">
-<img src="/diagrams/Variants/2/Proxy%20placement%20-%20Standalone.svg" alt="Proxy placement - Standalone" loading="lazy" width="963" height="345" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/2/Proxy%20placement%20-%20Standalone.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/Proxy%20placement%20-%20Standalone.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/2/Proxy%20placement%20-%20Standalone.png" alt="Proxy placement - Standalone" loading="lazy" width="963" height="345" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -165,7 +185,11 @@ We can deploy a *Proxy* as a separate system component\. This has the downside o
 
 <figure>
 <a href="/diagrams/Variants/2/Proxy%20placement%20-%20Sidecar.png">
-<img src="/diagrams/Variants/2/Proxy%20placement%20-%20Sidecar.svg" alt="Proxy placement - Sidecar" loading="lazy" width="763" height="263" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/2/Proxy%20placement%20-%20Sidecar.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/Proxy%20placement%20-%20Sidecar.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/2/Proxy%20placement%20-%20Sidecar.png" alt="Proxy placement - Sidecar" loading="lazy" width="763" height="263" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -181,7 +205,11 @@ It should be noted that *Sidecar* – co\-locating a generic component and busin
 
 <figure>
 <a href="/diagrams/Variants/2/Sidecars.png">
-<img src="/diagrams/Variants/2/Sidecars.svg" alt="Sidecars" loading="lazy" width="1203" height="264" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/2/Sidecars.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/Sidecars.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/2/Sidecars.png" alt="Sidecars" loading="lazy" width="1203" height="264" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -191,7 +219,11 @@ It should be noted that *Sidecar* – co\-locating a generic component and busin
 
 <figure>
 <a href="/diagrams/Variants/2/Proxy%20placement%20-%20Ambassador.png">
-<img src="/diagrams/Variants/2/Proxy%20placement%20-%20Ambassador.svg" alt="Proxy placement - Ambassador" loading="lazy" width="783" height="261" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/2/Proxy%20placement%20-%20Ambassador.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/Proxy%20placement%20-%20Ambassador.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/2/Proxy%20placement%20-%20Ambassador.png" alt="Proxy placement - Ambassador" loading="lazy" width="783" height="261" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -217,7 +249,11 @@ As *Proxies* are used for many purposes, there are a variety of their specializa
 
 <figure>
 <a href="/diagrams/Variants/2/Firewall.png">
-<img src="/diagrams/Variants/2/Firewall.svg" alt="Firewall" loading="lazy" width="923" height="423" style="width:92%"/>
+<picture>
+<source srcset="/diagrams/Variants/2/Firewall.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/Firewall.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/2/Firewall.png" alt="Firewall" loading="lazy" width="923" height="423" style="width:92%"/>
+</picture>
 </a>
 </figure>
 
@@ -231,7 +267,11 @@ The *Firewall* is a component for white\- and black\-listing network traffic, mo
 
 <figure>
 <a href="/diagrams/Variants/2/Cache.png">
-<img src="/diagrams/Variants/2/Cache.svg" alt="Cache" loading="lazy" width="1143" height="425" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/2/Cache.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/Cache.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/2/Cache.png" alt="Cache" loading="lazy" width="1143" height="425" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -257,7 +297,11 @@ It is possible to combine multiple servers into a virtual *Caching Layer* \[[DDS
 
 <figure>
 <a href="/diagrams/Variants/2/Load%20Balancer.png">
-<img src="/diagrams/Variants/2/Load%20Balancer.svg" alt="Load Balancer" loading="lazy" width="1163" height="366" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/2/Load%20Balancer.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/Load%20Balancer.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/2/Load%20Balancer.png" alt="Load Balancer" loading="lazy" width="1163" height="366" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -275,7 +319,11 @@ Here we have a hardware or software component which distributes user traffic amo
 
 <figure>
 <a href="/diagrams/Variants/2/Dispatcher.png">
-<img src="/diagrams/Variants/2/Dispatcher.svg" alt="Dispatcher" loading="lazy" width="763" height="321" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/2/Dispatcher.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/Dispatcher.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/2/Dispatcher.png" alt="Dispatcher" loading="lazy" width="763" height="321" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -289,7 +337,11 @@ You could have noticed that *Dispatcher* or *Reverse Proxy* is quite similar to 
 
 <figure>
 <a href="/diagrams/Variants/2/Adapter.png">
-<img src="/diagrams/Variants/2/Adapter.svg" alt="Adapter" loading="lazy" width="763" height="321" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/2/Adapter.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/Adapter.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/2/Adapter.png" alt="Adapter" loading="lazy" width="763" height="321" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -323,7 +375,11 @@ There is also a whole bunch of *Adapters* that aim to protect the business logic
 
 <figure>
 <a href="/diagrams/Variants/2/API%20Gateway.png">
-<img src="/diagrams/Variants/2/API%20Gateway.svg" alt="API Gateway" loading="lazy" width="923" height="365" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/2/API%20Gateway.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/API%20Gateway.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/2/API%20Gateway.png" alt="API Gateway" loading="lazy" width="923" height="365" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -342,7 +398,11 @@ As *Proxies* are usually third\-party products, there is not much [we can change
 
 <figure>
 <a href="/diagrams/Evolutions/2/Proxy%20add%20Proxy.png">
-<img src="/diagrams/Evolutions/2/Proxy%20add%20Proxy.svg" alt="Proxy add Proxy" loading="lazy" width="1266" height="423" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Evolutions/2/Proxy%20add%20Proxy.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/2/Proxy%20add%20Proxy.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Evolutions/2/Proxy%20add%20Proxy.png" alt="Proxy add Proxy" loading="lazy" width="1266" height="423" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -351,7 +411,11 @@ As *Proxies* are usually third\-party products, there is not much [we can change
 
 <figure>
 <a href="/diagrams/Evolutions/2/Proxy%20to%20Backends%20for%20Frontends.png">
-<img src="/diagrams/Evolutions/2/Proxy%20to%20Backends%20for%20Frontends.svg" alt="Proxy to Backends for Frontends" loading="lazy" width="1283" height="384" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Evolutions/2/Proxy%20to%20Backends%20for%20Frontends.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/2/Proxy%20to%20Backends%20for%20Frontends.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Evolutions/2/Proxy%20to%20Backends%20for%20Frontends.png" alt="Proxy to Backends for Frontends" loading="lazy" width="1283" height="384" style="width:100%"/>
+</picture>
 </a>
 </figure>
 

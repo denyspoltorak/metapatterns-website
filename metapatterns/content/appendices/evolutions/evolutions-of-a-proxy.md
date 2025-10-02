@@ -20,7 +20,11 @@ As *Proxies* are usually third\-party products, there is very little we can chan
 
 <figure>
 <a href="/diagrams/Evolutions/2/Proxy%20add%20Proxy.png">
-<img src="/diagrams/Evolutions/2/Proxy%20add%20Proxy.svg" alt="Proxy add Proxy" loading="lazy" width="1266" height="423" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Evolutions/2/Proxy%20add%20Proxy.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/2/Proxy%20add%20Proxy.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Evolutions/2/Proxy%20add%20Proxy.png" alt="Proxy add Proxy" loading="lazy" width="1266" height="423" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -50,7 +54,11 @@ It often makes sense to colocate software *Proxies* or use a multifunctional *Pr
 
 <figure>
 <a href="/diagrams/Evolutions/2/Proxy%20to%20Backends%20for%20Frontends.png">
-<img src="/diagrams/Evolutions/2/Proxy%20to%20Backends%20for%20Frontends.svg" alt="Proxy to Backends for Frontends" loading="lazy" width="1283" height="384" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Evolutions/2/Proxy%20to%20Backends%20for%20Frontends.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/2/Proxy%20to%20Backends%20for%20Frontends.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Evolutions/2/Proxy%20to%20Backends%20for%20Frontends.png" alt="Proxy to Backends for Frontends" loading="lazy" width="1283" height="384" style="width:100%"/>
+</picture>
 </a>
 </figure>
 

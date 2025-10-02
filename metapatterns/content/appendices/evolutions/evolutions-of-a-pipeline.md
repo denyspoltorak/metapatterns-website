@@ -20,7 +20,11 @@ There are a couple of *Pipeline*\-specific evolutions:
 
 <figure>
 <a href="/diagrams/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png">
-<img src="/diagrams/Evolutions/Services/Pipeline%20promote%20Front%20Controller.svg" alt="Pipeline promote Front Controller" loading="lazy" width="1299" height="347" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Evolutions/Services/Pipeline%20promote%20Front%20Controller.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Services/Pipeline%20promote%20Front%20Controller.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png" alt="Pipeline promote Front Controller" loading="lazy" width="1299" height="347" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -51,7 +55,11 @@ If request processing steps require heavy calculations or manual action, clients
 
 <figure>
 <a href="/diagrams/Evolutions/Services/Pipeline%20use%20Orchestrator.png">
-<img src="/diagrams/Evolutions/Services/Pipeline%20use%20Orchestrator.svg" alt="Pipeline use Orchestrator" loading="lazy" width="1303" height="384" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Evolutions/Services/Pipeline%20use%20Orchestrator.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Services/Pipeline%20use%20Orchestrator.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Evolutions/Services/Pipeline%20use%20Orchestrator.png" alt="Pipeline use Orchestrator" loading="lazy" width="1303" height="384" style="width:100%"/>
+</picture>
 </a>
 </figure>
 

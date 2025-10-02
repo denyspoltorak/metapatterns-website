@@ -19,7 +19,11 @@ The last group of evolutions which we review does not really change the monolith
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Plugins.png">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Plugins.svg" alt="Monolith to Plugins" loading="lazy" width="1003" height="363" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Plugins.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Plugins.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Plugins.png" alt="Monolith to Plugins" loading="lazy" width="1003" height="363" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -48,7 +52,11 @@ The last group of evolutions which we review does not really change the monolith
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Hexagonal.png">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Hexagonal.svg" alt="Monolith to Hexagonal" loading="lazy" width="1007" height="323" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Hexagonal.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Hexagonal.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Hexagonal.png" alt="Monolith to Hexagonal" loading="lazy" width="1007" height="323" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -78,7 +86,11 @@ The main business logic will communicate with all the external components throug
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Interpreter.png">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Interpreter.svg" alt="Monolith to Interpreter" loading="lazy" width="1087" height="323" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Interpreter.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Interpreter.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Interpreter.png" alt="Monolith to Interpreter" loading="lazy" width="1087" height="323" style="width:100%"/>
+</picture>
 </a>
 </figure>
 

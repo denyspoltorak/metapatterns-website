@@ -11,7 +11,11 @@ images = ["/diagrams/Main/Service-Oriented%20Architecture.svg"]
 
 <figure>
 <a href="/diagrams/Main/Service-Oriented%20Architecture.png">
-<img src="/diagrams/Main/Service-Oriented%20Architecture.svg" alt="Service-Oriented Architecture" loading="lazy" width="924" height="702" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Main/Service-Oriented%20Architecture.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Main/Service-Oriented%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Main/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" loading="lazy" width="924" height="722" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -58,7 +62,11 @@ Each service of each layer depends on everything it uses\. As a result, developm
 
 <figure>
 <a href="/diagrams/Dependencies/Service-Oriented%20Architecture.png">
-<img src="/diagrams/Dependencies/Service-Oriented%20Architecture.svg" alt="Service-Oriented Architecture" loading="lazy" width="983" height="403" style="width:88%"/>
+<picture>
+<source srcset="/diagrams/Dependencies/Service-Oriented%20Architecture.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Dependencies/Service-Oriented%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Dependencies/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" loading="lazy" width="983" height="403" style="width:88%"/>
+</picture>
 </a>
 </figure>
 
@@ -94,7 +102,11 @@ This architecture was hyped at the time when enterprises were expanding by acqui
 
 <figure>
 <a href="/diagrams/Variants/3/Distributed%20Monolith.png">
-<img src="/diagrams/Variants/3/Distributed%20Monolith.svg" alt="Distributed Monolith" loading="lazy" width="963" height="442" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/3/Distributed%20Monolith.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/3/Distributed%20Monolith.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/3/Distributed%20Monolith.png" alt="Distributed Monolith" loading="lazy" width="963" height="442" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -104,7 +116,11 @@ If a [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) gets too c
 
 <figure>
 <a href="/diagrams/Variants/3/Enterprise%20SOA.png">
-<img src="/diagrams/Variants/3/Enterprise%20SOA.svg" alt="Enterprise SOA" loading="lazy" width="1403" height="541" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/3/Enterprise%20SOA.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/3/Enterprise%20SOA.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/3/Enterprise%20SOA.png" alt="Enterprise SOA" loading="lazy" width="1403" height="541" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -121,7 +137,11 @@ The layers of *SOA* are:
 
 <figure>
 <a href="/diagrams/Variants/3/DOMA.png">
-<img src="/diagrams/Variants/3/DOMA.svg" alt="DOMA" loading="lazy" width="994" height="809" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/3/DOMA.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/3/DOMA.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/3/DOMA.png" alt="DOMA" loading="lazy" width="994" height="809" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -138,7 +158,11 @@ Uber’s *DOMA* also [makes heavy use](https://www.uber.com/blog/microservice-ar
 
 <figure>
 <a href="/diagrams/Variants/3/SOA%20-%20AUTOSAR.png">
-<img src="/diagrams/Variants/3/SOA%20-%20AUTOSAR.svg" alt="SOA - AUTOSAR" loading="lazy" width="1213" height="483" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/3/SOA%20-%20AUTOSAR.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/3/SOA%20-%20AUTOSAR.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/3/SOA%20-%20AUTOSAR.png" alt="SOA - AUTOSAR" loading="lazy" width="1213" height="483" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -157,7 +181,11 @@ It seems that some proponents of [*Nanoservices*]({{< relref "../basic-metapatte
 
 <figure>
 <a href="/diagrams/Evolutions/3/SOA%20-%201.png">
-<img src="/diagrams/Evolutions/3/SOA%20-%201.svg" alt="SOA - 1" loading="lazy" width="1323" height="383" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Evolutions/3/SOA%20-%201.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/3/SOA%20-%201.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Evolutions/3/SOA%20-%201.png" alt="SOA - 1" loading="lazy" width="1323" height="383" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -166,7 +194,11 @@ It seems that some proponents of [*Nanoservices*]({{< relref "../basic-metapatte
 
 <figure>
 <a href="/diagrams/Evolutions/3/SOA%20-%202.png">
-<img src="/diagrams/Evolutions/3/SOA%20-%202.svg" alt="SOA - 2" loading="lazy" width="1383" height="384" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Evolutions/3/SOA%20-%202.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/3/SOA%20-%202.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Evolutions/3/SOA%20-%202.png" alt="SOA - 2" loading="lazy" width="1383" height="384" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -182,7 +214,11 @@ Afterwards you may deal with the remaining orchestration\. The idea is to move t
 
 <figure>
 <a href="/diagrams/Evolutions/3/SOA%20-%203.png">
-<img src="/diagrams/Evolutions/3/SOA%20-%203.svg" alt="SOA - 3" loading="lazy" width="1303" height="446" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Evolutions/3/SOA%20-%203.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/3/SOA%20-%203.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Evolutions/3/SOA%20-%203.png" alt="SOA - 3" loading="lazy" width="1303" height="446" style="width:100%"/>
+</picture>
 </a>
 </figure>
 

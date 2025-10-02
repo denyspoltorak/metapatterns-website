@@ -11,7 +11,11 @@ images = ["/diagrams/Main/Backends%20for%20Frontends.svg"]
 
 <figure>
 <a href="/diagrams/Main/Backends%20for%20Frontends.png">
-<img src="/diagrams/Main/Backends%20for%20Frontends.svg" alt="Backends for Frontends" loading="lazy" width="904" height="601" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Main/Backends%20for%20Frontends.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Main/Backends%20for%20Frontends.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Main/Backends%20for%20Frontends.png" alt="Backends for Frontends" loading="lazy" width="904" height="634" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -60,7 +64,11 @@ Each *BFF* depends on all the services it uses \(usually every service in the sy
 
 <figure>
 <a href="/diagrams/Dependencies/Backends%20for%20Frontends.png">
-<img src="/diagrams/Dependencies/Backends%20for%20Frontends.svg" alt="Backends for Frontends" loading="lazy" width="963" height="323" style="width:91%"/>
+<picture>
+<source srcset="/diagrams/Dependencies/Backends%20for%20Frontends.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Dependencies/Backends%20for%20Frontends.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Dependencies/Backends%20for%20Frontends.png" alt="Backends for Frontends" loading="lazy" width="963" height="323" style="width:91%"/>
+</picture>
 </a>
 </figure>
 
@@ -82,7 +90,11 @@ Each *BFF* depends on all the services it uses \(usually every service in the sy
 
 <figure>
 <a href="/diagrams/Relations/BFF.png">
-<img src="/diagrams/Relations/BFF.svg" alt="BFF" loading="lazy" width="1343" height="422" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Relations/BFF.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Relations/BFF.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Relations/BFF.png" alt="BFF" loading="lazy" width="1343" height="422" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -100,7 +112,11 @@ Each *BFF* depends on all the services it uses \(usually every service in the sy
 
 <figure>
 <a href="/diagrams/Variants/3/BFF%20-%20Gateways.png">
-<img src="/diagrams/Variants/3/BFF%20-%20Gateways.svg" alt="BFF - Gateways" loading="lazy" width="843" height="403" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/3/BFF%20-%20Gateways.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/3/BFF%20-%20Gateways.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/3/BFF%20-%20Gateways.png" alt="BFF - Gateways" loading="lazy" width="843" height="403" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -112,7 +128,11 @@ Multiple *Adapters* match the literal meaning of *Backends for Frontends* – ea
 
 <figure>
 <a href="/diagrams/Variants/3/BFF%20-%20Orchestrators.png">
-<img src="/diagrams/Variants/3/BFF%20-%20Orchestrators.svg" alt="BFF - Orchestrators" loading="lazy" width="833" height="403" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/3/BFF%20-%20Orchestrators.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/3/BFF%20-%20Orchestrators.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/3/BFF%20-%20Orchestrators.png" alt="BFF - Orchestrators" loading="lazy" width="833" height="403" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -122,7 +142,11 @@ An [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) 
 
 <figure>
 <a href="/diagrams/Variants/3/BFF%20-%20Gateways%20+%20Orchestrators.png">
-<img src="/diagrams/Variants/3/BFF%20-%20Gateways%20+%20Orchestrators.svg" alt="BFF - Gateways + Orchestrators" loading="lazy" width="803" height="503" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/3/BFF%20-%20Gateways%20+%20Orchestrators.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/3/BFF%20-%20Gateways%20+%20Orchestrators.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/3/BFF%20-%20Gateways%20+%20Orchestrators.png" alt="BFF - Gateways + Orchestrators" loading="lazy" width="803" height="503" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -132,7 +156,11 @@ Clients vary in both access mode \(protocol\) and workflow\. [*Orchestrators*]({
 
 <figure>
 <a href="/diagrams/Variants/3/BFF%20-%20API%20gateways.png">
-<img src="/diagrams/Variants/3/BFF%20-%20API%20gateways.svg" alt="BFF - API gateways" loading="lazy" width="823" height="463" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/3/BFF%20-%20API%20gateways.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/3/BFF%20-%20API%20gateways.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/3/BFF%20-%20API%20gateways.png" alt="BFF - API gateways" loading="lazy" width="823" height="463" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -142,7 +170,11 @@ Clients vary in access mode \(protocol\) and workflow and there is a third\-part
 
 <figure>
 <a href="/diagrams/Variants/3/BFF%20-%20Event%20mediators.png">
-<img src="/diagrams/Variants/3/BFF%20-%20Event%20mediators.svg" alt="BFF - Event mediators" loading="lazy" width="923" height="443" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/3/BFF%20-%20Event%20mediators.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/3/BFF%20-%20Event%20mediators.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/3/BFF%20-%20Event%20mediators.png" alt="BFF - Event mediators" loading="lazy" width="923" height="443" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -160,7 +192,11 @@ Clients vary in access mode \(protocol\) and workflow and there is a third\-part
 
 <figure>
 <a href="/diagrams/Evolutions/3/BFF.png">
-<img src="/diagrams/Evolutions/3/BFF.svg" alt="BFF" loading="lazy" width="1543" height="1165" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Evolutions/3/BFF.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/3/BFF.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Evolutions/3/BFF.png" alt="BFF" loading="lazy" width="1543" height="1165" style="width:100%"/>
+</picture>
 </a>
 </figure>
 

@@ -13,7 +13,11 @@ The most straightforward way to integrate services is to add a coordinating laye
 
 <figure>
 <a href="/diagrams/Communication/Services%20to%20Orchestrator.png">
-<img src="/diagrams/Communication/Services%20to%20Orchestrator.svg" alt="Services to Orchestrator" loading="lazy" width="1063" height="293" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Communication/Services%20to%20Orchestrator.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Services%20to%20Orchestrator.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Communication/Services%20to%20Orchestrator.png" alt="Services to Orchestrator" loading="lazy" width="1063" height="293" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -27,7 +31,11 @@ In a backend which serves client requests an *Orchestrator* takes the role of *F
 
 <figure>
 <a href="/diagrams/Communication/Facade.png">
-<img src="/diagrams/Communication/Facade.svg" alt="Facade" loading="lazy" width="983" height="303" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Communication/Facade.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Facade.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Communication/Facade.png" alt="Facade" loading="lazy" width="983" height="303" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -35,7 +43,11 @@ A *Facade* also supports querying the services in parallel and collecting the da
 
 <figure>
 <a href="/diagrams/Communication/Facade%20-%20Parallel.png">
-<img src="/diagrams/Communication/Facade%20-%20Parallel.svg" alt="Facade - Parallel" loading="lazy" width="783" height="303" style="width:90%"/>
+<picture>
+<source srcset="/diagrams/Communication/Facade%20-%20Parallel.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Facade%20-%20Parallel.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Communication/Facade%20-%20Parallel.png" alt="Facade - Parallel" loading="lazy" width="783" height="303" style="width:90%"/>
+</picture>
 </a>
 </figure>
 
@@ -43,7 +55,11 @@ Embedded and system programming – the areas that deal with automating [*contro
 
 <figure>
 <a href="/diagrams/Communication/Mediator.png">
-<img src="/diagrams/Communication/Mediator.svg" alt="Mediator" loading="lazy" width="903" height="303" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Communication/Mediator.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Mediator.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Communication/Mediator.png" alt="Mediator" loading="lazy" width="903" height="303" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -55,7 +71,11 @@ By default an *Orchestrator* depends on each service which it manages – that m
 
 <figure>
 <a href="/diagrams/Communication/Orchestrator%20-%20Dependencies.png">
-<img src="/diagrams/Communication/Orchestrator%20-%20Dependencies.svg" alt="Orchestrator - Dependencies" loading="lazy" width="943" height="205" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Communication/Orchestrator%20-%20Dependencies.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Orchestrator%20-%20Dependencies.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Communication/Orchestrator%20-%20Dependencies.png" alt="Orchestrator - Dependencies" loading="lazy" width="943" height="205" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -63,7 +83,11 @@ Another option, which appears in [*Plugins*]({{< relref "../../implementation-me
 
 <figure>
 <a href="/diagrams/Communication/Microkernel%20-%20Dependencies.png">
-<img src="/diagrams/Communication/Microkernel%20-%20Dependencies.svg" alt="Microkernel - Dependencies" loading="lazy" width="963" height="205" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Communication/Microkernel%20-%20Dependencies.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Microkernel%20-%20Dependencies.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Communication/Microkernel%20-%20Dependencies.png" alt="Microkernel - Dependencies" loading="lazy" width="963" height="205" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -71,7 +95,11 @@ Furthermore, some domains develop that idea into a [*Hierarchy*]({{< relref "../
 
 <figure>
 <a href="/diagrams/Communication/Hierarchy%20-%20Dependencies.png">
-<img src="/diagrams/Communication/Hierarchy%20-%20Dependencies.svg" alt="Hierarchy - Dependencies" loading="lazy" width="903" height="243" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Communication/Hierarchy%20-%20Dependencies.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Hierarchy%20-%20Dependencies.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Communication/Hierarchy%20-%20Dependencies.png" alt="Hierarchy - Dependencies" loading="lazy" width="903" height="243" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -79,7 +107,11 @@ All kinds of orchestration allow for an easy addition of new use cases which may
 
 <figure>
 <a href="/diagrams/Communication/Orchestrator%20add%20a%20Use%20Case.png">
-<img src="/diagrams/Communication/Orchestrator%20add%20a%20Use%20Case.svg" alt="Orchestrator add a Use Case" loading="lazy" width="1123" height="303" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Communication/Orchestrator%20add%20a%20Use%20Case.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Orchestrator%20add%20a%20Use%20Case.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Communication/Orchestrator%20add%20a%20Use%20Case.png" alt="Orchestrator add a Use Case" loading="lazy" width="1123" height="303" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -89,7 +121,11 @@ In some systems there are several services that have their own kinds of clients 
 
 <figure>
 <a href="/diagrams/Communication/Mutual%20Orchestration%20-%201.png">
-<img src="/diagrams/Communication/Mutual%20Orchestration%20-%201.svg" alt="Mutual Orchestration - 1" loading="lazy" width="883" height="263" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Communication/Mutual%20Orchestration%20-%201.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Mutual%20Orchestration%20-%201.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Communication/Mutual%20Orchestration%20-%201.png" alt="Mutual Orchestration - 1" loading="lazy" width="883" height="263" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -97,7 +133,11 @@ As each of the services depends on the APIs of the others, any change to any int
 
 <figure>
 <a href="/diagrams/Communication/Mutual%20Orchestration%20-%202.png">
-<img src="/diagrams/Communication/Mutual%20Orchestration%20-%202.svg" alt="Mutual Orchestration - 2" loading="lazy" width="883" height="185" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Communication/Mutual%20Orchestration%20-%202.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Mutual%20Orchestration%20-%202.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Communication/Mutual%20Orchestration%20-%202.png" alt="Mutual Orchestration - 2" loading="lazy" width="883" height="185" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -105,13 +145,21 @@ In real life services are likely to be layered, with their upper layers acting a
 
 <figure>
 <a href="/diagrams/Communication/Mutual%20Orchestration%20-%203.png">
-<img src="/diagrams/Communication/Mutual%20Orchestration%20-%203.svg" alt="Mutual Orchestration - 3" loading="lazy" width="1023" height="363" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Communication/Mutual%20Orchestration%20-%203.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Mutual%20Orchestration%20-%203.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Communication/Mutual%20Orchestration%20-%203.png" alt="Mutual Orchestration - 3" loading="lazy" width="1023" height="363" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
 <figure>
 <a href="/diagrams/Communication/Mutual%20Orchestration%20-%204.png">
-<img src="/diagrams/Communication/Mutual%20Orchestration%20-%204.svg" alt="Mutual Orchestration - 4" loading="lazy" width="1023" height="294" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Communication/Mutual%20Orchestration%20-%204.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Mutual%20Orchestration%20-%204.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Communication/Mutual%20Orchestration%20-%204.png" alt="Mutual Orchestration - 4" loading="lazy" width="1023" height="294" style="width:100%"/>
+</picture>
 </a>
 </figure>
 

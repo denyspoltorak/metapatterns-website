@@ -15,7 +15,11 @@ Basic metapatterns are both common stand\-alone architectures and building block
 
 <figure>
 <a href="/diagrams/Contents/Monolith.png">
-<img src="/diagrams/Contents/Monolith.svg" alt="Monolith" loading="lazy" width="1003" height="243" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Contents/Monolith.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Contents/Monolith.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Contents/Monolith.png" alt="Monolith" loading="lazy" width="1003" height="243" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -27,7 +31,11 @@ Basic metapatterns are both common stand\-alone architectures and building block
 
 <figure>
 <a href="/diagrams/Contents/Shards.png">
-<img src="/diagrams/Contents/Shards.svg" alt="Shards" loading="lazy" width="783" height="243" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Contents/Shards.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Contents/Shards.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Contents/Shards.png" alt="Shards" loading="lazy" width="783" height="243" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -39,7 +47,11 @@ Basic metapatterns are both common stand\-alone architectures and building block
 
 <figure>
 <a href="/diagrams/Contents/Layers.png">
-<img src="/diagrams/Contents/Layers.svg" alt="Layers" loading="lazy" width="783" height="243" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Contents/Layers.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Contents/Layers.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Contents/Layers.png" alt="Layers" loading="lazy" width="783" height="243" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -51,7 +63,11 @@ Basic metapatterns are both common stand\-alone architectures and building block
 
 <figure>
 <a href="/diagrams/Contents/Services.png">
-<img src="/diagrams/Contents/Services.svg" alt="Services" loading="lazy" width="943" height="246" style="width:93%"/>
+<picture>
+<source srcset="/diagrams/Contents/Services.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Contents/Services.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Contents/Services.png" alt="Services" loading="lazy" width="943" height="246" style="width:93%"/>
+</picture>
 </a>
 </figure>
 
@@ -63,7 +79,11 @@ Basic metapatterns are both common stand\-alone architectures and building block
 
 <figure>
 <a href="/diagrams/Contents/Pipeline.png">
-<img src="/diagrams/Contents/Pipeline.svg" alt="Pipeline" loading="lazy" width="1003" height="203" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Contents/Pipeline.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Contents/Pipeline.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Contents/Pipeline.png" alt="Pipeline" loading="lazy" width="1003" height="203" style="width:100%"/>
+</picture>
 </a>
 </figure>
 

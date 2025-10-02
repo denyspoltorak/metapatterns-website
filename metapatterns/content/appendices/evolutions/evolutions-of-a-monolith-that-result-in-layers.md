@@ -20,7 +20,11 @@ Another drawback of [*Monolith*]({{< relref "../../basic-metapatterns/monolith.m
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers.png">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers.svg" alt="Monolith to Layers" loading="lazy" width="1087" height="285" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers.png" alt="Monolith to Layers" loading="lazy" width="1087" height="285" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -54,7 +58,11 @@ Most systems apply *layering* by default as it grants a lot of flexibility at ve
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20add%20Database.png">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20add%20Database.svg" alt="Monolith add Database" loading="lazy" width="1107" height="244" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20add%20Database.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20add%20Database.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20add%20Database.png" alt="Monolith add Database" loading="lazy" width="1107" height="244" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -96,7 +104,11 @@ A datastore is non\-trivial to implement\. While ordinary files are good for sma
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20add%20Proxy.png">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20add%20Proxy.svg" alt="Monolith add Proxy" loading="lazy" width="1087" height="361" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20add%20Proxy.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20add%20Proxy.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20add%20Proxy.png" alt="Monolith add Proxy" loading="lazy" width="1087" height="361" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -132,7 +144,11 @@ A *Proxy* is placed between your system and its clients to provide generic funct
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20add%20Orchestrator.png">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20add%20Orchestrator.svg" alt="Monolith add Orchestrator" loading="lazy" width="1047" height="323" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20add%20Orchestrator.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20add%20Orchestrator.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20add%20Orchestrator.png" alt="Monolith add Orchestrator" loading="lazy" width="1047" height="323" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -185,7 +201,11 @@ Another set of evolutions stems from splitting one or more *layers* into [*Servi
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%201.png">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%201.svg" alt="Monolith to Layers - Further 1" loading="lazy" width="1126" height="843" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%201.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%201.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%201.png" alt="Monolith to Layers - Further 1" loading="lazy" width="1126" height="843" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -199,7 +219,11 @@ In addition,
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.svg" alt="Monolith to Layers - Further 2" loading="lazy" width="983" height="461" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png" alt="Monolith to Layers - Further 2" loading="lazy" width="983" height="461" style="width:100%"/>
+</picture>
 </a>
 </figure>
 

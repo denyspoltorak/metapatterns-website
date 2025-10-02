@@ -27,7 +27,11 @@ Those dimensions make four corner cases that vary in architectural styles:
 
 <figure>
 <a href="/diagrams/4Kinds/4%20Kinds.png">
-<img src="/diagrams/4Kinds/4%20Kinds.svg" alt="4 Kinds" loading="lazy" width="1341" height="683" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/4Kinds/4%20Kinds.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/4Kinds/4%20Kinds.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/4Kinds/4%20Kinds.png" alt="4 Kinds" loading="lazy" width="1341" height="683" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -35,7 +39,11 @@ Those dimensions make four corner cases that vary in architectural styles:
 
 <figure>
 <a href="/diagrams/4Kinds/Control%20-%20main.png">
-<img src="/diagrams/4Kinds/Control%20-%20main.svg" alt="Control - main" loading="lazy" width="972" height="423" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/4Kinds/Control%20-%20main.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/4Kinds/Control%20-%20main.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/4Kinds/Control%20-%20main.png" alt="Control - main" loading="lazy" width="972" height="423" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -81,7 +89,11 @@ At the architectural level, control systems are [event\-driven](https://en.wikip
 
 <figure>
 <a href="/diagrams/4Kinds/Control%20-%20variants.png">
-<img src="/diagrams/4Kinds/Control%20-%20variants.svg" alt="Control - variants" loading="lazy" width="1224" height="664" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/4Kinds/Control%20-%20variants.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/4Kinds/Control%20-%20variants.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/4Kinds/Control%20-%20variants.png" alt="Control - variants" loading="lazy" width="1224" height="664" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -108,7 +120,11 @@ Messages may be dispatched through multilevel index arrays or *Visitors* \[[GoF]
 
 <figure>
 <a href="/diagrams/4Kinds/Interactive%20-%20main.png">
-<img src="/diagrams/4Kinds/Interactive%20-%20main.svg" alt="Interactive - main" loading="lazy" width="922" height="362" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/4Kinds/Interactive%20-%20main.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/4Kinds/Interactive%20-%20main.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/4Kinds/Interactive%20-%20main.png" alt="Interactive - main" loading="lazy" width="922" height="362" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -130,7 +146,11 @@ Interactive systems vary in a couple of ways:
 
 <figure>
 <a href="/diagrams/4Kinds/Interactive%20-%20variants%201.png">
-<img src="/diagrams/4Kinds/Interactive%20-%20variants%201.svg" alt="Interactive - variants 1" loading="lazy" width="1143" height="311" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/4Kinds/Interactive%20-%20variants%201.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/4Kinds/Interactive%20-%20variants%201.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/4Kinds/Interactive%20-%20variants%201.png" alt="Interactive - variants 1" loading="lazy" width="1143" height="311" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -139,7 +159,11 @@ Interactive systems vary in a couple of ways:
 
 <figure>
 <a href="/diagrams/4Kinds/Interactive%20-%20variants%202.png">
-<img src="/diagrams/4Kinds/Interactive%20-%20variants%202.svg" alt="Interactive - variants 2" loading="lazy" width="1103" height="367" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/4Kinds/Interactive%20-%20variants%202.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/4Kinds/Interactive%20-%20variants%202.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/4Kinds/Interactive%20-%20variants%202.png" alt="Interactive - variants 2" loading="lazy" width="1103" height="367" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -167,7 +191,11 @@ The presentation would usually subscribe to updates from the business logic\.
 
 <figure>
 <a href="/diagrams/4Kinds/Streaming%20-%20main.png">
-<img src="/diagrams/4Kinds/Streaming%20-%20main.svg" alt="Streaming - main" loading="lazy" width="1122" height="304" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/4Kinds/Streaming%20-%20main.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/4Kinds/Streaming%20-%20main.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/4Kinds/Streaming%20-%20main.png" alt="Streaming - main" loading="lazy" width="1122" height="304" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -207,7 +235,11 @@ Every filter is likely to run in its own thread and be unaware of other filters 
 
 <figure>
 <a href="/diagrams/4Kinds/Computational%20-%20main.png">
-<img src="/diagrams/4Kinds/Computational%20-%20main.svg" alt="Computational - main" loading="lazy" width="922" height="343" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/4Kinds/Computational%20-%20main.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/4Kinds/Computational%20-%20main.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/4Kinds/Computational%20-%20main.png" alt="Computational - main" loading="lazy" width="922" height="343" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -248,7 +280,11 @@ Most real\-life software is too complex to fit the classification outlined above
 
 <figure>
 <a href="/diagrams/4Kinds/Camera.png">
-<img src="/diagrams/4Kinds/Camera.svg" alt="Camera" loading="lazy" width="1044" height="525" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/4Kinds/Camera.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/4Kinds/Camera.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/4Kinds/Camera.png" alt="Camera" loading="lazy" width="1044" height="525" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -263,7 +299,11 @@ A digital camera incorporates subsystems of different kinds:
 
 <figure>
 <a href="/diagrams/4Kinds/3D%20action.png">
-<img src="/diagrams/4Kinds/3D%20action.svg" alt="3D action" loading="lazy" width="1033" height="322" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/4Kinds/3D%20action.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/4Kinds/3D%20action.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/4Kinds/3D%20action.png" alt="3D action" loading="lazy" width="1033" height="322" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -273,7 +313,11 @@ Games with 3D graphics often bypass the host OS’ [desktop environment](https:/
 
 <figure>
 <a href="/diagrams/4Kinds/Database.png">
-<img src="/diagrams/4Kinds/Database.svg" alt="Database" loading="lazy" width="1101" height="703" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/4Kinds/Database.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/4Kinds/Database.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/4Kinds/Database.png" alt="Database" loading="lazy" width="1101" height="703" style="width:100%"/>
+</picture>
 </a>
 </figure>
 

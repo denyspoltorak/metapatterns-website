@@ -15,7 +15,11 @@ There are several patterns with no system\-wide layers\. Some of them incorporat
 
 <figure>
 <a href="/diagrams/Contents/Layered%20Services.png">
-<img src="/diagrams/Contents/Layered%20Services.svg" alt="Layered Services" loading="lazy" width="1133" height="343" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Contents/Layered%20Services.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Contents/Layered%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Contents/Layered%20Services.png" alt="Layered Services" loading="lazy" width="1133" height="343" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -27,7 +31,11 @@ There are several patterns with no system\-wide layers\. Some of them incorporat
 
 <figure>
 <a href="/diagrams/Contents/Polyglot%20Persistence.png">
-<img src="/diagrams/Contents/Polyglot%20Persistence.svg" alt="Polyglot Persistence" loading="lazy" width="1023" height="303" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Contents/Polyglot%20Persistence.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Contents/Polyglot%20Persistence.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Contents/Polyglot%20Persistence.png" alt="Polyglot Persistence" loading="lazy" width="1023" height="303" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -39,7 +47,11 @@ There are several patterns with no system\-wide layers\. Some of them incorporat
 
 <figure>
 <a href="/diagrams/Contents/Backends%20for%20Frontends.png">
-<img src="/diagrams/Contents/Backends%20for%20Frontends.svg" alt="Backends for Frontends" loading="lazy" width="1003" height="383" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Contents/Backends%20for%20Frontends.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Contents/Backends%20for%20Frontends.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Contents/Backends%20for%20Frontends.png" alt="Backends for Frontends" loading="lazy" width="1003" height="383" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -51,7 +63,11 @@ There are several patterns with no system\-wide layers\. Some of them incorporat
 
 <figure>
 <a href="/diagrams/Contents/Service-Oriented%20Architecture.png">
-<img src="/diagrams/Contents/Service-Oriented%20Architecture.svg" alt="Service-Oriented Architecture" loading="lazy" width="983" height="401" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Contents/Service-Oriented%20Architecture.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Contents/Service-Oriented%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Contents/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" loading="lazy" width="983" height="401" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -63,7 +79,11 @@ There are several patterns with no system\-wide layers\. Some of them incorporat
 
 <figure>
 <a href="/diagrams/Contents/Hierarchy.png">
-<img src="/diagrams/Contents/Hierarchy.svg" alt="Hierarchy" loading="lazy" width="907" height="303" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Contents/Hierarchy.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Contents/Hierarchy.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Contents/Hierarchy.png" alt="Hierarchy" loading="lazy" width="907" height="303" style="width:100%"/>
+</picture>
 </a>
 </figure>
 

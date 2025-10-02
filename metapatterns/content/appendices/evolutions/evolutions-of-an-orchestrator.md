@@ -26,7 +26,11 @@ There is one way to counter the first point and more ways to solve the second on
 
 <figure>
 <a href="/diagrams/Evolutions/2/Orchestrator%20to%20Layered%20Services.png">
-<img src="/diagrams/Evolutions/2/Orchestrator%20to%20Layered%20Services.svg" alt="Orchestrator to Layered Services" loading="lazy" width="1343" height="403" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Evolutions/2/Orchestrator%20to%20Layered%20Services.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/2/Orchestrator%20to%20Layered%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Evolutions/2/Orchestrator%20to%20Layered%20Services.png" alt="Orchestrator to Layered Services" loading="lazy" width="1343" height="403" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -61,7 +65,11 @@ If the *orchestration* logic mostly follows the subdomains, it may be possible t
 
 <figure>
 <a href="/diagrams/Evolutions/2/Orchestrator%20to%20Backends%20for%20Frontends.png">
-<img src="/diagrams/Evolutions/2/Orchestrator%20to%20Backends%20for%20Frontends.svg" alt="Orchestrator to Backends for Frontends" loading="lazy" width="1283" height="384" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Evolutions/2/Orchestrator%20to%20Backends%20for%20Frontends.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/2/Orchestrator%20to%20Backends%20for%20Frontends.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Evolutions/2/Orchestrator%20to%20Backends%20for%20Frontends.png" alt="Orchestrator to Backends for Frontends" loading="lazy" width="1283" height="384" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -95,7 +103,11 @@ When use cases for clients vary, it makes sense for each kind of client to have 
 
 <figure>
 <a href="/diagrams/Evolutions/2/Orchestrator%20add%20Orchestrator.png">
-<img src="/diagrams/Evolutions/2/Orchestrator%20add%20Orchestrator.svg" alt="Orchestrator add Orchestrator" loading="lazy" width="1307" height="464" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Evolutions/2/Orchestrator%20add%20Orchestrator.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/2/Orchestrator%20add%20Orchestrator.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Evolutions/2/Orchestrator%20add%20Orchestrator.png" alt="Orchestrator add Orchestrator" loading="lazy" width="1307" height="464" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -129,7 +141,11 @@ You may use two or three *orchestration frameworks* \(engines\) which differ in 
 
 <figure>
 <a href="/diagrams/Evolutions/2/Orchestrator%20to%20Hierarchy.png">
-<img src="/diagrams/Evolutions/2/Orchestrator%20to%20Hierarchy.svg" alt="Orchestrator to Hierarchy" loading="lazy" width="1326" height="305" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Evolutions/2/Orchestrator%20to%20Hierarchy.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/2/Orchestrator%20to%20Hierarchy.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Evolutions/2/Orchestrator%20to%20Hierarchy.png" alt="Orchestrator to Hierarchy" loading="lazy" width="1326" height="305" style="width:100%"/>
+</picture>
 </a>
 </figure>
 

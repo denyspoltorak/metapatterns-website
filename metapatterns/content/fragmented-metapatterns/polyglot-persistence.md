@@ -11,7 +11,11 @@ images = ["/diagrams/Main/Polyglot%20Persistence.svg"]
 
 <figure>
 <a href="/diagrams/Main/Polyglot%20Persistence.png">
-<img src="/diagrams/Main/Polyglot%20Persistence.svg" alt="Polyglot Persistence" loading="lazy" width="944" height="514" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Main/Polyglot%20Persistence.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Main/Polyglot%20Persistence.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Main/Polyglot%20Persistence.png" alt="Polyglot Persistence" loading="lazy" width="944" height="514" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -77,7 +81,11 @@ In general, each service depends on all of the databases which it uses\. There m
 
 <figure>
 <a href="/diagrams/Dependencies/PolyglotPersistence.png">
-<img src="/diagrams/Dependencies/PolyglotPersistence.svg" alt="PolyglotPersistence" loading="lazy" width="1243" height="263" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Dependencies/PolyglotPersistence.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Dependencies/PolyglotPersistence.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Dependencies/PolyglotPersistence.png" alt="PolyglotPersistence" loading="lazy" width="1243" height="263" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -101,7 +109,11 @@ In general, each service depends on all of the databases which it uses\. There m
 
 <figure>
 <a href="/diagrams/Relations/Polyglot%20Persistence.png">
-<img src="/diagrams/Relations/Polyglot%20Persistence.svg" alt="Polyglot Persistence" loading="lazy" width="1343" height="463" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Relations/Polyglot%20Persistence.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Relations/Polyglot%20Persistence.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Relations/Polyglot%20Persistence.png" alt="Polyglot Persistence" loading="lazy" width="1343" height="463" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -120,7 +132,11 @@ Many cases of *Polyglot Persistence* use multiple datastores just because there 
 
 <figure>
 <a href="/diagrams/Variants/3/PP%20-%20Specialized.png">
-<img src="/diagrams/Variants/3/PP%20-%20Specialized.svg" alt="PP - Specialized" loading="lazy" width="863" height="282" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/3/PP%20-%20Specialized.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/3/PP%20-%20Specialized.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/3/PP%20-%20Specialized.png" alt="PP - Specialized" loading="lazy" width="863" height="282" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -130,7 +146,11 @@ Databases [vary in their optimal use cases](https://www.jamesserra.com/archive/2
 
 <figure>
 <a href="/diagrams/Variants/3/PP%20-%20Private%20and%20Shared.png">
-<img src="/diagrams/Variants/3/PP%20-%20Private%20and%20Shared.svg" alt="PP - Private and Shared" loading="lazy" width="1303" height="303" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/3/PP%20-%20Private%20and%20Shared.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/3/PP%20-%20Private%20and%20Shared.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/3/PP%20-%20Private%20and%20Shared.png" alt="PP - Private and Shared" loading="lazy" width="1303" height="303" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -140,7 +160,11 @@ If several services or shards become coupled through a subset of the system’s 
 
 <figure>
 <a href="/diagrams/Variants/3/PP%20-%20File%20Storage.png">
-<img src="/diagrams/Variants/3/PP%20-%20File%20Storage.svg" alt="PP - File Storage" loading="lazy" width="863" height="243" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/3/PP%20-%20File%20Storage.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/3/PP%20-%20File%20Storage.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/3/PP%20-%20File%20Storage.png" alt="PP - File Storage" loading="lazy" width="863" height="243" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -160,7 +184,11 @@ The updates to the derived databases may come from:
 
 <figure>
 <a href="/diagrams/Variants/3/PP%20-%20Derived%20Storage.png">
-<img src="/diagrams/Variants/3/PP%20-%20Derived%20Storage.svg" alt="PP - Derived Storage" loading="lazy" width="1343" height="687" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/3/PP%20-%20Derived%20Storage.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/3/PP%20-%20Derived%20Storage.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/3/PP%20-%20Derived%20Storage.png" alt="PP - Derived Storage" loading="lazy" width="1343" height="687" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -168,7 +196,11 @@ The updates to the derived databases may come from:
 
 <figure>
 <a href="/diagrams/Variants/3/Read-only%20Replica.png">
-<img src="/diagrams/Variants/3/Read-only%20Replica.svg" alt="Read-only Replica" loading="lazy" width="713" height="384" style="width:71%"/>
+<picture>
+<source srcset="/diagrams/Variants/3/Read-only%20Replica.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/3/Read-only%20Replica.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/3/Read-only%20Replica.png" alt="Read-only Replica" loading="lazy" width="713" height="384" style="width:71%"/>
+</picture>
 </a>
 </figure>
 
@@ -178,7 +210,11 @@ Multiple instances of the database are deployed and one of them is the *leader* 
 
 <figure>
 <a href="/diagrams/Variants/3/Reporting%20DB%20and%20CQRS%20View.png">
-<img src="/diagrams/Variants/3/Reporting%20DB%20and%20CQRS%20View.svg" alt="Reporting DB and CQRS View" loading="lazy" width="1303" height="284" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/3/Reporting%20DB%20and%20CQRS%20View.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/3/Reporting%20DB%20and%20CQRS%20View.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/3/Reporting%20DB%20and%20CQRS%20View.png" alt="Reporting DB and CQRS View" loading="lazy" width="1303" height="284" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -190,7 +226,11 @@ A [*Reporting Database*](https://martinfowler.com/bliki/ReportingDatabase.html) 
 
 <figure>
 <a href="/diagrams/Variants/3/Memory%20Image.png">
-<img src="/diagrams/Variants/3/Memory%20Image.svg" alt="Memory Image" loading="lazy" width="1303" height="290" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/3/Memory%20Image.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/3/Memory%20Image.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/3/Memory%20Image.png" alt="Memory Image" loading="lazy" width="1303" height="290" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -200,7 +240,11 @@ A [*Reporting Database*](https://martinfowler.com/bliki/ReportingDatabase.html) 
 
 <figure>
 <a href="/diagrams/Variants/3/Query%20Service.png">
-<img src="/diagrams/Variants/3/Query%20Service.svg" alt="Query Service" loading="lazy" width="1263" height="283" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/3/Query%20Service.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/3/Query%20Service.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/3/Query%20Service.png" alt="Query Service" loading="lazy" width="1263" height="283" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -214,7 +258,11 @@ A [*Front Controller*]({{< relref "../extension-metapatterns/combined-component.
 
 <figure>
 <a href="/diagrams/Variants/3/Search%20Index.png">
-<img src="/diagrams/Variants/3/Search%20Index.svg" alt="Search Index" loading="lazy" width="1243" height="307" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/3/Search%20Index.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/3/Search%20Index.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/3/Search%20Index.png" alt="Search Index" loading="lazy" width="1243" height="307" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -224,7 +272,11 @@ Some domains require a kind of search which is not naturally supported by ordina
 
 <figure>
 <a href="/diagrams/Variants/3/Historical%20Data.png">
-<img src="/diagrams/Variants/3/Historical%20Data.svg" alt="Historical Data" loading="lazy" width="983" height="282" style="width:92%"/>
+<picture>
+<source srcset="/diagrams/Variants/3/Historical%20Data.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/3/Historical%20Data.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/3/Historical%20Data.png" alt="Historical Data" loading="lazy" width="983" height="282" style="width:92%"/>
+</picture>
 </a>
 </figure>
 
@@ -234,7 +286,11 @@ It is common to store the history of sales in a database\. However, once a month
 
 <figure>
 <a href="/diagrams/Variants/3/Cache-Aside.png">
-<img src="/diagrams/Variants/3/Cache-Aside.svg" alt="Cache-Aside" loading="lazy" width="763" height="325" style="width:80%"/>
+<picture>
+<source srcset="/diagrams/Variants/3/Cache-Aside.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/3/Cache-Aside.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/3/Cache-Aside.png" alt="Cache-Aside" loading="lazy" width="763" height="325" style="width:80%"/>
+</picture>
 </a>
 </figure>
 
@@ -251,7 +307,11 @@ Keeping the cache consistent with the main database is the hard part\. There are
 
 <figure>
 <a href="/diagrams/Evolutions/3/Polyglor%20Persistence%20-%201.png">
-<img src="/diagrams/Evolutions/3/Polyglor%20Persistence%20-%201.svg" alt="Polyglor Persistence - 1" loading="lazy" width="1123" height="264" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Evolutions/3/Polyglor%20Persistence%20-%201.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/3/Polyglor%20Persistence%20-%201.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Evolutions/3/Polyglor%20Persistence%20-%201.png" alt="Polyglor Persistence - 1" loading="lazy" width="1123" height="264" style="width:100%"/>
+</picture>
 </a>
 </figure>
 

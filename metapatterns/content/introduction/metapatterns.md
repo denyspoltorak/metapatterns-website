@@ -62,7 +62,11 @@ We’ll draw the abstractness axis vertically with higher\-level modules positio
 
 <figure>
 <a href="/diagrams/Intro/CQRS%20with%20notes.png">
-<img src="/diagrams/Intro/CQRS%20with%20notes.svg" alt="CQRS with notes" loading="lazy" width="981" height="674" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Intro/CQRS%20with%20notes.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Intro/CQRS%20with%20notes.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Intro/CQRS%20with%20notes.png" alt="CQRS with notes" loading="lazy" width="981" height="674" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -82,7 +86,11 @@ Let’s consider the following structure:
 
 <figure>
 <a href="/diagrams/Intro/Example-Undefined.png">
-<img src="/diagrams/Intro/Example-Undefined.svg" alt="Example-Undefined" loading="lazy" width="943" height="223" style="width:93%"/>
+<picture>
+<source srcset="/diagrams/Intro/Example-Undefined.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Intro/Example-Undefined.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Intro/Example-Undefined.png" alt="Example-Undefined" loading="lazy" width="943" height="223" style="width:93%"/>
+</picture>
 </a>
 </figure>
 
@@ -95,7 +103,11 @@ It features two \(or more in real life\) high\-level modules that communicate wi
 
 <figure>
 <a href="/diagrams/Intro/Example-Defined.png">
-<img src="/diagrams/Intro/Example-Defined.svg" alt="Example-Defined" loading="lazy" width="863" height="223" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Intro/Example-Defined.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Intro/Example-Defined.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Intro/Example-Defined.png" alt="Example-Defined" loading="lazy" width="863" height="223" style="width:100%"/>
+</picture>
 </a>
 </figure>
 

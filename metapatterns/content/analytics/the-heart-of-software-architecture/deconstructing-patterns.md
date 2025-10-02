@@ -77,7 +77,11 @@ Finally, let’s close the book by iterating over the metapatterns and looking i
 
 <figure>
 <a href="/diagrams/Heart/Basic.png">
-<img src="/diagrams/Heart/Basic.svg" alt="Basic" loading="lazy" width="1206" height="663" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Heart/Basic.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Heart/Basic.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Heart/Basic.png" alt="Basic" loading="lazy" width="1206" height="663" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -99,7 +103,11 @@ Basic architectures:
 
 <figure>
 <a href="/diagrams/Heart/Extension.png">
-<img src="/diagrams/Heart/Extension.svg" alt="Extension" loading="lazy" width="1164" height="763" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Heart/Extension.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Heart/Extension.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Heart/Extension.png" alt="Extension" loading="lazy" width="1164" height="763" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -123,7 +131,11 @@ Grouping related functionality:
 
 <figure>
 <a href="/diagrams/Heart/Fragmented.png">
-<img src="/diagrams/Heart/Fragmented.svg" alt="Fragmented" loading="lazy" width="1467" height="922" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Heart/Fragmented.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Heart/Fragmented.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Heart/Fragmented.png" alt="Fragmented" loading="lazy" width="1467" height="922" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -144,7 +156,11 @@ Decoupled systems:
 
 <figure>
 <a href="/diagrams/Heart/Implementation.png">
-<img src="/diagrams/Heart/Implementation.svg" alt="Implementation" loading="lazy" width="1406" height="444" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Heart/Implementation.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Heart/Implementation.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Heart/Implementation.png" alt="Implementation" loading="lazy" width="1406" height="444" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
