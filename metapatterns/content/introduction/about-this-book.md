@@ -39,7 +39,11 @@ The diagrams are *NoUML* and most of them belong to one of the following kinds:
 
 <figure>
 <a href="/diagrams/Misc/Diagrams.png">
-<img src="/diagrams/Misc/Diagrams.png" alt="Diagrams" loading="lazy" width="1929" height="838" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Misc/Diagrams.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Misc/Diagrams.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Misc/Diagrams.png" alt="Diagrams" loading="lazy" width="1043" height="463" style="width:100%"/>
+</picture>
 </a>
 </figure>
 

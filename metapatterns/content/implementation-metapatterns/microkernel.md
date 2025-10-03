@@ -2,7 +2,7 @@
 weight = 7
 title = "Microkernel"
 description = "A microkernel mediates between resource providers and resource consumers. It both makes the providers expendable and sandboxes the consumers."
-images = ["/diagrams/Main/Microkernel.png"]
+images = ["/diagrams/Main/Microkernel.svg"]
 [sitemap]
   priority = 0.8
 +++
@@ -11,7 +11,11 @@ images = ["/diagrams/Main/Microkernel.png"]
 
 <figure>
 <a href="/diagrams/Main/Microkernel.png">
-<img src="/diagrams/Main/Microkernel.png" alt="Microkernel" loading="lazy" width="1609" height="932" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Main/Microkernel.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Main/Microkernel.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Main/Microkernel.png" alt="Microkernel" loading="lazy" width="844" height="534" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -67,7 +71,11 @@ The *applications* depend on the *API* of the *microkernel* while the *providers
 
 <figure>
 <a href="/diagrams/Dependencies/Microkernel.png">
-<img src="/diagrams/Dependencies/Microkernel.png" alt="Microkernel" loading="lazy" width="1601" height="564" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Dependencies/Microkernel.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Dependencies/Microkernel.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Dependencies/Microkernel.png" alt="Microkernel" loading="lazy" width="843" height="283" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -89,7 +97,11 @@ The *applications* depend on the *API* of the *microkernel* while the *providers
 
 <figure>
 <a href="/diagrams/Relations/Microkernel.png">
-<img src="/diagrams/Relations/Microkernel.png" alt="Microkernel" loading="lazy" width="2171" height="977" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Relations/Microkernel.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Relations/Microkernel.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Relations/Microkernel.png" alt="Microkernel" loading="lazy" width="1143" height="523" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -110,7 +122,11 @@ The *applications* depend on the *API* of the *microkernel* while the *providers
 
 <figure>
 <a href="/diagrams/Variants/4/OS.png">
-<img src="/diagrams/Variants/4/OS.png" alt="OS" loading="lazy" width="1684" height="713" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/4/OS.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/4/OS.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/4/OS.png" alt="OS" loading="lazy" width="903" height="373" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -120,7 +136,11 @@ The original inspiration for *Microkernel*, namely *operating systems*, provides
 
 <figure>
 <a href="/diagrams/Variants/4/Framework.png">
-<img src="/diagrams/Variants/4/Framework.png" alt="Framework" loading="lazy" width="1680" height="608" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/4/Framework.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/4/Framework.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/4/Framework.png" alt="Framework" loading="lazy" width="903" height="303" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -130,7 +150,11 @@ The *microkernel* is a [*Facade*]({{< relref "../extension-metapatterns/orchestr
 
 <figure>
 <a href="/diagrams/Variants/4/Virtualizer.png">
-<img src="/diagrams/Variants/4/Virtualizer.png" alt="Virtualizer" loading="lazy" width="1562" height="752" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/4/Virtualizer.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/4/Virtualizer.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/4/Virtualizer.png" alt="Virtualizer" loading="lazy" width="840" height="383" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -140,7 +164,11 @@ The *microkernel* is a [*Facade*]({{< relref "../extension-metapatterns/orchestr
 
 <figure>
 <a href="/diagrams/Variants/4/Interpreter.png">
-<img src="/diagrams/Variants/4/Interpreter.png" alt="Interpreter" loading="lazy" width="1688" height="604" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/4/Interpreter.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/4/Interpreter.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/4/Interpreter.png" alt="Interpreter" loading="lazy" width="902" height="303" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -150,7 +178,11 @@ User\-provided *scripts* are run by an *Interpreter* \[[GoF]({{< relref "../appe
 
 <figure>
 <a href="/diagrams/Variants/4/Config%20file.png">
-<img src="/diagrams/Variants/4/Config%20file.png" alt="Config file" loading="lazy" width="1667" height="718" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/4/Config%20file.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/4/Config%20file.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/4/Config%20file.png" alt="Config file" loading="lazy" width="883" height="383" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -160,7 +192,11 @@ User\-provided *scripts* are run by an *Interpreter* \[[GoF]({{< relref "../appe
 
 <figure>
 <a href="/diagrams/Variants/4/Saga%20engine.png">
-<img src="/diagrams/Variants/4/Saga%20engine.png" alt="Saga engine" loading="lazy" width="1749" height="748" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/4/Saga%20engine.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/4/Saga%20engine.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/4/Saga%20engine.png" alt="Saga engine" loading="lazy" width="943" height="384" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -170,7 +206,11 @@ A [*Saga*]({{< relref "../extension-metapatterns/orchestrator.md#orchestrated-sa
 
 <figure>
 <a href="/diagrams/Variants/4/AUTOSAR%20classic.png">
-<img src="/diagrams/Variants/4/AUTOSAR%20classic.png" alt="AUTOSAR classic" loading="lazy" width="1873" height="1183" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/4/AUTOSAR%20classic.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/4/AUTOSAR%20classic.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/4/AUTOSAR%20classic.png" alt="AUTOSAR classic" loading="lazy" width="982" height="623" style="width:100%"/>
+</picture>
 </a>
 </figure>
 

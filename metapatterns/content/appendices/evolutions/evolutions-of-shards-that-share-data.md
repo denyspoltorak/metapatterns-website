@@ -20,7 +20,11 @@ One issue peculiar to [*Shards*]({{< relref "../../basic-metapatterns/shards.md"
 
 <figure>
 <a href="/diagrams/Evolutions/Shards/Shards%20to%20Shared%20DB.png">
-<img src="/diagrams/Evolutions/Shards/Shards%20to%20Shared%20DB.png" alt="Shards to Shared DB" loading="lazy" width="1986" height="634" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Evolutions/Shards/Shards%20to%20Shared%20DB.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Shards/Shards%20to%20Shared%20DB.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Evolutions/Shards/Shards%20to%20Shared%20DB.png" alt="Shards to Shared DB" loading="lazy" width="1055" height="324" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -58,7 +62,11 @@ In case a shard needs to access data owned by any other shard, the prerequisite 
 
 <figure>
 <a href="/diagrams/Evolutions/Shards/Shards%20to%20Space-Based%20Architecture.png">
-<img src="/diagrams/Evolutions/Shards/Shards%20to%20Space-Based%20Architecture.png" alt="Shards to Space-Based Architecture" loading="lazy" width="2078" height="534" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Evolutions/Shards/Shards%20to%20Space-Based%20Architecture.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Shards/Shards%20to%20Space-Based%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Evolutions/Shards/Shards%20to%20Space-Based%20Architecture.png" alt="Shards to Space-Based Architecture" loading="lazy" width="1107" height="264" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -91,7 +99,11 @@ Though *Space\-Based Architecture* may provide multiple modes of action, includi
 
 <figure>
 <a href="/diagrams/Evolutions/Shards/Shards%20add%20Shared%20DB.png">
-<img src="/diagrams/Evolutions/Shards/Shards%20add%20Shared%20DB.png" alt="Shards add Shared DB" loading="lazy" width="1969" height="489" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Evolutions/Shards/Shards%20add%20Shared%20DB.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Shards/Shards%20add%20Shared%20DB.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Evolutions/Shards/Shards%20add%20Shared%20DB.png" alt="Shards add Shared DB" loading="lazy" width="1041" height="248" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -119,7 +131,11 @@ This approach resembles [*Shared Kernel*](https://ddd-practitioners.com/home/glo
 
 <figure>
 <a href="/diagrams/Evolutions/Shards/Shards%20split%20Shared%20Service.png">
-<img src="/diagrams/Evolutions/Shards/Shards%20split%20Shared%20Service.png" alt="Shards split Shared Service" loading="lazy" width="2048" height="480" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Evolutions/Shards/Shards%20split%20Shared%20Service.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Shards/Shards%20split%20Shared%20Service.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Evolutions/Shards/Shards%20split%20Shared%20Service.png" alt="Shards split Shared Service" loading="lazy" width="1081" height="247" style="width:100%"/>
+</picture>
 </a>
 </figure>
 

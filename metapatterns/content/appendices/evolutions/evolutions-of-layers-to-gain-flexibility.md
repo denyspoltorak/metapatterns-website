@@ -2,7 +2,7 @@
 weight = 10
 title = "Evolutions of Layers to gain flexibility"
 description = "The upper Proxy or Orchestrator layer can be split into a service per client, making Backends for Frontends. This allows for per-client customization."
-images = ["/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png"]
+images = ["/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.svg"]
 [sitemap]
   priority = 0.3
 +++
@@ -18,7 +18,11 @@ The last group of evolutions to consider is about making the system more adaptab
 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png">
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png" alt="Monolith to Layers - Further 2" loading="lazy" width="1834" height="849" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png" alt="Monolith to Layers - Further 2" loading="lazy" width="983" height="461" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -31,7 +35,11 @@ There is also a new evolution that modifies the upper \(orchestration\) layer:
 
 <figure>
 <a href="/diagrams/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.png">
-<img src="/diagrams/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.png" alt="Layers to Backends for Frontends" loading="lazy" width="1894" height="639" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.png" alt="Layers to Backends for Frontends" loading="lazy" width="1003" height="323" style="width:100%"/>
+</picture>
 </a>
 </figure>
 

@@ -15,7 +15,11 @@ There are patterns that describe implementation of components:
 
 <figure>
 <a href="/diagrams/Contents/Plugins.png">
-<img src="/diagrams/Contents/Plugins.png" alt="Plugins" loading="lazy" width="1579" height="778" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Contents/Plugins.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Contents/Plugins.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Contents/Plugins.png" alt="Plugins" loading="lazy" width="843" height="403" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -27,7 +31,11 @@ The *Plugins* pattern is about separating a system’s main logic from the custo
 
 <figure>
 <a href="/diagrams/Contents/Hexagonal%20Architecture.png">
-<img src="/diagrams/Contents/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" loading="lazy" width="1824" height="713" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Contents/Hexagonal%20Architecture.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Contents/Hexagonal%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Contents/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" loading="lazy" width="980" height="363" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -39,7 +47,11 @@ The *Plugins* pattern is about separating a system’s main logic from the custo
 
 <figure>
 <a href="/diagrams/Contents/Microkernel.png">
-<img src="/diagrams/Contents/Microkernel.png" alt="Microkernel" loading="lazy" width="1916" height="594" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Contents/Microkernel.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Contents/Microkernel.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Contents/Microkernel.png" alt="Microkernel" loading="lazy" width="1031" height="304" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -51,7 +63,11 @@ This is another derivation of *Plugins*, with a rudimentary *core* component whi
 
 <figure>
 <a href="/diagrams/Contents/Mesh.png">
-<img src="/diagrams/Contents/Mesh.png" alt="Mesh" loading="lazy" width="1583" height="454" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Contents/Mesh.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Contents/Mesh.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Contents/Mesh.png" alt="Mesh" loading="lazy" width="863" height="261" style="width:100%"/>
+</picture>
 </a>
 </figure>
 

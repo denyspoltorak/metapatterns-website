@@ -20,7 +20,11 @@ description = "A new service can be added, an existing one can be split in two, 
 
 <figure>
 <a href="/diagrams/Evolutions/Services/Services_%20Split.png">
-<img src="/diagrams/Evolutions/Services/Services_%20Split.png" alt="Services: Split" loading="lazy" width="2469" height="489" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Evolutions/Services/Services_%20Split.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Services/Services_%20Split.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Evolutions/Services/Services_%20Split.png" alt="Services: Split" loading="lazy" width="1303" height="251" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -53,7 +57,11 @@ If one of your services has grown too large, you should look for a way to subdiv
 
 <figure>
 <a href="/diagrams/Evolutions/Services/Services_%20Merge.png">
-<img src="/diagrams/Evolutions/Services/Services_%20Merge.png" alt="Services: Merge" loading="lazy" width="2057" height="476" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Evolutions/Services/Services_%20Merge.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Services/Services_%20Merge.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Evolutions/Services/Services_%20Merge.png" alt="Services: Merge" loading="lazy" width="1083" height="245" style="width:100%"/>
+</picture>
 </a>
 </figure>
 

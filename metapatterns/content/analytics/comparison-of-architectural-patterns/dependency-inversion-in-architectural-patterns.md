@@ -17,7 +17,11 @@ Let’s see how dependency inversion is used on system level\.
 
 <figure>
 <a href="/diagrams/Conclusion/DI-1.png">
-<img src="/diagrams/Conclusion/DI-1.png" alt="DI-1" loading="lazy" width="2336" height="529" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Conclusion/DI-1.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Conclusion/DI-1.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Conclusion/DI-1.png" alt="DI-1" loading="lazy" width="1253" height="264" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -33,7 +37,11 @@ It is the nature of the polymorphic components that distinguishes the patterns:
 
 <figure>
 <a href="/diagrams/Conclusion/DI-2.png">
-<img src="/diagrams/Conclusion/DI-2.png" alt="DI-2" loading="lazy" width="2509" height="1354" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Conclusion/DI-2.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Conclusion/DI-2.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Conclusion/DI-2.png" alt="DI-2" loading="lazy" width="1343" height="703" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -48,7 +56,11 @@ A few more metapatterns tend to use this approach to earn its benefits, even tho
 
 <figure>
 <a href="/diagrams/Conclusion/DI-3.png">
-<img src="/diagrams/Conclusion/DI-3.png" alt="DI-3" loading="lazy" width="2516" height="718" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Conclusion/DI-3.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Conclusion/DI-3.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Conclusion/DI-3.png" alt="DI-3" loading="lazy" width="1363" height="366" style="width:100%"/>
+</picture>
 </a>
 </figure>
 

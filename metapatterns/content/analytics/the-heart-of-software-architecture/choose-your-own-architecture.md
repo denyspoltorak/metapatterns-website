@@ -19,7 +19,11 @@ Therefore, a one day task will likely be [*monolithic*]({{< relref "../../basic-
 
 <figure>
 <a href="/diagrams/Heart/Size-1.png">
-<img src="/diagrams/Heart/Size-1.png" alt="Size-1" loading="lazy" width="2019" height="2445" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Heart/Size-1.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Heart/Size-1.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Heart/Size-1.png" alt="Size-1" loading="lazy" width="1082" height="1324" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -27,7 +31,11 @@ Any inherent decoupling within your domain is another factor to consider in the 
 
 <figure>
 <a href="/diagrams/Heart/Size-2.png">
-<img src="/diagrams/Heart/Size-2.png" alt="Size-2" loading="lazy" width="2349" height="630" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Heart/Size-2.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Heart/Size-2.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Heart/Size-2.png" alt="Size-2" loading="lazy" width="1241" height="345" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -43,7 +51,11 @@ Sometimes you expect to have many complex use cases which cannot be matched to y
 
 <figure>
 <a href="/diagrams/Heart/Features-1.png">
-<img src="/diagrams/Heart/Features-1.png" alt="Features-1" loading="lazy" width="2513" height="1941" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Heart/Features-1.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Heart/Features-1.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Heart/Features-1.png" alt="Features-1" loading="lazy" width="1323" height="1063" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -51,7 +63,11 @@ Other systems are built around data\. You cannot split it into private databases
 
 <figure>
 <a href="/diagrams/Heart/Features-2.png">
-<img src="/diagrams/Heart/Features-2.png" alt="Features-2" loading="lazy" width="1907" height="1399" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Heart/Features-2.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Heart/Features-2.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Heart/Features-2.png" alt="Features-2" loading="lazy" width="1003" height="763" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -59,7 +75,11 @@ Once you go distributed, you will likely employ a [*Middleware*]({{< relref "../
 
 <figure>
 <a href="/diagrams/Heart/Features-3.png">
-<img src="/diagrams/Heart/Features-3.png" alt="Features-3" loading="lazy" width="2593" height="887" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Heart/Features-3.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Heart/Features-3.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Heart/Features-3.png" alt="Features-3" loading="lazy" width="1363" height="483" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -71,7 +91,11 @@ High throughput is achieved by [*sharding*]({{< relref "../../basic-metapatterns
 
 <figure>
 <a href="/diagrams/Heart/Performance-1.png">
-<img src="/diagrams/Heart/Performance-1.png" alt="Performance-1" loading="lazy" width="997" height="449" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Heart/Performance-1.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Heart/Performance-1.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Heart/Performance-1.png" alt="Performance-1" loading="lazy" width="986" height="463" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -79,7 +103,11 @@ Alternatively, you may use several specialized databases \([*Polyglot Persistenc
 
 <figure>
 <a href="/diagrams/Heart/Performance-2.png">
-<img src="/diagrams/Heart/Performance-2.png" alt="Performance-2" loading="lazy" width="2093" height="774" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Heart/Performance-2.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Heart/Performance-2.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Heart/Performance-2.png" alt="Performance-2" loading="lazy" width="1102" height="426" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -87,7 +115,11 @@ Scalability under uneven load is achieved through [*Function as a Service*]({{< 
 
 <figure>
 <a href="/diagrams/Heart/Performance-3.png">
-<img src="/diagrams/Heart/Performance-3.png" alt="Performance-3" loading="lazy" width="2586" height="1157" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Heart/Performance-3.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Heart/Performance-3.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Heart/Performance-3.png" alt="Performance-3" loading="lazy" width="1383" height="623" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -95,7 +127,11 @@ Fault tolerance requires you to have [*replicas*]({{< relref "../../basic-metapa
 
 <figure>
 <a href="/diagrams/Heart/Performance-4.png">
-<img src="/diagrams/Heart/Performance-4.png" alt="Performance-4" loading="lazy" width="2132" height="758" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Heart/Performance-4.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Heart/Performance-4.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Heart/Performance-4.png" alt="Performance-4" loading="lazy" width="1128" height="424" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -108,7 +144,11 @@ Low latency makes you place simplified first response logic close to your input,
 
 <figure>
 <a href="/diagrams/Heart/Performance-5.png">
-<img src="/diagrams/Heart/Performance-5.png" alt="Performance-5" loading="lazy" width="2083" height="1763" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Heart/Performance-5.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Heart/Performance-5.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Heart/Performance-5.png" alt="Performance-5" loading="lazy" width="1104" height="943" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -122,7 +162,11 @@ If you mediate between resource or service providers and consumers, you build a 
 
 <figure>
 <a href="/diagrams/Heart/Flexibility-1.png">
-<img src="/diagrams/Heart/Flexibility-1.png" alt="Flexibility-1" loading="lazy" width="1943" height="803" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Heart/Flexibility-1.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Heart/Flexibility-1.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Heart/Flexibility-1.png" alt="Flexibility-1" loading="lazy" width="1023" height="443" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -130,7 +174,11 @@ When your teams develop services and you want them to be [less interdependent]({
 
 <figure>
 <a href="/diagrams/Heart/Flexibility-2.png">
-<img src="/diagrams/Heart/Flexibility-2.png" alt="Flexibility-2" loading="lazy" width="1716" height="801" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Heart/Flexibility-2.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Heart/Flexibility-2.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Heart/Flexibility-2.png" alt="Flexibility-2" loading="lazy" width="913" height="429" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -138,7 +186,11 @@ When you have built a large system and really need that thorough data analytics,
 
 <figure>
 <a href="/diagrams/Variants/1/Data%20Mesh.png">
-<img src="/diagrams/Variants/1/Data%20Mesh.png" alt="Data Mesh" loading="lazy" width="2038" height="534" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Variants/1/Data%20Mesh.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/1/Data%20Mesh.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/1/Data%20Mesh.png" alt="Data Mesh" loading="lazy" width="1094" height="264" style="width:100%"/>
+</picture>
 </a>
 </figure>
 

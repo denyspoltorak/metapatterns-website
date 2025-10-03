@@ -27,7 +27,11 @@ Concepts are important because it is their number \(or the number of the corresp
 
 <figure>
 <a href="/diagrams/Intro/Modules-1.png">
-<img src="/diagrams/Intro/Modules-1.png" alt="Modules-1" loading="lazy" width="1089" height="994" style="width:52%"/>
+<picture>
+<source srcset="/diagrams/Intro/Modules-1.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Intro/Modules-1.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Intro/Modules-1.png" alt="Modules-1" loading="lazy" width="562" height="522" style="width:52%"/>
+</picture>
 </a>
 <figcaption>Figure 1: Complexity correlates with the number of entities.</figcaption>
 </figure>
@@ -40,7 +44,11 @@ Enter *modules*\. A module wraps several concepts, effectively hiding them from 
 
 <figure>
 <a href="/diagrams/Intro/Modules-2.png">
-<img src="/diagrams/Intro/Modules-2.png" alt="Modules-2" loading="lazy" width="1256" height="1093" style="width:66%"/>
+<picture>
+<source srcset="/diagrams/Intro/Modules-2.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Intro/Modules-2.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Intro/Modules-2.png" alt="Modules-2" loading="lazy" width="662" height="563" style="width:66%"/>
+</picture>
 </a>
 <figcaption>Figure 2: Dividing a system into modules, bounded contexts highlighted.</figcaption>
 </figure>
@@ -67,7 +75,11 @@ Apart from dividing the problem into simpler subproblems, modules open the path 
 
 <figure>
 <a href="/diagrams/Intro/Modules-3.png">
-<img src="/diagrams/Intro/Modules-3.png" alt="Modules-3" loading="lazy" width="1264" height="1099" style="width:64%"/>
+<picture>
+<source srcset="/diagrams/Intro/Modules-3.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Intro/Modules-3.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Intro/Modules-3.png" alt="Modules-3" loading="lazy" width="662" height="563" style="width:64%"/>
+</picture>
 </a>
 <figcaption>Figure 3: Merged two API concepts in the green module.</figcaption>
 </figure>
@@ -86,7 +98,11 @@ The rule of thumb is to aim for *low coupling and high cohesion*, meaning that e
 
 <figure>
 <a href="/diagrams/Intro/Modules-4.png">
-<img src="/diagrams/Intro/Modules-4.png" alt="Modules-4" loading="lazy" width="1534" height="1121" style="width:75%"/>
+<picture>
+<source srcset="/diagrams/Intro/Modules-4.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Intro/Modules-4.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Intro/Modules-4.png" alt="Modules-4" loading="lazy" width="802" height="563" style="width:75%"/>
+</picture>
 </a>
 <figcaption>Figure 4: The upper modules are tightly coupled.</figcaption>
 </figure>
@@ -95,7 +111,11 @@ Splitting a cohesive module \(a cluster of concepts that interact with each othe
 
 <figure>
 <a href="/diagrams/Intro/Modules-5.png">
-<img src="/diagrams/Intro/Modules-5.png" alt="Modules-5" loading="lazy" width="1213" height="1101" style="width:64%"/>
+<picture>
+<source srcset="/diagrams/Intro/Modules-5.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Intro/Modules-5.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Intro/Modules-5.png" alt="Modules-5" loading="lazy" width="622" height="562" style="width:64%"/>
+</picture>
 </a>
 <figcaption>Figure 5: The lower module has low cohesion.</figcaption>
 </figure>
@@ -124,7 +144,11 @@ A module may encapsulate not only individual concepts, but even other modules\. 
 
 <figure>
 <a href="/diagrams/Intro/Modules-6.png">
-<img src="/diagrams/Intro/Modules-6.png" alt="Modules-6" loading="lazy" width="1050" height="1239" style="width:58%"/>
+<picture>
+<source srcset="/diagrams/Intro/Modules-6.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Intro/Modules-6.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Intro/Modules-6.png" alt="Modules-6" loading="lazy" width="542" height="642" style="width:58%"/>
+</picture>
 </a>
 <figcaption>Figure 6: Composition of modules prevents reuse.</figcaption>
 </figure>
@@ -135,7 +159,11 @@ If the functionality of our internal module is needed by our clients, we have tw
 
 <figure>
 <a href="/diagrams/Intro/Modules-7.png">
-<img src="/diagrams/Intro/Modules-7.png" alt="Modules-7" loading="lazy" width="1061" height="1286" style="width:59%"/>
+<picture>
+<source srcset="/diagrams/Intro/Modules-7.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Intro/Modules-7.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Intro/Modules-7.png" alt="Modules-7" loading="lazy" width="542" height="662" style="width:59%"/>
+</picture>
 </a>
 <figcaption>Figure 7: Forwarding the API of an internal module.</figcaption>
 </figure>
@@ -144,7 +172,11 @@ We can add the API of a module which we encapsulate to our public API and forwar
 
 <figure>
 <a href="/diagrams/Intro/Modules-8.png">
-<img src="/diagrams/Intro/Modules-8.png" alt="Modules-8" loading="lazy" width="1395" height="1245" style="width:78%"/>
+<picture>
+<source srcset="/diagrams/Intro/Modules-8.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Intro/Modules-8.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Intro/Modules-8.png" alt="Modules-8" loading="lazy" width="722" height="642" style="width:78%"/>
+</picture>
 </a>
 <figcaption>Figure 8: Duplicating an internal module.</figcaption>
 </figure>

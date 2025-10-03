@@ -2,7 +2,7 @@
 weight = 4
 title = "Shared data"
 description = "Communication through shared data benefits data-centric domains where multiple services need to operate on a common dataset."
-images = ["/diagrams/Communication/Services%20to%20Shared%20Data.png"]
+images = ["/diagrams/Communication/Services%20to%20Shared%20Data.svg"]
 [sitemap]
   priority = 0.5
 +++
@@ -13,7 +13,11 @@ The final approach is integration through shared data \([*Shared Repository*]({{
 
 <figure>
 <a href="/diagrams/Communication/Services%20to%20Shared%20Data.png">
-<img src="/diagrams/Communication/Services%20to%20Shared%20Data.png" alt="Services to Shared Data" loading="lazy" width="1946" height="564" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Communication/Services%20to%20Shared%20Data.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Services%20to%20Shared%20Data.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Communication/Services%20to%20Shared%20Data.png" alt="Services to Shared Data" loading="lazy" width="1043" height="284" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -27,7 +31,11 @@ The most common case of shared data is storage \(usually a database, sometimes a
 
 <figure>
 <a href="/diagrams/Communication/Purchase%20and%20Return.png">
-<img src="/diagrams/Communication/Purchase%20and%20Return.png" alt="Purchase and Return" loading="lazy" width="1736" height="656" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Communication/Purchase%20and%20Return.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Purchase%20and%20Return.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Communication/Purchase%20and%20Return.png" alt="Purchase and Return" loading="lazy" width="923" height="323" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -35,13 +43,21 @@ With this model the services don’t depend on each other – instead, they depe
 
 <figure>
 <a href="/diagrams/Communication/Shared%20Data%20-%20Dependencies.png">
-<img src="/diagrams/Communication/Shared%20Data%20-%20Dependencies.png" alt="Shared Data - Dependencies" loading="lazy" width="1502" height="416" style="width:92%"/>
+<picture>
+<source srcset="/diagrams/Communication/Shared%20Data%20-%20Dependencies.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Shared%20Data%20-%20Dependencies.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Communication/Shared%20Data%20-%20Dependencies.png" alt="Shared Data - Dependencies" loading="lazy" width="803" height="202" style="width:92%"/>
+</picture>
 </a>
 </figure>
 
 <figure>
 <a href="/diagrams/Communication/Shared%20Data%20add%20a%20Service.png">
-<img src="/diagrams/Communication/Shared%20Data%20add%20a%20Service.png" alt="Shared Data add a Service" loading="lazy" width="2091" height="414" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Communication/Shared%20Data%20add%20a%20Service.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Shared%20Data%20add%20a%20Service.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Communication/Shared%20Data%20add%20a%20Service.png" alt="Shared Data add a Service" loading="lazy" width="1103" height="203" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -49,7 +65,11 @@ Services usually need to coordinate their actions\. Commonly, services with a sh
 
 <figure>
 <a href="/diagrams/Communication/Notification%20to%20Notification.png">
-<img src="/diagrams/Communication/Notification%20to%20Notification.png" alt="Notification to Notification" loading="lazy" width="1811" height="630" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Communication/Notification%20to%20Notification.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Notification%20to%20Notification.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Communication/Notification%20to%20Notification.png" alt="Notification to Notification" loading="lazy" width="983" height="323" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -57,7 +77,11 @@ Another case is found with data processing pipelines where an element may period
 
 <figure>
 <a href="/diagrams/Communication/Shared%20files.png">
-<img src="/diagrams/Communication/Shared%20files.png" alt="Shared files" loading="lazy" width="1899" height="804" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Communication/Shared%20files.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Shared%20files.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Communication/Shared%20files.png" alt="Shared files" loading="lazy" width="1016" height="423" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -65,7 +89,11 @@ Finally, there is the rarely used option of an external [*Scheduler*]({{< relref
 
 <figure>
 <a href="/diagrams/Communication/Blackboard.png">
-<img src="/diagrams/Communication/Blackboard.png" alt="Blackboard" loading="lazy" width="1508" height="564" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Communication/Blackboard.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Blackboard.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Communication/Blackboard.png" alt="Blackboard" loading="lazy" width="803" height="283" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -75,7 +103,11 @@ The other, not as obvious, use case for shared data is messaging, which is imple
 
 <figure>
 <a href="/diagrams/Communication/Queues.png">
-<img src="/diagrams/Communication/Queues.png" alt="Queues" loading="lazy" width="1539" height="1131" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Communication/Queues.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Queues.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Communication/Queues.png" alt="Queues" loading="lazy" width="803" height="603" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
@@ -89,7 +121,11 @@ Finally, some \(usually distributed\) datastores implement data change notificat
 
 <figure>
 <a href="/diagrams/Communication/Notification%20inside%20the%20DB.png">
-<img src="/diagrams/Communication/Notification%20inside%20the%20DB.png" alt="Notification inside the DB" loading="lazy" width="2078" height="634" style="width:100%"/>
+<picture>
+<source srcset="/diagrams/Communication/Notification%20inside%20the%20DB.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Notification%20inside%20the%20DB.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Communication/Notification%20inside%20the%20DB.png" alt="Notification inside the DB" loading="lazy" width="1123" height="323" style="width:100%"/>
+</picture>
 </a>
 </figure>
 
