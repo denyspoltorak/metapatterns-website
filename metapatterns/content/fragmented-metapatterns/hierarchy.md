@@ -61,7 +61,7 @@ No kind of distributed hierarchy is latency\-friendly as many use cases involve 
 <a href="/diagrams/Performance/Hierarchy%20-%20speed.png">
 <picture>
 <source srcset="/diagrams/Performance/Hierarchy%20-%20speed.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
-<source srcset="/diagrams/Performance/Hierarchy%20-%20speed.dark.svg" media="(prefers-color-scheme: dark)"/>
+<source srcset="/diagrams/Performance/Hierarchy%20-%20speed.negated.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Performance/Hierarchy%20-%20speed.png" alt="Hierarchy - speed" loading="lazy" width="1583" height="565" style="width:100%"/>
 </picture>
 </a>

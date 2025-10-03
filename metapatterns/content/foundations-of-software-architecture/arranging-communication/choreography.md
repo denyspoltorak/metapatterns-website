@@ -91,7 +91,7 @@ It is possible to avoid both adding a *Gateway* and having the cyclic dependency
 <a href="/diagrams/Communication/Pipeline%20Early%20Response.png">
 <picture>
 <source srcset="/diagrams/Communication/Pipeline%20Early%20Response.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
-<source srcset="/diagrams/Communication/Pipeline%20Early%20Response.dark.svg" media="(prefers-color-scheme: dark)"/>
+<source srcset="/diagrams/Communication/Pipeline%20Early%20Response.negated.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Communication/Pipeline%20Early%20Response.png" alt="Pipeline Early Response" loading="lazy" width="823" height="265" style="width:100%"/>
 </picture>
 </a>
