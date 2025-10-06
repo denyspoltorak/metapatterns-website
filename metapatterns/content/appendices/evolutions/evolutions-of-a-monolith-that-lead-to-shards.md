@@ -21,7 +21,7 @@ One of the main drawbacks of the monolithic architecture is its lack of scalabil
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Mesh%20of%20Shards.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Mesh%20of%20Shards.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Mesh%20of%20Shards.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Mesh%20of%20Shards.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Mesh%20of%20Shards.png" alt="Monolith to Mesh of Shards" loading="lazy" width="1103" height="343" style="width:100%"/>
 </picture>
@@ -55,7 +55,7 @@ It is possible to run several instances of an application \(*shards*\), with eac
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Isolated%20Shards%20with%20Load%20Balancer.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Isolated%20Shards%20with%20Load%20Balancer.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Isolated%20Shards%20with%20Load%20Balancer.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Isolated%20Shards%20with%20Load%20Balancer.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Isolated%20Shards%20with%20Load%20Balancer.png" alt="Monolith to Isolated Shards with Load Balancer" loading="lazy" width="1073" height="423" style="width:100%"/>
 </picture>
@@ -87,7 +87,7 @@ If all the data a user operates on, directly or indirectly, is never accessed by
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Stateless%20Shards%20with%20Shared%20DB.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Stateless%20Shards%20with%20Shared%20DB.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Stateless%20Shards%20with%20Shared%20DB.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Stateless%20Shards%20with%20Shared%20DB.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Stateless%20Shards%20with%20Shared%20DB.png" alt="Monolith to Stateless Shards with Shared DB" loading="lazy" width="1083" height="423" style="width:100%"/>
 </picture>
@@ -121,7 +121,7 @@ As data moves into a dedicated layer, the application becomes stateless and inst
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Instance%20per%20Client.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Instance%20per%20Client.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Instance%20per%20Client.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Instance%20per%20Client.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Instance%20per%20Client.png" alt="Monolith to Instance per Client" loading="lazy" width="1103" height="343" style="width:100%"/>
 </picture>
@@ -163,7 +163,7 @@ In most cases *sharding* does not change much inside the application, thus the c
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%201.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%201.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%201.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%201.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%201.png" alt="Monolith to Shards - Further 1" loading="lazy" width="1244" height="363" style="width:100%"/>
 </picture>
@@ -179,7 +179,7 @@ There are specific evolutions of [*Shards*]({{< relref "../../basic-metapatterns
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%202.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%202.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%202.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%202.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%202.png" alt="Monolith to Shards - Further 2" loading="lazy" width="1243" height="346" style="width:100%"/>
 </picture>

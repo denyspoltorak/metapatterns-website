@@ -12,7 +12,7 @@ images = ["/diagrams/Main/Hierarchy.svg"]
 <figure>
 <a href="/diagrams/Main/Hierarchy.png">
 <picture>
-<source srcset="/diagrams/Main/Hierarchy.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Main/Hierarchy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Hierarchy.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Main/Hierarchy.png" alt="Hierarchy" loading="lazy" width="1082" height="534" style="width:100%"/>
 </picture>
@@ -60,7 +60,7 @@ No kind of distributed hierarchy is latency\-friendly as many use cases involve 
 <figure>
 <a href="/diagrams/Performance/Hierarchy%20-%20speed.png">
 <picture>
-<source srcset="/diagrams/Performance/Hierarchy%20-%20speed.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Performance/Hierarchy%20-%20speed.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Performance/Hierarchy%20-%20speed.negated.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Performance/Hierarchy%20-%20speed.png" alt="Hierarchy - speed" loading="lazy" width="1583" height="565" style="width:100%"/>
 </picture>
@@ -77,7 +77,7 @@ Maintaining high throughput usually requires deploying multiple instances of the
 <figure>
 <a href="/diagrams/Performance/Hierarchy%20-%20optimizations.png">
 <picture>
-<source srcset="/diagrams/Performance/Hierarchy%20-%20optimizations.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Performance/Hierarchy%20-%20optimizations.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Performance/Hierarchy%20-%20optimizations.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Performance/Hierarchy%20-%20optimizations.png" alt="Hierarchy - optimizations" loading="lazy" width="1483" height="483" style="width:100%"/>
 </picture>
@@ -91,7 +91,7 @@ A parent node would usually define one \(for polymorphic children\) or more \(ot
 <figure>
 <a href="/diagrams/Dependencies/Hierarchy.png">
 <picture>
-<source srcset="/diagrams/Dependencies/Hierarchy.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Dependencies/Hierarchy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Dependencies/Hierarchy.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Dependencies/Hierarchy.png" alt="Hierarchy" loading="lazy" width="1103" height="423" style="width:100%"/>
 </picture>
@@ -120,7 +120,7 @@ A parent node would usually define one \(for polymorphic children\) or more \(ot
 <figure>
 <a href="/diagrams/Relations/Hierarchy.png">
 <picture>
-<source srcset="/diagrams/Relations/Hierarchy.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Relations/Hierarchy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Relations/Hierarchy.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Relations/Hierarchy.png" alt="Hierarchy" loading="lazy" width="1463" height="426" style="width:100%"/>
 </picture>
@@ -155,7 +155,7 @@ Example: an intrusion alarm logic may need to discern between cat\-affected IR s
 <figure>
 <a href="/diagrams/Variants/3/Hierarchy%20-%20Top-down.png">
 <picture>
-<source srcset="/diagrams/Variants/3/Hierarchy%20-%20Top-down.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/3/Hierarchy%20-%20Top-down.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/Hierarchy%20-%20Top-down.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/3/Hierarchy%20-%20Top-down.png" alt="Hierarchy - Top-down" loading="lazy" width="903" height="343" style="width:100%"/>
 </picture>
@@ -171,7 +171,7 @@ In the most common case *Hierarchy* is applied to business logic to build a laye
 <figure>
 <a href="/diagrams/Variants/3/PAC.png">
 <picture>
-<source srcset="/diagrams/Variants/3/PAC.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/3/PAC.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/PAC.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/3/PAC.png" alt="PAC" loading="lazy" width="1463" height="824" style="width:100%"/>
 </picture>
@@ -183,7 +183,7 @@ In the most common case *Hierarchy* is applied to business logic to build a laye
 <figure>
 <a href="/diagrams/Variants/3/Hierarchy%20-%20Bottom-up.png">
 <picture>
-<source srcset="/diagrams/Variants/3/Hierarchy%20-%20Bottom-up.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/3/Hierarchy%20-%20Bottom-up.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/Hierarchy%20-%20Bottom-up.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/3/Hierarchy%20-%20Bottom-up.png" alt="Hierarchy - Bottom-up" loading="lazy" width="1243" height="384" style="width:100%"/>
 </picture>
@@ -199,7 +199,7 @@ Example: [Automotive networks](https://www.mdpi.com/1424-8220/21/23/7917), integ
 <figure>
 <a href="/diagrams/Variants/3/Cell-Based%20Architecture.png">
 <picture>
-<source srcset="/diagrams/Variants/3/Cell-Based%20Architecture.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/3/Cell-Based%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/Cell-Based%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/3/Cell-Based%20Architecture.png" alt="Cell-Based Architecture" loading="lazy" width="1193" height="583" style="width:100%"/>
 </picture>
@@ -220,7 +220,7 @@ Uber [compacted](https://www.uber.com/blog/microservice-architecture/) 2200 [*Mi
 <figure>
 <a href="/diagrams/Evolutions/3/Hierarchy%20-%201.png">
 <picture>
-<source srcset="/diagrams/Evolutions/3/Hierarchy%20-%201.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/3/Hierarchy%20-%201.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/3/Hierarchy%20-%201.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/3/Hierarchy%20-%201.png" alt="Hierarchy - 1" loading="lazy" width="1223" height="384" style="width:100%"/>
 </picture>

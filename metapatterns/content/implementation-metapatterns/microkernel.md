@@ -12,7 +12,7 @@ images = ["/diagrams/Main/Microkernel.svg"]
 <figure>
 <a href="/diagrams/Main/Microkernel.png">
 <picture>
-<source srcset="/diagrams/Main/Microkernel.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Main/Microkernel.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Microkernel.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Main/Microkernel.png" alt="Microkernel" loading="lazy" width="844" height="534" style="width:100%"/>
 </picture>
@@ -72,7 +72,7 @@ The *applications* depend on the *API* of the *microkernel* while the *providers
 <figure>
 <a href="/diagrams/Dependencies/Microkernel.png">
 <picture>
-<source srcset="/diagrams/Dependencies/Microkernel.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Dependencies/Microkernel.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Dependencies/Microkernel.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Dependencies/Microkernel.png" alt="Microkernel" loading="lazy" width="843" height="283" style="width:100%"/>
 </picture>
@@ -98,7 +98,7 @@ The *applications* depend on the *API* of the *microkernel* while the *providers
 <figure>
 <a href="/diagrams/Relations/Microkernel.png">
 <picture>
-<source srcset="/diagrams/Relations/Microkernel.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Relations/Microkernel.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Relations/Microkernel.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Relations/Microkernel.png" alt="Microkernel" loading="lazy" width="1143" height="523" style="width:100%"/>
 </picture>
@@ -123,7 +123,7 @@ The *applications* depend on the *API* of the *microkernel* while the *providers
 <figure>
 <a href="/diagrams/Variants/4/OS.png">
 <picture>
-<source srcset="/diagrams/Variants/4/OS.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/4/OS.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/OS.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/4/OS.png" alt="OS" loading="lazy" width="903" height="373" style="width:100%"/>
 </picture>
@@ -137,7 +137,7 @@ The original inspiration for *Microkernel*, namely *operating systems*, provides
 <figure>
 <a href="/diagrams/Variants/4/Framework.png">
 <picture>
-<source srcset="/diagrams/Variants/4/Framework.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/4/Framework.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/Framework.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/4/Framework.png" alt="Framework" loading="lazy" width="903" height="303" style="width:100%"/>
 </picture>
@@ -151,7 +151,7 @@ The *microkernel* is a [*Facade*]({{< relref "../extension-metapatterns/orchestr
 <figure>
 <a href="/diagrams/Variants/4/Virtualizer.png">
 <picture>
-<source srcset="/diagrams/Variants/4/Virtualizer.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/4/Virtualizer.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/Virtualizer.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/4/Virtualizer.png" alt="Virtualizer" loading="lazy" width="840" height="383" style="width:100%"/>
 </picture>
@@ -165,7 +165,7 @@ The *microkernel* is a [*Facade*]({{< relref "../extension-metapatterns/orchestr
 <figure>
 <a href="/diagrams/Variants/4/Interpreter.png">
 <picture>
-<source srcset="/diagrams/Variants/4/Interpreter.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/4/Interpreter.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/Interpreter.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/4/Interpreter.png" alt="Interpreter" loading="lazy" width="902" height="303" style="width:100%"/>
 </picture>
@@ -179,7 +179,7 @@ User\-provided *scripts* are run by an *Interpreter* \[[GoF]({{< relref "../appe
 <figure>
 <a href="/diagrams/Variants/4/Config%20file.png">
 <picture>
-<source srcset="/diagrams/Variants/4/Config%20file.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/4/Config%20file.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/Config%20file.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/4/Config%20file.png" alt="Config file" loading="lazy" width="883" height="383" style="width:100%"/>
 </picture>
@@ -193,7 +193,7 @@ User\-provided *scripts* are run by an *Interpreter* \[[GoF]({{< relref "../appe
 <figure>
 <a href="/diagrams/Variants/4/Saga%20engine.png">
 <picture>
-<source srcset="/diagrams/Variants/4/Saga%20engine.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/4/Saga%20engine.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/Saga%20engine.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/4/Saga%20engine.png" alt="Saga engine" loading="lazy" width="943" height="384" style="width:100%"/>
 </picture>
@@ -207,7 +207,7 @@ A [*Saga*]({{< relref "../extension-metapatterns/orchestrator.md#orchestrated-sa
 <figure>
 <a href="/diagrams/Variants/4/AUTOSAR%20classic.png">
 <picture>
-<source srcset="/diagrams/Variants/4/AUTOSAR%20classic.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/4/AUTOSAR%20classic.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/AUTOSAR%20classic.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/4/AUTOSAR%20classic.png" alt="AUTOSAR classic" loading="lazy" width="982" height="623" style="width:100%"/>
 </picture>

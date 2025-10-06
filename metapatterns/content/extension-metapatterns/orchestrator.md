@@ -12,7 +12,7 @@ images = ["/diagrams/Main/Orchestrator.svg"]
 <figure>
 <a href="/diagrams/Main/Orchestrator.png">
 <picture>
-<source srcset="/diagrams/Main/Orchestrator.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Main/Orchestrator.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Orchestrator.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Main/Orchestrator.png" alt="Orchestrator" loading="lazy" width="1062" height="520" style="width:100%"/>
 </picture>
@@ -81,7 +81,7 @@ An *Orchestrator* fulfills two closely related roles:
 <figure>
 <a href="/diagrams/Misc/Orchestrator.png">
 <picture>
-<source srcset="/diagrams/Misc/Orchestrator.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Misc/Orchestrator.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Misc/Orchestrator.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Misc/Orchestrator.png" alt="Orchestrator" loading="lazy" width="1363" height="387" style="width:100%"/>
 </picture>
@@ -103,7 +103,7 @@ When compared to [*choreography*]({{< relref "../foundations-of-software-archite
 <figure>
 <a href="/diagrams/Performance/Orchestrator.png">
 <picture>
-<source srcset="/diagrams/Performance/Orchestrator.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Performance/Orchestrator.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Performance/Orchestrator.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Performance/Orchestrator.png" alt="Orchestrator" loading="lazy" width="1423" height="823" style="width:100%"/>
 </picture>
@@ -119,7 +119,7 @@ An *Orchestrator* may depend on the *APIs* of the services it orchestrates or de
 <figure>
 <a href="/diagrams/Dependencies/Orchestrator.png">
 <picture>
-<source srcset="/diagrams/Dependencies/Orchestrator.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Dependencies/Orchestrator.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Dependencies/Orchestrator.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Dependencies/Orchestrator.png" alt="Orchestrator" loading="lazy" width="1301" height="383" style="width:100%"/>
 </picture>
@@ -155,7 +155,7 @@ Likewise, [control systems]({{< relref "../foundations-of-software-architecture/
 <figure>
 <a href="/diagrams/Relations/Orchestrator.png">
 <picture>
-<source srcset="/diagrams/Relations/Orchestrator.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Relations/Orchestrator.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Relations/Orchestrator.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Relations/Orchestrator.png" alt="Orchestrator" loading="lazy" width="1363" height="388" style="width:100%"/>
 </picture>
@@ -179,7 +179,7 @@ It seems that an *Orchestrator*, just like a [*layer*]({{< relref "../basic-meta
 <figure>
 <a href="/diagrams/Variants/2/Orchestrator%20-%20Closed.png">
 <picture>
-<source srcset="/diagrams/Variants/2/Orchestrator%20-%20Closed.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/Orchestrator%20-%20Closed.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Orchestrator%20-%20Closed.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/2/Orchestrator%20-%20Closed.png" alt="Orchestrator - Closed" loading="lazy" width="823" height="383" style="width:90%"/>
 </picture>
@@ -193,7 +193,7 @@ A *strict* or *closed Orchestrator* isolates the orchestrated services from thei
 <figure>
 <a href="/diagrams/Variants/2/Orchestrator%20-%20Open.png">
 <picture>
-<source srcset="/diagrams/Variants/2/Orchestrator%20-%20Open.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/Orchestrator%20-%20Open.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Orchestrator%20-%20Open.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/2/Orchestrator%20-%20Open.png" alt="Orchestrator - Open" loading="lazy" width="923" height="384" style="width:92%"/>
 </picture>
@@ -217,7 +217,7 @@ The orchestration \(application \[[DDD]({{< relref "../appendices/books-referenc
 <figure>
 <a href="/diagrams/Variants/2/Orchestrator%20-%20Monolythic.png">
 <picture>
-<source srcset="/diagrams/Variants/2/Orchestrator%20-%20Monolythic.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/Orchestrator%20-%20Monolythic.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Orchestrator%20-%20Monolythic.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/2/Orchestrator%20-%20Monolythic.png" alt="Orchestrator - Monolythic" loading="lazy" width="323" height="302" style="width:42%"/>
 </picture>
@@ -231,7 +231,7 @@ A single *Orchestrator* is deployed\. This option fits ordinary medium\-sized pr
 <figure>
 <a href="/diagrams/Variants/2/Orchestrator%20-%20Scaled.png">
 <picture>
-<source srcset="/diagrams/Variants/2/Orchestrator%20-%20Scaled.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/Orchestrator%20-%20Scaled.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Orchestrator%20-%20Scaled.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/2/Orchestrator%20-%20Scaled.png" alt="Orchestrator - Scaled" loading="lazy" width="1123" height="563" style="width:100%"/>
 </picture>
@@ -253,7 +253,7 @@ High load systems also require multiple instances of *Orchestrators* because a s
 <figure>
 <a href="/diagrams/Variants/2/Orchestrator%20-%20Layered.png">
 <picture>
-<source srcset="/diagrams/Variants/2/Orchestrator%20-%20Layered.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/Orchestrator%20-%20Layered.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Orchestrator%20-%20Layered.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/2/Orchestrator%20-%20Layered.png" alt="Orchestrator - Layered" loading="lazy" width="1073" height="403" style="width:100%"/>
 </picture>
@@ -271,7 +271,7 @@ A similar example is using an [*API Composer*]({{< relref "#api-composer-remote-
 <figure>
 <a href="/diagrams/Variants/2/Orchestrator%20-%20BFF.png">
 <picture>
-<source srcset="/diagrams/Variants/2/Orchestrator%20-%20BFF.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/Orchestrator%20-%20BFF.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Orchestrator%20-%20BFF.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/2/Orchestrator%20-%20BFF.png" alt="Orchestrator - BFF" loading="lazy" width="943" height="383" style="width:100%"/>
 </picture>
@@ -287,7 +287,7 @@ This pattern is known as [*Backends for Frontends*]({{< relref "../fragmented-me
 <figure>
 <a href="/diagrams/Variants/2/Orchestrator%20-%20Hierarchy.png">
 <picture>
-<source srcset="/diagrams/Variants/2/Orchestrator%20-%20Hierarchy.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/Orchestrator%20-%20Hierarchy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Orchestrator%20-%20Hierarchy.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/2/Orchestrator%20-%20Hierarchy.png" alt="Orchestrator - Hierarchy" loading="lazy" width="1283" height="423" style="width:100%"/>
 </picture>
@@ -301,7 +301,7 @@ In large systems a single *Orchestrator* is very likely to become overgrown and 
 <figure>
 <a href="/diagrams/Variants/2/Orchestrator%20-%20SOA.png">
 <picture>
-<source srcset="/diagrams/Variants/2/Orchestrator%20-%20SOA.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/Orchestrator%20-%20SOA.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Orchestrator%20-%20SOA.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/2/Orchestrator%20-%20SOA.png" alt="Orchestrator - SOA" loading="lazy" width="923" height="383" style="width:100%"/>
 </picture>
@@ -319,7 +319,7 @@ In large systems a single *Orchestrator* is very likely to become overgrown and 
 <figure>
 <a href="/diagrams/Variants/2/API%20Composer.png">
 <picture>
-<source srcset="/diagrams/Variants/2/API%20Composer.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/API%20Composer.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/API%20Composer.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/2/API%20Composer.png" alt="API Composer" loading="lazy" width="1263" height="445" style="width:100%"/>
 </picture>
@@ -341,7 +341,7 @@ Example: Microsoft has an [article](https://learn.microsoft.com/en-us/azure/arch
 <figure>
 <a href="/diagrams/Variants/2/Process%20Manager.png">
 <picture>
-<source srcset="/diagrams/Variants/2/Process%20Manager.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/Process%20Manager.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Process%20Manager.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/2/Process%20Manager.png" alt="Process Manager" loading="lazy" width="923" height="363" style="width:100%"/>
 </picture>
@@ -361,7 +361,7 @@ Example: \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] provi
 <figure>
 <a href="/diagrams/Variants/2/Saga.png">
 <picture>
-<source srcset="/diagrams/Variants/2/Saga.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/Saga.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Saga.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/2/Saga.png" alt="Saga" loading="lazy" width="1443" height="485" style="width:100%"/>
 </picture>
@@ -387,7 +387,7 @@ Example: \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\] inv
 <figure>
 <a href="/diagrams/Variants/2/Integration%20Service.png">
 <picture>
-<source srcset="/diagrams/Variants/2/Integration%20Service.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/Integration%20Service.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Integration%20Service.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/2/Integration%20Service.png" alt="Integration Service" loading="lazy" width="803" height="343" style="width:100%"/>
 </picture>
@@ -407,7 +407,7 @@ Several composite patterns involve an *Orchestrator* and are dominated by its be
 <figure>
 <a href="/diagrams/Variants/2/API%20Gateway.png">
 <picture>
-<source srcset="/diagrams/Variants/2/API%20Gateway.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/API%20Gateway.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/API%20Gateway.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/2/API%20Gateway.png" alt="API Gateway" loading="lazy" width="923" height="365" style="width:100%"/>
 </picture>
@@ -423,7 +423,7 @@ Example: a thorough article from [Microsoft](https://learn.microsoft.com/en-us/a
 <figure>
 <a href="/diagrams/Variants/2/Event%20Mediator.png">
 <picture>
-<source srcset="/diagrams/Variants/2/Event%20Mediator.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/Event%20Mediator.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Event%20Mediator.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/2/Event%20Mediator.png" alt="Event Mediator" loading="lazy" width="1103" height="385" style="width:100%"/>
 </picture>
@@ -439,7 +439,7 @@ Example: Mediator Topology in the chapter of \[[FSA](https://docs.google.com/doc
 <figure>
 <a href="/diagrams/Variants/2/Enterprise%20Service%20Bus.png">
 <picture>
-<source srcset="/diagrams/Variants/2/Enterprise%20Service%20Bus.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/Enterprise%20Service%20Bus.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Enterprise%20Service%20Bus.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/2/Enterprise%20Service%20Bus.png" alt="Enterprise Service Bus" loading="lazy" width="1323" height="552" style="width:100%"/>
 </picture>
@@ -466,7 +466,7 @@ There is [one way to counter the first point and more than one to solve the seco
 <figure>
 <a href="/diagrams/Evolutions/2/Orchestrator%20to%20Layered%20Services.png">
 <picture>
-<source srcset="/diagrams/Evolutions/2/Orchestrator%20to%20Layered%20Services.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/2/Orchestrator%20to%20Layered%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Orchestrator%20to%20Layered%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/2/Orchestrator%20to%20Layered%20Services.png" alt="Orchestrator to Layered Services" loading="lazy" width="1343" height="403" style="width:100%"/>
 </picture>
@@ -479,7 +479,7 @@ There is [one way to counter the first point and more than one to solve the seco
 <figure>
 <a href="/diagrams/Evolutions/2/Orchestrator%20to%20Backends%20for%20Frontends.png">
 <picture>
-<source srcset="/diagrams/Evolutions/2/Orchestrator%20to%20Backends%20for%20Frontends.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/2/Orchestrator%20to%20Backends%20for%20Frontends.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Orchestrator%20to%20Backends%20for%20Frontends.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/2/Orchestrator%20to%20Backends%20for%20Frontends.png" alt="Orchestrator to Backends for Frontends" loading="lazy" width="1283" height="384" style="width:100%"/>
 </picture>
@@ -492,7 +492,7 @@ There is [one way to counter the first point and more than one to solve the seco
 <figure>
 <a href="/diagrams/Evolutions/2/Orchestrator%20add%20Orchestrator.png">
 <picture>
-<source srcset="/diagrams/Evolutions/2/Orchestrator%20add%20Orchestrator.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/2/Orchestrator%20add%20Orchestrator.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Orchestrator%20add%20Orchestrator.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/2/Orchestrator%20add%20Orchestrator.png" alt="Orchestrator add Orchestrator" loading="lazy" width="1307" height="464" style="width:100%"/>
 </picture>
@@ -505,7 +505,7 @@ There is [one way to counter the first point and more than one to solve the seco
 <figure>
 <a href="/diagrams/Evolutions/2/Orchestrator%20to%20Hierarchy.png">
 <picture>
-<source srcset="/diagrams/Evolutions/2/Orchestrator%20to%20Hierarchy.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/2/Orchestrator%20to%20Hierarchy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Orchestrator%20to%20Hierarchy.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/2/Orchestrator%20to%20Hierarchy.png" alt="Orchestrator to Hierarchy" loading="lazy" width="1326" height="305" style="width:100%"/>
 </picture>

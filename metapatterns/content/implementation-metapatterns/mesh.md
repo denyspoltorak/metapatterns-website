@@ -12,7 +12,7 @@ images = ["/diagrams/Main/Mesh.svg"]
 <figure>
 <a href="/diagrams/Main/Mesh.png">
 <picture>
-<source srcset="/diagrams/Main/Mesh.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Main/Mesh.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Mesh.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Main/Mesh.png" alt="Mesh" loading="lazy" width="804" height="436" style="width:100%"/>
 </picture>
@@ -123,7 +123,7 @@ The connected *nodes* of a *Mesh* may be:
 <figure>
 <a href="/diagrams/Variants/4/P2P.png">
 <picture>
-<source srcset="/diagrams/Variants/4/P2P.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/4/P2P.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/P2P.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/4/P2P.png" alt="P2P" loading="lazy" width="802" height="403" style="width:100%"/>
 </picture>
@@ -139,7 +139,7 @@ Examples: torrent, onion routing \(Tor\), blockchain\.
 <figure>
 <a href="/diagrams/Variants/4/Leaf-Spine.png">
 <picture>
-<source srcset="/diagrams/Variants/4/Leaf-Spine.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/4/Leaf-Spine.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/Leaf-Spine.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/4/Leaf-Spine.png" alt="Leaf-Spine" loading="lazy" width="603" height="361" style="width:81%"/>
 </picture>
@@ -153,7 +153,7 @@ This [datacenter network architecture](https://www.geeksforgeeks.org/spine-leaf-
 <figure>
 <a href="/diagrams/Variants/4/Actors.png">
 <picture>
-<source srcset="/diagrams/Variants/4/Actors.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/4/Actors.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/Actors.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/4/Actors.png" alt="Actors" loading="lazy" width="862" height="304" style="width:100%"/>
 </picture>
@@ -167,7 +167,7 @@ A system of *Actors* may be classified as a *fully connected Mesh* with the acto
 <figure>
 <a href="/diagrams/Variants/4/Service%20Mesh.png">
 <picture>
-<source srcset="/diagrams/Variants/4/Service%20Mesh.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/4/Service%20Mesh.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/Service%20Mesh.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/4/Service%20Mesh.png" alt="Service Mesh" loading="lazy" width="822" height="549" style="width:100%"/>
 </picture>
@@ -192,7 +192,7 @@ Ready\-to\-use *Service Mesh* frameworks are popular with the *Microservices* ar
 <figure>
 <a href="/diagrams/Variants/4/Space-Based%20Architecture.png">
 <picture>
-<source srcset="/diagrams/Variants/4/Space-Based%20Architecture.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/4/Space-Based%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/Space-Based%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/4/Space-Based%20Architecture.png" alt="Space-Based Architecture" loading="lazy" width="743" height="483" style="width:100%"/>
 </picture>

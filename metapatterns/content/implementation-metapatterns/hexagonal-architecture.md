@@ -12,7 +12,7 @@ images = ["/diagrams/Main/Hexagonal%20Architecture.svg"]
 <figure>
 <a href="/diagrams/Main/Hexagonal%20Architecture.png">
 <picture>
-<source srcset="/diagrams/Main/Hexagonal%20Architecture.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Main/Hexagonal%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Hexagonal%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Main/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" loading="lazy" width="982" height="602" style="width:100%"/>
 </picture>
@@ -73,7 +73,7 @@ In rare cases the system may benefit from direct communication between the adapt
 <figure>
 <a href="/diagrams/Performance/Hexagonal%20Architecture.png">
 <picture>
-<source srcset="/diagrams/Performance/Hexagonal%20Architecture.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Performance/Hexagonal%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Performance/Hexagonal%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Performance/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" loading="lazy" width="703" height="401" style="width:90%"/>
 </picture>
@@ -87,7 +87,7 @@ Each [adapter]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorrup
 <figure>
 <a href="/diagrams/Dependencies/Hexagonal%20Architecture.png">
 <picture>
-<source srcset="/diagrams/Dependencies/Hexagonal%20Architecture.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Dependencies/Hexagonal%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Dependencies/Hexagonal%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Dependencies/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" loading="lazy" width="803" height="483" style="width:84%"/>
 </picture>
@@ -119,7 +119,7 @@ Each [adapter]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorrup
 <figure>
 <a href="/diagrams/Relations/Hexagonal%20Architecture.png">
 <picture>
-<source srcset="/diagrams/Relations/Hexagonal%20Architecture.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Relations/Hexagonal%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Relations/Hexagonal%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Relations/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" loading="lazy" width="1023" height="602" style="width:100%"/>
 </picture>
@@ -144,7 +144,7 @@ One possible variation in a distributed or asynchronous *Hexagonal Architecture*
 <figure>
 <a href="/diagrams/Variants/4/Hexagonal%20-%20Adapters%20with%20Components.png">
 <picture>
-<source srcset="/diagrams/Variants/4/Hexagonal%20-%20Adapters%20with%20Components.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/4/Hexagonal%20-%20Adapters%20with%20Components.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/Hexagonal%20-%20Adapters%20with%20Components.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/4/Hexagonal%20-%20Adapters%20with%20Components.png" alt="Hexagonal - Adapters with Components" loading="lazy" width="823" height="483" style="width:93%"/>
 </picture>
@@ -160,7 +160,7 @@ This resembles [*Sidecar*](https://docs.google.com/document/d/1hzBn-RzzNDcArAWcv
 <figure>
 <a href="/diagrams/Variants/4/Hexagonal%20-%20Adapters%20with%20the%20Core.png">
 <picture>
-<source srcset="/diagrams/Variants/4/Hexagonal%20-%20Adapters%20with%20the%20Core.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/4/Hexagonal%20-%20Adapters%20with%20the%20Core.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/Hexagonal%20-%20Adapters%20with%20the%20Core.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/4/Hexagonal%20-%20Adapters%20with%20the%20Core.png" alt="Hexagonal - Adapters with the Core" loading="lazy" width="1063" height="324" style="width:100%"/>
 </picture>
@@ -180,7 +180,7 @@ This approach resembles [*Ambassador*](https://docs.google.com/document/d/1hzBn-
 <figure>
 <a href="/diagrams/Variants/4/Monolithic%20Hexagonal.png">
 <picture>
-<source srcset="/diagrams/Variants/4/Monolithic%20Hexagonal.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/4/Monolithic%20Hexagonal.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/Monolithic%20Hexagonal.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/4/Monolithic%20Hexagonal.png" alt="Monolithic Hexagonal" loading="lazy" width="863" height="363" style="width:100%"/>
 </picture>
@@ -194,7 +194,7 @@ Just like [*MVC*]({{< relref "#model-view-controller-mvc-action-domain-responder
 <figure>
 <a href="/diagrams/Variants/4/Layered%20Hexagonal.png">
 <picture>
-<source srcset="/diagrams/Variants/4/Layered%20Hexagonal.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/4/Layered%20Hexagonal.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/Layered%20Hexagonal.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/4/Layered%20Hexagonal.png" alt="Layered Hexagonal" loading="lazy" width="1011" height="543" style="width:100%"/>
 </picture>
@@ -225,7 +225,7 @@ All of them aim at making the business logic presentation\-agnostic \(thus cross
 <figure>
 <a href="/diagrams/Variants/4/MVP.png">
 <picture>
-<source srcset="/diagrams/Variants/4/MVP.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/4/MVP.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/MVP.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/4/MVP.png" alt="MVP" loading="lazy" width="923" height="363" style="width:100%"/>
 </picture>
@@ -252,7 +252,7 @@ All those patterns exploit modern OS or GUI frameworks’ widgets which handle a
 <figure>
 <a href="/diagrams/Variants/4/MVP%20-%20subtypes.png">
 <picture>
-<source srcset="/diagrams/Variants/4/MVP%20-%20subtypes.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/4/MVP%20-%20subtypes.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/MVP%20-%20subtypes.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/4/MVP%20-%20subtypes.png" alt="MVP - subtypes" loading="lazy" width="1284" height="903" style="width:100%"/>
 </picture>
@@ -264,7 +264,7 @@ All those patterns exploit modern OS or GUI frameworks’ widgets which handle a
 <figure>
 <a href="/diagrams/Variants/4/MVC.png">
 <picture>
-<source srcset="/diagrams/Variants/4/MVC.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/4/MVC.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/MVC.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/4/MVC.png" alt="MVC" loading="lazy" width="943" height="303" style="width:100%"/>
 </picture>
@@ -297,7 +297,7 @@ Another difference is that while *MVC* provides for changing target platforms by
 <figure>
 <a href="/diagrams/Variants/4/MVC%20-%20subtypes.png">
 <picture>
-<source srcset="/diagrams/Variants/4/MVC%20-%20subtypes.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/4/MVC%20-%20subtypes.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/MVC%20-%20subtypes.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/4/MVC%20-%20subtypes.png" alt="MVC - subtypes" loading="lazy" width="1303" height="824" style="width:100%"/>
 </picture>

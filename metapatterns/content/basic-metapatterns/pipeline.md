@@ -12,7 +12,7 @@ images = ["/diagrams/Main/Pipeline.svg"]
 <figure>
 <a href="/diagrams/Main/Pipeline.png">
 <picture>
-<source srcset="/diagrams/Main/Pipeline.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Main/Pipeline.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Pipeline.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Main/Pipeline.png" alt="Pipeline" loading="lazy" width="1182" height="434" style="width:100%"/>
 </picture>
@@ -73,7 +73,7 @@ There are three ways to build communication in a pipeline, each with different d
 <figure>
 <a href="/diagrams/Dependencies/Pipeline.png">
 <picture>
-<source srcset="/diagrams/Dependencies/Pipeline.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Dependencies/Pipeline.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Dependencies/Pipeline.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Dependencies/Pipeline.png" alt="Pipeline" loading="lazy" width="1243" height="325" style="width:100%"/>
 </picture>
@@ -130,7 +130,7 @@ Such a variety of options enables the use of pipelines in a wide range of domain
 <figure>
 <a href="/diagrams/Variants/1/Pipes%20and%20Filters.png">
 <picture>
-<source srcset="/diagrams/Variants/1/Pipes%20and%20Filters.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/1/Pipes%20and%20Filters.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Pipes%20and%20Filters.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/1/Pipes%20and%20Filters.png" alt="Pipes and Filters" loading="lazy" width="938" height="293" style="width:100%"/>
 </picture>
@@ -150,7 +150,7 @@ Examples: Unix shell pipes, processing of video streams, many types of hardware\
 <figure>
 <a href="/diagrams/Variants/1/Event-Driven%20Architecture.png">
 <picture>
-<source srcset="/diagrams/Variants/1/Event-Driven%20Architecture.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/1/Event-Driven%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Event-Driven%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/1/Event-Driven%20Architecture.png" alt="Event-Driven Architecture" loading="lazy" width="843" height="286" style="width:100%"/>
 </picture>
@@ -187,7 +187,7 @@ Examples: high performance web services\.
 <figure>
 <a href="/diagrams/Variants/1/Data%20Mesh.png">
 <picture>
-<source srcset="/diagrams/Variants/1/Data%20Mesh.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/1/Data%20Mesh.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Data%20Mesh.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/1/Data%20Mesh.png" alt="Data Mesh" loading="lazy" width="1094" height="264" style="width:100%"/>
 </picture>
@@ -212,7 +212,7 @@ There is a pragmatic option to allow an operational service to resort to the ana
 <figure>
 <a href="/diagrams/Variants/1/Nanoservices.png">
 <picture>
-<source srcset="/diagrams/Variants/1/Nanoservices.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/1/Nanoservices.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Nanoservices.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/1/Nanoservices.png" alt="Nanoservices" loading="lazy" width="2223" height="484" style="width:100%"/>
 </picture>
@@ -235,7 +235,7 @@ There are a couple of [pipeline\-specific evolutions]({{< relref "../appendices/
 <figure>
 <a href="/diagrams/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Services/Pipeline%20promote%20Front%20Controller.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Services/Pipeline%20promote%20Front%20Controller.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Services/Pipeline%20promote%20Front%20Controller.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png" alt="Pipeline promote Front Controller" loading="lazy" width="1299" height="347" style="width:100%"/>
 </picture>
@@ -248,7 +248,7 @@ There are a couple of [pipeline\-specific evolutions]({{< relref "../appendices/
 <figure>
 <a href="/diagrams/Evolutions/Services/Pipeline%20use%20Orchestrator.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Services/Pipeline%20use%20Orchestrator.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Services/Pipeline%20use%20Orchestrator.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Services/Pipeline%20use%20Orchestrator.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Services/Pipeline%20use%20Orchestrator.png" alt="Pipeline use Orchestrator" loading="lazy" width="1303" height="384" style="width:100%"/>
 </picture>

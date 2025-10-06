@@ -26,7 +26,7 @@ If we want for each module or service to continue with a model that fits its nee
 <figure>
 <a href="/diagrams/Conclusion/Indirection-Command.png">
 <picture>
-<source srcset="/diagrams/Conclusion/Indirection-Command.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Conclusion/Indirection-Command.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Indirection-Command.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Conclusion/Indirection-Command.png" alt="Indirection-Command" loading="lazy" width="1052" height="424" style="width:100%"/>
 </picture>
@@ -47,7 +47,7 @@ In such a case we employ an [*Adapter*]({{< relref "../../extension-metapatterns
 <figure>
 <a href="/diagrams/Conclusion/Indirection-Query.png">
 <picture>
-<source srcset="/diagrams/Conclusion/Indirection-Query.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Conclusion/Indirection-Query.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Indirection-Query.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Conclusion/Indirection-Query.png" alt="Indirection-Query" loading="lazy" width="1043" height="426" style="width:100%"/>
 </picture>

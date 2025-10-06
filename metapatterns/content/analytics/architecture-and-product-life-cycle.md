@@ -16,7 +16,7 @@ In my practice, a product’s architecture changes over its lifetime\. For a R&D
 <figure>
 <a href="/diagrams/Conclusion/Lifecycle-1.png">
 <picture>
-<source srcset="/diagrams/Conclusion/Lifecycle-1.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Conclusion/Lifecycle-1.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Lifecycle-1.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Conclusion/Lifecycle-1.png" alt="Lifecycle-1" loading="lazy" width="802" height="228" style="width:100%"/>
 </picture>
@@ -30,7 +30,7 @@ A project in an unknown domain starts humble and small, likely as a proof of con
 <figure>
 <a href="/diagrams/Conclusion/Lifecycle-2.png">
 <picture>
-<source srcset="/diagrams/Conclusion/Lifecycle-2.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Conclusion/Lifecycle-2.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Lifecycle-2.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Conclusion/Lifecycle-2.png" alt="Lifecycle-2" loading="lazy" width="810" height="323" style="width:89%"/>
 </picture>
@@ -44,7 +44,7 @@ When you have the thing working, you may start reflecting on the rules and the c
 <figure>
 <a href="/diagrams/Conclusion/Lifecycle-3.png">
 <picture>
-<source srcset="/diagrams/Conclusion/Lifecycle-3.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Conclusion/Lifecycle-3.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Lifecycle-3.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Conclusion/Lifecycle-3.png" alt="Lifecycle-3" loading="lazy" width="1363" height="404" style="width:100%"/>
 </picture>
@@ -58,7 +58,7 @@ As you acquire domain experience, you start discerning subdomains \(or *bounded 
 <figure>
 <a href="/diagrams/Conclusion/Lifecycle-4.png">
 <picture>
-<source srcset="/diagrams/Conclusion/Lifecycle-4.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Conclusion/Lifecycle-4.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Lifecycle-4.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Conclusion/Lifecycle-4.png" alt="Lifecycle-4" loading="lazy" width="1123" height="404" style="width:100%"/>
 </picture>
@@ -72,7 +72,7 @@ As the product enters the market, its development tends to slow down with more a
 <figure>
 <a href="/diagrams/Conclusion/Lifecycle-5.png">
 <picture>
-<source srcset="/diagrams/Conclusion/Lifecycle-5.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Conclusion/Lifecycle-5.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Lifecycle-5.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Conclusion/Lifecycle-5.png" alt="Lifecycle-5" loading="lazy" width="463" height="323" style="width:54%"/>
 </picture>
@@ -86,7 +86,7 @@ When active development ceases, you lose even more people and funding as you dri
 <figure>
 <a href="/diagrams/Conclusion/Lifecycle-6.png">
 <picture>
-<source srcset="/diagrams/Conclusion/Lifecycle-6.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Conclusion/Lifecycle-6.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Lifecycle-6.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Conclusion/Lifecycle-6.png" alt="Lifecycle-6" loading="lazy" width="463" height="283" style="width:55%"/>
 </picture>

@@ -12,7 +12,7 @@ images = ["/diagrams/Main/Plugins.svg"]
 <figure>
 <a href="/diagrams/Main/Plugins.png">
 <picture>
-<source srcset="/diagrams/Main/Plugins.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Main/Plugins.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Plugins.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Main/Plugins.png" alt="Plugins" loading="lazy" width="942" height="554" style="width:100%"/>
 </picture>
@@ -54,7 +54,7 @@ The only case for a plugin to improve performance of a system that I can think u
 <figure>
 <a href="/diagrams/Performance/Plugins-injection.png">
 <picture>
-<source srcset="/diagrams/Performance/Plugins-injection.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Performance/Plugins-injection.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Performance/Plugins-injection.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Performance/Plugins-injection.png" alt="Plugins-injection" loading="lazy" width="1003" height="321" style="width:100%"/>
 </picture>
@@ -68,7 +68,7 @@ Each *plugin* depends on the *core*’s *API* \(for *Addons*\) or *SPI* \(for *P
 <figure>
 <a href="/diagrams/Dependencies/Plugins.png">
 <picture>
-<source srcset="/diagrams/Dependencies/Plugins.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Dependencies/Plugins.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Dependencies/Plugins.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Dependencies/Plugins.png" alt="Plugins" loading="lazy" width="743" height="324" style="width:100%"/>
 </picture>
@@ -94,7 +94,7 @@ Each *plugin* depends on the *core*’s *API* \(for *Addons*\) or *SPI* \(for *P
 <figure>
 <a href="/diagrams/Relations/Plugins.png">
 <picture>
-<source srcset="/diagrams/Relations/Plugins.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Relations/Plugins.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Relations/Plugins.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Relations/Plugins.png" alt="Plugins" loading="lazy" width="643" height="603" style="width:68%"/>
 </picture>

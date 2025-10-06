@@ -19,7 +19,7 @@ Not all the layered architectures are equally layered\. A [*Monolith*]({{< relre
 <figure>
 <a href="/diagrams/Evolutions/Layers/Layers%20to%20Layers.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Layers.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Layers.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Layers.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Layers/Layers%20to%20Layers.png" alt="Layers to Layers" loading="lazy" width="943" height="424" style="width:100%"/>
 </picture>
@@ -36,7 +36,7 @@ It is also common to:
 <figure>
 <a href="/diagrams/Evolutions/Layers/Layers%20Split%20in%20Two.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Layers/Layers%20Split%20in%20Two.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Layers/Layers%20Split%20in%20Two.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20Split%20in%20Two.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Layers/Layers%20Split%20in%20Two.png" alt="Layers Split in Two" loading="lazy" width="1027" height="243" style="width:100%"/>
 </picture>

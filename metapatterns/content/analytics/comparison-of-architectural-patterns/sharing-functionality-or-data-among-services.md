@@ -20,7 +20,7 @@ Sharing data inside a process is similar, but usually requires some kind of prot
 <figure>
 <a href="/diagrams/Conclusion/Sharing-DirectCall.png">
 <picture>
-<source srcset="/diagrams/Conclusion/Sharing-DirectCall.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Conclusion/Sharing-DirectCall.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Sharing-DirectCall.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Conclusion/Sharing-DirectCall.png" alt="Sharing-DirectCall" loading="lazy" width="1183" height="323" style="width:100%"/>
 </picture>
@@ -34,7 +34,7 @@ In a distributed system you can place the functionality or data to share into a 
 <figure>
 <a href="/diagrams/Conclusion/Sharing-DedicatedService.png">
 <picture>
-<source srcset="/diagrams/Conclusion/Sharing-DedicatedService.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Conclusion/Sharing-DedicatedService.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Sharing-DedicatedService.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Conclusion/Sharing-DedicatedService.png" alt="Sharing-DedicatedService" loading="lazy" width="1223" height="303" style="width:100%"/>
 </picture>
@@ -50,7 +50,7 @@ In a similar way a service may [behave as a function]({{< relref "../../foundati
 <figure>
 <a href="/diagrams/Conclusion/Sharing-Delegate.png">
 <picture>
-<source srcset="/diagrams/Conclusion/Sharing-Delegate.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Conclusion/Sharing-Delegate.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Sharing-Delegate.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Conclusion/Sharing-Delegate.png" alt="Sharing-Delegate" loading="lazy" width="1341" height="443" style="width:100%"/>
 </picture>
@@ -66,7 +66,7 @@ Another case of replication is importing the same code in multiple services, whi
 <figure>
 <a href="/diagrams/Conclusion/Sharing-Duplicate.png">
 <picture>
-<source srcset="/diagrams/Conclusion/Sharing-Duplicate.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Conclusion/Sharing-Duplicate.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Sharing-Duplicate.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Conclusion/Sharing-Duplicate.png" alt="Sharing-Duplicate" loading="lazy" width="1363" height="644" style="width:100%"/>
 </picture>

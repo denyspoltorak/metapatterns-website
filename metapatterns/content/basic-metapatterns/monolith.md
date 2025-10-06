@@ -14,7 +14,7 @@ Let’s take a look at the simplest possible [metapattern]({{< relref "../introd
 <figure>
 <a href="/diagrams/Main/Monolith.png">
 <picture>
-<source srcset="/diagrams/Main/Monolith.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Main/Monolith.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Monolith.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Main/Monolith.png" alt="Monolith" loading="lazy" width="942" height="474" style="width:100%"/>
 </picture>
@@ -104,7 +104,7 @@ Even though a *Monolith* is a single module, meaning that there are no dependenc
 <figure>
 <a href="/diagrams/Relations/Monolith.png">
 <picture>
-<source srcset="/diagrams/Relations/Monolith.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Relations/Monolith.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Relations/Monolith.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Relations/Monolith.png" alt="Monolith" loading="lazy" width="1623" height="1620" style="width:100%"/>
 </picture>
@@ -125,7 +125,7 @@ Even though a *Monolith* is a single module, meaning that there are no dependenc
 <figure>
 <a href="/diagrams/Variants/1/MonolithAsUnzoomed.png">
 <picture>
-<source srcset="/diagrams/Variants/1/MonolithAsUnzoomed.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/1/MonolithAsUnzoomed.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/MonolithAsUnzoomed.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/1/MonolithAsUnzoomed.png" alt="MonolithAsUnzoomed" loading="lazy" width="1523" height="466" style="width:100%"/>
 </picture>
@@ -141,7 +141,7 @@ As we aspire to build a unified classification for both distributed and local sy
 <figure>
 <a href="/diagrams/Variants/1/True%20Monolith.png">
 <picture>
-<source srcset="/diagrams/Variants/1/True%20Monolith.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/1/True%20Monolith.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/True%20Monolith.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/1/True%20Monolith.png" alt="True Monolith" loading="lazy" width="783" height="243" style="width:83%"/>
 </picture>
@@ -155,7 +155,7 @@ A true *Monolith* features [no clear internal structure](http://laputan.org/mud/
 <figure>
 <a href="/diagrams/Variants/1/Layered%20Monolith.png">
 <picture>
-<source srcset="/diagrams/Variants/1/Layered%20Monolith.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/1/Layered%20Monolith.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Layered%20Monolith.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/1/Layered%20Monolith.png" alt="Layered Monolith" loading="lazy" width="783" height="243" style="width:81%"/>
 </picture>
@@ -169,7 +169,7 @@ When they say [*Layered Monolith*]({{< relref "../basic-metapatterns/layers.md#s
 <figure>
 <a href="/diagrams/Variants/1/Modular%20Monolith.png">
 <picture>
-<source srcset="/diagrams/Variants/1/Modular%20Monolith.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/1/Modular%20Monolith.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Modular%20Monolith.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/1/Modular%20Monolith.png" alt="Modular Monolith" loading="lazy" width="903" height="204" style="width:88%"/>
 </picture>
@@ -183,7 +183,7 @@ A [*Modular Monolith*]({{< relref "../basic-metapatterns/services.md#asynchronou
 <figure>
 <a href="/diagrams/Variants/1/Hexagonal%20Monolith.png">
 <picture>
-<source srcset="/diagrams/Variants/1/Hexagonal%20Monolith.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/1/Hexagonal%20Monolith.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Hexagonal%20Monolith.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/1/Hexagonal%20Monolith.png" alt="Hexagonal Monolith" loading="lazy" width="903" height="364" style="width:91%"/>
 </picture>
@@ -201,7 +201,7 @@ Any software module reacts to incoming events or data and produces outgoing even
 <figure>
 <a href="/diagrams/Variants/1/Subtypes%20of%20Monolith.png">
 <picture>
-<source srcset="/diagrams/Variants/1/Subtypes%20of%20Monolith.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/1/Subtypes%20of%20Monolith.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Subtypes%20of%20Monolith.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/1/Subtypes%20of%20Monolith.png" alt="Subtypes of Monolith" loading="lazy" width="848" height="366" style="width:100%"/>
 </picture>
@@ -213,7 +213,7 @@ Any software module reacts to incoming events or data and produces outgoing even
 <figure>
 <a href="/diagrams/Variants/1/Reactor%20-%20Single%20Thread.png">
 <picture>
-<source srcset="/diagrams/Variants/1/Reactor%20-%20Single%20Thread.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/1/Reactor%20-%20Single%20Thread.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Reactor%20-%20Single%20Thread.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/1/Reactor%20-%20Single%20Thread.png" alt="Reactor - Single Thread" loading="lazy" width="862" height="442" style="width:100%"/>
 </picture>
@@ -229,7 +229,7 @@ That makes sense when the module owns and provides access to a hardware componen
 <figure>
 <a href="/diagrams/Variants/1/Reactor%20-%20Multiple%20Threads.png">
 <picture>
-<source srcset="/diagrams/Variants/1/Reactor%20-%20Multiple%20Threads.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/1/Reactor%20-%20Multiple%20Threads.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Reactor%20-%20Multiple%20Threads.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/1/Reactor%20-%20Multiple%20Threads.png" alt="Reactor - Multiple Threads" loading="lazy" width="781" height="382" style="width:100%"/>
 </picture>
@@ -245,7 +245,7 @@ This is the default simple & stupid implementation of backend services\. Its pit
 <figure>
 <a href="/diagrams/Variants/1/Proactor.png">
 <picture>
-<source srcset="/diagrams/Variants/1/Proactor.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/1/Proactor.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Proactor.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/1/Proactor.png" alt="Proactor" loading="lazy" width="782" height="382" style="width:100%"/>
 </picture>
@@ -261,7 +261,7 @@ This approach is good for real\-time systems where thread synchronization is lar
 <figure>
 <a href="/diagrams/Variants/1/Half-Sync%20Half-Async.png">
 <picture>
-<source srcset="/diagrams/Variants/1/Half-Sync%20Half-Async.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/1/Half-Sync%20Half-Async.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Half-Sync%20Half-Async.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/1/Half-Sync%20Half-Async.png" alt="Half-Sync Half-Async" loading="lazy" width="785" height="423" style="width:100%"/>
 </picture>
@@ -285,7 +285,7 @@ Moreover, people [often call]({{< relref "../analytics/ambiguous-patterns.md#rea
 <figure>
 <a href="/diagrams/Variants/1/Reactor%20with%20Extractors.png">
 <picture>
-<source srcset="/diagrams/Variants/1/Reactor%20with%20Extractors.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/1/Reactor%20with%20Extractors.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Reactor%20with%20Extractors.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/1/Reactor%20with%20Extractors.png" alt="Reactor with Extractors" loading="lazy" width="783" height="583" style="width:100%"/>
 </picture>
@@ -326,7 +326,7 @@ One of the main drawbacks of monolithic architecture is its lack of scalability 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Mesh%20of%20Shards.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Mesh%20of%20Shards.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Mesh%20of%20Shards.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Mesh%20of%20Shards.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Mesh%20of%20Shards.png" alt="Monolith to Mesh of Shards" loading="lazy" width="1103" height="343" style="width:100%"/>
 </picture>
@@ -339,7 +339,7 @@ One of the main drawbacks of monolithic architecture is its lack of scalability 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Isolated%20Shards%20with%20Load%20Balancer.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Isolated%20Shards%20with%20Load%20Balancer.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Isolated%20Shards%20with%20Load%20Balancer.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Isolated%20Shards%20with%20Load%20Balancer.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Isolated%20Shards%20with%20Load%20Balancer.png" alt="Monolith to Isolated Shards with Load Balancer" loading="lazy" width="1073" height="423" style="width:100%"/>
 </picture>
@@ -352,7 +352,7 @@ One of the main drawbacks of monolithic architecture is its lack of scalability 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Stateless%20Shards%20with%20Shared%20DB.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Stateless%20Shards%20with%20Shared%20DB.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Stateless%20Shards%20with%20Shared%20DB.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Stateless%20Shards%20with%20Shared%20DB.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Stateless%20Shards%20with%20Shared%20DB.png" alt="Monolith to Stateless Shards with Shared DB" loading="lazy" width="1083" height="423" style="width:100%"/>
 </picture>
@@ -365,7 +365,7 @@ One of the main drawbacks of monolithic architecture is its lack of scalability 
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Instance%20per%20Client.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Instance%20per%20Client.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Instance%20per%20Client.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Instance%20per%20Client.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Instance%20per%20Client.png" alt="Monolith to Instance per Client" loading="lazy" width="1103" height="343" style="width:100%"/>
 </picture>
@@ -382,7 +382,7 @@ Another drawback of *Monolith* is its… er… monolithism\. The entire applicat
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers.png" alt="Monolith to Layers" loading="lazy" width="1087" height="285" style="width:100%"/>
 </picture>
@@ -395,7 +395,7 @@ Another drawback of *Monolith* is its… er… monolithism\. The entire applicat
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20add%20Database.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Monolith/Monolith%20add%20Database.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20add%20Database.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20add%20Database.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Monolith/Monolith%20add%20Database.png" alt="Monolith add Database" loading="lazy" width="1107" height="244" style="width:100%"/>
 </picture>
@@ -408,7 +408,7 @@ Another drawback of *Monolith* is its… er… monolithism\. The entire applicat
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20add%20Proxy.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Monolith/Monolith%20add%20Proxy.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20add%20Proxy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20add%20Proxy.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Monolith/Monolith%20add%20Proxy.png" alt="Monolith add Proxy" loading="lazy" width="1087" height="361" style="width:100%"/>
 </picture>
@@ -421,7 +421,7 @@ Another drawback of *Monolith* is its… er… monolithism\. The entire applicat
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20add%20Orchestrator.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Monolith/Monolith%20add%20Orchestrator.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20add%20Orchestrator.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20add%20Orchestrator.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Monolith/Monolith%20add%20Orchestrator.png" alt="Monolith add Orchestrator" loading="lazy" width="1047" height="323" style="width:100%"/>
 </picture>
@@ -438,7 +438,7 @@ The final major drawback of *Monolith* is the cohesiveness of its code\. The rap
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Services.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Services.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Services.png" alt="Monolith to Services" loading="lazy" width="1143" height="251" style="width:100%"/>
 </picture>
@@ -451,7 +451,7 @@ The final major drawback of *Monolith* is the cohesiveness of its code\. The rap
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20Split%20Service.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Monolith/Monolith%20Split%20Service.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20Split%20Service.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20Split%20Service.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Monolith/Monolith%20Split%20Service.png" alt="Monolith Split Service" loading="lazy" width="1123" height="251" style="width:100%"/>
 </picture>
@@ -464,7 +464,7 @@ The final major drawback of *Monolith* is the cohesiveness of its code\. The rap
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Pipeline.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Pipeline.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Pipeline.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Pipeline.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Pipeline.png" alt="Monolith to Pipeline" loading="lazy" width="1147" height="247" style="width:100%"/>
 </picture>
@@ -481,7 +481,7 @@ The last group of evolutions does not really change the monolithic nature of the
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Plugins.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Plugins.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Plugins.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Plugins.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Plugins.png" alt="Monolith to Plugins" loading="lazy" width="1003" height="363" style="width:100%"/>
 </picture>
@@ -494,7 +494,7 @@ The last group of evolutions does not really change the monolithic nature of the
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Hexagonal.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Hexagonal.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Hexagonal.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Hexagonal.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Hexagonal.png" alt="Monolith to Hexagonal" loading="lazy" width="1007" height="323" style="width:100%"/>
 </picture>
@@ -507,7 +507,7 @@ The last group of evolutions does not really change the monolithic nature of the
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Interpreter.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Interpreter.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Interpreter.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Interpreter.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Interpreter.png" alt="Monolith to Interpreter" loading="lazy" width="1087" height="323" style="width:100%"/>
 </picture>

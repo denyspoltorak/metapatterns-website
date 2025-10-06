@@ -21,7 +21,7 @@ Other cases are better solved by extracting the logic that manipulates multiple 
 <figure>
 <a href="/diagrams/Evolutions/Shards/Shards%20add%20Middleware.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Shards/Shards%20add%20Middleware.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Shards/Shards%20add%20Middleware.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Shards/Shards%20add%20Middleware.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Shards/Shards%20add%20Middleware.png" alt="Shards add Middleware" loading="lazy" width="1065" height="324" style="width:100%"/>
 </picture>
@@ -53,7 +53,7 @@ A *Middleware* transports messages between shards, checks their health and recov
 <figure>
 <a href="/diagrams/Evolutions/Shards/Shards%20add%20Load%20Balancer.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Shards/Shards%20add%20Load%20Balancer.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Shards/Shards%20add%20Load%20Balancer.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Shards/Shards%20add%20Load%20Balancer.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Shards/Shards%20add%20Load%20Balancer.png" alt="Shards add Load Balancer" loading="lazy" width="1026" height="423" style="width:100%"/>
 </picture>
@@ -86,7 +86,7 @@ The client application may know the address of the shard which serves it and con
 <figure>
 <a href="/diagrams/Evolutions/Shards/Shards%20use%20Orchestrator.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Shards/Shards%20use%20Orchestrator.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Shards/Shards%20use%20Orchestrator.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Shards/Shards%20use%20Orchestrator.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Shards/Shards%20use%20Orchestrator.png" alt="Shards use Orchestrator" loading="lazy" width="1045" height="244" style="width:100%"/>
 </picture>

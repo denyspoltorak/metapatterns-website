@@ -12,7 +12,7 @@ images = ["/diagrams/Main/Middleware.svg"]
 <figure>
 <a href="/diagrams/Main/Middleware.png">
 <picture>
-<source srcset="/diagrams/Main/Middleware.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Main/Middleware.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Middleware.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Main/Middleware.png" alt="Middleware" loading="lazy" width="1062" height="494" style="width:100%"/>
 </picture>
@@ -75,7 +75,7 @@ Each service depends both on the *Middleware* and on the API of every service it
 <figure>
 <a href="/diagrams/Dependencies/Middleware.png">
 <picture>
-<source srcset="/diagrams/Dependencies/Middleware.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Dependencies/Middleware.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Dependencies/Middleware.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Dependencies/Middleware.png" alt="Middleware" loading="lazy" width="986" height="264" style="width:100%"/>
 </picture>
@@ -104,7 +104,7 @@ You may decide to use an [*Anticorruption Layer*]({{< relref "../extension-metap
 <figure>
 <a href="/diagrams/Relations/Middleware.png">
 <picture>
-<source srcset="/diagrams/Relations/Middleware.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Relations/Middleware.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Relations/Middleware.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Relations/Middleware.png" alt="Middleware" loading="lazy" width="1226" height="463" style="width:100%"/>
 </picture>
@@ -168,7 +168,7 @@ If the messages are stored indefinitely, the *Middleware* becomes a *Persistent*
 <figure>
 <a href="/diagrams/Misc/Middleware.png">
 <picture>
-<source srcset="/diagrams/Misc/Middleware.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Misc/Middleware.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Misc/Middleware.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Misc/Middleware.png" alt="Middleware" loading="lazy" width="1583" height="343" style="width:100%"/>
 </picture>
@@ -193,7 +193,7 @@ There are several patterns which extend *Middleware* with other functions:
 <figure>
 <a href="/diagrams/Variants/2/Message%20Bus.png">
 <picture>
-<source srcset="/diagrams/Variants/2/Message%20Bus.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/Message%20Bus.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Message%20Bus.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/2/Message%20Bus.png" alt="Message Bus" loading="lazy" width="883" height="283" style="width:100%"/>
 </picture>
@@ -207,7 +207,7 @@ A *Message Bus* \[[EIP]({{< relref "../appendices/books-referenced.md#eip" >}})\
 <figure>
 <a href="/diagrams/Variants/1/Microservices.png">
 <picture>
-<source srcset="/diagrams/Variants/1/Microservices.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/1/Microservices.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Microservices.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/1/Microservices.png" alt="Microservices" loading="lazy" width="1303" height="421" style="width:100%"/>
 </picture>
@@ -223,7 +223,7 @@ The internals of [*Service Mesh*]({{< relref "../implementation-metapatterns/mes
 <figure>
 <a href="/diagrams/Variants/2/Event%20Mediator.png">
 <picture>
-<source srcset="/diagrams/Variants/2/Event%20Mediator.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/Event%20Mediator.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Event%20Mediator.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/2/Event%20Mediator.png" alt="Event Mediator" loading="lazy" width="1103" height="385" style="width:100%"/>
 </picture>
@@ -239,7 +239,7 @@ Slightly more details on the *Event Mediator* are [provided in the *Orchestrator
 <figure>
 <a href="/diagrams/Variants/2/Middleware%20-%20Shared%20Event%20Store.png">
 <picture>
-<source srcset="/diagrams/Variants/2/Middleware%20-%20Shared%20Event%20Store.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/Middleware%20-%20Shared%20Event%20Store.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Middleware%20-%20Shared%20Event%20Store.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/2/Middleware%20-%20Shared%20Event%20Store.png" alt="Middleware - Shared Event Store" loading="lazy" width="1263" height="244" style="width:100%"/>
 </picture>
@@ -255,7 +255,7 @@ This pattern is detailed in the [*Combined Component* chapter]({{< relref "../ex
 <figure>
 <a href="/diagrams/Variants/2/Enterprise%20Service%20Bus.png">
 <picture>
-<source srcset="/diagrams/Variants/2/Enterprise%20Service%20Bus.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/Enterprise%20Service%20Bus.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Enterprise%20Service%20Bus.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/2/Enterprise%20Service%20Bus.png" alt="Enterprise Service Bus" loading="lazy" width="1323" height="552" style="width:100%"/>
 </picture>
@@ -276,7 +276,7 @@ A *Middleware* is unlikely to be removed \(though it may be replaced\) once it i
 <figure>
 <a href="/diagrams/Evolutions/2/Middleware%20add%20Middleware.png">
 <picture>
-<source srcset="/diagrams/Evolutions/2/Middleware%20add%20Middleware.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/2/Middleware%20add%20Middleware.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Middleware%20add%20Middleware.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/2/Middleware%20add%20Middleware.png" alt="Middleware add Middleware" loading="lazy" width="1223" height="344" style="width:100%"/>
 </picture>
@@ -289,7 +289,7 @@ A *Middleware* is unlikely to be removed \(though it may be replaced\) once it i
 <figure>
 <a href="/diagrams/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.png">
 <picture>
-<source srcset="/diagrams/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.png" alt="Middleware to Bus of Buses" loading="lazy" width="1903" height="405" style="width:100%"/>
 </picture>

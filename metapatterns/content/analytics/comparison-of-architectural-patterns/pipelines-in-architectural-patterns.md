@@ -24,7 +24,7 @@ Staying true to all of these points makes *Pipes and Filters* – one of the old
 <figure>
 <a href="/diagrams/Conclusion/Pipelineliness-PipesAndFilters.png">
 <picture>
-<source srcset="/diagrams/Conclusion/Pipelineliness-PipesAndFilters.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Conclusion/Pipelineliness-PipesAndFilters.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Pipelineliness-PipesAndFilters.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Conclusion/Pipelineliness-PipesAndFilters.png" alt="Pipelineliness-PipesAndFilters" loading="lazy" width="943" height="330" style="width:100%"/>
 </picture>
@@ -40,7 +40,7 @@ This architecture is easy to build and has a wide range of applications, from ha
 <figure>
 <a href="/diagrams/Conclusion/Pipelineliness-EventDrivenArchitecture.png">
 <picture>
-<source srcset="/diagrams/Conclusion/Pipelineliness-EventDrivenArchitecture.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Conclusion/Pipelineliness-EventDrivenArchitecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Pipelineliness-EventDrivenArchitecture.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Conclusion/Pipelineliness-EventDrivenArchitecture.png" alt="Pipelineliness-EventDrivenArchitecture" loading="lazy" width="903" height="363" style="width:100%"/>
 </picture>
@@ -60,7 +60,7 @@ This architecture covers way more complex use cases than [*Pipes and Filters*]({
 <figure>
 <a href="/diagrams/Conclusion/Pipelineliness-CQRS.png">
 <picture>
-<source srcset="/diagrams/Conclusion/Pipelineliness-CQRS.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Conclusion/Pipelineliness-CQRS.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Pipelineliness-CQRS.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Conclusion/Pipelineliness-CQRS.png" alt="Pipelineliness-CQRS" loading="lazy" width="863" height="403" style="width:100%"/>
 </picture>
@@ -74,7 +74,7 @@ When data from events is stored for a future use \(as with the aggregation above
 <figure>
 <a href="/diagrams/Conclusion/Pipelineliness-MVC.png">
 <picture>
-<source srcset="/diagrams/Conclusion/Pipelineliness-MVC.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Conclusion/Pipelineliness-MVC.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Pipelineliness-MVC.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Conclusion/Pipelineliness-MVC.png" alt="Pipelineliness-MVC" loading="lazy" width="943" height="303" style="width:100%"/>
 </picture>

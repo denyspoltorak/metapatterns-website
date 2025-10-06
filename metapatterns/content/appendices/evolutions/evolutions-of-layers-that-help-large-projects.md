@@ -20,7 +20,7 @@ The main drawback \(and benefit\) of [*Layers*]({{< relref "../../basic-metapatt
 <figure>
 <a href="/diagrams/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.png" alt="Layers Split Domain to Services" loading="lazy" width="1083" height="243" style="width:100%"/>
 </picture>
@@ -62,7 +62,7 @@ It is very common for a system’s domain to consist of weakly interacting *boun
 <figure>
 <a href="/diagrams/Evolutions/Layers/Layers%20Split%20to%20Event-Driven%20Architecture.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Layers/Layers%20Split%20to%20Event-Driven%20Architecture.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Layers/Layers%20Split%20to%20Event-Driven%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20Split%20to%20Event-Driven%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Layers/Layers%20Split%20to%20Event-Driven%20Architecture.png" alt="Layers Split to Event-Driven Architecture" loading="lazy" width="1166" height="264" style="width:100%"/>
 </picture>
@@ -107,7 +107,7 @@ If your system has a well\-defined workflow for processing every kind of input r
 <figure>
 <a href="/diagrams/Evolutions/Layers/Layers%20to%20Hierarchy.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Hierarchy.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Hierarchy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Hierarchy.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Layers/Layers%20to%20Hierarchy.png" alt="Layers to Hierarchy" loading="lazy" width="1103" height="249" style="width:100%"/>
 </picture>

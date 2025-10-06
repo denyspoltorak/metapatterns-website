@@ -14,7 +14,7 @@ Another integration option is to build a [*Pipeline*]({{< relref "../../basic-me
 <figure>
 <a href="/diagrams/Communication/Services%20to%20Pipeline.png">
 <picture>
-<source srcset="/diagrams/Communication/Services%20to%20Pipeline.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Services%20to%20Pipeline.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Services%20to%20Pipeline.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Communication/Services%20to%20Pipeline.png" alt="Services to Pipeline" loading="lazy" width="1063" height="223" style="width:100%"/>
 </picture>
@@ -28,7 +28,7 @@ On the bright side, there is no communication overhead caused by response messag
 <figure>
 <a href="/diagrams/Communication/Pipeline%20Enricher.png">
 <picture>
-<source srcset="/diagrams/Communication/Pipeline%20Enricher.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Pipeline%20Enricher.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Pipeline%20Enricher.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Communication/Pipeline%20Enricher.png" alt="Pipeline Enricher" loading="lazy" width="863" height="223" style="width:100%"/>
 </picture>
@@ -40,7 +40,7 @@ Latency may also be suboptimal as parallelizing execution of a request is easier
 <figure>
 <a href="/diagrams/Communication/Pipeline%20Not%20Parallel.png">
 <picture>
-<source srcset="/diagrams/Communication/Pipeline%20Not%20Parallel.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Pipeline%20Not%20Parallel.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Pipeline%20Not%20Parallel.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Communication/Pipeline%20Not%20Parallel.png" alt="Pipeline Not Parallel" loading="lazy" width="1103" height="283" style="width:100%"/>
 </picture>
@@ -52,7 +52,7 @@ Still another trouble with choreography comes from its weakness in error process
 <figure>
 <a href="/diagrams/Communication/Pipeline%20Error.png">
 <picture>
-<source srcset="/diagrams/Communication/Pipeline%20Error.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Pipeline%20Error.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Pipeline%20Error.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Communication/Pipeline%20Error.png" alt="Pipeline Error" loading="lazy" width="863" height="231" style="width:100%"/>
 </picture>
@@ -66,7 +66,7 @@ The ordinary mode of action for a pipeline – sending the final results of proc
 <figure>
 <a href="/diagrams/Communication/Pipeline%20Gateway.png">
 <picture>
-<source srcset="/diagrams/Communication/Pipeline%20Gateway.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Pipeline%20Gateway.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Pipeline%20Gateway.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Communication/Pipeline%20Gateway.png" alt="Pipeline Gateway" loading="lazy" width="1123" height="323" style="width:100%"/>
 </picture>
@@ -78,7 +78,7 @@ The gateway, if used, may parallelize processing of [scatter or gather](https://
 <figure>
 <a href="/diagrams/Communication/Gateway%20to%20API%20Gateway.png">
 <picture>
-<source srcset="/diagrams/Communication/Gateway%20to%20API%20Gateway.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Gateway%20to%20API%20Gateway.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Gateway%20to%20API%20Gateway.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Communication/Gateway%20to%20API%20Gateway.png" alt="Gateway to API Gateway" loading="lazy" width="1123" height="324" style="width:100%"/>
 </picture>
@@ -90,7 +90,7 @@ It is possible to avoid both adding a *Gateway* and having the cyclic dependency
 <figure>
 <a href="/diagrams/Communication/Pipeline%20Early%20Response.png">
 <picture>
-<source srcset="/diagrams/Communication/Pipeline%20Early%20Response.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Pipeline%20Early%20Response.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Pipeline%20Early%20Response.negated.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Communication/Pipeline%20Early%20Response.png" alt="Pipeline Early Response" loading="lazy" width="823" height="265" style="width:100%"/>
 </picture>
@@ -108,7 +108,7 @@ If services communicate through commands, each service depends on all the direct
 <figure>
 <a href="/diagrams/Communication/Downstream%20Dependencies.png">
 <picture>
-<source srcset="/diagrams/Communication/Downstream%20Dependencies.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Downstream%20Dependencies.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Downstream%20Dependencies.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Communication/Downstream%20Dependencies.png" alt="Downstream Dependencies" loading="lazy" width="823" height="425" style="width:100%"/>
 </picture>
@@ -120,7 +120,7 @@ Upstream dependencies come from the [publish/subscribe](https://en.wikipedia.org
 <figure>
 <a href="/diagrams/Communication/Upstream%20Dependencies.png">
 <picture>
-<source srcset="/diagrams/Communication/Upstream%20Dependencies.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Upstream%20Dependencies.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Upstream%20Dependencies.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Communication/Upstream%20Dependencies.png" alt="Upstream Dependencies" loading="lazy" width="783" height="524" style="width:100%"/>
 </picture>
@@ -132,7 +132,7 @@ The final option is for the entire pipeline to use a uniform message format \([*
 <figure>
 <a href="/diagrams/Communication/Shared%20Message%20Format.png">
 <picture>
-<source srcset="/diagrams/Communication/Shared%20Message%20Format.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Shared%20Message%20Format.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Shared%20Message%20Format.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Communication/Shared%20Message%20Format.png" alt="Shared Message Format" loading="lazy" width="963" height="243" style="width:100%"/>
 </picture>
@@ -142,7 +142,7 @@ The final option is for the entire pipeline to use a uniform message format \([*
 <figure>
 <a href="/diagrams/Communication/Add%20Remove%20with%20Shared%20Message.png">
 <picture>
-<source srcset="/diagrams/Communication/Add%20Remove%20with%20Shared%20Message.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Add%20Remove%20with%20Shared%20Message.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Add%20Remove%20with%20Shared%20Message.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Communication/Add%20Remove%20with%20Shared%20Message.png" alt="Add Remove with Shared Message" loading="lazy" width="1043" height="223" style="width:100%"/>
 </picture>
@@ -154,7 +154,7 @@ A peculiar feature of choreography is the ability to cut and cross\-link pipelin
 <figure>
 <a href="/diagrams/Communication/Cross-link%20Pipeline.png">
 <picture>
-<source srcset="/diagrams/Communication/Cross-link%20Pipeline.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Cross-link%20Pipeline.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Cross-link%20Pipeline.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Communication/Cross-link%20Pipeline.png" alt="Cross-link Pipeline" loading="lazy" width="1243" height="226" style="width:100%"/>
 </picture>
@@ -168,7 +168,7 @@ It is very common for a service to participate in multiple pipelines, especially
 <figure>
 <a href="/diagrams/Communication/Multi-choreography.png">
 <picture>
-<source srcset="/diagrams/Communication/Multi-choreography.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Multi-choreography.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Multi-choreography.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Communication/Multi-choreography.png" alt="Multi-choreography" loading="lazy" width="943" height="223" style="width:100%"/>
 </picture>

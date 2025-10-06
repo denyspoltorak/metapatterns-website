@@ -32,7 +32,7 @@ Those layers may also be merged into [*Combined Components*]({{< relref "../../e
 <figure>
 <a href="/diagrams/Evolutions/Services/Services%20add%20Middleware.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Services/Services%20add%20Middleware.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Services/Services%20add%20Middleware.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Services/Services%20add%20Middleware.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Services/Services%20add%20Middleware.png" alt="Services add Middleware" loading="lazy" width="1307" height="304" style="width:100%"/>
 </picture>
@@ -69,7 +69,7 @@ Distributed systems may fail in a zillion ways\. You want to ruminate neither on
 <figure>
 <a href="/diagrams/Variants/2/Multifunctional%20-%20Service%20Mesh.png">
 <picture>
-<source srcset="/diagrams/Variants/2/Multifunctional%20-%20Service%20Mesh.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/Multifunctional%20-%20Service%20Mesh.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Multifunctional%20-%20Service%20Mesh.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/2/Multifunctional%20-%20Service%20Mesh.png" alt="Multifunctional - Service Mesh" loading="lazy" width="1083" height="323" style="width:100%"/>
 </picture>
@@ -102,7 +102,7 @@ The [*Microservices*]({{< relref "../../basic-metapatterns/services.md#microserv
 <figure>
 <a href="/diagrams/Evolutions/Services/Services%20to%20Shared%20Database.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Services/Services%20to%20Shared%20Database.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Services/Services%20to%20Shared%20Database.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Services/Services%20to%20Shared%20Database.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Services/Services%20to%20Shared%20Database.png" alt="Services to Shared Database" loading="lazy" width="1267" height="284" style="width:100%"/>
 </picture>
@@ -141,7 +141,7 @@ You don’t really need every service to have a private database\. A shared one 
 <figure>
 <a href="/diagrams/Evolutions/Services/Services%20add%20Proxy.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Services/Services%20add%20Proxy.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Services/Services%20add%20Proxy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Services/Services%20add%20Proxy.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Services/Services%20add%20Proxy.png" alt="Services add Proxy" loading="lazy" width="1307" height="385" style="width:100%"/>
 </picture>
@@ -179,7 +179,7 @@ Putting a generic component between the system and its clients helps the program
 <figure>
 <a href="/diagrams/Evolutions/Services/Services%20use%20Orchestrator.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Services/Services%20use%20Orchestrator.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Services/Services%20use%20Orchestrator.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Services/Services%20use%20Orchestrator.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Services/Services%20use%20Orchestrator.png" alt="Services use Orchestrator" loading="lazy" width="1307" height="385" style="width:100%"/>
 </picture>
