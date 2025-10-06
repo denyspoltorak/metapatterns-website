@@ -372,10 +372,3 @@ Other cases are better solved by extracting the logic that manipulates multiple 
 ## Summary
 
 *Shards* are multiple instances of a component or subsystem which is thus made scalable and more fault tolerant\. *Sharding* does not change the nature of the component it applies to and it usually relies on a [*Load Balancer*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) or [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) to manage the instances it spawns\. Its main weakness appears when the *shards* need to intercommunicate, often to the end of synchronizing their data\.
-
-<nav>
-
-| \<\< [Monolith]({{< relref "../basic-metapatterns/monolith.md" >}}) | ^ [Basic metapatterns]({{< relref "../basic-metapatterns/_index.md" >}}) ^ | [Layers]({{< relref "../basic-metapatterns/layers.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

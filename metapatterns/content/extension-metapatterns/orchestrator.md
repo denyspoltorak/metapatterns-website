@@ -515,10 +515,3 @@ There is [one way to counter the first point and more than one to solve the seco
 ## Summary
 
  An *Orchestrator* distills the high\-level logic of your system and keeps it together in a layer which integrates other components\. However, the separation of business logic into two layers results in much communication which impairs performance\.
-
-<nav>
-
-| \<\< [Proxy]({{< relref "../extension-metapatterns/proxy.md" >}}) | ^ [Extension metapatterns]({{< relref "../extension-metapatterns/_index.md" >}}) ^ | [Combined Component]({{< relref "../extension-metapatterns/combined-component.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

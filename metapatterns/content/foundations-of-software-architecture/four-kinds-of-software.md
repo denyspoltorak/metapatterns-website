@@ -361,10 +361,3 @@ We can discern four kinds of systems that differ in their goals, architecture, a
 
 
 Complex real\-world software usually involves two or three of these approaches\.
-
-<nav>
-
-| \<\< [Forces, asynchronicity, and distribution]({{< relref "../foundations-of-software-architecture/forces--asynchronicity--and-distribution.md" >}}) | ^ [Foundations of software architecture]({{< relref "../foundations-of-software-architecture/_index.md" >}}) ^ | [Arranging communication]({{< relref "../foundations-of-software-architecture/arranging-communication/_index.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

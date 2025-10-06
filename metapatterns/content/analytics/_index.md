@@ -41,10 +41,3 @@ Other smaller topics that I was able to look into made the following chapters:
   - [Choose your own architecture]({{< relref "analytics/the-heart-of-software-architecture/choose-your-own-architecture.md" >}})
 
 </nav>
-
-<nav>
-
-| \<\< [Mesh]({{< relref "../implementation-metapatterns/mesh.md" >}}) | ^ [The pattern language of software architecture]({{< relref "../_index.md" >}}) ^ | [Comparison of architectural patterns]({{< relref "../analytics/comparison-of-architectural-patterns/_index.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

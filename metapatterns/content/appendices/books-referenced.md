@@ -58,10 +58,3 @@ description = "The list of books which Architectural Metapatterns references."
 
 <a name="sap"></a>
 **SAP** – Software Architecture Patterns\. *Mark Richards\. O’Reilly Media, Inc\. \(2015\)\.* \(All of the architectures referenced here are in \[[FSA]({{< relref "#fsa" >}})\] as well, but \[SAP\] is free\)
-
-<nav>
-
-| \<\< [Acknowledgements]({{< relref "../appendices/acknowledgements.md" >}}) | ^ [Appendices]({{< relref "../appendices/_index.md" >}}) ^ | [Copyright]({{< relref "../appendices/copyright.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

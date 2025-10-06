@@ -190,10 +190,3 @@ Both approaches, namely keeping all the modules in the global scope and encapsul
 *Complexity* is the number of *concepts* and their relations which one must remember to work efficiently\. A *module* hides some of the concepts from its users but creates new concepts \(its *interface*\)\. *Coupling* is the measure of dependencies between the modules, while *cohesion* is the same for the concepts inside a module\. We prefer *low coupling and high cohesion* to group related things together\.
 
 Having too many modules causes trouble for the system’s maintainers\. A module may contain other modules\. When a client wants to use a submodule, the wrapping module may extend its interface to forward client’s requests to the submodule or the client may deploy a copy of the submodule for its own use\. Both approaches gave rise to prominent architectures\.
-
-<nav>
-
-| \<\< [Foundations of software architecture]({{< relref "../foundations-of-software-architecture/_index.md" >}}) | ^ [Foundations of software architecture]({{< relref "../foundations-of-software-architecture/_index.md" >}}) ^ | [Forces, asynchronicity, and distribution]({{< relref "../foundations-of-software-architecture/forces--asynchronicity--and-distribution.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

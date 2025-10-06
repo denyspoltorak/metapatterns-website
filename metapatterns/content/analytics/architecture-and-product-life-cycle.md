@@ -104,10 +104,3 @@ Even though I have observed the cycle of architecture expanding and collapsing i
 It can happen that you need to step back through the life cycle – for example, when the domain itself changes drastically: a new standard emerges or the management decides that your application for washing machines fits coffee machines pretty well, as they are basically doing the same things: heating water, adding powder, and stirring – but you have never wrote software for coffee machines before, thus you are back to the R&D phase\. 
 
 In such cases it may be easier to rewrite the affected components from scratch rather than try to rejuvenate and refit the old code\. Remember that you keep your experience – what was originally implemented as an improvised hack will be accounted for in the redesigned architecture\. This means that every time a component is rewritten adds to its longevity as its architecture fits the domain more closely and needs fewer hacks \(which are inflexible and confusing by definition\) to get to production\.
-
-<nav>
-
-| \<\< [Ambiguous patterns]({{< relref "../analytics/ambiguous-patterns.md" >}}) | ^ [Analytics]({{< relref "../analytics/_index.md" >}}) ^ | [Real\-world inspirations for architectural patterns]({{< relref "../analytics/real-world-inspirations-for-architectural-patterns.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

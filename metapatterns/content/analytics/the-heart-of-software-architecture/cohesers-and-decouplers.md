@@ -99,10 +99,3 @@ As soon as the prototype is approved, it’s time to prepare for iterative devel
 As your software matures, the flow of changes slows down and the business becomes more predictable or, rather, more familiar\. You observe that some of the interfaces which you’ve added have never been put to real use – they just make the project more complex – you pay for decoupling without earning its benefits\. Others have been found to be too restrictive and were removed\. Thus the system begins to contract, burning the flexibility it no longer needs while also growing in directions that were not originally expected\.
 
 Finally, you move to the support phase\. The best programmers leave for more active projects\. Whoever replaces them does not know the code\. The remaining flexibility decomposes in favor of quick hackarounds\. What remains is an ugly cohesive [evolutionary\-shaped mess](http://www.laputan.org/mud/), created through generations of ad\-hoc patches\.
-
-<nav>
-
-| \<\< [The heart of software architecture]({{< relref "../../analytics/the-heart-of-software-architecture/_index.md" >}}) | ^ [The heart of software architecture]({{< relref "../../analytics/the-heart-of-software-architecture/_index.md" >}}) ^ | [Deconstructing patterns]({{< relref "../../analytics/the-heart-of-software-architecture/deconstructing-patterns.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

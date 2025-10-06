@@ -63,11 +63,3 @@ It is often possible to split a backend into integration \([orchestration]({{< r
 
 - There is a small performance penalty\.
 - In\-depth debugging becomes harder\.
-
-
-<nav>
-
-| \<\< [Evolutions of Shards that share logic]({{< relref "../../appendices/evolutions/evolutions-of-shards-that-share-logic.md" >}}) | ^ [Evolutions]({{< relref "../../appendices/evolutions/_index.md" >}}) ^ | [Evolutions of Layers that help large projects]({{< relref "../../appendices/evolutions/evolutions-of-layers-that-help-large-projects.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

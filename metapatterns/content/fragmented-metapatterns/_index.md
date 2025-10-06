@@ -90,10 +90,3 @@ There are several patterns with no system\-wide layers\. Some of them incorporat
 Some domains allow for hierarchical composition where the functionality is spread throughout a tree of components\.
 
 *<ins>Includes</ins>*: Orchestrator of Orchestrators, Presentation\-Abstraction\-Control \(PAC\) and Hierarchical Model\-View\-Controller \(HMVC\), Bus of Buses, and Cell\-Based \(Microservice\) Architecture \(WSO2 version\) \(Services of Services\)\.
-
-<nav>
-
-| \<\< [Combined Component]({{< relref "../extension-metapatterns/combined-component.md" >}}) | ^ [The pattern language of software architecture]({{< relref "../_index.md" >}}) ^ | [Layered Services]({{< relref "../fragmented-metapatterns/layered-services.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

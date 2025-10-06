@@ -286,10 +286,3 @@ description = "The glossary of terms used throughout the Architectural Metapatte
 
 *Workflow*
 : a sequence of actions \(*messages* or *method calls*\) required to *implement* a *use case*\.
-
-<nav>
-
-| \<\< [Format of a metapattern]({{< relref "../appendices/format-of-a-metapattern.md" >}}) | ^ [Appendices]({{< relref "../appendices/_index.md" >}}) ^ | [History of changes]({{< relref "../appendices/history-of-changes.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

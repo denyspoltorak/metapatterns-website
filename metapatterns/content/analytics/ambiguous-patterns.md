@@ -172,10 +172,3 @@ In my opinion, the disarray happened because the notion of *making smaller micro
 ### Summary
 
 A few names of architectural patterns cause confusion as the meaning of each of them changes from source to source\. This book aims at identifying such issues and building a cohesive understanding of software and system architecture, similar to the *ubiquitous language* of \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\.
-
-<nav>
-
-| \<\< [Indirection in commands and queries]({{< relref "../analytics/comparison-of-architectural-patterns/indirection-in-commands-and-queries.md" >}}) | ^ [Analytics]({{< relref "../analytics/_index.md" >}}) ^ | [Architecture and product life cycle]({{< relref "../analytics/architecture-and-product-life-cycle.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

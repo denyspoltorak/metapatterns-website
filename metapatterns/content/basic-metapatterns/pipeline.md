@@ -258,10 +258,3 @@ There are a couple of [pipeline\-specific evolutions]({{< relref "../appendices/
 ## Summary
 
 A *Pipeline* represents a data processing algorithm as a sequence of steps\. It not only subdivides the system’s code into smaller components but is also very flexible: its parts are easy to add, remove, or replace\. Multiple use cases can be built over the same set of services\. Scalability is good\. Event replay helps with debugging\. However, its operational complexity restricts the architecture to smaller domains with a limited number of scenarios\.
-
-<nav>
-
-| \<\< [Services]({{< relref "../basic-metapatterns/services.md" >}}) | ^ [Basic metapatterns]({{< relref "../basic-metapatterns/_index.md" >}}) ^ | [Extension metapatterns]({{< relref "../extension-metapatterns/_index.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

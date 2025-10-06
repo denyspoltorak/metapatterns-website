@@ -74,10 +74,3 @@ This is another derivation of *Plugins*, with a rudimentary *core* component whi
 A *Mesh* consists of intercommunicating shards, each of which may host an application\. The shards coalesce into a fault\-tolerant distributed *Middleware*\.
 
 *<ins>Includes</ins>*: grid; peer\-to\-peer networks, Leaf\-Spine Architecture, Actors, Service Mesh, Space\-Based Architecture\.
-
-<nav>
-
-| \<\< [Hierarchy]({{< relref "../fragmented-metapatterns/hierarchy.md" >}}) | ^ [The pattern language of software architecture]({{< relref "../_index.md" >}}) ^ | [Plugins]({{< relref "../implementation-metapatterns/plugins.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

@@ -160,10 +160,3 @@ We have deconstructed the most common programming paradigms into their driving f
 
 
 Now let’s examine each of these approaches in depth:
-
-<nav>
-
-| \<\< [Arranging communication]({{< relref "../../foundations-of-software-architecture/arranging-communication/_index.md" >}}) | ^ [Arranging communication]({{< relref "../../foundations-of-software-architecture/arranging-communication/_index.md" >}}) ^ | [Orchestration]({{< relref "../../foundations-of-software-architecture/arranging-communication/orchestration.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

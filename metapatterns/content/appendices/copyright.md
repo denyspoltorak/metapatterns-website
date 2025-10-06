@@ -150,10 +150,3 @@ To the extent possible, if any provision of this Public License is deemed unenfo
 No term or condition of this Public License will be waived and no failure to comply consented to unless expressly agreed to by the Licensor\.
 
 Nothing in this Public License constitutes or may be interpreted as a limitation upon, or waiver of, any privileges and immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction or authority\.
-
-<nav>
-
-| \<\< [Books referenced]({{< relref "../appendices/books-referenced.md" >}}) | ^ [Appendices]({{< relref "../appendices/_index.md" >}}) ^ | [Disclaimer]({{< relref "../appendices/disclaimer.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

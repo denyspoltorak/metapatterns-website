@@ -545,10 +545,3 @@ There is one new evolution which modifies the upper \(*orchestration*\) layer:
 ## Summary
 
 *Layered architecture* separates the high\-level logic from the low\-level details\. It is superior for medium\-sized projects as it supports rapid development by two or three teams, is flexible enough to resolve conflicting forces, and provides many options for further evolution, which will come in handy when the project grows in size and complexity\.
-
-<nav>
-
-| \<\< [Shards]({{< relref "../basic-metapatterns/shards.md" >}}) | ^ [Basic metapatterns]({{< relref "../basic-metapatterns/_index.md" >}}) ^ | [Services]({{< relref "../basic-metapatterns/services.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

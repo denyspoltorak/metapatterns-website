@@ -37,10 +37,3 @@ By the way, you could have noticed a few odd cases:
 
 
 That likely means that our distinction between the modes of communication is a bit artificial and there may be a yet unknown deeper model to look for\.
-
-<nav>
-
-| \<\< [Shared data]({{< relref "../../foundations-of-software-architecture/arranging-communication/shared-data.md" >}}) | ^ [Arranging communication]({{< relref "../../foundations-of-software-architecture/arranging-communication/_index.md" >}}) ^ | [Basic metapatterns]({{< relref "../../basic-metapatterns/_index.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

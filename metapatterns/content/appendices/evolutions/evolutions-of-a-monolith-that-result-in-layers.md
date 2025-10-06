@@ -226,10 +226,3 @@ In addition,
 </picture>
 </a>
 </figure>
-
-<nav>
-
-| \<\< [Evolutions of a Monolith that lead to Shards]({{< relref "../../appendices/evolutions/evolutions-of-a-monolith-that-lead-to-shards.md" >}}) | ^ [Evolutions]({{< relref "../../appendices/evolutions/_index.md" >}}) ^ | [Evolutions of a Monolith that make Services]({{< relref "../../appendices/evolutions/evolutions-of-a-monolith-that-make-services.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

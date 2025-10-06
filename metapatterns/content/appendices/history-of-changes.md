@@ -32,10 +32,3 @@ bookSearchExclude = true
 1\.1 \(07\-2025\) – Lars Noodén edited the book, fixing my poor English\. Patterns are now in *Title Case Italics*\. [*Domain\-Oriented Microservice Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#domain-oriented-microservice-architecture-doma" >}}) was added\. There are now short explanation sections \(in gray\) throughout the book\.
 
 1\.1\.1 \(09\-2025\) – Renamed subchapters of [Appendix E]({{< relref "../appendices/evolutions/_index.md" >}})\. Made other minor SEO improvements and bugfixes\.
-
-<nav>
-
-| \<\< [Glossary]({{< relref "../appendices/glossary.md" >}}) | ^ [Appendices]({{< relref "../appendices/_index.md" >}}) ^ | [Index of patterns]({{< relref "../appendices/index-of-patterns.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

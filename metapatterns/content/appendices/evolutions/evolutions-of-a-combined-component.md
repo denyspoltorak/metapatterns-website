@@ -44,11 +44,3 @@ If you feel that the *Combined Component* which your system relies on does not c
 
 - Takes lots of work\.
 - Performance may become worse because there will be more components on the requests’ path and also because the industry\-grade framework that you used could have been highly optimized\.
-
-
-<nav>
-
-| \<\< [Evolutions of an Orchestrator]({{< relref "../../appendices/evolutions/evolutions-of-an-orchestrator.md" >}}) | ^ [Evolutions]({{< relref "../../appendices/evolutions/_index.md" >}}) ^ | [Format of a metapattern]({{< relref "../../appendices/format-of-a-metapattern.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

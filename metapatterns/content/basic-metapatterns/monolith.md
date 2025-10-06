@@ -517,10 +517,3 @@ The last group of evolutions does not really change the monolithic nature of the
 ## Summary
 
 A *Monolith* is an unstructured application\. It is the best architecture for rapid prototyping by a small team and it usually grants the best performance to costs ratio\. However, it does not scale, lacks any flexibility and becomes unmanageable as the amount of code grows\.
-
-<nav>
-
-| \<\< [Basic metapatterns]({{< relref "../basic-metapatterns/_index.md" >}}) | ^ [Basic metapatterns]({{< relref "../basic-metapatterns/_index.md" >}}) ^ | [Shards]({{< relref "../basic-metapatterns/shards.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

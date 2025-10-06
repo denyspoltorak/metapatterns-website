@@ -104,10 +104,3 @@ Compare [*Firewall*]({{< relref "../extension-metapatterns/proxy.md#firewall-api
 Take [*Saga Execution Component*]({{< relref "../extension-metapatterns/orchestrator.md#orchestrated-saga-saga-orchestrator-saga-execution-component-transaction-script-coordinator" >}}) and [*API Composer*]({{< relref "../extension-metapatterns/orchestrator.md#api-composer-remote-facade-gateway-aggregation-composed-message-processor-scatter-gather-mapreduce" >}})\. Both are high\-level services that make a series of calls into an underlying system – they *orchestrate* it\. Both are [*Orchestrators*]({{< relref "../extension-metapatterns/orchestrator.md" >}})\.
 
 It’s that simple and stupid\. We can classify architectural patterns\.
-
-<nav>
-
-| \<\< [Introduction]({{< relref "../introduction/_index.md" >}}) | ^ [Introduction]({{< relref "../introduction/_index.md" >}}) ^ | [Metapatterns]({{< relref "../introduction/metapatterns.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

@@ -166,10 +166,3 @@ In real life services are likely to be layered, with their upper layers acting a
 ## Summary
 
 Orchestration represents use cases as a code, allowing for an orchestrated system to support many complex scenarios\. Dealing with errors is as trivial as properly handling exceptions\. This approach trades performance for clarity\.
-
-<nav>
-
-| \<\< [Programming and architectural paradigms]({{< relref "../../foundations-of-software-architecture/arranging-communication/programming-and-architectural-paradigms.md" >}}) | ^ [Arranging communication]({{< relref "../../foundations-of-software-architecture/arranging-communication/_index.md" >}}) ^ | [Choreography]({{< relref "../../foundations-of-software-architecture/arranging-communication/choreography.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

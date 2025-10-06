@@ -371,10 +371,3 @@ An implementation pattern highlights the peculiar internal arrangements of a com
 ## Summary
 
 Architectural patterns have parallels in the natural world, our society and/or different levels of computer hardware and software\. Learning about them helps us feel the driving forces behind patterns and be more flexible and creative in using the patterns we know and devising new ones\.
-
-<nav>
-
-| \<\< [Architecture and product life cycle]({{< relref "../analytics/architecture-and-product-life-cycle.md" >}}) | ^ [Analytics]({{< relref "../analytics/_index.md" >}}) ^ | [The heart of software architecture]({{< relref "../analytics/the-heart-of-software-architecture/_index.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

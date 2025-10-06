@@ -180,10 +180,3 @@ It is very common for a service to participate in multiple pipelines, especially
 Overall, choreography seems to be a lightweight approach that prioritizes throughput over latency and is suitable for highly\-loaded scenarios of limited complexity\. However, a choreographed system will likely become unintelligible if it is made to support more than a few use cases\.
 
 There is a decent [overview from Microsoft](https://learn.microsoft.com/en-us/azure/architecture/patterns/choreography)\.
-
-<nav>
-
-| \<\< [Orchestration]({{< relref "../../foundations-of-software-architecture/arranging-communication/orchestration.md" >}}) | ^ [Arranging communication]({{< relref "../../foundations-of-software-architecture/arranging-communication/_index.md" >}}) ^ | [Shared data]({{< relref "../../foundations-of-software-architecture/arranging-communication/shared-data.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

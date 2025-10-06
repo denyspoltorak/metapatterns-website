@@ -299,10 +299,3 @@ A *Middleware* is unlikely to be removed \(though it may be replaced\) once it i
 ## Summary
 
 A *Middleware* is a ready\-to\-use component that provides a system of services with means of communication, scalability, and error recovery\. It is very common in distributed backends\.
-
-<nav>
-
-| \<\< [Extension metapatterns]({{< relref "../extension-metapatterns/_index.md" >}}) | ^ [Extension metapatterns]({{< relref "../extension-metapatterns/_index.md" >}}) ^ | [Shared Repository]({{< relref "../extension-metapatterns/shared-repository.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

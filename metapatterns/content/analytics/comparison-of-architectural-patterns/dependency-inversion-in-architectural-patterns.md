@@ -82,11 +82,3 @@ The two approaches apply in different circumstances:
 
 - If you can enforce your rules of the game on the suppliers of the external components, you merely *define an SPI*, and expect the suppliers to implement and obey it\.
 - If the suppliers are independent and it is your side that adapts to their rules, you should *add Adapters* to translate between your lovely SPI and their whimsical APIs\.
-
-
-<nav>
-
-| \<\< [Pipelines in architectural patterns]({{< relref "../../analytics/comparison-of-architectural-patterns/pipelines-in-architectural-patterns.md" >}}) | ^ [Comparison of architectural patterns]({{< relref "../../analytics/comparison-of-architectural-patterns/_index.md" >}}) ^ | [Indirection in commands and queries]({{< relref "../../analytics/comparison-of-architectural-patterns/indirection-in-commands-and-queries.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

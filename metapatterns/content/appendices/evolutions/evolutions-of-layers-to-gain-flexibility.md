@@ -66,11 +66,3 @@ It is possible that your system has different kinds of users, e\.g\. buyers, sel
 <ins>Further steps</ins>:
 
 - [Evolve the *BFFs*]({{< relref "../../fragmented-metapatterns/backends-for-frontends--bff-.md#evolutions" >}}) through adding a shared *layer* or [*Sidecars*]({{< relref "../../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) for common functionality\.
-
-
-<nav>
-
-| \<\< [Evolutions of Layers to improve performance]({{< relref "../../appendices/evolutions/evolutions-of-layers-to-improve-performance.md" >}}) | ^ [Evolutions]({{< relref "../../appendices/evolutions/_index.md" >}}) ^ | [Evolutions of Services that add or remove services]({{< relref "../../appendices/evolutions/evolutions-of-services-that-add-or-remove-services.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

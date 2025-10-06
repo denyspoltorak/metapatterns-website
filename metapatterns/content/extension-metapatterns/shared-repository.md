@@ -324,10 +324,3 @@ Once a database appears, it is unlikely to go away\. I see the [following evolut
 ## Summary
 
 A *Shared Repository* encapsulates a system’s data, allowing for [data\-centric]({{< relref "../foundations-of-software-architecture/arranging-communication/shared-data.md" >}}) development and kickstarting [*Service\-Based*]({{< relref "../basic-metapatterns/services.md#service-based-architecture" >}}) architectures through simplifying interservice interactions\. Its downsides are a frozen data schema and limited performance\.
-
-<nav>
-
-| \<\< [Middleware]({{< relref "../extension-metapatterns/middleware.md" >}}) | ^ [Extension metapatterns]({{< relref "../extension-metapatterns/_index.md" >}}) ^ | [Proxy]({{< relref "../extension-metapatterns/proxy.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

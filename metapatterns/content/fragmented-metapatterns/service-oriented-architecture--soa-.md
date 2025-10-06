@@ -235,10 +235,3 @@ In any case, many of the evolutions will likely be very expensive, thus it makes
 ## Summary
 
 *Service\-Oriented Architecture* divides each of the *integration*, *domain*, and *utility* layers into shared services\. The extensive fragmentation and reuse degrade performance and speed of development\. Nevertheless, huge projects are known to survive with this architecture\.
-
-<nav>
-
-| \<\< [Backends for Frontends \(BFF\)]({{< relref "../fragmented-metapatterns/backends-for-frontends--bff-.md" >}}) | ^ [Fragmented metapatterns]({{< relref "../fragmented-metapatterns/_index.md" >}}) ^ | [Hierarchy]({{< relref "../fragmented-metapatterns/hierarchy.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

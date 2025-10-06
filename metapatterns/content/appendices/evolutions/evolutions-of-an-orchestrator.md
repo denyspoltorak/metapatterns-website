@@ -169,11 +169,3 @@ If an *Orchestrator* becomes too complex, some domains \(e\.g\. IIoT or telecom\
 
 - Hard to debug\.
 - Poor latency in global scenarios unless several layers of the *hierarchy* are colocated\.
-
-
-<nav>
-
-| \<\< [Evolutions of a Proxy]({{< relref "../../appendices/evolutions/evolutions-of-a-proxy.md" >}}) | ^ [Evolutions]({{< relref "../../appendices/evolutions/_index.md" >}}) ^ | [Evolutions of a Combined Component]({{< relref "../../appendices/evolutions/evolutions-of-a-combined-component.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

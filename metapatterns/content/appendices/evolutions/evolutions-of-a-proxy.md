@@ -78,11 +78,3 @@ If you have internal and external clients, or admins and users, you may want to 
 <ins>Cons</ins>: 
 
 - More work for admins as the *Proxies* are duplicated\.
-
-
-<nav>
-
-| \<\< [Evolutions of a Shared Repository]({{< relref "../../appendices/evolutions/evolutions-of-a-shared-repository.md" >}}) | ^ [Evolutions]({{< relref "../../appendices/evolutions/_index.md" >}}) ^ | [Evolutions of an Orchestrator]({{< relref "../../appendices/evolutions/evolutions-of-an-orchestrator.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

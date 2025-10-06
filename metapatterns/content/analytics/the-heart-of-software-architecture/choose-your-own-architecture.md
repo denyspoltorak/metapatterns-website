@@ -203,10 +203,3 @@ There is no universal architecture\. No silver bullet pattern\. Patterns are mer
 ## So it goes
 
 Software architecture lies lifeless in my hands, devoid of its magical colors, *like the dead iguana*\.
-
-<nav>
-
-| \<\< [Deconstructing patterns]({{< relref "../../analytics/the-heart-of-software-architecture/deconstructing-patterns.md" >}}) | ^ [The heart of software architecture]({{< relref "../../analytics/the-heart-of-software-architecture/_index.md" >}}) ^ | [Appendices]({{< relref "../../appendices/_index.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

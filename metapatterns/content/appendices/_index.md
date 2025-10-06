@@ -42,10 +42,3 @@ bookCollapseSection = true
 - [Index of patterns]({{< relref "appendices/index-of-patterns.md" >}})
 
 </nav>
-
-<nav>
-
-| \<\< [Choose your own architecture]({{< relref "../analytics/the-heart-of-software-architecture/choose-your-own-architecture.md" >}}) | ^ [The pattern language of software architecture]({{< relref "../_index.md" >}}) ^ | [Acknowledgements]({{< relref "../appendices/acknowledgements.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>
