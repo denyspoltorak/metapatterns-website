@@ -37,10 +37,3 @@ Duplicate and similar evolutions are omitted, and I did not write any evolutions
 - [Evolutions of a Combined Component]({{< relref "appendices/evolutions/evolutions-of-a-combined-component.md" >}})
 
 </nav>
-
-<nav>
-
-| \<\< [Disclaimer]({{< relref "../../appendices/disclaimer.md" >}}) | ^ [Appendices]({{< relref "../../appendices/_index.md" >}}) ^ | [Evolutions of a Monolith that lead to Shards]({{< relref "../../appendices/evolutions/evolutions-of-a-monolith-that-lead-to-shards.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

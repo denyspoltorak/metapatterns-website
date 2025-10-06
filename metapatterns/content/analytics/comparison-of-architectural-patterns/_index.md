@@ -21,10 +21,3 @@ This chapter is a compilation of small sections each of which examines one aspec
 - [Indirection in commands and queries]({{< relref "analytics/comparison-of-architectural-patterns/indirection-in-commands-and-queries.md" >}})
 
 </nav>
-
-<nav>
-
-| \<\< [Analytics]({{< relref "../../analytics/_index.md" >}}) | ^ [Analytics]({{< relref "../../analytics/_index.md" >}}) ^ | [Sharing functionality or data among services]({{< relref "../../analytics/comparison-of-architectural-patterns/sharing-functionality-or-data-among-services.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

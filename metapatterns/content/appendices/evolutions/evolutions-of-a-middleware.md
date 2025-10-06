@@ -74,11 +74,3 @@ If we cannot change the way each subsystem’s services use its *Middleware*, we
 
 - Performance suffers from the double conversion between protocols\.
 - There is a new component to fail \(miserably\)\.
-
-
-<nav>
-
-| \<\< [Evolutions of a Pipeline]({{< relref "../../appendices/evolutions/evolutions-of-a-pipeline.md" >}}) | ^ [Evolutions]({{< relref "../../appendices/evolutions/_index.md" >}}) ^ | [Evolutions of a Shared Repository]({{< relref "../../appendices/evolutions/evolutions-of-a-shared-repository.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

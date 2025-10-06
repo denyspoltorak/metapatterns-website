@@ -132,10 +132,3 @@ Finally, some \(usually distributed\) datastores implement data change notificat
 ## Summary
 
 Communication through shared data is best suited for data\-centric domains \(for example, ticket purchase\)\. It allows for the services to be unaware of each other’s existence, just as they are with orchestration, but the structure of the domain data becomes hard to change as it is referenced all over the code\. Shared data may also be used to implement messaging\.
-
-<nav>
-
-| \<\< [Choreography]({{< relref "../../foundations-of-software-architecture/arranging-communication/choreography.md" >}}) | ^ [Arranging communication]({{< relref "../../foundations-of-software-architecture/arranging-communication/_index.md" >}}) ^ | [Comparison of communication styles]({{< relref "../../foundations-of-software-architecture/arranging-communication/comparison-of-communication-styles.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

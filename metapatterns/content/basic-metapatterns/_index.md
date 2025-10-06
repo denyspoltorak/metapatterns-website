@@ -90,10 +90,3 @@ Basic metapatterns are both common stand\-alone architectures and building block
 A *Pipeline* is a kind of *Services* with unidirectional flow\. Each service implements a single step of data processing\. The system is flexible but may grow out of control\. 
 
 *<ins>Includes</ins>*: Pipes and Filters, Choreographed Event\-Driven Architecture, and Data Mesh\.
-
-<nav>
-
-| \<\< [Comparison of communication styles]({{< relref "../foundations-of-software-architecture/arranging-communication/comparison-of-communication-styles.md" >}}) | ^ [The pattern language of software architecture]({{< relref "../_index.md" >}}) ^ | [Monolith]({{< relref "../basic-metapatterns/monolith.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

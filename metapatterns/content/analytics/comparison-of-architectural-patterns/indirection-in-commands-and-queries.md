@@ -75,10 +75,3 @@ We see that though command\-dominated \(*operational* or *transactional*\) and q
 
 
 Which shows that the principles of software architecture are deeper than the [CQRS](https://en.wikipedia.org/wiki/Command_Query_Responsibility_Segregation) dichotomy\.
-
-<nav>
-
-| \<\< [Dependency inversion in architectural patterns]({{< relref "../../analytics/comparison-of-architectural-patterns/dependency-inversion-in-architectural-patterns.md" >}}) | ^ [Comparison of architectural patterns]({{< relref "../../analytics/comparison-of-architectural-patterns/_index.md" >}}) ^ | [Ambiguous patterns]({{< relref "../../analytics/ambiguous-patterns.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

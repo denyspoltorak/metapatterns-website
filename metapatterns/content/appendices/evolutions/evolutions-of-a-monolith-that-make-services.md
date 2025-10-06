@@ -186,10 +186,3 @@ Each service, being a smaller *Monolith*, may evolve on its own\. Most of the ev
 </picture>
 </a>
 </figure>
-
-<nav>
-
-| \<\< [Evolutions of a Monolith that result in Layers]({{< relref "../../appendices/evolutions/evolutions-of-a-monolith-that-result-in-layers.md" >}}) | ^ [Evolutions]({{< relref "../../appendices/evolutions/_index.md" >}}) ^ | [Evolutions of a Monolith that rely on Plugins]({{< relref "../../appendices/evolutions/evolutions-of-a-monolith-that-rely-on-plugins.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

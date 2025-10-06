@@ -94,10 +94,3 @@ There are four architectures with unidirectional data flow, which is characteris
 
 
 The first two, being true pipelines, are built around data processing and transformation, while for the others it is just an aspect of implementation – their separation of input and output yields pairs of streams\.
-
-<nav>
-
-| \<\< [Sharing functionality or data among services]({{< relref "../../analytics/comparison-of-architectural-patterns/sharing-functionality-or-data-among-services.md" >}}) | ^ [Comparison of architectural patterns]({{< relref "../../analytics/comparison-of-architectural-patterns/_index.md" >}}) ^ | [Dependency inversion in architectural patterns]({{< relref "../../analytics/comparison-of-architectural-patterns/dependency-inversion-in-architectural-patterns.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

@@ -145,11 +145,3 @@ If your types of data or data processing algorithms vary, you may deploy several
 
 - Serve read and write requests with different backends according to [*Command\-Query Responsibility Segregation \(CQRS\)*]({{< relref "../../fragmented-metapatterns/layered-services.md#command-query-responsibility-segregation-cqrs" >}})\.
 - Separate the backend into [*services*]({{< relref "../../basic-metapatterns/services.md" >}}) which match the already separated databases\.
-
-
-<nav>
-
-| \<\< [Evolutions of Layers that help large projects]({{< relref "../../appendices/evolutions/evolutions-of-layers-that-help-large-projects.md" >}}) | ^ [Evolutions]({{< relref "../../appendices/evolutions/_index.md" >}}) ^ | [Evolutions of Layers to gain flexibility]({{< relref "../../appendices/evolutions/evolutions-of-layers-to-gain-flexibility.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

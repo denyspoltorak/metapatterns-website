@@ -653,10 +653,3 @@ Each service starts as either a [*Monolith*]({{< relref "../basic-metapatterns/m
 ## Summary
 
 *Services* deal with large projects by dividing them into subdomain\-aligned components of smaller sizes which can be handled by dedicated teams\. These may vary in technologies and quality attributes\. However, services have a hard time cooperating in anything, from sharing data to debugging, and come with an innate performance penalty\. There are a few options halfway between [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) and *Distributed Services* that have milder benefits and drawbacks\.
-
-<nav>
-
-| \<\< [Layers]({{< relref "../basic-metapatterns/layers.md" >}}) | ^ [Basic metapatterns]({{< relref "../basic-metapatterns/_index.md" >}}) ^ | [Pipeline]({{< relref "../basic-metapatterns/pipeline.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

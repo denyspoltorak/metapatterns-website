@@ -203,10 +203,3 @@ Clients vary in access mode \(protocol\) and workflow and there is a third\-part
 ## Summary
 
 *Backends for Frontends* assigns a [*Proxy*]({{< relref "../extension-metapatterns/proxy.md" >}}) and/or an [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) per each kind of a system’s client to encapsulate client\-specific use cases and protocols\. The drawback is that there is no decent way for sharing functionality between the *BFF*s\.
-
-<nav>
-
-| \<\< [Polyglot Persistence]({{< relref "../fragmented-metapatterns/polyglot-persistence.md" >}}) | ^ [Fragmented metapatterns]({{< relref "../fragmented-metapatterns/_index.md" >}}) ^ | [Service\-Oriented Architecture \(SOA\)]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

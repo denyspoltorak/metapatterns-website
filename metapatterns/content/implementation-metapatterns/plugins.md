@@ -178,10 +178,3 @@ Plugins may be:
 ## Summary
 
 *Plugins* allow for customization of a component’s behavior at the cost of increased complexity, poor testability and somewhat reduced performance\.
-
-<nav>
-
-| \<\< [Implementation metapatterns]({{< relref "../implementation-metapatterns/_index.md" >}}) | ^ [Implementation metapatterns]({{< relref "../implementation-metapatterns/_index.md" >}}) ^ | [Hexagonal Architecture]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

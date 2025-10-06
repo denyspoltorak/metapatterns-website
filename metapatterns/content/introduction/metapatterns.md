@@ -132,10 +132,3 @@ There are three lessons to learn:
 ## What does that mean
 
 Chemistry has the [periodic table](https://en.wikipedia.org/wiki/Periodic_table)\. Biology has the [tree of life](https://en.wikipedia.org/wiki/Tree_of_life_(biology))\. This book strives towards building something of that kind for software and systems architecture\. You can say “That makes no sense\! Chemistry and biology are empirical sciences while software architecture isn’t\!” Is it?
-
-<nav>
-
-| \<\< [About this book]({{< relref "../introduction/about-this-book.md" >}}) | ^ [Introduction]({{< relref "../introduction/_index.md" >}}) ^ | [Foundations of software architecture]({{< relref "../foundations-of-software-architecture/_index.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

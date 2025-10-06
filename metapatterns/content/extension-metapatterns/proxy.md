@@ -422,10 +422,3 @@ As *Proxies* are usually third\-party products, there is not much [we can change
 ## Summary
 
  A *Proxy* represents your system to its clients and takes care of some aspects of the communication\. It is common to see multiple *Proxies* deployed sequentially as they are often stackable\.
-
-<nav>
-
-| \<\< [Shared Repository]({{< relref "../extension-metapatterns/shared-repository.md" >}}) | ^ [Extension metapatterns]({{< relref "../extension-metapatterns/_index.md" >}}) ^ | [Orchestrator]({{< relref "../extension-metapatterns/orchestrator.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

@@ -185,10 +185,3 @@ There are specific evolutions of [*Shards*]({{< relref "../../basic-metapatterns
 </picture>
 </a>
 </figure>
-
-<nav>
-
-| \<\< [Evolutions]({{< relref "../../appendices/evolutions/_index.md" >}}) | ^ [Evolutions]({{< relref "../../appendices/evolutions/_index.md" >}}) ^ | [Evolutions of a Monolith that result in Layers]({{< relref "../../appendices/evolutions/evolutions-of-a-monolith-that-result-in-layers.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

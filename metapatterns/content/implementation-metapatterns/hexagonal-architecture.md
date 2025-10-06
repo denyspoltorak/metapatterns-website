@@ -307,10 +307,3 @@ Another difference is that while *MVC* provides for changing target platforms by
 ## Summary
 
 *Hexagonal Architecture* isolates a component’s business logic from its external dependencies by inserting *adapters* between them\. It protects from *vendor lock\-in* and allows for late changes of third\-party components but requires all the APIs to be designed before programming can start and often hinders performance optimizations\.
-
-<nav>
-
-| \<\< [Plugins]({{< relref "../implementation-metapatterns/plugins.md" >}}) | ^ [Implementation metapatterns]({{< relref "../implementation-metapatterns/_index.md" >}}) ^ | [Microkernel]({{< relref "../implementation-metapatterns/microkernel.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

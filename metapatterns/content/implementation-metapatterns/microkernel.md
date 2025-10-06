@@ -221,10 +221,3 @@ The *microkernel* shows up as *Virtual Functional Bus* \(*VFB*\) which, as a *di
 ## Summary
 
 *Microkernel* is a ubiquitous approach to sharing resources among consumers, where both resource providers and consumers may be written by external companies\.
-
-<nav>
-
-| \<\< [Hexagonal Architecture]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) | ^ [Implementation metapatterns]({{< relref "../implementation-metapatterns/_index.md" >}}) ^ | [Mesh]({{< relref "../implementation-metapatterns/mesh.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

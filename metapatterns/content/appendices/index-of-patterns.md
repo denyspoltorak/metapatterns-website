@@ -543,10 +543,3 @@ description = "The index of patterns described in the Architectural Metapatterns
 [Write\-Behind Cache]({{< relref "../extension-metapatterns/proxy.md#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}})
 
 [Write\-Through Cache]({{< relref "../extension-metapatterns/proxy.md#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}})
-
-<nav>
-
-| \<\< [History of changes]({{< relref "../appendices/history-of-changes.md" >}}) | ^ [Appendices]({{< relref "../appendices/_index.md" >}}) ^ | [The pattern language of software architecture]({{< relref "../_index.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

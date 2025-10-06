@@ -230,10 +230,3 @@ The patterns that involve [*orchestration*]({{< relref "../foundations-of-softwa
 ## Summary
 
 A *Combined Component* is a ready\-to\-use framework that may speed up development but will likely constrain your project to follow its guidelines with no regard to your real needs\.
-
-<nav>
-
-| \<\< [Orchestrator]({{< relref "../extension-metapatterns/orchestrator.md" >}}) | ^ [Extension metapatterns]({{< relref "../extension-metapatterns/_index.md" >}}) ^ | [Fragmented metapatterns]({{< relref "../fragmented-metapatterns/_index.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

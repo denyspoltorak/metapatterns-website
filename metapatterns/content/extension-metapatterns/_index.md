@@ -80,10 +80,3 @@ An *Orchestrator* implements use cases as sequences of calls to the underlying c
 Several patterns combine the functionality of two or more extension layers\.
 
 *<ins>Includes</ins>*: Message Bus, API Gateway, Event Mediator, Enterprise Service Bus, Service Mesh, Middleware of Space\-Based Architecture, and Shared Event Store\.
-
-<nav>
-
-| \<\< [Pipeline]({{< relref "../basic-metapatterns/pipeline.md" >}}) | ^ [The pattern language of software architecture]({{< relref "../_index.md" >}}) ^ | [Middleware]({{< relref "../extension-metapatterns/middleware.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

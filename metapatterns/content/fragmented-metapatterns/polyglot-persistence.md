@@ -318,10 +318,3 @@ Keeping the cache consistent with the main database is the hard part\. There are
 ## Summary
 
 *Polyglot Persistence* employs several specialized databases to improve performance, often at the cost of eventual data consistency or implementing transactions in the application\.
-
-<nav>
-
-| \<\< [Layered Services]({{< relref "../fragmented-metapatterns/layered-services.md" >}}) | ^ [Fragmented metapatterns]({{< relref "../fragmented-metapatterns/_index.md" >}}) ^ | [Backends for Frontends \(BFF\)]({{< relref "../fragmented-metapatterns/backends-for-frontends--bff-.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

@@ -230,10 +230,3 @@ Uber [compacted](https://www.uber.com/blog/microservice-architecture/) 2200 [*Mi
 ## Summary
 
 *Hierarchy* fits a project of any size as it evenly distributes complexity among the system’s many components\. However, it is not without drawbacks in performance, debuggability, and operational complexity\. Moreover, very few domains allow for seamless application of this architecture\.
-
-<nav>
-
-| \<\< [Service\-Oriented Architecture \(SOA\)]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}) | ^ [Fragmented metapatterns]({{< relref "../fragmented-metapatterns/_index.md" >}}) ^ | [Implementation metapatterns]({{< relref "../implementation-metapatterns/_index.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

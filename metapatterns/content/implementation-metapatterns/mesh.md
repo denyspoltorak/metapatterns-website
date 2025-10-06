@@ -219,10 +219,3 @@ The in\-memory data in the nodes is usually loaded from a *Persistent Database* 
 ## Summary
 
 *Mesh* is a layer of intercommunicating instances of an infrastructure component that makes a foundation for running custom services in a distributed environment\. This architecture is famous for its scalability and fault tolerance but is too complex to implement in\-house and may incur performance, administration and development overhead\.
-
-<nav>
-
-| \<\< [Microkernel]({{< relref "../implementation-metapatterns/microkernel.md" >}}) | ^ [Implementation metapatterns]({{< relref "../implementation-metapatterns/_index.md" >}}) ^ | [Analytics]({{< relref "../analytics/_index.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

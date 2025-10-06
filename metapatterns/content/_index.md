@@ -115,10 +115,3 @@ The content is lavishly illustrated with intuitive NoUML diagrams. It’s concis
 - [Index of patterns]({{< relref "appendices/index-of-patterns.md" >}})
 
 </nav>
-
-<nav>
-
-| \<\< [Index of patterns]({{< relref "appendices/index-of-patterns.md" >}}) |  | [Introduction]({{< relref "introduction/_index.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>

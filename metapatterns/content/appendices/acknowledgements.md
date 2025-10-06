@@ -24,10 +24,3 @@ I must thank my mother and our neighbor Halyna for helping me throughout the war
 I want to thank everybody who prayed for me\.
 
 This book was made possible by many people who sacrificed their happy years, their limbs and their lives to protect those who stayed behind\.
-
-<nav>
-
-| \<\< [Appendices]({{< relref "../appendices/_index.md" >}}) | ^ [Appendices]({{< relref "../appendices/_index.md" >}}) ^ | [Books referenced]({{< relref "../appendices/books-referenced.md" >}}) \>\> |
-| --- | --- | --- |
-
-</nav>
