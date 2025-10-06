@@ -12,7 +12,7 @@ images = ["/diagrams/Main/Services.svg"]
 <figure>
 <a href="/diagrams/Main/Services.png">
 <picture>
-<source srcset="/diagrams/Main/Services.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Main/Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Services.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Main/Services.png" alt="Services" loading="lazy" width="1062" height="454" style="width:100%"/>
 </picture>
@@ -97,7 +97,7 @@ Interservice communication is relatively slow and resource\-consuming, therefore
 <figure>
 <a href="/diagrams/Performance/Services.png">
 <picture>
-<source srcset="/diagrams/Performance/Services.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Performance/Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Performance/Services.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Performance/Services.png" alt="Services" loading="lazy" width="1463" height="742" style="width:100%"/>
 </picture>
@@ -119,7 +119,7 @@ When we see a service to *request* help from other services and then receive the
 <figure>
 <a href="/diagrams/Dependencies/Services-1.png">
 <picture>
-<source srcset="/diagrams/Dependencies/Services-1.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Dependencies/Services-1.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Dependencies/Services-1.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Dependencies/Services-1.png" alt="Services-1" loading="lazy" width="1004" height="245" style="width:100%"/>
 </picture>
@@ -131,7 +131,7 @@ Another way for services to communicate is [*choreography*]({{< relref "../found
 <figure>
 <a href="/diagrams/Dependencies/Services-2.png">
 <picture>
-<source srcset="/diagrams/Dependencies/Services-2.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Dependencies/Services-2.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Dependencies/Services-2.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Dependencies/Services-2.png" alt="Services-2" loading="lazy" width="1005" height="245" style="width:100%"/>
 </picture>
@@ -143,7 +143,7 @@ If the system relies on notifications \(services publish *domain events*\), it i
 <figure>
 <a href="/diagrams/Dependencies/Services-3.png">
 <picture>
-<source srcset="/diagrams/Dependencies/Services-3.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Dependencies/Services-3.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Dependencies/Services-3.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Dependencies/Services-3.png" alt="Services-3" loading="lazy" width="1005" height="283" style="width:100%"/>
 </picture>
@@ -155,7 +155,7 @@ In general, a large service should wrap its dependencies with an [*Anticorruptio
 <figure>
 <a href="/diagrams/Dependencies/Services-4.png">
 <picture>
-<source srcset="/diagrams/Dependencies/Services-4.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Dependencies/Services-4.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Dependencies/Services-4.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Dependencies/Services-4.png" alt="Services-4" loading="lazy" width="1163" height="282" style="width:100%"/>
 </picture>
@@ -185,7 +185,7 @@ In general, a large service should wrap its dependencies with an [*Anticorruptio
 <figure>
 <a href="/diagrams/Relations/Services.png">
 <picture>
-<source srcset="/diagrams/Relations/Services.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Relations/Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Relations/Services.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Relations/Services.png" alt="Services" loading="lazy" width="1063" height="303" style="width:100%"/>
 </picture>
@@ -332,7 +332,7 @@ A service is not necessarily monolithic inside\. Because a service is encapsulat
 <figure>
 <a href="/diagrams/Variants/1/Subtypes%20of%20Services.png">
 <picture>
-<source srcset="/diagrams/Variants/1/Subtypes%20of%20Services.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/1/Subtypes%20of%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Subtypes%20of%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/1/Subtypes%20of%20Services.png" alt="Subtypes of Services" loading="lazy" width="1271" height="506" style="width:100%"/>
 </picture>
@@ -344,7 +344,7 @@ A service is not necessarily monolithic inside\. Because a service is encapsulat
 <figure>
 <a href="/diagrams/Variants/1/Service%20-%20Monolithic.png">
 <picture>
-<source srcset="/diagrams/Variants/1/Service%20-%20Monolithic.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/1/Service%20-%20Monolithic.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Service%20-%20Monolithic.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/1/Service%20-%20Monolithic.png" alt="Service - Monolithic" loading="lazy" width="243" height="304" style="width:27%"/>
 </picture>
@@ -358,7 +358,7 @@ A *monolithic service* is a service with no definite internal structure, probabl
 <figure>
 <a href="/diagrams/Variants/1/Service%20-%20Layered.png">
 <picture>
-<source srcset="/diagrams/Variants/1/Service%20-%20Layered.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/1/Service%20-%20Layered.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Service%20-%20Layered.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/1/Service%20-%20Layered.png" alt="Service - Layered" loading="lazy" width="743" height="344" style="width:83%"/>
 </picture>
@@ -376,7 +376,7 @@ Another benefit comes from the existence of the upper integration layer which ma
 <figure>
 <a href="/diagrams/Variants/1/Service%20-%20Hexagonal.png">
 <picture>
-<source srcset="/diagrams/Variants/1/Service%20-%20Hexagonal.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/1/Service%20-%20Hexagonal.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Service%20-%20Hexagonal.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/1/Service%20-%20Hexagonal.png" alt="Service - Hexagonal" loading="lazy" width="903" height="404" style="width:100%"/>
 </picture>
@@ -392,7 +392,7 @@ This is a real\-world application of [*Hexagonal Architecture*]({{< relref "../i
 <figure>
 <a href="/diagrams/Variants/1/Service%20-%20Scaled.png">
 <picture>
-<source srcset="/diagrams/Variants/1/Service%20-%20Scaled.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/1/Service%20-%20Scaled.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Service%20-%20Scaled.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/1/Service%20-%20Scaled.png" alt="Service - Scaled" loading="lazy" width="1363" height="405" style="width:100%"/>
 </picture>
@@ -406,7 +406,7 @@ With *scaled services* there are multiple [*instances*]({{< relref "../basic-met
 <figure>
 <a href="/diagrams/Variants/1/Service%20-%20Cell.png">
 <picture>
-<source srcset="/diagrams/Variants/1/Service%20-%20Cell.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/1/Service%20-%20Cell.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Service%20-%20Cell.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/1/Service%20-%20Cell.png" alt="Service - Cell" loading="lazy" width="903" height="425" style="width:100%"/>
 </picture>
@@ -430,7 +430,7 @@ Examples of *Services* include:
 <figure>
 <a href="/diagrams/Variants/1/Service-Based%20Architecture.png">
 <picture>
-<source srcset="/diagrams/Variants/1/Service-Based%20Architecture.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/1/Service-Based%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Service-Based%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/1/Service-Based%20Architecture.png" alt="Service-Based Architecture" loading="lazy" width="833" height="243" style="width:100%"/>
 </picture>
@@ -444,7 +444,7 @@ This is the simplest use of *Services* where each subdomain gets a dedicated com
 <figure>
 <a href="/diagrams/Variants/1/Microservices.png">
 <picture>
-<source srcset="/diagrams/Variants/1/Microservices.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/1/Microservices.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Microservices.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/1/Microservices.png" alt="Microservices" loading="lazy" width="1303" height="421" style="width:100%"/>
 </picture>
@@ -470,7 +470,7 @@ This architecture usually relies on a [*Service Mesh*]({{< relref "../extension-
 <figure>
 <a href="/diagrams/Variants/1/Actors.png">
 <picture>
-<source srcset="/diagrams/Variants/1/Actors.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/1/Actors.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Actors.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/1/Actors.png" alt="Actors" loading="lazy" width="723" height="271" style="width:100%"/>
 </picture>
@@ -494,7 +494,7 @@ If we apply a bit of generalization, we can deduce that any server or backend se
 <figure>
 <a href="/diagrams/Variants/1/Nanoservices%20-%20API%20Layer.png">
 <picture>
-<source srcset="/diagrams/Variants/1/Nanoservices%20-%20API%20Layer.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/1/Nanoservices%20-%20API%20Layer.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Nanoservices%20-%20API%20Layer.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/1/Nanoservices%20-%20API%20Layer.png" alt="Nanoservices - API Layer" loading="lazy" width="803" height="283" style="width:82%"/>
 </picture>
@@ -508,7 +508,7 @@ Though *Nanoservices* are defined by their size \(a single function\), not syste
 <figure>
 <a href="/diagrams/Variants/1/Drivers.png">
 <picture>
-<source srcset="/diagrams/Variants/1/Drivers.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/1/Drivers.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Drivers.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/1/Drivers.png" alt="Drivers" loading="lazy" width="785" height="343" style="width:100%"/>
 </picture>
@@ -538,7 +538,7 @@ The whole system of kernel, drivers, and user applications comprises the [*Micro
 <figure>
 <a href="/diagrams/Evolutions/Services/Services_%20Split.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Services/Services_%20Split.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Services/Services_%20Split.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Services/Services_%20Split.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Services/Services_%20Split.png" alt="Services: Split" loading="lazy" width="1303" height="251" style="width:100%"/>
 </picture>
@@ -551,7 +551,7 @@ The whole system of kernel, drivers, and user applications comprises the [*Micro
 <figure>
 <a href="/diagrams/Evolutions/Services/Services_%20Merge.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Services/Services_%20Merge.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Services/Services_%20Merge.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Services/Services_%20Merge.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Services/Services_%20Merge.png" alt="Services: Merge" loading="lazy" width="1083" height="245" style="width:100%"/>
 </picture>
@@ -568,7 +568,7 @@ The most common modifications of a system of *Services* involve supplementary sy
 <figure>
 <a href="/diagrams/Evolutions/Services/Services%20add%20Middleware.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Services/Services%20add%20Middleware.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Services/Services%20add%20Middleware.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Services/Services%20add%20Middleware.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Services/Services%20add%20Middleware.png" alt="Services add Middleware" loading="lazy" width="1307" height="304" style="width:100%"/>
 </picture>
@@ -581,7 +581,7 @@ The most common modifications of a system of *Services* involve supplementary sy
 <figure>
 <a href="/diagrams/Variants/2/Multifunctional%20-%20Service%20Mesh.png">
 <picture>
-<source srcset="/diagrams/Variants/2/Multifunctional%20-%20Service%20Mesh.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/2/Multifunctional%20-%20Service%20Mesh.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Multifunctional%20-%20Service%20Mesh.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/2/Multifunctional%20-%20Service%20Mesh.png" alt="Multifunctional - Service Mesh" loading="lazy" width="1083" height="323" style="width:100%"/>
 </picture>
@@ -594,7 +594,7 @@ The most common modifications of a system of *Services* involve supplementary sy
 <figure>
 <a href="/diagrams/Evolutions/Services/Services%20to%20Shared%20Database.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Services/Services%20to%20Shared%20Database.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Services/Services%20to%20Shared%20Database.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Services/Services%20to%20Shared%20Database.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Services/Services%20to%20Shared%20Database.png" alt="Services to Shared Database" loading="lazy" width="1267" height="284" style="width:100%"/>
 </picture>
@@ -607,7 +607,7 @@ The most common modifications of a system of *Services* involve supplementary sy
 <figure>
 <a href="/diagrams/Evolutions/Services/Services%20add%20Proxy.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Services/Services%20add%20Proxy.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Services/Services%20add%20Proxy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Services/Services%20add%20Proxy.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Services/Services%20add%20Proxy.png" alt="Services add Proxy" loading="lazy" width="1307" height="385" style="width:100%"/>
 </picture>
@@ -620,7 +620,7 @@ The most common modifications of a system of *Services* involve supplementary sy
 <figure>
 <a href="/diagrams/Evolutions/Services/Services%20use%20Orchestrator.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Services/Services%20use%20Orchestrator.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Services/Services%20use%20Orchestrator.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Services/Services%20use%20Orchestrator.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Services/Services%20use%20Orchestrator.png" alt="Services use Orchestrator" loading="lazy" width="1307" height="385" style="width:100%"/>
 </picture>

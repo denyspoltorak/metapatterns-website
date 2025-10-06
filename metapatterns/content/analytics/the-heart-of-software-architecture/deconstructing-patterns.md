@@ -78,7 +78,7 @@ Finally, let’s close the book by iterating over the metapatterns and looking i
 <figure>
 <a href="/diagrams/Heart/Basic.png">
 <picture>
-<source srcset="/diagrams/Heart/Basic.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Heart/Basic.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Heart/Basic.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Heart/Basic.png" alt="Basic" loading="lazy" width="1206" height="663" style="width:100%"/>
 </picture>
@@ -104,7 +104,7 @@ Basic architectures:
 <figure>
 <a href="/diagrams/Heart/Extension.png">
 <picture>
-<source srcset="/diagrams/Heart/Extension.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Heart/Extension.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Heart/Extension.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Heart/Extension.png" alt="Extension" loading="lazy" width="1164" height="763" style="width:100%"/>
 </picture>
@@ -132,7 +132,7 @@ Grouping related functionality:
 <figure>
 <a href="/diagrams/Heart/Fragmented.png">
 <picture>
-<source srcset="/diagrams/Heart/Fragmented.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Heart/Fragmented.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Heart/Fragmented.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Heart/Fragmented.png" alt="Fragmented" loading="lazy" width="1467" height="922" style="width:100%"/>
 </picture>
@@ -157,7 +157,7 @@ Decoupled systems:
 <figure>
 <a href="/diagrams/Heart/Implementation.png">
 <picture>
-<source srcset="/diagrams/Heart/Implementation.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Heart/Implementation.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Heart/Implementation.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Heart/Implementation.png" alt="Implementation" loading="lazy" width="1406" height="444" style="width:100%"/>
 </picture>

@@ -12,7 +12,7 @@ images = ["/diagrams/Main/Layered%20Services.svg"]
 <figure>
 <a href="/diagrams/Main/Layered%20Services.png">
 <picture>
-<source srcset="/diagrams/Main/Layered%20Services.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Main/Layered%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Layered%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Main/Layered%20Services.png" alt="Layered Services" loading="lazy" width="1122" height="534" style="width:100%"/>
 </picture>
@@ -46,7 +46,7 @@ Remarkable features of *Layered Services* include:
 <figure>
 <a href="/diagrams/Performance/Layered%20Services%20-%20sharding.png">
 <picture>
-<source srcset="/diagrams/Performance/Layered%20Services%20-%20sharding.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Performance/Layered%20Services%20-%20sharding.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Performance/Layered%20Services%20-%20sharding.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Performance/Layered%20Services%20-%20sharding.png" alt="Layered Services - sharding" loading="lazy" width="1003" height="423" style="width:100%"/>
 </picture>
@@ -59,7 +59,7 @@ Remarkable features of *Layered Services* include:
 <figure>
 <a href="/diagrams/Performance/Layered%20Services%20-%20channels.png">
 <picture>
-<source srcset="/diagrams/Performance/Layered%20Services%20-%20channels.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Performance/Layered%20Services%20-%20channels.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Performance/Layered%20Services%20-%20channels.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Performance/Layered%20Services%20-%20channels.png" alt="Layered Services - channels" loading="lazy" width="1123" height="423" style="width:100%"/>
 </picture>
@@ -75,7 +75,7 @@ Remarkable features of *Layered Services* include:
 <figure>
 <a href="/diagrams/Variants/3/Three-Layered%20Services.png">
 <picture>
-<source srcset="/diagrams/Variants/3/Three-Layered%20Services.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/3/Three-Layered%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/Three-Layered%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/3/Three-Layered%20Services.png" alt="Three-Layered Services" loading="lazy" width="923" height="332" style="width:100%"/>
 </picture>
@@ -93,7 +93,7 @@ The upper \(application\) layer of each service orchestrates both its middle \(d
 <figure>
 <a href="/diagrams/Communication/Mutual%20Orchestration%20-%204.png">
 <picture>
-<source srcset="/diagrams/Communication/Mutual%20Orchestration%20-%204.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Mutual%20Orchestration%20-%204.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Mutual%20Orchestration%20-%204.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Communication/Mutual%20Orchestration%20-%204.png" alt="Mutual Orchestration - 4" loading="lazy" width="1023" height="294" style="width:100%"/>
 </picture>
@@ -122,7 +122,7 @@ The good thing is that the majority of the code belongs to the domain layer whic
 <figure>
 <a href="/diagrams/Evolutions/3/Three-Layered%20Services%20-%201.png">
 <picture>
-<source srcset="/diagrams/Evolutions/3/Three-Layered%20Services%20-%201.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/3/Three-Layered%20Services%20-%201.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/3/Three-Layered%20Services%20-%201.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/3/Three-Layered%20Services%20-%201.png" alt="Three-Layered Services - 1" loading="lazy" width="1544" height="424" style="width:100%"/>
 </picture>
@@ -138,7 +138,7 @@ or by building derived datasets:
 <figure>
 <a href="/diagrams/Evolutions/3/Three-Layered%20Services%20-%202.png">
 <picture>
-<source srcset="/diagrams/Evolutions/3/Three-Layered%20Services%20-%202.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/3/Three-Layered%20Services%20-%202.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/3/Three-Layered%20Services%20-%202.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/3/Three-Layered%20Services%20-%202.png" alt="Three-Layered Services - 2" loading="lazy" width="1163" height="504" style="width:100%"/>
 </picture>
@@ -153,7 +153,7 @@ If the services become too large:
 <figure>
 <a href="/diagrams/Evolutions/3/Three-Layered%20Services%20-%203.png">
 <picture>
-<source srcset="/diagrams/Evolutions/3/Three-Layered%20Services%20-%203.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/3/Three-Layered%20Services%20-%203.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/3/Three-Layered%20Services%20-%203.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/3/Three-Layered%20Services%20-%203.png" alt="Three-Layered Services - 3" loading="lazy" width="1503" height="344" style="width:100%"/>
 </picture>
@@ -165,7 +165,7 @@ If the services become too large:
 <figure>
 <a href="/diagrams/Variants/3/Two-Layered%20Services.png">
 <picture>
-<source srcset="/diagrams/Variants/3/Two-Layered%20Services.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/3/Two-Layered%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/Two-Layered%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/3/Two-Layered%20Services.png" alt="Two-Layered Services" loading="lazy" width="963" height="245" style="width:100%"/>
 </picture>
@@ -197,7 +197,7 @@ If *Choreographed Layered Services* become coupled:
 <figure>
 <a href="/diagrams/Evolutions/3/Two-Layered%20Services%20-%201.png">
 <picture>
-<source srcset="/diagrams/Evolutions/3/Two-Layered%20Services%20-%201.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/3/Two-Layered%20Services%20-%201.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/3/Two-Layered%20Services%20-%201.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/3/Two-Layered%20Services%20-%201.png" alt="Two-Layered Services - 1" loading="lazy" width="1324" height="324" style="width:100%"/>
 </picture>
@@ -209,7 +209,7 @@ If *Choreographed Layered Services* become coupled:
 <figure>
 <a href="/diagrams/Evolutions/3/Two-Layered%20Services%20-%202.png">
 <picture>
-<source srcset="/diagrams/Evolutions/3/Two-Layered%20Services%20-%202.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/3/Two-Layered%20Services%20-%202.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/3/Two-Layered%20Services%20-%202.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/3/Two-Layered%20Services%20-%202.png" alt="Two-Layered Services - 2" loading="lazy" width="1124" height="404" style="width:100%"/>
 </picture>
@@ -224,7 +224,7 @@ An overgrown service can be:
 <figure>
 <a href="/diagrams/Evolutions/3/Two-Layered%20Services%20-%203.png">
 <picture>
-<source srcset="/diagrams/Evolutions/3/Two-Layered%20Services%20-%203.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/3/Two-Layered%20Services%20-%203.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/3/Two-Layered%20Services%20-%203.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/3/Two-Layered%20Services%20-%203.png" alt="Two-Layered Services - 3" loading="lazy" width="1503" height="301" style="width:100%"/>
 </picture>
@@ -236,7 +236,7 @@ An overgrown service can be:
 <figure>
 <a href="/diagrams/Variants/3/CQRS.png">
 <picture>
-<source srcset="/diagrams/Variants/3/CQRS.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/3/CQRS.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/CQRS.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/3/CQRS.png" alt="CQRS" loading="lazy" width="1007" height="324" style="width:100%"/>
 </picture>
@@ -248,7 +248,7 @@ An overgrown service can be:
 <figure>
 <a href="/diagrams/Variants/3/CQRS%20-%20pipeline%20view.png">
 <picture>
-<source srcset="/diagrams/Variants/3/CQRS%20-%20pipeline%20view.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/3/CQRS%20-%20pipeline%20view.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/CQRS%20-%20pipeline%20view.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/3/CQRS%20-%20pipeline%20view.png" alt="CQRS - pipeline view" loading="lazy" width="1003" height="323" style="width:100%"/>
 </picture>
@@ -266,7 +266,7 @@ This separation brings in the pros and cons of [*Services*]({{< relref "../basic
 <figure>
 <a href="/diagrams/Variants/3/CQRS%20-%20subtypes.png">
 <picture>
-<source srcset="/diagrams/Variants/3/CQRS%20-%20subtypes.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Variants/3/CQRS%20-%20subtypes.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/CQRS%20-%20subtypes.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Variants/3/CQRS%20-%20subtypes.png" alt="CQRS - subtypes" loading="lazy" width="1303" height="446" style="width:100%"/>
 </picture>
@@ -284,7 +284,7 @@ Each backend depends on its database \(its technology and schema\)\. The OLTP to
 <figure>
 <a href="/diagrams/Dependencies/CQRS.png">
 <picture>
-<source srcset="/diagrams/Dependencies/CQRS.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Dependencies/CQRS.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Dependencies/CQRS.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Dependencies/CQRS.png" alt="CQRS" loading="lazy" width="1243" height="326" style="width:100%"/>
 </picture>
@@ -312,7 +312,7 @@ Each backend depends on its database \(its technology and schema\)\. The OLTP to
 <figure>
 <a href="/diagrams/Evolutions/3/CQRS.png">
 <picture>
-<source srcset="/diagrams/Evolutions/3/CQRS.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/3/CQRS.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/3/CQRS.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/3/CQRS.png" alt="CQRS" loading="lazy" width="1284" height="1023" style="width:100%"/>
 </picture>

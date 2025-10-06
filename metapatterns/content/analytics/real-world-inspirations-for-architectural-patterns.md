@@ -23,7 +23,7 @@ The basic patterns lay the foundation for any system by paving ways to *divide* 
 <figure>
 <a href="/diagrams/Contents/Monolith.png">
 <picture>
-<source srcset="/diagrams/Contents/Monolith.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Contents/Monolith.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Monolith.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Contents/Monolith.png" alt="Monolith" loading="lazy" width="1003" height="243" style="width:100%"/>
 </picture>
@@ -45,7 +45,7 @@ The basic patterns lay the foundation for any system by paving ways to *divide* 
 <figure>
 <a href="/diagrams/Contents/Shards.png">
 <picture>
-<source srcset="/diagrams/Contents/Shards.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Contents/Shards.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Shards.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Contents/Shards.png" alt="Shards" loading="lazy" width="783" height="243" style="width:100%"/>
 </picture>
@@ -67,7 +67,7 @@ The basic patterns lay the foundation for any system by paving ways to *divide* 
 <figure>
 <a href="/diagrams/Contents/Layers.png">
 <picture>
-<source srcset="/diagrams/Contents/Layers.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Contents/Layers.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Layers.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Contents/Layers.png" alt="Layers" loading="lazy" width="783" height="243" style="width:95%"/>
 </picture>
@@ -87,7 +87,7 @@ The basic patterns lay the foundation for any system by paving ways to *divide* 
 <figure>
 <a href="/diagrams/Contents/Services.png">
 <picture>
-<source srcset="/diagrams/Contents/Services.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Contents/Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Services.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Contents/Services.png" alt="Services" loading="lazy" width="943" height="246" style="width:95%"/>
 </picture>
@@ -109,7 +109,7 @@ The basic patterns lay the foundation for any system by paving ways to *divide* 
 <figure>
 <a href="/diagrams/Contents/Pipeline.png">
 <picture>
-<source srcset="/diagrams/Contents/Pipeline.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Contents/Pipeline.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Pipeline.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Contents/Pipeline.png" alt="Pipeline" loading="lazy" width="1003" height="203" style="width:95%"/>
 </picture>
@@ -135,7 +135,7 @@ An extension pattern encapsulates one or two aspects of the system’s implement
 <figure>
 <a href="/diagrams/Contents/Middleware.png">
 <picture>
-<source srcset="/diagrams/Contents/Middleware.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Contents/Middleware.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Middleware.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Contents/Middleware.png" alt="Middleware" loading="lazy" width="1003" height="263" style="width:100%"/>
 </picture>
@@ -156,7 +156,7 @@ A [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) abstr
 <figure>
 <a href="/diagrams/Contents/Shared%20Repository.png">
 <picture>
-<source srcset="/diagrams/Contents/Shared%20Repository.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Contents/Shared%20Repository.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Shared%20Repository.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Contents/Shared%20Repository.png" alt="Shared Repository" loading="lazy" width="963" height="243" style="width:100%"/>
 </picture>
@@ -177,7 +177,7 @@ A [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.
 <figure>
 <a href="/diagrams/Contents/Proxy.png">
 <picture>
-<source srcset="/diagrams/Contents/Proxy.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Contents/Proxy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Proxy.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Contents/Proxy.png" alt="Proxy" loading="lazy" width="1023" height="363" style="width:100%"/>
 </picture>
@@ -197,7 +197,7 @@ A [*Proxy*]({{< relref "../extension-metapatterns/proxy.md" >}}) isolates a syst
 <figure>
 <a href="/diagrams/Contents/Orchestrator.png">
 <picture>
-<source srcset="/diagrams/Contents/Orchestrator.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Contents/Orchestrator.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Orchestrator.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Contents/Orchestrator.png" alt="Orchestrator" loading="lazy" width="1023" height="263" style="width:100%"/>
 </picture>
@@ -220,7 +220,7 @@ A fragmented pattern uses small specialized components to approach a case which 
 <figure>
 <a href="/diagrams/Contents/Polyglot%20Persistence.png">
 <picture>
-<source srcset="/diagrams/Contents/Polyglot%20Persistence.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Contents/Polyglot%20Persistence.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Polyglot%20Persistence.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Contents/Polyglot%20Persistence.png" alt="Polyglot Persistence" loading="lazy" width="1023" height="303" style="width:100%"/>
 </picture>
@@ -239,7 +239,7 @@ A fragmented pattern uses small specialized components to approach a case which 
 <figure>
 <a href="/diagrams/Contents/Backends%20for%20Frontends.png">
 <picture>
-<source srcset="/diagrams/Contents/Backends%20for%20Frontends.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Contents/Backends%20for%20Frontends.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Backends%20for%20Frontends.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Contents/Backends%20for%20Frontends.png" alt="Backends for Frontends" loading="lazy" width="1003" height="383" style="width:100%"/>
 </picture>
@@ -258,7 +258,7 @@ A fragmented pattern uses small specialized components to approach a case which 
 <figure>
 <a href="/diagrams/Contents/Service-Oriented%20Architecture.png">
 <picture>
-<source srcset="/diagrams/Contents/Service-Oriented%20Architecture.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Contents/Service-Oriented%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Service-Oriented%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Contents/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" loading="lazy" width="983" height="401" style="width:100%"/>
 </picture>
@@ -277,7 +277,7 @@ A fragmented pattern uses small specialized components to approach a case which 
 <figure>
 <a href="/diagrams/Contents/Hierarchy.png">
 <picture>
-<source srcset="/diagrams/Contents/Hierarchy.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Contents/Hierarchy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Hierarchy.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Contents/Hierarchy.png" alt="Hierarchy" loading="lazy" width="907" height="303" style="width:100%"/>
 </picture>
@@ -299,7 +299,7 @@ An implementation pattern highlights the peculiar internal arrangements of a com
 <figure>
 <a href="/diagrams/Contents/Plugins.png">
 <picture>
-<source srcset="/diagrams/Contents/Plugins.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Contents/Plugins.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Plugins.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Contents/Plugins.png" alt="Plugins" loading="lazy" width="843" height="403" style="width:100%"/>
 </picture>
@@ -317,7 +317,7 @@ An implementation pattern highlights the peculiar internal arrangements of a com
 <figure>
 <a href="/diagrams/Contents/Hexagonal%20Architecture.png">
 <picture>
-<source srcset="/diagrams/Contents/Hexagonal%20Architecture.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Contents/Hexagonal%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Hexagonal%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Contents/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" loading="lazy" width="980" height="363" style="width:100%"/>
 </picture>
@@ -335,7 +335,7 @@ An implementation pattern highlights the peculiar internal arrangements of a com
 <figure>
 <a href="/diagrams/Contents/Microkernel.png">
 <picture>
-<source srcset="/diagrams/Contents/Microkernel.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Contents/Microkernel.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Microkernel.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Contents/Microkernel.png" alt="Microkernel" loading="lazy" width="1031" height="304" style="width:100%"/>
 </picture>
@@ -354,7 +354,7 @@ An implementation pattern highlights the peculiar internal arrangements of a com
 <figure>
 <a href="/diagrams/Contents/Mesh.png">
 <picture>
-<source srcset="/diagrams/Contents/Mesh.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Contents/Mesh.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Mesh.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Contents/Mesh.png" alt="Mesh" loading="lazy" width="863" height="261" style="width:100%"/>
 </picture>

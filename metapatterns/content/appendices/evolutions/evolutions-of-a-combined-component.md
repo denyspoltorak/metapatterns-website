@@ -18,7 +18,7 @@ The patterns that involve *orchestration* \([*API Gateway*]({{< relref "../../ex
 <figure>
 <a href="/diagrams/Evolutions/2/Multifunctional_%20Split.png">
 <picture>
-<source srcset="/diagrams/Evolutions/2/Multifunctional_%20Split.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/2/Multifunctional_%20Split.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Multifunctional_%20Split.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/2/Multifunctional_%20Split.png" alt="Multifunctional: Split" loading="lazy" width="1267" height="464" style="width:100%"/>
 </picture>

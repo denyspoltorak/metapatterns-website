@@ -19,7 +19,7 @@ A [*Middleware*]({{< relref "../../extension-metapatterns/middleware.md" >}}) is
 <figure>
 <a href="/diagrams/Evolutions/2/Middleware%20add%20Middleware.png">
 <picture>
-<source srcset="/diagrams/Evolutions/2/Middleware%20add%20Middleware.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/2/Middleware%20add%20Middleware.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Middleware%20add%20Middleware.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/2/Middleware%20add%20Middleware.png" alt="Middleware add Middleware" loading="lazy" width="1223" height="344" style="width:100%"/>
 </picture>
@@ -50,7 +50,7 @@ If the current *Middleware* is too generic for the system’s needs, you can add
 <figure>
 <a href="/diagrams/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.png">
 <picture>
-<source srcset="/diagrams/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.png" alt="Middleware to Bus of Buses" loading="lazy" width="1903" height="405" style="width:100%"/>
 </picture>

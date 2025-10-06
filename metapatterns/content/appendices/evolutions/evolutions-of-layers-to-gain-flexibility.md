@@ -19,7 +19,7 @@ The last group of evolutions to consider is about making the system more adaptab
 <figure>
 <a href="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png" alt="Monolith to Layers - Further 2" loading="lazy" width="983" height="461" style="width:100%"/>
 </picture>
@@ -36,7 +36,7 @@ There is also a new evolution that modifies the upper \(orchestration\) layer:
 <figure>
 <a href="/diagrams/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.png">
 <picture>
-<source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.png" alt="Layers to Backends for Frontends" loading="lazy" width="1003" height="323" style="width:100%"/>
 </picture>

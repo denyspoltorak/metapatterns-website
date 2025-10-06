@@ -16,7 +16,7 @@ There are patterns that describe implementation of components:
 <figure>
 <a href="/diagrams/Contents/Plugins.png">
 <picture>
-<source srcset="/diagrams/Contents/Plugins.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Contents/Plugins.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Plugins.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Contents/Plugins.png" alt="Plugins" loading="lazy" width="843" height="403" style="width:100%"/>
 </picture>
@@ -32,7 +32,7 @@ The *Plugins* pattern is about separating a system’s main logic from the custo
 <figure>
 <a href="/diagrams/Contents/Hexagonal%20Architecture.png">
 <picture>
-<source srcset="/diagrams/Contents/Hexagonal%20Architecture.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Contents/Hexagonal%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Hexagonal%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Contents/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" loading="lazy" width="980" height="363" style="width:100%"/>
 </picture>
@@ -48,7 +48,7 @@ The *Plugins* pattern is about separating a system’s main logic from the custo
 <figure>
 <a href="/diagrams/Contents/Microkernel.png">
 <picture>
-<source srcset="/diagrams/Contents/Microkernel.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Contents/Microkernel.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Microkernel.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Contents/Microkernel.png" alt="Microkernel" loading="lazy" width="1031" height="304" style="width:100%"/>
 </picture>
@@ -64,7 +64,7 @@ This is another derivation of *Plugins*, with a rudimentary *core* component whi
 <figure>
 <a href="/diagrams/Contents/Mesh.png">
 <picture>
-<source srcset="/diagrams/Contents/Mesh.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Contents/Mesh.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Mesh.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Contents/Mesh.png" alt="Mesh" loading="lazy" width="863" height="261" style="width:100%"/>
 </picture>

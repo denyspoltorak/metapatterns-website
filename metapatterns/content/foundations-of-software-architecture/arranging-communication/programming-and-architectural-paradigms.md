@@ -41,7 +41,7 @@ Adding *control* to the blend is more subtle, but no less crucial than the encap
 <figure>
 <a href="/diagrams/Communication/Paradigms%20-%20Object-oriented.png">
 <picture>
-<source srcset="/diagrams/Communication/Paradigms%20-%20Object-oriented.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Paradigms%20-%20Object-oriented.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Object-oriented.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Communication/Paradigms%20-%20Object-oriented.png" alt="Paradigms - Object-oriented" loading="lazy" width="1084" height="543" style="width:100%"/>
 </picture>
@@ -53,7 +53,7 @@ The ability to address complex domains by reducing the whole to self\-contained 
 <figure>
 <a href="/diagrams/Communication/Paradigms%20-%20Object-oriented%20-%20Variants.png">
 <picture>
-<source srcset="/diagrams/Communication/Paradigms%20-%20Object-oriented%20-%20Variants.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Paradigms%20-%20Object-oriented%20-%20Variants.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Object-oriented%20-%20Variants.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Communication/Paradigms%20-%20Object-oriented%20-%20Variants.png" alt="Paradigms - Object-oriented - Variants" loading="lazy" width="1303" height="483" style="width:100%"/>
 </picture>
@@ -67,7 +67,7 @@ Sometimes you don’t need that level of fine\-tuning for the behavior of the sy
 <figure>
 <a href="/diagrams/Communication/Paradigms%20-%20Functional.png">
 <picture>
-<source srcset="/diagrams/Communication/Paradigms%20-%20Functional.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Paradigms%20-%20Functional.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Functional.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Communication/Paradigms%20-%20Functional.png" alt="Paradigms - Functional" loading="lazy" width="994" height="362" style="width:100%"/>
 </picture>
@@ -81,7 +81,7 @@ In distributed systems the functional paradigm is disguised as [*Choreographed E
 <figure>
 <a href="/diagrams/Communication/Paradigms%20-%20Functional%20-%20Variants.png">
 <picture>
-<source srcset="/diagrams/Communication/Paradigms%20-%20Functional%20-%20Variants.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Paradigms%20-%20Functional%20-%20Variants.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Functional%20-%20Variants.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Communication/Paradigms%20-%20Functional%20-%20Variants.png" alt="Paradigms - Functional - Variants" loading="lazy" width="1124" height="345" style="width:100%"/>
 </picture>
@@ -95,7 +95,7 @@ The final approach is integration through data\. There are cases where the domai
 <figure>
 <a href="/diagrams/Communication/Paradigms%20-%20Data-centric.png">
 <picture>
-<source srcset="/diagrams/Communication/Paradigms%20-%20Data-centric.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Paradigms%20-%20Data-centric.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Data-centric.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Communication/Paradigms%20-%20Data-centric.png" alt="Paradigms - Data-centric" loading="lazy" width="944" height="501" style="width:100%"/>
 </picture>
@@ -107,7 +107,7 @@ In the data\-centric paradigm *logic* and *data* are structured independently\. 
 <figure>
 <a href="/diagrams/Communication/Paradigms%20-%20Data-centric%20-%20Notifications.png">
 <picture>
-<source srcset="/diagrams/Communication/Paradigms%20-%20Data-centric%20-%20Notifications.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Paradigms%20-%20Data-centric%20-%20Notifications.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Data-centric%20-%20Notifications.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Communication/Paradigms%20-%20Data-centric%20-%20Notifications.png" alt="Paradigms - Data-centric - Notifications" loading="lazy" width="944" height="463" style="width:100%"/>
 </picture>
@@ -119,7 +119,7 @@ The data\-centric approach works well for moderately\-sized projects with a stab
 <figure>
 <a href="/diagrams/Communication/Paradigms%20-%20Data-centric%20-%20Variants.png">
 <picture>
-<source srcset="/diagrams/Communication/Paradigms%20-%20Data-centric%20-%20Variants.svg" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"/>
+<source srcset="/diagrams/Communication/Paradigms%20-%20Data-centric%20-%20Variants.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Data-centric%20-%20Variants.dark.svg" media="(prefers-color-scheme: dark)"/>
 <img src="/diagrams/Communication/Paradigms%20-%20Data-centric%20-%20Variants.png" alt="Paradigms - Data-centric - Variants" loading="lazy" width="943" height="463" style="width:100%"/>
 </picture>
