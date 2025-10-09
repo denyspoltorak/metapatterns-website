@@ -2,7 +2,7 @@
 weight = 6
 title = "Hexagonal Architecture"
 description = "Hexagonal Architecture isolates a component's business logic from its environment by hiding all the component's dependencies behind Adapters."
-images = ["/diagrams/Main/Hexagonal%20Architecture.svg"]
+images = ["/diagrams/Main/Hexagonal%20Architecture.png"]
 [sitemap]
   priority = 0.8
 +++

@@ -2,7 +2,7 @@
 weight = 10
 title = "Evolutions of Layers to gain flexibility"
 description = "The upper Proxy or Orchestrator layer can be split into a service per client, making Backends for Frontends. This allows for per-client customization."
-images = ["/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.svg"]
+images = ["/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png"]
 [sitemap]
   priority = 0.3
 +++

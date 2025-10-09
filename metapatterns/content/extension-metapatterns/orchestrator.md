@@ -2,7 +2,7 @@
 weight = 9
 title = "Orchestrator"
 description = "An Orchestrator integrates lower-level components. It runs a client request as a series of calls to other components while keeping their states consistent."
-images = ["/diagrams/Main/Orchestrator.svg"]
+images = ["/diagrams/Main/Orchestrator.png"]
 [sitemap]
   priority = 0.8
 +++

@@ -2,7 +2,7 @@
 weight = 7
 title = "Evolutions of Layers that make more layers"
 description = "It is often possible to split the business logic layer in two, namely, integration or application logic (scenarios) and domain logic (business rules)."
-images = ["/diagrams/Evolutions/Layers/Layers%20to%20Layers.svg"]
+images = ["/diagrams/Evolutions/Layers/Layers%20to%20Layers.png"]
 [sitemap]
   priority = 0.3
 +++
