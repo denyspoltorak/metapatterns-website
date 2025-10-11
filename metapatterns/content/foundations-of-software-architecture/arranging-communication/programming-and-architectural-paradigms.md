@@ -7,7 +7,7 @@ images = ["/diagrams/Communication/Paradigms%20-%20Object-oriented.png"]
   priority = 0.5
 +++
 
-# Programming and architectural paradigms
+# Programming and architectural paradigms {anchor=false}
 
 Sharing a database is the greatest sin when you architect [*Microservices*]({{< relref "../../basic-metapatterns/services.md#microservices" >}}) yet [*Space\-Based Architecture*]({{< relref "../../implementation-metapatterns/mesh.md#space-based-architecture" >}}) is built around shared data\. How do these approaches coexist? Do *Microservices* make any sense if blatantly violating their rules still results in successful projects?
 

@@ -7,7 +7,7 @@ images = ["/diagrams/Main/Microkernel.png"]
   priority = 0.8
 +++
 
-# Microkernel
+# Microkernel {anchor=false}
 
 <figure>
 <a href="/diagrams/Main/Microkernel.png">

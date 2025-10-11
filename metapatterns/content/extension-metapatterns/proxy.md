@@ -7,7 +7,7 @@ images = ["/diagrams/Main/Proxy.png"]
   priority = 0.8
 +++
 
-# Proxy
+# Proxy {anchor=false}
 
 <figure>
 <a href="/diagrams/Main/Proxy.png">

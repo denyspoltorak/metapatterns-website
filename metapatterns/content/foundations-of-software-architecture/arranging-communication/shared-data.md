@@ -7,7 +7,7 @@ images = ["/diagrams/Communication/Services%20to%20Shared%20Data.png"]
   priority = 0.5
 +++
 
-# Shared data
+# Shared data {anchor=false}
 
 The final approach is integration through shared data \([*Shared Repository*]({{< relref "../../extension-metapatterns/shared-repository.md" >}})\):
 

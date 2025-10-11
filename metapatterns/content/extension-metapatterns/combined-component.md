@@ -7,7 +7,7 @@ images = ["/diagrams/Variants/2/Multifunctional%20-%20API%20Gateway.png"]
   priority = 0.8
 +++
 
-# Combined Component
+# Combined Component {anchor=false}
 
 *Jack of all trades\.* Use third\-party software which covers multiple concerns\.
 

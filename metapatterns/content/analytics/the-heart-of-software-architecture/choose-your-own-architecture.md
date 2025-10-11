@@ -7,7 +7,7 @@ images = ["/diagrams/Heart/Features-1.png"]
   priority = 0.5
 +++
 
-# Choose your own architecture
+# Choose your own architecture {anchor=false}
 
 Now that we’ve seen patterns decomposed into decoupling and cohesion, we can try reconstructing architecture based on your project’s needs\.
 

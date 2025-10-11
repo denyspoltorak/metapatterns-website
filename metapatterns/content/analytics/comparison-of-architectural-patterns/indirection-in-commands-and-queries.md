@@ -7,7 +7,7 @@ images = ["/diagrams/Conclusion/Indirection-Command.png"]
   priority = 0.5
 +++
 
-# Indirection in commands and queries
+# Indirection in commands and queries {anchor=false}
 
 *We can solve any problem by introducing an extra level of indirection* – states the [old adage](https://en.wikipedia.org/wiki/Fundamental_theorem_of_software_engineering)\. We will not explain how this rule drives [deep learning](https://en.wikipedia.org/wiki/Deep_learning), at least for now\. Instead, let’s concentrate our effort on indirection in communication between services\.
 

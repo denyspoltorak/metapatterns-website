@@ -7,7 +7,7 @@ description = "Thanks to the people who made Architectural Metapatterns possible
 bookSearchExclude = true
 +++
 
-# Acknowledgements
+# Acknowledgements {anchor=false}
 
 I remember Avraham Fraenkel of DSPG who showed me what a true manager is like\.
 

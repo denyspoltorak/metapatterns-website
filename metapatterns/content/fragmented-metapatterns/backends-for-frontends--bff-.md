@@ -7,7 +7,7 @@ images = ["/diagrams/Main/Backends%20for%20Frontends.png"]
   priority = 0.8
 +++
 
-# Backends for Frontends \(BFF\)
+# Backends for Frontends \(BFF\) {anchor=false}
 
 <figure>
 <a href="/diagrams/Main/Backends%20for%20Frontends.png">

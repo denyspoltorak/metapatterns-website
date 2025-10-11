@@ -7,7 +7,7 @@ images = ["/diagrams/Main/Mesh.png"]
   priority = 0.8
 +++
 
-# Mesh
+# Mesh {anchor=false}
 
 <figure>
 <a href="/diagrams/Main/Mesh.png">

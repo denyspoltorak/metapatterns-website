@@ -6,7 +6,7 @@ description = "This section formalizes the format of each of the metapattern cha
   priority = 0.1
 +++
 
-# Format of a metapattern
+# Format of a metapattern {anchor=false}
 
 The descriptions of most metapatterns follow the same format:
 

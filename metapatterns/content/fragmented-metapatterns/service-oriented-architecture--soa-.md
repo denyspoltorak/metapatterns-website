@@ -7,7 +7,7 @@ images = ["/diagrams/Main/Service-Oriented%20Architecture.png"]
   priority = 0.8
 +++
 
-# Service\-Oriented Architecture \(SOA\)
+# Service\-Oriented Architecture \(SOA\) {anchor=false}
 
 <figure>
 <a href="/diagrams/Main/Service-Oriented%20Architecture.png">

@@ -7,7 +7,7 @@ images = ["/diagrams/Communication/Services%20to%20Pipeline.png"]
   priority = 0.5
 +++
 
-# Choreography
+# Choreography {anchor=false}
 
 Another integration option is to build a [*Pipeline*]({{< relref "../../basic-metapatterns/pipeline.md" >}}) to pass every client’s request through a chain of components:
 

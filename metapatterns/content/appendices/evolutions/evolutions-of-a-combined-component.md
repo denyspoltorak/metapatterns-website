@@ -6,7 +6,7 @@ description = "A stack of single-purpose layers can replace a Combined Component
   priority = 0.3
 +++
 
-# Evolutions of a Combined Component
+# Evolutions of a Combined Component {anchor=false}
 
 The patterns that involve *orchestration* \([*API Gateway*]({{< relref "../../extension-metapatterns/combined-component.md#api-gateway" >}}), [*Event Mediator*]({{< relref "../../extension-metapatterns/combined-component.md#event-mediator" >}}), [*Enterprise Service Bus*]({{< relref "../../extension-metapatterns/combined-component.md#enterprise-service-bus-esb" >}})\) may allow for [most of the evolutions]({{< relref "../../appendices/evolutions/evolutions-of-an-orchestrator.md" >}}) of the [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) metapattern by deploying multiple versions of the *Combined Component* that differ in their orchestration logic\. There is also a special evolution:
 

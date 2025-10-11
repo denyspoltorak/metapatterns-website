@@ -7,7 +7,7 @@ images = ["/diagrams/Main/Shards.png"]
   priority = 0.8
 +++
 
-# Shards
+# Shards {anchor=false}
 
 <figure>
 <a href="/diagrams/Main/Shards.png">

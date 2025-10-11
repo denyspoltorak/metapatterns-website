@@ -6,7 +6,7 @@ description = "When layered software grows large, its business logic should be s
   priority = 0.3
 +++
 
-# Evolutions of Layers that help large projects
+# Evolutions of Layers that help large projects {anchor=false}
 
 The main drawback \(and benefit\) of [*Layers*]({{< relref "../../basic-metapatterns/layers.md" >}}) is that much or all of the business logic is kept together in one or two components\. That allows for easy debugging and fast development in the initial stages of the project but slows down and complicates work as the project [grows in size]({{< relref "../../analytics/architecture-and-product-life-cycle.md#youth-development-of-features--fragmented-architectures" >}})\. The only way for a growing project to survive and continue evolving at a reasonable speed is to divide its business logic into several smaller, thus less [complex]({{< relref "../../foundations-of-software-architecture/modules-and-complexity.md" >}}), components that match subdomains \(*bounded contexts* \[[DDD]({{< relref "../../appendices/books-referenced.md#ddd" >}})\]\)\. There are several options for such a change whose applicability depends on the domain:
 

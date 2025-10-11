@@ -7,7 +7,7 @@ images = ["/diagrams/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.
   priority = 0.3
 +++
 
-# Evolutions of Layers to improve performance
+# Evolutions of Layers to improve performance {anchor=false}
 
 There are several ways to improve the performance of a [*layered system*]({{< relref "../../basic-metapatterns/layers.md" >}})\. One we have [already discussed]({{< relref "../../appendices/evolutions/evolutions-of-shards-that-share-data.md#use-space-based-architecture" >}}) for [*Shards*]({{< relref "../../basic-metapatterns/shards.md" >}}):
 

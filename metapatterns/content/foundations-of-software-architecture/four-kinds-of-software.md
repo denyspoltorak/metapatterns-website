@@ -7,7 +7,7 @@ images = ["/diagrams/4Kinds/4%20Kinds.png"]
   priority = 0.5
 +++
 
-# Four kinds of software
+# Four kinds of software {anchor=false}
 
 Software products vary in their goals which, surprisingly, determine their structure and operation\. The main features of software make a fuzzy continuous space rather than a strict set of well\-defined classification options\. Let’s examine two of its dimensions:
 

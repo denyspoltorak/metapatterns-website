@@ -7,7 +7,7 @@ images = ["/diagrams/Heart/Basic.png"]
   priority = 0.5
 +++
 
-# Deconstructing patterns
+# Deconstructing patterns {anchor=false}
 
 Imagine a dungeon with dragons\. It is made of halls connected by tunnels\. Each hall is *cohesive*\. Tunnels are narrow interfaces that *decouple* them\. A hall is amorphous – it can have any shape but it cannot open to another hall except through a tunnel – such are the rules of the game\. The tunnels both restrict the freedom of the halls and interconnect them\.
 

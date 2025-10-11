@@ -7,7 +7,7 @@ images = ["/diagrams/Communication/Cell-Based%20Architecture.png"]
   priority = 0.5
 +++
 
-# Comparison of communication styles
+# Comparison of communication styles {anchor=false}
 
 We have briefly discussed three approaches to communication: orchestration, choreography, and shared data\. Let’s recall when it makes sense to use each of them\.
 

@@ -6,7 +6,7 @@ description = "Multiple stateful or stateless instances of a Monolith can be dep
   priority = 0.3
 +++
 
-# Evolutions of a Monolith that lead to Shards
+# Evolutions of a Monolith that lead to Shards {anchor=false}
 
 One of the main drawbacks of the monolithic architecture is its lack of scalability – a single running instance of your system may not be enough to serve all its clients no matter how many resources you add in\. If that is the case, you should consider [*Shards*]({{< relref "../../basic-metapatterns/shards.md" >}}) – *multiple instances* of a monolith\. There are following options:
 

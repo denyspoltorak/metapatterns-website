@@ -7,7 +7,7 @@ images = ["/diagrams/Main/Monolith.png"]
   priority = 0.8
 +++
 
-# Monolith
+# Monolith {anchor=false}
 
 Let’s take a look at the simplest possible [metapattern]({{< relref "../introduction/metapatterns.md" >}}) – *Monolith* – and see what it can teach us\.
 

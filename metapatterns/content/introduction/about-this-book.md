@@ -7,7 +7,7 @@ images = ["/diagrams/Misc/Diagrams.png"]
   priority = 0.5
 +++
 
-# About this book
+# About this book {anchor=false}
 
 When I was learning programming, there was [*Gang of Four*](https://en.wikipedia.org/wiki/Design_Patterns)\. The book promised to teach software design, and it did to an extent with the case study provided\. However, the patterns it described were merely random tools which had little in common\. After several years, having reinvented [*Hexagonal Architecture*](https://en.wikipedia.org/wiki/Hexagonal_architecture_(software)) along the way, I learned about [*Pattern\-Oriented Software Architecture*](https://en.wikipedia.org/wiki/Pattern-Oriented_Software_Architecture)\. The series had many more intriguing patterns, and promised to provide a *system of patterns* or a *pattern language*, but failed to build an intuitive whole\. Then there were specialized books with [*Domain\-Driven Design*](https://en.wikipedia.org/wiki/Domain-driven_design) and *Microservices* patterns\. There was the [*Software Architecture Patterns*](https://www.oreilly.com/content/software-architecture-patterns/) primer by Mark Richards\. Its simplicity felt great, but it had only 5 architectural styles, while his next book, *Fundamentals of Software Architecture*, dived too deeply into practical details and examples to be easily grasped\.
 

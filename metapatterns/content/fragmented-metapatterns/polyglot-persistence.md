@@ -7,7 +7,7 @@ images = ["/diagrams/Main/Polyglot%20Persistence.png"]
   priority = 0.8
 +++
 
-# Polyglot Persistence
+# Polyglot Persistence {anchor=false}
 
 <figure>
 <a href="/diagrams/Main/Polyglot%20Persistence.png">

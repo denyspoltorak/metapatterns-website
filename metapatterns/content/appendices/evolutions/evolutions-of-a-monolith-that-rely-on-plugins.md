@@ -6,7 +6,7 @@ description = "Plugins or Interpreter make a monolithic component customizable. 
   priority = 0.3
 +++
 
-# Evolutions of a Monolith that rely on Plugins
+# Evolutions of a Monolith that rely on Plugins {anchor=false}
 
 The last group of evolutions which we review does not really change the monolithic nature of the application\. Instead, its goal is to improve the *customizability* of the [*Monolith*]({{< relref "../../basic-metapatterns/monolith.md" >}}):
 

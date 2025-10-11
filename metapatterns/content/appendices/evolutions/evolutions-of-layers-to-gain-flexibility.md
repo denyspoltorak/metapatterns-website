@@ -7,7 +7,7 @@ images = ["/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%20
   priority = 0.3
 +++
 
-# Evolutions of Layers to gain flexibility
+# Evolutions of Layers to gain flexibility {anchor=false}
 
 The last group of evolutions to consider is about making the system more adaptable\. We have [already discussed]({{< relref "../../appendices/evolutions/evolutions-of-a-monolith-that-rely-on-plugins.md" >}}) the following evolutions for [*Monolith*]({{< relref "../../basic-metapatterns/monolith.md" >}}):
 

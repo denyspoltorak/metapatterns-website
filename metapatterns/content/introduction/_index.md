@@ -8,7 +8,7 @@ bookCollapseSection = true
   priority = 0.1
 +++
 
-# Introduction
+# Introduction {anchor=false}
 
 **<span class="book-green">Architectural Metapatterns</span>**
 

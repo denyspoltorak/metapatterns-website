@@ -6,7 +6,7 @@ description = "The index of patterns described in the Architectural Metapatterns
   priority = 0.1
 +++
 
-# Index of patterns
+# Index of patterns {anchor=false}
 
 [Action\-Domain\-Responder]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}}) \(ADR\)
 

@@ -7,7 +7,7 @@ images = ["/diagrams/Main/Shared%20Repository.png"]
   priority = 0.8
 +++
 
-# Shared Repository
+# Shared Repository {anchor=false}
 
 <figure>
 <a href="/diagrams/Main/Shared%20Repository.png">

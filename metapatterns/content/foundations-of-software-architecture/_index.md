@@ -7,7 +7,7 @@ bookCollapseSection = true
   priority = 0.2
 +++
 
-# Foundations of software architecture
+# Foundations of software architecture {anchor=false}
 
 This part defines some ideas which are used throughout the book\. Please feel free to skip \(through\) it as you probably know most of them quite well\.
 

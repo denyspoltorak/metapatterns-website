@@ -7,7 +7,7 @@ images = ["/diagrams/Conclusion/Sharing-DirectCall.png"]
   priority = 0.5
 +++
 
-# Sharing functionality or data among services
+# Sharing functionality or data among services {anchor=false}
 
 Architectural patterns manifest several ways of sharing functionality or data among their components\. Let’s consider a basic example: calls to two pieces of business logic need to be logged, while the logger is doing something more complex than mere console prints\. The business logic also needs to access a system\-wide counter\.
 

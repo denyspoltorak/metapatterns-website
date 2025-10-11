@@ -7,7 +7,7 @@ images = ["/diagrams/Main/Layered%20Services.png"]
   priority = 0.8
 +++
 
-# Layered Services
+# Layered Services {anchor=false}
 
 <figure>
 <a href="/diagrams/Main/Layered%20Services.png">

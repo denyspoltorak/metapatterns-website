@@ -8,7 +8,7 @@ bookCollapseSection = true
   priority = 0.2
 +++
 
-# Arranging communication
+# Arranging communication {anchor=false}
 
 As a project grows, it tends to become subdivided into services, modules, or whatever you call the components that match its subdomains \(or *bounded contexts*, if you prefer the \[[DDD]({{< relref "../../appendices/books-referenced.md#ddd" >}})\] convention\)\. Still, there remain system\-wide use cases that require collaboration from many or all of the system’s parts – otherwise the components don’t make a single system\. Let’s see how they can be integrated\.
 
@@ -26,12 +26,36 @@ As integration is not unique to distributed systems – it is present even in sm
 
 ## Contents:
 
-<nav>
+<nav class="grid3">
 
-- [Programming and architectural paradigms]({{< relref "foundations-of-software-architecture/arranging-communication/programming-and-architectural-paradigms.md" >}})
-- [Orchestration]({{< relref "foundations-of-software-architecture/arranging-communication/orchestration.md" >}})
-- [Choreography]({{< relref "foundations-of-software-architecture/arranging-communication/choreography.md" >}})
-- [Shared data]({{< relref "foundations-of-software-architecture/arranging-communication/shared-data.md" >}})
-- [Comparison of communication styles]({{< relref "foundations-of-software-architecture/arranging-communication/comparison-of-communication-styles.md" >}})
+<a class="grid-row" href="{{< relref "foundations-of-software-architecture/arranging-communication/programming-and-architectural-paradigms.md" >}}">
+
+Programming and architectural paradigms
+
+</a>
+
+<a href="{{< relref "foundations-of-software-architecture/arranging-communication/orchestration.md" >}}">
+
+Orchestration
+
+</a>
+
+<a href="{{< relref "foundations-of-software-architecture/arranging-communication/choreography.md" >}}">
+
+Choreography
+
+</a>
+
+<a href="{{< relref "foundations-of-software-architecture/arranging-communication/shared-data.md" >}}">
+
+Shared data
+
+</a>
+
+<a class="grid-row" href="{{< relref "foundations-of-software-architecture/arranging-communication/comparison-of-communication-styles.md" >}}">
+
+Comparison of communication styles
+
+</a>
 
 </nav>

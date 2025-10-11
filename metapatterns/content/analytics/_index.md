@@ -7,7 +7,7 @@ bookCollapseSection = true
   priority = 0.2
 +++
 
-# Analytics
+# Analytics {anchor=false}
 
 This part is dedicated to analyzing the architectural metapatterns, for if this book’s taxonomy of patterns is a step forward from the state of the art, it should bear fruits for us to pick\.
 

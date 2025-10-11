@@ -7,7 +7,7 @@ bookCollapseSection = true
   priority = 0.2
 +++
 
-# Fragmented metapatterns
+# Fragmented metapatterns {anchor=false}
 
 There are several patterns with no system\-wide layers\. Some of them incorporate two or three orthogonal domains which vary in abstractness to the extent that a service \(limited to a subdomain\) of one domain acts as a layer for another domain\.
 

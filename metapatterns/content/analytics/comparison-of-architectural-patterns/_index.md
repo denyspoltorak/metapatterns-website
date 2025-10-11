@@ -7,7 +7,7 @@ bookCollapseSection = true
   priority = 0.2
 +++
 
-# Comparison of architectural patterns
+# Comparison of architectural patterns {anchor=false}
 
 This chapter is a compilation of small sections each of which examines one aspect of the architectural patterns included in this book\. It shows the value of having a list of metapatterns to iterate over and analyze\.
 

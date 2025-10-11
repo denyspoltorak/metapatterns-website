@@ -7,7 +7,7 @@ images = ["/diagrams/Main/Hexagonal%20Architecture.png"]
   priority = 0.8
 +++
 
-# Hexagonal Architecture
+# Hexagonal Architecture {anchor=false}
 
 <figure>
 <a href="/diagrams/Main/Hexagonal%20Architecture.png">
