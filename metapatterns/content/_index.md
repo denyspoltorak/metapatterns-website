@@ -74,7 +74,7 @@ Arranging communication
 
 <source srcset="/diagrams/Web/Monolith.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Monolith.svg" alt="Monolith"/>
+<img src="/diagrams/Web/Monolith.png" alt="Monolith" loading="lazy" width="243" height="243"/>
 
 </picture>
 
@@ -90,7 +90,7 @@ Monolith
 
 <source srcset="/diagrams/Web/Shards.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Shards.svg" alt="Shards"/>
+<img src="/diagrams/Web/Shards.png" alt="Shards" loading="lazy" width="286" height="243"/>
 
 </picture>
 
@@ -106,7 +106,7 @@ Shards
 
 <source srcset="/diagrams/Web/Layers.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Layers.svg" alt="Layers"/>
+<img src="/diagrams/Web/Layers.png" alt="Layers" loading="lazy" width="243" height="263"/>
 
 </picture>
 
@@ -122,7 +122,7 @@ Layers
 
 <source srcset="/diagrams/Web/Services.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Services.svg" alt="Services"/>
+<img src="/diagrams/Web/Services.png" alt="Services" loading="lazy" width="363" height="246"/>
 
 </picture>
 
@@ -138,7 +138,7 @@ Services
 
 <source srcset="/diagrams/Web/Pipeline.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Pipeline.svg" alt="Pipeline"/>
+<img src="/diagrams/Web/Pipeline.png" alt="Pipeline" loading="lazy" width="426" height="203"/>
 
 </picture>
 
@@ -160,7 +160,7 @@ Pipeline
 
 <source srcset="/diagrams/Web/Middleware.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Middleware.svg" alt="Middleware"/>
+<img src="/diagrams/Web/Middleware.png" alt="Middleware" loading="lazy" width="363" height="263"/>
 
 </picture>
 
@@ -176,7 +176,7 @@ Middleware
 
 <source srcset="/diagrams/Web/Shared%20Repository.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Shared%20Repository.svg" alt="Shared Repository"/>
+<img src="/diagrams/Web/Shared%20Repository.png" alt="Shared Repository" loading="lazy" width="363" height="243"/>
 
 </picture>
 
@@ -192,7 +192,7 @@ Shared Repository
 
 <source srcset="/diagrams/Web/Proxy.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Proxy.svg" alt="Proxy"/>
+<img src="/diagrams/Web/Proxy.png" alt="Proxy" loading="lazy" width="363" height="404"/>
 
 </picture>
 
@@ -208,7 +208,7 @@ Proxy
 
 <source srcset="/diagrams/Web/Orchestrator.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Orchestrator.svg" alt="Orchestrator"/>
+<img src="/diagrams/Web/Orchestrator.png" alt="Orchestrator" loading="lazy" width="363" height="263"/>
 
 </picture>
 
@@ -224,7 +224,7 @@ Orchestrator
 
 <source srcset="/diagrams/Web/Combined%20Component.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Combined%20Component.svg" alt="Combined Component"/>
+<img src="/diagrams/Web/Combined%20Component.png" alt="Combined Component" loading="lazy" width="303" height="361"/>
 
 </picture>
 
@@ -246,7 +246,7 @@ Combined Component
 
 <source srcset="/diagrams/Web/Layered%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Layered%20Services.svg" alt="Layered Services"/>
+<img src="/diagrams/Web/Layered%20Services.png" alt="Layered Services" loading="lazy" width="443" height="324"/>
 
 </picture>
 
@@ -262,7 +262,7 @@ Layered Services
 
 <source srcset="/diagrams/Web/Polyglot%20Persistence.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Polyglot%20Persistence.svg" alt="Polyglot Persistence"/>
+<img src="/diagrams/Web/Polyglot%20Persistence.png" alt="Polyglot Persistence" loading="lazy" width="403" height="323"/>
 
 </picture>
 
@@ -278,11 +278,11 @@ Polyglot Persistence
 
 <source srcset="/diagrams/Web/Backends%20for%20Frontends.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Backends%20for%20Frontends.svg" alt="Backends for Frontends (BFF)"/>
+<img src="/diagrams/Web/Backends%20for%20Frontends.png" alt="Backends for Frontends (BFF)" loading="lazy" width="440" height="401"/>
 
 </picture>
 
-Backends for Frontends (BFF)
+Backends for Frontends
 
 </a>
 
@@ -294,11 +294,11 @@ Backends for Frontends (BFF)
 
 <source srcset="/diagrams/Web/Service-Oriented%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Service-Oriented%20Architecture.svg" alt="Service-Oriented Architecture (SOA)"/>
+<img src="/diagrams/Web/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture (SOA)" loading="lazy" width="403" height="401"/>
 
 </picture>
 
-Service-Oriented Architecture (SOA)
+Service-Oriented Architecture
 
 </a>
 
@@ -310,7 +310,7 @@ Service-Oriented Architecture (SOA)
 
 <source srcset="/diagrams/Web/Hierarchy.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Hierarchy.svg" alt="Hierarchy"/>
+<img src="/diagrams/Web/Hierarchy.png" alt="Hierarchy" loading="lazy" width="383" height="303"/>
 
 </picture>
 
@@ -332,7 +332,7 @@ Hierarchy
 
 <source srcset="/diagrams/Web/Plugins.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Plugins.svg" alt="Plugins"/>
+<img src="/diagrams/Web/Plugins.png" alt="Plugins" loading="lazy" width="243" height="323"/>
 
 </picture>
 
@@ -348,7 +348,7 @@ Plugins
 
 <source srcset="/diagrams/Web/Hexagonal%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Hexagonal%20Architecture.svg" alt="Hexagonal Architecture"/>
+<img src="/diagrams/Web/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" loading="lazy" width="280" height="363"/>
 
 </picture>
 
@@ -364,7 +364,7 @@ Hexagonal Architecture
 
 <source srcset="/diagrams/Web/Microkernel.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Microkernel.svg" alt="Microkernel"/>
+<img src="/diagrams/Web/Microkernel.png" alt="Microkernel" loading="lazy" width="303" height="323"/>
 
 </picture>
 
@@ -380,7 +380,7 @@ Microkernel
 
 <source srcset="/diagrams/Web/Mesh.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Mesh.svg" alt="Mesh"/>
+<img src="/diagrams/Web/Mesh.png" alt="Mesh" loading="lazy" width="283" height="224"/>
 
 </picture>
 
