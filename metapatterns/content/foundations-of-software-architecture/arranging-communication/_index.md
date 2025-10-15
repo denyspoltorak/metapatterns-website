@@ -36,17 +36,47 @@ Programming and architectural paradigms
 
 <a href="{{< relref "foundations-of-software-architecture/arranging-communication/orchestration.md" >}}">
 
+<picture>
+
+<source srcset="/diagrams/Web/Orchestration.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Orchestration.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Orchestration.png" alt="Orchestration" loading="lazy" width="263" height="286"/>
+
+</picture>
+
 Orchestration
 
 </a>
 
 <a href="{{< relref "foundations-of-software-architecture/arranging-communication/choreography.md" >}}">
 
+<picture>
+
+<source srcset="/diagrams/Web/Choreography.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Choreography.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Choreography.png" alt="Choreography" loading="lazy" width="263" height="284"/>
+
+</picture>
+
 Choreography
 
 </a>
 
 <a href="{{< relref "foundations-of-software-architecture/arranging-communication/shared-data.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Shared%20data.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Shared%20data.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Shared%20data.png" alt="Shared data" loading="lazy" width="263" height="287"/>
+
+</picture>
 
 Shared data
 
