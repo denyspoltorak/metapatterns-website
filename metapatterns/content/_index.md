@@ -38,11 +38,31 @@ Metapatterns
 
 <a href="{{< relref "foundations-of-software-architecture/modules-and-complexity.md" >}}">
 
+<picture>
+
+<source srcset="/diagrams/Web/Complexity.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Complexity.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Complexity.png" alt="Modules and complexity" loading="lazy" width="542" height="563"/>
+
+</picture>
+
 Modules and complexity
 
 </a>
 
 <a href="{{< relref "foundations-of-software-architecture/forces--asynchronicity--and-distribution.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Forces.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Forces.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Forces.png" alt="Forces, asynchronicity, and distribution" loading="lazy" width="409" height="403"/>
+
+</picture>
 
 Forces, asynchronicity, and distribution
 
@@ -50,11 +70,31 @@ Forces, asynchronicity, and distribution
 
 <a href="{{< relref "foundations-of-software-architecture/four-kinds-of-software.md" >}}">
 
+<picture>
+
+<source srcset="/diagrams/Web/4Kinds.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/4Kinds.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/4Kinds.png" alt="Four kinds of software" loading="lazy" width="622" height="627"/>
+
+</picture>
+
 Four kinds of software
 
 </a>
 
 <a href="{{< relref "foundations-of-software-architecture/arranging-communication/_index.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Communication.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Communication.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Communication.png" alt="Arranging communication" loading="lazy" width="263" height="263"/>
+
+</picture>
 
 Arranging communication
 
