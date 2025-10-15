@@ -44,7 +44,7 @@ Metapatterns
 
 <source srcset="/diagrams/Web/Complexity.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Complexity.png" alt="Modules and complexity" loading="lazy" width="542" height="563"/>
+<img src="/diagrams/Web/Complexity.png" alt="" loading="lazy" width="543" height="564"/>
 
 </picture>
 
@@ -60,7 +60,7 @@ Modules and complexity
 
 <source srcset="/diagrams/Web/Forces.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Forces.png" alt="Forces, asynchronicity, and distribution" loading="lazy" width="409" height="403"/>
+<img src="/diagrams/Web/Forces.png" alt="" loading="lazy" width="409" height="403"/>
 
 </picture>
 
@@ -76,7 +76,7 @@ Forces, asynchronicity, and distribution
 
 <source srcset="/diagrams/Web/4Kinds.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/4Kinds.png" alt="Four kinds of software" loading="lazy" width="622" height="627"/>
+<img src="/diagrams/Web/4Kinds.png" alt="" loading="lazy" width="622" height="627"/>
 
 </picture>
 
@@ -92,7 +92,7 @@ Four kinds of software
 
 <source srcset="/diagrams/Web/Communication.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Communication.png" alt="Arranging communication" loading="lazy" width="263" height="263"/>
+<img src="/diagrams/Web/Communication.png" alt="" loading="lazy" width="263" height="263"/>
 
 </picture>
 
@@ -114,7 +114,7 @@ Arranging communication
 
 <source srcset="/diagrams/Web/Monolith.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Monolith.png" alt="Monolith" loading="lazy" width="363" height="243"/>
+<img src="/diagrams/Web/Monolith.png" alt="" loading="lazy" width="363" height="243"/>
 
 </picture>
 
@@ -130,7 +130,7 @@ Monolith
 
 <source srcset="/diagrams/Web/Shards.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Shards.png" alt="Shards" loading="lazy" width="366" height="243"/>
+<img src="/diagrams/Web/Shards.png" alt="" loading="lazy" width="366" height="243"/>
 
 </picture>
 
@@ -146,7 +146,7 @@ Shards
 
 <source srcset="/diagrams/Web/Layers.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Layers.png" alt="Layers" loading="lazy" width="363" height="245"/>
+<img src="/diagrams/Web/Layers.png" alt="" loading="lazy" width="363" height="245"/>
 
 </picture>
 
@@ -162,7 +162,7 @@ Layers
 
 <source srcset="/diagrams/Web/Services.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Services.png" alt="Services" loading="lazy" width="363" height="246"/>
+<img src="/diagrams/Web/Services.png" alt="" loading="lazy" width="363" height="246"/>
 
 </picture>
 
@@ -178,7 +178,7 @@ Services
 
 <source srcset="/diagrams/Web/Pipeline.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Pipeline.png" alt="Pipeline" loading="lazy" width="364" height="243"/>
+<img src="/diagrams/Web/Pipeline.png" alt="" loading="lazy" width="364" height="243"/>
 
 </picture>
 
@@ -200,7 +200,7 @@ Pipeline
 
 <source srcset="/diagrams/Web/Middleware.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Middleware.png" alt="Middleware" loading="lazy" width="363" height="304"/>
+<img src="/diagrams/Web/Middleware.png" alt="" loading="lazy" width="363" height="304"/>
 
 </picture>
 
@@ -216,7 +216,7 @@ Middleware
 
 <source srcset="/diagrams/Web/Shared%20Repository.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Shared%20Repository.png" alt="Shared Repository" loading="lazy" width="363" height="304"/>
+<img src="/diagrams/Web/Shared%20Repository.png" alt="" loading="lazy" width="363" height="304"/>
 
 </picture>
 
@@ -232,7 +232,7 @@ Shared Repository
 
 <source srcset="/diagrams/Web/Proxy.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Proxy.png" alt="Proxy" loading="lazy" width="363" height="303"/>
+<img src="/diagrams/Web/Proxy.png" alt="" loading="lazy" width="363" height="303"/>
 
 </picture>
 
@@ -248,7 +248,7 @@ Proxy
 
 <source srcset="/diagrams/Web/Orchestrator.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Orchestrator.png" alt="Orchestrator" loading="lazy" width="363" height="303"/>
+<img src="/diagrams/Web/Orchestrator.png" alt="" loading="lazy" width="363" height="303"/>
 
 </picture>
 
@@ -264,7 +264,7 @@ Orchestrator
 
 <source srcset="/diagrams/Web/Combined%20Component.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Combined%20Component.png" alt="Combined Component" loading="lazy" width="363" height="304"/>
+<img src="/diagrams/Web/Combined%20Component.png" alt="" loading="lazy" width="363" height="304"/>
 
 </picture>
 
@@ -286,7 +286,7 @@ Combined Component
 
 <source srcset="/diagrams/Web/Layered%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Layered%20Services.png" alt="Layered Services" loading="lazy" width="443" height="344"/>
+<img src="/diagrams/Web/Layered%20Services.png" alt="" loading="lazy" width="443" height="344"/>
 
 </picture>
 
@@ -302,7 +302,7 @@ Layered Services
 
 <source srcset="/diagrams/Web/Polyglot%20Persistence.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Polyglot%20Persistence.png" alt="Polyglot Persistence" loading="lazy" width="403" height="341"/>
+<img src="/diagrams/Web/Polyglot%20Persistence.png" alt="" loading="lazy" width="403" height="341"/>
 
 </picture>
 
@@ -318,7 +318,7 @@ Polyglot Persistence
 
 <source srcset="/diagrams/Web/Backends%20for%20Frontends.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Backends%20for%20Frontends.png" alt="Backends for Frontends (BFF)" loading="lazy" width="403" height="343"/>
+<img src="/diagrams/Web/Backends%20for%20Frontends.png" alt="" loading="lazy" width="403" height="343"/>
 
 </picture>
 
@@ -334,7 +334,7 @@ Backends for Frontends
 
 <source srcset="/diagrams/Web/Service-Oriented%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture (SOA)" loading="lazy" width="403" height="343"/>
+<img src="/diagrams/Web/Service-Oriented%20Architecture.png" alt="" loading="lazy" width="403" height="343"/>
 
 </picture>
 
@@ -350,7 +350,7 @@ Service-Oriented Architecture
 
 <source srcset="/diagrams/Web/Hierarchy.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Hierarchy.png" alt="Hierarchy" loading="lazy" width="403" height="343"/>
+<img src="/diagrams/Web/Hierarchy.png" alt="" loading="lazy" width="403" height="343"/>
 
 </picture>
 
@@ -372,7 +372,7 @@ Hierarchy
 
 <source srcset="/diagrams/Web/Plugins.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Plugins.png" alt="Plugins" loading="lazy" width="303" height="343"/>
+<img src="/diagrams/Web/Plugins.png" alt="" loading="lazy" width="303" height="343"/>
 
 </picture>
 
@@ -388,7 +388,7 @@ Plugins
 
 <source srcset="/diagrams/Web/Hexagonal%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" loading="lazy" width="303" height="344"/>
+<img src="/diagrams/Web/Hexagonal%20Architecture.png" alt="" loading="lazy" width="303" height="344"/>
 
 </picture>
 
@@ -404,7 +404,7 @@ Hexagonal Architecture
 
 <source srcset="/diagrams/Web/Microkernel.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Microkernel.png" alt="Microkernel" loading="lazy" width="303" height="343"/>
+<img src="/diagrams/Web/Microkernel.png" alt="" loading="lazy" width="303" height="343"/>
 
 </picture>
 
@@ -420,7 +420,7 @@ Microkernel
 
 <source srcset="/diagrams/Web/Mesh.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Mesh.png" alt="Mesh" loading="lazy" width="303" height="343"/>
+<img src="/diagrams/Web/Mesh.png" alt="" loading="lazy" width="303" height="343"/>
 
 </picture>
 
