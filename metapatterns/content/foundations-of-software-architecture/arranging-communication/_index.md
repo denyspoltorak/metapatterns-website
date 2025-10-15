@@ -42,7 +42,7 @@ Programming and architectural paradigms
 
 <source srcset="/diagrams/Web/Orchestration.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Orchestration.png" alt="Orchestration" loading="lazy" width="263" height="286"/>
+<img src="/diagrams/Web/Orchestration.png" alt="" loading="lazy" width="263" height="286"/>
 
 </picture>
 
@@ -58,7 +58,7 @@ Orchestration
 
 <source srcset="/diagrams/Web/Choreography.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Choreography.png" alt="Choreography" loading="lazy" width="263" height="284"/>
+<img src="/diagrams/Web/Choreography.png" alt="" loading="lazy" width="263" height="284"/>
 
 </picture>
 
@@ -74,7 +74,7 @@ Choreography
 
 <source srcset="/diagrams/Web/Shared%20data.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Shared%20data.png" alt="Shared data" loading="lazy" width="263" height="287"/>
+<img src="/diagrams/Web/Shared%20data.png" alt="" loading="lazy" width="263" height="287"/>
 
 </picture>
 
