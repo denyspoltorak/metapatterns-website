@@ -7,7 +7,7 @@ bookCollapseSection = true
   priority = 0.2
 +++
 
-# Basic metapatterns
+# Basic metapatterns {anchor=false}
 
 Basic metapatterns are both common stand\-alone architectures and building blocks for more complex systems\. They include the single\-component *Monolithic* architecture and the results of its division along each of the [coordinate axes]({{< relref "../introduction/metapatterns.md#the-system-of-coordinates" >}}), namely *abstractness*, *subdomain*, and *sharding*:
 

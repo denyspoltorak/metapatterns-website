@@ -2,12 +2,12 @@
 weight = 8
 title = "Backends for Frontends (BFF)"
 description = "Backends for Frontends dedicate a component to each kind of a system's client. That grants flexibility in workflows and technologies."
-images = ["/diagrams/Main/Backends%20for%20Frontends.svg"]
+images = ["/diagrams/Main/Backends%20for%20Frontends.png"]
 [sitemap]
   priority = 0.8
 +++
 
-# Backends for Frontends \(BFF\)
+# Backends for Frontends \(BFF\) {anchor=false}
 
 <figure>
 <a href="/diagrams/Main/Backends%20for%20Frontends.png">

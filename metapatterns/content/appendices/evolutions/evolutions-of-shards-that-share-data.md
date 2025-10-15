@@ -6,7 +6,7 @@ description = "The main issue with Shards is coordination between the instances.
   priority = 0.3
 +++
 
-# Evolutions of Shards that share data
+# Evolutions of Shards that share data {anchor=false}
 
 One issue peculiar to [*Shards*]({{< relref "../../basic-metapatterns/shards.md" >}}) is that of coordinating the instances deployed, especially if their data become coupled\. The most direct solution is to let the instances operate a component that wraps the shared data:
 

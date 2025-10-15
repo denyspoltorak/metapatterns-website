@@ -7,7 +7,7 @@ description = "The list of versions of Architectural Metapatterns and its predec
 bookSearchExclude = true
 +++
 
-# History of changes
+# History of changes {anchor=false}
 
 0\.1 \(2020\) – Description of my semisynchronous *Proactor* architecture for a VoIP gateway, published by dou\.ua\. It received very positive feedback and lots of comments from the community\.
 

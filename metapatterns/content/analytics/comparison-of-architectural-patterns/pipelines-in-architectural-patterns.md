@@ -7,7 +7,7 @@ images = ["/diagrams/Conclusion/Pipelineliness-EventDrivenArchitecture.png"]
   priority = 0.5
 +++
 
-# Pipelines in architectural patterns
+# Pipelines in architectural patterns {anchor=false}
 
 Several architectural patterns involve a unidirectional data flow – a [*pipeline*](https://en.wikipedia.org/wiki/Pipeline_(software))\. Strictly speaking, every data packet in a pipeline should:
 

@@ -7,7 +7,7 @@ images = ["/diagrams/Conclusion/DI-1.png"]
   priority = 0.5
 +++
 
-# Dependency inversion in architectural patterns
+# Dependency inversion in architectural patterns {anchor=false}
 
 I am no fan of [*SOLID*](https://en.wikipedia.org/wiki/SOLID) – to the extent of being unable to remember what those five letters mean – thus I was really surprised to notice that one of its principles, namely [*dependency inversion*](https://en.wikipedia.org/wiki/Dependency_inversion_principle), is quite common with architectural patterns, which means that it is way more generic than *OOP* it is promoted for\.
 

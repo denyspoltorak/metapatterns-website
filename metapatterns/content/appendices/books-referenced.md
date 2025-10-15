@@ -6,7 +6,7 @@ description = "The list of books which Architectural Metapatterns references."
   priority = 0.1
 +++
 
-# Books referenced
+# Books referenced {anchor=false}
 
 <a name="ddd"></a>
 **DDD** – Domain\-Driven Design: Tackling Complexity in the Heart of Software\. *Eric Evans\. Addison\-Wesley \(2003\)\.* \(Most of these patterns are also well\-described in \[[LDDD]({{< relref "#lddd" >}})\]\)

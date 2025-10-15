@@ -7,7 +7,7 @@ bookCollapseSection = true
   priority = 0.1
 +++
 
-# Appendices
+# Appendices {anchor=false}
 
 ## Contents:
 

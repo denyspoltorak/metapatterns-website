@@ -2,12 +2,12 @@
 weight = 8
 title = "Proxy"
 description = "A Proxy represents a system to its clients. It implements cross-cutting concerns, such as caching or protocol translation, and routes client requests."
-images = ["/diagrams/Main/Proxy.svg"]
+images = ["/diagrams/Main/Proxy.png"]
 [sitemap]
   priority = 0.8
 +++
 
-# Proxy
+# Proxy {anchor=false}
 
 <figure>
 <a href="/diagrams/Main/Proxy.png">

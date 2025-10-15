@@ -2,12 +2,12 @@
 weight = 9
 title = "Services"
 description = "Services are components dedicated to subdomains. They may vary in size, internal structure and technologies. A service can be further subdivided into a Cell."
-images = ["/diagrams/Main/Services.svg"]
+images = ["/diagrams/Main/Services.png"]
 [sitemap]
   priority = 0.8
 +++
 
-# Services
+# Services {anchor=false}
 
 <figure>
 <a href="/diagrams/Main/Services.png">

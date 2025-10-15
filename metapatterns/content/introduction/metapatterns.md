@@ -7,7 +7,7 @@ images = ["/diagrams/Intro/Example-Defined.png"]
   priority = 0.8
 +++
 
-# Metapatterns
+# Metapatterns {anchor=false}
 
 Is there a way to bring the patterns into order? They are way too many, some obscure, others overly specialized\.
 

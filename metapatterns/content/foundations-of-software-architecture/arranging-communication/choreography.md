@@ -2,12 +2,12 @@
 weight = 3
 title = "Choreography"
 description = "In choreography user requests or input events pass through a chain of components that handle individual steps of the scenario which the system implements."
-images = ["/diagrams/Communication/Services%20to%20Pipeline.svg"]
+images = ["/diagrams/Communication/Services%20to%20Pipeline.png"]
 [sitemap]
   priority = 0.5
 +++
 
-# Choreography
+# Choreography {anchor=false}
 
 Another integration option is to build a [*Pipeline*]({{< relref "../../basic-metapatterns/pipeline.md" >}}) to pass every client’s request through a chain of components:
 

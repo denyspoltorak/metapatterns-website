@@ -7,7 +7,7 @@ images = ["/diagrams/Intro/3-Tier.png"]
   priority = 0.5
 +++
 
-# Forces, asynchronicity, and distribution
+# Forces, asynchronicity, and distribution {anchor=false}
 
 Many systems rely on asynchronous communication between their components or are distributed over a network\. Why is dividing a system into modules or classes then not enough in real life?
 

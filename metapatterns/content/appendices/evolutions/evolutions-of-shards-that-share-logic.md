@@ -6,7 +6,7 @@ description = "Intershard communication is helped by a Middleware or is made unn
   priority = 0.3
 +++
 
-# Evolutions of Shards that share logic
+# Evolutions of Shards that share logic {anchor=false}
 
 Other cases are better solved by extracting the logic that manipulates multiple [*shards*]({{< relref "../../basic-metapatterns/shards.md" >}}):
 

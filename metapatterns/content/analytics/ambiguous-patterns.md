@@ -7,7 +7,7 @@ images = ["/diagrams/Conclusion/Ambiguous-Monolith.png"]
   priority = 0.5
 +++
 
-# Ambiguous patterns
+# Ambiguous patterns {anchor=false}
 
 We’ve seen a single pattern come under many names, as happens with [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}), and also one name used for multiple topologies, as with [*Services*]({{< relref "../basic-metapatterns/services.md" >}}), which may [orchestrate each other]({{< relref "../foundations-of-software-architecture/arranging-communication/orchestration.md#mutual-orchestration" >}}), make a [*Pipeline*]({{< relref "../basic-metapatterns/pipeline.md" >}}), or be components of the [*Service\-Oriented Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}) \(*SOA*\)\. On top of that, there are several pattern names that are often believed to be unambiguous while each of them sees conflicting definitions in books or over the web \(thanks to [*Semantic Diffusion*](https://martinfowler.com/bliki/SemanticDiffusion.html) or independent coining of the term by multiple authors\)\. Let’s explore the last kind, which is the most dangerous both for your understanding of other people and for your time wasted in arguments\.
 

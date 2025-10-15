@@ -6,7 +6,7 @@ description = "The glossary of terms used throughout the Architectural Metapatte
   priority = 0.1
 +++
 
-# Glossary
+# Glossary {anchor=false}
 
 *Abstractness*
 : the scope of information that a *concept* operates\. Highly abstract *concepts* describe the *system’s* behavior in less words\.

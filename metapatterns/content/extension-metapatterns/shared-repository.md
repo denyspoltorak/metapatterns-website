@@ -2,12 +2,12 @@
 weight = 7
 title = "Shared Repository"
 description = "A Shared Repository stores all or a part of the system's data. It may provide notifications on data change and atomic transactions."
-images = ["/diagrams/Main/Shared%20Repository.svg"]
+images = ["/diagrams/Main/Shared%20Repository.png"]
 [sitemap]
   priority = 0.8
 +++
 
-# Shared Repository
+# Shared Repository {anchor=false}
 
 <figure>
 <a href="/diagrams/Main/Shared%20Repository.png">

@@ -2,12 +2,12 @@
 weight = 6
 title = "Layered Services"
 description = "Layered Services may orchestrate each other, rely on choreography, or make a CQRS system. The communication between services happens at different layers."
-images = ["/diagrams/Main/Layered%20Services.svg"]
+images = ["/diagrams/Main/Layered%20Services.png"]
 [sitemap]
   priority = 0.8
 +++
 
-# Layered Services
+# Layered Services {anchor=false}
 
 <figure>
 <a href="/diagrams/Main/Layered%20Services.png">

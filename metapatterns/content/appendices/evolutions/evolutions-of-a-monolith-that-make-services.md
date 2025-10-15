@@ -2,12 +2,12 @@
 weight = 3
 title = "Evolutions of a Monolith that make Services"
 description = "A Monolith can be divided into modules, Services, or a Pipeline to support development by multiple teams, improve its codebase, and employ more hardware."
-images = ["/diagrams/Evolutions/Monolith/Monolith_%20Services%20and%20Pipeline.svg"]
+images = ["/diagrams/Evolutions/Monolith/Monolith_%20Services%20and%20Pipeline.png"]
 [sitemap]
   priority = 0.3
 +++
 
-# Evolutions of a Monolith that make Services
+# Evolutions of a Monolith that make Services {anchor=false}
 
 The final major drawback of [*Monolith*]({{< relref "../../basic-metapatterns/monolith.md" >}}) is the cohesiveness of its code\. The rapid start of development begets a major obstacle for project growth: every developer needs to know the entire codebase to be productive and changes made by individual developers overlap and may break each other\. Such distress is usually solved by dividing the project into components along *subdomain boundaries* \(which tend to match [*bounded contexts*](https://martinfowler.com/bliki/BoundedContext.html) \[[DDD]({{< relref "../../appendices/books-referenced.md#ddd" >}})\]\)\. However, that requires a lot of work, and good boundaries and APIs are [hard to design](https://martinfowler.com/bliki/MonolithFirst.html)\. Thus many organizations prefer a slower iterative transition\.
 

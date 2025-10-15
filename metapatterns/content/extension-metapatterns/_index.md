@@ -7,7 +7,7 @@ bookCollapseSection = true
   priority = 0.2
 +++
 
-# Extension metapatterns
+# Extension metapatterns {anchor=false}
 
 These patterns extend *Services*, *Shards*, or even a *Monolith* with a layer that provides an aspect or two of the system’s behavior and often glues other components together\.
 

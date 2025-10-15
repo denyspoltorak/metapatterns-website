@@ -7,7 +7,7 @@ description = "Creative Commons Attribution 4.0 International Public License."
 bookSearchExclude = true
 +++
 
-# Copyright
+# Copyright {anchor=false}
 
 ## Attribution 4\.0 International
 

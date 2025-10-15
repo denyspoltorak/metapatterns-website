@@ -2,12 +2,12 @@
 weight = 6
 title = "Monolith"
 description = "A Monolith is a cohesive system which keeps all of its business logic, generic code and data together. This architecture fits short-lived tiny projects."
-images = ["/diagrams/Main/Monolith.svg"]
+images = ["/diagrams/Main/Monolith.png"]
 [sitemap]
   priority = 0.8
 +++
 
-# Monolith
+# Monolith {anchor=false}
 
 Let’s take a look at the simplest possible [metapattern]({{< relref "../introduction/metapatterns.md" >}}) – *Monolith* – and see what it can teach us\.
 

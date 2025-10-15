@@ -2,12 +2,12 @@
 weight = 9
 title = "Service-Oriented Architecture (SOA)"
 description = "Service-Oriented Architecture is an application of object-oriented design at the system level. It builds a system from small reusable components."
-images = ["/diagrams/Main/Service-Oriented%20Architecture.svg"]
+images = ["/diagrams/Main/Service-Oriented%20Architecture.png"]
 [sitemap]
   priority = 0.8
 +++
 
-# Service\-Oriented Architecture \(SOA\)
+# Service\-Oriented Architecture \(SOA\) {anchor=false}
 
 <figure>
 <a href="/diagrams/Main/Service-Oriented%20Architecture.png">

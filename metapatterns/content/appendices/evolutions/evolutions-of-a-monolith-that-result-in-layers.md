@@ -6,7 +6,7 @@ description = "A Monolith can be split into Layers, or a specialized layer, such
   priority = 0.3
 +++
 
-# Evolutions of a Monolith that result in Layers
+# Evolutions of a Monolith that result in Layers {anchor=false}
 
 Another drawback of [*Monolith*]({{< relref "../../basic-metapatterns/monolith.md" >}}) is its … er … monolithism\. The entire application exposes a single set of qualities and all its parts \(if they ever emerge\) are deployed together\. However, life awards flexibility: parts of a system may benefit from being written in varying languages and styles, deployed with different frequency and amount of testing, sometimes to specific hardware or end users’ devices\. They may need to [vary in security and scalability]({{< relref "../../foundations-of-software-architecture/forces--asynchronicity--and-distribution.md#distribution" >}}) as well\. Enter [*Layers*]({{< relref "../../basic-metapatterns/layers.md" >}}) – a subdivision by the *level of abstractness*:
 

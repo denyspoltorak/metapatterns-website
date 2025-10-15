@@ -6,7 +6,7 @@ description = "A Front Controller may be used to track states of running request
   priority = 0.3
 +++
 
-# Evolutions of a Pipeline
+# Evolutions of a Pipeline {anchor=false}
 
 [*Pipeline*]({{< relref "../../basic-metapatterns/pipeline.md" >}}) [inherits its set of evolutions from *Services*]({{< relref "../../basic-metapatterns/services.md#evolutions" >}})\. Components can be added, split in two, merged or replaced\. Many systems employ a [*Middleware*]({{< relref "../../extension-metapatterns/middleware.md" >}}) \(pub/sub or pipeline framework\), [*Shared Repository*]({{< relref "../../extension-metapatterns/shared-repository.md" >}}) \(which may be a database or file system\) or [*Proxies*]({{< relref "../../extension-metapatterns/proxy.md" >}})\.
 

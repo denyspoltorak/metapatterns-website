@@ -7,7 +7,7 @@ bookCollapseSection = true
   priority = 0.2
 +++
 
-# The heart of software architecture
+# The heart of software architecture {anchor=false}
 
 As the visible world boils down to protons and neutrons which stick together in various combinations, so too does the entirety of software architecture as a field of endeavor grow from an interplay of *cohesion* and *decoupling*\.
 

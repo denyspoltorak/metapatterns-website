@@ -2,12 +2,12 @@
 weight = 5
 title = "Plugins"
 description = "Plugins let a client customize select aspects of a system's behavior. Addons build their application logic on top of whatever the modified system provides."
-images = ["/diagrams/Main/Plugins.svg"]
+images = ["/diagrams/Main/Plugins.png"]
 [sitemap]
   priority = 0.8
 +++
 
-# Plugins
+# Plugins {anchor=false}
 
 <figure>
 <a href="/diagrams/Main/Plugins.png">

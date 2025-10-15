@@ -7,7 +7,7 @@ bookCollapseSection = true
   priority = 0.2
 +++
 
-# Implementation metapatterns
+# Implementation metapatterns {anchor=false}
 
 There are patterns that describe implementation of components:
 

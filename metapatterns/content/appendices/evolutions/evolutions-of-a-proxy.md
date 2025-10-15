@@ -6,7 +6,7 @@ description = "A new system-wide proxy may be stacked with the existing one or y
   priority = 0.3
 +++
 
-# Evolutions of a Proxy
+# Evolutions of a Proxy {anchor=false}
 
 It usually makes little sense to get rid of a [*Proxy*]({{< relref "../../extension-metapatterns/proxy.md" >}}) once it is integrated into a system\. Its only real drawback is a slight increase in latency for user requests which may be helped through creation of [bypass channels]({{< relref "../../extension-metapatterns/proxy.md#half-proxy" >}}) between the clients and a service that needs low latency\. The other drawback of the pattern, the *Proxy*’s being a single point of failure, is countered by deploying multiple instances of the *Proxy*\.
 

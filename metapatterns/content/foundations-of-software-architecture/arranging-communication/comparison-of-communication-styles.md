@@ -2,12 +2,12 @@
 weight = 5
 title = "Comparison of communication styles"
 description = "Orchestration is good when there are many complex scenarios, choreography - for simple highly loaded systems, shared data - for data-centric domains."
-images = ["/diagrams/Communication/Cell-Based%20Architecture.svg"]
+images = ["/diagrams/Communication/Cell-Based%20Architecture.png"]
 [sitemap]
   priority = 0.5
 +++
 
-# Comparison of communication styles
+# Comparison of communication styles {anchor=false}
 
 We have briefly discussed three approaches to communication: orchestration, choreography, and shared data\. Let’s recall when it makes sense to use each of them\.
 

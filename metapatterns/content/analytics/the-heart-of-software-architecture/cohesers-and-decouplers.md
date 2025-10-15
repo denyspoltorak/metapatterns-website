@@ -7,7 +7,7 @@ images = ["/diagrams/Heart/Pain.png"]
   priority = 0.5
 +++
 
-# Cohesers and decouplers
+# Cohesers and decouplers {anchor=false}
 
 Any project carries many constraints \(*forces*\), some of which want for certain parts of its code to be kept together \(*cohesive*\) while others push to have them torn apart \(*decoupled*\)\. Their balance and the resulting optimal architecture is very fluid as each of the forces in action depends on the current circumstances, the project’s history and its expected evolution\.
 

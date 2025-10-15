@@ -7,7 +7,7 @@ images = ["/diagrams/Conclusion/Lifecycle-4.png"]
   priority = 0.5
 +++
 
-# Architecture and product life cycle
+# Architecture and product life cycle {anchor=false}
 
 In my practice, a product’s architecture changes over its lifetime\. For a R&D, when there is nobody with relevant experience on the team, it starts small, gradually gains flexibility through fragmentation, grows and restructures itself according to the ever\-changing domain knowledge and business requirements, then it solidifies as the project matures and dies to performance optimizations and loss of experience as main programmers leave\. In more mundane projects the first stages may be omitted, as little research needs to be done, and oftentimes a project is canceled way before its architecture succumbs under its own weight\. Anyway, let’s observe the full life cycle\.
 

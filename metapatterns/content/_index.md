@@ -1,5 +1,6 @@
 +++
 weight = 1
+layout = "landing"
 title = "The pattern language of software architecture"
 description = "The Metapatterns website is a compendium and classification of architectural patterns based on the assumption that structure determines function."
 bookCollapseSection = true
@@ -7,7 +8,7 @@ bookCollapseSection = true
   priority = 0.5
 +++
 
-# The pattern language of software architecture
+# The pattern language of software architecture {anchor=false}
 
 Patterns of software architecture are all interrelated (*no pattern is an island*). You can rarely make a product in a pure architectural style, and the chances for it to survive undistorted over years are negligible. Software grows iteratively and adapts to its environment.
 
@@ -17,101 +18,518 @@ The content is lavishly illustrated with intuitive NoUML diagrams. It’s concis
 
 *Have a good time!*
 
+<nav class="grid5">
 
-<nav>
+<a class="grid-row" href="{{< relref "introduction/_index.md" >}}">
 
+<h2>Introduction</h2>
 
-### [Introduction]({{< relref "introduction/_index.md" >}})
+</a>
 
-- [About this book]({{< relref "introduction/about-this-book.md" >}})
-- [Metapatterns]({{< relref "introduction/metapatterns.md" >}})
+<a href="{{< relref "introduction/about-this-book.md" >}}">
 
-### [Foundations of software architecture]({{< relref "foundations-of-software-architecture/_index.md" >}})
+About this book
 
-- [Modules and complexity]({{< relref "foundations-of-software-architecture/modules-and-complexity.md" >}})
-- [Forces, asynchronicity, and distribution]({{< relref "foundations-of-software-architecture/forces--asynchronicity--and-distribution.md" >}})
-- [Four kinds of software]({{< relref "foundations-of-software-architecture/four-kinds-of-software.md" >}})
-- [Arranging communication]({{< relref "foundations-of-software-architecture/arranging-communication/_index.md" >}})
-  - [Programming and architectural paradigms]({{< relref "foundations-of-software-architecture/arranging-communication/programming-and-architectural-paradigms.md" >}})
-  - [Orchestration]({{< relref "foundations-of-software-architecture/arranging-communication/orchestration.md" >}})
-  - [Choreography]({{< relref "foundations-of-software-architecture/arranging-communication/choreography.md" >}})
-  - [Shared data]({{< relref "foundations-of-software-architecture/arranging-communication/shared-data.md" >}})
-  - [Comparison of communication styles]({{< relref "foundations-of-software-architecture/arranging-communication/comparison-of-communication-styles.md" >}})
+</a>
 
-### [Basic metapatterns]({{< relref "basic-metapatterns/_index.md" >}})
+<a href="{{< relref "introduction/metapatterns.md" >}}">
 
-- [Monolith]({{< relref "basic-metapatterns/monolith.md" >}})
-- [Shards]({{< relref "basic-metapatterns/shards.md" >}})
-- [Layers]({{< relref "basic-metapatterns/layers.md" >}})
-- [Services]({{< relref "basic-metapatterns/services.md" >}})
-- [Pipeline]({{< relref "basic-metapatterns/pipeline.md" >}})
+Metapatterns
 
-### [Extension metapatterns]({{< relref "extension-metapatterns/_index.md" >}})
+</a>
 
-- [Middleware]({{< relref "extension-metapatterns/middleware.md" >}})
-- [Shared Repository]({{< relref "extension-metapatterns/shared-repository.md" >}})
-- [Proxy]({{< relref "extension-metapatterns/proxy.md" >}})
-- [Orchestrator]({{< relref "extension-metapatterns/orchestrator.md" >}})
-- [Combined Component]({{< relref "extension-metapatterns/combined-component.md" >}})
+<a class="grid-row" href="{{< relref "foundations-of-software-architecture/_index.md" >}}">
 
-### [Fragmented metapatterns]({{< relref "fragmented-metapatterns/_index.md" >}})
+<h2>Foundations of software architecture</h2>
 
-- [Layered Services]({{< relref "fragmented-metapatterns/layered-services.md" >}})
-- [Polyglot Persistence]({{< relref "fragmented-metapatterns/polyglot-persistence.md" >}})
-- [Backends for Frontends (BFF)]({{< relref "fragmented-metapatterns/backends-for-frontends--bff-.md" >}})
-- [Service-Oriented Architecture (SOA)]({{< relref "fragmented-metapatterns/service-oriented-architecture--soa-.md" >}})
-- [Hierarchy]({{< relref "fragmented-metapatterns/hierarchy.md" >}})
+</a>
 
-### [Implementation metapatterns]({{< relref "implementation-metapatterns/_index.md" >}})
+<a href="{{< relref "foundations-of-software-architecture/modules-and-complexity.md" >}}">
 
-- [Plugins]({{< relref "implementation-metapatterns/plugins.md" >}})
-- [Hexagonal Architecture]({{< relref "implementation-metapatterns/hexagonal-architecture.md" >}})
-- [Microkernel]({{< relref "implementation-metapatterns/microkernel.md" >}})
-- [Mesh]({{< relref "implementation-metapatterns/mesh.md" >}})
+<picture>
 
-### [Analytics]({{< relref "analytics/_index.md" >}})
+<source srcset="/diagrams/Web/Complexity.svg" media="(prefers-color-scheme: light)"/>
 
-- [Comparison of architectural patterns]({{< relref "analytics/comparison-of-architectural-patterns/_index.md" >}})
-  - [Sharing functionality or data among services]({{< relref "analytics/comparison-of-architectural-patterns/sharing-functionality-or-data-among-services.md" >}})
-  - [Pipelines in architectural patterns]({{< relref "analytics/comparison-of-architectural-patterns/pipelines-in-architectural-patterns.md" >}})
-  - [Dependency inversion in architectural patterns]({{< relref "analytics/comparison-of-architectural-patterns/dependency-inversion-in-architectural-patterns.md" >}})
-  - [Indirection in commands and queries]({{< relref "analytics/comparison-of-architectural-patterns/indirection-in-commands-and-queries.md" >}})
-- [Ambiguous patterns]({{< relref "analytics/ambiguous-patterns.md" >}})
-- [Architecture and product life cycle]({{< relref "analytics/architecture-and-product-life-cycle.md" >}})
-- [Real-world inspirations for architectural patterns]({{< relref "analytics/real-world-inspirations-for-architectural-patterns.md" >}})
-- [The heart of software architecture]({{< relref "analytics/the-heart-of-software-architecture/_index.md" >}})
-  - [Cohesers and decouplers]({{< relref "analytics/the-heart-of-software-architecture/cohesers-and-decouplers.md" >}})
-  - [Deconstructing patterns]({{< relref "analytics/the-heart-of-software-architecture/deconstructing-patterns.md" >}})
-  - [Choose your own architecture]({{< relref "analytics/the-heart-of-software-architecture/choose-your-own-architecture.md" >}})
+<source srcset="/diagrams/Web/Complexity.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-### [Appendices]({{< relref "appendices/_index.md" >}})
+<img src="/diagrams/Web/Complexity.png" alt="Modules and complexity" loading="lazy" width="542" height="563"/>
 
-- [Acknowledgements]({{< relref "appendices/acknowledgements.md" >}})
-- [Books referenced]({{< relref "appendices/books-referenced.md" >}})
-- [Copyright]({{< relref "appendices/copyright.md" >}})
-- [Disclaimer]({{< relref "appendices/disclaimer.md" >}})
-- [Evolutions]({{< relref "appendices/evolutions/_index.md" >}})
-  - [Evolutions of a Monolith that lead to Shards]({{< relref "appendices/evolutions/evolutions-of-a-monolith-that-lead-to-shards.md" >}})
-  - [Evolutions of a Monolith that result in Layers]({{< relref "appendices/evolutions/evolutions-of-a-monolith-that-result-in-layers.md" >}})
-  - [Evolutions of a Monolith that make Services]({{< relref "appendices/evolutions/evolutions-of-a-monolith-that-make-services.md" >}})
-  - [Evolutions of a Monolith that rely on Plugins]({{< relref "appendices/evolutions/evolutions-of-a-monolith-that-rely-on-plugins.md" >}})
-  - [Evolutions of Shards that share data]({{< relref "appendices/evolutions/evolutions-of-shards-that-share-data.md" >}})
-  - [Evolutions of Shards that share logic]({{< relref "appendices/evolutions/evolutions-of-shards-that-share-logic.md" >}})
-  - [Evolutions of Layers that make more layers]({{< relref "appendices/evolutions/evolutions-of-layers-that-make-more-layers.md" >}})
-  - [Evolutions of Layers that help large projects]({{< relref "appendices/evolutions/evolutions-of-layers-that-help-large-projects.md" >}})
-  - [Evolutions of Layers to improve performance]({{< relref "appendices/evolutions/evolutions-of-layers-to-improve-performance.md" >}})
-  - [Evolutions of Layers to gain flexibility]({{< relref "appendices/evolutions/evolutions-of-layers-to-gain-flexibility.md" >}})
-  - [Evolutions of Services that add or remove services]({{< relref "appendices/evolutions/evolutions-of-services-that-add-or-remove-services.md" >}})
-  - [Evolutions of Services that add layers]({{< relref "appendices/evolutions/evolutions-of-services-that-add-layers.md" >}})
-  - [Evolutions of a Pipeline]({{< relref "appendices/evolutions/evolutions-of-a-pipeline.md" >}})
-  - [Evolutions of a Middleware]({{< relref "appendices/evolutions/evolutions-of-a-middleware.md" >}})
-  - [Evolutions of a Shared Repository]({{< relref "appendices/evolutions/evolutions-of-a-shared-repository.md" >}})
-  - [Evolutions of a Proxy]({{< relref "appendices/evolutions/evolutions-of-a-proxy.md" >}})
-  - [Evolutions of an Orchestrator]({{< relref "appendices/evolutions/evolutions-of-an-orchestrator.md" >}})
-  - [Evolutions of a Combined Component]({{< relref "appendices/evolutions/evolutions-of-a-combined-component.md" >}})
-- [Format of a metapattern]({{< relref "appendices/format-of-a-metapattern.md" >}})
-- [Glossary]({{< relref "appendices/glossary.md" >}})
-- [History of changes]({{< relref "appendices/history-of-changes.md" >}})
-- [Index of patterns]({{< relref "appendices/index-of-patterns.md" >}})
+</picture>
+
+Modules and complexity
+
+</a>
+
+<a href="{{< relref "foundations-of-software-architecture/forces--asynchronicity--and-distribution.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Forces.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Forces.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Forces.png" alt="Forces, asynchronicity, and distribution" loading="lazy" width="409" height="403"/>
+
+</picture>
+
+Forces, asynchronicity, and distribution
+
+</a>
+
+<a href="{{< relref "foundations-of-software-architecture/four-kinds-of-software.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/4Kinds.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/4Kinds.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/4Kinds.png" alt="Four kinds of software" loading="lazy" width="622" height="627"/>
+
+</picture>
+
+Four kinds of software
+
+</a>
+
+<a href="{{< relref "foundations-of-software-architecture/arranging-communication/_index.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Communication.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Communication.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Communication.png" alt="Arranging communication" loading="lazy" width="263" height="263"/>
+
+</picture>
+
+Arranging communication
+
+</a>
+
+<a class="grid-row" href="{{< relref "basic-metapatterns/_index.md" >}}">
+
+<h2>Basic metapatterns</h2>
+
+</a>
+
+<a href="{{< relref "basic-metapatterns/monolith.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Monolith.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Monolith.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Monolith.png" alt="Monolith" loading="lazy" width="363" height="243"/>
+
+</picture>
+
+Monolith
+
+</a>
+
+<a href="{{< relref "basic-metapatterns/shards.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Shards.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Shards.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Shards.png" alt="Shards" loading="lazy" width="366" height="243"/>
+
+</picture>
+
+Shards
+
+</a>
+
+<a href="{{< relref "basic-metapatterns/layers.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Layers.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Layers.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Layers.png" alt="Layers" loading="lazy" width="363" height="245"/>
+
+</picture>
+
+Layers
+
+</a>
+
+<a href="{{< relref "basic-metapatterns/services.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Services.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Services.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Services.png" alt="Services" loading="lazy" width="363" height="246"/>
+
+</picture>
+
+Services
+
+</a>
+
+<a href="{{< relref "basic-metapatterns/pipeline.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Pipeline.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Pipeline.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Pipeline.png" alt="Pipeline" loading="lazy" width="364" height="243"/>
+
+</picture>
+
+Pipeline
+
+</a>
+
+<a class="grid-row" href="{{< relref "extension-metapatterns/_index.md" >}}">
+
+<h2>Extension metapatterns</h2>
+
+</a>
+
+<a href="{{< relref "extension-metapatterns/middleware.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Middleware.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Middleware.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Middleware.png" alt="Middleware" loading="lazy" width="363" height="304"/>
+
+</picture>
+
+Middleware
+
+</a>
+
+<a href="{{< relref "extension-metapatterns/shared-repository.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Shared%20Repository.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Shared%20Repository.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Shared%20Repository.png" alt="Shared Repository" loading="lazy" width="363" height="304"/>
+
+</picture>
+
+Shared Repository
+
+</a>
+
+<a href="{{< relref "extension-metapatterns/proxy.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Proxy.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Proxy.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Proxy.png" alt="Proxy" loading="lazy" width="363" height="303"/>
+
+</picture>
+
+Proxy
+
+</a>
+
+<a href="{{< relref "extension-metapatterns/orchestrator.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Orchestrator.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Orchestrator.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Orchestrator.png" alt="Orchestrator" loading="lazy" width="363" height="303"/>
+
+</picture>
+
+Orchestrator
+
+</a>
+
+<a href="{{< relref "extension-metapatterns/combined-component.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Combined%20Component.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Combined%20Component.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Combined%20Component.png" alt="Combined Component" loading="lazy" width="363" height="304"/>
+
+</picture>
+
+Combined Component
+
+</a>
+
+<a class="grid-row" href="{{< relref "fragmented-metapatterns/_index.md" >}}">
+
+<h2>Fragmented metapatterns</h2>
+
+</a>
+
+<a href="{{< relref "fragmented-metapatterns/layered-services.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Layered%20Services.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Layered%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Layered%20Services.png" alt="Layered Services" loading="lazy" width="443" height="344"/>
+
+</picture>
+
+Layered Services
+
+</a>
+
+<a href="{{< relref "fragmented-metapatterns/polyglot-persistence.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Polyglot%20Persistence.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Polyglot%20Persistence.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Polyglot%20Persistence.png" alt="Polyglot Persistence" loading="lazy" width="403" height="341"/>
+
+</picture>
+
+Polyglot Persistence
+
+</a>
+
+<a href="{{< relref "fragmented-metapatterns/backends-for-frontends--bff-.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Backends%20for%20Frontends.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Backends%20for%20Frontends.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Backends%20for%20Frontends.png" alt="Backends for Frontends (BFF)" loading="lazy" width="403" height="343"/>
+
+</picture>
+
+Backends for Frontends
+
+</a>
+
+<a href="{{< relref "fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Service-Oriented%20Architecture.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Service-Oriented%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture (SOA)" loading="lazy" width="403" height="343"/>
+
+</picture>
+
+Service-Oriented Architecture
+
+</a>
+
+<a href="{{< relref "fragmented-metapatterns/hierarchy.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Hierarchy.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Hierarchy.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Hierarchy.png" alt="Hierarchy" loading="lazy" width="403" height="343"/>
+
+</picture>
+
+Hierarchy
+
+</a>
+
+<a class="grid-row" href="{{< relref "implementation-metapatterns/_index.md" >}}">
+
+<h2>Implementation metapatterns</h2>
+
+</a>
+
+<a href="{{< relref "implementation-metapatterns/plugins.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Plugins.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Plugins.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Plugins.png" alt="Plugins" loading="lazy" width="303" height="343"/>
+
+</picture>
+
+Plugins
+
+</a>
+
+<a href="{{< relref "implementation-metapatterns/hexagonal-architecture.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Hexagonal%20Architecture.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Hexagonal%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" loading="lazy" width="303" height="344"/>
+
+</picture>
+
+Hexagonal Architecture
+
+</a>
+
+<a href="{{< relref "implementation-metapatterns/microkernel.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Microkernel.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Microkernel.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Microkernel.png" alt="Microkernel" loading="lazy" width="303" height="343"/>
+
+</picture>
+
+Microkernel
+
+</a>
+
+<a href="{{< relref "implementation-metapatterns/mesh.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Mesh.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Mesh.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Mesh.png" alt="Mesh" loading="lazy" width="303" height="343"/>
+
+</picture>
+
+Mesh
+
+</a>
+
+<a class="grid-row" href="{{< relref "analytics/_index.md" >}}">
+
+<h2>Analytics</h2>
+
+</a>
+
+<a href="{{< relref "analytics/comparison-of-architectural-patterns/_index.md" >}}">
+
+Comparison of architectural patterns
+
+</a>
+
+<a href="{{< relref "analytics/ambiguous-patterns.md" >}}">
+
+Ambiguous patterns
+
+</a>
+
+<a href="{{< relref "analytics/architecture-and-product-life-cycle.md" >}}">
+
+Architecture and product life cycle
+
+</a>
+
+<a href="{{< relref "analytics/real-world-inspirations-for-architectural-patterns.md" >}}">
+
+Real-world inspirations for architectural patterns
+
+</a>
+
+<a href="{{< relref "analytics/the-heart-of-software-architecture/_index.md" >}}">
+
+The heart of software architecture
+
+</a>
+
+<a class="grid-row" href="{{< relref "appendices/_index.md" >}}">
+
+<h2>Appendices</h2>
+
+</a>
+
+<a href="{{< relref "appendices/acknowledgements.md" >}}">
+
+Acknowledgements
+
+</a>
+
+<a href="{{< relref "appendices/books-referenced.md" >}}">
+
+Books referenced
+
+</a>
+
+<a href="{{< relref "appendices/copyright.md" >}}">
+
+Copyright
+
+</a>
+
+<a href="{{< relref "appendices/disclaimer.md" >}}">
+
+Disclaimer
+
+</a>
+
+<a href="{{< relref "appendices/evolutions/_index.md" >}}">
+
+Evolutions
+
+</a>
+
+<a href="{{< relref "appendices/format-of-a-metapattern.md" >}}">
+
+Format of a metapattern
+
+</a>
+
+<a href="{{< relref "appendices/glossary.md" >}}">
+
+Glossary
+
+</a>
+
+<a href="{{< relref "appendices/history-of-changes.md" >}}">
+
+History of changes
+
+</a>
+
+<a href="{{< relref "appendices/index-of-patterns.md" >}}">
+
+Index of patterns
+
+</a>
 
 </nav>
