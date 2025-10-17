@@ -302,7 +302,7 @@ Layered Services
 
 <source srcset="/diagrams/Web/Polyglot%20Persistence.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Polyglot%20Persistence.png" alt="" loading="lazy" width="403" height="341"/>
+<img src="/diagrams/Web/Polyglot%20Persistence.png" alt="" loading="lazy" width="443" height="341"/>
 
 </picture>
 
@@ -318,7 +318,7 @@ Polyglot Persistence
 
 <source srcset="/diagrams/Web/Backends%20for%20Frontends.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Backends%20for%20Frontends.png" alt="" loading="lazy" width="403" height="343"/>
+<img src="/diagrams/Web/Backends%20for%20Frontends.png" alt="" loading="lazy" width="443" height="343"/>
 
 </picture>
 
@@ -334,7 +334,7 @@ Backends for Frontends
 
 <source srcset="/diagrams/Web/Service-Oriented%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Service-Oriented%20Architecture.png" alt="" loading="lazy" width="403" height="343"/>
+<img src="/diagrams/Web/Service-Oriented%20Architecture.png" alt="" loading="lazy" width="443" height="343"/>
 
 </picture>
 
@@ -350,7 +350,7 @@ Service-Oriented Architecture
 
 <source srcset="/diagrams/Web/Hierarchy.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Hierarchy.png" alt="" loading="lazy" width="403" height="343"/>
+<img src="/diagrams/Web/Hierarchy.png" alt="" loading="lazy" width="443" height="343"/>
 
 </picture>
 
@@ -494,7 +494,7 @@ Disclaimer
 
 </a>
 
-<a href="{{< relref "appendices/evolutions/_index.md" >}}">
+<a href="{{< relref "appendices/evolutions-of-architectures/_index.md" >}}">
 
 Evolutions of architectures
 

@@ -212,7 +212,7 @@ The four layers of the *Space\-Based Architecture*’s *Middleware* are reasonab
 
 ## Evolutions
 
-The patterns that involve [*orchestration*]({{< relref "../foundations-of-software-architecture/arranging-communication/orchestration.md" >}}) \(*API Gateway*, *Event Mediator* and *Enterprise Service Bus*\) may allow for most of the evolutions of [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) by deploying multiple instances of the *Combined Component* which differ in orchestration logic\. There is also one [unique evolution]({{< relref "../appendices/evolutions/evolutions-of-a-combined-component.md" >}}):
+The patterns that involve [*orchestration*]({{< relref "../foundations-of-software-architecture/arranging-communication/orchestration.md" >}}) \(*API Gateway*, *Event Mediator* and *Enterprise Service Bus*\) may allow for most of the evolutions of [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) by deploying multiple instances of the *Combined Component* which differ in orchestration logic\. There is also one [unique evolution]({{< relref "../appendices/evolutions-of-architectures/evolutions-of-a-combined-component.md" >}}):
 
 - Replace the *Combined Component* with several specialized ones
 

@@ -227,7 +227,7 @@ A [*nanoservice*]({{< relref "../basic-metapatterns/services.md#single-function-
 
 *Pipeline* [inherits its set of evolutions from *Services*]({{< relref "../basic-metapatterns/services.md#evolutions" >}})\. Filters can be added, split in two, merged, or replaced\. Many systems employ a [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) \(a pub/sub or pipeline framework\), a [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) \(which may be a database or a file system\), or [*Proxies*]({{< relref "../extension-metapatterns/proxy.md" >}})\.
 
-There are a couple of [pipeline\-specific evolutions]({{< relref "../appendices/evolutions/evolutions-of-a-pipeline.md" >}}), with more details provided in [Appendix E]({{< relref "../appendices/evolutions/_index.md" >}}):
+There are a couple of [pipeline\-specific evolutions]({{< relref "../appendices/evolutions-of-architectures/evolutions-of-a-pipeline.md" >}}), with more details provided in [Appendix E]({{< relref "../appendices/evolutions-of-architectures/_index.md" >}}):
 
 - The first service of the *Pipeline* can be promoted to a [*Front Controller*]({{< relref "../extension-metapatterns/combined-component.md#front-controller" >}}) \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\] which tracks the status updates for every request it handles\.
 

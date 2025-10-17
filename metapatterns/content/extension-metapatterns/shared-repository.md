@@ -140,7 +140,7 @@ Still, the DAL does not remove shared dependencies and only adds some flexibilit
 
 *Shared Repository* is a sibling of [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}})\. While a *Middleware* assists direct communication between services \(*shared\-nothing* messaging\), a *Shared Repository* grants them indirect communication through access to an external state \(similar to *shared memory*\) which usually stores all the data for the domain\.
 
-A *Shared Repository* may provide a generic interface \(e\.g\. SQL\) or a custom API \(with a domain\-aware [*Adapter*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) / [*ORM*](https://en.wikipedia.org/wiki/Object–relational_mapping) for the database\)\. The *repository* can be anything ranging from a trivial OS file system or a memory block accessible from all the components to an ordinary database to a [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}})\-based, distributed [*tuple space*](https://en.wikipedia.org/wiki/Tuple_space):
+A *Shared Repository* may provide a generic interface \(e\.g\. SQL\) or a custom API \(with a domain\-aware [*Adapter*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) / [*ORM*](https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping) for the database\)\. The *repository* can be anything ranging from a trivial OS file system or a memory block accessible from all the components to an ordinary database to a [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}})\-based, distributed [*tuple space*](https://en.wikipedia.org/wiki/Tuple_space):
 
 ### Shared Database, Integration Database, Data Domain, Database of Service\-Based Architecture
 
@@ -267,7 +267,7 @@ A [*choreographed*]({{< relref "../foundations-of-software-architecture/arrangin
 
 ## Evolutions
 
-Once a database appears, it is unlikely to go away\. I see the [following evolutions]({{< relref "../appendices/evolutions/evolutions-of-a-shared-repository.md" >}}) to improve performance of the data layer:
+Once a database appears, it is unlikely to go away\. I see the [following evolutions]({{< relref "../appendices/evolutions-of-architectures/evolutions-of-a-shared-repository.md" >}}) to improve performance of the data layer:
 
 - [Shard]({{< relref "../basic-metapatterns/shards.md" >}}) the database\.
 

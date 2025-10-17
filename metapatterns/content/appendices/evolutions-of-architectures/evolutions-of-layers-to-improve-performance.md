@@ -9,7 +9,7 @@ images = ["/diagrams/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.
 
 # Evolutions of Layers to improve performance {anchor=false}
 
-There are several ways to improve the performance of a [*layered system*]({{< relref "../../basic-metapatterns/layers.md" >}})\. One we have [already discussed]({{< relref "../../appendices/evolutions/evolutions-of-shards-that-share-data.md#use-space-based-architecture" >}}) for [*Shards*]({{< relref "../../basic-metapatterns/shards.md" >}}):
+There are several ways to improve the performance of a [*layered system*]({{< relref "../../basic-metapatterns/layers.md" >}})\. One we have [already discussed]({{< relref "../../appendices/evolutions-of-architectures/evolutions-of-shards-that-share-data.md#use-space-based-architecture" >}}) for [*Shards*]({{< relref "../../basic-metapatterns/shards.md" >}}):
 
 - [*Space\-Based Architecture*]({{< relref "../../implementation-metapatterns/mesh.md#space-based-architecture" >}}) co\-locates the database and business logic and scales both dynamically\.
 

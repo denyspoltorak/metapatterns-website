@@ -29,7 +29,7 @@ The next [four parts]({{< relref "../basic-metapatterns/_index.md" >}}) iterate 
 
 The [sixth part]({{< relref "../analytics/_index.md" >}}) of the book is analytics – the fruits of the pattern classification from the earlier parts\.
 
-Finally, there are appendices\. [Appendix B]({{< relref "../appendices/books-referenced.md" >}}) is the list of the books referenced, [Appendix E]({{< relref "../appendices/evolutions/_index.md" >}}) contains detailed evolutions of patterns and [Appendix I]({{< relref "../appendices/index-of-patterns.md" >}}) is the index of the patterns found in the book\.
+Finally, there are appendices\. [Appendix B]({{< relref "../appendices/books-referenced.md" >}}) is the list of the books referenced, [Appendix E]({{< relref "../appendices/evolutions-of-architectures/_index.md" >}}) contains detailed evolutions of patterns and [Appendix I]({{< relref "../appendices/index-of-patterns.md" >}}) is the index of the patterns found in the book\.
 
 ## Diagrams
 

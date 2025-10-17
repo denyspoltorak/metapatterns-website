@@ -9,7 +9,7 @@ bookCollapseSection = true
 
 # Extension metapatterns {anchor=false}
 
-These patterns extend *Services*, *Shards*, or even a *Monolith* with a layer that provides an aspect or two of the system’s behavior and often glues other components together\.
+These patterns extend [*Services*]({{< relref "../basic-metapatterns/services.md" >}}), [*Shards*]({{< relref "../basic-metapatterns/shards.md" >}}), or even a [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) with a layer that provides an aspect or two of the system’s behavior and often glues other components together\.
 
 ### [Middleware]({{< relref "../extension-metapatterns/middleware.md" >}})
 
@@ -23,7 +23,7 @@ These patterns extend *Services*, *Shards*, or even a *Monolith* with a layer th
 </a>
 </figure>
 
-*Middleware* is a layer that implements communication between instances of the system’s components and it may also manage the instances\. This way each instance is relieved of the need to track the other instances which it accesses\.
+[*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) is a layer that implements communication between instances of the system’s components and it may also manage the instances\. This way each instance is relieved of the need to track the other instances which it accesses\.
 
 *<ins>Includes</ins>*: \(Message\) Broker and Deployment Manager\.
 
@@ -39,7 +39,7 @@ These patterns extend *Services*, *Shards*, or even a *Monolith* with a layer th
 </a>
 </figure>
 
-A *Shared Repository* stores the system’s data, maintains its integrity through transactions, and may support subscriptions to changes in subsets of the data\. That lets other system components concentrate on implementing the business logic\.
+A [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) stores the system’s data, maintains its integrity through transactions, and may support subscriptions to changes in subsets of the data\. That lets other system components concentrate on implementing the business logic\.
 
 *<ins>Includes</ins>*: Shared Database, Blackboard, Data Grid of Space\-Based Architecture, Shared Memory, and Shared File System\.
 
@@ -55,7 +55,7 @@ A *Shared Repository* stores the system’s data, maintains its integrity throug
 </a>
 </figure>
 
-A *Proxy* mediates between a system and its clients, transparently taking care of some generic functionality\.
+A [*Proxy*]({{< relref "../extension-metapatterns/proxy.md" >}}) mediates between a system and its clients, transparently taking care of some generic functionality\.
 
 *<ins>Includes</ins>*: Full Proxy and Half\-Proxy; Sidecar and Ambassador; Firewall, Response Cache, Load Balancer, Reverse Proxy and various Adapters, e\.g\. Anticorruption Layer, Open Host Service, XXX Abstraction Layers and Repository\.
 
@@ -71,12 +71,12 @@ A *Proxy* mediates between a system and its clients, transparently taking care o
 </a>
 </figure>
 
-An *Orchestrator* implements use cases as sequences of calls to the underlying components which are usually left unaware of each other’s existence\.
+An [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) implements use cases as sequences of calls to the underlying components which are usually left unaware of each other’s existence\.
 
 *<ins>Includes</ins>*: Workflow Owner, Application Layer, Facade, Mediator; API Composer, Scatter\-Gather, MapReduce, Process Manager, Saga Execution Component, and Integration \(Micro\-\)Service\.
 
 ### [Combined Component]({{< relref "../extension-metapatterns/combined-component.md" >}})
 
-Several patterns combine the functionality of two or more extension layers\.
+Several patterns [combine the functionality]({{< relref "../extension-metapatterns/combined-component.md" >}}) of two or more extension layers\.
 
 *<ins>Includes</ins>*: Message Bus, API Gateway, Event Mediator, Enterprise Service Bus, Service Mesh, Middleware of Space\-Based Architecture, and Shared Event Store\.

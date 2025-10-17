@@ -314,9 +314,9 @@ Each phase lasts until every object in the system completes its tasks scheduled 
 
 ## Evolutions
 
-Every architecture has drawbacks and tends to evolve in a variety of ways to address them\. Below is a brief summary of common evolutions of *Monolith* with more information available in [Appendix E]({{< relref "../appendices/evolutions/_index.md" >}})\.
+Every architecture has drawbacks and tends to evolve in a variety of ways to address them\. Below is a brief summary of common evolutions of *Monolith* with more information available in [Appendix E]({{< relref "../appendices/evolutions-of-architectures/_index.md" >}})\.
 
-### [Evolutions to Shards]({{< relref "../appendices/evolutions/evolutions-of-a-monolith-that-lead-to-shards.md" >}})
+### [Evolutions to Shards]({{< relref "../appendices/evolutions-of-architectures/evolutions-of-a-monolith-that-lead-to-shards.md" >}})
 
 One of the main drawbacks of monolithic architecture is its lack of scalability – a single running instance of your system may not be enough to serve all the clients no matter how many resources you add in\. If that is the case, you should consider [*Shards*]({{< relref "../basic-metapatterns/shards.md" >}}) – *multiple instances* of a *Monolith*\. There are following options:
 
@@ -372,7 +372,7 @@ One of the main drawbacks of monolithic architecture is its lack of scalability 
 </a>
 </figure>
 
-### [Evolutions to Layers]({{< relref "../appendices/evolutions/evolutions-of-a-monolith-that-result-in-layers.md" >}})
+### [Evolutions to Layers]({{< relref "../appendices/evolutions-of-architectures/evolutions-of-a-monolith-that-result-in-layers.md" >}})
 
 Another drawback of *Monolith* is its… er… monolithism\. The entire application exposes a single set of qualities and all its parts \(if they ever emerge\) are deployed together\. However, life awards flexibility: parts of a system may benefit from being written in varying languages and styles, deployed with different frequency and amount of testing, sometimes to specific hardware or end users’ devices\. They may need to [vary in security and scalability]({{< relref "../foundations-of-software-architecture/forces--asynchronicity--and-distribution.md#distribution" >}}) as well\. Enter [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}) – a subdivision by the *level of abstractness*:
 
@@ -428,7 +428,7 @@ Another drawback of *Monolith* is its… er… monolithism\. The entire applicat
 </a>
 </figure>
 
-### [Evolutions to Services]({{< relref "../appendices/evolutions/evolutions-of-a-monolith-that-make-services.md" >}})
+### [Evolutions to Services]({{< relref "../appendices/evolutions-of-architectures/evolutions-of-a-monolith-that-make-services.md" >}})
 
 The final major drawback of *Monolith* is the cohesiveness of its code\. The rapid start of development with *Monolith* begets a major obstacle as the project grows: every developer needs to know the entire codebase to be productive while changes made by individual developers overlap and may break each other\. Such distress is usually solved by dividing the project into modules along *subdomain boundaries* \(which usually match [bounded contexts](https://martinfowler.com/bliki/BoundedContext.html)\)\. However, that requires much work, and good boundaries and APIs are hard to design\. Thus many organizations prefer a slower iterative transition\.
 
@@ -471,7 +471,7 @@ The final major drawback of *Monolith* is the cohesiveness of its code\. The rap
 </a>
 </figure>
 
-### [Evolutions with Plugins]({{< relref "../appendices/evolutions/evolutions-of-a-monolith-that-rely-on-plugins.md" >}})
+### [Evolutions with Plugins]({{< relref "../appendices/evolutions-of-architectures/evolutions-of-a-monolith-that-rely-on-plugins.md" >}})
 
 The last group of evolutions does not really change the monolithic nature of the application\. Instead, its goal is to improve the customizability of the *Monolith*:
 

@@ -10,7 +10,7 @@ description = "Intershard communication is helped by a Middleware or is made unn
 
 Other cases are better solved by extracting the logic that manipulates multiple [*shards*]({{< relref "../../basic-metapatterns/shards.md" >}}):
 
-- Splitting a [*service*]({{< relref "../../basic-metapatterns/services.md" >}}) \(as discussed [above]({{< relref "../../appendices/evolutions/evolutions-of-shards-that-share-data.md#split-a-service-with-the-coupled-data" >}})\) yields a component that represents both shared data and shared logic\.
+- Splitting a [*service*]({{< relref "../../basic-metapatterns/services.md" >}}) \(as discussed [above]({{< relref "../../appendices/evolutions-of-architectures/evolutions-of-shards-that-share-data.md#split-a-service-with-the-coupled-data" >}})\) yields a component that represents both shared data and shared logic\.
 - Adding a [*Middleware*]({{< relref "../../extension-metapatterns/middleware.md" >}}) lets the shards communicate with each other without keeping direct connections\. It also may do housekeeping: error recovery, replication, and scaling\.
 - A [*Sharding Proxy*]({{< relref "../../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) hides the existence of the shards from clients\.
 - An [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) calls \(or messages\) multiple shards to serve a user request\. That relieves the shards of the need to coordinate their states and actions by themselves\.
@@ -119,4 +119,4 @@ When a high\-level scenario uses multiple shards \([*Scatter\-Gather* and *MapRe
 
 - [*Shard* or *replicate* the *Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md#scaled" >}}) to support higher load and to remain online if it fails\.
 - *Persist* the *Orchestrator* \(give it a dedicated database\) to make sure that it does not leave half\-committed transactions upon failure\.
-- *Divide* the *Orchestrator* [into *Backends for Frontends*]({{< relref "../../appendices/evolutions/evolutions-of-layers-to-gain-flexibility.md#divide-the-orchestration-layer-into-backends-for-frontends" >}}) or a [*SOA*\-style layer]({{< relref "../../extension-metapatterns/orchestrator.md#a-service-per-use-case-soa-style" >}}) if you have multiple kinds of clients or workflows, correspondingly\.
+- *Divide* the *Orchestrator* [into *Backends for Frontends*]({{< relref "../../appendices/evolutions-of-architectures/evolutions-of-layers-to-gain-flexibility.md#divide-the-orchestration-layer-into-backends-for-frontends" >}}) or a [*SOA*\-style layer]({{< relref "../../extension-metapatterns/orchestrator.md#a-service-per-use-case-soa-style" >}}) if you have multiple kinds of clients or workflows, correspondingly\.
