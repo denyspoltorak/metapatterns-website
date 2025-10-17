@@ -15,7 +15,7 @@ Architectural patterns manifest several ways of sharing functionality or data am
 
 The simplest way to use a shared functionality \(aspect\) is to call the module which implements it directly\. This is possible if the users and the provider of the aspect reside in the same process, as in a [*Monolith*]({{< relref "../../basic-metapatterns/monolith.md" >}}) or module\-based \(single application\) [*Layers*]({{< relref "../../basic-metapatterns/layers.md" >}})\.
 
-Sharing data inside a process is similar, but usually requires some kind of protection, like an [RW lock](https://en.wikipedia.org/wiki/Readers–writer_lock), around it to serialize access from multiple threads\.
+Sharing data inside a process is similar, but usually requires some kind of protection, like an [RW lock](https://en.wikipedia.org/wiki/Readers%E2%80%93writer_lock), around it to serialize access from multiple threads\.
 
 <figure>
 <a href="/diagrams/Conclusion/Sharing-DirectCall.png">

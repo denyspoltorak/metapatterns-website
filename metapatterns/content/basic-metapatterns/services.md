@@ -526,9 +526,9 @@ The whole system of kernel, drivers, and user applications comprises the [*Micro
 
 ## Evolutions
 
-*Services* are subject to a wide array of evolutions, just like the other basic metapatterns\. These are summarized below and detailed in [Appendix E]({{< relref "../appendices/evolutions/_index.md" >}})\.
+*Services* are subject to a wide array of evolutions, just like the other basic metapatterns\. These are summarized below and detailed in [Appendix E]({{< relref "../appendices/evolutions-of-architectures/_index.md" >}})\.
 
-### [Evolutions that add or remove services]({{< relref "../appendices/evolutions/evolutions-of-services-that-add-or-remove-services.md" >}})
+### [Evolutions that add or remove services]({{< relref "../appendices/evolutions-of-architectures/evolutions-of-services-that-add-or-remove-services.md" >}})
 
 *Services* work well when each service matches a subdomain and is developed by a single team\. If those premises change, you’ll need to restructure the services:
 
@@ -558,7 +558,7 @@ The whole system of kernel, drivers, and user applications comprises the [*Micro
 </a>
 </figure>
 
-### [Evolutions that add layers]({{< relref "../appendices/evolutions/evolutions-of-services-that-add-layers.md" >}})
+### [Evolutions that add layers]({{< relref "../appendices/evolutions-of-architectures/evolutions-of-services-that-add-layers.md" >}})
 
 The most common modifications of a system of *Services* involve supplementary system\-wide layers which compensate for the inability of the services to [share]({{< relref "../analytics/comparison-of-architectural-patterns/sharing-functionality-or-data-among-services.md" >}}) anything among themselves:
 

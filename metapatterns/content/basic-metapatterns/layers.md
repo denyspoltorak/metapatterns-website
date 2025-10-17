@@ -371,9 +371,9 @@ An example of such a system can be found in an old mobile phone or a digital cam
 
 ## Evolutions
 
-Layers are not without drawbacks which may force your system to evolve\. A summary of such evolutions is given below while more details can be found in [Appendix E]({{< relref "../appendices/evolutions/_index.md" >}})\.
+Layers are not without drawbacks which may force your system to evolve\. A summary of such evolutions is given below while more details can be found in [Appendix E]({{< relref "../appendices/evolutions-of-architectures/_index.md" >}})\.
 
-### [Evolutions that make more layers]({{< relref "../appendices/evolutions/evolutions-of-layers-that-make-more-layers.md" >}})
+### [Evolutions that make more layers]({{< relref "../appendices/evolutions-of-architectures/evolutions-of-layers-that-make-more-layers.md" >}})
 
 Not all the layered architectures are equally layered\. A [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) with a [*Proxy*]({{< relref "../extension-metapatterns/proxy.md" >}}) or database has already stepped into the realm of *Layers* but is far from reaping all its benefits\. Such a system may continue its course in a few ways that were previously [discussed for *Monolith*]({{< relref "../basic-metapatterns/monolith.md#evolutions-to-layers" >}}):
 
@@ -407,7 +407,7 @@ It is also common to:
 </a>
 </figure>
 
-### [Evolutions that help large projects]({{< relref "../appendices/evolutions/evolutions-of-layers-that-help-large-projects.md" >}})
+### [Evolutions that help large projects]({{< relref "../appendices/evolutions-of-architectures/evolutions-of-layers-that-help-large-projects.md" >}})
 
 The main drawback \(and benefit as well\) of *Layers* is that much or all of the business logic is kept together in one or two components\. That allows for easy debugging and fast development in the initial stages of the project but slows down and complicates work as the project grows in size \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\]\. The only way for a growing project to survive and continue evolving at a reasonable speed is to divide its business logic into several smaller, [thus less complex]({{< relref "../foundations-of-software-architecture/modules-and-complexity.md" >}}), components that match subdomains \(*bounded contexts* \[[DDD](https://docs.google.com/document/d/1hzBn-RzzNDcArAWcvXaXgw2nl6O_ryDKE51Xve18zOs/edit?pli=1&tab=t.0#bookmark=kix.zhw27orifw3i)\]\)\. There are several options for such a change, with their applicability depending on the domain:
 
@@ -450,7 +450,7 @@ The main drawback \(and benefit as well\) of *Layers* is that much or all of the
 </a>
 </figure>
 
-### [Evolutions that improve performance]({{< relref "../appendices/evolutions/evolutions-of-layers-to-improve-performance.md" >}})
+### [Evolutions that improve performance]({{< relref "../appendices/evolutions-of-architectures/evolutions-of-layers-to-improve-performance.md" >}})
 
 There are several ways to improve the performance of a layered system\. One we have [already discussed for *Shards*]({{< relref "../basic-metapatterns/shards.md#evolutions-that-share-data" >}}):
 
@@ -508,7 +508,7 @@ Others are new:
 </a>
 </figure>
 
-### [Evolutions to gain flexibility]({{< relref "../appendices/evolutions/evolutions-of-layers-to-gain-flexibility.md" >}})
+### [Evolutions to gain flexibility]({{< relref "../appendices/evolutions-of-architectures/evolutions-of-layers-to-gain-flexibility.md" >}})
 
 The last group of evolutions to consider is about making the system more adaptable\. We have already discussed the following [evolutions for *Monolith*]({{< relref "../basic-metapatterns/monolith.md#evolutions-with-plugins" >}}):
 

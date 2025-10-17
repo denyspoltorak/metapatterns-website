@@ -9,7 +9,7 @@ bookCollapseSection = true
 
 # Analytics {anchor=false}
 
-This part is dedicated to analyzing the architectural metapatterns, for if this book’s taxonomy of patterns is a step forward from the state of the art, it should bear fruits for us to pick\.
+This part is dedicated to analyzing the architectural [metapatterns]({{< relref "../introduction/metapatterns.md" >}}), for if this book’s taxonomy of patterns is a step forward from the state of the art, it should bear fruits for us to pick\.
 
 I had no time to research every idea collected while the book was being written and its individual chapters published for feedback\. A few of those pending topics, which may make additional chapters in the future, are listed below:
 

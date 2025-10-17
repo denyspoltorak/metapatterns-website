@@ -23,7 +23,7 @@ There are patterns that describe implementation of components:
 </a>
 </figure>
 
-The *Plugins* pattern is about separating a system’s main logic from the customizable details of its behavior\. That allows for the same codebase to be used for multiple flavors or customers\.
+The [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) pattern is about separating a system’s main logic from the customizable details of its behavior\. That allows for the same codebase to be used for multiple flavors or customers\.
 
 *<ins>Includes</ins>*: Plug\-In Architecture, Addons, Strategy, Hooks\.
 
@@ -39,7 +39,7 @@ The *Plugins* pattern is about separating a system’s main logic from the custo
 </a>
 </figure>
 
-*Hexagonal Architecture* is a specialization of *Plugins* where every external dependency is isolated behind an *Adapter*, making it easy to update or replace third\-party components\.
+[*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) is a specialization of [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) where every external dependency is isolated behind an [*Adapter*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}), making it easy to update or replace third\-party components\.
 
 *<ins>Includes</ins>*: Ports and Adapters, Onion Architecture, Clean Architecture; Model\-View\-Presenter \(MVP\), Model\-View\-ViewModel \(MVVM\), Model\-View\-Controller \(MVC\), and Action\-Domain\-Responder \(ADR\)\.
 
@@ -55,7 +55,7 @@ The *Plugins* pattern is about separating a system’s main logic from the custo
 </a>
 </figure>
 
-This is another derivation of *Plugins*, with a rudimentary *core* component which mediates between resource consumers \(*applications*\) and resource *providers*\. The *Microkernel* is a *Middleware* to the *applications* and an *Orchestrator* to the *providers*\.
+[*Microkernel*]({{< relref "../implementation-metapatterns/microkernel.md" >}}) is another derivation of [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}), with a rudimentary *core* component which mediates between resource *consumers* \(*applications*\) and resource *providers*\. The microkernel is a [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) to the *applications* and an [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) to the *providers*\.
 
 *<ins>Includes</ins>*: operating system, software framework, virtualizer, distributed runtime, interpreter, configuration file, Saga Engine, AUTOSAR Classic Platform\.
 
@@ -71,6 +71,6 @@ This is another derivation of *Plugins*, with a rudimentary *core* component whi
 </a>
 </figure>
 
-A *Mesh* consists of intercommunicating shards, each of which may host an application\. The shards coalesce into a fault\-tolerant distributed *Middleware*\.
+A [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}}) consists of intercommunicating shards, each of which may host an application\. The shards coalesce into a fault\-tolerant distributed [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}})\.
 
 *<ins>Includes</ins>*: grid; peer\-to\-peer networks, Leaf\-Spine Architecture, Actors, Service Mesh, Space\-Based Architecture\.

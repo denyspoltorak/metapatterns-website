@@ -9,7 +9,7 @@ images = ["/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%20
 
 # Evolutions of Layers to gain flexibility {anchor=false}
 
-The last group of evolutions to consider is about making the system more adaptable\. We have [already discussed]({{< relref "../../appendices/evolutions/evolutions-of-a-monolith-that-rely-on-plugins.md" >}}) the following evolutions for [*Monolith*]({{< relref "../../basic-metapatterns/monolith.md" >}}):
+The last group of evolutions to consider is about making the system more adaptable\. We have [already discussed]({{< relref "../../appendices/evolutions-of-architectures/evolutions-of-a-monolith-that-rely-on-plugins.md" >}}) the following evolutions for [*Monolith*]({{< relref "../../basic-metapatterns/monolith.md" >}}):
 
 - The behavior of the system may be modified through [*Plugins*]({{< relref "../../implementation-metapatterns/plugins.md" >}})\.
 - [*Hexagonal Architecture*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md" >}}) protects the business logic from dependencies on libraries and databases\.

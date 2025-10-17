@@ -9,7 +9,7 @@ bookCollapseSection = true
 
 # Comparison of architectural patterns {anchor=false}
 
-This chapter is a compilation of small sections each of which examines one aspect of the architectural patterns included in this book\. It shows the value of having a list of metapatterns to iterate over and analyze\.
+This chapter is a compilation of small sections each of which examines one aspect of the [architectural patterns included in this book]({{< relref "../../appendices/index-of-patterns.md" >}})\. It shows the value of having a list of metapatterns to iterate over and analyze\.
 
 ## Contents:
 

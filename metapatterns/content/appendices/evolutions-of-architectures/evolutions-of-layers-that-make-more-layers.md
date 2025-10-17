@@ -9,7 +9,7 @@ images = ["/diagrams/Evolutions/Layers/Layers%20to%20Layers.png"]
 
 # Evolutions of Layers that make more layers {anchor=false}
 
-Not all the layered architectures are equally layered\. A [*Monolith*]({{< relref "../../basic-metapatterns/monolith.md" >}}) with a [*Proxy*]({{< relref "../../extension-metapatterns/proxy.md" >}}) or database has already stepped into the realm of [*Layers*]({{< relref "../../basic-metapatterns/layers.md" >}}) but is far from reaping all of its benefits\. It may continue its journey in a few ways that [were earlier discussed]({{< relref "../../appendices/evolutions/evolutions-of-a-monolith-that-result-in-layers.md" >}}) for *Monolith*:
+Not all the layered architectures are equally layered\. A [*Monolith*]({{< relref "../../basic-metapatterns/monolith.md" >}}) with a [*Proxy*]({{< relref "../../extension-metapatterns/proxy.md" >}}) or database has already stepped into the realm of [*Layers*]({{< relref "../../basic-metapatterns/layers.md" >}}) but is far from reaping all of its benefits\. It may continue its journey in a few ways that [were earlier discussed]({{< relref "../../appendices/evolutions-of-architectures/evolutions-of-a-monolith-that-result-in-layers.md" >}}) for *Monolith*:
 
 - Employing a *database* \(if you don’t use one\) lets you rely on a thoroughly optimized state\-of\-the\-art subsystem for data processing and storage\.
 - [*Proxies*]({{< relref "../../extension-metapatterns/proxy.md" >}}) are similarly reusable generic modules to be added at will\.

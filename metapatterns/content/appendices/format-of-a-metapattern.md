@@ -8,7 +8,7 @@ description = "This section formalizes the format of each of the metapattern cha
 
 # Format of a metapattern {anchor=false}
 
-The descriptions of most metapatterns follow the same format:
+The descriptions of most [metapatterns]({{< relref "../introduction/metapatterns.md" >}}) follow the same format:
 
 ### Diagram
 
@@ -92,7 +92,7 @@ I tried to show the difference between synonymous names for every variant or exa
 
 This covers a brief summary of possible changes to the architecture under review\. Each change leads to a new architecture which usually matches another metapattern\.
 
-[Appendix E]({{< relref "../appendices/evolutions/_index.md" >}}) discusses many evolutions in greater detail:
+[Appendix E]({{< relref "../appendices/evolutions-of-architectures/_index.md" >}}) discusses many evolutions in greater detail:
 
 - A diagram that shows the original and resulting structure\.
 - The list of patterns, present in the resulting architecture\. More general forms of each pattern are given in parentheses, i\.e\. Pattern \(Metapattern \(Parent Metapattern\)\)\.

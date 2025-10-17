@@ -246,7 +246,7 @@ This approach provides perfect elasticity and flexibility of deployment at the c
 
 ## Evolutions
 
-There are two kinds of evolutions for *Shards*: those intrinsic to the component sharded and those specific to the *Shards* pattern\. All of them are summarized below while [Appendix E]({{< relref "../appendices/evolutions/_index.md" >}}) provides more details on the second kind\.
+There are two kinds of evolutions for *Shards*: those intrinsic to the component sharded and those specific to the *Shards* pattern\. All of them are summarized below while [Appendix E]({{< relref "../appendices/evolutions-of-architectures/_index.md" >}}) provides more details on the second kind\.
 
 ### Evolutions of a sharded monolith
 
@@ -269,7 +269,7 @@ When *Shards* are applied to a single component, which is a [*Monolith*]({{< rel
 
 There is a benefit of such transformations which is important in the context of *Shards*: in many cases the resulting components can be scaled independently, arranging for a better resource utilization by the system \(when compared to scaling a *Monolith*\)\. However, scaling individual services usually requires a [*Load Balancer*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) or [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) to distribute requests over the scaled instances\.
 
-### [Evolutions that share data]({{< relref "../appendices/evolutions/evolutions-of-shards-that-share-data.md" >}})
+### [Evolutions that share data]({{< relref "../appendices/evolutions-of-architectures/evolutions-of-shards-that-share-data.md" >}})
 
 The issue peculiar to *Shards* is that of coordinating deployed instances, especially if their data becomes coupled\. The most direct solution is to let the instances access the shared data:
 
@@ -325,7 +325,7 @@ The issue peculiar to *Shards* is that of coordinating deployed instances, espec
 </a>
 </figure>
 
-### [Evolutions that share logic]({{< relref "../appendices/evolutions/evolutions-of-shards-that-share-logic.md" >}})
+### [Evolutions that share logic]({{< relref "../appendices/evolutions-of-architectures/evolutions-of-shards-that-share-logic.md" >}})
 
 Other cases are better solved by extracting the logic that manipulates multiple shards:
 

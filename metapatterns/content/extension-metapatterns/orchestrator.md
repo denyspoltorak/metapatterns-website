@@ -458,7 +458,7 @@ Employing an *Orchestrator* has two pitfalls:
 - A single *Orchestrator* may grow too large and rigid\.
 
 
-There is [one way to counter the first point and more than one to solve the second]({{< relref "../appendices/evolutions/evolutions-of-an-orchestrator.md" >}}):
+There is [one way to counter the first point and more than one to solve the second]({{< relref "../appendices/evolutions-of-architectures/evolutions-of-an-orchestrator.md" >}}):
 
 - Subdivide the *Orchestrator* by the system’s subdomains, forming [*Layered Services*]({{< relref "../fragmented-metapatterns/layered-services.md#orchestrated-three-layered-services" >}}) and minimizing network communication\.
 
