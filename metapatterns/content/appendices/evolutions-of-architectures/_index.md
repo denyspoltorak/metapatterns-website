@@ -11,7 +11,7 @@ bookCollapseSection = true
 
 This appendix details dozens of evolutions of [metapatterns]({{< relref "../../introduction/metapatterns.md" >}}) to show how they connect together\. The evolutions probably have practical value through listing prerequisites, benefits, and drawbacks, but I am not sure that many readers will get through them without becoming bored to death\. The metapattern chapters in the main parts of the book include abridged versions of the sections below\.
 
-Duplicate and similar evolutions are omitted, and I did not write any evolutions for [fragmented metapatterns]({{< relref "../../analytics/real-world-inspirations-for-architectural-patterns.md#fragmented-metapatterns" >}}) as you should be able to infer them on your own after having read the book\. Furthermore, for some reason I don’t know of any evolutions for the [implementation metapatterns]({{< relref "../../analytics/real-world-inspirations-for-architectural-patterns.md#implementation-metapatterns" >}})\.
+Duplicate and similar evolutions are omitted, and I did not write any evolutions for [fragmented metapatterns]({{< relref "../../fragmented-metapatterns/_index.md" >}}) as you should be able to infer them on your own after having read the book\. Furthermore, for some reason I don’t know of any evolutions for the [implementation metapatterns]({{< relref "../../implementation-metapatterns/_index.md" >}})\.
 
 ## Contents:
 
