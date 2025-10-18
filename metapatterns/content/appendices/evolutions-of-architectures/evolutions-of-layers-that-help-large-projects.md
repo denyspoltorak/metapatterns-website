@@ -2,6 +2,7 @@
 weight = 8
 title = "Evolutions of Layers that help large projects"
 description = "When layered software grows large, its business logic should be subdivided into Services, Pipeline, or Hierarchy."
+images = ["/diagrams/Web/Favicon-plain.png"]
 [sitemap]
   priority = 0.3
 +++

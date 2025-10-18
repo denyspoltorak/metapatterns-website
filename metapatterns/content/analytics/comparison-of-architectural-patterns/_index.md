@@ -2,6 +2,7 @@
 weight = 1
 title = "Comparison of architectural patterns"
 description = "Patterns vary in the ways they share functionality or data among system components, build pipelines, and in their use of dependency inversion or indirection."
+images = ["/diagrams/Web/Favicon-plain.png"]
 bookCollapseSection = true
 [sitemap]
   priority = 0.2

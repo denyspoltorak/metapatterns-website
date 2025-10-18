@@ -2,6 +2,7 @@
 weight = 5
 title = "The heart of software architecture"
 description = "The closing chapter shows how cohesion and decoupling make the entirety of software architecture: its principles, patterns, and guidelines."
+images = ["/diagrams/Web/Favicon-plain.png"]
 bookCollapseSection = true
 [sitemap]
   priority = 0.2

@@ -3,6 +3,7 @@ weight = 1
 layout = "landing"
 title = "The pattern language of software architecture"
 description = "The Metapatterns website is a compendium and classification of architectural patterns based on the assumption that structure determines function."
+images = ["/diagrams/Web/Favicon-plain.png"]
 bookCollapseSection = true
 [sitemap]
   priority = 0.5
@@ -20,11 +21,31 @@ bookCollapseSection = true
 
 <a href="{{< relref "introduction/about-this-book.md" >}}">
 
+<picture>
+
+<source srcset="/diagrams/Web/About.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/About.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/About.png" alt="" loading="lazy" width="720" height="680"/>
+
+</picture>
+
 About this book
 
 </a>
 
 <a href="{{< relref "introduction/metapatterns.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Metapatterns.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Metapatterns.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Metapatterns.png" alt="" loading="lazy" width="375" height="363"/>
+
+</picture>
 
 Metapatterns
 

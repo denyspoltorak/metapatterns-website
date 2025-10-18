@@ -2,6 +2,7 @@
 weight = 8
 title = "History of changes"
 description = "The list of versions of Architectural Metapatterns and its predecessors."
+images = ["/diagrams/Web/Favicon-plain.png"]
 [sitemap]
   disable = true
 bookSearchExclude = true

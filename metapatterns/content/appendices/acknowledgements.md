@@ -2,6 +2,7 @@
 weight = 1
 title = "Acknowledgements"
 description = "Thanks to the people who made Architectural Metapatterns possible."
+images = ["/diagrams/Web/Favicon-plain.png"]
 [sitemap]
   disable = true
 bookSearchExclude = true

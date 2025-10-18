@@ -2,6 +2,7 @@
 weight = 17
 title = "Evolutions of an Orchestrator"
 description = "An Orchestrator can be subdivided into Backends for Frontends or Layered Services. Alternatively, you can use a layered or hierarchical Orchestrator."
+images = ["/diagrams/Web/Favicon-plain.png"]
 [sitemap]
   priority = 0.3
 +++

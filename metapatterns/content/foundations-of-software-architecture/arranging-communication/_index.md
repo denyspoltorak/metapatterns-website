@@ -2,7 +2,7 @@
 weight = 4
 title = "Arranging communication"
 description = "Components can be integrated through orchestration, choreography, or shared data. These approaches emerge at every level, from code to system design."
-images = ["/diagrams/Communication/Monolith%20to%20Services.png"]
+images = ["/diagrams/Web/Communication.png"]
 bookCollapseSection = true
 [sitemap]
   priority = 0.2
