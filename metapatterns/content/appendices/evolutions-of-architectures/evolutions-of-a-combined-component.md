@@ -2,6 +2,7 @@
 weight = 18
 title = "Evolutions of a Combined Component"
 description = "A stack of single-purpose layers can replace a Combined Component, buying you flexibility at the cost of development effort and, often, performance."
+images = ["/diagrams/Web/Favicon-plain.png"]
 [sitemap]
   priority = 0.3
 +++

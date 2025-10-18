@@ -2,6 +2,7 @@
 weight = 16
 title = "Evolutions of a Proxy"
 description = "A new system-wide proxy may be stacked with the existing one or you can deploy a proxy per client type."
+images = ["/diagrams/Web/Favicon-plain.png"]
 [sitemap]
   priority = 0.3
 +++

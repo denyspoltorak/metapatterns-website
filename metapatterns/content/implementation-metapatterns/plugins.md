@@ -2,7 +2,7 @@
 weight = 5
 title = "Plugins"
 description = "Plugins let a client customize select aspects of a system's behavior. Addons build their application logic on top of whatever the modified system provides."
-images = ["/diagrams/Main/Plugins.png"]
+images = ["/diagrams/Web/Plugins.png"]
 [sitemap]
   priority = 0.8
 +++

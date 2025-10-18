@@ -2,6 +2,7 @@
 weight = 9
 title = "Index of patterns"
 description = "The index of patterns described in the Architectural Metapatterns book."
+images = ["/diagrams/Web/Favicon-plain.png"]
 [sitemap]
   priority = 0.1
 +++

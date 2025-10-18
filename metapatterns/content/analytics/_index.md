@@ -2,6 +2,7 @@
 weight = 7
 title = "Analytics"
 description = "This part compares different aspects of patterns which were covered in the previous chapters and outlines a few general topics of software architecture."
+images = ["/diagrams/Web/Favicon-plain.png"]
 bookCollapseSection = true
 [sitemap]
   priority = 0.2

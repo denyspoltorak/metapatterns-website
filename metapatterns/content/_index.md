@@ -3,6 +3,7 @@ weight = 1
 layout = "landing"
 title = "The pattern language of software architecture"
 description = "The Metapatterns website is a compendium and classification of architectural patterns based on the assumption that structure determines function."
+images = ["/diagrams/Web/Favicon-plain.png"]
 bookCollapseSection = true
 [sitemap]
   priority = 0.5
@@ -28,11 +29,31 @@ The content is lavishly illustrated with intuitive NoUML diagrams. It’s concis
 
 <a href="{{< relref "introduction/about-this-book.md" >}}">
 
+<picture>
+
+<source srcset="/diagrams/Web/About.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/About.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/About.png" alt="" loading="lazy" width="720" height="680"/>
+
+</picture>
+
 About this book
 
 </a>
 
 <a href="{{< relref "introduction/metapatterns.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Metapatterns.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Metapatterns.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Metapatterns.png" alt="" loading="lazy" width="375" height="363"/>
+
+</picture>
 
 Metapatterns
 
@@ -444,11 +465,31 @@ Mesh
 
 <a href="{{< relref "analytics/comparison-of-architectural-patterns/_index.md" >}}">
 
+<picture>
+
+<source srcset="/diagrams/Web/Comparison.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Comparison.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Comparison.png" alt="" loading="lazy" width="665" height="645"/>
+
+</picture>
+
 Comparison of architectural patterns
 
 </a>
 
 <a href="{{< relref "analytics/ambiguous-patterns.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Ambiguous.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Ambiguous.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Ambiguous.png" alt="" loading="lazy" width="1003" height="983"/>
+
+</picture>
 
 Ambiguous patterns
 
@@ -456,17 +497,47 @@ Ambiguous patterns
 
 <a href="{{< relref "analytics/architecture-and-product-life-cycle.md" >}}">
 
+<picture>
+
+<source srcset="/diagrams/Web/Life%20cycle.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Life%20cycle.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Life%20cycle.png" alt="" loading="lazy" width="1185" height="1123"/>
+
+</picture>
+
 Architecture and product life cycle
 
 </a>
 
 <a href="{{< relref "analytics/real-world-inspirations-for-architectural-patterns.md" >}}">
 
+<picture>
+
+<source srcset="/diagrams/Web/Real-world.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Real-world.negated.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Real-world.png" alt="" loading="lazy" width="483" height="463"/>
+
+</picture>
+
 Real-world inspirations for architectural patterns
 
 </a>
 
 <a href="{{< relref "analytics/the-heart-of-software-architecture/_index.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Heart.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Heart.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Heart.png" alt="" loading="lazy" width="403" height="384"/>
+
+</picture>
 
 The heart of software architecture
 
