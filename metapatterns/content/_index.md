@@ -457,11 +457,31 @@ Mesh
 
 <a href="{{< relref "analytics/comparison-of-architectural-patterns/_index.md" >}}">
 
+<picture>
+
+<source srcset="/diagrams/Web/Comparison.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Comparison.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Comparison.png" alt="" loading="lazy" width="665" height="645"/>
+
+</picture>
+
 Comparison of architectural patterns
 
 </a>
 
 <a href="{{< relref "analytics/ambiguous-patterns.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Ambiguous.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Ambiguous.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Ambiguous.png" alt="" loading="lazy" width="1003" height="983"/>
+
+</picture>
 
 Ambiguous patterns
 
@@ -469,17 +489,47 @@ Ambiguous patterns
 
 <a href="{{< relref "analytics/architecture-and-product-life-cycle.md" >}}">
 
+<picture>
+
+<source srcset="/diagrams/Web/Life%20cycle.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Life%20cycle.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Life%20cycle.png" alt="" loading="lazy" width="1185" height="1123"/>
+
+</picture>
+
 Architecture and product life cycle
 
 </a>
 
 <a href="{{< relref "analytics/real-world-inspirations-for-architectural-patterns.md" >}}">
 
+<picture>
+
+<source srcset="/diagrams/Web/Real-world.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Real-world.negated.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Real-world.png" alt="" loading="lazy" width="483" height="463"/>
+
+</picture>
+
 Real-world inspirations for architectural patterns
 
 </a>
 
 <a href="{{< relref "analytics/the-heart-of-software-architecture/_index.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Heart.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Heart.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Heart.png" alt="" loading="lazy" width="403" height="384"/>
+
+</picture>
 
 The heart of software architecture
 
