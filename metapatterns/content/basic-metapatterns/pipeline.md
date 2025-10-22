@@ -2,7 +2,7 @@
 weight = 10
 title = "Pipeline"
 description = "A pipeline is a chain of components that implement individual steps of data or event processing. Its parts tend to be highly independent and scalable."
-images = ["/diagrams/Web/Pipeline.png"]
+images = ["/diagrams/Web/og/Pipeline.png"]
 [sitemap]
   priority = 0.8
 +++

@@ -2,7 +2,7 @@
 weight = 2
 title = "Ambiguous patterns"
 description = "There are patterns with meanings which vary from source to source. They include Monolith, Reactor, Microkernel, Domain Services, Cells, and Nanoservices."
-images = ["/diagrams/Web/Ambiguous.png"]
+images = ["/diagrams/Web/og/Ambiguous.png"]
 [sitemap]
   priority = 0.5
 +++

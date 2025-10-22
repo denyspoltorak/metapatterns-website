@@ -2,7 +2,7 @@
 weight = 5
 title = "Evolutions of architectures"
 description = "Avenues to evolve many software and system architectures. Each evolution lists its goal, preconditions, benefits, and drawbacks."
-images = ["/diagrams/Web/Favicon-plain.png"]
+images = ["/diagrams/Web/og/Favicon-plain.png"]
 bookCollapseSection = true
 [sitemap]
   priority = 0.3

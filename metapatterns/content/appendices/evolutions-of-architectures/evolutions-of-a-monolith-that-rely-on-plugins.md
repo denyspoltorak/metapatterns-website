@@ -2,7 +2,7 @@
 weight = 4
 title = "Evolutions of a Monolith that rely on Plugins"
 description = "Plugins or Interpreter make a monolithic component customizable. Hexagonal Architecture protects its business logic from unstable external dependencies. "
-images = ["/diagrams/Web/Favicon-plain.png"]
+images = ["/diagrams/Web/og/Favicon-plain.png"]
 [sitemap]
   priority = 0.3
 +++

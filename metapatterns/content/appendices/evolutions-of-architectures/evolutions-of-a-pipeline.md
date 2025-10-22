@@ -2,7 +2,7 @@
 weight = 13
 title = "Evolutions of a Pipeline"
 description = "A Front Controller may be used to track states of running requests. Alternatively, adding an Orchestrator benefits complex scenarios."
-images = ["/diagrams/Web/Favicon-plain.png"]
+images = ["/diagrams/Web/og/Favicon-plain.png"]
 [sitemap]
   priority = 0.3
 +++

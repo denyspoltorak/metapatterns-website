@@ -2,7 +2,7 @@
 weight = 5
 title = "About this book"
 description = "The story behind Architectural Metapatterns, the kinds of diagrams and notation used throughout the book, and why we need a taxonomy for patterns."
-images = ["/diagrams/Web/About.png"]
+images = ["/diagrams/Web/og/About.png"]
 [sitemap]
   priority = 0.5
 +++

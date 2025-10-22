@@ -2,7 +2,7 @@
 weight = 8
 title = "Layers"
 description = "A layered system is subdivided by the level of abstraction. It is common to have presentation, application, domain, and infrastructure layers."
-images = ["/diagrams/Web/Layers.png"]
+images = ["/diagrams/Web/og/Layers.png"]
 [sitemap]
   priority = 0.8
 +++

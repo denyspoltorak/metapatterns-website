@@ -22,13 +22,10 @@ disableKinds = ['taxonomy', 'term']
   BookLogo = 'favicon.svg'
   description = "The Metapatterns website is a compendium and classification of architectural patterns based on the assumption that structure determines function."
   images = ["/web-app-manifest-512x512.png"]
+  author = "Denys Poltorak"
 
 [sitemap]
   changeFreq = 'weekly'
-
-[author]
-  name = "Denys Poltorak"
-  location = "Ukraine"
 
 [imaging]
   anchor = "Center"

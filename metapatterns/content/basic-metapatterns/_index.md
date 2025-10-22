@@ -2,7 +2,7 @@
 weight = 3
 title = "Basic metapatterns"
 description = "Basic architectures include: Monolith, Shards, Layers, Services, and Pipeline. They are the building blocks for more complex designs."
-images = ["/diagrams/Web/Favicon-plain.png"]
+images = ["/diagrams/Web/og/Favicon-plain.png"]
 bookCollapseSection = true
 [sitemap]
   priority = 0.2
