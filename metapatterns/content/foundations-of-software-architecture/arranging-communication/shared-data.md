@@ -2,7 +2,7 @@
 weight = 4
 title = "Shared data"
 description = "Communication through shared data benefits data-centric domains where multiple services need to operate on a common dataset."
-images = ["/diagrams/Web/Shared%20data.png"]
+images = ["/diagrams/Web/og/Shared%20data.png"]
 [sitemap]
   priority = 0.5
 +++

@@ -2,7 +2,7 @@
 weight = 6
 title = "Monolith"
 description = "A Monolith is a cohesive system which keeps all of its business logic, generic code and data together. This architecture fits short-lived tiny projects."
-images = ["/diagrams/Web/Monolith.png"]
+images = ["/diagrams/Web/og/Monolith.png"]
 [sitemap]
   priority = 0.8
 +++

@@ -2,7 +2,7 @@
 weight = 1
 title = "Cohesers and decouplers"
 description = "Some architectural constraints or forces cause the code to be kept together, others pull it apart, and still others prefer components of a definite size."
-images = ["/diagrams/Heart/Pain.png"]
+images = ["/diagrams/Web/og/Favicon-plain.png"]
 [sitemap]
   priority = 0.5
 +++

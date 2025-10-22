@@ -2,7 +2,7 @@
 weight = 2
 title = "Books referenced"
 description = "The list of books which Architectural Metapatterns references."
-images = ["/diagrams/Web/Favicon-plain.png"]
+images = ["/diagrams/Web/og/Favicon-plain.png"]
 [sitemap]
   priority = 0.1
 +++

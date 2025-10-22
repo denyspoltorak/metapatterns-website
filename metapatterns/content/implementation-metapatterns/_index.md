@@ -2,7 +2,7 @@
 weight = 6
 title = "Implementation metapatterns"
 description = "Implementation patterns study the internals of a component. Plugins, Microkernel and Hexagonal Architecture grant flexibility while Mesh provides resilience."
-images = ["/diagrams/Web/Favicon-plain.png"]
+images = ["/diagrams/Web/og/Favicon-plain.png"]
 bookCollapseSection = true
 [sitemap]
   priority = 0.2

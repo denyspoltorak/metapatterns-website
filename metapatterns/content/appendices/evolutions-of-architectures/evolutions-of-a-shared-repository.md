@@ -2,7 +2,7 @@
 weight = 15
 title = "Evolutions of a Shared Repository"
 description = "A shared database can be sharded or divided into private databases. Space-Based Architecture or Polyglot Persistence help to improve performance."
-images = ["/diagrams/Web/Favicon-plain.png"]
+images = ["/diagrams/Web/og/Favicon-plain.png"]
 [sitemap]
   priority = 0.3
 +++

@@ -2,7 +2,7 @@
 weight = 3
 title = "Architecture and product life cycle"
 description = "The architecture of a software project evolves over its lifetime. It starts monolithic, transforms into Layers and Services, then merges back to a Monolith."
-images = ["/diagrams/Web/Life%20cycle.png"]
+images = ["/diagrams/Web/og/Life%20cycle.png"]
 [sitemap]
   priority = 0.5
 +++

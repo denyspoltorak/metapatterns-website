@@ -2,7 +2,7 @@
 weight = 7
 title = "Glossary"
 description = "The glossary of terms used throughout the Architectural Metapatterns book."
-images = ["/diagrams/Web/Favicon-plain.png"]
+images = ["/diagrams/Web/og/Favicon-plain.png"]
 [sitemap]
   priority = 0.1
 +++

@@ -2,7 +2,7 @@
 weight = 5
 title = "Comparison of communication styles"
 description = "Orchestration is good when there are many complex scenarios, choreography - for simple highly loaded systems, shared data - for data-centric domains."
-images = ["/diagrams/Communication/Cell-Based%20Architecture.png"]
+images = ["/diagrams/Web/og/Favicon-plain.png"]
 [sitemap]
   priority = 0.5
 +++

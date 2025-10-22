@@ -3,7 +3,7 @@ weight = 1
 layout = "landing"
 title = "The pattern language of software architecture"
 description = "The Metapatterns website is a compendium and classification of architectural patterns based on the assumption that structure determines function."
-images = ["/diagrams/Web/Favicon-plain.png"]
+images = ["/diagrams/Web/og/Favicon-plain.png"]
 bookCollapseSection = true
 [sitemap]
   priority = 0.5
