@@ -2,7 +2,7 @@
 weight = 3
 title = "Choose your own architecture"
 description = "This is a guide to choosing an architectural style based on project size, domain features, target performance, and flexibility requirements."
-images = ["/diagrams/Web/og/Favicon-plain.png"]
+images = ["/diagrams/Web/og/Heart3.png"]
 [sitemap]
   priority = 0.5
 +++

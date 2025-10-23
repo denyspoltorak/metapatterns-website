@@ -2,7 +2,7 @@
 weight = 1
 title = "Programming and architectural paradigms"
 description = "The object-oriented, functional, and procedural paradigms are the code-level manifestations of orchestration, choreography, and shared data, respectively."
-images = ["/diagrams/Web/og/Favicon-plain.png"]
+images = ["/diagrams/Web/og/Paradigms.png"]
 [sitemap]
   priority = 0.5
 +++
