@@ -52,9 +52,38 @@ Please consider sharing your experience as a co\-author of a future version of t
 
 ## Contents:
 
-<nav>
+<nav class="grid3">
 
-- [About this book]({{< relref "introduction/about-this-book.md" >}})
-- [Metapatterns]({{< relref "introduction/metapatterns.md" >}})
+<a href="{{< relref "introduction/about-this-book.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/About.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/About.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/About.png" alt="" loading="lazy" width="720" height="680"/>
+
+</picture>
+
+About this book
+
+</a>
+
+<a href="{{< relref "introduction/metapatterns.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Metapatterns.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Metapatterns.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Metapatterns.png" alt="" loading="lazy" width="375" height="363"/>
+
+</picture>
+
+Metapatterns
+
+</a>
 
 </nav>
