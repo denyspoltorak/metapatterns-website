@@ -26,19 +26,86 @@ Other smaller topics that I was able to look into made the following chapters:
 
 ## Contents:
 
-<nav>
+<nav class="grid3">
 
-- [Comparison of architectural patterns]({{< relref "analytics/comparison-of-architectural-patterns/_index.md" >}})
-  - [Sharing functionality or data among services]({{< relref "analytics/comparison-of-architectural-patterns/sharing-functionality-or-data-among-services.md" >}})
-  - [Pipelines in architectural patterns]({{< relref "analytics/comparison-of-architectural-patterns/pipelines-in-architectural-patterns.md" >}})
-  - [Dependency inversion in architectural patterns]({{< relref "analytics/comparison-of-architectural-patterns/dependency-inversion-in-architectural-patterns.md" >}})
-  - [Indirection in commands and queries]({{< relref "analytics/comparison-of-architectural-patterns/indirection-in-commands-and-queries.md" >}})
-- [Ambiguous patterns]({{< relref "analytics/ambiguous-patterns.md" >}})
-- [Architecture and product life cycle]({{< relref "analytics/architecture-and-product-life-cycle.md" >}})
-- [Real-world inspirations for architectural patterns]({{< relref "analytics/real-world-inspirations-for-architectural-patterns.md" >}})
-- [The heart of software architecture]({{< relref "analytics/the-heart-of-software-architecture/_index.md" >}})
-  - [Cohesers and decouplers]({{< relref "analytics/the-heart-of-software-architecture/cohesers-and-decouplers.md" >}})
-  - [Deconstructing patterns]({{< relref "analytics/the-heart-of-software-architecture/deconstructing-patterns.md" >}})
-  - [Choose your own architecture]({{< relref "analytics/the-heart-of-software-architecture/choose-your-own-architecture.md" >}})
+<a href="{{< relref "analytics/comparison-of-architectural-patterns/_index.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Comparison.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Comparison.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Comparison.png" alt="" loading="lazy" width="665" height="645"/>
+
+</picture>
+
+Comparison of architectural patterns
+
+</a>
+
+<a href="{{< relref "analytics/ambiguous-patterns.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Ambiguous.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Ambiguous.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Ambiguous.png" alt="" loading="lazy" width="1003" height="983"/>
+
+</picture>
+
+Ambiguous patterns
+
+</a>
+
+<a href="{{< relref "analytics/architecture-and-product-life-cycle.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Life%20cycle.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Life%20cycle.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Life%20cycle.png" alt="" loading="lazy" width="1185" height="1123"/>
+
+</picture>
+
+Architecture and product life cycle
+
+</a>
+
+<a href="{{< relref "analytics/real-world-inspirations-for-architectural-patterns.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Real-world.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Real-world.negated.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Real-world.png" alt="" loading="lazy" width="483" height="463"/>
+
+</picture>
+
+Real-world inspirations for architectural patterns
+
+</a>
+
+<a href="{{< relref "analytics/the-heart-of-software-architecture/_index.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Heart.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Heart.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Heart.png" alt="" loading="lazy" width="403" height="384"/>
+
+</picture>
+
+The heart of software architecture
+
+</a>
 
 </nav>

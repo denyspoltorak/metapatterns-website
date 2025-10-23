@@ -14,16 +14,70 @@ This part defines some ideas which are used throughout the book\. Please feel fr
 
 ## Contents:
 
-<nav>
+<nav class="grid3">
 
-- [Modules and complexity]({{< relref "foundations-of-software-architecture/modules-and-complexity.md" >}})
-- [Forces, asynchronicity, and distribution]({{< relref "foundations-of-software-architecture/forces--asynchronicity--and-distribution.md" >}})
-- [Four kinds of software]({{< relref "foundations-of-software-architecture/four-kinds-of-software.md" >}})
-- [Arranging communication]({{< relref "foundations-of-software-architecture/arranging-communication/_index.md" >}})
-  - [Programming and architectural paradigms]({{< relref "foundations-of-software-architecture/arranging-communication/programming-and-architectural-paradigms.md" >}})
-  - [Orchestration]({{< relref "foundations-of-software-architecture/arranging-communication/orchestration.md" >}})
-  - [Choreography]({{< relref "foundations-of-software-architecture/arranging-communication/choreography.md" >}})
-  - [Shared data]({{< relref "foundations-of-software-architecture/arranging-communication/shared-data.md" >}})
-  - [Comparison of communication styles]({{< relref "foundations-of-software-architecture/arranging-communication/comparison-of-communication-styles.md" >}})
+<a href="{{< relref "foundations-of-software-architecture/modules-and-complexity.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Complexity.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Complexity.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Complexity.png" alt="" loading="lazy" width="543" height="564"/>
+
+</picture>
+
+Modules and complexity
+
+</a>
+
+<a href="{{< relref "foundations-of-software-architecture/forces--asynchronicity--and-distribution.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Forces.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Forces.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Forces.png" alt="" loading="lazy" width="409" height="403"/>
+
+</picture>
+
+Forces, asynchronicity, and distribution
+
+</a>
+
+<a href="{{< relref "foundations-of-software-architecture/four-kinds-of-software.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/4Kinds.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/4Kinds.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/4Kinds.png" alt="" loading="lazy" width="622" height="627"/>
+
+</picture>
+
+Four kinds of software
+
+</a>
+
+<a href="{{< relref "foundations-of-software-architecture/arranging-communication/_index.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Communication.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Communication.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Communication.png" alt="" loading="lazy" width="263" height="263"/>
+
+</picture>
+
+Arranging communication
+
+</a>
 
 </nav>
