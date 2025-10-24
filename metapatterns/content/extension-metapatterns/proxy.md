@@ -1,7 +1,7 @@
 +++
 weight = 8
 title = "Proxy"
-description = "A Proxy represents a system to its clients. It implements cross-cutting concerns, such as caching or protocol translation, and routes client requests."
+description = "A Proxy represents a system to its clients and takes care of some aspects of the communication."
 images = ["/diagrams/Web/og/Proxy.png"]
 [sitemap]
   priority = 0.8

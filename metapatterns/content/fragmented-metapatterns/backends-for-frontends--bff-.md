@@ -1,7 +1,7 @@
 +++
 weight = 8
 title = "Backends for Frontends (BFF)"
-description = "Backends for Frontends dedicate a component to each kind of a system's client. That grants flexibility in workflows and technologies."
+description = "Backends for Frontends dedicate a component to each kind of a system's client."
 images = ["/diagrams/Web/og/Backends%20for%20Frontends.png"]
 [sitemap]
   priority = 0.8

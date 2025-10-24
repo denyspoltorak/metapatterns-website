@@ -1,7 +1,7 @@
 +++
 weight = 10
 title = "Combined Component"
-description = "A Combined Component implements two or more of the following extension patterns: Middleware, Shared Repository, Proxy, and Orchestrator."
+description = "A Combined Component is a layer which implements multiple cross-cutting concerns."
 images = ["/diagrams/Web/og/Combined%20Component.png"]
 [sitemap]
   priority = 0.8

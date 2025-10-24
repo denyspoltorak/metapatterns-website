@@ -1,7 +1,7 @@
 +++
 weight = 2
 title = "Orchestration"
-description = "In orchestration there is a high-level component, called orchestrator, which uses (orchestrates) other components in order to implement application logic."
+description = "A single component, called Orchestrator, coordinates other system components."
 images = ["/diagrams/Web/og/Orchestration.png"]
 [sitemap]
   priority = 0.5

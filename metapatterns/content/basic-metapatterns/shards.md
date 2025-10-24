@@ -1,7 +1,7 @@
 +++
 weight = 7
 title = "Shards"
-description = "Shards are multiple instances of a subsystem or component. They can be stateful or stateless. Stateful shards with identical data are called replicas."
+description = "Shards are multiple instances of a component or subsystem."
 images = ["/diagrams/Web/og/Shards.png"]
 [sitemap]
   priority = 0.8

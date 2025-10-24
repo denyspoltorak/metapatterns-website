@@ -1,7 +1,7 @@
 +++
 weight = 2
 title = "Foundations of software architecture"
-description = "This part reviews the basics of software architecture: forces, complexity, distribution, and ways to connect multiple components in a system."
+description = "Learn basic principles of software architecture such as complexity, forces, and the ways to build large systems."
 images = ["/diagrams/Web/og/Favicon-plain.png"]
 bookCollapseSection = true
 [sitemap]

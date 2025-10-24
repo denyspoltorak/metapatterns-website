@@ -1,7 +1,7 @@
 +++
 weight = 6
 title = "Layered Services"
-description = "Layered Services may orchestrate each other, rely on choreography, or make a CQRS system. The communication between services happens at different layers."
+description = "Layered Services is an umbrella architecture for common implementations of systems of services."
 images = ["/diagrams/Web/og/Layered%20Services.png"]
 [sitemap]
   priority = 0.8

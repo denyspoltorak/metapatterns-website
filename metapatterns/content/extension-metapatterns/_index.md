@@ -1,7 +1,7 @@
 +++
 weight = 4
 title = "Extension metapatterns"
-description = "A system of services can be extended with one or more specialized layers such as a Proxy, a Middleware, an Orchestrator, or a Shared Repository."
+description = "A Middleware, Shared Repository, Proxy, an Orchestrator or a Combined Component extends the underlying system of services or shards."
 images = ["/diagrams/Web/og/Favicon-plain.png"]
 bookCollapseSection = true
 [sitemap]

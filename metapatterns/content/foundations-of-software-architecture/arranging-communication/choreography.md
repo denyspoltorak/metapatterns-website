@@ -1,7 +1,7 @@
 +++
 weight = 3
 title = "Choreography"
-description = "In choreography user requests or input events pass through a chain of components that handle individual steps of the scenario which the system implements."
+description = "Components communicate with each other without any explicit supervisor."
 images = ["/diagrams/Web/og/Choreography.png"]
 [sitemap]
   priority = 0.5
