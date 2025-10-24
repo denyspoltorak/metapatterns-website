@@ -20,7 +20,7 @@ disableKinds = ['taxonomy', 'term', 'RSS']
   BookSection = '/'
   BookTheme = 'auto'
   BookLogo = 'favicon.svg'
-  description = "The Metapatterns website is a compendium and classification of architectural patterns based on the assumption that structure determines function."
+  description = "Explore how patterns are interrelated and work together."
   images = ["/web-app-manifest-512x512.png"]
   author = "Denys Poltorak"
 
