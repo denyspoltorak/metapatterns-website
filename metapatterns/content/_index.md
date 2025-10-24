@@ -2,7 +2,7 @@
 weight = 1
 layout = "landing"
 title = "The pattern language of software architecture"
-description = "Explore how patterns are interrelated and work together."
+description = "Explore how patterns relate to each other and work together."
 images = ["/diagrams/Web/og/Favicon-plain.png"]
 bookCollapseSection = true
 [sitemap]

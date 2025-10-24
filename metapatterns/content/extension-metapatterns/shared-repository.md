@@ -1,7 +1,7 @@
 +++
 weight = 7
 title = "Shared Repository"
-description = "A Shared Repository stores all or a part of the system's data. It may provide notifications on data change and atomic transactions."
+description = "A Shared Repository encapsulates a system’s data, allowing for data-centric development."
 images = ["/diagrams/Web/og/Shared%20Repository.png"]
 [sitemap]
   priority = 0.8

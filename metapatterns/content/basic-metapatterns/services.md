@@ -1,7 +1,7 @@
 +++
 weight = 9
 title = "Services"
-description = "Services are components dedicated to subdomains. They may vary in size, internal structure and technologies. A service can be further subdivided into a Cell."
+description = "Services deal with large projects by dividing them into subdomain-aligned components of smaller sizes."
 images = ["/diagrams/Web/og/Services.png"]
 [sitemap]
   priority = 0.8

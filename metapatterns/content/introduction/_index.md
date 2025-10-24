@@ -1,7 +1,7 @@
 +++
 weight = 1
 title = "Introduction"
-description = "This part defines metapatterns, explains the notation for NoSQL diagrams used throughout the book, and provides a theory for pattern classification."
+description = "Architectural Metapatterns is a structured collection of patterns featuring hundreds of NoUML diagrams."
 images = ["/diagrams/Web/og/Favicon-plain.png"]
 bookCollapseSection = true
 [sitemap]

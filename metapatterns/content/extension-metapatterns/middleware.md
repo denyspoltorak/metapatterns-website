@@ -1,7 +1,7 @@
 +++
 weight = 6
 title = "Middleware"
-description = "A Middleware provides system components with a means of communication. It may also manage their deployment, scaling, and failure recovery."
+description = "A Middleware provides a system of services with means of communication, scalability, and error recovery."
 images = ["/diagrams/Web/og/Middleware.png"]
 [sitemap]
   priority = 0.8

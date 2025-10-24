@@ -1,7 +1,7 @@
 +++
 weight = 3
 title = "Four kinds of software"
-description = "Control, interactive, streaming and computational software differ in their architectures and design patterns. Complex systems mix these four approaches."
+description = "Control, interactive, streaming and computational software differ in design."
 images = ["/diagrams/Web/og/4Kinds.png"]
 [sitemap]
   priority = 0.5

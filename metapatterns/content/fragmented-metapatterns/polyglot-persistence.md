@@ -1,7 +1,7 @@
 +++
 weight = 7
 title = "Polyglot Persistence"
-description = "Polyglot Persistence is the pattern for using multiple databases, which may be mutually independent or derived. The specialization improves performance."
+description = "Polyglot Persistence is the pattern for using multiple databases."
 images = ["/diagrams/Web/og/Polyglot%20Persistence.png"]
 [sitemap]
   priority = 0.8

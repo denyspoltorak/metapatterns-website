@@ -1,7 +1,7 @@
 +++
 weight = 7
 title = "Microkernel"
-description = "A microkernel mediates between resource providers and resource consumers. It both makes the providers expendable and sandboxes the consumers."
+description = "A microkernel mediates between resource providers and resource consumers."
 images = ["/diagrams/Web/og/Microkernel.png"]
 [sitemap]
   priority = 0.8

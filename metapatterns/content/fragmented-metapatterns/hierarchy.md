@@ -1,7 +1,7 @@
 +++
 weight = 10
 title = "Hierarchy"
-description = "A Hierarchy distributes responsibilities throughout a tree of components. It is fault tolerant, and the components remain simple and are easy to replace."
+description = "Hierarchy distributes responsibilities throughout a tree of components."
 images = ["/diagrams/Web/og/Hierarchy.png"]
 [sitemap]
   priority = 0.8
