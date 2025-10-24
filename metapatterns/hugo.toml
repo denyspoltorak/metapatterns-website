@@ -6,7 +6,7 @@ BookComments = false
 
 enableRobotsTXT = true
 printPathWarnings = true
-disableKinds = ['taxonomy', 'term']
+disableKinds = ['taxonomy', 'term', 'RSS']
 
 [markup]
   [markup.goldmark]
