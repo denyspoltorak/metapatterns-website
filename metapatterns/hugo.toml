@@ -25,7 +25,7 @@ disableKinds = ['taxonomy', 'term', 'RSS']
   author = "Denys Poltorak"
 
 [sitemap]
-  changeFreq = 'weekly'
+  changeFreq = 'monthly'
 
 [imaging]
   anchor = "Center"
