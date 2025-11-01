@@ -311,7 +311,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Microservices]({{< relref "../basic-metapatterns/services.md#microservices" >}}) \(architecture\)
 
-[Microservices]({{< relref "../basic-metapatterns/services.md#a-subdomain-microservices" >}}) \(scope\)
+[Microservices]({{< relref "../basic-metapatterns/services.md#part-of-a-subdomain-microservices" >}}) \(scope\)
 
 [Middleware]({{< relref "../extension-metapatterns/middleware.md" >}})
 

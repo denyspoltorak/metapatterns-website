@@ -313,7 +313,7 @@ Last but not least, the simplest classification of subdomain\-separated componen
 
 Each *Domain Service* \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] of [*Service\-Based Architecture*]({{< relref "#service-based-architecture" >}}) \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] implements a whole subdomain\. It is the product of the full\-time work of a dedicated team\. A project is unlikely to have more than 10 of such services \(in part because the number of top\-level subdomains in any domain is usually limited\)\.
 
-### a subdomain: Microservices
+### Part of a subdomain: Microservices
 
 *Microservices* enthusiasts estimate the best size of a component of their architecture to be below a month of development by a single team\. That allows for a complete rewrite instead of refactoring in case the requirements change\. When a team completes one microservice it can start working on another, probably related, one while still maintaining its previous work\. A project is likely to contain from tens to few hundreds of microservices\.
 
