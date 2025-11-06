@@ -102,7 +102,7 @@ The final approach is integration through data\. There are cases where the domai
 </a>
 </figure>
 
-In the data\-centric paradigm *logic* and *data* are structured independently\. In procedural programming, like in object\-oriented paradigm, *control* is implemented inside the logic, making the logic layer hierarchical \(*orchestrated*\)\. Another, much less common, option relies on *Observer* \[[GoF]({{< relref "../../appendices/books-referenced.md#gof" >}})\] to provide data change notifications, resulting in decentralized \(*choreographed*\) application logic:
+In the data\-centric paradigm *logic* and *data* are structured independently\. In procedural programming, like in object\-oriented paradigm, *control* is implemented inside the logic, making the logic layer hierarchical \(*orchestrated*\)\. Another, much less common, option relies on [*Observer*](https://refactoring.guru/design-patterns/observer) \[[GoF]({{< relref "../../appendices/books-referenced.md#gof" >}})\] to provide data change notifications, resulting in decentralized \(*choreographed*\) application logic:
 
 <figure>
 <a href="/diagrams/Communication/Paradigms%20-%20Data-centric%20-%20Notifications.png">

@@ -84,7 +84,7 @@ The *applications* depend on the *API* of the *microkernel* while the *providers
 *Microkernel* is <ins>applicable</ins> in:
 
 - *System programming\.* You manage system resources and services which will be used by untrusted client applications\. Hide the real resources behind a trusted proxy layer\. Be ready to change the hardware platform without affecting existing client code\.
-- *Frameworks that integrate several subdomains\.* The microkernel component coordinates multiple specialized libraries\. Its API is a *Facade* \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] for the managed functionality\.
+- *Frameworks that integrate several subdomains\.* The microkernel component coordinates multiple specialized libraries\. Its API is a [*Facade*](https://refactoring.guru/design-patterns/facade) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] for the managed functionality\.
 - *Scripting or* [*DSL*](https://en.wikipedia.org/wiki/Domain-specific_language)*s\.* The microkernel is an *Interpreter* \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] which lets your clients’ code manage the underlying system\.
 
 

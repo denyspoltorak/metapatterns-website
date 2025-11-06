@@ -19,7 +19,7 @@ This book started as a rather small project to prove that patterns can be intuit
 
 The idea of unifying software and system architecture is heretical\. I am well aware of that\. Still, the industry is in the early stage of alchemy these days: the same things are sold under multitudes of names, being remarketed or reinvented every decade\. If this book manages to provide rules of thumb, similar to those of biology \(a bat is a mammal, thus it should run on all four, while ostriches, as birds, must fly to Europe each spring\), I will be happy with that\. *Science makes progress funeral by funeral*\.
 
-The latest version of the book is available for free on [GitHub](https://github.com/denyspoltorak/publications/blob/main/ArchitecturalMetapatterns) and [LeanPub](https://leanpub.com/metapatterns)\. As there is no one who has practiced all the known architectures, it will be full of mistakes\. I rely on your goodwill to correct them and improve the text\. Critical reviews are warmly welcome: please write an [email](mailto:descri@gmail.com) or contact me [on LinkedIn](https://www.linkedin.com/in/denyspoltorak/)\.
+The latest version of the book is available for free on [GitHub](https://github.com/denyspoltorak/publications/blob/main/ArchitecturalMetapatterns) and [LeanPub](https://leanpub.com/metapatterns), and can be [read online](https://metapatterns.io/)\. As there is no one who has practiced all the known architectures, it will be full of mistakes\. I rely on your goodwill to correct them and improve the text\. Critical reviews are warmly welcome: please write an [email](mailto:descri@gmail.com) or contact me [on LinkedIn](https://www.linkedin.com/in/denyspoltorak/)\.
 
 ## Structure of the book
 

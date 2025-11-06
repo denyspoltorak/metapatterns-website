@@ -169,7 +169,7 @@ A [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.
 - Everybody in the room may use a ~black~whiteboard to express and exchange their ideas\.
 - An Internet forum works in a similar way – people post their arguments there for others to see them and get notified on answers\.
 - RAM and CPU caches are kinds of shared repositories\. CPU caches are [kept synchronized through notifications](https://en.wikipedia.org/wiki/Cache_coherency_protocols_(examples))\.
-- *Observer* \[[GoF](https://docs.google.com/document/d/1hzBn-RzzNDcArAWcvXaXgw2nl6O_ryDKE51Xve18zOs/edit?pli=1&tab=t.0#bookmark=kix.biwhq98sqmss)\] is about getting notified when a shared object changes\.
+- [*Observer*](https://refactoring.guru/design-patterns/observer) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] is about getting notified when a shared object changes\.
 - Services or service instances may share a database\.
 
 
@@ -208,7 +208,7 @@ A [*Proxy*]({{< relref "../extension-metapatterns/proxy.md" >}}) isolates a syst
 An [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) integrates several components by implementing high\-level use cases and/or keeping them in sync:
 
 - A taxi driver orchestrates his car’s internals\.
-- A *Facade* \[[GoF](https://docs.google.com/document/d/1hzBn-RzzNDcArAWcvXaXgw2nl6O_ryDKE51Xve18zOs/edit?pli=1&tab=t.0#bookmark=kix.biwhq98sqmss)\] provides a high\-level interface for a system while a *Mediator* \[[GoF](https://docs.google.com/document/d/1hzBn-RzzNDcArAWcvXaXgw2nl6O_ryDKE51Xve18zOs/edit?pli=1&tab=t.0#bookmark=kix.biwhq98sqmss)\] integrates a system by spreading changes initiated by the system’s components\.
+- A [*Facade*](https://refactoring.guru/design-patterns/facade) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] provides a high\-level interface for a system while a [*Mediator*](https://refactoring.guru/design-patterns/mediator) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] integrates a system by spreading changes initiated by the system’s components\.
 - A linker composes a working program out of disjunct modules\.
 
 
@@ -310,7 +310,7 @@ An implementation pattern highlights the peculiar internal arrangements of a com
 [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) make a component’s behavior flexible through delegating its parts to small external additions:
 
 - This is how we use tools for our work – a man becomes a digger when given a shovel\.
-- *Strategy* \[[GoF](https://docs.google.com/document/d/1hzBn-RzzNDcArAWcvXaXgw2nl6O_ryDKE51Xve18zOs/edit?pli=1&tab=t.0#bookmark=kix.biwhq98sqmss)\] is the thing\.
+- [*Strategy*](https://refactoring.guru/design-patterns/strategy) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] is the thing\.
 
 
 ### Hexagonal Architecture
