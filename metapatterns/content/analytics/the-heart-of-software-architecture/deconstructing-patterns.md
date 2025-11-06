@@ -35,38 +35,38 @@ Let’s now discuss something more practical, namely the \[[GoF]({{< relref "../
 
 Some patterns provide a basic decoupling:
 
-- *Adapter* translates between two interacting components so that they may evolve independently\.
-- *Observer* decouples an event from the reactions it causes by registering handlers at runtime\.
-- *Chain of Responsibility* separates method invocation from method execution\. A client’s calling a method of an object runs the corresponding method of another object\.
+- [*Adapter*](https://refactoring.guru/design-patterns/adapter) translates between two interacting components so that they may evolve independently\.
+- [*Observer*](https://refactoring.guru/design-patterns/observer) decouples an event from the reactions it causes by registering handlers at runtime\.
+- [*Chain of Responsibility*](https://refactoring.guru/design-patterns/chain-of-responsibility) separates method invocation from method execution\. A client’s calling a method of an object runs the corresponding method of another object\.
 
 
 Others break the functionality or data of a class into two or more parts, juggling them at runtime:
 
-- *Proxy* separates an object’s representation from its implementation, enabling lazy loading or remote access\.
-- *Flyweight* segregates an immutable data member of a class to save memory by merging multiple instances of identical data\.
-- *Strategy* and *Decorator* decouple a dimension of an object’s functionality to allow runtime changes in or composition of the object's behavior, respectively\. 
-- *State* separates an object’s behavior into multiple classes based on the object’s state\.
-- *Template Method* decouples several aspects of a class’s behavior from its main algorithm and envelops variations of those aspects into subclasses\.
-- *Bridge* separates a high\-level hierarchy of classes from their low\-level implementation details which may comprise an orthogonal hierarchy\.
-- *Memento* decouples the lifetime of an object’s state from the object itself\.
+- [*Proxy*](https://refactoring.guru/design-patterns/proxy) separates an object’s representation from its implementation, enabling lazy loading or remote access\.
+- [*Flyweight*](https://refactoring.guru/design-patterns/flyweight) segregates an immutable data member of a class to save memory by merging multiple instances of identical data\.
+- [*Strategy*](https://refactoring.guru/design-patterns/strategy) and [*Decorator*](https://refactoring.guru/design-patterns/decorator) decouple a dimension of an object’s functionality to allow runtime changes in or composition of the object's behavior, respectively\. 
+- [*State*](https://refactoring.guru/design-patterns/state) separates an object’s behavior into multiple classes based on the object’s state\.
+- [*Template Method*](https://refactoring.guru/design-patterns/template-method) decouples several aspects of a class’s behavior from its main algorithm and envelops variations of those aspects into subclasses\.
+- [*Bridge*](https://refactoring.guru/design-patterns/bridge) separates a high\-level hierarchy of classes from their low\-level implementation details which may comprise an orthogonal hierarchy\.
+- [*Memento*](https://refactoring.guru/design-patterns/memento) decouples the lifetime of an object’s state from the object itself\.
 
 
 On the other hand, a few patterns gather separate components together:
 
-- *Command* collects all the data required to call a method\.
-- *Mediator* is a cohesive implementation of multi\-object use cases\.
-- *Composite* and *Facade* represent multiple objects as a cohesive entity\. A *Composite* broadcasts a call to its interface to every object it contains while a *Facade* [orchestrates]({{< relref "../../foundations-of-software-architecture/arranging-communication/orchestration.md" >}}) the wrapped subsystem\.
-- *Abstract Factory* and *Builder* encapsulate *type selection* and *initialization* for several related hierarchies, so that the client code gets objects from a set of consistent types\. On top of that, a *Builder* cross\-links the objects it creates into a cohesive subsystem, which is returned to the *builder*’s client as a whole\.
+- [*Command*](https://refactoring.guru/design-patterns/command) collects all the data required to call a method\.
+- [*Mediator*](https://refactoring.guru/design-patterns/mediator) is a cohesive implementation of multi\-object use cases\.
+- [*Composite*](https://refactoring.guru/design-patterns/composite) and [*Facade*](https://refactoring.guru/design-patterns/facade) represent multiple objects as a cohesive entity\. A *Composite* broadcasts a call to its interface to every object it contains while a *Facade* [orchestrates]({{< relref "../../foundations-of-software-architecture/arranging-communication/orchestration.md" >}}) the wrapped subsystem\.
+- [*Abstract Factory*](https://refactoring.guru/design-patterns/abstract-factory) and [*Builder*](https://refactoring.guru/design-patterns/builder) encapsulate *type selection* and *initialization* for several related hierarchies, so that the client code gets objects from a set of consistent types\. On top of that, a *Builder* cross\-links the objects it creates into a cohesive subsystem, which is returned to the *builder*’s client as a whole\.
 
 
 The remaining patterns pick an aspect or two of an object’s behavior and move them elsewhere:
 
-- *Iterator* moves the code for traversal of a container’s elements from the container’s clients into the container’s implementation, decoupling its clients from the iteration algorithm\.
-- *Visitor* collects actions that a client needs to perform on each kind of object in a hierarchy, decoupling them from the classes that constitute the hierarchy\.
+- [*Iterator*](https://refactoring.guru/design-patterns/iterator) moves the code for traversal of a container’s elements from the container’s clients into the container’s implementation, decoupling its clients from the iteration algorithm\.
+- [*Visitor*](https://refactoring.guru/design-patterns/visitor) collects actions that a client needs to perform on each kind of object in a hierarchy, decoupling them from the classes that constitute the hierarchy\.
 - *Interpreter* decouples client scenarios from the rest of the system by having them written in a dedicated language and run in a protected environment\.
-- *Prototype* binds the *type selection* and *initialization* together and decouples them from the object *creation*\.
-- *Singleton* binds the *creation* and *initialization* of a global object to every call of its methods\.
-- *Factory Method* decouples the *initialization* from *type selection* and hides both from the class’s users\.
+- [*Prototype*](https://refactoring.guru/design-patterns/prototype) binds the *type selection* and *initialization* together and decouples them from the object *creation*\.
+- [*Singleton*](https://refactoring.guru/design-patterns/singleton) binds the *creation* and *initialization* of a global object to every call of its methods\.
+- [*Factory Method*](https://refactoring.guru/design-patterns/factory-method) decouples the *initialization* from *type selection* and hides both from the class’s users\.
 
 
 As we see, every \[[GoF]({{< relref "../../appendices/books-referenced.md#gof" >}})\] pattern boils down to binding \(making *cohesive*\) and/or separating \(*decoupling*\) some kind of functionality or responsibilities\.
