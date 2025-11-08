@@ -21,6 +21,24 @@ The content is lavishly illustrated with intuitive NoUML diagrams. It’s concis
 
 <nav class="grid5">
 
+<a class="grid-row" href="https://speakerdeck.com/denyspoltorak">
+
+<h2>Slides (in progress)</h2>
+
+</a>
+
+<a href="https://speakerdeck.com/denyspoltorak/patterns-of-patterns-and-why-we-need-them">
+
+<img src="/diagrams/Web/slides/Patterns.png" alt="Patterns of Patterns" loading="lazy" width="480" height="270"/>
+
+</a>
+
+</nav>
+
+<hr>
+
+<nav class="grid5">
+
 <a class="grid-row" href="{{< relref "introduction/_index.md" >}}">
 
 <h2>Introduction</h2>
