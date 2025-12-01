@@ -30,6 +30,7 @@ Let’s take a look at the simplest possible [metapattern]({{< relref "../introd
 By internal structure:
 
 - True Monolith / [Big Ball of Mud](http://laputan.org/mud/),
+- \(inexact\) Lambda Monolith / [Monolambda](https://jesseduffield.com/Notes-On-Lambda/) / [Lambdalith](https://theburningmonk.com/2025/03/the-pros-and-cons-of-lambdalith/),
 - \(misapplied\) Layered Monolith \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\],
 - \(misapplied\) Modular Monolith \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] \(Modulith\),
 - \(inexact\) Plugins \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] and Hexagonal Architecture\.
@@ -134,7 +135,7 @@ Even though a *Monolith* is a single module, meaning that there are no dependenc
 
 There is a misunderstanding because *software architecture* inspects the internals of *applications* at the level of *modules* or even classes while *systems architecture* deals with *distributed systems* and operates *deployment units* which tend to incorporate multiple modules or even applications\. Each branch of the architecture [calls]({{< relref "../analytics/ambiguous-patterns.md#monolith" >}}) its atomic unit a *Monolith*, leading to the term sticking both to a *module that cannot be subdivided*, as in \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] and \[[POSA1]({{< relref "../extension-metapatterns/shared-repository.md#blackboard" >}})\], and to a *\(sub\)system which must be deployed together*, as in present\-day literature\.
 
-As we aspire to build a unified classification for both distributed and local systems, we must treat both kinds of components in the same way, whether they are [distributed services]({{< relref "../basic-metapatterns/services.md#distributed-services-service-based-architecture-space-based-architecture-microservices" >}}), [co\-located *Actors*]({{< relref "../basic-metapatterns/services.md#distributed-runtime-function-as-a-service-faas-including-nanoservices-backend-actors" >}}), or [in\-process modules]({{< relref "../basic-metapatterns/services.md#asynchronous-modules-modular-monolith-modulith-embedded-actors" >}})\. Thus, for the scope of the current book, we will follow the definition of *Monolith* from \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\]: “Tight coupling leads to *monolithic* systems, where you can't change or remove a class without understanding and changing many other classes”\. Still, we need to account for a couple of misnomers from system architecture\.
+As we aspire to build a unified classification for both distributed and local systems, we must treat both kinds of components in the same way, whether they are [distributed services]({{< relref "../basic-metapatterns/services.md#distributed-services-service-based-architecture-space-based-architecture-microservices" >}}), [co\-located *Actors*]({{< relref "../basic-metapatterns/services.md#distributed-runtime-backend-actors" >}}), or [in\-process modules]({{< relref "../basic-metapatterns/services.md#asynchronous-modules-modular-monolith-modulith-embedded-actors" >}})\. Thus, for the scope of the current book, we will follow the definition of *Monolith* from \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\]: “Tight coupling leads to *monolithic* systems, where you can't change or remove a class without understanding and changing many other classes”\. Still, we need to account for a couple of misnomers from system architecture\.
 
 ### True Monolith, Big Ball of Mud
 
@@ -149,6 +150,20 @@ As we aspire to build a unified classification for both distributed and local sy
 </figure>
 
 A true *Monolith* features [no clear internal structure](http://laputan.org/mud/)\. If it has any components, they are so tightly coupled that the entire thing behaves as a single cohesive module\. This is what we explore in the current chapter\.
+
+### \(inexact\) Lambda Monolith, Monolambda, Lambdalith
+
+<figure>
+<a href="/diagrams/Variants/1/Lambdalith.png">
+<picture>
+<source srcset="/diagrams/Variants/1/Lambdalith.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/1/Lambdalith.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/1/Lambdalith.png" alt="Lambdalith" loading="lazy" width="744" height="303" style="width:80%"/>
+</picture>
+</a>
+</figure>
+
+A [*Monolambda*](https://jesseduffield.com/Notes-On-Lambda/) or [*Lambdalith*](https://theburningmonk.com/2025/03/the-pros-and-cons-of-lambdalith/) is a dynamic [*Pool* of stateless instances]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}}) of a system\. Though each instance may contain [*layers*]({{< relref "../basic-metapatterns/layers.md" >}}) or [*subdomain modules*]({{< relref "../basic-metapatterns/services.md#synchronous-modules-modular-monolith-modulith" >}}), the whole is often called a *Monolith* [because it is deployed as a single unit]({{< relref "../analytics/ambiguous-patterns.md#monolith" >}})\.
 
 ### \(misapplied\) Layered Monolith
 
@@ -236,7 +251,7 @@ That makes sense when the module owns and provides access to a hardware componen
 </a>
 </figure>
 
-A [*Reactor*](https://www.dre.vanderbilt.edu/~schmidt/PDF/reactor-siemens.pdf) \[[POSA2]({{< relref "../appendices/books-referenced.md#posa2" >}})\] may employ multiple threads by having a [*pool*]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}}) of them waiting for a request or data to come\. The incoming event activates a thread, which becomes dedicated to processing it, does several blocking calls and, finally, sends back a response\. When the request processing is complete, the thread returns to the pool of idle threads to wait for the next event to process\.
+A [*Reactor*](https://www.dre.vanderbilt.edu/~schmidt/PDF/reactor-siemens.pdf) \[[POSA2]({{< relref "../appendices/books-referenced.md#posa2" >}})\] may employ multiple threads by having a [*pool*]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}}) of them waiting for a request or data to come\. The incoming event activates a thread, which becomes dedicated to processing it, does several blocking calls and, finally, sends back a response\. When the request processing is complete, the thread returns to the pool of idle threads to wait for the next event to process\.
 
 This is the default simple & stupid implementation of backend services\. Its pitfalls include contention for shared resources, deadlocks, and high memory consumption by OS\-level threads\.
 
@@ -346,7 +361,7 @@ One of the main drawbacks of monolithic architecture is its lack of scalability 
 </a>
 </figure>
 
-- A [*Pool*]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}}) of stateless instances with a [*Load Balancer*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) and a [*Shared Database*]({{< relref "../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) – any instance can process any request, but the database limits the throughput\.
+- A [*Pool*]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}}) of stateless instances with a [*Load Balancer*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) and a [*Shared Database*]({{< relref "../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) – any instance can process any request, but the database limits the throughput\.
 
 
 <figure>

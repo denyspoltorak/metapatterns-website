@@ -84,7 +84,7 @@ If your system’s development [is finished]({{< relref "../../analytics/archite
 
 <ins>Goal</ins>: scale the system\.
 
-<ins>Prerequisite</ins>: some layers are [stateless]({{< relref "../../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}}) or limited to the [data of a single client]({{< relref "../../basic-metapatterns/shards.md#temporary-state-create-on-demand" >}})\.
+<ins>Prerequisite</ins>: some layers are [stateless]({{< relref "../../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}}) or limited to the [data of a single client]({{< relref "../../basic-metapatterns/shards.md#temporary-state-create-on-demand" >}})\.
 
 Multiple instances or layers can be created, with their number and deployment [varying from layer to layer]({{< relref "../../foundations-of-software-architecture/forces--asynchronicity--and-distribution.md#distribution" >}})\. That may work seamlessly if each instance of the layer which receives an event which can start a use case knows the instance of the next layer to communicate to\. Otherwise you will need a *Load Balancer*\.
 

@@ -88,7 +88,7 @@ An *Orchestrator* fulfills two closely related roles:
 </a>
 </figure>
 
-[Data *processing*]({{< relref "../foundations-of-software-architecture/four-kinds-of-software.md#computational-single-run-user-input" >}}) systems, such as backends, may deploy multiple [instances]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}}) of stateless *Orchestrators* to improve stability and performance\. In contrast, an *Orchestrator* in [*control* software]({{< relref "../foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}}) incorporates the highest\-level view of the system’s state thus it cannot be easily replicated \(as any replicated state must be kept synchronized, introducing delay or inconsistency in decision\-making\)\.
+[Data *processing*]({{< relref "../foundations-of-software-architecture/four-kinds-of-software.md#computational-single-run-user-input" >}}) systems, such as backends, may deploy multiple [instances]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}}) of stateless *Orchestrators* to improve stability and performance\. In contrast, an *Orchestrator* in [*control* software]({{< relref "../foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}}) incorporates the highest\-level view of the system’s state thus it cannot be easily replicated \(as any replicated state must be kept synchronized, introducing delay or inconsistency in decision\-making\)\.
 
 ### Performance
 
@@ -238,7 +238,7 @@ A single *Orchestrator* is deployed\. This option fits ordinary medium\-sized pr
 </a>
 </figure>
 
-High availability requires multiple [instances]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}}) of a stateless *Orchestrator* to be deployed\. A *Mediator* \([*Saga*]({{< relref "#orchestrated-saga-saga-orchestrator-saga-execution-component-transaction-script-coordinator" >}}), writing *Orchestrator*\) may store the current transaction’s state in a [*Shared Database*]({{< relref "../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) to assure that if it crashes there is always another instance ready to take up its job\.
+High availability requires multiple [instances]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}}) of a stateless *Orchestrator* to be deployed\. A *Mediator* \([*Saga*]({{< relref "#orchestrated-saga-saga-orchestrator-saga-execution-component-transaction-script-coordinator" >}}), writing *Orchestrator*\) may store the current transaction’s state in a [*Shared Database*]({{< relref "../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) to assure that if it crashes there is always another instance ready to take up its job\.
 
 High load systems also require multiple instances of *Orchestrators* because a single instance is not enough to handle the incoming traffic\.
 

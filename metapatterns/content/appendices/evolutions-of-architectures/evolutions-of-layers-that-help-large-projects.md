@@ -28,13 +28,13 @@ The main drawback \(and benefit\) of [*Layers*]({{< relref "../../basic-metapatt
 </a>
 </figure>
 
-<ins>Patterns</ins>: [Services]({{< relref "../../basic-metapatterns/services.md" >}}), [Shared Database]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) \([Shared Repository]({{< relref "../../extension-metapatterns/shared-repository.md" >}})\), [Orchestrator]({{< relref "../../extension-metapatterns/orchestrator.md" >}})\.
+<ins>Patterns</ins>: [Cell]({{< relref "../../extension-metapatterns/combined-component.md#inexact-cell-wso2-definition" >}}), [Services]({{< relref "../../basic-metapatterns/services.md" >}}), [Shared Database]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) \([Shared Repository]({{< relref "../../extension-metapatterns/shared-repository.md" >}})\), [Orchestrator]({{< relref "../../extension-metapatterns/orchestrator.md" >}})\.
 
 <ins>Goal</ins>: make the code simpler and let several teams work on the project efficiently\.
 
 <ins>Prerequisite</ins>: the low\-level business logic comprises loosely coupled subdomains\.
 
-It is very common for a system’s domain to consist of weakly interacting *bounded contexts* \[[DDD]({{< relref "../../appendices/books-referenced.md#ddd" >}})\]\. They are integrated through high\-level use cases and/or [relations in data]({{< relref "../../foundations-of-software-architecture/arranging-communication/shared-data.md" >}})\. For such a system it is relatively easy to divide the domain logic into *Services* while leaving the integration and data layers shared\.
+It is very common for a system’s domain to consist of weakly interacting *bounded contexts* \[[DDD]({{< relref "../../appendices/books-referenced.md#ddd" >}})\]\. They are integrated through high\-level use cases and/or [relations in data]({{< relref "../../foundations-of-software-architecture/arranging-communication/shared-data.md" >}})\. For such a system it is relatively easy to divide the domain logic into *Services* while leaving the integration and data layers shared, yielding a *Cell*\.
 
 <ins>Pros</ins>: 
 

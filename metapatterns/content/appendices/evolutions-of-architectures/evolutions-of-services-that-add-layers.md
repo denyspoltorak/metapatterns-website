@@ -11,7 +11,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 The most common modifications to a [system of *Services*]({{< relref "../../basic-metapatterns/services.md" >}}) involve supplementary system\-wide *layers* which compensate for the inability of the *Services* to share anything among themselves:
 
-- A [*Middleware*]({{< relref "../../extension-metapatterns/middleware.md" >}}) knows of all the deployed service [instances]({{< relref "../../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}})\. It mediates communication between them and may manage their scaling and failure recovery\.
+- A [*Middleware*]({{< relref "../../extension-metapatterns/middleware.md" >}}) knows of all the deployed service [instances]({{< relref "../../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}})\. It mediates communication between them and may manage their scaling and failure recovery\.
 - [*Sidecars*]({{< relref "../../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \[[DDS]({{< relref "../../appendices/books-referenced.md#dds" >}})\] of a [*Service Mesh*]({{< relref "../../implementation-metapatterns/mesh.md#service-mesh" >}}) make a virtual layer of [shared libraries]({{< relref "../../analytics/comparison-of-architectural-patterns/sharing-functionality-or-data-among-services.md" >}}) for the [*Microservices*]({{< relref "../../basic-metapatterns/services.md#microservices" >}}) it hosts\.
 - A [*Shared Database*]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) simplifies the initial phases of development and provides data consistency and [interservice communication]({{< relref "../../foundations-of-software-architecture/arranging-communication/shared-data.md" >}})\.
 - [*Proxies*]({{< relref "../../extension-metapatterns/proxy.md" >}}) stand between the system and its clients and take care of shared aspects that otherwise would need to be implemented by every service\.
@@ -81,7 +81,7 @@ Distributed systems may fail in a zillion ways\. You want to ruminate neither on
 
 <ins>Goal</ins>: support dynamic scaling and interservice communication out of the box; share libraries among the services\.
 
-<ins>Prerequisite</ins>: service instances are mostly [stateless]({{< relref "../../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}})\.
+<ins>Prerequisite</ins>: service instances are mostly [stateless]({{< relref "../../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}})\.
 
 The [*Microservices*]({{< relref "../../basic-metapatterns/services.md#microservices" >}}) architecture boasts dynamic scaling under load thanks to its *Mesh*\-based *Middleware*\. It also allows for the services to share libraries in *Sidecars* \[[DDS]({{< relref "../../appendices/books-referenced.md#dds" >}})\] – additional containers co\-located with each service instance – to avoid duplication of generic code among the services\.
 

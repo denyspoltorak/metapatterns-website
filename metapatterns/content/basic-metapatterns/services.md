@@ -30,7 +30,7 @@ By isolation:
 - Synchronous modules: [Modular Monolith](https://medium.com/design-microservices-architecture-with-patterns/microservices-killer-modular-monolithic-architecture-ac83814f6862) \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] \(Modulith\),
 - Asynchronous modules: [Modular Monolith](https://medium.com/design-microservices-architecture-with-patterns/microservices-killer-modular-monolithic-architecture-ac83814f6862) \(Modulith\) / [Embedded Actors](https://medium.com/itnext/introduction-to-software-architecture-with-actors-part-1-89de6000e0d3),
 - Multiple processes,
-- Distributed runtime: [Function as a Service](https://www.bmc.com/blogs/serverless-faas/) \(FaaS\) \(including [Nanoservices](https://medium.com/@ido.vapner/unlocking-the-power-of-nano-services-a-new-era-in-microservices-architecture-22647ea36f22)\) / [Backend Actors](https://volodymyrpavlyshyn.medium.com/actors-actor-systems-as-massively-distributed-scalability-architecture-5e40f5ea9e86),
+- Distributed runtime: [Backend Actors](https://volodymyrpavlyshyn.medium.com/actors-actor-systems-as-massively-distributed-scalability-architecture-5e40f5ea9e86),
 - Distributed services: Service\-Based Architecture \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] / Space\-Based Architecture \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] / Microservices\.
 
 
@@ -53,15 +53,15 @@ By size:
 By internal structure:
 
 - Monolithic service,
-- Layered service,
-- Hexagonal service,
 - Scaled service,
-- Cell \([WSO2 definition](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md)\) \(service of services\) / Domain \([Uber definition](https://www.uber.com/blog/microservice-architecture/)\) / Cluster \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\]\.
+- Layered service,
+- Cell \([WSO2 definition](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md)\) \(service of services\) / Domain \([Uber definition](https://www.uber.com/blog/microservice-architecture/)\) / Cluster \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\],
+- Hexagonal service\.
 
 
 Examples:
 
-- Service\-Based Architecture \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}}) but [not]({{< relref "../analytics/ambiguous-patterns.md#service-based-architecture" >}}) [DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\],
+- Service\-Based Architecture \(SBA\) \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}}) but [not]({{< relref "../analytics/ambiguous-patterns.md#service-based-architecture" >}}) [DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\],
 - Microservices \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}}), [FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\],
 - [Actors](https://volodymyrpavlyshyn.medium.com/actors-actor-systems-as-massively-distributed-scalability-architecture-5e40f5ea9e86),
 - \(inexact\) Nanoservices \(API layer\),
@@ -110,7 +110,7 @@ Worse is when an event starts a chain reaction throughout the system, likely loo
 
 In the slowest scenario a service needs to synchronize its state with multiple other services, usually via *locks* and *distributed transactions*\.
 
-Multiple [instances]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}}) of an individual service may be deployed to improve throughput of the system\. However, such a case will likely need a [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) or [*Load Balancer*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) to distribute interservice requests among the instances and a [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) to store and synchronize any non\-shardable \(accessed by several instances\) state\.
+Multiple [instances]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}}) of an individual service may be deployed to improve throughput of the system\. However, such a case will likely need a [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) or [*Load Balancer*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) to distribute interservice requests among the instances and a [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) to store and synchronize any non\-shardable \(accessed by several instances\) state\.
 
 ### Dependencies
 
@@ -240,7 +240,7 @@ There is also the option of running system components as separate binaries which
 | <span class="book-green">Software fault isolation</span> | <span class="book-red">Data inconsistencies after partial crashes</span> |
 | <span class="book-green">Limited granular scalability</span> |  |
 
-### Distributed runtime: Function as a Service \(FaaS\) \(including Nanoservices\), Backend Actors
+### Distributed runtime: Backend Actors
 
 Modern distributed [runtimes](https://en.wikipedia.org/wiki/Runtime_system) create a virtual namespace that may be deployed on a single machine or over a network\. They may redistribute running components over servers in a way to minimize network communication and may offer distributed debugging\. With [*Actors*](https://en.wikipedia.org/wiki/Actor_model), if one of them crashes, that generates a message to another actor which may decide on how to handle the error\. The convenience of using a runtime has the dark side of vendor lock\-in\.
 
@@ -311,7 +311,7 @@ Last but not least, the simplest classification of subdomain\-separated componen
 
 ### Whole subdomain: \(Sub\-\)Domain Services
 
-Each *Domain Service* \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] of [*Service\-Based Architecture*]({{< relref "#service-based-architecture" >}}) \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] implements a whole subdomain\. It is the product of the full\-time work of a dedicated team\. A project is unlikely to have more than 10 of such services \(in part because the number of top\-level subdomains in any domain is usually limited\)\.
+Each *Domain Service* \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] of [*Service\-Based Architecture*]({{< relref "#service-based-architecture-sba" >}}) \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] implements a whole subdomain\. It is the product of the full\-time work of a dedicated team\. A project is unlikely to have more than 10 of such services \(in part because the number of top\-level subdomains in any domain is usually limited\)\.
 
 ### Part of a subdomain: Microservices
 
@@ -353,6 +353,20 @@ A service is not necessarily monolithic inside\. Because a service is encapsulat
 
 A *monolithic service* is a service with no definite internal structure, probably small enough to allow for complete rewrite instead of refactoring – the ideal of proponents of [*Microservices*]({{< relref "#microservices" >}})\. It is simple & stupid to implement but relies on external sources of persistent data\. For example, *device drivers* and [*Actors*]({{< relref "#actors" >}}) usually get their \(persisted\) configuration during initialization\. A monolithic backend service may receive all the data it needs in incoming requests, via a query to another service, or by reading it from a [*Shared Database*]({{< relref "../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}})\.
 
+### Scaled service
+
+<figure>
+<a href="/diagrams/Variants/1/Service%20-%20Scaled.png">
+<picture>
+<source srcset="/diagrams/Variants/1/Service%20-%20Scaled.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/1/Service%20-%20Scaled.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/1/Service%20-%20Scaled.png" alt="Service - Scaled" loading="lazy" width="1363" height="405" style="width:100%"/>
+</picture>
+</a>
+</figure>
+
+With *scaled services* there are multiple [*instances*]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}}) of a service\. In most cases they [*share a database*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) \(though sometimes the database may be [*sharded*]({{< relref "../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-cells-amazon-definition" >}}) or [*replicated*]({{< relref "../basic-metapatterns/shards.md#persistent-copy-replica" >}}) together with the service that uses it\) and get their requests through a [*Load Balancer* or *Sharding Proxy*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}})\.
+
 ### Layered service
 
 <figure>
@@ -371,6 +385,26 @@ Layering provides all of the benefits from the [*Layers*]({{< relref "../basic-m
 
 Another benefit comes from the existence of the upper integration layer which may [orchestrate interactions with other services]({{< relref "../foundations-of-software-architecture/arranging-communication/orchestration.md#mutual-orchestration" >}}), isolating the lower layers from external dependencies\.
 
+### Cell \(WSO2 definition\) \(service of services\), Domain \(Uber definition\), Cluster
+
+<figure>
+<a href="/diagrams/Variants/1/Service%20-%20Cell.png">
+<picture>
+<source srcset="/diagrams/Variants/1/Service%20-%20Cell.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/1/Service%20-%20Cell.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/1/Service%20-%20Cell.png" alt="Service - Cell" loading="lazy" width="903" height="425" style="width:100%"/>
+</picture>
+</a>
+</figure>
+
+When a service is split into a set of subservices, it makes a [*Cell*](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md) \(WSO2 name\), [*Domain*](https://www.uber.com/blog/microservice-architecture/) \(Uber name\), or *Cluster* \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\]\. All the incoming communication passes through a [*Cell Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) which encapsulates the *Cell* from its environment\. Outgoing communication may involve the *Cell Gateway* or dedicated [*Adapters*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) \(*Anticorruption Layer* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\) A *Cell* may deploy its own [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) and/or [*share a database*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) among its components\. 
+
+[*Cell\-Based Architecture*]({{< relref "../fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services" >}}) \([according to WSO2](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md), as opposed to [Amazon's alias](https://docs.aws.amazon.com/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/what-is-a-cell-based-architecture.html) for [*Shards*]({{< relref "../basic-metapatterns/shards.md" >}})\) appears when there is a need to recursively split a service, either because it grew too large or because it makes sense to use several incompatible technologies for its parts\. It may also be applied to group services if there are too many of them in the system\.
+
+[*Domain\-Oriented Microservice Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#domain-oriented-microservice-architecture-doma" >}}) \(DOMA\) is a [*SOA*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}})\-style layered system of *Cells*\.
+
+The origin of *Cells* [is discussed]({{< relref "../extension-metapatterns/combined-component.md#inexact-cell-wso2-definition" >}}) in the [*Combined Component*]({{< relref "../extension-metapatterns/combined-component.md" >}}) chapter\.
+
 ### Hexagonal service
 
 <figure>
@@ -387,45 +421,13 @@ A *hexagonal service* has its external dependencies isolated behind vendor\-agno
 
 This is a real\-world application of [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) which both ensures that the business logic does not depend on specific technologies and protects from vendor lock\-in\. It is highly recommended for long\-lived projects\.
 
-### Scaled service
-
-<figure>
-<a href="/diagrams/Variants/1/Service%20-%20Scaled.png">
-<picture>
-<source srcset="/diagrams/Variants/1/Service%20-%20Scaled.svg" media="(prefers-color-scheme: light)"/>
-<source srcset="/diagrams/Variants/1/Service%20-%20Scaled.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Service%20-%20Scaled.png" alt="Service - Scaled" loading="lazy" width="1363" height="405" style="width:100%"/>
-</picture>
-</a>
-</figure>
-
-With *scaled services* there are multiple [*instances*]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}}) of a service\. In most cases they [*share a database*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) \(though sometimes the database may be [*sharded*]({{< relref "../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-cells-amazon-definition" >}}) or [*replicated*]({{< relref "../basic-metapatterns/shards.md#persistent-copy-replica" >}}) together with the service that uses it\) and get their requests through a [*Load Balancer* or *Sharding Proxy*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}})\.
-
-### Cell \(WSO2 definition\) \(service of services\), Domain \(Uber definition\), Cluster
-
-<figure>
-<a href="/diagrams/Variants/1/Service%20-%20Cell.png">
-<picture>
-<source srcset="/diagrams/Variants/1/Service%20-%20Cell.svg" media="(prefers-color-scheme: light)"/>
-<source srcset="/diagrams/Variants/1/Service%20-%20Cell.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Service%20-%20Cell.png" alt="Service - Cell" loading="lazy" width="903" height="425" style="width:100%"/>
-</picture>
-</a>
-</figure>
-
-When a service is split into a set of subservices, it makes a [*Cell*](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md) \(WSO2 name\), [*Domain*](https://www.uber.com/blog/microservice-architecture/) \(Uber name\), or *Cluster* \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\]\. All the incoming communication passes through a [*Cell Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) which encapsulates the *Cell* from its environment\. Outgoing communication may involve the *Cell Gateway* or dedicated [*Adapters*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) \(*Anticorruption Layer* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\) A *Cell* may deploy its own [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) and/or [*share a database*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) among its components\.
-
-[*Cell\-Based Architecture*]({{< relref "../fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services" >}}) \([according to WSO2](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md), as opposed to [Amazon's alias](https://docs.aws.amazon.com/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/what-is-a-cell-based-architecture.html) for [*Shards*]({{< relref "../basic-metapatterns/shards.md" >}})\) appears when there is a need to recursively split a service, either because it grew too large or because it makes sense to use several incompatible technologies for its parts\. It may also be applied to group services if there are too many of them in the system\.
-
-[*Domain\-Oriented Microservice Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#domain-oriented-microservice-architecture-doma" >}}) \(DOMA\) is a [*SOA*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}})\-style layered system of *Cells*\.
-
 ## Examples
 
 *Services* are pervasive among advanced architectures which either build around a layer of services that contains the bulk of the business logic \([*Proxy*]({{< relref "../extension-metapatterns/proxy.md" >}}), [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}), [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) and [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}})\) or use small services as an extension of the main monolithic component \([*PlugIns*]({{< relref "../implementation-metapatterns/plugins.md" >}}) and [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}})\)\. [*Polyglot Persistence*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md" >}}), [*Backends for Frontends*]({{< relref "../fragmented-metapatterns/backends-for-frontends--bff-.md" >}}) and [*Service\-Oriented Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}) go all out partitioning the system into interconnected layers of services\. [*Hierarchy*]({{< relref "../fragmented-metapatterns/hierarchy.md" >}}) and [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}}) require the services to implement or use a polymorphic interface to simplify the components that manage them\.
 
 Examples of *Services* include:
 
-### Service\-Based Architecture
+### Service\-Based Architecture \(SBA\)
 
 <figure>
 <a href="/diagrams/Variants/1/Service-Based%20Architecture.png">
@@ -437,7 +439,9 @@ Examples of *Services* include:
 </a>
 </figure>
 
-This is the simplest use of *Services* where each subdomain gets a dedicated component\. A *Service\-Based Architecture* \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] tends to consist of a few coarse\-grained services, some of which may [*share a database*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) and have little direct communication\. An [*API Gateway*]({{< relref "../extension-metapatterns/combined-component.md#api-gateway" >}}) is often present as well\.
+This is the simplest use of *Services* where each subdomain gets a dedicated component\. A *Service\-Based Architecture* \(*SBA*\) \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] tends to consist of a few coarse\-grained services, some of which may [*share a database*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) and have little direct communication\. An [*API Gateway*]({{< relref "../extension-metapatterns/combined-component.md#api-gateway" >}}) is often present as well\.
+
+*SBA* is similar to a system\-wide [*Cell*]({{< relref "../extension-metapatterns/combined-component.md#inexact-cell-wso2-definition" >}})\.
 
 ### Microservices
 
@@ -457,7 +461,7 @@ This is the simplest use of *Services* where each subdomain gets a dedicated com
 
 This architecture usually relies on a [*Service Mesh*]({{< relref "../extension-metapatterns/combined-component.md#service-mesh" >}}) for [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) where common functionality, like logging, is implemented in co\-located [*Sidecars*]({{< relref "../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\]\. A layer of [*Orchestrators*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) \(called *Integration Microservices*\) [may be present](https://github.com/wso2/reference-architecture/blob/master/api-driven-microservice-architecture.md), resulting in [*Cell\-Based Architecture*]({{< relref "../fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services" >}}) or [*Backends for Frontends*]({{< relref "../fragmented-metapatterns/backends-for-frontends--bff-.md" >}})\.
 
-*Dynamically scaled* [*Pools*]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}}) of service instances are common thanks to the elasticity of hosting in a cloud\. Extreme elasticity requires [*Space\-Based Architecture*]({{< relref "../extension-metapatterns/combined-component.md#middleware-of-space-based-architecture" >}}), which puts a [distributed in\-memory database]({{< relref "../extension-metapatterns/shared-repository.md#data-grid-of-space-based-architecture-sba-replicated-cache-distributed-cache" >}}) node in each *Sidecar*\.
+*Dynamically scaled* [*Pools*]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}}) of service instances are common thanks to the elasticity of hosting in a cloud\. Extreme elasticity requires [*Space\-Based Architecture*]({{< relref "../extension-metapatterns/combined-component.md#middleware-of-space-based-architecture" >}}), which puts a [distributed in\-memory database]({{< relref "../extension-metapatterns/shared-repository.md#data-grid-of-space-based-architecture-sba-replicated-cache-distributed-cache" >}}) node in each *Sidecar*\.
 
 <aside>
 
@@ -501,7 +505,7 @@ If we apply a bit of generalization, we can deduce that any server or backend se
 </a>
 </figure>
 
-Though *Nanoservices* are defined by their size \(a single function\), not system topology, I want to mention a specific application from Diego Zanon’s book *Building Serverless Web Applications*\. That example is interesting because it comprises a single layer of isolated functions \(each providing a single API method\) which may share functionality by including code from a common repository\. As nanoservices of this kind never interact, the common drawbacks of *Services* \(poor debugging and high latency\) don’t apply to them\.
+Though *Nanoservices* are defined by their size \(a single function\), not system topology, I want to mention a specific application from Diego Zanon’s book *Building Serverless Web Applications*\. That example is interesting because it comprises a single layer of isolated functions \(each providing a single API method\) which may share functionality by including code from a common repository\. As nanoservices of this kind never interact directly \([they rely]({{< relref "../foundations-of-software-architecture/arranging-communication/shared-data.md" >}}) on a [*Shared Database*]({{< relref "../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) instead\) the common drawbacks of *Services* \(poor debugging and high latency\) don’t apply to them\.
 
 ### \(inexact\) Device Drivers
 
@@ -643,7 +647,7 @@ Each service starts as either a [*Monolith*]({{< relref "../basic-metapatterns/m
 
 - [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}) help to reuse third\-party components \(e\.g\. a database\), organize the code, support conflicting forces and the upper layer of the service may [orchestrate other services]({{< relref "../foundations-of-software-architecture/arranging-communication/orchestration.md#mutual-orchestration" >}})\.
 - A [*Cell*]({{< relref "#cell-wso2-definition-service-of-services-domain-uber-definition-cluster" >}}) is a service which is subdivided into several services that share an [*API Gateway*]({{< relref "../extension-metapatterns/combined-component.md#api-gateway" >}}) and may [share a database]({{< relref "../extension-metapatterns/shared-repository.md" >}}) and/or a [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}})\. All of the components of a *Cell* are usually deployed together\. That helps when dealing with overgrown services without increasing the operational complexity of the system – but only if the *Cell*’s components are loosely coupled\.
-- A service may use a [*Load Balancer*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) or a load balancing [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) to scale\. Its [*instances*]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}}) usually rely on a [*Shared Database*]({{< relref "../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) for persistence\.
+- A service may use a [*Load Balancer*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) or a load balancing [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) to scale\. Its [*instances*]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}}) usually rely on a [*Shared Database*]({{< relref "../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) for persistence\.
 - [*Polyglot Persistence*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md" >}}) or [*CQRS*]({{< relref "../fragmented-metapatterns/layered-services.md#command-query-responsibility-segregation-cqrs" >}}) may be used inside a service to improve the performance of its data layer\.
 - [*CQRS Views*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] or a [*Query Service*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#query-service-front-controller-data-warehouse-data-lake-aggregate-data-product-quantum-dpq-of-data-mesh" >}}) \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] help reconstruct the state of other services from *event sourcing*\.
 - [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) isolates the business logic of the service from external dependencies\.

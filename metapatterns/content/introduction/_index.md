@@ -19,7 +19,7 @@ bookCollapseSection = true
 
 ## Opentowork
 
-I am looking for a good job\. Embedded or high load C / C\+\+\. B2B from Ukraine\. I can gather a team\.
+As a software architecture consultant, my background includes 15 years of hands\-on coding with 6 years of technical project management\.
 
 ## This book needs examples
 

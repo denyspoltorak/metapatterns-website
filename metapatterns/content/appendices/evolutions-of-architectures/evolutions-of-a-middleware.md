@@ -29,7 +29,7 @@ A [*Middleware*]({{< relref "../../extension-metapatterns/middleware.md" >}}) is
 
 <ins>Patterns</ins>: [Middleware]({{< relref "../../extension-metapatterns/middleware.md" >}})\.
 
-<ins>Goal</ins>: support specialized communication between [scaled]({{< relref "../../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}}) services\.
+<ins>Goal</ins>: support specialized communication between [scaled]({{< relref "../../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}}) services\.
 
 <ins>Prerequisite</ins>: the system relies on a *Middleware* for scaling\.
 
