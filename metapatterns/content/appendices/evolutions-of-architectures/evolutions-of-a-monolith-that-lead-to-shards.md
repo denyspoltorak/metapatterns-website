@@ -13,8 +13,8 @@ One of the main drawbacks of the monolithic architecture is its lack of scalabil
 
 - Self\-managed [*Shards*]({{< relref "../../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-cells-amazon-definition" >}}) – each instance owns a part of the system’s data and may communicate with all the other instances \(forming a [*Mesh*]({{< relref "../../implementation-metapatterns/mesh.md" >}})\)\.
 - *Shards* with a [*Sharding Proxy*]({{< relref "../../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) – each instance owns a part of the system’s data and relies on the external component to choose a shard for a client\.
-- A [*Pool of stateless instances*]({{< relref "../../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}}) with a [*Load Balancer*]({{< relref "../../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) and a [*Shared Database*]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) – any instance can process any request, but the database limits the throughput\.
-- A [*stateful instance per client*]({{< relref "../../basic-metapatterns/shards.md#temporary-state-create-on-demand" >}}) with an external persistent storage – each instance owns the data related to its client and runs in a virtual environment \(i\.e\. web browser or an [actor framework]({{< relref "../../basic-metapatterns/services.md#distributed-runtime-function-as-a-service-faas-including-nanoservices-backend-actors" >}})\)\.
+- A [*Pool of stateless instances*]({{< relref "../../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}}) with a [*Load Balancer*]({{< relref "../../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) and a [*Shared Database*]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) – any instance can process any request, but the database limits the throughput\.
+- A [*stateful instance per client*]({{< relref "../../basic-metapatterns/shards.md#temporary-state-create-on-demand" >}}) with an external persistent storage – each instance owns the data related to its client and runs in a virtual environment \(i\.e\. web browser or an [actor framework]({{< relref "../../basic-metapatterns/services.md#distributed-runtime-backend-actors" >}})\)\.
 
 
 ## Implement a Mesh of self\-managed shards
@@ -95,7 +95,7 @@ If all the data a user operates on, directly or indirectly, is never accessed by
 </a>
 </figure>
 
-<ins>Patterns</ins>: [Pool]({{< relref "../../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}}) \([Shards]({{< relref "../../basic-metapatterns/shards.md" >}})\), [Shared Database]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) \([Shared Repository]({{< relref "../../extension-metapatterns/shared-repository.md" >}})\), [Load Balancer]({{< relref "../../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) \([Proxy]({{< relref "../../extension-metapatterns/proxy.md" >}})\), [Layers]({{< relref "../../basic-metapatterns/layers.md" >}})\.
+<ins>Patterns</ins>: [Pool]({{< relref "../../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}}) \([Shards]({{< relref "../../basic-metapatterns/shards.md" >}})\), [Shared Database]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) \([Shared Repository]({{< relref "../../extension-metapatterns/shared-repository.md" >}})\), [Load Balancer]({{< relref "../../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) \([Proxy]({{< relref "../../extension-metapatterns/proxy.md" >}})\), [Layers]({{< relref "../../basic-metapatterns/layers.md" >}})\.
 
 <ins>Goal</ins>: achieve scalability with little effort\.
 
@@ -135,7 +135,7 @@ As data moves into a dedicated layer, the application becomes stateless and inst
 
 <ins>Prerequisite</ins>: each client’s data is small and independent of other clients\.
 
-Each client gets an instance of the application which preloads their data into memory\. This way all the data is instantly accessible and a processing fault from one client never affects the other clients\. As systems tend to have thousands to millions of clients, it is inefficient to spawn a process per client\. Instead, more lightweight entities are used: a web app in a browser or an *actor* in a [distributed framework]({{< relref "../../basic-metapatterns/services.md#distributed-runtime-function-as-a-service-faas-including-nanoservices-backend-actors" >}})\.
+Each client gets an instance of the application which preloads their data into memory\. This way all the data is instantly accessible and a processing fault from one client never affects the other clients\. As systems tend to have thousands to millions of clients, it is inefficient to spawn a process per client\. Instead, more lightweight entities are used: a web app in a browser or an *actor* in a [distributed framework]({{< relref "../../basic-metapatterns/services.md#distributed-runtime-backend-actors" >}})\.
 
 <ins>Pros</ins>: 
 

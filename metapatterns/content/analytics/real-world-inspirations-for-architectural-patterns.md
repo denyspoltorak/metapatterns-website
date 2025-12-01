@@ -329,6 +329,7 @@ An implementation pattern highlights the peculiar internal arrangements of a com
 
 - A drill or a screwdriver has replaceable bits\.
 - *OS Abstraction Layer* and *Hardware Abstraction Layer* in embedded systems or *Anti\-Corruption Layer* in \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] are all about that\.
+- The [*impure/pure/impure sandwich*](https://blog.ploeh.dk/2020/03/02/impureim-sandwich/) of functional programming is closely related\. In both cases the core of the system cannot change anything outside of itself directly \(any external communication relies on *adapters*\) and it is [deterministic if single\-threaded](http://ithare.com/chapter-vc-modular-architecture-client-side-on-debugging-distributed-systems-deterministic-logic-and-finite-state-machines/)\.
 
 
 ### Microkernel

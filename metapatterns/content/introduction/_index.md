@@ -16,7 +16,7 @@ bookCollapseSection = true
 
 *<span class="book-green">of Software Architecture</span>*
 
-*<span class="book-green">v 1\.1\.1 \(10\-2025\)</span>*
+*<span class="book-green">v 1\.1\.2 \(12\-2025\)</span>*
 
 <span class="book-green">Denys Poltorak \(author\)</span>
 
@@ -38,7 +38,7 @@ bookCollapseSection = true
 
 ## Opentowork
 
-I am looking for a good job\. Embedded or high load C / C\+\+\. B2B from Ukraine\. I can gather a team\.
+As a software architecture consultant, my background includes 15 years of hands\-on coding with 6 years of technical project management\.
 
 ## This book needs examples
 

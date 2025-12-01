@@ -15,7 +15,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Actors]({{< relref "../implementation-metapatterns/mesh.md#actors" >}}) \(as Mesh\)
 
-[Actors]({{< relref "../basic-metapatterns/services.md#distributed-runtime-function-as-a-service-faas-including-nanoservices-backend-actors" >}}) \(backend\)
+[Actors]({{< relref "../basic-metapatterns/services.md#distributed-runtime-backend-actors" >}}) \(backend\)
 
 [Actors]({{< relref "../basic-metapatterns/services.md#asynchronous-modules-modular-monolith-modulith-embedded-actors" >}}) \(embedded systems\)
 
@@ -161,7 +161,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Distributed Monolith]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#distributed-monolith" >}})
 
-[Distributed Runtime]({{< relref "../basic-metapatterns/services.md#distributed-runtime-function-as-a-service-faas-including-nanoservices-backend-actors" >}}) \(client point of view\)
+[Distributed Runtime]({{< relref "../basic-metapatterns/services.md#distributed-runtime-backend-actors" >}}) \(client point of view\)
 
 [Distributed Runtime]({{< relref "../implementation-metapatterns/microkernel.md#virtualizer-hypervisor-container-orchestrator-distributed-runtime" >}}) \(internals\)
 
@@ -207,7 +207,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [External Search Index]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#external-search-index" >}})
 
-[FaaS]({{< relref "../basic-metapatterns/services.md#distributed-runtime-function-as-a-service-faas-including-nanoservices-backend-actors" >}})
+[FaaS]({{< relref "../basic-metapatterns/services.md#single-function-faas-nanoservices" >}}) \(nanoservices\)
 
 [FaaS]({{< relref "../basic-metapatterns/pipeline.md#function-as-a-service-faas-nanoservices-pipelined" >}}) \(pipelined\)
 
@@ -221,7 +221,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Full Proxy]({{< relref "../extension-metapatterns/proxy.md#full-proxy" >}})
 
-[Function as a Service]({{< relref "../basic-metapatterns/services.md#distributed-runtime-function-as-a-service-faas-including-nanoservices-backend-actors" >}})
+[Function as a Service]({{< relref "../basic-metapatterns/services.md#distributed-runtime-backend-actors" >}})
 
 [Game Development Engine]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}})
 
@@ -264,6 +264,12 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 [Integration Microservice]({{< relref "../extension-metapatterns/orchestrator.md#integration-micro-service-application-service" >}})
 
 [Interpreter]({{< relref "../implementation-metapatterns/microkernel.md#interpreter-script-domain-specific-language-dsl" >}})
+
+[Lambda Monolith]({{< relref "../basic-metapatterns/monolith.md#inexact-lambda-monolith-monolambda-lambdalith" >}})
+
+[Lambdalith]({{< relref "../basic-metapatterns/monolith.md#inexact-lambda-monolith-monolambda-lambdalith" >}})
+
+[Lambdas]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}})
 
 [Layered Architecture]({{< relref "../basic-metapatterns/layers.md" >}})
 
@@ -331,6 +337,8 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Modulith]({{< relref "../basic-metapatterns/services.md#asynchronous-modules-modular-monolith-modulith-embedded-actors" >}})
 
+[Monolambda]({{< relref "../basic-metapatterns/monolith.md#inexact-lambda-monolith-monolambda-lambdalith" >}}) \(lambda Monolith\)
+
 [Monolith]({{< relref "../basic-metapatterns/monolith.md" >}})
 
 [Monolithic Service]({{< relref "../basic-metapatterns/services.md#monolithic-service" >}})
@@ -341,7 +349,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Nanoservices]({{< relref "../basic-metapatterns/services.md#inexact-nanoservices-api-layer" >}}) \(API layer\)
 
-[Nanoservices]({{< relref "../basic-metapatterns/services.md#distributed-runtime-function-as-a-service-faas-including-nanoservices-backend-actors" >}}) \(as runtime\)
+[Nanoservices]({{< relref "../basic-metapatterns/services.md#distributed-runtime-backend-actors" >}}) \(as runtime\)
 
 [Nanoservices]({{< relref "../basic-metapatterns/pipeline.md#function-as-a-service-faas-nanoservices-pipelined" >}}) \(pipelined\)
 
@@ -397,7 +405,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Ports and Adapters]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#hexagonal-architecture-ports-and-adapters" >}})
 
-[Pool]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}}) \(stateless instances\)
+[Pool]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}}) \(stateless instances\)
 
 [Presentation\-Abstraction\-Control]({{< relref "../fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}}) \(PAC\)
 
@@ -433,7 +441,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Replicated Cache]({{< relref "../extension-metapatterns/proxy.md#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}})
 
-[Replicated Stateless Services]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}}) \(instances\)
+[Replicated Stateless Services]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}}) \(instances\)
 
 [Reporting Database]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}})
 
@@ -465,7 +473,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Separated Presentation]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#examples--separated-presentation" >}})
 
-[Service\-Based Architecture]({{< relref "../basic-metapatterns/services.md#service-based-architecture" >}}) \(architecture\)
+[Service\-Based Architecture]({{< relref "../basic-metapatterns/services.md#service-based-architecture-sba" >}}) \(architecture\)
 
 [Service\-Based Architecture]({{< relref "../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) \(shared database\)
 
@@ -533,7 +541,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Virtualizer]({{< relref "../implementation-metapatterns/microkernel.md#virtualizer-hypervisor-container-orchestrator-distributed-runtime" >}})
 
-[Work Queue]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}})
+[Work Queue]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}})
 
 [Workflow System]({{< relref "../basic-metapatterns/pipeline.md#pipes-and-filters-workflow-system" >}})
 

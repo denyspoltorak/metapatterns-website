@@ -97,7 +97,7 @@ It is possible to avoid both adding a *Gateway* and having the cyclic dependency
 </a>
 </figure>
 
-*Early response* allows for choreography to shine in its purest form: with extensibility, high performance, but also high latency\. A similar approach may be used in [*Service\-Based Architecture*]({{< relref "../../basic-metapatterns/services.md#service-based-architecture" >}}) \[[FSA]({{< relref "../../appendices/books-referenced.md#fsa" >}})\] \(aka *Macroservices*\) [for communication between the services](https://learn.microsoft.com/en-us/azure/architecture/patterns/choreography) \(*bounded contexts*\) if they only need to notify each other of events without waiting for responses\.
+*Early response* allows for choreography to shine in its purest form: with extensibility, high performance, but also high latency\. A similar approach may be used in [*Service\-Based Architecture*]({{< relref "../../basic-metapatterns/services.md#service-based-architecture-sba" >}}) \[[FSA]({{< relref "../../appendices/books-referenced.md#fsa" >}})\] \(aka *Macroservices*\) [for communication between the services](https://learn.microsoft.com/en-us/azure/architecture/patterns/choreography) \(*bounded contexts*\) if they only need to notify each other of events without waiting for responses\.
 
 ## Dependencies
 

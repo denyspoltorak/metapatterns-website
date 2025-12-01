@@ -40,7 +40,7 @@ images = ["/diagrams/Web/og/Layered%20Services.png"]
 
 Remarkable features of *Layered Services* include:
 
-- Independent scaling of layers of the services\. It is common to have multiple [instances]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}}) \(with the number varying from service to service and changing dynamically under load\) of the layers that contain business logic while the corresponding data layers \(databases\) are limited to a single instance\.
+- Independent scaling of layers of the services\. It is common to have multiple [instances]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}}) \(with the number varying from service to service and changing dynamically under load\) of the layers that contain business logic while the corresponding data layers \(databases\) are limited to a single instance\.
 
 
 <figure>

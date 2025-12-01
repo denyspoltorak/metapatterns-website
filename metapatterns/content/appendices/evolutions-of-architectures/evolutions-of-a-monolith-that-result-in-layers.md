@@ -93,7 +93,7 @@ A datastore is non\-trivial to implement\. While ordinary files are good for sma
 
 <ins>Further steps</ins>:
 
-- Deploy multiple [*instances*]({{< relref "../../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}}) of your application behind a [*Load Balancer*]({{< relref "../../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}})\.
+- Deploy multiple [*instances*]({{< relref "../../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}}) of your application behind a [*Load Balancer*]({{< relref "../../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}})\.
 - Continue the transition to [*Layers*]({{< relref "../../basic-metapatterns/layers.md" >}}) by separating the high\-level and low\-level business logic\.
 - [*Polyglot Persistence*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md" >}}) improves performance of the data layer\.
 - [*CQRS*]({{< relref "../../fragmented-metapatterns/layered-services.md#command-query-responsibility-segregation-cqrs" >}}) passes read and write requests through dedicated services\. 
@@ -205,7 +205,7 @@ Another set of evolutions stems from splitting one or more *layers* into [*Servi
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%201.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%201.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%201.png" alt="Monolith to Layers - Further 1" loading="lazy" width="1126" height="843" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%201.png" alt="Monolith to Layers - Further 1" loading="lazy" width="1126" height="826" style="width:100%"/>
 </picture>
 </a>
 </figure>

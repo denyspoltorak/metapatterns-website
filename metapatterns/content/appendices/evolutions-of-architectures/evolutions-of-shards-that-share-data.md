@@ -29,7 +29,7 @@ One issue peculiar to [*Shards*]({{< relref "../../basic-metapatterns/shards.md"
 </a>
 </figure>
 
-<ins>Patterns</ins>: [Pool]({{< relref "../../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue" >}}) \([Shards]({{< relref "../../basic-metapatterns/shards.md" >}})\), [Shared Database]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) \([Shared Repository]({{< relref "../../extension-metapatterns/shared-repository.md" >}})\), [Load Balancer]({{< relref "../../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) \([Proxy]({{< relref "../../extension-metapatterns/proxy.md" >}})\), [Layers]({{< relref "../../basic-metapatterns/layers.md" >}})\.
+<ins>Patterns</ins>: [Pool]({{< relref "../../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}}) \([Shards]({{< relref "../../basic-metapatterns/shards.md" >}})\), [Shared Database]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) \([Shared Repository]({{< relref "../../extension-metapatterns/shared-repository.md" >}})\), [Load Balancer]({{< relref "../../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) \([Proxy]({{< relref "../../extension-metapatterns/proxy.md" >}})\), [Layers]({{< relref "../../basic-metapatterns/layers.md" >}})\.
 
 <ins>Goal</ins>: don’t struggle against the coupling of the shards, keep it simple and stupid\.
 

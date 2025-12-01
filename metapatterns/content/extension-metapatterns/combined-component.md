@@ -22,7 +22,8 @@ images = ["/diagrams/Web/og/Combined%20Component.png"]
 - Front Controller \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}}) but [not]({{< relref "../analytics/ambiguous-patterns.md#front-controller" >}}) [PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\],
 - [Enterprise Service Bus](https://www.confluent.io/learn/enterprise-service-bus/) \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\],
 - Service Mesh \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\],
-- Middleware of Space\-Based Architecture \[[SAP]({{< relref "../appendices/books-referenced.md#sap" >}}), [FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\]\.
+- Middleware of Space\-Based Architecture \[[SAP]({{< relref "../appendices/books-referenced.md#sap" >}}), [FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\],
+- \(inexact\) Cell \([WSO2 definition](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md)\)\.
 
 
 <ins>Structure:</ins> Two or more \(usually\) extension patterns combined into a single component\.
@@ -209,6 +210,32 @@ A *Service* [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}}) is
 
 
 The four layers of the *Space\-Based Architecture*’s *Middleware* are reasonably independent\. Together they make a system that is both more scalable and more complex than *Microservices*\.
+
+### \(inexact\) Cell \(WSO2 definition\)
+
+<figure>
+<a href="/diagrams/Variants/2/Cell.png">
+<picture>
+<source srcset="/diagrams/Variants/2/Cell.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/2/Cell.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/2/Cell.png" alt="Cell" loading="lazy" width="843" height="243" style="width:93%"/>
+</picture>
+</a>
+</figure>
+
+*Cell* \([WSO2 name]({{< relref "../basic-metapatterns/services.md#cell-wso2-definition-service-of-services-domain-uber-definition-cluster" >}})\) is a recurring but [loosely defined]({{< relref "../basic-metapatterns/services.md#cell-wso2-definition-service-of-services-domain-uber-definition-cluster" >}}) architecture which often emerges during a system’s or component’s transition from [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}) to [*Services*]({{< relref "../basic-metapatterns/services.md" >}})\. In most cases the [domain \(business rules\) layer]({{< relref "../basic-metapatterns/layers.md#domain-driven-design-ddd-layers" >}}) is the easiest one to [divide into subdomains]({{< relref "../appendices/evolutions-of-architectures/evolutions-of-layers-that-help-large-projects.md#divide-the-domain-layer-into-services" >}}), resulting in a set of decoupled domain\-level modules in between the original API \(and often [*integration*]({{< relref "../extension-metapatterns/orchestrator.md" >}})\) layer and the \(now [*shared*]({{< relref "../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}})\) *database*\.
+
+The cohesive layers of a *Cell* don’t make a true *Combined Component* as they are isolated remnants of the late *Layered Architecture*\. They tend to dissolve one by one as the system evolves:
+
+<figure>
+<a href="/diagrams/Variants/2/Cell%20-%20variants.png">
+<picture>
+<source srcset="/diagrams/Variants/2/Cell%20-%20variants.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/2/Cell%20-%20variants.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/2/Cell%20-%20variants.png" alt="Cell - variants" loading="lazy" width="982" height="323" style="width:100%"/>
+</picture>
+</a>
+</figure>
 
 ## Evolutions
 
