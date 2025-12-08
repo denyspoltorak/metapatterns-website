@@ -33,7 +33,7 @@ The content is lavishly illustrated with intuitive NoUML diagrams. It’s concis
 
 </a>
 
-<a href="https://speakerdeck.com/denyspoltorak/basic-architecures-the-building-blocks-for-complex-systems">
+<a href="https://speakerdeck.com/denyspoltorak/basic-architecures-the-building-blocks-for-complex-systems-70279871-d17e-4bc9-845c-e2a88bb3a4d8">
 
 <img src="/diagrams/Web/slides/Basic.png" alt="Basic Architectures" loading="lazy" width="480" height="270"/>
 
