@@ -39,6 +39,12 @@ The content is lavishly illustrated with intuitive NoUML diagrams. It’s concis
 
 </a>
 
+<a href="https://speakerdeck.com/denyspoltorak/architectural-extensions-making-use-of-specialized-components">
+
+<img src="/diagrams/Web/slides/Extensions.png" alt="Architectural Extensions" loading="lazy" width="480" height="270"/>
+
+</a>
+
 </nav>
 
 <hr>
