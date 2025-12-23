@@ -23,7 +23,7 @@ Let’s take a look at the simplest possible [metapattern]({{< relref "../introd
 
 *Keep it simple, stupid\!* If you don’t need a modular design, why bother?
 
-<ins>Known as:</ins> Monolith\.
+<ins>Known as:</ins> Monolith, Monolithic Architecture\.
 
 <ins>Variants:</ins> 
 
@@ -33,6 +33,7 @@ By internal structure:
 - \(inexact\) Lambda Monolith / [Monolambda](https://jesseduffield.com/Notes-On-Lambda/) / [Lambdalith](https://theburningmonk.com/2025/03/the-pros-and-cons-of-lambdalith/),
 - \(misapplied\) Layered Monolith \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\],
 - \(misapplied\) Modular Monolith \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] \(Modulith\),
+- \(misapplied\) Distributed Monolith \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\],
 - \(inexact\) Plugins \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] and Hexagonal Architecture\.
 
 
@@ -76,7 +77,7 @@ Overall, tiny *Monoliths* provide the best latency and throughput per CPU core\.
 
 ### Dependencies
 
-Even though a *Monolith* is a single module, meaning that there are no dependencies among its parts \(in fact, everything depends on everything\), it still may depend on some external components or services which it uses\. Those dependencies tend to cause [*vendor lock\-in*](https://en.wikipedia.org/wiki/Vendor_lock-in) or make the software OS\- or hardware\-dependent\. [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) \(including [*MVP*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-presenter-mvp-model-view-adapter-mva-model-view-viewmodel-mvvm-model-1-mvc1-document-view" >}}) and [*MVC*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}})\) decouples a monolithic implementation from its dependencies by isolating the latter behind [*Adapters*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}})\.
+Even though a *Monolith* is a single module, meaning that there are no dependencies among its parts \(in fact, everything depends on everything\), it still may depend on some external components or services which it uses\. Those dependencies tend to cause [*vendor lock\-in*](https://en.wikipedia.org/wiki/Vendor_lock-in) or make the software OS\- or hardware\-dependent\. [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) \(including [*MVP*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-presenter-mvp-model-view-adapter-mva-model-view-viewmodel-mvvm-model-1-mvc1-document-view" >}}) and [*MVC*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}})\) decouples a monolithic implementation from its dependencies by isolating the latter behind [*Adapters*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}})\.
 
 ### Applicability
 
@@ -115,7 +116,7 @@ Even though a *Monolith* is a single module, meaning that there are no dependenc
 *Monolith*:
 
 - Can be extended with a [*Proxy*]({{< relref "../extension-metapatterns/proxy.md" >}}), or turned into a [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) or [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}})\.
-- Yields [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}), [*Services*]({{< relref "../basic-metapatterns/services.md" >}}), or [*Shards*]({{< relref "../basic-metapatterns/shards.md" >}}) if divided along the *abstractness*, *subdomain*, or *sharding* dimensions, correspondingly\. All the known architectures are combinations of those three metapatterns\.
+- Yields [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}), [*Services*]({{< relref "../basic-metapatterns/services.md" >}}), or [*Shards*]({{< relref "../basic-metapatterns/shards.md" >}}) if divided along the *abstractness*, *subdomain*, or *sharding* dimensions, respectively\. All the known architectures are combinations of those three metapatterns\.
 - Is the bird’s\-eye view of any architecture\.
 
 
@@ -192,6 +193,20 @@ When they say [*Layered Monolith*]({{< relref "../basic-metapatterns/layers.md#s
 </figure>
 
 A [*Modular Monolith*]({{< relref "../basic-metapatterns/services.md#asynchronous-modules-modular-monolith-modulith-embedded-actors" >}}) \(*Modulith*\) \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] is a single\-process application subdivided into modules that correspond to subdomains\. If the modules communicate via in\-process messaging, the architecture is nearly identical to coarse\-grained [*Actors*]({{< relref "../basic-metapatterns/services.md#actors" >}}), thus it is a *Monolith* only in name\. *Modulith* [is a kind of](https://en.wikipedia.org/wiki/Duck_typing) [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) – it supports development by multiple teams and the asynchronous variant is hard to debug\. The relation to *Monolith* is mostly limited to the inability to scale individual parts of the system\.
+
+### \(misapplied\) Distributed Monolith
+
+<figure>
+<a href="/diagrams/Variants/1/Distributed%20Monolith.png">
+<picture>
+<source srcset="/diagrams/Variants/1/Distributed%20Monolith.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/1/Distributed%20Monolith.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/1/Distributed%20Monolith.png" alt="Distributed Monolith" loading="lazy" width="1063" height="421" style="width:100%"/>
+</picture>
+</a>
+</figure>
+
+A [*Distributed Monolith*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#distributed-monolith" >}}) \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] is a highly distributed system \(usually [*Service\-Oriented Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}) or [*Services*]({{< relref "../basic-metapatterns/services.md" >}})\) where all the components still need to be deployed together because of their interdependencies\. It is said to have the drawbacks of both *Monolith* \(low fault tolerance and coupled release cycles\) and *Services* \(poor debuggability, high latency, and operational complexity\)\.
 
 ### \(inexact\) Plugins and Hexagonal Architecture
 
@@ -287,7 +302,7 @@ This approach is good for real\-time systems where thread synchronization is lar
 
 Every incoming request is allocated a call stack which stores the processing state \(local variables and methods called\) of the request\. When it needs to access an external component, the [runtime system](https://en.wikipedia.org/wiki/Runtime_system) saves the request’s stack, does a non\-blocking call, and the execution thread returns to its original stack to wait for any new event to handle while the request processing stack remains frozen until the action it has initiated completes asynchronously\. Then the runtime switches the execution thread back to the stored request’s stack and continues processing the request until it completes and its stack is deleted\.
 
-This makes programming and debugging feel as easy as they are with [*Reactor*]({{< relref "#single-threaded-reactor-one-thread-one-task" >}}) \(imperative style\) while retaining the low resource consumption and high performance of [*Proactor*]({{< relref "#proactor-one-thread-many-tasks" >}}) \(reactive paradigm\)\. Coroutines and fibers are used in highly efficient [game engines](https://www.gdcvault.com/play/1022186/Parallelizing-the-Naughty-Dog-Engine) and [databases](https://docs.seastar.io/master/tutorial.html#coroutines)\. Though *Half\-Sync/Half\-Async* has two layers \(is not truly monolithic\), I believe it belongs next to *Reactor* and *Proactor* which make up its upper and lower halves, correspondingly\.
+This makes programming and debugging feel as easy as they are with [*Reactor*]({{< relref "#single-threaded-reactor-one-thread-one-task" >}}) \(imperative style\) while retaining the low resource consumption and high performance of [*Proactor*]({{< relref "#proactor-one-thread-many-tasks" >}}) \(reactive paradigm\)\. Coroutines and fibers are used in highly efficient [game engines](https://www.gdcvault.com/play/1022186/Parallelizing-the-Naughty-Dog-Engine) and [databases](https://docs.seastar.io/master/tutorial.html#coroutines)\. Though *Half\-Sync/Half\-Async* has two layers \(is not truly monolithic\), I believe it belongs next to *Reactor* and *Proactor* which make up its upper and lower halves, respectively\.
 
 ### The state of the art
 
@@ -335,7 +350,7 @@ Every architecture has drawbacks and tends to evolve in a variety of ways to add
 
 One of the main drawbacks of monolithic architecture is its lack of scalability – a single running instance of your system may not be enough to serve all the clients no matter how many resources you add in\. If that is the case, you should consider [*Shards*]({{< relref "../basic-metapatterns/shards.md" >}}) – *multiple instances* of a *Monolith*\. There are following options:
 
-- Self\-managed [*Shards*]({{< relref "../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-cells-amazon-definition" >}}) – each instance owns a part of the system’s data and may communicate with all the other instances \(forming a [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}})\)\.
+- Self\-managed [*Shards*]({{< relref "../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-multitenancy-cells-amazon-definition" >}}) – each instance owns a part of the system’s data and may communicate with all the other instances \(forming a [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}})\)\.
 
 
 <figure>
@@ -361,7 +376,7 @@ One of the main drawbacks of monolithic architecture is its lack of scalability 
 </a>
 </figure>
 
-- A [*Pool*]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}}) of stateless instances with a [*Load Balancer*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) and a [*Shared Database*]({{< relref "../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) – any instance can process any request, but the database limits the throughput\.
+- A [*Pool*]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}}) of stateless instances with a [*Load Balancer*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) and a [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) – any instance can process any request, but the shared database or file system limits the throughput\.
 
 
 <figure>
@@ -374,7 +389,7 @@ One of the main drawbacks of monolithic architecture is its lack of scalability 
 </a>
 </figure>
 
-- A [*Stateful Instance*]({{< relref "../basic-metapatterns/shards.md#temporary-state-create-on-demand" >}}) per client with an external persistent storage – each instance owns the data related to its client and runs in a virtual environment \(i\.e\. web browser or an [*Actor Framework*]({{< relref "../implementation-metapatterns/microkernel.md#virtualizer-hypervisor-container-orchestrator-distributed-runtime" >}})\)\.
+- A [*Stateful Instance*]({{< relref "../basic-metapatterns/shards.md#temporary-state-create-on-demand-actors" >}}) per client with an external persistent storage – each instance owns the data related to its client and runs in a virtual environment \(i\.e\. web browser or an [*Actor Framework*]({{< relref "../implementation-metapatterns/microkernel.md#virtualizer-hypervisor-container-orchestrator-distributed-runtime" >}})\)\.
 
 
 <figure>

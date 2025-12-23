@@ -148,7 +148,7 @@ The layers of *SOA* are:
 A huge business may build *SOA* of [*Cells*]({{< relref "../basic-metapatterns/services.md#cell-wso2-definition-service-of-services-domain-uber-definition-cluster" >}}) \(called *Domains*\) instead of plain [*Services*]({{< relref "../basic-metapatterns/services.md" >}})\. That greatly simplifies:
 
 - administration \(by reducing the number of components at the system level – Uber [packed](https://www.uber.com/blog/microservice-architecture/) 2200 [*Microservices*]({{< relref "../basic-metapatterns/services.md#microservices" >}}) into 70 *Domains*\),
-- refactoring of individual subsystems \(which are isolated behind [*Cell Gateways*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}})\),
+- refactoring of individual subsystems \(which are isolated behind [*Cell Gateways*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}})\),
 - development of business logic \(as programmers need to learn much fewer interfaces of components they rely on\)\.
 
 
@@ -222,7 +222,7 @@ Afterwards you may deal with the remaining orchestration\. The idea is to move t
 </a>
 </figure>
 
-Still another step is unbundling the [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}), which supports multiple protocols via [*Adapters*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}):
+Still another step is unbundling the [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}), which supports multiple protocols via [*Adapters*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}):
 
 - If you have a [*Service Mesh*]({{< relref "../implementation-metapatterns/mesh.md#service-mesh" >}}), an *Adapter* may be put to a [*Sidecar*]({{< relref "../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\]\.
 - Otherwise there is an option of a [*hierarchical Middleware*]({{< relref "../fragmented-metapatterns/hierarchy.md#bottom-up-hierarchy-bus-of-buses-network-of-networks" >}}) \(*Bus of Buses*\) if closely related components share protocols\.

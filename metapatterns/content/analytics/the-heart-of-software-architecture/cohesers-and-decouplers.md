@@ -76,7 +76,7 @@ Other forces predominantly push you towards merging all your code and data toget
 And there are forces that try to keep your code fragmented:
 
 - *Variability* – if your project needs to satisfy many [conflicting requirements]({{< relref "../../foundations-of-software-architecture/forces--asynchronicity--and-distribution.md" >}}), it is very hard to achieve that with a uniform codebase running in a single process\.
-- *Location* – you may need to run parts of your system on [its end users’ devices]({{< relref "../../foundations-of-software-architecture/forces--asynchronicity--and-distribution.md#distribution" >}}), in [regional data centers]({{< relref "../../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-cells-amazon-definition" >}}), or even on [specialized hardware]({{< relref "../../implementation-metapatterns/microkernel.md#autosar-classic-platform" >}})\.
+- *Location* – you may need to run parts of your system on [its end users’ devices]({{< relref "../../foundations-of-software-architecture/forces--asynchronicity--and-distribution.md#distribution" >}}), in [regional data centers]({{< relref "../../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-multitenancy-cells-amazon-definition" >}}), or even on [specialized hardware]({{< relref "../../implementation-metapatterns/microkernel.md#autosar-classic-platform" >}})\.
 - *Organizational structure* – according to [Conway’s law](https://en.wikipedia.org/wiki/Conway%27s_law), forcing everyone to work on a shared component is among the top team performance killers, especially when time zone differences are involved\.
 
 

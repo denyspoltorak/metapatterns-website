@@ -49,7 +49,7 @@ Examples:
 | Rapid start for development | Quickly deteriorates as the project grows |
 | Easy debugging | Hard to develop with more than a few teams |
 | Good performance | Does not solve force conflicts between subdomains |
-| Development teams may specialize |  |
+| Development teams may specialize | Does not support aggressive optimizations |
 | Business logic is encapsulated |  |
 | Allows resolution of conflicting forces |  |
 | Deployment to dedicated hardware |  |
@@ -151,7 +151,7 @@ Usually an upper layer depends on the *API* \(application programming interface\
 
 Some domains, including embedded systems and telecom, require their lower layers to be polymorphic as they deal with varied hardware or communication protocols\. In that case an upper layer \(e\.g\. OS kernel\) defines a *service provider interface* \(*SPI*\) which is implemented by every variant of the lower layer \(e\.g\. a device driver\)\. That allows for a single implementation of the upper layer to be interoperable with any subclass of the lower layer\. Such an approach enables [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}), [*Microkernel*]({{< relref "../implementation-metapatterns/microkernel.md" >}}), and [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}})\. 
 
-There may also be an [*Adapter*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) layer between your system’s SPI and an external API\. It is called *Anticorruption Layer* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\], [*Database Abstraction Layer*](https://en.wikipedia.org/wiki/Database_abstraction_layer) / *Database Access Layer* \[[POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\] / *Data Mapper* \[[PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\], *OS Abstraction Layer* or *Platform Abstraction Layer / Hardware Abstraction Layer*, depending on what kind of component it adapts\.
+There may also be an [*Adapter*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) layer between your system’s SPI and an external API\. It is called *Anticorruption Layer* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\], [*Database Abstraction Layer*](https://en.wikipedia.org/wiki/Database_abstraction_layer) / *Database Access Layer* \[[POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\] / *Data Mapper* \[[PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\], *OS Abstraction Layer* or *Platform Abstraction Layer / Hardware Abstraction Layer*, depending on what kind of component it adapts\.
 
 <figure>
 <a href="/diagrams/Dependencies/Layers-1.png">
@@ -360,7 +360,7 @@ Bare metal and micro\-OS systems which run on low\-end chips use a different ter
 - *Presentation* – a UI engine used by the *HMI*\. It may be a third\-party library or come as a part of the *SDK*\.
 - *Human\-Machine Interface* \(*HMI* aka *MMI*\) – the UI and high\-level business logic for user scenarios, written by a [value\-added reseller](https://en.wikipedia.org/wiki/Value-added_reseller)\.
 - *Software Development Kit* \(*SDK*\) – the mid\-level business logic and device drivers, written by the [original equipment manufacturer](https://en.wikipedia.org/wiki/Original_equipment_manufacturer)\.
-- [*Hardware Abstraction Layer*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) \(*HAL*\) – the low\-level code that abstracts hardware registers to enable code reuse between hardware platforms\.
+- [*Hardware Abstraction Layer*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \(*HAL*\) – the low\-level code that abstracts hardware registers to enable code reuse between hardware platforms\.
 - *Firmware of Hardware Components* – usually closed\-source binary pre\-programmed into chips by chipmakers\.
 - *Hardware* itself\.
 

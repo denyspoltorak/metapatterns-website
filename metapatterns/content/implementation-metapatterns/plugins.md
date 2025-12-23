@@ -21,7 +21,7 @@ images = ["/diagrams/Web/og/Plugins.png"]
 
 *Overspecialize, and you breed in weakness\.* Customize the system through attachable modules\.
 
-<ins>Known as:</ins> Plug\-In Architecture \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\], \(misapplied\) Microkernel \(Architecture\) \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}}), [SAP]({{< relref "../appendices/books-referenced.md#sap" >}}), [FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\], Plugin \[[PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\], Addons, [Strategy](https://refactoring.guru/design-patterns/strategy) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\], Reflection \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\], Aspects, Hooks\.
+<ins>Known as:</ins> Plug\-In Architecture \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\], \(misapplied\) Microkernel \(Architecture\) \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}}), [SAP]({{< relref "../appendices/books-referenced.md#sap" >}}), [FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\], Plugin \[[PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\], Addons, Add\-ins, Extensions, [Strategy](https://refactoring.guru/design-patterns/strategy) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\], Reflection \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\], Aspects, Hooks\.
 
 <ins>Variants:</ins> [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) and [*Microkernel*]({{< relref "../implementation-metapatterns/microkernel.md" >}}) got dedicated chapters\. Plugins have many variations\.
 
@@ -111,12 +111,14 @@ Each *plugin* depends on the *core*’s *API* \(for *Addons*\) or *SPI* \(for *P
 
 *Plugins* are highly variable and omnipresent if we take [*Strategy*](https://refactoring.guru/design-patterns/strategy) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] for a kind of plugin:
 
-### By the direction of control
+### By integration
 
 The terminology is not settled, but according to what I found over the Web:
 
-- True *Plugins* are registered with and called by the system’s *core*, they may call back into the core or return results – they are parts of the system\.
-- *Addons* are built on top of the system’s API and call into the system from outside – they are more like external [*Adapters*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) for the system\.
+- A *Plugin* is registered with and called by the system’s *core* to add or extend a specific functionality\. It is usually made by a third party\.
+- An *Add\-in* is even more deeply integrated – the system has been designed to provide it thorough access to its internals\. It comes from the system’s creators\.
+- An *Extension* changes use cases by modifying the application’s business logic, but it is still called by the application’s *core*\.
+- An *Addon* is built on top of the system’s API and calls into the system from outside – it is more like an external [*Adapter*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) or [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) for the system\.
 
 
 ### By abstractness
@@ -143,7 +145,7 @@ A plugin may:
 
 Plugins may be *built in* or selected dynamically:
 
-- Every *flavor* \(e\.g\. free, lite, pro, premium\) of a product line incorporates a single set of plugins \(configuration\) built into the application\.
+- Every *flavor* \(e\.g\. free, lite, pro, premium\) of a product line incorporates a single set of plugins \(configuration\) built into the application\. Web services often use this kind of customization for [*Multitenancy*]({{< relref "../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-multitenancy-cells-amazon-definition" >}})\.
 - Other systems choose and initiate their plugins on startup according to their configuration files or licenses\.
 - Still others support attaching and detaching plugins dynamically at runtime\.
 
@@ -172,7 +174,7 @@ Plugins may be:
 
 - Linked as a binary code called from within the core\.
 - Written in a [*domain\-specific language*](https://en.wikipedia.org/wiki/Domain-specific_language) \(*DSL*\) and [interpreted]({{< relref "../implementation-metapatterns/microkernel.md#interpreter-script-domain-specific-language-dsl" >}}) by the core\.
-- Communicated with over a network\.
+- Remote, available as a stand\-alone web service or even hardware component which the core needs to access through a dedicated protocol\.
 
 
 ## Summary

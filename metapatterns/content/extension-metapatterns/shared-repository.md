@@ -33,10 +33,10 @@ images = ["/diagrams/Web/og/Shared%20Repository.png"]
 <ins>Variants:</ins> 
 
 - Shared Database \[[EIP]({{< relref "../appendices/books-referenced.md#eip" >}})\] / [Integration Database](https://martinfowler.com/bliki/IntegrationDatabase.html) / Data Domain \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\] / Database of Service\-Based Architecture \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\], 
+- Shared File System,
+- Shared Memory,
 - [Blackboard](https://hillside.net/plop/plop97/Proceedings/lalanda.pdf) \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\],
 - Data Grid of [Space\-Based Architecture](https://en.wikipedia.org/wiki/Space-based_architecture) \[[SAP]({{< relref "../appendices/books-referenced.md#sap" >}}), [FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] / Replicated Cache \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\] / Distributed Cache, 
-- Shared Memory,
-- Shared File System,
 - \(with a [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}})\) Persistent Event Log / Shared Event Store,
 - \(inexact\) Stamp Coupling \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\]\.
 
@@ -85,7 +85,7 @@ Normally, every service depends on the repository\. If the repository does not p
 </a>
 </figure>
 
-The dependency on repository technology and a data schema is dangerous for long\-running projects as both of them may need to change sooner or later\. Decoupling the code from the data storage is done with [yet another layer of indirection](https://en.wikipedia.org/wiki/Fundamental_theorem_of_software_engineering) which is called a [*Database Abstraction Layer*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) \(*DAL*\), a *Database Access Layer* \[[POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\], or a *Data Mapper* \[[PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\]\. The DAL, which translates between the data schema and database’s API on one side and the business logic’s SPI on the other side, may reside inside each service or wrap the database:
+The dependency on repository technology and a data schema is dangerous for long\-running projects as both of them may need to change sooner or later\. Decoupling the code from the data storage is done with [yet another layer of indirection](https://en.wikipedia.org/wiki/Fundamental_theorem_of_software_engineering) which is called a [*Database Abstraction Layer*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \(*DAL*\), a *Database Access Layer* \[[POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\], or a *Data Mapper* \[[PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\]\. The DAL, which translates between the data schema and database’s API on one side and the business logic’s SPI on the other side, may reside inside each service or wrap the database:
 
 <figure>
 <a href="/diagrams/Dependencies/SharedRepository-2.png">
@@ -113,7 +113,7 @@ Still, the DAL does not remove shared dependencies and only adds some flexibilit
 
 - *Quickly evolving, complex projects\.* As everything changes, you just cannot devise a stable schema, while every change of the database schema breaks all the services\.
 - *Varied forces and algorithms*\. Different services may require different kinds of databases to work efficiently\.
-- *Big data with random writes*\. Your data does not fit on a single server\. If you want to avoid write conflicts, you must keep all the database nodes synchronized, which kills performance\. If you let them all broadcast their changes asynchronously, you get collisions\. You may want to first decouple and [*shard*]({{< relref "../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-cells-amazon-definition" >}}) the data as much as possible, and then turn your attention to esoteric databases, specialized caches, and even tailor\-made [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) to get out of the trouble\.
+- *Big data with random writes*\. Your data does not fit on a single server\. If you want to avoid write conflicts, you must keep all the database nodes synchronized, which kills performance\. If you let them all broadcast their changes asynchronously, you get collisions\. You may want to first decouple and [*shard*]({{< relref "../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-multitenancy-cells-amazon-definition" >}}) the data as much as possible, and then turn your attention to esoteric databases, specialized caches, and even tailor\-made [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) to get out of the trouble\.
 
 
 ### Relations
@@ -140,7 +140,7 @@ Still, the DAL does not remove shared dependencies and only adds some flexibilit
 
 *Shared Repository* is a sibling of [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}})\. While a *Middleware* assists direct communication between services \(*shared\-nothing* messaging\), a *Shared Repository* grants them indirect communication through access to an external state \(similar to *shared memory*\) which usually stores all the data for the domain\.
 
-A *Shared Repository* may provide a generic interface \(e\.g\. SQL\) or a custom API \(with a domain\-aware [*Adapter*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) / [*ORM*](https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping) for the database\)\. The *repository* can be anything ranging from a trivial OS file system or a memory block accessible from all the components to an ordinary database to a [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}})\-based, distributed [*tuple space*](https://en.wikipedia.org/wiki/Tuple_space):
+A *Shared Repository* may provide a generic interface \(e\.g\. SQL\) or a custom API \(with a domain\-aware [*Adapter*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) / [*ORM*](https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping) for the database\)\. The *repository* can be anything ranging from a trivial OS file system or a memory block accessible from all the components to an ordinary database to a [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}})\-based, distributed [*tuple space*](https://en.wikipedia.org/wiki/Tuple_space):
 
 ### Shared Database, Integration Database, Data Domain, Database of Service\-Based Architecture
 
@@ -155,6 +155,34 @@ A *Shared Repository* may provide a generic interface \(e\.g\. SQL\) or a custom
 </figure>
 
 *Shared Database* \[[EIP]({{< relref "../appendices/books-referenced.md#eip" >}})\], [*Integration Database*](https://martinfowler.com/bliki/IntegrationDatabase.html)*,* or *Data Domain* \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\] is a single database available to several [services]({{< relref "../basic-metapatterns/services.md" >}})\. The services may subscribe to data change triggers in the database itself or notify each other directly about domain events\. The latter is often the case with [*Service\-Based Architecture*]({{< relref "../basic-metapatterns/services.md#service-based-architecture-sba" >}}) \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] which consists of large services dedicated to subdomains\.
+
+### Shared File System
+
+<figure>
+<a href="/diagrams/Variants/2/Shared%20files.png">
+<picture>
+<source srcset="/diagrams/Variants/2/Shared%20files.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/2/Shared%20files.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/2/Shared%20files.png" alt="Shared files" loading="lazy" width="1083" height="803" style="width:100%"/>
+</picture>
+</a>
+</figure>
+
+As a file system is a kind of shared dictionary, writing and reading files can be used to transfer data between applications\. A [data processing]({{< relref "../foundations-of-software-architecture/four-kinds-of-software.md#streaming-continuous-raw-data-input" >}}) [*Pipeline*]({{< relref "../basic-metapatterns/pipeline.md" >}}) which stores intermediate results in files benefits from the ability to restart its calculation from the last successful step because files are persistent \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\]\.
+
+### Shared Memory
+
+<figure>
+<a href="/diagrams/Variants/2/Shared%20memory.png">
+<picture>
+<source srcset="/diagrams/Variants/2/Shared%20memory.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/2/Shared%20memory.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/2/Shared%20memory.png" alt="Shared memory" loading="lazy" width="943" height="424" style="width:100%"/>
+</picture>
+</a>
+</figure>
+
+Several actors \(processes, modules, device drivers\) communicate through one or more mutually accessible data structures \(arrays, trees, or dictionaries\)\. Accessing a shared object may require some kind of synchronization \(e\.g\. taking a *mutex*\) or employ [*atomic variables*](https://codescoddler.medium.com/concurrency-made-simple-the-role-of-atomic-variables-8327b9b35023)\. Notwithstanding that communication via *shared memory* is the archenemy of \([*shared\-nothing*](https://www.scylladb.com/glossary/shared-nothing-architecture/)\) messaging it is actually used to implement messaging: high\-load multi\-process systems \(web browsers and high\-frequency trading\) rely on shared memory *mailboxes* for messaging between their [constituent processes]({{< relref "../basic-metapatterns/services.md#multiple-processes" >}})\.
 
 ### Blackboard
 
@@ -195,7 +223,7 @@ The main components of the architecture are:
 - *Data Writers* – components that replicate the changes done in the *Data Grid* to the persistent storage to assure that no updates are lost if the system is shut down\. There can be a pair of *Reader* and *Writer* per class of *Processing Units* \(subdomain\) or a global pair that processes all read and write requests\.
 
 
-*SBA* provides nearly perfect scalability \(high read and write throughput as all the data is [cached]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#database-cache-cache-aside" >}})\) and elasticity \(new instances of *Processing Units* are created and initialized very quickly as they copy their data from already running units with no need to access the *Persistent Database*\)\. Though for smaller datasets the entire database is [replicated]({{< relref "../basic-metapatterns/shards.md#persistent-copy-replica" >}}) to every node of the grid \(*Replicated Cache* mode\), *Space\-Based Architecture* also allows the processing of datasets that don’t fit into the memory of a single node by assigning each node a [*shard*]({{< relref "../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-cells-amazon-definition" >}}) of the dataset \(*Distributed Cache* mode\)\.
+*SBA* provides nearly perfect scalability \(high read and write throughput as all the data is [cached]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#database-cache-cache-aside" >}})\) and elasticity \(new instances of *Processing Units* are created and initialized very quickly as they copy their data from already running units with no need to access the *Persistent Database*\)\. Though for smaller datasets the entire database is [replicated]({{< relref "../basic-metapatterns/shards.md#persistent-copy-replica" >}}) to every node of the grid \(*Replicated Cache* mode\), *Space\-Based Architecture* also allows the processing of datasets that don’t fit into the memory of a single node by assigning each node a [*shard*]({{< relref "../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-multitenancy-cells-amazon-definition" >}}) of the dataset \(*Distributed Cache* mode\)\.
 
 The drawbacks of this architecture include:
 
@@ -204,34 +232,6 @@ The drawbacks of this architecture include:
 - High traffic for data replication among the nodes\.
 - Data collisions if multiple clients change the same piece of data simultaneously\.
 
-
-### Shared Memory
-
-<figure>
-<a href="/diagrams/Variants/2/Shared%20memory.png">
-<picture>
-<source srcset="/diagrams/Variants/2/Shared%20memory.svg" media="(prefers-color-scheme: light)"/>
-<source srcset="/diagrams/Variants/2/Shared%20memory.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/2/Shared%20memory.png" alt="Shared memory" loading="lazy" width="943" height="424" style="width:100%"/>
-</picture>
-</a>
-</figure>
-
-Several actors \(processes, modules, device drivers\) communicate through one or more mutually accessible data structures \(arrays, trees, or dictionaries\)\. Accessing a shared object may require some kind of synchronization \(e\.g\. taking a *mutex*\) or employ [*atomic variables*](https://codescoddler.medium.com/concurrency-made-simple-the-role-of-atomic-variables-8327b9b35023)\. Notwithstanding that communication via *shared memory* is the archenemy of \([*shared\-nothing*](https://www.scylladb.com/glossary/shared-nothing-architecture/)\) messaging it is actually used to implement messaging: high\-load multi\-process systems \(web browsers and high\-frequency trading\) rely on shared memory *mailboxes* for messaging between their [constituent processes]({{< relref "../basic-metapatterns/services.md#multiple-processes" >}})\.
-
-### Shared File System
-
-<figure>
-<a href="/diagrams/Variants/2/Shared%20files.png">
-<picture>
-<source srcset="/diagrams/Variants/2/Shared%20files.svg" media="(prefers-color-scheme: light)"/>
-<source srcset="/diagrams/Variants/2/Shared%20files.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/2/Shared%20files.png" alt="Shared files" loading="lazy" width="1083" height="803" style="width:100%"/>
-</picture>
-</a>
-</figure>
-
-As a file system is a kind of shared dictionary, writing and reading files can be used to transfer data between applications\. A [data processing]({{< relref "../foundations-of-software-architecture/four-kinds-of-software.md#streaming-continuous-raw-data-input" >}}) [*Pipeline*]({{< relref "../basic-metapatterns/pipeline.md" >}}) which stores intermediate results in files benefits from the ability to restart its calculation from the last successful step because files are persistent \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\]\.
 
 ### Persistent Event Log, Shared Event Store
 

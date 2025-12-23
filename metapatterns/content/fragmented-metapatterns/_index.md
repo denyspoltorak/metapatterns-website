@@ -42,7 +42,7 @@ There are several patterns with no system\-wide layers\. Some of them incorporat
 
 [*Polyglot Persistence*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md" >}}) is about using multiple data stores which differ in roles or technologies\. Each of the upper\-level components may have access to any data store\. Each data store is a [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}})\.
 
-*<ins>Includes</ins>*: specialized databases, private and shared databases, data file, Content Delivery Network \(CDN\); read\-only replica, Reporting Database, CQRS View Database, Memory Image, Query Service, search index, historical data, Cache\-Aside\.
+*<ins>Includes</ins>*: specialized databases, private and shared databases, data file, Content Delivery Network \(CDN\); read\-only replicas, Reporting Database, CQRS View Database, Memory Image, Query Service, search index, historical data, Cache\-Aside\.
 
 ### [Backends for Frontends]({{< relref "../fragmented-metapatterns/backends-for-frontends--bff-.md" >}})
 

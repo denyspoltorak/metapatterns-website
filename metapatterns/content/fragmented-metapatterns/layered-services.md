@@ -30,7 +30,7 @@ images = ["/diagrams/Web/og/Layered%20Services.png"]
 
 <ins>Structure:</ins> Subdomain services divided into layers\.
 
-<ins>Type:</ins> Implementation of [*Services*]({{< relref "../basic-metapatterns/services.md" >}}), [*Pipeline*]({{< relref "../basic-metapatterns/pipeline.md" >}}) or [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}), correspondingly\.
+<ins>Type:</ins> Implementation of [*Services*]({{< relref "../basic-metapatterns/services.md" >}}), [*Pipeline*]({{< relref "../basic-metapatterns/pipeline.md" >}}) or [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}), respectively\.
 
 *Layered Services* is an umbrella architecture for common implementations of systems of [*Services*]({{< relref "../basic-metapatterns/services.md" >}})\. It does not introduce any special features as layers are completely encapsulated by the service which they belong to\. Still, as the services may communicate at different layers, there are a couple of things to learn by exploring the subject matter\.
 
@@ -53,7 +53,7 @@ Remarkable features of *Layered Services* include:
 </a>
 </figure>
 
-- The option to establish additional communication channels between lower layers in order to drive [*CQRS*]({{< relref "#command-query-responsibility-segregation-cqrs" >}}) databases \([read/write replicas]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#read-only-replica" >}}) of the same database\) or [*CQRS Views*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) \(cached subsets of data from other services\) \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\]\.
+- The option to establish additional communication channels between lower layers in order to drive [*CQRS*]({{< relref "#command-query-responsibility-segregation-cqrs" >}}) databases \([read/write replicas]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#read-only-replicas" >}}) of the same database\) or [*CQRS Views*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) \(cached subsets of data from other services\) \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\]\.
 
 
 <figure>
