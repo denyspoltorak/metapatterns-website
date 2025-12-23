@@ -23,7 +23,7 @@ The content is lavishly illustrated with intuitive NoUML diagrams. It’s concis
 
 <a class="grid-row" href="https://speakerdeck.com/denyspoltorak">
 
-<h2>Slides (in progress)</h2>
+<h2>Slides</h2>
 
 </a>
 
@@ -42,6 +42,18 @@ The content is lavishly illustrated with intuitive NoUML diagrams. It’s concis
 <a href="https://speakerdeck.com/denyspoltorak/architectural-extensions-making-use-of-specialized-components">
 
 <img src="/diagrams/Web/slides/Extensions.png" alt="Architectural Extensions" loading="lazy" width="480" height="270"/>
+
+</a>
+
+<a href="https://speakerdeck.com/denyspoltorak/fragmented-architectures-patterns-with-smaller-components">
+
+<img src="/diagrams/Web/slides/Fragmented.png" alt="Fragmented Architectures" loading="lazy" width="480" height="270"/>
+
+</a>
+
+<a href="https://speakerdeck.com/denyspoltorak/implementation-patterns-the-high-level-design-of-system-components">
+
+<img src="/diagrams/Web/slides/Implementation.png" alt="Implementation Patterns" loading="lazy" width="480" height="270"/>
 
 </a>
 
