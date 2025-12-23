@@ -29,7 +29,7 @@ Once a database appears, it is unlikely to go away\. I see the following evoluti
 </a>
 </figure>
 
-<ins>Patterns</ins>: [Sharding]({{< relref "../../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-cells-amazon-definition" >}}) \([Shards]({{< relref "../../basic-metapatterns/shards.md" >}})\), [Shared Repository]({{< relref "../../extension-metapatterns/shared-repository.md" >}}), maybe [Sharding Proxy]({{< relref "../../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}})\.
+<ins>Patterns</ins>: [Sharding]({{< relref "../../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-multitenancy-cells-amazon-definition" >}}) \([Shards]({{< relref "../../basic-metapatterns/shards.md" >}})\), [Shared Repository]({{< relref "../../extension-metapatterns/shared-repository.md" >}}), maybe [Sharding Proxy]({{< relref "../../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}})\.
 
 <ins>Goal</ins>: increase capacity and performance of the database\.
 
@@ -151,7 +151,7 @@ If the data clearly follows subdomains, it may be possible to subdivide it accor
 
 <ins>Prerequisite</ins>: there are diverse data types or patterns of data access\.
 
-It is very likely that you can either use [*specialized databases*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#specialized-databases" >}}) for various data types or deploy [*read\-only replicas*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#read-only-replica" >}}) of your data for analytics\.
+It is very likely that you can either use [*specialized databases*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#specialized-databases" >}}) for various data types or deploy [*read\-only replicas*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#read-only-replicas" >}}) of your data for analytics\.
 
 <ins>Pros</ins>:
 

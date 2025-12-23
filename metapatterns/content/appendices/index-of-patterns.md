@@ -9,6 +9,8 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 # Index of patterns {anchor=false}
 
+[Abstraction Layer]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}})
+
 [Action\-Domain\-Responder]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}}) \(ADR\)
 
 [Actors]({{< relref "../basic-metapatterns/services.md#actors" >}}) \(architecture\)
@@ -17,19 +19,23 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Actors]({{< relref "../basic-metapatterns/services.md#distributed-runtime-backend-actors" >}}) \(backend\)
 
+[Actors]({{< relref "../basic-metapatterns/shards.md#temporary-state-create-on-demand-actors" >}}) \(create on demand\)
+
 [Actors]({{< relref "../basic-metapatterns/services.md#asynchronous-modules-modular-monolith-modulith-embedded-actors" >}}) \(embedded systems\)
 
 [Actors]({{< relref "../basic-metapatterns/services.md#class-like-actors" >}}) \(scope\)
 
-[Adapter]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}})
+[Adapter]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}})
 
-[Addons]({{< relref "../implementation-metapatterns/plugins.md#by-the-direction-of-control" >}})
+[Add\-ins]({{< relref "../implementation-metapatterns/plugins.md" >}})
+
+[Addons]({{< relref "../implementation-metapatterns/plugins.md#by-integration" >}})
 
 [Aggregate Data Product Quantum]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#query-service-front-controller-data-warehouse-data-lake-aggregate-data-product-quantum-dpq-of-data-mesh" >}}) \(Data Mesh\)
 
 [Ambassador]({{< relref "../extension-metapatterns/proxy.md#on-the-client-side-ambassador" >}})
 
-[Anticorruption Layer]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}})
+[Anticorruption Layer]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}})
 
 [API Composer]({{< relref "../extension-metapatterns/orchestrator.md#api-composer-remote-facade-gateway-aggregation-composed-message-processor-scatter-gather-mapreduce" >}})
 
@@ -41,7 +47,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [API Rate Limiter]({{< relref "../extension-metapatterns/proxy.md#firewall-api-rate-limiter-api-throttling" >}})
 
-[API Service]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) \(adapter\)
+[API Service]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \(adapter\)
 
 [API Throttling]({{< relref "../extension-metapatterns/proxy.md#firewall-api-rate-limiter-api-throttling" >}})
 
@@ -57,7 +63,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [AUTOSAR Classic Platform]({{< relref "../implementation-metapatterns/microkernel.md#autosar-classic-platform" >}}) \(as Microkernel\)
 
-[Backend for Frontend]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) \(adapter\)
+[Backend for Frontend]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \(adapter\)
 
 [Backends for Frontends]({{< relref "../fragmented-metapatterns/backends-for-frontends--bff-.md" >}}) \(BFF\)
 
@@ -83,7 +89,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Cell]({{< relref "../basic-metapatterns/services.md#cell-wso2-definition-service-of-services-domain-uber-definition-cluster" >}}) \(WSO2 definition\)
 
-[Cell Gateway]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) \(WSO2 Cell\-Based Architecture\)
+[Cell Gateway]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \(WSO2 Cell\-Based Architecture\)
 
 [Cell Router]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) \(Amazon Cell\-Based Architecture\)
 
@@ -91,7 +97,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Cell\-Based Microservice Architecture]({{< relref "../fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services" >}}) \(WSO2 version\)
 
-[Cells]({{< relref "../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-cells-amazon-definition" >}}) \(Amazon definition\)
+[Cells]({{< relref "../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-multitenancy-cells-amazon-definition" >}}) \(Amazon definition\)
 
 [Choreographed Event\-Driven Architecture]({{< relref "../basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}})
 
@@ -123,7 +129,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [CQRS View Database]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}})
 
-[Create on Demand]({{< relref "../basic-metapatterns/shards.md#temporary-state-create-on-demand" >}}) \(temporary instances\)
+[Create on Demand]({{< relref "../basic-metapatterns/shards.md#temporary-state-create-on-demand-actors" >}}) \(temporary instances\)
 
 [Data Archiving]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#historical-data-data-archiving" >}})
 
@@ -143,7 +149,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Database Cache]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#database-cache-cache-aside" >}})
 
-[Database Abstraction Layer]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) \(DBAL or DAL\)
+[Database Abstraction Layer]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \(DBAL or DAL\)
 
 [Dependency Inversion]({{< relref "../analytics/comparison-of-architectural-patterns/dependency-inversion-in-architectural-patterns.md" >}})
 
@@ -205,6 +211,8 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Eventually Consistent Saga]({{< relref "../extension-metapatterns/orchestrator.md#orchestrated-saga-saga-orchestrator-saga-execution-component-transaction-script-coordinator" >}})
 
+[Extensions]({{< relref "../implementation-metapatterns/plugins.md" >}})
+
 [External Search Index]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#external-search-index" >}})
 
 [FaaS]({{< relref "../basic-metapatterns/services.md#single-function-faas-nanoservices" >}}) \(nanoservices\)
@@ -225,7 +233,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Game Development Engine]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}})
 
-[Gateway]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) \(adapter\)
+[Gateway]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \(adapter\)
 
 [Gateway Aggregation]({{< relref "../extension-metapatterns/orchestrator.md#api-composer-remote-facade-gateway-aggregation-composed-message-processor-scatter-gather-mapreduce" >}})
 
@@ -235,7 +243,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Half\-Sync/Half\-Async]({{< relref "../basic-metapatterns/monolith.md#inexact-half-synchalf-async-coroutines-or-fibers" >}})
 
-[Hardware Abstraction Layer]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) \(HAL\)
+[Hardware Abstraction Layer]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \(HAL\)
 
 [Hexagonal Architecture]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}})
 
@@ -303,7 +311,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Message Bus]({{< relref "../extension-metapatterns/middleware.md#message-bus" >}}) \(as Middleware\)
 
-[Message Translator]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) \(adapter\)
+[Message Translator]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \(adapter\)
 
 [Messaging Grid]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) \(Space\-Based Architecture\)
 
@@ -341,7 +349,11 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Monolith]({{< relref "../basic-metapatterns/monolith.md" >}})
 
+[Monolithic Architecture]({{< relref "../basic-metapatterns/monolith.md" >}})
+
 [Monolithic Service]({{< relref "../basic-metapatterns/services.md#monolithic-service" >}})
+
+[Multitenancy]({{< relref "../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-multitenancy-cells-amazon-definition" >}})
 
 [Multitier Architecture]({{< relref "../basic-metapatterns/layers.md" >}})
 
@@ -369,11 +381,11 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Onion Architecture]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#ddd-style-hexagonal-architecture-onion-architecture-clean-architecture" >}})
 
-[Open Host Service]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}})
+[Open Host Service]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}})
 
 [Operating System]({{< relref "../implementation-metapatterns/microkernel.md#operating-system" >}})
 
-[Operating System Abstraction Layer]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) \(OSAL or OAL\)
+[Operating System Abstraction Layer]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \(OSAL or OAL\)
 
 [Orchestrated Saga]({{< relref "../extension-metapatterns/orchestrator.md#orchestrated-saga-saga-orchestrator-saga-execution-component-transaction-script-coordinator" >}})
 
@@ -385,7 +397,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Orchestrator of Orchestrators]({{< relref "../fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}})
 
-[Partition]({{< relref "../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-cells-amazon-definition" >}})
+[Partition]({{< relref "../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-multitenancy-cells-amazon-definition" >}})
 
 [Peer\-to\-Peer Networks]({{< relref "../implementation-metapatterns/mesh.md#peer-to-peer-networks" >}})
 
@@ -395,7 +407,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Pipes and Filters]({{< relref "../basic-metapatterns/pipeline.md#pipes-and-filters-workflow-system" >}})
 
-[Platform Abstraction Layer]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) \(PAL\)
+[Platform Abstraction Layer]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \(PAL\)
 
 [Plug\-In Architecture]({{< relref "../implementation-metapatterns/plugins.md" >}})
 
@@ -417,7 +429,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Proxy]({{< relref "../extension-metapatterns/proxy.md" >}})
 
-[Published Language]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}})
+[Published Language]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}})
 
 [Query Service]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#query-service-front-controller-data-warehouse-data-lake-aggregate-data-product-quantum-dpq-of-data-mesh" >}})
 
@@ -429,7 +441,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [\(Re\)Actor\-with\-Extractors]({{< relref "../basic-metapatterns/monolith.md#inexact-reactor-with-extractors-phased-processing" >}})
 
-[Read\-Only Replica]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#read-only-replica" >}})
+[Read\-Only Replicas]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#read-only-replicas" >}})
 
 [Read\-Through Cache]({{< relref "../extension-metapatterns/proxy.md#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}})
 
@@ -445,7 +457,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Reporting Database]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}})
 
-[Repository]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}})
+[Repository]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}})
 
 [Request Hedging]({{< relref "../basic-metapatterns/shards.md#persistent-copy-replica" >}})
 
@@ -493,7 +505,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Services of Services]({{< relref "../fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services" >}})
 
-[Sharding]({{< relref "../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-cells-amazon-definition" >}}) \(persistent slices of data\)
+[Sharding]({{< relref "../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-multitenancy-cells-amazon-definition" >}}) \(persistent slices of data\)
 
 [Sharding Proxy]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}})
 

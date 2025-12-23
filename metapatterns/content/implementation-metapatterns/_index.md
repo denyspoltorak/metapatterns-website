@@ -40,7 +40,7 @@ The [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) patt
 </a>
 </figure>
 
-[*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) is a specialization of [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) where every external dependency is isolated behind an [*Adapter*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}), making it easy to update or replace third\-party components\.
+[*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) is a specialization of [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) where every external dependency is isolated behind an [*Adapter*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}), making it easy to update or replace third\-party components\.
 
 *<ins>Includes</ins>*: Ports and Adapters, Onion Architecture, Clean Architecture; Model\-View\-Presenter \(MVP\), Model\-View\-ViewModel \(MVVM\), Model\-View\-Controller \(MVC\), and Action\-Domain\-Responder \(ADR\)\.
 

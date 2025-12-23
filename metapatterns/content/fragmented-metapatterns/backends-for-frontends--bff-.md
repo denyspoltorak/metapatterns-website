@@ -76,14 +76,14 @@ Each *BFF* depends on all the services it uses \(usually every service in the sy
 
 *Backends for Frontends* are <ins>good</ins> for:
 
-- *Multiple client protocols\.* Deploying a [*Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) per protocol hides the variation from the underlying system\.
+- *Multiple client protocols\.* Deploying a [*Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) per protocol hides the variation from the underlying system\.
 - *Multiple UIs\.* When you have one team per UI, each of them may [want to have](https://netflixtechblog.com/embracing-the-differences-inside-the-netflix-api-redesign-15fd8b3dc49d) an API which they feel comfortable with\.
 - *Drastically different workflows\.* Let each client\-facing development team own a component and choose the best fitting technologies and practices\.
 
 
 *Backends for Frontends* <ins>should be avoided</ins> when:
 
-- *The clients are mostly similar\.* It is hard to share code and functionality between *BFF*s\. If the clients have much in common, the shared aspects either find their place in a shared monolithic layer \(e\.g\. multiple client protocols call for multiple [*Gateways*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) but a shared [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}})\) or are duplicated\. *BFF* may not be the best choice – use OOD \(conditions, factories, strategies, inheritance\) instead to handle the clients’ differences within a single codebase\.
+- *The clients are mostly similar\.* It is hard to share code and functionality between *BFF*s\. If the clients have much in common, the shared aspects either find their place in a shared monolithic layer \(e\.g\. multiple client protocols call for multiple [*Gateways*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) but a shared [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}})\) or are duplicated\. *BFF* may not be the best choice – use OOD \(conditions, factories, strategies, inheritance\) instead to handle the clients’ differences within a single codebase\.
 
 
 ### Relations
@@ -101,7 +101,7 @@ Each *BFF* depends on all the services it uses \(usually every service in the sy
 *Backends for Frontends*:
 
 - Extends [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) or rarely [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}), [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}), or [*Shards*]({{< relref "../basic-metapatterns/shards.md" >}})\.
-- Is derived from a client\-facing extension metapattern: [*Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}), [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}), [*API Gateway*]({{< relref "../extension-metapatterns/combined-component.md#event-mediator" >}}), or [*Event Mediator*]({{< relref "../extension-metapatterns/combined-component.md#event-mediator" >}})\.
+- Is derived from a client\-facing extension metapattern: [*Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}), [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}), [*API Gateway*]({{< relref "../extension-metapatterns/combined-component.md#event-mediator" >}}), or [*Event Mediator*]({{< relref "../extension-metapatterns/combined-component.md#event-mediator" >}})\.
 
 
 ## Variants
@@ -120,9 +120,7 @@ Each *BFF* depends on all the services it uses \(usually every service in the sy
 </a>
 </figure>
 
-Dedicating a [*Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-hardware-abstraction-layer-hal-operating-system-abstraction-layer-osal-platform-abstraction-layer-pal-database-abstraction-layer-dbal-or-dal-database-access-layer-data-mapper-repository" >}}) per client is useful when the clients differ in the mode of access to the system \(protocols / encryption / authorization\) but not in workflows\.
-
-Multiple *Adapters* match the literal meaning of *Backends for Frontends* – each UI team \([backend, mobile, desktop](https://www.thoughtworks.com/insights/blog/bff-soundcloud); or [end\-device\-specific](https://netflixtechblog.com/embracing-the-differences-inside-the-netflix-api-redesign-15fd8b3dc49d) teams\) gets some code on the backend side to adapt the system’s API to its needs by building a new, probably more high\-level specialized API on top of it\.
+Dedicating a [*Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) per client is useful when the clients differ in the mode of access to the system \(protocols / encryption / authorization\) but not in workflows\.
 
 ### Orchestrators
 
@@ -165,6 +163,8 @@ Clients vary in both access mode \(protocol\) and workflow\. [*Orchestrators*]({
 </figure>
 
 Clients vary in access mode \(protocol\) and workflow and there is a third\-party [*API Gateway*]({{< relref "../extension-metapatterns/combined-component.md#api-gateway" >}}) framework which seems to fit your requirements off the shelf\.
+
+Multiple *API Gateways* match the literal meaning of *Backends for Frontends* – each UI team \([backend, mobile, desktop](https://www.thoughtworks.com/insights/blog/bff-soundcloud); or [end\-device\-specific](https://netflixtechblog.com/embracing-the-differences-inside-the-netflix-api-redesign-15fd8b3dc49d) teams\) gets some code on the backend side to adapt the system’s API and protocols to its needs by building a new, probably higher\-level specialized API with a convenient transport\.
 
 ### Event Mediators
 

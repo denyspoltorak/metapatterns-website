@@ -222,7 +222,7 @@ As stream\-processing [*Pipelines*]({{< relref "../basic-metapatterns/pipeline.m
 - [*Pipes and Filters*]({{< relref "../basic-metapatterns/pipeline.md#pipes-and-filters-workflow-system" >}}) \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\] is *the* stream processing pattern that describes pipelines: the system is built of *filters* \(individual data processing steps\) connected through *pipes* \(data channels\)\.
 
 
-- [*Choreographed Event\-Driven Architecture*]({{< relref "../basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}}) \(EDA\) \[[SAP]({{< relref "../appendices/books-referenced.md#sap" >}}), [FSA]({{< relref "../appendices/books-referenced.md#fsa" >}}), [DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] and [*Data Mesh*]({{< relref "../basic-metapatterns/pipeline.md#data-mesh" >}}) \[[LDDD]({{< relref "../appendices/books-referenced.md#lddd" >}}), [SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\] are tree\-like pipelines that process streams of domain events or data, correspondingly\.
+- [*Choreographed Event\-Driven Architecture*]({{< relref "../basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}}) \(EDA\) \[[SAP]({{< relref "../appendices/books-referenced.md#sap" >}}), [FSA]({{< relref "../appendices/books-referenced.md#fsa" >}}), [DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] and [*Data Mesh*]({{< relref "../basic-metapatterns/pipeline.md#data-mesh" >}}) \[[LDDD]({{< relref "../appendices/books-referenced.md#lddd" >}}), [SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\] are tree\-like pipelines that process streams of domain events or data, respectively\.
 
 
 \[[EIP]({{< relref "../appendices/books-referenced.md#eip" >}})\] is full of patterns for the distributed processing of event streams\.
@@ -266,7 +266,7 @@ Long\-running programs with user input are probably the most common, ancient, an
 
 ### Implementation
 
-You likely have some kind of *parser* \(complex for SQL or very simple for command\-line parameters\) that transforms user input into a [syntax tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree) or a set of flags, correspondingly\. Then there is a kind of *main loop* which iteratively executes actions, pre\-defined or encoded in the parsed tree, until an *exit condition* is met or the entire input has been processed\.
+You likely have some kind of *parser* \(complex for SQL or very simple for command\-line parameters\) that transforms user input into a [syntax tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree) or a set of flags, respectively\. Then there is a kind of *main loop* which iteratively executes actions, pre\-defined or encoded in the parsed tree, until an *exit condition* is met or the entire input has been processed\.
 
 Any calls to external components \(OS or libraries\) are likely to be blocking as the computation does not need to react quickly to any additional input – actually, it does not read any input or change its behavior for the entire duration of its run\.
 
@@ -323,7 +323,7 @@ Games with 3D graphics often bypass the host OS’ [desktop environment](https:/
 
 SQL databases support several kinds of user commands:
 
-- [*Data definition*](https://en.wikipedia.org/wiki/Data_definition_language) and [*data control*](https://en.wikipedia.org/wiki/Data_control_language) *languages* \(*DDL* / *DCL*\) manage the database’s metadata: table definitions and user permissions, correspondingly\.
+- [*Data definition*](https://en.wikipedia.org/wiki/Data_definition_language) and [*data control*](https://en.wikipedia.org/wiki/Data_control_language) *languages* \(*DDL* / *DCL*\) manage the database’s metadata: table definitions and user permissions, respectively\.
 - [*Data manipulation*](https://en.wikipedia.org/wiki/Data_manipulation_language) and [*data query*](https://en.wikipedia.org/wiki/Data_query_language) *languages* \(*DML* / *DQL*\) write to and read from the tables\.
 - [*Procedural language*](https://neon.tech/postgresql/postgresql-plpgsql/introduction-to-postgresql-stored-procedures) \(*PL*\) programs user\-defined functions \(*stored procedures*\)\.
 

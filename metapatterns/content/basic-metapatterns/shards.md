@@ -34,10 +34,10 @@ By isolation:
 
 By state:
 
-- Persistent slice: [Sharding](https://learn.microsoft.com/en-us/azure/architecture/patterns/sharding) / Shards \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] / Partitions \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\] / Cells \([Amazon definition](https://docs.aws.amazon.com/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/what-is-a-cell-based-architecture.html)\),
+- Persistent slice: [Sharding](https://learn.microsoft.com/en-us/azure/architecture/patterns/sharding) / Shards \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] / Partitions \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\] / [Multitenancy](https://en.wikipedia.org/wiki/Multitenancy) / Cells \([Amazon definition](https://docs.aws.amazon.com/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/what-is-a-cell-based-architecture.html)\),
 - Persistent copy: Replica \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\],
-- Stateless: Pool \[[POSA3]({{< relref "../appendices/books-referenced.md#posa3" >}})\] / Instances / Replicated Stateless Services \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] / Work Queue \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] / [Lambdalith](https://theburningmonk.com/2025/03/the-pros-and-cons-of-lambdalith/),
-- Temporary state: Create on Demand\.
+- Stateless: Pool \[[POSA3]({{< relref "../appendices/books-referenced.md#posa3" >}})\] / Instances / Replicated Stateless Services \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] / Work Queue \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] / [Lambdas](https://jesseduffield.com/Notes-On-Lambda/),
+- Temporary state: Create on Demand / Actors\.
 
 
 <ins>Structure:</ins> A set of functionally identical subsystems with little or no intercommunication\.
@@ -47,7 +47,8 @@ By state:
 | *Benefits* | *Drawbacks* |
 | --- | --- |
 | Good scalability | It’s hard to synchronize the system’s state |
-| Good performance |  |
+| Good performance | There is operational effort to deploy or update multiple components |
+| Improved latency and/or fault tolerance |  |
 
 <ins>References:</ins> \[[POSA3]({{< relref "../appendices/books-referenced.md#posa3" >}})\] is dedicated to pooling and resource management; \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] reviews *Shards*, *Replicas* and *Stateless Instances*; \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\] covers sharding and synchronization of *Replicas* in depth; Amazon promotes full\-system sharding as [*Cell\-Based Architecture*](https://docs.aws.amazon.com/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/what-is-a-cell-based-architecture.html)\.
 
@@ -157,7 +158,7 @@ Shards usually don’t communicate with each other directly\. The common excepti
 
 There are several subtypes of sharding that differ in the way they handle state:
 
-### Persistent slice: Sharding, Shards, Partitions, Cells \(Amazon definition\)
+### Persistent slice: Sharding, Shards, Partitions, Multitenancy, Cells \(Amazon definition\)
 
 <figure>
 <a href="/diagrams/Variants/1/Shards%20-%20Sharding.png">
@@ -176,6 +177,8 @@ There are several subtypes of sharding that differ in the way they handle state:
 > Names are not evenly distributed among letters\. Many names start with A but few start with Q\. If we use the first letter of a user’s name to assign them to a shard, the shard that serves users whose names start with A will be much more loaded than the one responsible for the letter Q\. Therefore, real\-world systems rely on *hashing* \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\] – calculation of a *checksum* of the user’s name which yields a seemingly random number\. Then we divide the checksum by the total number of shards we have and use the remainder as the id of the shard that has the user’s data\. For example, CRC16\(“Bender”\) = 52722\. If we have 10 shards, Bender goes to \(52722 % 10 = 2\) the 3rd one\. 
 
 </aside>
+
+Another use of *Shards* is when a service provider allocates a whole shard to each of its clients to grant them data isolation, stable performance, and security\. This approach is contrasted against a cheaper option of [*Multitenancy*](https://en.wikipedia.org/wiki/Multitenancy) where several client organizations \(tenants\) share a shard\. In that case different shards may be customized to vary in functionality, available resources, and [SLA](https://en.wikipedia.org/wiki/Service-level_agreement) to provide better service to higher\-paying tenants\.
 
 *Cells*, according to the [Amazon terminology](https://docs.aws.amazon.com/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/what-is-a-cell-based-architecture.html), are copies of a whole system deployed to several data centers, each serving local users\. The locality improves latency and saves on Internet traffic while having multiple instances of the system up and running provides availability\. The downside of this approach is its complexity and amount of global traffic needed to keep the *Cells* in sync\.
 
@@ -206,7 +209,7 @@ The hard part comes from the need to keep the replicas’ data in sync\. The ord
 
 Another option found in the field is keeping the replicas only loosely identical\. That happens when isolated cache servers make a [*Caching Layer*]({{< relref "../extension-metapatterns/proxy.md#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}}) \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\]\. As clients tend to send similar requests, the data inside cache is more or less the same by the law or large numbers\.
 
-And if your traffic is read\-heavy, you may turn to [*Polyglot Persistence*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md" >}}) by segregating your replicas into the roles of a fully\-functional *leader* \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\] and [derived, read\-only *followers*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#read-only-replica" >}})\. The followers serve only the read requests while the leader processes the write requests which make it update its data and broadcast the changes to all its followers\. And if the leader dies, one of its followers is elected to become a new leader\. As a refinement of this idea, the code of the service itself may be separated into write \(*command*\) and read \(*query*\) services \([*Command Query Responsibility Segregation*]({{< relref "../fragmented-metapatterns/layered-services.md#command-query-responsibility-segregation-cqrs" >}}) aka *CQRS*\)\.
+And if your traffic is read\-heavy, you may turn to [*Polyglot Persistence*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md" >}}) by segregating your replicas into the roles of a fully\-functional *leader* \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\] and [derived, read\-only *followers*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#read-only-replicas" >}})\. The followers serve only the read requests while the leader processes the write requests which make it update its data and broadcast the changes to all its followers\. And if the leader dies, one of its followers is elected to become a new leader\. As a refinement of this idea, the code of the service itself may be separated into write \(*command*\) and read \(*query*\) services \([*Command Query Responsibility Segregation*]({{< relref "../fragmented-metapatterns/layered-services.md#command-query-responsibility-segregation-cqrs" >}}) aka *CQRS*\)\.
 
 Finally, you can mix sharding and replication to make sure that the data of each shard is replicated, either in whole among identical components \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] or piecemeal all over the system \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\]\. That achieves fault tolerance for volumes of data too large to store unsharded\.
 
@@ -217,18 +220,18 @@ Finally, you can mix sharding and replication to make sure that the data of each
 <picture>
 <source srcset="/diagrams/Variants/1/Shards%20-%20Pool.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Shards%20-%20Pool.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Shards%20-%20Pool.png" alt="Shards - Pool" loading="lazy" width="966" height="404" style="width:100%"/>
+<img src="/diagrams/Variants/1/Shards%20-%20Pool.png" alt="Shards - Pool" loading="lazy" width="966" height="383" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
 A predefined number \(*pool* \[[POSA3]({{< relref "../appendices/books-referenced.md#posa3" >}})\]\) of instances \(*workers*\) is created during the initialization of the system \(*Work Queue* \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\]\)\. When the system receives a task, a [*Load Balancer*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) assigns it to one of the idle instances from the pool\. As soon as the instance finishes processing its task it returns to the pool\. The instances don’t store any state while idle, thus they are also called *Replicated Stateless Services* \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\]\. A well\-known example of this pattern is [FastCGI](https://en.wikipedia.org/wiki/FastCGI)\.
 
-This approach allows for rapid allocation of a worker to any incoming task, but it uses a lot of resources even when there are no requests to serve and the system may still be overwhelmed at peak load\. Moreover, a [*Shared Database*]({{< relref "../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) is usually involved for the sake of persistent storage, limiting the pattern’s scalability\.
+This approach allows for rapid allocation of a worker to any incoming task, but it uses a lot of resources even when there are no requests to serve and the system may still be overwhelmed at peak load\. Moreover, a [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) \(database or file storage\) is usually involved for the sake of persistence, thus limiting the pattern’s scalability\.
 
 Many cloud services implement dynamic pools, the number of instances \([*lambdas*](https://jesseduffield.com/Notes-On-Lambda/)\) growing and shrinking according to the overall load: if all the current instances are busy serving user requests, new instances are created and added to the pool\. If some of the instances are idle for a while, they are destroyed\. Dynamic pooling is often implemented through [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}}), as in [*Microservices*]({{< relref "../implementation-metapatterns/mesh.md#service-mesh" >}}) or [*Space\-Based Architecture*]({{< relref "../implementation-metapatterns/mesh.md#space-based-architecture" >}})\.
 
-### Temporary state: Create on Demand
+### Temporary state: Create on Demand, Actors
 
 <figure>
 <a href="/diagrams/Variants/1/Shards%20-%20Create%20on%20Demand.png">

@@ -76,6 +76,12 @@ In my opinion:
 3.  Patterns are like a kind of toolbox, the one which a mechanic is often seen carrying around\. A skilled craftsman knows best uses of his tools, and can invent new instruments if something is missing in the standard toolset\. However, the toolset’s size should be limited for the tools to be familiar to the practitioner and easily carried around\.
 
 
+<aside>
+
+> There is a similarity between patterns and data structures\. Even though you may know hundreds of specialized data structures, most software can be easily built with vectors, lists, and hash tables alone\. Something like a [prefix tree](https://en.wikipedia.org/wiki/Trie) or [skip list](https://en.wikipedia.org/wiki/Skip_list) is a rare beast, but under certain circumstances it may save the day\. In the same way, business logic can be written without any use of patterns, but the resulting code will likely be hard to maintain, and even its performance may suffer \(see [*Spatial Partition*](https://gameprogrammingpatterns.com/spatial-partition.html) and [*Unit of Work*](https://martinfowler.com/eaaCatalog/unitOfWork.html) for patterns that drastically improve performance\)\.
+
+</aside>
+
 It is likely that those approaches are best used with systems of different sizes: SOLID is aimed at stand\-alone application design while the heavy frameworks and certifications suit distributed enterprise architectures\. In such a worldview patterns span everything in between the two extremes\.
 
 <aside>

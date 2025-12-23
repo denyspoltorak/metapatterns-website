@@ -79,7 +79,7 @@ In case a shard needs to access data owned by any other shard, the prerequisite 
 
 *Space\-Based Architecture* is a *Mesh* of nodes which consist of the application and a cached subset of the system’s data\. A node broadcasts any changes to its data to other nodes and it may request any data that it needs from the other nodes\. Collectively, the nodes of the *Mesh* keep the whole data cached in memory\.
 
-Though *Space\-Based Architecture* may provide multiple modes of action, including [single write / multiple read]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#read-only-replica" >}}) replicas, it is most efficient when there is no write synchronization between its nodes, meaning that data consistency is sacrificed for performance and scalability\.
+Though *Space\-Based Architecture* may provide multiple modes of action, including [single write / multiple read]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#read-only-replicas" >}}) replicas, it is most efficient when there is no write synchronization between its nodes, meaning that data consistency is sacrificed for performance and scalability\.
 
 <ins>Pros</ins>: 
 

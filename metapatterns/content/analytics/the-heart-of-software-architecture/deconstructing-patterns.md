@@ -16,7 +16,7 @@ Imagine a dungeon with dragons\. It is made of halls connected by tunnels\. Each
 If *cohesion* and *decoupling* dictate software architecture, they should surface in its principles\. Let’s take a look at [SOLID](https://en.wikipedia.org/wiki/SOLID):
 
 - The *single responsibility principle*, also known as [*do one thing and do it well*](https://en.wikipedia.org/wiki/Unix_philosophy#Do_One_Thing_and_Do_It_Well), is a general advice for keeping unrelated functionality decoupled\.
-- The *open\-closed principle* and *Liskov substitution principle* decouple the logic of the parent class or the code that uses it, correspondingly, from the functionality of its subclasses\.
+- The *open\-closed principle* and *Liskov substitution principle* decouple the logic of the parent class or the code that uses it, respectively, from the functionality of its subclasses\.
 - The *interface segregation principle* decouples independent parts of an object’s interface\.
 - The *dependency inversion principle* decouples an object’s users from its implementation\.
 

@@ -29,20 +29,20 @@ images = ["/diagrams/Web/og/Polyglot%20Persistence.png"]
 
 Independent storage:
 
-- Specialized Databases,
 - Private and Shared Databases,
+- Specialized Databases,
 - Data File / Content Delivery Network \(CDN\)\.
 
 
 Derived storage:
 
-- Read\-Only Replica,
-- [Reporting Database](https://martinfowler.com/bliki/ReportingDatabase.html) / CQRS View Database \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] / Event\-Sourced View \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\] / Source\-Aligned \(Native\) Data Product Quantum \(DPQ\) of Data Mesh \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\],
+- Read\-Only Replicas,
+- Database Cache / [Cache\-Aside](https://www.enjoyalgorithms.com/blog/cache-aside-caching-strategy),
 - [Memory Image](https://martinfowler.com/bliki/MemoryImage.html) / Materialized View \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\],
+- [Reporting Database](https://martinfowler.com/bliki/ReportingDatabase.html) / CQRS View Database \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] / Event\-Sourced View \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\] / Source\-Aligned \(Native\) Data Product Quantum \(DPQ\) of Data Mesh \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\],
 - Query Service \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] / Front Controller \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}}) but [not]({{< relref "../analytics/ambiguous-patterns.md#front-controller" >}}) [PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\] / Data Warehouse \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\] / Data Lake \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\] / Aggregate Data Product Quantum \(DPQ\) of Data Mesh \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\],
 - External Search Index,
-- Historical Data / [Data Archiving](https://www.datacore.com/glossary/what-is-data-archiving/),
-- Database Cache / [Cache\-Aside](https://www.enjoyalgorithms.com/blog/cache-aside-caching-strategy)\.
+- Historical Data / [Data Archiving](https://www.datacore.com/glossary/what-is-data-archiving/)\.
 
 
 <ins>Structure:</ins> A layer of data services used by higher\-level components\.
@@ -65,7 +65,7 @@ You can choose a dedicated technology for each kind of data or pattern of data a
 *Polyglot Persistence* aims at improving performance through the following means:
 
 - Optimize for [specific data use cases]({{< relref "#specialized-databases" >}})\. It is impossible for a single database to be good at everything\.
-- Redirect read traffic to [read\-only database *replicas*]({{< relref "#read-only-replica" >}})\. The write\-enabled *leader* database then processes only the write requests\.
+- Redirect read traffic to [read\-only database *replicas*]({{< relref "#read-only-replicas" >}})\. The write\-enabled *leader* database then processes only the write requests\.
 - [*Cache* any frequently used data]({{< relref "#database-cache-cache-aside" >}}) in a fast in\-memory database to let the majority of client requests be served without hitting the slower persistent storage\.
 - Build a [*view* of the states of other services]({{< relref "#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) in the system to avoid querying them\.
 - Maintain an external [*index*]({{< relref "#external-search-index" >}}) or [*Memory Image*]({{< relref "#memory-image-materialized-view" >}}) for use with tasks that don’t need the history of changes\.
@@ -93,7 +93,7 @@ In general, each service depends on all of the databases which it uses\. There m
 
 *Polyglot Persistence* <ins>helps</ins>:
 
-- *High load and low latency projects\.* [*Specialized Databases*]({{< relref "#specialized-databases" >}}) shine when given fitting tasks\. [*Caching*]({{< relref "#database-cache-cache-aside" >}}) and [*Read\-Only Replicas*]({{< relref "#read-only-replica" >}}) take the load off the main database\. [*External Search Indices*]({{< relref "#external-search-index" >}}) save the day\.
+- *High load and low latency projects\.* [*Specialized Databases*]({{< relref "#specialized-databases" >}}) shine when given fitting tasks\. [*Caching*]({{< relref "#database-cache-cache-aside" >}}) and [*Read\-Only Replicas*]({{< relref "#read-only-replicas" >}}) take the load off the main database\. [*External Search Indices*]({{< relref "#external-search-index" >}}) save the day\.
 - *Event sourcing\.* [*Materialized Views*]({{< relref "#memory-image-materialized-view" >}}) maintain the current states of the system’s components\.
 - *Conflicting forces*\. An instance of a stateless service inherits many of the qualities of the database which it accesses for any given request it is processing\. When there are several databases, the qualities of a service instance may vary from request to request,depending on which database is involved\.
 
@@ -128,20 +128,6 @@ In general, each service depends on all of the databases which it uses\. There m
 
 Many cases of *Polyglot Persistence* use multiple datastores just because there is no single technology that matches all the application’s needs\. The databases used are filled with different subsets of the system’s data:
 
-### Specialized Databases
-
-<figure>
-<a href="/diagrams/Variants/3/PP%20-%20Specialized.png">
-<picture>
-<source srcset="/diagrams/Variants/3/PP%20-%20Specialized.svg" media="(prefers-color-scheme: light)"/>
-<source srcset="/diagrams/Variants/3/PP%20-%20Specialized.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/PP%20-%20Specialized.png" alt="PP - Specialized" loading="lazy" width="863" height="282" style="width:100%"/>
-</picture>
-</a>
-</figure>
-
-Databases [vary in their optimal use cases](https://www.jamesserra.com/archive/2015/07/what-is-polyglot-persistence/)\. You can employ several different databases to achieve the best performance for each kind of data that you persist\.
-
 ### Private and Shared Databases
 
 <figure>
@@ -155,6 +141,20 @@ Databases [vary in their optimal use cases](https://www.jamesserra.com/archive/2
 </figure>
 
 If several services or shards become coupled through a subset of the system’s data, that subset can be put into a separate database which is accessible to all the participants\. All the other data remains private to the [shards]({{< relref "../basic-metapatterns/shards.md" >}}) or [services]({{< relref "../basic-metapatterns/services.md" >}})\.
+
+### Specialized Databases
+
+<figure>
+<a href="/diagrams/Variants/3/PP%20-%20Specialized.png">
+<picture>
+<source srcset="/diagrams/Variants/3/PP%20-%20Specialized.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/3/PP%20-%20Specialized.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/3/PP%20-%20Specialized.png" alt="PP - Specialized" loading="lazy" width="863" height="282" style="width:100%"/>
+</picture>
+</a>
+</figure>
+
+Databases [vary in their optimal use cases](https://www.jamesserra.com/archive/2015/07/what-is-polyglot-persistence/)\. You can employ several different databases to achieve the best performance for each kind of data that you persist\.
 
 ### Data File, Content Delivery Network \(CDN\)
 
@@ -172,7 +172,7 @@ Some data is happy to stay in files\. Web frameworks load web page templates fro
 
 ## Variants with derived storage
 
-In other cases there is a single writable database \(*system of record* \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\]\) which is the main *source of truth* from which the other databases are derived\. The primary reason to use several databases is to [relieve the main database of read requests]({{< relref "#read-only-replica" >}}) and maybe support some additional qualities: special kinds of queries, aggregation for [*materialized*]({{< relref "#memory-image-materialized-view" >}}) and [*CQRS views*]({{< relref "#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}), full text search for [*text indices*]({{< relref "#external-search-index" >}}), huge dataset size for [*historical data*]({{< relref "#historical-data-data-archiving" >}}) or low latency for an [*in\-memory cache*]({{< relref "#database-cache-cache-aside" >}})\.
+In other cases there is a single writable database \(*system of record* \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\]\) which is the main *source of truth* from which the other databases are derived\. The primary reason to use several databases is to [relieve the main database of read requests]({{< relref "#read-only-replicas" >}}) and maybe support some additional qualities: special kinds of queries, aggregation for [*materialized*]({{< relref "#memory-image-materialized-view" >}}) and [*CQRS views*]({{< relref "#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}), full text search for [*text indices*]({{< relref "#external-search-index" >}}), huge dataset size for [*historical data*]({{< relref "#historical-data-data-archiving" >}}) or low latency for an [*in\-memory cache*]({{< relref "#database-cache-cache-aside" >}})\.
 
 The updates to the derived databases may come from:
 
@@ -192,35 +192,35 @@ The updates to the derived databases may come from:
 </a>
 </figure>
 
-### Read\-Only Replica
+### Read\-Only Replicas
 
 <figure>
 <a href="/diagrams/Variants/3/Read-only%20Replica.png">
 <picture>
 <source srcset="/diagrams/Variants/3/Read-only%20Replica.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/Read-only%20Replica.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/Read-only%20Replica.png" alt="Read-only Replica" loading="lazy" width="713" height="384" style="width:71%"/>
+<img src="/diagrams/Variants/3/Read-only%20Replica.png" alt="Read-only Replica" loading="lazy" width="713" height="425" style="width:75%"/>
 </picture>
 </a>
 </figure>
 
 Multiple instances of the database are deployed and one of them is the *leader* \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\] instance which processes all writes to the system’s data\. The changes are then replicated to the other instances \(via [*Change Data Capture*](https://www.dremio.com/wiki/change-data-capture/) \(*CDC*\)\) which are used for read requests\. Distributing workload over multiple instances increases maximum read throughput which the system is capable of, as the database is usually the system’s bottleneck\. Having several running [*replicas*]({{< relref "../basic-metapatterns/shards.md#persistent-copy-replica" >}}) greatly improves reliability and allows for nearly instant recovery of database failures as any replica may quickly be promoted to the leader role to serve write traffic\.
 
-### Reporting Database, CQRS View Database, Event\-Sourced View, Source\-Aligned \(Native\) Data Product Quantum \(DPQ\) of Data Mesh
+### Database Cache, Cache\-Aside
 
 <figure>
-<a href="/diagrams/Variants/3/Reporting%20DB%20and%20CQRS%20View.png">
+<a href="/diagrams/Variants/3/Cache-Aside.png">
 <picture>
-<source srcset="/diagrams/Variants/3/Reporting%20DB%20and%20CQRS%20View.svg" media="(prefers-color-scheme: light)"/>
-<source srcset="/diagrams/Variants/3/Reporting%20DB%20and%20CQRS%20View.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/Reporting%20DB%20and%20CQRS%20View.png" alt="Reporting DB and CQRS View" loading="lazy" width="1303" height="284" style="width:100%"/>
+<source srcset="/diagrams/Variants/3/Cache-Aside.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/3/Cache-Aside.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/3/Cache-Aside.png" alt="Cache-Aside" loading="lazy" width="803" height="364" style="width:84%"/>
 </picture>
 </a>
 </figure>
 
-It is common wisdom that a database is good for either *OLTP* \(transactions\) or *OLAP* \(queries\)\. Here we have two databases: one optimized for commands \(write traffic protected with transactions\) and another one for complex analytical queries\. The databases differ at least in schema \(OLAP schema is optimized for queries\) and often vary in type \(e\.g\. SQL vs NoSQL\)\.
+Database queries are resource\-heavy while databases scale only to a limited extent\. That means that a highly loaded system benefits from bypassing its main database with as many queries as possible, that is usually achieved by storing recent queries and their results in an in\-memory database \([*Cache\-Aside*](https://www.enjoyalgorithms.com/blog/cache-aside-caching-strategy)\)\. Each incoming query is first looked for in the fast cache, and if it is found then you are lucky to get the result immediately without having to consult the main database\.
 
-A [*Reporting Database*](https://martinfowler.com/bliki/ReportingDatabase.html) \(or *Source\-Aligned \(Native\) Data Product Quantum* of [*Data Mesh*]({{< relref "../basic-metapatterns/pipeline.md#data-mesh" >}}) \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\]\) derives its data from a write\-enabled database in the same subsystem \(service\) while a *CQRS View* \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] or *Event\-Sourced View* \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\] is fed a stream of events from another service from which it filters the data relevant to its owner\. This way a *CQRS View* lets its owner service query \(its replica of\) the data that originally belonged to other services\.
+Keeping the cache consistent with the main database is the hard part\. There are quite a few strategies \(some of them treat the [cache as a *Proxy*]({{< relref "../extension-metapatterns/proxy.md#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}}) for the database\): [write\-through](https://www.enjoyalgorithms.com/blog/write-through-caching-strategy), [write\-behind](https://www.enjoyalgorithms.com/blog/write-behind-caching-pattern), [write\-around](https://www.enjoyalgorithms.com/blog/write-around-caching-pattern) and [refresh\-ahead](https://www.enjoyalgorithms.com/blog/refresh-ahead-caching-pattern)\.
 
 ### Memory Image, Materialized View
 
@@ -229,12 +229,28 @@ A [*Reporting Database*](https://martinfowler.com/bliki/ReportingDatabase.html) 
 <picture>
 <source srcset="/diagrams/Variants/3/Memory%20Image.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/Memory%20Image.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/Memory%20Image.png" alt="Memory Image" loading="lazy" width="1303" height="290" style="width:100%"/>
+<img src="/diagrams/Variants/3/Memory%20Image.png" alt="Memory Image" loading="lazy" width="1303" height="311" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
 *Event sourcing* \(of [*Event\-Driven Architecture*]({{< relref "../basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}}) or [*Microservices*]({{< relref "../basic-metapatterns/services.md#microservices" >}})\) is all about changes\. A service persists only *changes* to its data instead of the *current* data\. As a result, the service needs to aggregate its history into a [*Memory Image*](https://martinfowler.com/bliki/MemoryImage.html) \(*Materialized View* \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\]\) by loading a snapshot and replaying any further events to rebuild its current state \(which other architectural styles store in databases\) and start operating\.
+
+### Reporting Database, CQRS View Database, Event\-Sourced View, Source\-Aligned \(Native\) Data Product Quantum \(DPQ\) of Data Mesh
+
+<figure>
+<a href="/diagrams/Variants/3/Reporting%20DB%20and%20CQRS%20View.png">
+<picture>
+<source srcset="/diagrams/Variants/3/Reporting%20DB%20and%20CQRS%20View.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/3/Reporting%20DB%20and%20CQRS%20View.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/3/Reporting%20DB%20and%20CQRS%20View.png" alt="Reporting DB and CQRS View" loading="lazy" width="1303" height="304" style="width:100%"/>
+</picture>
+</a>
+</figure>
+
+It is common wisdom that a database is good for either *OLTP* \(transactions\) or *OLAP* \(queries\)\. Here we have two databases: one optimized for commands \(write traffic protected with transactions\) and another one for complex analytical queries\. The databases differ at least in schema \(OLAP schema is optimized for queries\) and often vary in type \(e\.g\. SQL vs NoSQL\)\.
+
+A [*Reporting Database*](https://martinfowler.com/bliki/ReportingDatabase.html) \(or *Source\-Aligned \(Native\) Data Product Quantum* of [*Data Mesh*]({{< relref "../basic-metapatterns/pipeline.md#data-mesh" >}}) \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\]\) derives its data from a write\-enabled database in the same subsystem \(service\) while a *CQRS View* \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] or *Event\-Sourced View* \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\] is fed a stream of events from another service from which it filters the data relevant to its owner\. This way a *CQRS View* lets its owner service query \(its replica of\) the data that originally belonged to other services\.
 
 ### Query Service, Front Controller, Data Warehouse, Data Lake, Aggregate Data Product Quantum \(DPQ\) of Data Mesh
 
@@ -281,22 +297,6 @@ Some domains require a kind of search which is not naturally supported by ordina
 </figure>
 
 It is common to store the history of sales in a database\. However, once a month or two has passed, it is very unlikely that the historical records will ever be edited\. And though they are queried on very rare occasions, like audits, they still slow down your database\. Some businesses offload any data older than a couple of months to a cheaper [*archive storage*](https://www.datacore.com/glossary/what-is-data-archiving/) which does not allow changes to the data and has limited query capabilities in order to keep the main datasets small and fast\.
-
-### Database Cache, Cache\-Aside
-
-<figure>
-<a href="/diagrams/Variants/3/Cache-Aside.png">
-<picture>
-<source srcset="/diagrams/Variants/3/Cache-Aside.svg" media="(prefers-color-scheme: light)"/>
-<source srcset="/diagrams/Variants/3/Cache-Aside.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/Cache-Aside.png" alt="Cache-Aside" loading="lazy" width="763" height="325" style="width:80%"/>
-</picture>
-</a>
-</figure>
-
-Database queries are resource\-heavy while databases scale only to a limited extent\. That means that a highly loaded system benefits from bypassing its main database with as many queries as possible, that is usually achieved by storing recent queries and their results in an in\-memory database \([*Cache\-Aside*](https://www.enjoyalgorithms.com/blog/cache-aside-caching-strategy)\)\. Each incoming query is first looked for in the fast cache, and if it is found then you are lucky to get the result immediately without having to consult the main database\.
-
-Keeping the cache consistent with the main database is the hard part\. There are quite a few strategies \(some of them treat the [cache as a *Proxy*]({{< relref "../extension-metapatterns/proxy.md#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}}) for the database\): [write\-through](https://www.enjoyalgorithms.com/blog/write-through-caching-strategy), [write\-behind](https://www.enjoyalgorithms.com/blog/write-behind-caching-pattern), [write\-around](https://www.enjoyalgorithms.com/blog/write-around-caching-pattern) and [refresh\-ahead](https://www.enjoyalgorithms.com/blog/refresh-ahead-caching-pattern)\.
 
 ## Evolutions
 

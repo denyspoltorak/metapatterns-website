@@ -84,7 +84,7 @@ If your system’s development [is finished]({{< relref "../../analytics/archite
 
 <ins>Goal</ins>: scale the system\.
 
-<ins>Prerequisite</ins>: some layers are [stateless]({{< relref "../../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}}) or limited to the [data of a single client]({{< relref "../../basic-metapatterns/shards.md#temporary-state-create-on-demand" >}})\.
+<ins>Prerequisite</ins>: some layers are [stateless]({{< relref "../../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}}) or limited to the [data of a single client]({{< relref "../../basic-metapatterns/shards.md#temporary-state-create-on-demand-actors" >}})\.
 
 Multiple instances or layers can be created, with their number and deployment [varying from layer to layer]({{< relref "../../foundations-of-software-architecture/forces--asynchronicity--and-distribution.md#distribution" >}})\. That may work seamlessly if each instance of the layer which receives an event which can start a use case knows the instance of the next layer to communicate to\. Otherwise you will need a *Load Balancer*\.
 
@@ -124,7 +124,7 @@ Multiple instances or layers can be created, with their number and deployment [v
 
 <ins>Prerequisite</ins>: there are isolated use cases for or subsets of the data\.
 
-If you have separated *commands* \(write requests\) from *queries* \(read requests\), you can serve the queries with [read\-only replicas]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#read-only-replica" >}}) of the database while the main database is reserved for the commands\.
+If you have separated *commands* \(write requests\) from *queries* \(read requests\), you can serve the queries with [read\-only replicas]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#read-only-replicas" >}}) of the database while the main database is reserved for the commands\.
 
 If your types of data or data processing algorithms vary, you may deploy several [specialized databases]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#specialized-databases" >}}), each matching a subset of your needs\. That lets you achieve the best performance in widely diverging cases\.
 
