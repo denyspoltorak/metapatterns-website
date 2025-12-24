@@ -27,31 +27,31 @@ The content is lavishly illustrated with intuitive NoUML diagrams. It’s concis
 
 </a>
 
-<a href="https://speakerdeck.com/denyspoltorak/patterns-of-patterns-and-why-we-need-them">
+<a href="https://speakerdeck.com/denyspoltorak/patterns-of-patterns-c322149c-fcdd-4df6-8c6c-f273c7ab17dd">
 
 <img src="/diagrams/Web/slides/Patterns.png" alt="Patterns of Patterns" width="480" height="270"/>
 
 </a>
 
-<a href="https://speakerdeck.com/denyspoltorak/basic-architecures-the-building-blocks-for-complex-systems-70279871-d17e-4bc9-845c-e2a88bb3a4d8">
+<a href="https://speakerdeck.com/denyspoltorak/basic-architectures">
 
 <img src="/diagrams/Web/slides/Basic.png" alt="Basic Architectures" width="480" height="270"/>
 
 </a>
 
-<a href="https://speakerdeck.com/denyspoltorak/architectural-extensions-making-use-of-specialized-components">
+<a href="https://speakerdeck.com/denyspoltorak/architectural-extensions-c3e506c0-6472-4e2c-8113-b3d8ffa20d63">
 
 <img src="/diagrams/Web/slides/Extensions.png" alt="Architectural Extensions" width="480" height="270"/>
 
 </a>
 
-<a href="https://speakerdeck.com/denyspoltorak/fragmented-architectures-patterns-with-smaller-components">
+<a href="https://speakerdeck.com/denyspoltorak/fragmented-architectures-bf4d129f-4cd1-46bf-9fb0-248879872b25">
 
 <img src="/diagrams/Web/slides/Fragmented.png" alt="Fragmented Architectures" width="480" height="270"/>
 
 </a>
 
-<a href="https://speakerdeck.com/denyspoltorak/implementation-patterns-the-high-level-design-of-system-components">
+<a href="https://speakerdeck.com/denyspoltorak/implementation-patterns">
 
 <img src="/diagrams/Web/slides/Implementation.png" alt="Implementation Patterns" width="480" height="270"/>
 
