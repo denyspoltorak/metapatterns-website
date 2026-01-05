@@ -72,6 +72,12 @@ We’ll draw the abstractness axis vertically with higher\-level modules positio
 
 \(A structural diagram for [*CQRS*]({{< relref "../fragmented-metapatterns/layered-services.md#command-query-responsibility-segregation-cqrs" >}}), adapted from [Udi Dahan’s article](https://udidahan.com/2009/12/09/clarified-cqrs/), to introduce the notation\)
 
+<aside>
+
+> Abstractness is usually inverse to the distance to the system’s clients\. A graphical interface is highly abstract with its intuitive windows, forms, and scrollbars, and it is the part of the software which the users interact with\. The opposite end of the system hosts device drivers which operate in cryptic bits and registers\. Nevertheless, the reality is more complex: to draw UI windows on the screen the software still needs help from graphic card drivers deep inside the OS\. Likewise, there are several layers of routing and proxies between a web page that you see in your browser and the server\-side logic which that page allows you to access\. Even though those intermediate layers are not highly abstract, we still draw them in the upper part of diagrams between a system and its clients to keep the diagrams [simple and stupid](https://en.wikipedia.org/wiki/KISS_principle)\. 
+
+</aside>
+
 ## Map and reduce
 
 Now that we have the generic coordinates which seem to fit any architectural pattern, we can start mapping our set of architectural patterns into that coordinate system – the process of reducing the multidimensional design space to the few dimensions of structural diagrams which we were looking for\. Then, after filtering out minor details, our hundred or so of published patterns should yield a score of clusters of geometrically equivalent diagrams – just because there are very few simple systems that one can draw on a plane before repeating oneself\. Each of the clusters will represent an *architectural metapattern* – a generalization of architectural patterns of similar structure and function\.

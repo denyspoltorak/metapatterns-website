@@ -52,7 +52,11 @@ By function:
 - API Composer \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] / Remote Facade \[[PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\] / [Gateway Aggregation](https://learn.microsoft.com/en-us/azure/architecture/patterns/gateway-aggregation) / Composed Message Processor \[[EIP]({{< relref "../appendices/books-referenced.md#eip" >}})\] / [Scatter\-Gather](https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/scatter-gather.html) \[[EIP]({{< relref "../appendices/books-referenced.md#eip" >}}), [DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] / [MapReduce](https://en.wikipedia.org/wiki/MapReduce) \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\],
 - Process Manager \[[EIP]({{< relref "../appendices/books-referenced.md#eip" >}}), [LDDD]({{< relref "../appendices/books-referenced.md#lddd" >}})\] / Orchestrator \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\], 
 - \(Orchestrated\) Saga \[[LDDD]({{< relref "../appendices/books-referenced.md#lddd" >}})\] / Saga Orchestrator \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] / [Saga Execution Component](https://www.cs.cornell.edu/andru/cs711/2002fa/reading/sagas.pdf) / Transaction Script \[[PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}}), [LDDD]({{< relref "../appendices/books-referenced.md#lddd" >}})\] / Coordinator \[[POSA3]({{< relref "../appendices/books-referenced.md#posa3" >}})\],
-- [Integration \(Micro\-\)Service](https://github.com/wso2/reference-architecture/blob/master/event-driven-api-architecture.md) / Application Service,
+- [Integration \(Micro\-\)Service](https://github.com/wso2/reference-architecture/blob/master/event-driven-api-architecture.md) / Application Service\.
+
+
+<ins>Examples</ins> of composite patterns: 
+
 - \(with a [*Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}})\) API Gateway \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] / Microgateway, 
 - \(with a [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}})\) Event Mediator \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\], 
 - \(with a [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) and [*Adapters*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}})\) Enterprise Service Bus \(ESB\) \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\]\.
@@ -400,7 +404,7 @@ An [*Integration Service*](https://github.com/wso2/reference-architecture/blob/m
 
 Example: Order Service in \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] seems to fit the description\.
 
-## Variants of composite patterns
+## Examples of composite patterns
 
 Several composite patterns involve an *Orchestrator* and are dominated by its behavior:
 

@@ -103,7 +103,7 @@ See the [*Choreography* chapter]({{< relref "../foundations-of-software-architec
 *Pipeline*:
 
 - Is a kind of [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) with unidirectional communication and often a single input method\.
-- Is [involved]({{< relref "../analytics/comparison-of-architectural-patterns/pipelines-in-architectural-patterns.md" >}}) in [*CQRS*]({{< relref "../fragmented-metapatterns/layered-services.md#command-query-responsibility-segregation-cqrs" >}}), [*Polyglot Persistence* with derived databases]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#variants-with-derived-storage" >}}), and [*MVC*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}})\.
+- Is [involved]({{< relref "../analytics/comparison-of-architectural-patterns/pipelines-in-architectural-patterns.md" >}}) in [*CQRS*]({{< relref "../fragmented-metapatterns/layered-services.md#command-query-responsibility-segregation-cqrs" >}}), [*Polyglot Persistence* with derived databases]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#examples-with-derived-storage" >}}), and [*MVC*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}})\.
 - Can be extended with a [*Proxy*]({{< relref "../extension-metapatterns/proxy.md" >}}), [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}), or [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}})\.
 
 

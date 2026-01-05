@@ -25,6 +25,8 @@ images = ["/diagrams/Web/og/Proxy.png"]
 
 <ins>Aspects:</ins>
 
+- Isolation,
+- Translation,
 - Routing,
 - Offloading\.
 
@@ -44,14 +46,15 @@ By placement:
 - On the client side: Ambassador \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\]\.
 
 
-By function:
+<ins>Examples:</ins>
 
 - Firewall / [\(API\) Rate Limiter](https://testfully.io/blog/api-rate-limit/) / API Throttling,
 - Response Cache / [Read\-Through Cache](https://www.enjoyalgorithms.com/blog/read-through-caching-strategy) / [Write\-Through Cache](https://www.enjoyalgorithms.com/blog/write-through-caching-strategy) / [Write\-Behind Cache](https://www.enjoyalgorithms.com/blog/write-behind-caching-pattern) / Cache \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] / Caching Layer \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] / Distributed Cache / Replicated Cache,
 - [Load Balancer](https://en.wikipedia.org/wiki/Load_balancing_(computing)) \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] / Sharding Proxy \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] / [Cell Router](https://docs.aws.amazon.com/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/cell-routing.html) / Messaging Grid \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] / Scheduler, 
 - Dispatcher \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}})\] / [Reverse Proxy](https://traefik.io/blog/reverse-proxy-vs-ingress-controller-vs-api-gateway/) / [Ingress Controller](https://traefik.io/blog/reverse-proxy-vs-ingress-controller-vs-api-gateway/) / [Edge Service](https://medium.com/knerd/api-infrastructure-at-knewton-whats-in-an-edge-service-51a3777aeb41) / [Microgateway](https://github.com/wso2/reference-architecture/blob/master/event-driven-api-architecture.md), 
 - [Adapter](https://refactoring.guru/design-patterns/adapter) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}}), [DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] / Anticorruption Layer \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] / Abstraction Layer / Open Host Service \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] / Gateway \[[PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\] / Message Translator \[[EIP]({{< relref "../appendices/books-referenced.md#eip" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\] / [API Service](https://backendless.com/what-is-api-as-a-service/) / [Cell Gateway](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md) / \(inexact\) Backend for Frontend / Database Access Layer \[[POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\] / Data Mapper \[[PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\] / [Repository](https://martinfowler.com/eaaCatalog/repository.html) \[[PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}}), [DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\.
-- \(with [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}})\) API Gateway \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\]\. 
+- \(with [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}})\) API Gateway \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\],
+- User Interface / Presentation Layer \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] / [Separated Presentation](https://martinfowler.com/eaaDev/SeparatedPresentation.html) / Command Line Interface \(CLI\) / Graphical User Interface \(GUI\) / Frontend / [Human\-Machine Interface](https://en.wikipedia.org/wiki/User_interface#Terminology) \(HMI\) / [Man\-Machine Interface](https://en.wikipedia.org/wiki/User_interface#Terminology) \(MMI\) / [Operator Interface](https://en.wikipedia.org/wiki/User_interface#Terminology)\.
 
 
 See also [*Backends for Frontends*]({{< relref "../fragmented-metapatterns/backends-for-frontends--bff-.md" >}}) \(a *Gateway* per client type\)\.
@@ -65,13 +68,15 @@ See also [*Backends for Frontends*]({{< relref "../fragmented-metapatterns/backe
 | Separates cross\-cutting concerns from the services | A single point of failure |
 | Decouples the system from its clients | Most proxies degrade latency |
 | Low attack surface |  |
-| Available off the shelf |  |
+| Several kinds of Proxies are available off the shelf |  |
 
 <ins>References:</ins> Half of \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] is about the use of *Proxies*\. See also: \[[POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\] on *Proxy*; [Chris Richardson](https://microservices.io/patterns/apigateway.html) and [Microsoft](https://learn.microsoft.com/en-us/azure/architecture/microservices/design/gateway) on *API Gateway*; [Martin Fowler](https://martinfowler.com/articles/gateway-pattern.html) on *Gateway*, *Facade* and *API Gateway*\.
 
-A *Proxy* stands between a \(sub\)system’s implementation and its users\. It receives a request from a client, does some pre\-processing, then forwards the request to a lower\-level component\. In other words, a *Proxy* encapsulates selected aspects of the system’s communication with its clients by serving as yet another layer of indirection\. It may also decouple the system’s internals from changes in the public protocol\. The [main functions](https://learn.microsoft.com/en-us/azure/architecture/microservices/design/gateway) of a proxy include:
+A *Proxy* stands between a \(sub\)system’s implementation and its users\. It receives a request from a client, does some pre\-processing, then forwards the request to a lower\-level component\. In other words, a *Proxy* encapsulates selected aspects of the system’s communication with its clients by serving as yet another layer of indirection\. It may also decouple the system’s internals from changes in the public protocol\. The [main functions](https://learn.microsoft.com/en-us/azure/architecture/microservices/design/gateway) of a *Proxy* include:
 
-- *Routing* – a *Proxy* tracks addresses of deployed instances of the system’s components and is able to forward a client’s request to the [*shard*]({{< relref "../basic-metapatterns/shards.md" >}}) or [*service*]({{< relref "../basic-metapatterns/services.md" >}}) which can handle it\. Clients need to know only the public address of the *Proxy*\. A *Proxy* may also respond on its own if the request is invalid or there is a matching response in the *Proxy*’s cache\.
+- *Isolation* – the *Proxy* hides the internals of the system behind it from the clients\. This both improves security because access to other system components is supervised and permits changes to the system’s components or structure as nothing external knows what’s behind the *Proxy*\.
+- *Translation* – the *Proxy* may convert between the system’s internal protocol and its published interfaces\. [*User Interface*]({{< relref "#user-interface-presentation-layer-separated-presentation-command-line-interface-cli-graphical-user-interface-gui-frontend-human-machine-interface-hmi-man-machine-interface-mmi-operator-interface" >}}) is a translating *Proxy* taken to extremes: it represents the system’s internal data and commands as human\-readable information\.
+- *Routing* – the *Proxy* tracks addresses of deployed instances of the system’s components and is able to forward a client’s request to the [*shard*]({{< relref "../basic-metapatterns/shards.md" >}}) or [*service*]({{< relref "../basic-metapatterns/services.md" >}}) which can handle it\. Clients need to know only the public address of the *Proxy*\. A *Proxy* may also respond on its own if the request is invalid or there is a matching response in the *Proxy*’s cache\.
 - *Offloading* – a *Proxy* may implement generic aspects \([*cross\-cutting concerns*](https://en.wikipedia.org/wiki/Cross-cutting_concern)\) of the system’s public interface, such as authentication, authorisation, encryption, request logging, web protocol support, etc\. which would otherwise need to be implemented by the underlying system components\. That allows for the services to concentrate on what you write them for – the business logic\.
 
 
@@ -233,7 +238,7 @@ Finally, a *Proxy* may be co\-located with a component’s clients, making it an
 - [*Adapters*]({{< relref "#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) that help client applications use an optimized or secure protocol\.
 
 
-## Variants by function
+## Examples
 
 *Proxies* are ubiquitous in backend systems as using one or several of them frees the underlying code from the need to provide boilerplate non\-business\-logic functionality\. It is common to have several kinds of *Proxies* deployed sequentially \(e\.g\. [*API Gateways*]({{< relref "#api-gateway" >}}) behind [*Load Balancers*]({{< relref "#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) behind a [*Firewall*]({{< relref "#firewall-api-rate-limiter-api-throttling" >}})\) with many of them [*pooled*]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}}) to improve performance and stability\. It is also possible to employ multiple kinds of *Proxies*, each serving its own kind of client, in parallel, resulting in [*Backends for Frontends*]({{< relref "../fragmented-metapatterns/backends-for-frontends--bff-.md" >}})\.
 
@@ -386,6 +391,29 @@ There is also a whole bunch of *Abstraction Layers* that aim to protect the busi
 *API Gateway* \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] is a fusion of [*Gateway*]({{< relref "#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \(*Proxy*\) and [*API Composer*]({{< relref "../extension-metapatterns/orchestrator.md#api-composer-remote-facade-gateway-aggregation-composed-message-processor-scatter-gather-mapreduce" >}}) \([*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}})\)\. The *Gateway* aspect encapsulates the external \(public\) protocol while the *API Compose*r translates the system’s high\-level public API methods into multiple \(usually parallel\) calls to the APIs of internal components, collects the results and conjoins them into a response\.
 
 *API Gateway* is [discussed in more detail]({{< relref "../extension-metapatterns/orchestrator.md#api-gateway" >}}) under *Orchestrator*\.
+
+### User Interface, Presentation Layer, Separated Presentation, Command Line Interface \(CLI\), Graphical User Interface \(GUI\), Frontend, Human\-Machine Interface \(HMI\), Man\-Machine Interface \(MMI\), Operator Interface
+
+<figure>
+<a href="/diagrams/Variants/2/User%20Interface.png">
+<picture>
+<source srcset="/diagrams/Variants/2/User%20Interface.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/2/User%20Interface.negated.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/2/User%20Interface.png" alt="User Interface" loading="lazy" width="783" height="301" style="width:100%"/>
+</picture>
+</a>
+</figure>
+
+An *Adapter* between a human and a computer system is called a *User Interface* \(*UI*\) or *Presentation Layer* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\. It translates user actions into commands to the underlying system and presents the results it returns and other information supposedly important to the user\. *UI* comes in several flavors:
+
+- *Command Line Interface* \(*CLI*\) is text\-based and sequential – it executes one command at a time\. It’s the simplest kind of *UI*\.
+- *Graphical User Interface* \(*GUI*\) is built around graphical representation of information and controls\. It may rely on the windowing system of the underlying OS, a third\-party framework, or build something unique, which takes place in games\.
+- *Frontend* is an [*Ambassador*]({{< relref "#on-the-client-side-ambassador" >}}) which runs in a client’s browser on the system’s behalf\.
+- [*Human\-Machine Interface*](https://en.wikipedia.org/wiki/User_interface#Terminology) \(*HMI*\) or *Man\-Machine Interface* \(*MMI*\) is usually used for human interaction with an embedded system\. Sometimes this term may include both input / output hardware \(e\.g\. mouse and display, or touch screen\) and software that operates it\.
+- [*Operator Interface*](https://en.wikipedia.org/wiki/User_interface#Terminology) is an *HMI* that grants its user access to a system of several embedded devices\.
+
+
+[*Separated Presentation*](https://martinfowler.com/eaaDev/SeparatedPresentation.html) is, basically, another name for *User Interface* except that this pattern focuses on dispensability of any implementation of a *UI*: the same system can be driven by a *CLI*, *GUI* or *Frontend* without noticing any difference\. Many variants of *Separated Presentation* are discussed in a [dedicated section]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#examples--separated-presentation" >}}) under [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}})\.
 
 ## Evolutions
 

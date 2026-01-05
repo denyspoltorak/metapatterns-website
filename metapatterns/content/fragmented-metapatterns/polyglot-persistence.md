@@ -25,7 +25,7 @@ images = ["/diagrams/Web/og/Polyglot%20Persistence.png"]
 
 <ins>Aspects:</ins> those of the [databases]({{< relref "../extension-metapatterns/shared-repository.md" >}}) involved\.
 
-<ins>Variants:</ins> 
+<ins>Examples:</ins> 
 
 Independent storage:
 
@@ -124,7 +124,7 @@ In general, each service depends on all of the databases which it uses\. There m
 - Variants with derived databases have an aspect of [*Pipeline*]({{< relref "../basic-metapatterns/pipeline.md" >}}) and are closely related to [*CQRS*]({{< relref "../fragmented-metapatterns/layered-services.md#command-query-responsibility-segregation-cqrs" >}})\.
 
 
-## Variants with independent storage
+## Examples with independent storage
 
 Many cases of *Polyglot Persistence* use multiple datastores just because there is no single technology that matches all the application’s needs\. The databases used are filled with different subsets of the system’s data:
 
@@ -170,7 +170,7 @@ Databases [vary in their optimal use cases](https://www.jamesserra.com/archive/2
 
 Some data is happy to stay in files\. Web frameworks load web page templates from OS files and store images and videos in a *Content Delivery Network* \(*CDN*\) which replicates the data all over the world so that each user downloads the content from the nearest server \(which is faster and cheaper\)\.
 
-## Variants with derived storage
+## Examples with derived storage
 
 In other cases there is a single writable database \(*system of record* \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\]\) which is the main *source of truth* from which the other databases are derived\. The primary reason to use several databases is to [relieve the main database of read requests]({{< relref "#read-only-replicas" >}}) and maybe support some additional qualities: special kinds of queries, aggregation for [*materialized*]({{< relref "#memory-image-materialized-view" >}}) and [*CQRS views*]({{< relref "#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}), full text search for [*text indices*]({{< relref "#external-search-index" >}}), huge dataset size for [*historical data*]({{< relref "#historical-data-data-archiving" >}}) or low latency for an [*in\-memory cache*]({{< relref "#database-cache-cache-aside" >}})\.
 

@@ -27,9 +27,9 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Adapter]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}})
 
-[Add\-ins]({{< relref "../implementation-metapatterns/plugins.md" >}})
+[Add\-in]({{< relref "../implementation-metapatterns/plugins.md#addin-or-add-in" >}}) \(component\)
 
-[Addons]({{< relref "../implementation-metapatterns/plugins.md#by-integration" >}})
+[Addon]({{< relref "../implementation-metapatterns/plugins.md#inexact-addon-or-add-on" >}}) \(component\)
 
 [Aggregate Data Product Quantum]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#query-service-front-controller-data-warehouse-data-lake-aggregate-data-product-quantum-dpq-of-data-mesh" >}}) \(Data Mesh\)
 
@@ -108,6 +108,8 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 [Cluster]({{< relref "../basic-metapatterns/services.md#cell-wso2-definition-service-of-services-domain-uber-definition-cluster" >}}) \(group of services\)
 
 [Combined Component]({{< relref "../extension-metapatterns/combined-component.md" >}})
+
+[Command Line Interface]({{< relref "../extension-metapatterns/proxy.md#user-interface-presentation-layer-separated-presentation-command-line-interface-cli-graphical-user-interface-gui-frontend-human-machine-interface-hmi-man-machine-interface-mmi-operator-interface" >}}) \(CLI\)
 
 [Command Query Responsibility Segregation]({{< relref "../fragmented-metapatterns/layered-services.md#command-query-responsibility-segregation-cqrs" >}}) \(CQRS\)
 
@@ -211,7 +213,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Eventually Consistent Saga]({{< relref "../extension-metapatterns/orchestrator.md#orchestrated-saga-saga-orchestrator-saga-execution-component-transaction-script-coordinator" >}})
 
-[Extensions]({{< relref "../implementation-metapatterns/plugins.md" >}})
+[Extension]({{< relref "../implementation-metapatterns/plugins.md#extension" >}}) \(component\)
 
 [External Search Index]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#external-search-index" >}})
 
@@ -227,6 +229,8 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Front Controller]({{< relref "../extension-metapatterns/combined-component.md#front-controller" >}}) \(query service of a pipeline\)
 
+[Frontend]({{< relref "../extension-metapatterns/proxy.md#user-interface-presentation-layer-separated-presentation-command-line-interface-cli-graphical-user-interface-gui-frontend-human-machine-interface-hmi-man-machine-interface-mmi-operator-interface" >}})
+
 [Full Proxy]({{< relref "../extension-metapatterns/proxy.md#full-proxy" >}})
 
 [Function as a Service]({{< relref "../basic-metapatterns/services.md#distributed-runtime-backend-actors" >}})
@@ -236,6 +240,8 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 [Gateway]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \(adapter\)
 
 [Gateway Aggregation]({{< relref "../extension-metapatterns/orchestrator.md#api-composer-remote-facade-gateway-aggregation-composed-message-processor-scatter-gather-mapreduce" >}})
+
+[Graphical User Interface]({{< relref "../extension-metapatterns/proxy.md#user-interface-presentation-layer-separated-presentation-command-line-interface-cli-graphical-user-interface-gui-frontend-human-machine-interface-hmi-man-machine-interface-mmi-operator-interface" >}}) \(GUI\)
 
 [Grid]({{< relref "../implementation-metapatterns/mesh.md" >}})
 
@@ -256,6 +262,8 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 [Historical Data]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#historical-data-data-archiving" >}})
 
 [Hooks]({{< relref "../implementation-metapatterns/plugins.md#by-granularity" >}}) \(Plugins\)
+
+[Human\-Machine Interface]({{< relref "../extension-metapatterns/proxy.md#user-interface-presentation-layer-separated-presentation-command-line-interface-cli-graphical-user-interface-gui-frontend-human-machine-interface-hmi-man-machine-interface-mmi-operator-interface" >}}) \(HMI\)
 
 [Hypervisor]({{< relref "../implementation-metapatterns/microkernel.md#virtualizer-hypervisor-container-orchestrator-distributed-runtime" >}})
 
@@ -294,6 +302,8 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 [Leaf\-Spine Architecture]({{< relref "../implementation-metapatterns/mesh.md#leaf-spine-architecture-spine-leaf-architecture" >}})
 
 [Load Balancer]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}})
+
+[Man\-Machine Interface]({{< relref "../extension-metapatterns/proxy.md#user-interface-presentation-layer-separated-presentation-command-line-interface-cli-graphical-user-interface-gui-frontend-human-machine-interface-hmi-man-machine-interface-mmi-operator-interface" >}}) \(MMI\)
 
 [MapReduce]({{< relref "../extension-metapatterns/orchestrator.md#api-composer-remote-facade-gateway-aggregation-composed-message-processor-scatter-gather-mapreduce" >}})
 
@@ -387,6 +397,8 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Operating System Abstraction Layer]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \(OSAL or OAL\)
 
+[Operator Interface]({{< relref "../extension-metapatterns/proxy.md#user-interface-presentation-layer-separated-presentation-command-line-interface-cli-graphical-user-interface-gui-frontend-human-machine-interface-hmi-man-machine-interface-mmi-operator-interface" >}})
+
 [Orchestrated Saga]({{< relref "../extension-metapatterns/orchestrator.md#orchestrated-saga-saga-orchestrator-saga-execution-component-transaction-script-coordinator" >}})
 
 [Orchestrated Services]({{< relref "../extension-metapatterns/orchestrator.md" >}})
@@ -411,6 +423,8 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Plug\-In Architecture]({{< relref "../implementation-metapatterns/plugins.md" >}})
 
+[Plugin]({{< relref "../implementation-metapatterns/plugins.md#true-plugin-or-plug-in" >}}) \(component\)
+
 [Plugins]({{< relref "../implementation-metapatterns/plugins.md" >}})
 
 [Polyglot Persistence]({{< relref "../fragmented-metapatterns/polyglot-persistence.md" >}})
@@ -420,6 +434,8 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 [Pool]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}}) \(stateless instances\)
 
 [Presentation\-Abstraction\-Control]({{< relref "../fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}}) \(PAC\)
+
+[Presentation Layer]({{< relref "../extension-metapatterns/proxy.md#user-interface-presentation-layer-separated-presentation-command-line-interface-cli-graphical-user-interface-gui-frontend-human-machine-interface-hmi-man-machine-interface-mmi-operator-interface" >}})
 
 [Proactor]({{< relref "../basic-metapatterns/monolith.md#proactor-one-thread-many-tasks" >}})
 
@@ -550,6 +566,8 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 [Top\-Down Hierarchy]({{< relref "../fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}})
 
 [Transaction Script]({{< relref "../extension-metapatterns/orchestrator.md#orchestrated-saga-saga-orchestrator-saga-execution-component-transaction-script-coordinator" >}})
+
+[User Interface]({{< relref "../extension-metapatterns/proxy.md#user-interface-presentation-layer-separated-presentation-command-line-interface-cli-graphical-user-interface-gui-frontend-human-machine-interface-hmi-man-machine-interface-mmi-operator-interface" >}})
 
 [Virtualizer]({{< relref "../implementation-metapatterns/microkernel.md#virtualizer-hypervisor-container-orchestrator-distributed-runtime" >}})
 

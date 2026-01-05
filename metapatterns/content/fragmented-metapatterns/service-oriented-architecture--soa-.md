@@ -23,7 +23,7 @@ images = ["/diagrams/Web/og/Service-Oriented%20Architecture.png"]
 
 <ins>Known as:</ins> Service\-Oriented Architecture \(SOA\), [Segmented Architecture](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-layered-segmented.md)\.
 
-<ins>Variants:</ins>
+<ins>Examples:</ins>
 
 - Distributed Monolith,
 - Enterprise SOA,
@@ -46,7 +46,7 @@ images = ["/diagrams/Web/og/Service-Oriented%20Architecture.png"]
 
 <ins>References:</ins> \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] has a chapter on Orchestration\-Driven \(Enterprise\) Service\-Oriented Architecture\. \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] mentions Distributed Monolith\. There is also much \(though somewhat conflicting\) content over the Web\.
 
-*Service\-Oriented Architecture* looks like the application of modular or object\-oriented design followed by distribution of the resulting components over a network\. The system usually contains three \(rarely four\) [*layers*]({{< relref "../basic-metapatterns/layers.md" >}}) of [*services*]({{< relref "../basic-metapatterns/services.md" >}}) where every service has access to all the services below it \(and sometimes some within its own layer\)\. The services stay small, but as their number grows it becomes hard to keep in mind all the API methods and contracts available which a high\-level component might use\. Another issue originates from the idea of reusable components – multiple applications, written for different clients with varied workflows, require the same service to behave in \(subtly\) different ways, either causing its API to bloat or else impairing its usability \(which means that a new customized duplicate service will likely be added to the system\)\. Use cases are slow because there is much interservice communication over the network\. Teams are interdependent as any use case involves many services, each owned by a different team\. Testability is poor because there are too many moving \(and being independently updated\!\) parts\. The foundational idea of service reuse failed in practice, but its child architecture, *SOA*, still survives in historical environments\.
+*Service\-Oriented Architecture* looks like the [application of modular or object\-oriented design](https://www.uber.com/en-UA/blog/microservice-architecture/) followed by distribution of the resulting components over a network\. The system usually contains three \(rarely four\) [*layers*]({{< relref "../basic-metapatterns/layers.md" >}}) of [*services*]({{< relref "../basic-metapatterns/services.md" >}}) where every service has access to all the services below it \(and sometimes some within its own layer\)\. The services stay small, but as their number grows it becomes hard to keep in mind all the API methods and contracts available which a high\-level component might use\. Another issue originates from the idea of reusable components – multiple applications, written for different clients with varied workflows, require the same service to behave in \(subtly\) different ways, either causing its API to bloat or else impairing its usability \(which means that a new customized duplicate service will likely be added to the system\)\. Use cases are slow because there is much interservice communication over the network\. Teams are interdependent as any use case involves many services, each owned by a different team\. Testability is poor because there are too many moving \(and being independently updated\!\) parts\. The foundational idea of service reuse failed in practice, but its child architecture, *SOA*, still survives in historical environments\.
 
 Even though *SOA* fell from grace and is rarely seen in modern projects, it may soon be resurrected by low\-code and no\-code frameworks for serverless systems \(e\.g\. [*Nanoservices*]({{< relref "../basic-metapatterns/services.md#single-function-faas-nanoservices" >}})\) – it has everything ready: code reuse, granular deployment, and elastic scaling\.
 
@@ -94,7 +94,7 @@ Each service of each layer depends on everything it uses\. As a result, developm
 - Is often extended with an [*Enterprise Service Bus*]({{< relref "../extension-metapatterns/combined-component.md#enterprise-service-bus-esb" >}}) \(a kind of [*orchestrating*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}})\) and one or more [*Shared Databases*]({{< relref "../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}})\.
 
 
-## Variants
+## Examples
 
 This architecture was hyped at the time when enterprises were expanding by acquiring smaller companies and conjoining their IT systems\. The resulting merged systems were still heterogeneous and the development experience unpleasant, which inclined popular opinion towards the then novel notion of [*Microservices*]({{< relref "../basic-metapatterns/services.md#microservices" >}})\. As nearly everybody has turned from merging existing systems to failing to apply *Microservices* in practice, the chance to find a pure greenfield *SOA* project in the wild is quite low\. Many systems which are marketed as *SOA* are strongly modified:
 

@@ -21,9 +21,17 @@ images = ["/diagrams/Web/og/Plugins.png"]
 
 *Overspecialize, and you breed in weakness\.* Customize the system through attachable modules\.
 
-<ins>Known as:</ins> Plug\-In Architecture \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\], \(misapplied\) Microkernel \(Architecture\) \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}}), [SAP]({{< relref "../appendices/books-referenced.md#sap" >}}), [FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\], Plugin \[[PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\], Addons, Add\-ins, Extensions, [Strategy](https://refactoring.guru/design-patterns/strategy) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\], Reflection \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\], Aspects, Hooks\.
+<ins>Known as:</ins> Plug\-In Architecture \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\], \(misapplied\) Microkernel \(Architecture\) \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}}), [SAP]({{< relref "../appendices/books-referenced.md#sap" >}}), [FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\], Plugin \[[PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\], [Strategy](https://refactoring.guru/design-patterns/strategy) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\], Reflection \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\], Aspects, Hooks\.
 
-<ins>Variants:</ins> [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) and [*Microkernel*]({{< relref "../implementation-metapatterns/microkernel.md" >}}) got dedicated chapters\. Plugins have many variations\.
+<ins>Variants:</ins> [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) and [*Microkernel*]({{< relref "../implementation-metapatterns/microkernel.md" >}}) got dedicated chapters\. *Plugins* have many variations\.
+
+<ins>Examples:</ins>
+
+- True Plugin / Plug\-in \(low\-level\),
+- Extension \(high\-level\),
+- Addin / Add\-in \(mid\-level\),
+- \(inexact\) Addon / Add\-on \(topping\)\.
+
 
 <ins>Structure:</ins> A [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) extended with one or more modules that customize its behavior\.
 
@@ -96,7 +104,7 @@ Each *plugin* depends on the *core*’s *API* \(for *Addons*\) or *SPI* \(for *P
 <picture>
 <source srcset="/diagrams/Relations/Plugins.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Relations/Plugins.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Relations/Plugins.png" alt="Plugins" loading="lazy" width="643" height="603" style="width:68%"/>
+<img src="/diagrams/Relations/Plugins.png" alt="Plugins" loading="lazy" width="643" height="603" style="width:65%"/>
 </picture>
 </a>
 </figure>
@@ -109,26 +117,7 @@ Each *plugin* depends on the *core*’s *API* \(for *Addons*\) or *SPI* \(for *P
 
 ## Variants
 
-*Plugins* are highly variable and omnipresent if we take [*Strategy*](https://refactoring.guru/design-patterns/strategy) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] for a kind of plugin:
-
-### By integration
-
-The terminology is not settled, but according to what I found over the Web:
-
-- A *Plugin* is registered with and called by the system’s *core* to add or extend a specific functionality\. It is usually made by a third party\.
-- An *Add\-in* is even more deeply integrated – the system has been designed to provide it thorough access to its internals\. It comes from the system’s creators\.
-- An *Extension* changes use cases by modifying the application’s business logic, but it is still called by the application’s *core*\.
-- An *Addon* is built on top of the system’s API and calls into the system from outside – it is more like an external [*Adapter*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) or [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) for the system\.
-
-
-### By abstractness
-
-A system may use plugins that are more abstract than the core, less abstract or both:
-
-- High\-level plugins tend to be related to user experience, statistics, or metadata\. They use the core in their own business logic\. *Addons* belong here\.
-- Low\-level plugins encapsulate algorithms that are used by the core’s business logic\.
-- Some customizations require multiple plugins: a high\-level user\-facing addon may rely on algorithms or pieces of business logic implemented by several complementary low\-level plugins\.
-
+*Plugins* are omnipresent if we take [*Strategy*](https://refactoring.guru/design-patterns/strategy) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] for a kind of plugin\. They vary:
 
 ### By the direction of communication
 
@@ -176,6 +165,78 @@ Plugins may be:
 - Written in a [*domain\-specific language*](https://en.wikipedia.org/wiki/Domain-specific_language) \(*DSL*\) and [interpreted]({{< relref "../implementation-metapatterns/microkernel.md#interpreter-script-domain-specific-language-dsl" >}}) by the core\.
 - Remote, available as a stand\-alone web service or even hardware component which the core needs to access through a dedicated protocol\.
 
+
+## Examples
+
+*Plugins* can take different roles and places in the system\. Though their classification and naming has never been well established, we can discern the following four kinds of *plugins*, which are non\-exclusive, meaning that a single application may support some or all of them at once:
+
+### True Plugin \(or Plug\-in\)
+
+<figure>
+<a href="/diagrams/Variants/4/Plugins.png">
+<picture>
+<source srcset="/diagrams/Variants/4/Plugins.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/4/Plugins.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/4/Plugins.png" alt="Plugins" loading="lazy" width="883" height="383" style="width:100%"/>
+</picture>
+</a>
+</figure>
+
+A true *Plugin* is registered with and called by the system’s *core* to provide \(as an algorithm\) or extend \(as a custom step\) a specific low\-level functionality\. It is usually made by a third party\.
+
+Customizable software often exposes multiple interfaces for different kinds of *Plugins*, some of which are *optional* \(0 or 1 instance\) or *subscriptional* \(multiple instances\) as explained [earlier]({{< relref "#by-the-number-of-instances" >}})\.
+
+Examples: codecs in a video player, country\-specific tax calculation rules in accounting software, or filters in a traffic sniffer\. In [*DOMA*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#domain-oriented-microservice-architecture-doma" >}}) any team can [write *Plugins* for other teams’ components](https://www.uber.com/en-UA/blog/microservice-architecture/)\. That decouples the teams’ codebases and minimizes network calls\.
+
+### Extension
+
+<figure>
+<a href="/diagrams/Variants/4/Extension.png">
+<picture>
+<source srcset="/diagrams/Variants/4/Extension.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/4/Extension.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/4/Extension.png" alt="Extension" loading="lazy" width="843" height="363" style="width:100%"/>
+</picture>
+</a>
+</figure>
+
+An *Extension* changes use cases by modifying the application’s business logic, but it is still called by the application’s *core*\. An *Extension* may install a group of low\-level *Plugins* which add to the system’s low\-level functionality whatever tools the *Extension* relies on\.
+
+Examples: IDE customization\.
+
+### Addin \(or Add\-in\)
+
+<figure>
+<a href="/diagrams/Variants/4/Addin.png">
+<picture>
+<source srcset="/diagrams/Variants/4/Addin.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/4/Addin.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/4/Addin.png" alt="Addin" loading="lazy" width="763" height="264" style="width:94%"/>
+</picture>
+</a>
+</figure>
+
+An *Add\-in* is deeply integrated with the *core* – the system has been originally designed to provide it thorough access to its internals\. It comes from the system’s creators or external teams that commit to the system’s *core*\.
+
+Examples: complex extensions for web browsers or static website generators\.
+
+### \(inexact\) Addon \(or Add\-on\)
+
+<figure>
+<a href="/diagrams/Variants/4/Addon.png">
+<picture>
+<source srcset="/diagrams/Variants/4/Addon.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/4/Addon.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/4/Addon.png" alt="Addon" loading="lazy" width="883" height="364" style="width:100%"/>
+</picture>
+</a>
+</figure>
+
+Though any of the variants of *Plugins* described above may sometimes be called an *addon*, there is a kind of system extension which perfectly matches the meaning of the word\.
+
+A true *Addon* is built on top of the system’s API and calls into the system from outside – it is a kind of external [*Adapter*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) or even [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) for the system\.
+
+Examples: applications that provide [user interface]({{< relref "../extension-metapatterns/proxy.md#user-interface-presentation-layer-separated-presentation-command-line-interface-cli-graphical-user-interface-gui-frontend-human-machine-interface-hmi-man-machine-interface-mmi-operator-interface" >}}) for command\-line tools such as git\.
 
 ## Summary
 

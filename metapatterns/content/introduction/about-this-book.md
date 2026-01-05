@@ -47,7 +47,15 @@ The diagrams are *NoUML* and most of them belong to one of the following kinds:
 </a>
 </figure>
 
-Please refer to the [following chapter]({{< relref "../introduction/metapatterns.md#the-system-of-coordinates" >}}) for the legend and the system of coordinates\.
+Components in the diagrams are colored according to the kind of code they contain:
+
+- Use cases \(application logic\) are green\.
+- Business rules \(domain logic\) are blue\.
+- Generic code is white\.
+- The data is gray\.
+
+
+Please refer to the [following chapter]({{< relref "../introduction/metapatterns.md#the-system-of-coordinates" >}}) for the system of coordinates used in the diagrams\.
 
 ## Notation
 
