@@ -13,7 +13,7 @@ images = ["/diagrams/Web/og/Combined%20Component.png"]
 
 <ins>Aspects:</ins> those of the individual components it combines\.
 
-<ins>Variants:</ins> 
+<ins>Examples:</ins> 
 
 - Message Bus \[[EIP]({{< relref "../appendices/books-referenced.md#eip" >}})\], 
 - API Gateway \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\], 
@@ -63,7 +63,7 @@ A *Combined Component* has all the dependencies of its constituent patterns\.
 - *Long\-running projects*\. You are very likely to step right into *vendor lock\-in*\. The industry will evolve, leaving you with the obsolete technology you have chosen and integrated\.
 
 
-## Variants
+## Examples
 
 Combined components vary in their structure and properties:
 

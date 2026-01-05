@@ -31,7 +31,7 @@ images = ["/diagrams/Web/og/Middleware.png"]
 
 <ins>Variants:</ins> Implementations differ in many dimensions\.
 
-The following combined patterns include *Middleware*:
+<ins>Examples</ins> of combined patterns:
 
 - \(with a [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}})\) Persistent Event Log / Shared Event Store,
 - \(with [*Proxies*]({{< relref "../extension-metapatterns/proxy.md" >}})\) Service Mesh \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}}), [MP]({{< relref "../appendices/books-referenced.md#mp" >}})\],

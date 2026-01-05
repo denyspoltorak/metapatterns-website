@@ -298,7 +298,7 @@ The notion of layering seems to be so natural to our minds that most known archi
 
 \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] recognizes four layers with the upper layers closer to the user:
 
-- *Presentation* \(*User Interface*\) – the user\-facing component \(frontend, UI\)\. It should be highly responsive to the user's input\. See [*Separated Presentation*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#examples--separated-presentation" >}})\.
+- *Presentation* \([*User Interface*]({{< relref "../extension-metapatterns/proxy.md#user-interface-presentation-layer-separated-presentation-command-line-interface-cli-graphical-user-interface-gui-frontend-human-machine-interface-hmi-man-machine-interface-mmi-operator-interface" >}})\) – the user\-facing component \(frontend, UI\)\. It should be highly responsive to the user's input\. See [*Separated Presentation*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#examples--separated-presentation" >}})\.
 - *Application* \(*Integration*, *Service*\) – the high\-level scenarios which build upon the API of the *domain* layer\. It should be easy to change and to deploy\. See [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}})\.
 - *Domain* \(*Model*, *Business Rules*\) – the bulk of the mid\- and low\-level business logic\. It should usually be well\-tested and performant\.
 - *Infrastructure* \(*Utility*, *Data Access*\) – the utility components devoid of business logic\. Their stability and performance is business\-critical but updates to their code are rare\.
@@ -330,7 +330,7 @@ We will often use the DDD naming convention while describing more complex archit
 
 Here the focus lies with the distribution of the components over heterogeneous hardware \(*Tiers*\):
 
-- *Presentation* \(*Frontend*\) tier – a user\-facing application which runs on a user’s hardware\. It is very scalable and responsive, but insecure\.
+- *Presentation* \([*Frontend*]({{< relref "../extension-metapatterns/proxy.md#user-interface-presentation-layer-separated-presentation-command-line-interface-cli-graphical-user-interface-gui-frontend-human-machine-interface-hmi-man-machine-interface-mmi-operator-interface" >}})\) tier – a user\-facing application which runs on a user’s hardware\. It is very scalable and responsive, but insecure\.
 - *Logic* \(*Backend*\) tier – the business logic which is deployed on the service provider’s side\. Its scalability is limited mostly by the funding committed, security is good but latency is high\.
 - *Data* \(*Database*\) tier – a service provider’s database which runs on a dedicated server\. It is not scalable but is very secure\.
 
@@ -358,7 +358,7 @@ In this case the division into layers resolves the conflict between scalability,
 Bare metal and micro\-OS systems which run on low\-end chips use a different terminology, which is not unified across domains\. A generic example involves:
 
 - *Presentation* – a UI engine used by the *HMI*\. It may be a third\-party library or come as a part of the *SDK*\.
-- *Human\-Machine Interface* \(*HMI* aka *MMI*\) – the UI and high\-level business logic for user scenarios, written by a [value\-added reseller](https://en.wikipedia.org/wiki/Value-added_reseller)\.
+- [*Human\-Machine Interface*]({{< relref "../extension-metapatterns/proxy.md#user-interface-presentation-layer-separated-presentation-command-line-interface-cli-graphical-user-interface-gui-frontend-human-machine-interface-hmi-man-machine-interface-mmi-operator-interface" >}}) \(*HMI* aka *MMI*\) – the UI and high\-level business logic for user scenarios, written by a [value\-added reseller](https://en.wikipedia.org/wiki/Value-added_reseller)\.
 - *Software Development Kit* \(*SDK*\) – the mid\-level business logic and device drivers, written by the [original equipment manufacturer](https://en.wikipedia.org/wiki/Original_equipment_manufacturer)\.
 - [*Hardware Abstraction Layer*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \(*HAL*\) – the low\-level code that abstracts hardware registers to enable code reuse between hardware platforms\.
 - *Firmware of Hardware Components* – usually closed\-source binary pre\-programmed into chips by chipmakers\.

@@ -58,7 +58,7 @@ A [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.
 
 A [*Proxy*]({{< relref "../extension-metapatterns/proxy.md" >}}) mediates between a system and its clients, transparently taking care of some generic functionality\.
 
-*<ins>Includes</ins>*: Full Proxy and Half\-Proxy; Sidecar and Ambassador; Firewall, Response Cache, Load Balancer, Reverse Proxy and various Adapters, e\.g\. Anticorruption Layer, Open Host Service, XXX Abstraction Layers and Repository\.
+*<ins>Includes</ins>*: Full Proxy and Half\-Proxy; Sidecar and Ambassador; Firewall, Response Cache, Load Balancer, Reverse Proxy and various Adapters, e\.g\. Anticorruption Layer, Open Host Service, XXX Abstraction Layers, Repository and even User Interface\.
 
 ### [Orchestrator]({{< relref "../extension-metapatterns/orchestrator.md" >}})
 

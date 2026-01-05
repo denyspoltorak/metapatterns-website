@@ -25,7 +25,9 @@ images = ["/diagrams/Web/og/Mesh.png"]
 
 <ins>Aspects:</ins> those of [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}})\.
 
-<ins>Variants:</ins> *Meshes* vary greatly\. Examples include:
+<ins>Variants:</ins> *Meshes* vary greatly\. 
+
+<ins>Examples:</ins>
 
 - [Peer\-to\-Peer Networks](https://en.wikipedia.org/wiki/Peer-to-peer),
 - Leaf\-Spine Architecture / [Spine\-Leaf Architecture](https://www.geeksforgeeks.org/spine-leaf-architecture/),

@@ -29,7 +29,7 @@ images = ["/diagrams/Web/og/Microkernel.png"]
 - [Orchestrator]({{< relref "../extension-metapatterns/orchestrator.md" >}})\.
 
 
-<ins>Variants:</ins>
+<ins>Examples:</ins>
 
 - Operating System,
 - Software Framework,
@@ -114,7 +114,7 @@ The *applications* depend on the *API* of the *microkernel* while the *providers
 - May be implemented by [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}})\.
 
 
-## Variants
+## Examples
 
 *Microkernel* can appear in many forms:
 

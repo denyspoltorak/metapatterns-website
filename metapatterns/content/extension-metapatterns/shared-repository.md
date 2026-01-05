@@ -27,10 +27,11 @@ images = ["/diagrams/Web/og/Shared%20Repository.png"]
 
 - Data storage,
 - Data consistency,
-- Data change notifications\.
+- Data change notifications,
+- Data aggregation and analytics\.
 
 
-<ins>Variants:</ins> 
+<ins>Examples:</ins> 
 
 - Shared Database \[[EIP]({{< relref "../appendices/books-referenced.md#eip" >}})\] / [Integration Database](https://martinfowler.com/bliki/IntegrationDatabase.html) / Data Domain \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\] / Database of Service\-Based Architecture \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\], 
 - Shared File System,
@@ -59,6 +60,7 @@ A *Shared Repository* builds communication in the system around its data, which 
 - Storage of the entire domain data\.
 - Keeping the data self\-consistent by providing atomic transactions for use by the application code\.
 - Communication between the services \(if the repository supports notifications on data change\)\.
+- Data aggregation and analytics \(if the database engine supports complex queries\)\.
 
 
 The drawbacks are extensive coupling \(it’s hard to alter a thing which is used in many places throughout the entire system\) and limited scalability \(even distributed databases struggle against distributed locks and the need to keep their nodes’ data in sync\)\.
@@ -136,7 +138,7 @@ Still, the DAL does not remove shared dependencies and only adds some flexibilit
 - May be implemented by a [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}})\.
 
 
-## Variants
+## Examples
 
 *Shared Repository* is a sibling of [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}})\. While a *Middleware* assists direct communication between services \(*shared\-nothing* messaging\), a *Shared Repository* grants them indirect communication through access to an external state \(similar to *shared memory*\) which usually stores all the data for the domain\.
 
