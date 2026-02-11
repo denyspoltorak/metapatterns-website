@@ -13,7 +13,7 @@ disableKinds = ['taxonomy', 'term', 'RSS']
     [markup.goldmark.renderer]
       unsafe = true
   [markup.tableOfContents]
-    startLevel = 2
+    startLevel = 1
 
 [params]
   BookToC = true
