@@ -135,7 +135,7 @@ An *interactive* software deals with users who expect it to provide immediate fe
 - UI of embedded devices, such as clocks or air conditioning systems\.
 
 
-The user interface layer \([*Separated Presentation*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#examples--separated-presentation" >}})\) receives input \(mouse, keyboard, or touchscreen events\), interprets it as a user action based on the current application’s *state* \(pressing enter in a text editor may break a line of text in two, begin a new line or even activate a menu item\), forwards the action to the lower levels of the software and displays any feedback received, producing a **U**\-shaped flow\.
+The [user interface layer]({{< relref "../basic-metapatterns/layers.md#interface-api-or-ui" >}}) \([*Separated Presentation*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#examples--separated-presentation" >}})\) receives input \(mouse, keyboard, or touchscreen events\), interprets it as a user action based on the current application’s *state* \(pressing enter in a text editor may break a line of text in two, begin a new line or even activate a menu item\), forwards the action to the lower levels of the software and displays any feedback received, producing a **U**\-shaped flow\.
 
 ### Variants
 
@@ -290,7 +290,7 @@ Most real\-life software is too complex to fit the classification outlined above
 
 A digital camera incorporates subsystems of different kinds:
 
-- There is an interactive user interface that receives commands for other components and displays either the video stream from the matrix or the camera’s settings menu\.
+- There is an interactive [user interface]({{< relref "../basic-metapatterns/layers.md#interface-api-or-ui" >}}) that receives commands for other components and displays either the video stream from the matrix or the camera’s settings menu\.
 - A control layer provides feedback loops to keep the camera focused on a selected object and preserve the overall brightness level and color balance when shooting in automatic mode\.
 - An image processing pipeline applies noise reduction, rescaling, and color correction, then either passes the resulting frames to the UI to show them on the screen or proceeds with compressing the frame and storing it as a file\.
 

@@ -15,10 +15,10 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 *Action*
 : an act of a *system* that changes its environment\.
 
-*API* \(*application programming interface*\)
+[*API*](_49lm93e72vvp) \(*application programming interface*\)
 : a set of *methods* or *messages* that a *component* exposes to its *clients*\.
 
-*Application*
+[*Application*](_p69skkxfpsci)
 : the most *abstract* layer that usually *integrates components* of a less *abstract* layer\.
 
 *Architectural pattern*
@@ -111,7 +111,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 *Domain*
 : the whole of knowledge \(including *requirements*\) that is needed to build a *system*\.
 
-*Domain*
+[*Domain*](_jk5ysqrikfn0)
 : the middle layer of a *system* that contains its *business rules*\.
 
 *Event*
@@ -166,7 +166,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 : invocation of an *interface* method \(or procedure\) of a *component* by another *component*\.
 
 *Metapattern*
-: a cluster of *patterns* that have similar *structural diagrams* and address related issues\.
+: a cluster of *patterns* that have similar *topologies* and address related issues\.
 
 *Module*
 : a *colocated* \(in\-process\) *component*\.
@@ -243,7 +243,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 *Single point of failure*
 : a software or hardware *component* which if fails makes the entire *system* non\-operational\. High\-*availability systems* should avoid *single points of failure*\.
 
-*SPI* \(*service provider interface*\)
+[*SPI*](_49lm93e72vvp) \(*service provider interface*\)
 : a set of *methods* or *messages* that a *component* expects to be supported by the *components* it uses\.
 
 *State*
@@ -275,6 +275,9 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 *Throughput*
 : the amount of data a *system* can *process* per unit of time\.
+
+*Topology*
+: A map of system components and their relations, similar to a *structural diagram*\.
 
 *Use case*
 : a behavior expected by *system*’s users\. A *system* is *implemented* to run *use cases*\. *Use cases* are the high\-level half of *business logic*\.

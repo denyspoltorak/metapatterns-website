@@ -124,7 +124,7 @@ Grouping related functionality:
   - *Decoupling* generic aspects simplifies business logic but usually increases latency\.
 - [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) collects a multitude of complex use cases into a dedicated layer:
   - *Cohesive* use cases are easy to comprehend and debug\.
-  - *Decoupling* use cases from domain logic allows for variation in technologies but increases latency and complicates in\-depth debugging\.
+  - *Decoupling* [use cases]({{< relref "../../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) from [domain logic]({{< relref "../../basic-metapatterns/layers.md#domain-business-rules-or-model" >}}) allows for variation in technologies but increases latency and complicates in\-depth debugging\.
 - [*Combined Component*]({{< relref "../../extension-metapatterns/combined-component.md" >}}) blends two or three of the above layers:
   - *Cohesion* improves performance but reduces flexibility\.
 

@@ -35,7 +35,7 @@ Another drawback of [*Monolith*]({{< relref "../../basic-metapatterns/monolith.m
 
 <ins>Prerequisite</ins>: there is a natural way to separate the high\-level logic from the low level implementation details and dependencies\.
 
-Most systems apply *layering* by default as it grants a lot of flexibility at very little cost\. [Common sets of layers]({{< relref "../../basic-metapatterns/layers.md#examples" >}}) are: UI, tasks \(orchestration\), domain \(detailed business rules\) and infrastructure \(database and libraries\) or frontend, backend and data\.
+Most systems apply *layering* by default as it grants a lot of flexibility at very little cost\. [Common sets of layers]({{< relref "../../basic-metapatterns/layers.md#examples" >}}) are: [UI]({{< relref "../../basic-metapatterns/layers.md#interface-api-or-ui" >}}), [tasks]({{< relref "../../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) \(orchestration\), [domain]({{< relref "../../basic-metapatterns/layers.md#domain-business-rules-or-model" >}}) \(detailed business rules\) and infrastructure \(database and libraries\) or frontend, backend and data\.
 
 <ins>Pros</ins>:
 

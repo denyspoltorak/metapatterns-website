@@ -141,7 +141,7 @@ As each of the services depends on the APIs of the others, any change to any int
 </a>
 </figure>
 
-In real life services are likely to be layered, with their upper layers acting as both internal and external *Orchestrators*\. Layering isolates interdependencies to the relatively small application\-level components and resolves, to an extent, the seemingly counterintuitive case of mutual orchestration as now there is an explicit, though fragmented, system\-wide orchestration layer\.
+In real life services are likely to be layered, with their upper layers acting as both internal and external *Orchestrators*\. Layering isolates interdependencies to the relatively small [application\-level]({{< relref "../../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) components and resolves, to an extent, the seemingly counterintuitive case of mutual orchestration as now there is an explicit, though fragmented, system\-wide orchestration layer\.
 
 <figure>
 <a href="/diagrams/Communication/Mutual%20Orchestration%20-%203.png">
@@ -165,4 +165,4 @@ In real life services are likely to be layered, with their upper layers acting a
 
 ## Summary
 
-Orchestration represents use cases as a code, allowing for an orchestrated system to support many complex scenarios\. Dealing with errors is as trivial as properly handling exceptions\. This approach trades performance for clarity\.
+Orchestration represents [use cases]({{< relref "../../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) as a code, allowing for an orchestrated system to support many complex scenarios\. Dealing with errors is as trivial as properly handling exceptions\. This approach trades performance for clarity\.

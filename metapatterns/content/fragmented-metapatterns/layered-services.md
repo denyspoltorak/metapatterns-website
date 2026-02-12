@@ -82,13 +82,13 @@ Remarkable features of *Layered Services* include:
 </a>
 </figure>
 
-Probably the most common backend architecture has [three layers]({{< relref "../basic-metapatterns/layers.md#domain-driven-design-ddd-layers" >}}): *application*, *domain*, and *infrastructure* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\. The application layer [*orchestrates*]({{< relref "../foundations-of-software-architecture/arranging-communication/orchestration.md" >}}) the domain layer\.
+Probably the most common backend architecture has [three layers]({{< relref "../basic-metapatterns/layers.md#domain-driven-design-ddd-layers" >}}): [*application*]({{< relref "../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}), [*domain*]({{< relref "../basic-metapatterns/layers.md#domain-business-rules-or-model" >}}), and *infrastructure* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\. The application layer [*orchestrates*]({{< relref "../foundations-of-software-architecture/arranging-communication/orchestration.md" >}}) the domain layer\.
 
 If such an architecture is divided into [services]({{< relref "../basic-metapatterns/services.md" >}}), each of them receives a part of every layer, including application, which means that now there are as many *Orchestrators* as services\. Each *Orchestrator* implements the API of its service by integrating \(calling or messaging into\) the domain layer of its service and APIs of other services, which makes all the *Orchestrators* interdependent:
 
 ### Dependencies
 
-The upper \(application\) layer of each service orchestrates both its middle \(domain\) layer and the upper layers of other services, resulting in [mutual orchestration and interdependencies]({{< relref "../foundations-of-software-architecture/arranging-communication/orchestration.md#mutual-orchestration" >}})\.
+The upper \([*application*]({{< relref "../basic-metapatterns/layers.md#application-use-cases-or-integration" >}})\) layer of each service orchestrates both its middle \(*domain*\) layer and the upper layers of other services, resulting in [mutual orchestration and interdependencies]({{< relref "../foundations-of-software-architecture/arranging-communication/orchestration.md#mutual-orchestration" >}})\.
 
 <figure>
 <a href="/diagrams/Communication/Mutual%20Orchestration%20-%204.png">
@@ -115,7 +115,7 @@ The good thing is that the majority of the code belongs to the domain layer whic
 
 *Orchestrated Layered Services* may become coupled, which is resolved either by merging their layers:
 
-- A part of or the whole application layer can be merged into a shared [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}})\.
+- A part of or the whole [*application layer*]({{< relref "../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) can be merged into a shared [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}})\.
 - Some or all the *databases* can be united into a [*Shared Database*]({{< relref "../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) or shared as [*Polyglot Persistence*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md" >}})\.
 
 
@@ -172,7 +172,7 @@ If the services become too large:
 </a>
 </figure>
 
-If there is no [*orchestration*]({{< relref "../foundations-of-software-architecture/arranging-communication/orchestration.md" >}}), there is no role for the *application* layer\. [*Choreographed*]({{< relref "../foundations-of-software-architecture/arranging-communication/choreography.md" >}}) systems are made up of services that implement individual steps of request processing\. The sequence of actions \(*integration logic*\) which three\-layered systems put in the [*Orchestrators*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) now moves to the graph of *event channels* between the services\. This means that with choreography the high\-level part of the business logic \(use cases\) exists outside of the code of the constituent services\.
+If there is no [*orchestration*]({{< relref "../foundations-of-software-architecture/arranging-communication/orchestration.md" >}}), there is no role for the [*application* layer]({{< relref "../basic-metapatterns/layers.md#application-use-cases-or-integration" >}})\. [*Choreographed*]({{< relref "../foundations-of-software-architecture/arranging-communication/choreography.md" >}}) systems are made up of services that implement individual steps of request processing\. The sequence of actions \(*integration logic*\) which three\-layered systems put in the [*Orchestrators*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) now moves to the graph of *event channels* between the services\. This means that with choreography the high\-level part of the business logic \(use cases\) exists outside of the code of the constituent services\.
 
 ### Dependencies
 

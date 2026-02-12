@@ -11,7 +11,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 We have briefly discussed three approaches to communication: orchestration, choreography, and shared data\. Let’s recall when it makes sense to use each of them\.
 
-[*Orchestration*]({{< relref "../../foundations-of-software-architecture/arranging-communication/orchestration.md" >}}) is built around use cases\. They are easy to program and add, no matter how complex they become\. Thus, if your \(sub\)domain is coupled, or your understanding of it is still evolving, this is the way to go, as you will be able to change the high\-level logic in any imaginable way because you express it as convenient imperative code\.
+[*Orchestration*]({{< relref "../../foundations-of-software-architecture/arranging-communication/orchestration.md" >}}) is built around [use cases]({{< relref "../../basic-metapatterns/layers.md#application-use-cases-or-integration" >}})\. They are easy to program and add, no matter how complex they become\. Thus, if your \(sub\)domain is coupled, or your understanding of it is still evolving, this is the way to go, as you will be able to change the high\-level logic in any imaginable way because you express it as convenient imperative code\.
 
 [*Shared data*]({{< relref "../../foundations-of-software-architecture/arranging-communication/shared-data.md" >}}) is all about… er… domain data\. If you really \(believe that you\) know your domain, and it deals with coupled data – this is your chance\. You may even add in an *Orchestrator* if there are use cases that involve multiple subdomains\. The business logic is going to be easy to extend while changes to the data schema are sure to cause havoc\.
 

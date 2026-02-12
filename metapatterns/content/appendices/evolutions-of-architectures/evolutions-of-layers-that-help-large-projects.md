@@ -34,7 +34,7 @@ The main drawback \(and benefit\) of [*Layers*]({{< relref "../../basic-metapatt
 
 <ins>Prerequisite</ins>: the low\-level business logic comprises loosely coupled subdomains\.
 
-It is very common for a system’s domain to consist of weakly interacting *bounded contexts* \[[DDD]({{< relref "../../appendices/books-referenced.md#ddd" >}})\]\. They are integrated through high\-level use cases and/or [relations in data]({{< relref "../../foundations-of-software-architecture/arranging-communication/shared-data.md" >}})\. For such a system it is relatively easy to divide the domain logic into *Services* while leaving the integration and data layers shared, yielding a *Cell*\.
+It is very common for a system’s domain to consist of weakly interacting *bounded contexts* \[[DDD]({{< relref "../../appendices/books-referenced.md#ddd" >}})\]\. They are integrated through high\-level use cases and/or [relations in data]({{< relref "../../foundations-of-software-architecture/arranging-communication/shared-data.md" >}})\. For such a system it is relatively easy to divide the [domain logic]({{< relref "../../basic-metapatterns/layers.md#domain-business-rules-or-model" >}}) into *Services* while leaving the integration and data layers shared, yielding a *Cell*\.
 
 <ins>Pros</ins>: 
 

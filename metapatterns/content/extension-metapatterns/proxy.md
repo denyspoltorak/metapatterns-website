@@ -404,7 +404,7 @@ There is also a whole bunch of *Abstraction Layers* that aim to protect the busi
 </a>
 </figure>
 
-An *Adapter* between a human and a computer system is called a *User Interface* \(*UI*\) or *Presentation Layer* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\. It translates user actions into commands to the underlying system and presents the results it returns and other information supposedly important to the user\. *UI* comes in several flavors:
+An *Adapter* between a human and a computer system is called a [*User Interface*]({{< relref "../basic-metapatterns/layers.md#interface-api-or-ui" >}}) \(*UI*\) or *Presentation Layer* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\. It translates user actions into commands to the underlying system and presents the results it returns and other information supposedly important to the user\. *UI* comes in several flavors:
 
 - *Command Line Interface* \(*CLI*\) is text\-based and sequential – it executes one command at a time\. It’s the simplest kind of *UI*\.
 - *Graphical User Interface* \(*GUI*\) is built around graphical representation of information and controls\. It may rely on the windowing system of the underlying OS, a third\-party framework, or build something unique, which takes place in games\.

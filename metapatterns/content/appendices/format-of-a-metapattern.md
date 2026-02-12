@@ -23,13 +23,13 @@ The structural diagram \(in *abstractness\-subdomain\-sharding* [coordinates]({{
 
 Most diagrams feature the following colors:
 
-- *Use cases* \(aka integration, orchestration, workflow or application logic\) are shown in green\. Those are high\-level scenarios executed by user actions or signals from hardware which keep the system acting as a whole\. Use cases are *what* your software does\.
+- [*Use cases*]({{< relref "../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) \(aka integration, orchestration, workflow or application logic\) are shown in green\. Those are high\-level scenarios executed by user actions or signals from hardware which keep the system acting as a whole\. Use cases are *what* your software does\.
 - *Domain logic* \(business rules\), shown in blue, is the set of algorithms that models the real\-world system your software describes\. It is *how* your system solves its tasks\.
 - *Generic code* is white\. It stands for tools and libraries unrelated to your business\. Examples include communication protocols, data compression and common maths\.
 - *Data* is gray\. It includes business\-critical in\-memory state \(e\.g\. user’s session\) and persistent storage \(in a database or files\)\.
 
 
-*Use cases* and *domain logic* comprise *business logic* \[[PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\] – the code that makes your software different from whatever else is on the market\. It is this part of the system which your customers pay for, and it usually is much larger than the other parts, which makes business logic the primary focus of development\.
+[*Use cases*]({{< relref "../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) and [*domain logic*]({{< relref "../basic-metapatterns/layers.md#domain-business-rules-or-model" >}}) comprise *business logic* \[[PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\] – the code that makes your software different from whatever else is on the market\. It is this part of the system which your customers pay for, and it usually is much larger than the other parts, which makes business logic the primary focus of development\.
 
 In [*choreographed*]({{< relref "../foundations-of-software-architecture/arranging-communication/choreography.md" >}}) systems use cases are defined by the web of communication channels instead of code inside the system’s components\. That is represented by green arrows and overall lack of green areas on corresponding diagrams\.
 

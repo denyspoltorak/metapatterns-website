@@ -11,7 +11,7 @@ images = ["/diagrams/Web/og/Indirection.png"]
 
 *We can solve any problem by introducing an extra level of indirection* – states the [old adage](https://en.wikipedia.org/wiki/Fundamental_theorem_of_software_engineering)\. We will not explain how this rule drives [deep learning](https://en.wikipedia.org/wiki/Deep_learning), at least for now\. Instead, let’s concentrate our effort on indirection in communication between services\.
 
-Each component operates its own *domain model* \[[DDD]({{< relref "../../appendices/books-referenced.md#ddd" >}})\] which translates into objects and/or procedures convenient for use in the component’s subdomain\. However, should a system cover multiple subdomains, the best models for its parts to operate start to mismatch\. Furthermore, they are likely to diverge progressively over time as requirements heap up and [the project matures]({{< relref "../../analytics/architecture-and-product-life-cycle.md" >}})\.
+Each component operates its own [*domain model*]({{< relref "../../basic-metapatterns/layers.md#domain-business-rules-or-model" >}}) \[[DDD]({{< relref "../../appendices/books-referenced.md#ddd" >}})\] which translates into objects and/or procedures convenient for use in the component’s subdomain\. However, should a system cover multiple subdomains, the best models for its parts to operate start to mismatch\. Furthermore, they are likely to diverge progressively over time as requirements heap up and [the project matures]({{< relref "../../analytics/architecture-and-product-life-cycle.md" >}})\.
 
 If we want for each module or service to continue with a model that fits its needs, we have to protect it from the influence of models of other components by employing indirection – a translator – between them\.
 

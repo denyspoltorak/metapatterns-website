@@ -75,6 +75,8 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Bottom\-Up Hierarchy]({{< relref "../fragmented-metapatterns/hierarchy.md#bottom-up-hierarchy-bus-of-buses-network-of-networks" >}})
 
+[Boundary\-Control\-Entity]({{< relref "../basic-metapatterns/layers.md#entity-control-boundary-ecb-entity-boundary-control-ebc-boundary-control-entity-bce" >}}) \(BCE\)
+
 [Broker]({{< relref "../extension-metapatterns/middleware.md" >}}) \(Middleware\)
 
 [Broker Topology Event\-Driven Architecture]({{< relref "../basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}})
@@ -124,8 +126,6 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 [Content Delivery Network]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#data-file-content-delivery-network-cdn" >}}) \(CDN\)
 
 [Control]({{< relref "../extension-metapatterns/orchestrator.md" >}}) \(Orchestrator\)
-
-[Controller]({{< relref "../extension-metapatterns/orchestrator.md" >}}) \(Orchestrator\)
 
 [Coordinator]({{< relref "../extension-metapatterns/orchestrator.md#orchestrated-saga-saga-orchestrator-saga-execution-component-transaction-script-coordinator" >}}) \(Saga\)
 
@@ -198,6 +198,10 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 [Enterprise Service\-Oriented Architecture]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#enterprise-soa" >}})
 
 [Enterprise SOA]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#enterprise-soa" >}})
+
+[Entity\-Boundary\-Control]({{< relref "../basic-metapatterns/layers.md#entity-control-boundary-ecb-entity-boundary-control-ebc-boundary-control-entity-bce" >}}) \(EBC\)
+
+[Entity\-Control\-Boundary]({{< relref "../basic-metapatterns/layers.md#entity-control-boundary-ecb-entity-boundary-control-ebc-boundary-control-entity-bce" >}}) \(ECB\)
 
 [Event Collaboration]({{< relref "../basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}})
 
