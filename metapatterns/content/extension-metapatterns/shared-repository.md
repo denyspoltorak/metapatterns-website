@@ -193,7 +193,7 @@ Several actors \(processes, modules, device drivers\) communicate through one or
 <picture>
 <source srcset="/diagrams/Variants/2/Blackboard.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Blackboard.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/2/Blackboard.png" alt="Blackboard" loading="lazy" width="1063" height="325" style="width:100%"/>
+<img src="/diagrams/Variants/2/Blackboard.png" alt="Blackboard" loading="lazy" width="1063" height="326" style="width:100%"/>
 </picture>
 </a>
 </figure>

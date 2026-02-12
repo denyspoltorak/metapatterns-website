@@ -33,8 +33,20 @@ By isolation:
 - Distributed tiers\.
 
 
+Layer roles:
+
+- Interface \(API or UI\),
+- Application \(use cases or integration\),
+- Domain \(business rules or model\),
+- Generic code \(libraries and utilities\),
+- Communication \(middleware\),
+- Data \(persistence\),
+- Operating system and hardware\.
+
+
 Examples:
 
+- [Entity\-Control\-Boundary \(ECB\) / Entity\-Boundary\-Control \(EBC\) / Boundary\-Control\-Entity \(BCE\)](https://en.wikipedia.org/wiki/Entity%E2%80%93control%E2%80%93boundary),
 - Domain\-Driven Design \(DDD\) Layers \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\],
 - Three\-Tier Architecture,
 - Embedded Systems\.
@@ -57,7 +69,7 @@ Examples:
 
 <ins>References:</ins> \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}})\] and \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] discuss layered software in depth; \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] promotes the layered style; most of the architectures in Herberto Graça’s [Software Architecture Chronicles](https://herbertograca.com/2017/07/03/the-software-architecture-chronicles/) are layered\. The Wiki has a reasonably [good article](https://en.wikipedia.org/wiki/Multitier_architecture)\.
 
-*Layering* a system creates interfaces between its levels of abstractness \(high\-level use cases, lower\-level domain logic, infrastructure\) while also retaining monolithic cohesiveness within each of the levels\. That allows both for easy debugging inside each individual layer \(no need to jump into another programming language or re\-attach the debugger to a remote server\) and enough flexibility to have a dedicated development team, tools, deployment, and scaling policies for each\. Though layered code is slightly better than that of [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}), thanks to the separation of concerns, one of the upper \(business logic\) layers may nonetheless grow too large for efficient development\.
+*Layering* a system creates interfaces between its levels of abstractness \(high\-level [use cases]({{< relref "#application-use-cases-or-integration" >}}), lower\-level [domain logic]({{< relref "#domain-business-rules-or-model" >}}), infrastructure\) while also retaining monolithic cohesiveness within each of the levels\. That allows both for easy debugging inside each individual layer \(no need to jump into another programming language or re\-attach the debugger to a remote server\) and enough flexibility to have a dedicated development team, tools, deployment, and scaling policies for each\. Though layered code is slightly better than that of [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}), thanks to the separation of concerns, one of the upper \(business logic\) layers may nonetheless grow too large for efficient development\.
 
 Splitting a system into layers tends to resolve conflicts of forces between its abstract and optimized parts: the top\-level business logic changes rapidly and does not require much optimization \(as its methods are called infrequently\), thus it can be written in a high\-level programming language\. In contrast, infrastructure, which is called thousands of times per second, has stable workflows but must be thoroughly optimized and extremely well tested\.
 
@@ -280,9 +292,251 @@ Finally, you may separate the hardware which the processes run on – going all 
 | <span class="book-green">Layers vary in hardware setup</span> |  |
 | <span class="book-green">Deployment close to clients</span> |  |
 
+## Variants of layer roles
+
+Though the structure of every software system is unique, there is a common set of roles or functions that need to be covered by its code\. It is common wisdom that a piece of code should [*do one thing, and do it well*](https://en.wikipedia.org/wiki/Unix_philosophy#Do_One_Thing_and_Do_It_Well), thus the code written to support the same kind of functionality tends to stick together and end up in a dedicated layer of a system\. This also helps your teams specialize and keeps their cognitive load low by limiting the amount of code they deal with, which allows for high productivity\.
+
+That clarity of design, which separates technically different pieces, is opposed by a host of more pragmatic [*forces*]({{< relref "../foundations-of-software-architecture/forces--asynchronicity--and-distribution.md#requirements-and-forces" >}}) that compel you to keep your code together:
+
+- Performance can be easily optimized inside a component, while any communication between components will likely be much slower\.
+- If many distinct workflows traverse a set of components, those components require large interfaces which take much effort to design, implement, and support\. You may end up spending more time maintaining your perfect architecture than writing the business logic which earns money for the company\.
+- The more components you have, the harder it is to deploy them and keep them consistent, not to mention error recovery\. Moreover, as the number of system components increases, the big picture becomes elusive, and soon there is nobody who knows how to change the system if need arises\.
+
+
+Balancing the [cohesers and decouplers]({{< relref "../analytics/the-heart-of-software-architecture/cohesers-and-decouplers.md" >}}) listed above results in coarse\-grained system components each of which covers several concerns, with some real\-world system compositions shown in the [Examples section]({{< relref "#examples" >}}) later in this chapter\. However, first we need to see which kinds of roles a system layer may incorporate:
+
+<figure>
+<a href="/diagrams/Variants/1/Layer%20Roles.png">
+<picture>
+<source srcset="/diagrams/Variants/1/Layer%20Roles.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/1/Layer%20Roles.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/1/Layer%20Roles.png" alt="Layer Roles" loading="lazy" width="883" height="664" style="width:100%"/>
+</picture>
+</a>
+</figure>
+
+### Interface \(API or UI\)
+
+If a system serves a human user or remote client software, there is a part of it, called an *interface*, that deals with communication and translation between the system’s internal data model and one convenient for its clients\.
+
+As an *interface* represents the system to its clients, it is a kind of [*Proxy*]({{< relref "../extension-metapatterns/proxy.md" >}}) by definition \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\]\. If the client is another software system, the *interface* is called *Application Programming Interface* \(*API*\) and is likely to be implemented by a [*Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) which will receive a message through a well\-known protocol, check its correctness and authenticity of the sender, and forward the message’s payload to a layer below it\. In most cases it will also send response and notification messages by executing the converse tasks: translation from the system’s internal data format to something more convenient for its clients and sending the resulting message over a network protocol\.
+
+When a system interacts with a human, it exposes another kind of *interface* – [*Human\-Machine Interface* \(*HMI*\) or *User Interface* \(*UI*\)]({{< relref "../extension-metapatterns/proxy.md#user-interface-presentation-layer-separated-presentation-command-line-interface-cli-graphical-user-interface-gui-frontend-human-machine-interface-hmi-man-machine-interface-mmi-operator-interface" >}})\. The basics of its action are similar to the case of software\-to\-software interaction described above save that humans prefer visual or textual information instead of a highly structured Internet protocol\.
+
+Another, less common kind of interface is called *Service Provider Interface* \(*SPI*\)\. It is declared by a system that relies on an external component and is implemented by that component’s authors to make it pluggable into the system\. *SPI*s are in use by [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) and [*Microkernel*]({{< relref "../implementation-metapatterns/microkernel.md" >}}) topologies, with device drivers being the best known example of pluggable components\.
+
+Other kinds of *Proxies* adapt a system to foreign interfaces:
+
+- An [*Anticorruption Layer* or *Open Host Service*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) translates between two software subsystems to loosen dependencies between them\.
+- A [*Hardware Abstraction Layer* or *Operating System Abstraction Layer*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) stands between a system and an underlying hardware or OS, respectively, to make the system portable\.
+
+
+<figure>
+<a href="/diagrams/Variants/1/Interface%20-%20Kinds.png">
+<picture>
+<source srcset="/diagrams/Variants/1/Interface%20-%20Kinds.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/1/Interface%20-%20Kinds.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/1/Interface%20-%20Kinds.png" alt="Interface - Kinds" loading="lazy" width="1083" height="444" style="width:100%"/>
+</picture>
+</a>
+</figure>
+
+A *Proxy* that implements an *interface* may reside in a dedicated layer \(and there may be multiple *Proxies* stacked together, for example, a *Gateway* behind a [*Firewall*]({{< relref "../extension-metapatterns/proxy.md#firewall-api-rate-limiter-api-throttling" >}})\) or be merged with a neighboring layer: for example, an [*API Gateway*]({{< relref "../extension-metapatterns/proxy.md#api-gateway" >}}) fills the roles of both *interface* and [*application*]({{< relref "#application-use-cases-or-integration" >}})\.
+
+An interface layer can contain multiple components \(services, modules, or high\-level classes\) when the system below it supports several kinds of clients: a bank is likely to provide a web interface, a mobile application, and a SWIFT endpoint\. See [*Backends for Frontends*]({{< relref "../fragmented-metapatterns/backends-for-frontends--bff-.md" >}}) for a detailed description\.
+
+<figure>
+<a href="/diagrams/Variants/1/Interface%20-%20Derived.png">
+<picture>
+<source srcset="/diagrams/Variants/1/Interface%20-%20Derived.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/1/Interface%20-%20Derived.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/1/Interface%20-%20Derived.png" alt="Interface - Derived" loading="lazy" width="1505" height="388" style="width:100%"/>
+</picture>
+</a>
+</figure>
+
+### Application \(use cases or integration\)
+
+The *application* is *what* your system does\. If it faces clients, the *application* runs client commands, called *use cases*, by executing chains of calls to its [*model*]({{< relref "#domain-business-rules-or-model" >}}) which knows *how* to do simple actions – the building blocks from which a use case consists\.
+
+For example, to transfer money between accounts, the *application* asks the *model* to:
+
+- Verify that the client is the owner of the account to be charged\.
+- Calculate the bank’s fee for the transfer\.
+- Subtract the amount to be transferred and the fee from the client’s account\.
+- Add the fee to the bank’s account\.
+- Tell the recipient’s bank to add the transferred amount to the target account\.
+
+
+It is also responsible for dealing with any error that may occur in the process\. For example, if the target account does not exist or is blocked, the *application* will need to both refund the client and return a meaningful error message in the client’s preferred language\.
+
+Another form of application, called [*control systems*]({{< relref "../foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}}), is written to supervise hardware or software entities\. In that case there are no client requests or use cases – instead, the system reacts to signals from the components controlled\. It is the application layer which is responsible for the system’s behavior: if a smoke sensor detects fire, the application tells an alarm to sound\. This role is called *integration* – the system acts as a living organism, all its parts orderly moving in response to a stimulus perceived by a sense\.
+
+When an application resides in a dedicated layer, it is called an [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}})\. Like the [*interface*]({{< relref "#interface-api-or-ui" >}}) layer, the *application* layer may also contain multiple components: the bank will likely have distinct applications for its clients and for its managers\. The corresponding pattern is also called [*Backends for Frontends*]({{< relref "../fragmented-metapatterns/backends-for-frontends--bff-.md" >}}) \(there is little distinction between [*Proxies*]({{< relref "../extension-metapatterns/proxy.md" >}}) and *Orchestrators* in that topology\)\.
+
+Some systems lack the *application* role – they are structured as [*Pipelines*]({{< relref "../basic-metapatterns/pipeline.md" >}}), so that whatever enters one end of the system passes through all its components and pops out, digested, at the end\. In that case it is the very structure of the system – the connections between its components – that drive the order of events\.
+
+<figure>
+<a href="/diagrams/Variants/1/Application%20-%20Derived.png">
+<picture>
+<source srcset="/diagrams/Variants/1/Application%20-%20Derived.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/1/Application%20-%20Derived.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/1/Application%20-%20Derived.png" alt="Application - Derived" loading="lazy" width="1323" height="403" style="width:100%"/>
+</picture>
+</a>
+</figure>
+
+### Domain \(business rules or model\)
+
+The *domain* layer *models* the real\-world system which your software operates or emulates\. It contains rules that describe *how* to do anything that your clients may want or *how* the hardware which you control is expected to operate\.
+
+Back to the banking example, the *domain* layer can:
+
+- Find if an account is valid and who owns it\.
+- Calculate a fee\.
+- Add money to or subtract it from an account\.
+- Transfer money to another bank\.
+
+
+And it has some tricks up its sleeves to assure that nothing it does about money is ever lost, even if the network is disconnected or the hardware it runs on fails\.
+
+In most cases the *domain* layer is the largest one and it is the one which makes your software valuable for business because it actually *does* whatever your software is about\. It is also [the only layer in which OOP classes may model real\-world entities](http://tedfelix.com/software/jacobson1992.html)\.
+
+As the largest layer, the *domain* is the first among them to be subdivided:
+
+- The most common way is to partition it into *subdomains* – loosely coupled subsets of your system’s functionality – yielding [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) \(when other layers are fragmented along the same lines or replicated among the subdomain components\) or a [derived architecture with several layers remaining intact]({{< relref "../extension-metapatterns/_index.md" >}})\.
+- Rare cases allow for [*hierarchical* decomposition]({{< relref "../fragmented-metapatterns/hierarchy.md" >}}) where most components blend [*application*]({{< relref "#application-use-cases-or-integration" >}}) and *domain* roles\.
+- Last but not least, we can use separate *models* for making changes \(executing *commands*\) and for analytics \(running *queries*\), giving rise to [*Command Query Responsibility Segregation* \(*CQRS*\)]({{< relref "../fragmented-metapatterns/layered-services.md#command-query-responsibility-segregation-cqrs" >}})\. This makes sense because a command usually involves many fields of a single record \(database row\) while a query runs over select rows of all the records – they vary in how they access and treat the data\. It is common to have a record wrapped into an OOP class in the command model, while the query model, if it is not omitted completely, provides for direct access to the database\.
+
+
+<figure>
+<a href="/diagrams/Variants/1/Domain%20-%20Derived.png">
+<picture>
+<source srcset="/diagrams/Variants/1/Domain%20-%20Derived.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/1/Domain%20-%20Derived.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/1/Domain%20-%20Derived.png" alt="Domain - Derived" loading="lazy" width="863" height="783" style="width:74%"/>
+</picture>
+</a>
+</figure>
+
+### Generic code \(libraries and utilities\)
+
+*Generic code* is something unrelated to your business but still used by your logic: a graph traversal algorithm, an e\-mail server, or even a computer vision framework to identify duplicate user avatars\.
+
+In most cases *generic code* stays together with the [*domain*\-level code]({{< relref "#domain-business-rules-or-model" >}}) which calls it\. However, when the *domain* layer gets subdivided into services, there emerge [multiple options]({{< relref "../analytics/comparison-of-architectural-patterns/sharing-functionality-or-data-among-services.md" >}}):
+
+- If the *generic code* is not shared, it moves into the service that uses it\. See [*Services*]({{< relref "../basic-metapatterns/services.md" >}})\.
+- If it needs to be shared, it can be:
+  - Extracted into a dedicated service, as in [*Service\-Oriented Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}})\.
+  - Replicated as a [*Sidecar*]({{< relref "../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) attached to every instance of each service that uses it\.
+  - Copied into the codebases of the services to allow each team to change it independently from other teams – see *Separate Ways* in \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\.
+
+
+<figure>
+<a href="/diagrams/Variants/1/Generic%20Code%20-%20Derived.png">
+<picture>
+<source srcset="/diagrams/Variants/1/Generic%20Code%20-%20Derived.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/1/Generic%20Code%20-%20Derived.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/1/Generic%20Code%20-%20Derived.png" alt="Generic Code - Derived" loading="lazy" width="1363" height="483" style="width:100%"/>
+</picture>
+</a>
+</figure>
+
+### Communication \(middleware\)
+
+If your system is comprised of multiple components, they need a way to communicate, which may be as simple as in\-process method calls or as complex as a [distributed consensus protocol](https://en.wikipedia.org/wiki/Paxos_(computer_science))\. The *communication infrastructure*, when used consistently throughout a system, makes a distinct virtual \(conjoining separately deployed nodes\) system layer, called [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}})\.
+
+<figure>
+<a href="/diagrams/Variants/1/Communication%20-%20Derived.png">
+<picture>
+<source srcset="/diagrams/Variants/1/Communication%20-%20Derived.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/1/Communication%20-%20Derived.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/1/Communication%20-%20Derived.png" alt="Communication - Derived" loading="lazy" width="1343" height="324" style="width:100%"/>
+</picture>
+</a>
+</figure>
+
+### Data \(persistence\)
+
+Most systems but the simplest [*Pipelines*]({{< relref "../basic-metapatterns/pipeline.md" >}}) are stateful – they remember something about their users or their environment:
+
+- A backend would usually *persist* useful facts to a *database* which makes a dedicated *persistence layer*\.
+- A [real\-time *control system*]({{< relref "../foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}}) does not have the leisure to access anything remote, therefore its state is embedded in\-memory into its [*domain* layer]({{< relref "#domain-business-rules-or-model" >}})\.
+- Complex distributed frameworks that implement [*Actors*]({{< relref "../basic-metapatterns/services.md#actors" >}}) or [*Space\-Based Architecture*]({{< relref "../implementation-metapatterns/mesh.md#space-based-architecture" >}}) both keep each service’s data inside the service’s memory for fast access and back all the changes to a persistent datastore to support failure recovery\.
+
+
+<figure>
+<a href="/diagrams/Variants/1/Data%20-%20Derived.png">
+<picture>
+<source srcset="/diagrams/Variants/1/Data%20-%20Derived.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/1/Data%20-%20Derived.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/1/Data%20-%20Derived.png" alt="Data - Derived" loading="lazy" width="1063" height="449" style="width:100%"/>
+</picture>
+</a>
+</figure>
+
+If the *persistence layer* becomes a system’s performance bottleneck, as it often does, one of [the cures]({{< relref "../extension-metapatterns/shared-repository.md#evolutions" >}}) is using several specialized datastores, leading to [*Polyglot Persistence*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md" >}})\.
+
+<figure>
+<a href="/diagrams/Variants/1/Data%20-%20Evolutions.png">
+<picture>
+<source srcset="/diagrams/Variants/1/Data%20-%20Evolutions.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/1/Data%20-%20Evolutions.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/1/Data%20-%20Evolutions.png" alt="Data - Evolutions" loading="lazy" width="1162" height="523" style="width:100%"/>
+</picture>
+</a>
+</figure>
+
+### Operating system and hardware
+
+Your software always runs on *hardware* and usually relies on an *operating system* \(*OS*\) for file and network access and memory management\. Even though many modern backends don’t care about such low\-level details and omit them on their diagrams, embedded or system software communicates with its *OS* or *hardware* directly, making the corresponding components indispensable parts of its topology\.
+
+Integrating multiple pieces of *hardware* into an intelligently behaving system is usually what [*control software*]({{< relref "../foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}}) is written for\. Such systems [often follow]({{< relref "../foundations-of-software-architecture/four-kinds-of-software.md#variants" >}}) [*Actors*]({{< relref "../basic-metapatterns/services.md#class-like-actors" >}}) or [*Hierarchy*]({{< relref "../fragmented-metapatterns/hierarchy.md" >}}) architectures\.
+
+<figure>
+<a href="/diagrams/4Kinds/Control%20-%20variants.png">
+<picture>
+<source srcset="/diagrams/4Kinds/Control%20-%20variants.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/4Kinds/Control%20-%20variants.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/4Kinds/Control%20-%20variants.png" alt="Control - variants" loading="lazy" width="1224" height="664" style="width:100%"/>
+</picture>
+</a>
+</figure>
+
 ## Examples
 
 The notion of layering seems to be so natural to our minds that most known architectures are layered\. Not surprisingly, there are several approaches to assigning functionality to and naming the layers:
+
+### Entity\-Control\-Boundary \(ECB\), Entity\-Boundary\-Control \(EBC\), Boundary\-Control\-Entity \(BCE\)
+
+<figure>
+<a href="/diagrams/Variants/1/ECB.png">
+<picture>
+<source srcset="/diagrams/Variants/1/ECB.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/1/ECB.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/1/ECB.png" alt="ECB" loading="lazy" width="903" height="383" style="width:100%"/>
+</picture>
+</a>
+</figure>
+
+[*Entity\-Control\-Boundary*](https://en.wikipedia.org/wiki/Entity%E2%80%93control%E2%80%93boundary) \(*ECB*\) or other combinations of these words \(*EBC* and *BCE*\) designate a system composed of the following layers:
+
+- *Boundary* – the layer which [interacts with the system’s *clients* or *users*]({{< relref "#interface-api-or-ui" >}})\. See [*Proxy*]({{< relref "../extension-metapatterns/proxy.md" >}})\.
+- *Control* – the layer which [contains *use cases*]({{< relref "#application-use-cases-or-integration" >}}) – sequences of actions on the system’s internals that should be made to process a client’s request or respond to a user’s action\. See [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}})\.
+- *Entity* – the bulk of the system’s business logic and data\.
+
+
+A closer look at an *ECB* system may reveal a finer\-grained structure that resembles [*Backends for Frontends*]({{< relref "../fragmented-metapatterns/backends-for-frontends--bff-.md" >}}) or [*Service\-Oriented Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}) as each layer is composed of modules or objects:
+
+<figure>
+<a href="/diagrams/Variants/1/ECB%20as%20SOA.png">
+<picture>
+<source srcset="/diagrams/Variants/1/ECB%20as%20SOA.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/1/ECB%20as%20SOA.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/1/ECB%20as%20SOA.png" alt="ECB as SOA" loading="lazy" width="866" height="483" style="width:100%"/>
+</picture>
+</a>
+</figure>
 
 ### Domain\-Driven Design \(DDD\) Layers
 
@@ -296,11 +550,11 @@ The notion of layering seems to be so natural to our minds that most known archi
 </a>
 </figure>
 
-\[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] recognizes four layers with the upper layers closer to the user:
+\[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\], a methodology for enterprise\-scale backend development, extends the more generic [*Entity\-Control\-Boundary*]({{< relref "#entity-control-boundary-ecb-entity-boundary-control-ebc-boundary-control-entity-bce" >}}) with a new *Infrastructure* layer responsible for [*communication*]({{< relref "#communication-middleware" >}}) and [*persistence*]({{< relref "#data-persistence" >}}) roles which don’t exist in most desktop applications\. Its layers are called:
 
 - *Presentation* \([*User Interface*]({{< relref "../extension-metapatterns/proxy.md#user-interface-presentation-layer-separated-presentation-command-line-interface-cli-graphical-user-interface-gui-frontend-human-machine-interface-hmi-man-machine-interface-mmi-operator-interface" >}})\) – the user\-facing component \(frontend, UI\)\. It should be highly responsive to the user's input\. See [*Separated Presentation*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#examples--separated-presentation" >}})\.
-- *Application* \(*Integration*, *Service*\) – the high\-level scenarios which build upon the API of the *domain* layer\. It should be easy to change and to deploy\. See [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}})\.
-- *Domain* \(*Model*, *Business Rules*\) – the bulk of the mid\- and low\-level business logic\. It should usually be well\-tested and performant\.
+- *Application* \([*Integration*]({{< relref "#application-use-cases-or-integration" >}}), *Service*\) – the high\-level scenarios which build upon the API of the *domain* layer\. It should be easy to change and to deploy\. See [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}})\.
+- *Domain* \([*Model*]({{< relref "#domain-business-rules-or-model" >}}), *Business Rules*\) – the bulk of the mid\- and low\-level business logic\. It should usually be well\-tested and performant\.
 - *Infrastructure* \(*Utility*, *Data Access*\) – the utility components devoid of business logic\. Their stability and performance is business\-critical but updates to their code are rare\.
 
 
@@ -313,8 +567,6 @@ For example, an online banking system comprises:
 
 
 However in practice you are much more likely to encounter the derived [*DDD\-style Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#ddd-style-hexagonal-architecture-onion-architecture-clean-architecture" >}}) than the original *DDD Layers*\.
-
-We will often use the DDD naming convention while describing more complex architectures, some of which have all the four layers, while others merge several layers together or omit the frontend and concentrate on the components that contain the business logic\. 
 
 ### Three\-Tier Architecture
 

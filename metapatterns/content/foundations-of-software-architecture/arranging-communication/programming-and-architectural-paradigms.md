@@ -62,7 +62,7 @@ The ability to address complex domains by reducing the whole to self\-contained 
 
 ## Functional \(decentralized, streaming\) paradigm – choreography
 
-Sometimes you don’t need that level of fine\-tuning for the behavior of the system you build – it operates as an [assembly line](https://en.wikipedia.org/wiki/Assembly_line) with high throughput and little variance: its logic is made of steps that resemble work stations along a [conveyor belt](https://en.wikipedia.org/wiki/Conveyor_belt) through which identically structured pieces of data flow, just like goods on the belt\. In that case there is very little to control: if an item is good, it goes further, otherwise it just falls off the line\. Here the *control* resides in the graph of connections*,* the domain *logic* is subdivided, while the *data* is copied between the components\.
+Sometimes you don’t need that level of fine\-tuning for the behavior of the system you build – it operates as an [assembly line](https://en.wikipedia.org/wiki/Assembly_line) with high throughput and little variance: its logic is made of steps that resemble work stations along a [conveyor belt](https://en.wikipedia.org/wiki/Conveyor_belt) through which identically structured pieces of data flow, just like goods on the belt\. In that case there is very little to control: if an item is good, it goes further, otherwise it just falls off the line\. Here the *control* resides in the graph of connections*,* the [domain *logic*]({{< relref "../../basic-metapatterns/layers.md#domain-business-rules-or-model" >}}) is subdivided, while the *data* is copied between the components\.
 
 <figure>
 <a href="/diagrams/Communication/Paradigms%20-%20Functional.png">

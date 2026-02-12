@@ -27,7 +27,7 @@ Therefore, a one day task will likely be [*monolithic*]({{< relref "../../basic-
 </a>
 </figure>
 
-Any inherent decoupling within your domain is another factor to consider in the initial design\. For example, the layer with domain logic is very likely to contain independent subdomains which naturally make modules or services at next to no development or runtime cost\. Likewise, [*Top\-Down Hierarchy*]({{< relref "../../fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}}) is a good fit for a hierarchical domain\. A domain that builds around stepwise processing of data or events may be modeled as a [*Pipeline*]({{< relref "../../basic-metapatterns/pipeline.md" >}}), which is a very flexible architectural style\.
+Any inherent decoupling within your domain is another factor to consider in the initial design\. For example, the layer with [domain logic]({{< relref "../../basic-metapatterns/layers.md#domain-business-rules-or-model" >}}) is very likely to contain independent subdomains which naturally make modules or services at next to no development or runtime cost\. Likewise, [*Top\-Down Hierarchy*]({{< relref "../../fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}}) is a good fit for a hierarchical domain\. A domain that builds around stepwise processing of data or events may be modeled as a [*Pipeline*]({{< relref "../../basic-metapatterns/pipeline.md" >}}), which is a very flexible architectural style\.
 
 <figure>
 <a href="/diagrams/Heart/Size-2.png">

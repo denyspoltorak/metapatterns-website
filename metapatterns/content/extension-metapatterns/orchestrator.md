@@ -21,7 +21,7 @@ images = ["/diagrams/Web/og/Orchestrator.png"]
 
 *One ring to rule them all\.* Make a service to integrate other services\.
 
-<ins>Known as:</ins> Orchestrator \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}}), [FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\], Orchestrated Services, Service Layer \[[PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\], Application Layer \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\], Wrapper Facade \[[POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\], Multi\-Worker \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\], Controller / Control, Workflow Owner \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] of [Microservices]({{< relref "../basic-metapatterns/services.md#microservices" >}}), and Processing Grid \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] of [Space\-Based Architecture]({{< relref "../extension-metapatterns/combined-component.md#middleware-of-space-based-architecture" >}})\.
+<ins>Known as:</ins> Orchestrator \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}}), [FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\], Orchestrated Services, Service Layer \[[PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\], [Application Layer]({{< relref "../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\], Wrapper Facade \[[POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\], Multi\-Worker \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\], Control, Workflow Owner \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] of [Microservices]({{< relref "../basic-metapatterns/services.md#microservices" >}}), and Processing Grid \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] of [Space\-Based Architecture]({{< relref "../extension-metapatterns/combined-component.md#middleware-of-space-based-architecture" >}})\.
 
 <ins>Aspects:</ins>
 
@@ -142,7 +142,7 @@ Likewise, [control systems]({{< relref "../foundations-of-software-architecture/
 
 *Orchestrators* <ins>shine</ins> with:
 
-- *Large projects\.* The partition of business logic into a high\-level application \(*Orchestrator*\) and the multiple [subdomain *Services*]({{< relref "../basic-metapatterns/services.md#whole-subdomain-sub-domain-services" >}}) it relies on provides perfect code decoupling and team specialization\.
+- *Large projects\.* The partition of business logic into a high\-level [*application*]({{< relref "../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) \(*Orchestrator*\) and the multiple [subdomain *Services*]({{< relref "../basic-metapatterns/services.md#whole-subdomain-sub-domain-services" >}}) it relies on provides perfect code decoupling and team specialization\.
 - *Specialized teams\.* As an improvement over [*Services*]({{< relref "../basic-metapatterns/services.md" >}}), the teams which develop deep knowledge of subdomains will delegate communication with customers to the application team\.
 - *Complex and unstable requirements*\. The *integration* layer \(*Orchestrator*\) should be high\-level and simple enough to be easily extended or modified to cover most of the customer requests or marketing experiments without much help from the domain teams\.
 
@@ -214,7 +214,7 @@ An *open Orchestrator* implements a subset of system\-wide scenarios that requir
 
 ## Variants by structure \(can be combined\)
 
-The orchestration \(application \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] / [integration](https://github.com/wso2/reference-architecture/blob/master/event-driven-api-architecture.md) / [composite](https://github.com/wso2/reference-architecture/blob/master/event-driven-api-architecture.md)\) layer has several structural \(implementation\) options:
+The orchestration \([application]({{< relref "../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] / [integration](https://github.com/wso2/reference-architecture/blob/master/event-driven-api-architecture.md) / [composite](https://github.com/wso2/reference-architecture/blob/master/event-driven-api-architecture.md)\) layer has several structural \(implementation\) options:
 
 ### Monolithic
 

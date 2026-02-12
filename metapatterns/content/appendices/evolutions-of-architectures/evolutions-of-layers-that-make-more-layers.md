@@ -49,7 +49,7 @@ It is also common to:
 
 <ins>Prerequisite</ins>: the high\-level and low\-level logic are loosely coupled\.
 
-It is often possible to split a backend into integration \([orchestration]({{< relref "../../foundations-of-software-architecture/arranging-communication/orchestration.md" >}})\) and domain layers\. That allows for one team to specialize in customer use cases while the other one delves deep into the domain knowledge and infrastructure\.
+It is often possible to split a backend into [integration]({{< relref "../../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) \([orchestration]({{< relref "../../foundations-of-software-architecture/arranging-communication/orchestration.md" >}})\) and [domain]({{< relref "../../basic-metapatterns/layers.md#domain-business-rules-or-model" >}}) layers\. That allows for one team to specialize in customer use cases while the other one delves deep into the domain knowledge and infrastructure\.
 
 <ins>Pros</ins>: 
 

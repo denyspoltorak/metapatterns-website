@@ -12,9 +12,9 @@ bookCollapseSection = true
 
 ## You’ll find inside
 
-- A structured collection of [architectural patterns](https://en.wikipedia.org/wiki/Architectural_pattern) with hundreds of NoUML diagrams\.
-- Technology\-agnostic knowledge distilled from a multitude of [sources]({{< relref "../appendices/books-referenced.md" >}})\.
-- [Deconstruction](https://tvtropes.org/pmwiki/pmwiki.php/Main/GenreDeconstruction) of software architecture into its basic principles\.
+- An atlas of system topologies\.
+- A compendium of [architectural patterns](https://en.wikipedia.org/wiki/Architectural_pattern)\.
+- One of the largest and most cohesive [pattern languages](https://en.wikipedia.org/wiki/Pattern_language)\.
 
 
 ## Opentowork

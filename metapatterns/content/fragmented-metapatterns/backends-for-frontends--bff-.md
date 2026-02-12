@@ -148,7 +148,7 @@ An [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) 
 </a>
 </figure>
 
-Clients vary in both access mode \(protocol\) and workflow\. [*Orchestrators*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) or [*Proxies*]({{< relref "../extension-metapatterns/proxy.md" >}}) may be reused if some kinds of clients share only protocol or application logic\.
+Clients vary in both access mode \(protocol\) and workflow\. [*Orchestrators*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) or [*Proxies*]({{< relref "../extension-metapatterns/proxy.md" >}}) may be reused if some kinds of clients share only protocol or [*application logic*]({{< relref "../basic-metapatterns/layers.md#application-use-cases-or-integration" >}})\.
 
 ### API Gateways
 

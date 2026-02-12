@@ -49,8 +49,8 @@ The diagrams are *NoUML* and most of them belong to one of the following kinds:
 
 Components in the diagrams are colored according to the kind of code they contain:
 
-- Use cases \(application logic\) are green\.
-- Business rules \(domain logic\) are blue\.
+- Use cases \([application logic]({{< relref "../basic-metapatterns/layers.md#application-use-cases-or-integration" >}})\) are green\.
+- Business rules \([domain logic]({{< relref "../basic-metapatterns/layers.md#domain-business-rules-or-model" >}})\) are blue\.
 - Generic code is white\.
 - The data is gray\.
 
