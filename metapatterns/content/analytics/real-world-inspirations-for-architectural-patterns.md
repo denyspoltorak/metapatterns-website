@@ -15,11 +15,11 @@ Another thought to consider is that it’s not in human nature to invent somethi
 
 Let’s go\!
 
-## Basic metapatterns
+## [Basic metapatterns]({{< relref "../basic-metapatterns/_index.md" >}})
 
-The basic patterns lay the foundation for any system by paving ways to *divide* it into components to *conquer* its [complexity]({{< relref "../foundations-of-software-architecture/modules-and-complexity.md" >}})\. We are going to observe them all around:
+The [basic patterns]({{< relref "../basic-metapatterns/_index.md" >}}) lay the foundation for any system by paving ways to *divide* it into components to *conquer* its [complexity]({{< relref "../foundations-of-software-architecture/modules-and-complexity.md" >}})\. We are going to observe them all around:
 
-### Monolith
+### [Monolith]({{< relref "../basic-metapatterns/monolith.md" >}})
 
 <figure>
 <a href="/diagrams/Contents/Monolith.png">
@@ -41,7 +41,7 @@ The basic patterns lay the foundation for any system by paving ways to *divide* 
 - A whole distributed system may be hidden behind a web page in your browser – and you never imagine its complexity unless you have worked on something of a kind\.
 
 
-### Shards
+### [Shards]({{< relref "../basic-metapatterns/shards.md" >}})
 
 <figure>
 <a href="/diagrams/Contents/Shards.png">
@@ -63,7 +63,7 @@ The basic patterns lay the foundation for any system by paving ways to *divide* 
 - A client application of a multi\-user online game is a shard\.
 
 
-### Layers
+### [Layers]({{< relref "../basic-metapatterns/layers.md" >}})
 
 <figure>
 <a href="/diagrams/Contents/Layers.png">
@@ -83,7 +83,7 @@ The basic patterns lay the foundation for any system by paving ways to *divide* 
 - Your web browser executes a frontend which communicates to a backend which uses a database\.
 
 
-### Services
+### [Services]({{< relref "../basic-metapatterns/services.md" >}})
 
 <figure>
 <a href="/diagrams/Contents/Services.png">
@@ -105,7 +105,7 @@ The basic patterns lay the foundation for any system by paving ways to *divide* 
 - \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] describes the way to subdivide a large system into loosely coupled components\.
 
 
-### Pipeline
+### [Pipeline]({{< relref "../basic-metapatterns/pipeline.md" >}})
 
 <figure>
 <a href="/diagrams/Contents/Pipeline.png">
@@ -127,11 +127,11 @@ The basic patterns lay the foundation for any system by paving ways to *divide* 
 - Finally, a UI wizard passes its users through a series of screens\.
 
 
-## Extension metapatterns
+## [Extension metapatterns]({{< relref "../extension-metapatterns/_index.md" >}})
 
-An extension pattern encapsulates one or two aspects of the system’s implementation\. It may appear only on design levels which have those particular aspects:
+An [extension pattern]({{< relref "../extension-metapatterns/_index.md" >}}) encapsulates one or two aspects of the system’s implementation\. It may appear only on design levels which have those particular aspects:
 
-### Middleware
+### [Middleware]({{< relref "../extension-metapatterns/middleware.md" >}})
 
 <figure>
 <a href="/diagrams/Contents/Middleware.png">
@@ -152,7 +152,7 @@ A [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) abstr
 - A distributed [actor framework]({{< relref "../basic-metapatterns/services.md#actors" >}}) allows an actor to address another actor without knowing where it is deployed\.
 
 
-### Shared Repository
+### [Shared Repository]({{< relref "../extension-metapatterns/shared-repository.md" >}})
 
 <figure>
 <a href="/diagrams/Contents/Shared%20Repository.png">
@@ -173,7 +173,7 @@ A [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.
 - Services or service instances may share a database\.
 
 
-### Proxy
+### [Proxy]({{< relref "../extension-metapatterns/proxy.md" >}})
 
 <figure>
 <a href="/diagrams/Contents/Proxy.png">
@@ -193,7 +193,7 @@ A [*Proxy*]({{< relref "../extension-metapatterns/proxy.md" >}}) isolates a syst
 - A compiler is a kind of proxy between source code and bytecode\.
 
 
-### Orchestrator
+### [Orchestrator]({{< relref "../extension-metapatterns/orchestrator.md" >}})
 
 <figure>
 <a href="/diagrams/Contents/Orchestrator.png">
@@ -212,11 +212,30 @@ An [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) 
 - A linker composes a working program out of disjunct modules\.
 
 
-## Fragmented metapatterns
+### [Sandwich]({{< relref "../extension-metapatterns/sandwich.md" >}})
 
-A fragmented pattern uses small specialized components to approach a case which is hard to resolve with more generic means\. The high degree of specialization leads to even fewer examples:
+<figure>
+<a href="/diagrams/Contents/Sandwich.png">
+<picture>
+<source srcset="/diagrams/Contents/Sandwich.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Contents/Sandwich.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Contents/Sandwich.png" alt="Sandwich" loading="lazy" width="743" height="243" style="width:91%"/>
+</picture>
+</a>
+</figure>
 
-### Polyglot Persistence
+In [*Sandwich*]({{< relref "../extension-metapatterns/sandwich.md" >}}) a varied and segmented layer with the most valuable code is operated and held in place by other, cohesive layers:
+
+- A sandwich is an obvious example\.  
+- This is how we make down jackets and thermal insulation in general\.
+- A [cell membrane](https://en.wikipedia.org/wiki/Cell_membrane) which includes many transporters and receptors looks like that\.
+
+
+## [Fragmented metapatterns]({{< relref "../fragmented-metapatterns/_index.md" >}})
+
+A [fragmented pattern]({{< relref "../fragmented-metapatterns/_index.md" >}}) uses small specialized components to approach a case which is hard to resolve with more generic means\. The high degree of specialization leads to even fewer examples:
+
+### [Polyglot Persistence]({{< relref "../fragmented-metapatterns/polyglot-persistence.md" >}})
 
 <figure>
 <a href="/diagrams/Contents/Polyglot%20Persistence.png">
@@ -235,7 +254,7 @@ A fragmented pattern uses small specialized components to approach a case which 
 - There are map, list, and array – each with its pros and cons\. A large class would often use two or three kinds of containers and not without reason\.
 
 
-### Backends for Frontends
+### [Backends for Frontends]({{< relref "../fragmented-metapatterns/backends-for-frontends--bff-.md" >}})
 
 <figure>
 <a href="/diagrams/Contents/Backends%20for%20Frontends.png">
@@ -254,7 +273,7 @@ A fragmented pattern uses small specialized components to approach a case which 
 - A multiplayer game may provide desktop and mobile client applications\.
 
 
-### Service\-Oriented Architecture
+### [Service\-Oriented Architecture]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}})
 
 <figure>
 <a href="/diagrams/Contents/Service-Oriented%20Architecture.png">
@@ -273,7 +292,7 @@ A fragmented pattern uses small specialized components to approach a case which 
 - It’s the same with user space of operating systems: there is a shared UI framework which interfaces with as\-many\-as\-needed applications, each of which calls shared libraries \(DLLs\)\.
 
 
-### Hierarchy
+### [Hierarchy]({{< relref "../fragmented-metapatterns/hierarchy.md" >}})
 
 <figure>
 <a href="/diagrams/Contents/Hierarchy.png">
@@ -291,11 +310,11 @@ A fragmented pattern uses small specialized components to approach a case which 
 - Large projects are made of services which contain modules which contain classes which contain methods\.
 
 
-## Implementation metapatterns
+## [Implementation metapatterns]({{< relref "../implementation-metapatterns/_index.md" >}})
 
-An implementation pattern highlights the peculiar internal arrangements of a component\. Such patterns are deeply specialized:
+An [implementation pattern]({{< relref "../implementation-metapatterns/_index.md" >}}) highlights the peculiar internal arrangements of a component\. Such patterns are deeply specialized:
 
-### Plugins
+### [Plugins]({{< relref "../implementation-metapatterns/plugins.md" >}})
 
 <figure>
 <a href="/diagrams/Contents/Plugins.png">
@@ -313,7 +332,7 @@ An implementation pattern highlights the peculiar internal arrangements of a com
 - [*Strategy*](https://refactoring.guru/design-patterns/strategy) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] is the thing\.
 
 
-### Hexagonal Architecture
+### [Hexagonal Architecture]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}})
 
 <figure>
 <a href="/diagrams/Contents/Hexagonal%20Architecture.png">
@@ -328,11 +347,12 @@ An implementation pattern highlights the peculiar internal arrangements of a com
 [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) protects the internals of a system from its environment:
 
 - A drill or a screwdriver has replaceable bits\.
+- A living cell is encapsulated by its [membrane](https://en.wikipedia.org/wiki/Cell_membrane) and relies on [protein adapters](https://en.wikipedia.org/wiki/Membrane_protein) for interactions with its environment\. [A kind of *Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#examples--cell" >}}) was named after it\.
 - *OS Abstraction Layer* and *Hardware Abstraction Layer* in embedded systems or *Anti\-Corruption Layer* in \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] are all about that\.
 - The [*impure/pure/impure sandwich*](https://blog.ploeh.dk/2020/03/02/impureim-sandwich/) of functional programming is closely related\. In both cases the core of the system cannot change anything outside of itself directly \(any external communication relies on *adapters*\) and it is [deterministic if single\-threaded](http://ithare.com/chapter-vc-modular-architecture-client-side-on-debugging-distributed-systems-deterministic-logic-and-finite-state-machines/)\.
 
 
-### Microkernel
+### [Microkernel]({{< relref "../implementation-metapatterns/microkernel.md" >}})
 
 <figure>
 <a href="/diagrams/Contents/Microkernel.png">
@@ -351,7 +371,7 @@ An implementation pattern highlights the peculiar internal arrangements of a com
 - Cloud services are based on sharing computation resources among clients\.
 
 
-### Mesh
+### [Mesh]({{< relref "../implementation-metapatterns/mesh.md" >}})
 
 <figure>
 <a href="/diagrams/Contents/Mesh.png">

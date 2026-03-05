@@ -87,7 +87,7 @@ And there are forces that try to keep your code fragmented:
 <picture>
 <source srcset="/diagrams/Heart/Lifecycle.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Heart/Lifecycle.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Heart/Lifecycle.png" alt="Lifecycle" loading="lazy" width="1803" height="323" style="width:100%"/>
+<img src="/diagrams/Heart/Lifecycle.png" alt="Lifecycle" loading="lazy" width="1803" height="303" style="width:100%"/>
 </picture>
 </a>
 </figure>

@@ -277,19 +277,19 @@ Orchestrator
 
 </a>
 
-<a href="{{< relref "extension-metapatterns/combined-component.md" >}}">
+<a href="{{< relref "extension-metapatterns/sandwich.md" >}}">
 
 <picture>
 
-<source srcset="/diagrams/Web/Combined%20Component.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Web/Sandwich.svg" media="(prefers-color-scheme: light)"/>
 
-<source srcset="/diagrams/Web/Combined%20Component.dark.svg" media="(prefers-color-scheme: dark)"/>
+<source srcset="/diagrams/Web/Sandwich.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Combined%20Component.png" alt="" loading="lazy" width="363" height="304"/>
+<img src="/diagrams/Web/Sandwich.png" alt="" loading="lazy" width="363" height="305"/>
 
 </picture>
 
-Combined Component
+Sandwich
 
 </a>
 

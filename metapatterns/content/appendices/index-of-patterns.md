@@ -35,11 +35,11 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Ambassador]({{< relref "../extension-metapatterns/proxy.md#on-the-client-side-ambassador" >}})
 
+[Ambassador Plugin]({{< relref "../implementation-metapatterns/plugins.md#ambassador-plugin-logic-extension" >}})
+
 [Anticorruption Layer]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}})
 
 [API Composer]({{< relref "../extension-metapatterns/orchestrator.md#api-composer-remote-facade-gateway-aggregation-composed-message-processor-scatter-gather-mapreduce" >}})
-
-[API Gateway]({{< relref "../extension-metapatterns/combined-component.md#api-gateway" >}})
 
 [API Gateway]({{< relref "../extension-metapatterns/orchestrator.md#api-gateway" >}}) \(as Orchestrator\)
 
@@ -73,6 +73,8 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Blackboard]({{< relref "../extension-metapatterns/shared-repository.md#blackboard" >}})
 
+[Blackboard System]({{< relref "../extension-metapatterns/sandwich.md#blackboard-system" >}})
+
 [Bottom\-Up Hierarchy]({{< relref "../fragmented-metapatterns/hierarchy.md#bottom-up-hierarchy-bus-of-buses-network-of-networks" >}})
 
 [Boundary\-Control\-Entity]({{< relref "../basic-metapatterns/layers.md#entity-control-boundary-ecb-entity-boundary-control-ebc-boundary-control-entity-bce" >}}) \(BCE\)
@@ -89,7 +91,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Caching Layer]({{< relref "../extension-metapatterns/proxy.md#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}})
 
-[Cell]({{< relref "../basic-metapatterns/services.md#cell-wso2-definition-service-of-services-domain-uber-definition-cluster" >}}) \(WSO2 definition\)
+[Cell]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#examples--cell" >}}) \(WSO2 definition\)
 
 [Cell Gateway]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \(WSO2 Cell\-Based Architecture\)
 
@@ -107,9 +109,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Clean Architecture]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#ddd-style-hexagonal-architecture-onion-architecture-clean-architecture" >}})
 
-[Cluster]({{< relref "../basic-metapatterns/services.md#cell-wso2-definition-service-of-services-domain-uber-definition-cluster" >}}) \(group of services\)
-
-[Combined Component]({{< relref "../extension-metapatterns/combined-component.md" >}})
+[Cluster]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#basic-cell-cluster" >}}) \(group of services\)
 
 [Command Line Interface]({{< relref "../extension-metapatterns/proxy.md#user-interface-presentation-layer-separated-presentation-command-line-interface-cli-graphical-user-interface-gui-frontend-human-machine-interface-hmi-man-machine-interface-mmi-operator-interface" >}}) \(CLI\)
 
@@ -175,7 +175,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Document\-View]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-presenter-mvp-model-view-adapter-mva-model-view-viewmodel-mvvm-model-1-mvc1-document-view" >}})
 
-[Domain]({{< relref "../basic-metapatterns/services.md#cell-wso2-definition-service-of-services-domain-uber-definition-cluster" >}}) \(Uber definition for WSO2\-style Cell\)
+[Domain]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#full-featured-cell-domain" >}}) \(Uber definition for WSO2\-style Cell\)
 
 [Domain\-Driven Design]({{< relref "../basic-metapatterns/layers.md#domain-driven-design-ddd-layers" >}}) \(layers\)
 
@@ -188,8 +188,6 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 [Edge Service]({{< relref "../extension-metapatterns/proxy.md#dispatcher-reverse-proxy-ingress-controller-edge-service-microgateway" >}})
 
 [Embedded systems]({{< relref "../basic-metapatterns/layers.md#embedded-systems" >}}) \(layers\)
-
-[Enterprise Service Bus]({{< relref "../extension-metapatterns/combined-component.md#enterprise-service-bus-esb" >}}) \(ESB\)
 
 [Enterprise Service Bus]({{< relref "../extension-metapatterns/middleware.md#enterprise-service-bus-esb" >}}) \(as Middleware\)
 
@@ -207,8 +205,6 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Event\-Driven Architecture]({{< relref "../basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}}) \(EDA\)
 
-[Event Mediator]({{< relref "../extension-metapatterns/combined-component.md#event-mediator" >}})
-
 [Event Mediator]({{< relref "../extension-metapatterns/middleware.md#event-mediator" >}}) \(as Middleware\)
 
 [Event Mediator]({{< relref "../extension-metapatterns/orchestrator.md#event-mediator" >}}) \(as Orchestrator\)
@@ -218,6 +214,8 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 [Eventually Consistent Saga]({{< relref "../extension-metapatterns/orchestrator.md#orchestrated-saga-saga-orchestrator-saga-execution-component-transaction-script-coordinator" >}})
 
 [Extension]({{< relref "../implementation-metapatterns/plugins.md#extension" >}}) \(component\)
+
+[Extension Architecture]({{< relref "../implementation-metapatterns/plugins.md" >}})
 
 [External Search Index]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#external-search-index" >}})
 
@@ -231,7 +229,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Flavors]({{< relref "../implementation-metapatterns/plugins.md#by-linkage" >}}) \(Plugins\)
 
-[Front Controller]({{< relref "../extension-metapatterns/combined-component.md#front-controller" >}}) \(query service of a pipeline\)
+[Front Controller]({{< relref "../extension-metapatterns/orchestrator.md#inexact-front-controller" >}}) \(query service of a pipeline\)
 
 [Frontend]({{< relref "../extension-metapatterns/proxy.md#user-interface-presentation-layer-separated-presentation-command-line-interface-cli-graphical-user-interface-gui-frontend-human-machine-interface-hmi-man-machine-interface-mmi-operator-interface" >}})
 
@@ -289,7 +287,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Lambdalith]({{< relref "../basic-metapatterns/monolith.md#inexact-lambda-monolith-monolambda-lambdalith" >}})
 
-[Lambdas]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}})
+[Lambdas]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}})
 
 [Layered Architecture]({{< relref "../basic-metapatterns/layers.md" >}})
 
@@ -307,6 +305,8 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Load Balancer]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}})
 
+[Logic Extension]({{< relref "../implementation-metapatterns/plugins.md#ambassador-plugin-logic-extension" >}})
+
 [Man\-Machine Interface]({{< relref "../extension-metapatterns/proxy.md#user-interface-presentation-layer-separated-presentation-command-line-interface-cli-graphical-user-interface-gui-frontend-human-machine-interface-hmi-man-machine-interface-mmi-operator-interface" >}}) \(MMI\)
 
 [MapReduce]({{< relref "../extension-metapatterns/orchestrator.md#api-composer-remote-facade-gateway-aggregation-composed-message-processor-scatter-gather-mapreduce" >}})
@@ -321,9 +321,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Message Broker]({{< relref "../extension-metapatterns/middleware.md" >}})
 
-[Message Bus]({{< relref "../extension-metapatterns/combined-component.md#message-bus" >}})
-
-[Message Bus]({{< relref "../extension-metapatterns/middleware.md#message-bus" >}}) \(as Middleware\)
+[Message Bus]({{< relref "../extension-metapatterns/middleware.md#message-bus" >}})
 
 [Message Translator]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \(adapter\)
 
@@ -417,7 +415,9 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Peer\-to\-Peer Networks]({{< relref "../implementation-metapatterns/mesh.md#peer-to-peer-networks" >}})
 
-[Persistent Event Log]({{< relref "../extension-metapatterns/combined-component.md#persistent-event-log-shared-event-store" >}})
+[Persistent Event Log]({{< relref "../extension-metapatterns/middleware.md#persistent-event-log-shared-event-store" >}}) \(as Middleware\)
+
+[Persistent Event Log]({{< relref "../extension-metapatterns/shared-repository.md#persistent-event-log-shared-event-store" >}}) \(as Shared Repository\)
 
 [Pipeline]({{< relref "../basic-metapatterns/pipeline.md" >}})
 
@@ -435,7 +435,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Ports and Adapters]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#hexagonal-architecture-ports-and-adapters" >}})
 
-[Pool]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}}) \(stateless instances\)
+[Pool]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}}) \(stateless instances\)
 
 [Presentation\-Abstraction\-Control]({{< relref "../fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}}) \(PAC\)
 
@@ -473,7 +473,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Replicated Cache]({{< relref "../extension-metapatterns/proxy.md#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}})
 
-[Replicated Stateless Services]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}}) \(instances\)
+[Replicated Load\-Balanced Services]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}}) \(instances\)
 
 [Reporting Database]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}})
 
@@ -493,6 +493,8 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Saga Orchestrator]({{< relref "../extension-metapatterns/orchestrator.md#orchestrated-saga-saga-orchestrator-saga-execution-component-transaction-script-coordinator" >}})
 
+[Sandwich]({{< relref "../extension-metapatterns/sandwich.md" >}})
+
 [Scaled Service]({{< relref "../basic-metapatterns/services.md#scaled-service" >}})
 
 [Scatter\-Gather]({{< relref "../extension-metapatterns/orchestrator.md#api-composer-remote-facade-gateway-aggregation-composed-message-processor-scatter-gather-mapreduce" >}})
@@ -510,8 +512,6 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 [Service\-Based Architecture]({{< relref "../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) \(shared database\)
 
 [Service Layer]({{< relref "../extension-metapatterns/orchestrator.md" >}}) \(Orchestrator\)
-
-[Service Mesh]({{< relref "../extension-metapatterns/combined-component.md#service-mesh" >}})
 
 [Service Mesh]({{< relref "../implementation-metapatterns/mesh.md#service-mesh" >}}) \(as Mesh\)
 
@@ -535,7 +535,9 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Shared Databases]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#private-and-shared-databases" >}}) \(Polyglot Persistence\)
 
-[Shared Event Store]({{< relref "../extension-metapatterns/combined-component.md#persistent-event-log-shared-event-store" >}})
+[Shared Event Store]({{< relref "../extension-metapatterns/middleware.md#persistent-event-log-shared-event-store" >}}) \(as Middleware\)
+
+[Shared Event Store]({{< relref "../extension-metapatterns/shared-repository.md#persistent-event-log-shared-event-store" >}}) \(as Shared Repository\)
 
 [Shared File System]({{< relref "../extension-metapatterns/shared-repository.md#shared-file-system" >}})
 
@@ -551,7 +553,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Space\-Based Architecture]({{< relref "../implementation-metapatterns/mesh.md#space-based-architecture" >}}) \(as Mesh\)
 
-[Space\-Based Architecture]({{< relref "../extension-metapatterns/combined-component.md#middleware-of-space-based-architecture" >}}) \(as Middleware\)
+[Space\-Based Architecture]({{< relref "../extension-metapatterns/sandwich.md#space-based-architecture" >}}) \(as Sandwich\)
 
 [Specialized Databases]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#specialized-databases" >}})
 
@@ -575,7 +577,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Virtualizer]({{< relref "../implementation-metapatterns/microkernel.md#virtualizer-hypervisor-container-orchestrator-distributed-runtime" >}})
 
-[Work Queue]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}})
+[Work Queue]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}})
 
 [Workflow System]({{< relref "../basic-metapatterns/pipeline.md#pipes-and-filters-workflow-system" >}})
 

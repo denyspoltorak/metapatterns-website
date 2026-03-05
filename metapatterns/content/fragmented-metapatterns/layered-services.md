@@ -40,7 +40,7 @@ images = ["/diagrams/Web/og/Layered%20Services.png"]
 
 Remarkable features of *Layered Services* include:
 
-- Independent scaling of layers of the services\. It is common to have multiple [instances]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}}) \(with the number varying from service to service and changing dynamically under load\) of the layers that contain business logic while the corresponding data layers \(databases\) are limited to a single instance\.
+- Independent scaling of layers of the services\. It is common to have multiple [instances]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}}) \(with the number varying from service to service and changing dynamically under load\) of the layers that contain business logic while the corresponding data layers \(databases\) are limited to a single instance\.
 
 
 <figure>
@@ -61,7 +61,7 @@ Remarkable features of *Layered Services* include:
 <picture>
 <source srcset="/diagrams/Performance/Layered%20Services%20-%20channels.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Performance/Layered%20Services%20-%20channels.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Performance/Layered%20Services%20-%20channels.png" alt="Layered Services - channels" loading="lazy" width="1123" height="423" style="width:100%"/>
+<img src="/diagrams/Performance/Layered%20Services%20-%20channels.png" alt="Layered Services - channels" loading="lazy" width="1123" height="403" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -116,7 +116,8 @@ The good thing is that the majority of the code belongs to the domain layer whic
 *Orchestrated Layered Services* may become coupled, which is resolved either by merging their layers:
 
 - A part of or the whole [*application layer*]({{< relref "../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) can be merged into a shared [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}})\.
-- Some or all the *databases* can be united into a [*Shared Database*]({{< relref "../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) or shared as [*Polyglot Persistence*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md" >}})\.
+- Some or all the [*databases*]({{< relref "../basic-metapatterns/layers.md#data-persistence" >}}) can be united into a [*Shared Database*]({{< relref "../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) or shared as [*Polyglot Persistence*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md" >}})\.
+- Both the *application* and *data* layers can be merged into a [*Sandwich*]({{< relref "../extension-metapatterns/sandwich.md" >}})*\.*
 
 
 <figure>
@@ -124,7 +125,7 @@ The good thing is that the majority of the code belongs to the domain layer whic
 <picture>
 <source srcset="/diagrams/Evolutions/3/Three-Layered%20Services%20-%201.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/3/Three-Layered%20Services%20-%201.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/3/Three-Layered%20Services%20-%201.png" alt="Three-Layered Services - 1" loading="lazy" width="1544" height="424" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/Three-Layered%20Services%20-%201.png" alt="Three-Layered Services - 1" loading="lazy" width="1004" height="814" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -140,14 +141,14 @@ or by building derived datasets:
 <picture>
 <source srcset="/diagrams/Evolutions/3/Three-Layered%20Services%20-%202.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/3/Three-Layered%20Services%20-%202.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/3/Three-Layered%20Services%20-%202.png" alt="Three-Layered Services - 2" loading="lazy" width="1163" height="504" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/Three-Layered%20Services%20-%202.png" alt="Three-Layered Services - 2" loading="lazy" width="1143" height="494" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
 If the services become too large:
 
-- The middle layer can be split into [*Cells*]({{< relref "../basic-metapatterns/services.md#cell-wso2-definition-service-of-services-domain-uber-definition-cluster" >}})\.
+- The middle layer can be split into [*Sandwiches*]({{< relref "../extension-metapatterns/sandwich.md" >}}) or [*Cells*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#examples--cell" >}})\.
 
 
 <figure>
@@ -155,7 +156,7 @@ If the services become too large:
 <picture>
 <source srcset="/diagrams/Evolutions/3/Three-Layered%20Services%20-%203.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/3/Three-Layered%20Services%20-%203.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/3/Three-Layered%20Services%20-%203.png" alt="Three-Layered Services - 3" loading="lazy" width="1503" height="344" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/Three-Layered%20Services%20-%203.png" alt="Three-Layered Services - 3" loading="lazy" width="1503" height="334" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -211,7 +212,7 @@ If *Choreographed Layered Services* become coupled:
 <picture>
 <source srcset="/diagrams/Evolutions/3/Two-Layered%20Services%20-%202.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/3/Two-Layered%20Services%20-%202.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/3/Two-Layered%20Services%20-%202.png" alt="Two-Layered Services - 2" loading="lazy" width="1124" height="404" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/Two-Layered%20Services%20-%202.png" alt="Two-Layered Services - 2" loading="lazy" width="1104" height="404" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -231,7 +232,7 @@ An overgrown service can be:
 </a>
 </figure>
 
-## Command Query Responsibility Segregation \(CQRS\)
+## [Command Query Responsibility Segregation]({{< relref "../extension-metapatterns/sandwich.md#command-query-responsibility-segregation-cqrs" >}}) \(CQRS\)
 
 <figure>
 <a href="/diagrams/Variants/3/CQRS.png">
@@ -304,7 +305,7 @@ Each backend depends on its database \(its technology and schema\)\. The OLTP to
 
 - You will usually need a [*Reverse Proxy*]({{< relref "../extension-metapatterns/proxy.md#dispatcher-reverse-proxy-ingress-controller-edge-service-microgateway" >}}) or an [*API Gateway*]({{< relref "../extension-metapatterns/proxy.md#api-gateway" >}}) to segregate commands from queries\.
 - If the commands and queries become intermixed, the business logic can be merged together but the databases are left separate, resulting in [*Polyglot Persistence*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md" >}})\.
-- Both read and write backends can be split into [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}) or [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) \(yielding [*Cells*]({{< relref "../basic-metapatterns/services.md#cell-wso2-definition-service-of-services-domain-uber-definition-cluster" >}})\)\.
+- Both read and write backends can be split into [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}) or [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) \(yielding [*Cells*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#examples--cell" >}})\)\.
 - Applying [*Space\-Based Architecture*]({{< relref "../extension-metapatterns/shared-repository.md#data-grid-of-space-based-architecture-sba-replicated-cache-distributed-cache" >}}) may further improve performance\.
 - Multiple schemas or even kinds of OLAP databases can be used simultaneously \([*Polyglot Persistence*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md" >}})\)\.
 

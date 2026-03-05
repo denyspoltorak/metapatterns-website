@@ -11,21 +11,12 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 The most common modifications to a [system of *Services*]({{< relref "../../basic-metapatterns/services.md" >}}) involve supplementary system\-wide *layers* which compensate for the inability of the *Services* to share anything among themselves:
 
-- A [*Middleware*]({{< relref "../../extension-metapatterns/middleware.md" >}}) knows of all the deployed service [instances]({{< relref "../../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}})\. It mediates communication between them and may manage their scaling and failure recovery\.
+- A [*Middleware*]({{< relref "../../extension-metapatterns/middleware.md" >}}) knows of all the deployed service [instances]({{< relref "../../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}})\. It mediates communication between them and may manage their scaling and failure recovery\.
 - [*Sidecars*]({{< relref "../../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \[[DDS]({{< relref "../../appendices/books-referenced.md#dds" >}})\] of a [*Service Mesh*]({{< relref "../../implementation-metapatterns/mesh.md#service-mesh" >}}) make a virtual layer of [shared libraries]({{< relref "../../analytics/comparison-of-architectural-patterns/sharing-functionality-or-data-among-services.md" >}}) for the [*Microservices*]({{< relref "../../basic-metapatterns/services.md#microservices" >}}) it hosts\.
 - A [*Shared Database*]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) simplifies the initial phases of development and provides data consistency and [interservice communication]({{< relref "../../foundations-of-software-architecture/arranging-communication/shared-data.md" >}})\.
 - [*Proxies*]({{< relref "../../extension-metapatterns/proxy.md" >}}) stand between the system and its clients and take care of shared aspects that otherwise would need to be implemented by every service\.
 - An [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) is the single place for the high\-level logic of every use case\.
-
-
-Those layers may also be merged into [*Combined Components*]({{< relref "../../extension-metapatterns/combined-component.md" >}}):
-
-- [*Message Bus*]({{< relref "../../extension-metapatterns/combined-component.md#message-bus" >}}) is a [*Middleware*]({{< relref "../../extension-metapatterns/middleware.md" >}}) that supports multiple protocols\.
-- [*API Gateway*]({{< relref "../../extension-metapatterns/combined-component.md#api-gateway" >}}) combines [*Gateway*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \(a kind of [*Proxy*]({{< relref "../../extension-metapatterns/proxy.md" >}})\) and [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}})\.
-- [*Event Mediator*]({{< relref "../../extension-metapatterns/combined-component.md#event-mediator" >}}) is an [*orchestrating*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) [*Middleware*]({{< relref "../../extension-metapatterns/middleware.md" >}})\.
-- [*Shared Event Store*]({{< relref "../../extension-metapatterns/combined-component.md#persistent-event-log-shared-event-store" >}}) combines [*Middleware*]({{< relref "../../extension-metapatterns/middleware.md" >}}) and [*Shared Repository*]({{< relref "../../extension-metapatterns/shared-repository.md" >}})\.
-- [*Enterprise Service Bus \(ESB\)*]({{< relref "../../extension-metapatterns/combined-component.md#enterprise-service-bus-esb" >}}) is an [*orchestrating*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) [*Message Bus*]({{< relref "../../extension-metapatterns/combined-component.md#message-bus" >}})\.
-- [*Space\-Based Architecture*]({{< relref "../../extension-metapatterns/combined-component.md#middleware-of-space-based-architecture" >}}) employs all the four layers: [*Gateway*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}), [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}), [*Shared Repository*]({{< relref "../../extension-metapatterns/shared-repository.md" >}}) and [*Middleware*]({{< relref "../../extension-metapatterns/middleware.md" >}})\.
+- Transforming *Services* into a [*Sandwich*]({{< relref "../../extension-metapatterns/sandwich.md" >}}) greatly simplifies their integration\.
 
 
 ## Add a Middleware
@@ -81,7 +72,7 @@ Distributed systems may fail in a zillion ways\. You want to ruminate neither on
 
 <ins>Goal</ins>: support dynamic scaling and interservice communication out of the box; share libraries among the services\.
 
-<ins>Prerequisite</ins>: service instances are mostly [stateless]({{< relref "../../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}})\.
+<ins>Prerequisite</ins>: service instances are mostly [stateless]({{< relref "../../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}})\.
 
 The [*Microservices*]({{< relref "../../basic-metapatterns/services.md#microservices" >}}) architecture boasts dynamic scaling under load thanks to its *Mesh*\-based *Middleware*\. It also allows for the services to share libraries in *Sidecars* \[[DDS]({{< relref "../../appendices/books-referenced.md#dds" >}})\] – additional containers co\-located with each service instance – to avoid duplication of generic code among the services\.
 
@@ -122,6 +113,7 @@ You don’t really need every service to have a private database\. A shared one 
 
 - It is easy for the services to share and synchronize data\.
 - Lower operational complexity\.
+- No data duplication\.
 
 
 <ins>Cons</ins>: 
@@ -218,3 +210,46 @@ Extract the high\-level business logic from the choreographed services or their 
 - If there are several clients that strongly vary in workflows, you can apply [*Backends for Frontends*]({{< relref "../../fragmented-metapatterns/backends-for-frontends--bff-.md" >}}) with an *Orchestrator* per client\.
 - If the *Orchestrator* grows too large, it [can be divided]({{< relref "../../extension-metapatterns/orchestrator.md#variants-by-structure-can-be-combined" >}}) into layers, services or both, the latter option resulting in a [*Top\-Down Hierarchy*]({{< relref "../../fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}})\.
 - The *Orchestrator* can be [scaled]({{< relref "../../extension-metapatterns/orchestrator.md#scaled" >}}) and can have its own database\.
+
+
+## Make a Sandwich
+
+<figure>
+<a href="/diagrams/Evolutions/Services/Services%20to%20Sandwich.png">
+<picture>
+<source srcset="/diagrams/Evolutions/Services/Services%20to%20Sandwich.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Evolutions/Services/Services%20to%20Sandwich.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Evolutions/Services/Services%20to%20Sandwich.png" alt="Services to Sandwich" loading="lazy" width="1307" height="323" style="width:100%"/>
+</picture>
+</a>
+</figure>
+
+<ins>Patterns</ins>: [Sandwich]({{< relref "../../extension-metapatterns/sandwich.md" >}}) \([Layers]({{< relref "../../basic-metapatterns/layers.md" >}}), [Services]({{< relref "../../basic-metapatterns/services.md" >}}), [Shared Database]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) \([Shared Repository]({{< relref "../../extension-metapatterns/shared-repository.md" >}})\), [Orchestrator]({{< relref "../../extension-metapatterns/orchestrator.md" >}})\)\.
+
+<ins>Goal</ins>: simplify integration of tightly coupled services\.
+
+<ins>Prerequisite</ins>: the services have compatible technologies in their use cases and data layers\.
+
+Tightly coupled services waste a lot of programming effort and performance on boilerplate communication and data transfer\. At the same time, their [*domain* logic]({{< relref "../../basic-metapatterns/layers.md#domain-business-rules-or-model" >}}) remains fairly independent, making full merge into a [*Monolith*]({{< relref "../../basic-metapatterns/monolith.md" >}}) impractical\.
+
+Try merging only the [*use cases*]({{< relref "../../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) and [*persistence*]({{< relref "../../basic-metapatterns/layers.md#data-persistence" >}}) while leaving the *domain* layer subdivided\.
+
+<ins>Pros</ins>: 
+
+- *Use cases* become much easier to debug\.
+- No boilerplate code for communication between the services\.
+- No data duplication or data transfer among the services\.
+- You have a new team dedicated to use cases and interaction with customers\.
+- Many changes in *use cases* can be implemented and deployed without touching the *domain* logic\.
+
+
+<ins>Cons</ins>: 
+
+- The services are coupled in their properties\.
+- There are single points of failure that leave the system totally inoperational\.
+- The *Shared Database* limits the system’s performance\.
+
+
+<ins>Further steps</ins>:
+
+- [*Space\-Based Architecture*]({{< relref "../../implementation-metapatterns/mesh.md#space-based-architecture" >}}) scales the *data* layer\.

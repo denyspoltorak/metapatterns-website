@@ -16,7 +16,7 @@ bookCollapseSection = true
 
 *<span class="book-green">of Software Architecture</span>*
 
-*<span class="book-green">v 1\.1\.4 \(02\-2026\)</span>*
+*<span class="book-green">v 1\.2 \(03\-2026\)</span>*
 
 <span class="book-green">Denys Poltorak \(author\)</span>
 

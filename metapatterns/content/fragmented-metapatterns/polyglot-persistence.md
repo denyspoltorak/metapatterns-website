@@ -192,7 +192,7 @@ The updates to the derived databases may come from:
 </a>
 </figure>
 
-### Read\-Only Replicas
+### Read\-Only [Replicas]({{< relref "../basic-metapatterns/shards.md#persistent-copy-replica" >}})
 
 <figure>
 <a href="/diagrams/Variants/3/Read-only%20Replica.png">
@@ -206,7 +206,7 @@ The updates to the derived databases may come from:
 
 Multiple instances of the database are deployed and one of them is the *leader* \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\] instance which processes all writes to the system’s data\. The changes are then replicated to the other instances \(via [*Change Data Capture*](https://www.dremio.com/wiki/change-data-capture/) \(*CDC*\)\) which are used for read requests\. Distributing workload over multiple instances increases maximum read throughput which the system is capable of, as the database is usually the system’s bottleneck\. Having several running [*replicas*]({{< relref "../basic-metapatterns/shards.md#persistent-copy-replica" >}}) greatly improves reliability and allows for nearly instant recovery of database failures as any replica may quickly be promoted to the leader role to serve write traffic\.
 
-### Database Cache, Cache\-Aside
+### Database [Cache]({{< relref "../extension-metapatterns/proxy.md#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}}), Cache\-Aside
 
 <figure>
 <a href="/diagrams/Variants/3/Cache-Aside.png">
@@ -236,7 +236,7 @@ Keeping the cache consistent with the main database is the hard part\. There are
 
 *Event sourcing* \(of [*Event\-Driven Architecture*]({{< relref "../basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}}) or [*Microservices*]({{< relref "../basic-metapatterns/services.md#microservices" >}})\) is all about changes\. A service persists only *changes* to its data instead of the *current* data\. As a result, the service needs to aggregate its history into a [*Memory Image*](https://martinfowler.com/bliki/MemoryImage.html) \(*Materialized View* \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\]\) by loading a snapshot and replaying any further events to rebuild its current state \(which other architectural styles store in databases\) and start operating\.
 
-### Reporting Database, CQRS View Database, Event\-Sourced View, Source\-Aligned \(Native\) Data Product Quantum \(DPQ\) of Data Mesh
+### Reporting Database, CQRS View Database, Event\-Sourced View, Source\-Aligned \(Native\) Data Product Quantum \(DPQ\) of [Data Mesh]({{< relref "../basic-metapatterns/pipeline.md#data-mesh" >}})
 
 <figure>
 <a href="/diagrams/Variants/3/Reporting%20DB%20and%20CQRS%20View.png">
@@ -252,7 +252,7 @@ It is common wisdom that a database is good for either *OLTP* \(transactions\) o
 
 A [*Reporting Database*](https://martinfowler.com/bliki/ReportingDatabase.html) \(or *Source\-Aligned \(Native\) Data Product Quantum* of [*Data Mesh*]({{< relref "../basic-metapatterns/pipeline.md#data-mesh" >}}) \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\]\) derives its data from a write\-enabled database in the same subsystem \(service\) while a *CQRS View* \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] or *Event\-Sourced View* \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\] is fed a stream of events from another service from which it filters the data relevant to its owner\. This way a *CQRS View* lets its owner service query \(its replica of\) the data that originally belonged to other services\.
 
-### Query Service, Front Controller, Data Warehouse, Data Lake, Aggregate Data Product Quantum \(DPQ\) of Data Mesh
+### Query Service, [Front Controller]({{< relref "../extension-metapatterns/orchestrator.md#inexact-front-controller" >}}), Data Warehouse, Data Lake, Aggregate Data Product Quantum \(DPQ\) of [Data Mesh]({{< relref "../basic-metapatterns/pipeline.md#data-mesh" >}})
 
 <figure>
 <a href="/diagrams/Variants/3/Query%20Service.png">
@@ -266,7 +266,7 @@ A [*Reporting Database*](https://martinfowler.com/bliki/ReportingDatabase.html) 
 
 A *Query Service* \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] \(or *Aggregate Data Product Quantum* of [*Data Mesh*]({{< relref "../basic-metapatterns/pipeline.md#data-mesh" >}}) \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\]\) subscribes to events from several full\-featured services and aggregates them into its database, making it a [*CQRS View*]({{< relref "#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) of several services or even the whole system\. If any other service or a data analyst needs to process data which belongs to multiple services, it retrieves it from the *Query Service* which has already joined the data streams and represents the join in a convenient way\.
 
-A [*Front Controller*]({{< relref "../extension-metapatterns/combined-component.md#front-controller" >}}) \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}}) but [not]({{< relref "../analytics/ambiguous-patterns.md#front-controller" >}}) [PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\] is a *Query Service* embedded in the first \(user\-facing\) service of a [*Pipeline*]({{< relref "../basic-metapatterns/pipeline.md" >}})\. It collects status updates from downstream components of the *Pipeline* to track the state of every request being processed by the *Pipeline*\.
+A [*Front Controller*]({{< relref "../extension-metapatterns/orchestrator.md#inexact-front-controller" >}}) \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}}) [but not]({{< relref "../analytics/ambiguous-patterns.md#front-controller" >}}) [PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\] is a *Query Service* embedded in the first \(user\-facing\) service of a [*Pipeline*]({{< relref "../basic-metapatterns/pipeline.md" >}})\. It collects status updates from downstream components of the *Pipeline* to track the state of every request being processed by the *Pipeline*\.
 
 *Data Warehouse* \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\] and *Data Lake* \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\] are *analytical* databases that connect directly to and import all the data from the *operational* \(main\) databases of all the system’s services\. A *Data Warehouse* translates the imported data into its own unified schema while a *Data Lake* stores the imported data in its original formats\.
 

@@ -83,9 +83,11 @@ These are shown through an optional sequence of diagrams, showing the \(*extensi
 
 ### Variants and examples
 
-A metapattern usually unites many variations of several patterns\. Here we may have a section per dimension of variability and a section for well\-known examples of the pattern\.
+A metapattern usually unites many variations of several patterns\. Here we may have a section per dimension of variability and often a section with well\-known patterns and architectures that match the metapattern\.
 
-On some occasions I had to include several variants that do not properly belong to the metapattern under review, just to avoid confusion with terminology and point the reader to a right chapter\. For example, [*Modular Monolith*]({{< relref "../basic-metapatterns/monolith.md#misapplied-modular-monolith-modulith" >}}) has a module per subdomain, thus it belongs to [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) rather than [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}})\. Still, when the chapter on *Monolith* was not mentioning it, I was blamed for misunderstanding the monolithic architecture\. Such patterns are marked as \(misapplied\) or \(inexact\)\.
+When a pattern is listed under several metapatterns \(as often seen with extension components\), the headers of the multiple pattern descriptions cross\-link to each other\.
+
+In other cases I had to include several variants that do not properly belong to the metapattern under review, just to avoid confusion with terminology and point the reader to a right chapter\. For example, [*Modular Monolith*]({{< relref "../basic-metapatterns/monolith.md#misapplied-modular-monolith-modulith" >}}) has a module per subdomain, thus it belongs to [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) rather than [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}})\. Still, when the chapter on *Monolith* was not mentioning it, I was blamed for misunderstanding the monolithic architecture\. Such patterns are marked as \(misapplied\) or \(inexact\)\.
 
 I tried to show the difference between synonymous names for every variant or example whenever I could identify one\.
 

@@ -43,6 +43,12 @@ Examples – [Separated Presentation](https://martinfowler.com/eaaDev/SeparatedP
 - \(*Pipelined*\) Model\-View\-Controller \(MVC\) \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\] / [Action\-Domain\-Responder](https://github.com/pmjones/adr#action-domain-responder) \(ADR\) / [Resource\-Method\-Representation](https://herbertograca.com/2018/08/31/resource-method-representation/) \(RMR\) / [Model 2](https://lostechies.com/derekgreer/2007/08/25/interactive-application-architecture/) \(MVC2\) / [Game Development Engine](https://slideplayer.com/slide/12426213/)\.
 
 
+Examples – [Cell](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md):
+
+- Basic Cell / Cluster \[DEDS\],
+- Full\-Featured Cell / [Domain](https://www.uber.com/en-UA/blog/microservice-architecture/)\.
+
+
 <ins>Structure:</ins> A monolithic business logic extended with a set of \(adapter, component\) pairs that encapsulate external dependencies\.
 
 <ins>Type:</ins> Implementation\.
@@ -121,7 +127,7 @@ Each [adapter]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorrup
 <picture>
 <source srcset="/diagrams/Relations/Hexagonal%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Relations/Hexagonal%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Relations/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" loading="lazy" width="1023" height="602" style="width:100%"/>
+<img src="/diagrams/Relations/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" loading="lazy" width="1124" height="602" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -131,7 +137,7 @@ Each [adapter]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorrup
 - Is a kind of [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}})\.
 - May be a shallow [*Hierarchy*]({{< relref "../fragmented-metapatterns/hierarchy.md" >}})\.
 - Implements [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) or [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}})\.
-- Extends [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}), [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}) or, rarely, [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) with one or two layers of *services*\.
+- Extends [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}), [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}), or [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) with one or two layers of [*Adapters*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}})\.
 - The [*MVC* family of patterns]({{< relref "#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}}) is also [derived]({{< relref "../analytics/comparison-of-architectural-patterns/pipelines-in-architectural-patterns.md" >}}) from [*Pipeline*]({{< relref "../basic-metapatterns/pipeline.md" >}})\.
 
 
@@ -169,7 +175,7 @@ This resembles [*Sidecar*]({{< relref "../extension-metapatterns/proxy.md#on-the
 
 Sometimes you need to adapt an external service which you don’t control\. In that case the only real option is to place its *adapter* together with your *core* logic\. In theory, the adapter can be deployed as a separate component, maybe in a [*Sidecar*]({{< relref "../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\], but that may slow down communication\.
 
-This approach resembles [*Ambassador*]({{< relref "../extension-metapatterns/proxy.md#on-the-client-side-ambassador" >}}) \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] and [*Anticorruption Layer*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\.
+This approach resembles [*Ambassador*]({{< relref "../extension-metapatterns/proxy.md#on-the-client-side-ambassador" >}}) \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] and [*Anticorruption Layer*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] and is usually found in [*Cells*]({{< relref "#examples--cell" >}})\.
 
 ## Examples – Hexagonal Architecture
 
@@ -303,6 +309,114 @@ Another difference is that while *MVC* provides for changing target platforms by
 </picture>
 </a>
 </figure>
+
+## Examples – Cell
+
+Application of the isolation principle behind *Hexagonal Architecture* to a distributed subsystem results in a [*Cell*](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md) \([according to WSO2, not Amazon]({{< relref "../analytics/ambiguous-patterns.md#cells" >}})\) – an encapsulated cluster of [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) which implements a subdomain and is usually deployed as a single unit\.
+
+In the simplest implementation a *Cell*’s contents are hidden from the *Cell*’s clients by a [*Cell Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) which acts as an [*Open Host Service*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\], allowing for anything inside the *Cell* to be changed at will with no effect on the outside world\.
+
+Better developed *Cells* employ [*Adapters*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) and [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) for outgoing requests to build an [*Anticorruption Layer*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] that protects the *Cell*’s contents from changes in its environment\.
+
+This dichotomy is similar to that between [*Separated Presentation*]({{< relref "#examples--separated-presentation" >}}) \(indirection between the system and its users or clients\) and [*Ports and Adapters*]({{< relref "#hexagonal-architecture-ports-and-adapters" >}}) \(full isolation of the business logic from its environment\)\.
+
+<aside>
+
+> In practice there are three kinds of outgoing traffic: responses to incoming client requests, pub/sub notifications, and requests to external services\. In a *Cell*, *responses* are sure to pass through or be generated by the *Cell Gateway*\. Indeed, a response usually reuses the request’s transport, therefore if a request arrives at the *Gateway*, the corresponding response should also start there\. *Notifications* are harder to pinpoint: on one hand, they are a part of the *Cell*’s API which the *Gateway* takes care of\. However, that means that the *Cell*’s internals must be aware of the *Gateway*’s existence to use it for notifications, thus creating a dependency that violates the [normal order for a *layered system*]({{< relref "../basic-metapatterns/layers.md#dependencies" >}})\. Finally, *outgoing requests* bypass the *Cell Gateway* whose role is limited to the *Cell’*s API\.
+
+</aside>
+
+*Cells* facilitate recursive decomposition by subdomain\. They are the building blocks for the following patterns:
+
+- [*Cell\-Based Architecture*]({{< relref "../fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services" >}}) which is [*hierarchical*]({{< relref "../fragmented-metapatterns/hierarchy.md" >}}) [*Services*]({{< relref "../basic-metapatterns/services.md" >}})\.
+- [*Domain\-Oriented Microservice Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#domain-oriented-microservice-architecture-doma" >}}) which is a [*SOA*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}) boosted by advanced *Cell* features\.
+
+
+### Basic Cell, Cluster
+
+<figure>
+<a href="/diagrams/Variants/4/Cell%20-%20Basic.png">
+<picture>
+<source srcset="/diagrams/Variants/4/Cell%20-%20Basic.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/4/Cell%20-%20Basic.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/4/Cell%20-%20Basic.png" alt="Cell - Basic" loading="lazy" width="923" height="284" style="width:100%"/>
+</picture>
+</a>
+</figure>
+
+A [*Cell*](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md) \(WSO2 definition\) or *Cluster* \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\] may naturally emerge when a [*subdomain service*]({{< relref "../basic-metapatterns/services.md#whole-subdomain-sub-domain-services" >}}) becomes too large for comfortable development, which usually means that at least its [*domain* layer]({{< relref "../basic-metapatterns/layers.md#domain-business-rules-or-model" >}}) \(already limited to a single subdomain\) is to be subdivided into sub\-subdomain components\. If other layers remain intact, this leads to a [*Sandwich*]({{< relref "../extension-metapatterns/sandwich.md" >}}), otherwise the result is a subsystem of [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) or a [*Pipeline*]({{< relref "../basic-metapatterns/pipeline.md" >}})\. 
+
+<figure>
+<a href="/diagrams/Variants/4/Cell%20-%20Basic%20-%20Subtypes.png">
+<picture>
+<source srcset="/diagrams/Variants/4/Cell%20-%20Basic%20-%20Subtypes.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/4/Cell%20-%20Basic%20-%20Subtypes.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/4/Cell%20-%20Basic%20-%20Subtypes.png" alt="Cell - Basic - Subtypes" loading="lazy" width="883" height="384" style="width:88%"/>
+</picture>
+</a>
+</figure>
+
+As it is undesirable to let the new components appear at the top system level because that would increase the system’s integration complexity:
+
+- The newly created subservices are hidden behind a [*Cell Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \(which coincides with the topmost layer in case of a [*Sandwich*]({{< relref "../extension-metapatterns/sandwich.md" >}})\) so that everything outside of the *Cell* remains ignorant of what is within it, and the *Cell* contents will thus retain the freedom to change\.
+- Everything within a *Cell* is deployed and scaled together to avoid the overhead of versioning and keep the number of system components small \(the entire *Cell* is operated as a single service\)\.
+- [As a rule](https://learn.microsoft.com/en-us/azure/architecture/patterns/choreography) \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\], the communication inside a *Cell* remains synchronous, allowing for complex [*orchestrated*]({{< relref "../foundations-of-software-architecture/arranging-communication/orchestration.md" >}}) use cases that involve many tightly coupled *Cell* components\. Contrariwise, there is usually asynchronous messaging between loosely coupled *Cells*, which make a [*choreographed*]({{< relref "../foundations-of-software-architecture/arranging-communication/choreography.md" >}}) system\.
+
+
+As a matter of fact, forming a *Cell* tackles the complexity of an overgrown service without leaking any implementation details to its clients or committing to irrevocable architectural decisions\. We will be able to make gradual changes to our *Cell*’s code and structure as our clients see only the *Published Language* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] of our *Cell*’s API via its [*Cell Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}), which thus becomes an [*Open Host Service*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\.
+
+Another way a *Cell* can arise is when architects have overcommitted themselves to [*Microservices*]({{< relref "../basic-metapatterns/services.md#part-of-a-subdomain-microservices" >}}), gradually [introducing hundreds of them](https://www.uber.com/en-UA/blog/microservice-architecture/) and turning their project into a [*Microservice Hell*](https://www.reddit.com/r/programming/comments/10xvltx/microservice_hell/)\. Now they need to group their services to:
+
+- Have a clear high\-level picture of what is going on in the system\.
+- Cut accidental dependencies between their services and the teams behind them\.
+- Improve latency by co\-locating the services that interact intensely\.
+
+
+<figure>
+<a href="/diagrams/Variants/4/Cell%20-%20Basic%20-%20Evolutions.png">
+<picture>
+<source srcset="/diagrams/Variants/4/Cell%20-%20Basic%20-%20Evolutions.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/4/Cell%20-%20Basic%20-%20Evolutions.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/4/Cell%20-%20Basic%20-%20Evolutions.png" alt="Cell - Basic - Evolutions" loading="lazy" width="1283" height="343" style="width:100%"/>
+</picture>
+</a>
+</figure>
+
+Basic *Cells* have a downside: even though we have protected our clients from changes in our implementation, our code is still vulnerable to changes in any external services which it uses\. To fix that, we will need to add a layer of indirection for outgoing communication as well:
+
+### Full\-Featured Cell, Domain
+
+<figure>
+<a href="/diagrams/Variants/4/Cell%20-%20Full-Featured.png">
+<picture>
+<source srcset="/diagrams/Variants/4/Cell%20-%20Full-Featured.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/4/Cell%20-%20Full-Featured.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/4/Cell%20-%20Full-Featured.png" alt="Cell - Full-Featured" loading="lazy" width="1103" height="406" style="width:100%"/>
+</picture>
+</a>
+</figure>
+
+Regardless of how a [*Cell*](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md) emerges, the isolation of its contents can be improved through the addition of [*Adapters*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) for any external services used by the *Cell*\. Please note that, unlike in [*Ports and Adapters*]({{< relref "#hexagonal-architecture-ports-and-adapters" >}}), there is no *Adapter* for a Cell’s database\(s\) as it is inside the *Cell*’s perimeter\.
+
+Another improvement, popularized by Uber’s [*Domains*](https://www.uber.com/en-UA/blog/microservice-architecture/), is the use of [*Ambassador Plugins*]({{< relref "../implementation-metapatterns/plugins.md#ambassador-plugin-logic-extension" >}}) which run other services’ business logic inside your *Cell*\. That both avoids slow intercell calls and boosts the system’s fault tolerance as each *Cell* can now operate independently\.
+
+<figure>
+<a href="/diagrams/Variants/4/Cell%20-%20Full-Featured%20-%20Plugins.png">
+<picture>
+<source srcset="/diagrams/Variants/4/Cell%20-%20Full-Featured%20-%20Plugins.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/4/Cell%20-%20Full-Featured%20-%20Plugins.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/4/Cell%20-%20Full-Featured%20-%20Plugins.png" alt="Cell - Full-Featured - Plugins" loading="lazy" width="1063" height="284" style="width:100%"/>
+</picture>
+</a>
+</figure>
+
+<aside>
+
+> [In Uber](https://www.uber.com/en-UA/blog/microservice-architecture/) the service responsible for a driver’s status accepts *Plugins* from other services, such as safety checks or compliance, which can block the driver from appearing in the system and responding to ride requests\.
+
+</aside>
+
+The *Adapters* and *Plugins* make the Cell’s [*Anticorruption Layer*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \[DDD\], completing the *Cell*’s boundary that allows for the *Cell*’s logic to be implemented and tested in isolation from the external environment\.
 
 ## Summary
 

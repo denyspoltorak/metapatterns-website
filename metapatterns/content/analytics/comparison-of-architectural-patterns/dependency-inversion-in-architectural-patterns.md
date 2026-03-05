@@ -40,7 +40,7 @@ It is the nature of the polymorphic components that distinguishes the patterns:
 <picture>
 <source srcset="/diagrams/Conclusion/DI-2.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/DI-2.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/DI-2.png" alt="DI-2" loading="lazy" width="1343" height="703" style="width:100%"/>
+<img src="/diagrams/Conclusion/DI-2.png" alt="DI-2" loading="lazy" width="1323" height="683" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -49,7 +49,7 @@ A few more metapatterns tend to use this approach to earn its benefits, even tho
 
 - [*Microkernel*]({{< relref "../../implementation-metapatterns/microkernel.md" >}}), yet another metapattern derived from [*Plugins*]({{< relref "../../implementation-metapatterns/plugins.md" >}}), distributes resources of *providers* among *consumers*\. Polymorphism is crucial for some of its variants, including [*Operating System*]({{< relref "../../implementation-metapatterns/microkernel.md#operating-system" >}}), but may rarely benefit others, such as [*Software Framework*]({{< relref "../../implementation-metapatterns/microkernel.md#software-framework" >}})\.
 - [*Top\-Down Hierarchy*]({{< relref "../../fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}}) distributes responsibility over a tree of components\. If the nodes of the tree are polymorphic, they are easier to operate, and there is dependency inversion\. However, in practice, a parent node may often be strongly coupled to the types of its children and access them directly\.
-- In another kind of [*Hierarchy*]({{< relref "../../fragmented-metapatterns/hierarchy.md" >}}), namely [*Cell\-Based Architecture*]({{< relref "../../fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services" >}}) \(aka *Services of Services*\), each [*Cell*]({{< relref "../../basic-metapatterns/services.md#cell-wso2-definition-service-of-services-domain-uber-definition-cluster" >}}) [may employ](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md) a [*Cell Gateway*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) and outbound [*Adapters*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) to isolate its business logic from the environment – just like [*Hexagonal Architecture*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md" >}}) does for its monolithic core\.
+- In another kind of [*Hierarchy*]({{< relref "../../fragmented-metapatterns/hierarchy.md" >}}), namely [*Cell\-Based Architecture*]({{< relref "../../fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services" >}}) \(aka *Services of Services*\), each [*Cell*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md#examples--cell" >}}) [may employ](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md) a [*Cell Gateway*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) and outbound [*Adapters*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) to isolate its business logic from the environment – just like [*Hexagonal Architecture*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md" >}}) does for its monolithic core\.
 
 
 ## Patterns that may use it
@@ -59,7 +59,7 @@ A few more metapatterns tend to use this approach to earn its benefits, even tho
 <picture>
 <source srcset="/diagrams/Conclusion/DI-3.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/DI-3.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/DI-3.png" alt="DI-3" loading="lazy" width="1363" height="366" style="width:100%"/>
+<img src="/diagrams/Conclusion/DI-3.png" alt="DI-3" loading="lazy" width="1323" height="372" style="width:100%"/>
 </picture>
 </a>
 </figure>

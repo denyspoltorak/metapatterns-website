@@ -9,7 +9,7 @@ images = ["/diagrams/Web/og/Paradigms.png"]
 
 # Programming and architectural paradigms {anchor=false}
 
-Sharing a database is the greatest sin when you architect [*Microservices*]({{< relref "../../basic-metapatterns/services.md#microservices" >}}) yet [*Space\-Based Architecture*]({{< relref "../../implementation-metapatterns/mesh.md#space-based-architecture" >}}) is built around shared data\. How do these approaches coexist? Do *Microservices* make any sense if blatantly violating their rules still results in successful projects?
+Sharing a database is the greatest sin when you architect [*Microservices*]({{< relref "../../basic-metapatterns/services.md#microservices" >}}) yet [*Space\-Based Architecture*]({{< relref "../../extension-metapatterns/sandwich.md#space-based-architecture" >}}) is built around shared data\. How do these approaches coexist? Do *Microservices* make any sense if blatantly violating their rules still results in successful projects?
 
 Another programming paradox holds a clue\. There was C\. Then there came C\+\+ to kill C\. Then we’ve got Rust to kill C\+\+\. Now we have C, C\+\+, and Rust, all of them alive and kickin’\.
 
@@ -102,7 +102,7 @@ The final approach is integration through data\. There are cases where the domai
 </a>
 </figure>
 
-In the data\-centric paradigm *logic* and *data* are structured independently\. In procedural programming, like in object\-oriented paradigm, *control* is implemented inside the logic, making the logic layer hierarchical \(*orchestrated*\)\. Another, much less common, option relies on [*Observer*](https://refactoring.guru/design-patterns/observer) \[[GoF]({{< relref "../../appendices/books-referenced.md#gof" >}})\] to provide data change notifications, resulting in decentralized \(*choreographed*\) application logic:
+In the data\-centric paradigm *logic* and *data* are structured independently\. In procedural programming, like in object\-oriented paradigm, *control* is implemented inside the logic, making the logic layer hierarchical \([*orchestrated*]({{< relref "../../foundations-of-software-architecture/arranging-communication/orchestration.md" >}})\)\. Another, much less common, option relies on [*Observer*](https://refactoring.guru/design-patterns/observer) \[[GoF]({{< relref "../../appendices/books-referenced.md#gof" >}})\] to provide data change notifications, resulting in decentralized \([*choreographed*]({{< relref "../../foundations-of-software-architecture/arranging-communication/choreography.md" >}})\) application logic:
 
 <figure>
 <a href="/diagrams/Communication/Paradigms%20-%20Data-centric%20-%20Notifications.png">
@@ -114,7 +114,7 @@ In the data\-centric paradigm *logic* and *data* are structured independently\. 
 </a>
 </figure>
 
-The data\-centric approach works well for moderately\-sized projects with a stable data model \(like reservation of seats in trains or game of chess\)\. The best\-known distributed data\-centric architectures include [*Services with a Shared Database*]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) and [*Space\-Based Architecture*]({{< relref "../../extension-metapatterns/shared-repository.md#data-grid-of-space-based-architecture-sba-replicated-cache-distributed-cache" >}})\.
+The data\-centric approach works well for moderately\-sized projects with a stable data model \(like reservation of seats in trains or game of chess\)\. The best\-known distributed data\-centric architectures include [*Services with a Shared Database*]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) and [*Space\-Based Architecture*]({{< relref "../../extension-metapatterns/sandwich.md#space-based-architecture" >}})\.
 
 <figure>
 <a href="/diagrams/Communication/Paradigms%20-%20Data-centric%20-%20Variants.png">
@@ -131,8 +131,8 @@ The data\-centric approach works well for moderately\-sized projects with a stab
 The three programming paradigms tend to collaborate:
 
 - An ordinary class is object\-oriented on the outside but procedural inside: each of its methods can access any of its private data members\. Moreover, code inside methods may chain function calls, locally applying the functional paradigm\.
-- [*Cell\-Based Architecture*]({{< relref "../../fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services" >}}) tends to use *choreography* \(pub/sub\) between *Cells* \[[DEDS]({{< relref "../../appendices/books-referenced.md#deds" >}})\] and *orchestration* or communication via a *shared database* inside them\.
-- A system of [*Services*]({{< relref "../../basic-metapatterns/services.md" >}}) \(or [*Space\-Based Architecture*]({{< relref "../../extension-metapatterns/combined-component.md#middleware-of-space-based-architecture" >}})\) may be integrated through both [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) and [*Shared Database*]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) \(or *processing grid* and [*data grid*]({{< relref "../../extension-metapatterns/shared-repository.md#data-grid-of-space-based-architecture-sba-replicated-cache-distributed-cache" >}}), respectively\)\.
+- [*Cell\-Based Architecture*]({{< relref "../../fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services" >}}) tends to use [*choreography*]({{< relref "../../foundations-of-software-architecture/arranging-communication/choreography.md" >}}) \(pub/sub\) between [*Cells*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md#examples--cell" >}}) and [*orchestration*]({{< relref "../../foundations-of-software-architecture/arranging-communication/orchestration.md" >}}) or communication via a [*shared database*]({{< relref "../../foundations-of-software-architecture/arranging-communication/shared-data.md" >}}) inside them \[[DEDS]({{< relref "../../appendices/books-referenced.md#deds" >}})\]\.
+- A system of [*Services*]({{< relref "../../basic-metapatterns/services.md" >}}) \(or [*Space\-Based Architecture*]({{< relref "../../extension-metapatterns/sandwich.md#space-based-architecture" >}})\) may be integrated through both [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) and [*Shared Database*]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) \(or *processing grid* and [*data grid*]({{< relref "../../extension-metapatterns/shared-repository.md#data-grid-of-space-based-architecture-sba-replicated-cache-distributed-cache" >}}), respectively\), see [*Sandwich*]({{< relref "../../extension-metapatterns/sandwich.md" >}})\.
 
 
 ## Reality is more complex

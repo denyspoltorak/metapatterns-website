@@ -46,7 +46,7 @@ When you have the thing working, you may start reflecting on the rules and the c
 <picture>
 <source srcset="/diagrams/Conclusion/Lifecycle-3.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Lifecycle-3.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Lifecycle-3.png" alt="Lifecycle-3" loading="lazy" width="1363" height="404" style="width:100%"/>
+<img src="/diagrams/Conclusion/Lifecycle-3.png" alt="Lifecycle-3" loading="lazy" width="1363" height="394" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -60,7 +60,7 @@ As you acquire domain experience, you start discerning subdomains \(or *bounded 
 <picture>
 <source srcset="/diagrams/Conclusion/Lifecycle-4.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Lifecycle-4.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Lifecycle-4.png" alt="Lifecycle-4" loading="lazy" width="1123" height="404" style="width:100%"/>
+<img src="/diagrams/Conclusion/Lifecycle-4.png" alt="Lifecycle-4" loading="lazy" width="1123" height="394" style="width:100%"/>
 </picture>
 </a>
 </figure>

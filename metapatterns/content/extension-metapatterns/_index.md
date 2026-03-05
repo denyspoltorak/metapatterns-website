@@ -24,7 +24,7 @@ These patterns extend [*Services*]({{< relref "../basic-metapatterns/services.md
 </a>
 </figure>
 
-[*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) is a layer that implements communication between instances of the system’s components and it may also manage the instances\. This way each instance is relieved of the need to track the other instances which it accesses\.
+A [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) is a layer that implements communication between instances of the system’s components and it may also manage the instances\. This way each instance is relieved of the need to track the other instances which it accesses\.
 
 *<ins>Includes</ins>*: \(Message\) Broker and Deployment Manager\.
 
@@ -58,7 +58,7 @@ A [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.
 
 A [*Proxy*]({{< relref "../extension-metapatterns/proxy.md" >}}) mediates between a system and its clients, transparently taking care of some generic functionality\.
 
-*<ins>Includes</ins>*: Full Proxy and Half\-Proxy; Sidecar and Ambassador; Firewall, Response Cache, Load Balancer, Reverse Proxy and various Adapters, e\.g\. Anticorruption Layer, Open Host Service, XXX Abstraction Layers, Repository and even User Interface\.
+*<ins>Includes</ins>*: Full Proxy and Half\-Proxy; Sidecar and Ambassador; Firewall, Response Cache, Load Balancer, Reverse Proxy and various Adapters, e\.g\. Anticorruption Layer, Open Host Service, many Abstraction Layers, Repository and even User Interface\.
 
 ### [Orchestrator]({{< relref "../extension-metapatterns/orchestrator.md" >}})
 
@@ -76,8 +76,18 @@ An [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) 
 
 *<ins>Includes</ins>*: Workflow Owner, Application Layer, Facade, Mediator; API Composer, Scatter\-Gather, MapReduce, Process Manager, Saga Execution Component, and Integration \(Micro\-\)Service\.
 
-### [Combined Component]({{< relref "../extension-metapatterns/combined-component.md" >}})
+### [Sandwich]({{< relref "../extension-metapatterns/sandwich.md" >}})
 
-Several patterns [combine the functionality]({{< relref "../extension-metapatterns/combined-component.md" >}}) of two or more extension layers\.
+<figure>
+<a href="/diagrams/Contents/Sandwich.png">
+<picture>
+<source srcset="/diagrams/Contents/Sandwich.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Contents/Sandwich.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Contents/Sandwich.png" alt="Sandwich" loading="lazy" width="743" height="243" style="width:93%"/>
+</picture>
+</a>
+</figure>
 
-*<ins>Includes</ins>*: Message Bus, API Gateway, Event Mediator, Enterprise Service Bus, Service Mesh, Middleware of Space\-Based Architecture, and Shared Event Store\.
+[*Sandwich*]({{< relref "../extension-metapatterns/sandwich.md" >}}) subdivides the largest and loosely coupled [*domain* layer]({{< relref "../basic-metapatterns/layers.md#domain-business-rules-or-model" >}}) into modules or services while the other layers remain monolithic\.
+
+*<ins>Includes</ins>*: Service\-Based Architecture, Space\-Based Architecture, Blackboard Architecture, Command Query Responsibility Segregation \(CQRS\)\.
