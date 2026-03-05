@@ -85,7 +85,7 @@ Finally, let’s close the book by iterating over the metapatterns and looking i
 </a>
 </figure>
 
-Basic architectures:
+[Basic architectures]({{< relref "../../basic-metapatterns/_index.md" >}}):
 
 - [*Monolith*]({{< relref "../../basic-metapatterns/monolith.md" >}}) keeps everything together for quick and dirty projects:
   - Total *cohesiveness* results in low latency, cost\-efficient performance, and easy debugging\.
@@ -106,12 +106,12 @@ Basic architectures:
 <picture>
 <source srcset="/diagrams/Heart/Extension.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Heart/Extension.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Heart/Extension.png" alt="Extension" loading="lazy" width="1164" height="763" style="width:100%"/>
+<img src="/diagrams/Heart/Extension.png" alt="Extension" loading="lazy" width="1246" height="763" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
-Grouping related functionality:
+[Grouping related functionality]({{< relref "../../extension-metapatterns/_index.md" >}}):
 
 - [*Middleware*]({{< relref "../../extension-metapatterns/middleware.md" >}}) separates the implementation of communication and/or instance management from the business logic:
   - The *cohesive* communication layer is reliable and uniform, thus it is easy to learn\.
@@ -125,8 +125,9 @@ Grouping related functionality:
 - [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) collects a multitude of complex use cases into a dedicated layer:
   - *Cohesive* use cases are easy to comprehend and debug\.
   - *Decoupling* [use cases]({{< relref "../../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) from [domain logic]({{< relref "../../basic-metapatterns/layers.md#domain-business-rules-or-model" >}}) allows for variation in technologies but increases latency and complicates in\-depth debugging\.
-- [*Combined Component*]({{< relref "../../extension-metapatterns/combined-component.md" >}}) blends two or three of the above layers:
-  - *Cohesion* improves performance but reduces flexibility\.
+- [*Sandwich*]({{< relref "../../extension-metapatterns/sandwich.md" >}}) distantiates both control and data from domain rules, which become segmented:
+  - *Cohesive* protocol, use cases, and data integrate the system\.
+  - *Decoupling* subdomain components from each other and from the system\-wide layers keeps every part of the system reasonably small and independent\.
 
 
 <figure>
@@ -134,12 +135,12 @@ Grouping related functionality:
 <picture>
 <source srcset="/diagrams/Heart/Fragmented.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Heart/Fragmented.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Heart/Fragmented.png" alt="Fragmented" loading="lazy" width="1467" height="922" style="width:100%"/>
+<img src="/diagrams/Heart/Fragmented.png" alt="Fragmented" loading="lazy" width="1466" height="922" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
-Decoupled systems:
+[Decoupled topologies]({{< relref "../../fragmented-metapatterns/_index.md" >}}):
 
 - [*Layered Services*]({{< relref "../../fragmented-metapatterns/layered-services.md" >}}) first decouple the subdomains, and then the layers within each subdomain:
   - *Decoupled* subdomains allow for multi\-team development and large codebases but complicate global use cases\. *Decoupled* layers enable variation in technologies within a subdomain and [limit interdependencies]({{< relref "../../foundations-of-software-architecture/arranging-communication/orchestration.md#mutual-orchestration" >}}) between subdomains to a single layer\.
@@ -164,7 +165,7 @@ Decoupled systems:
 </a>
 </figure>
 
-Component implementation:
+[Component implementation]({{< relref "../../implementation-metapatterns/_index.md" >}}):
 
 - [*Plugins*]({{< relref "../../implementation-metapatterns/plugins.md" >}}) separate customizable aspects of a system’s behavior:
   - *Decoupling* several aspects of a system allows for it to be fine\-tuned but requires careful design and may lower performance\.

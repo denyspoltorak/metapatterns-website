@@ -178,7 +178,7 @@ Those points translate to difference in structure: while *Pipes and Filters* is 
 
 Pipelined *Event\-Driven Architecture* \(often boosted with [event sourcing](https://learn.microsoft.com/en-us/azure/architecture/patterns/event-sourcing)\) works well for highly loaded systems of moderate size, but larger projects are likely to grow prohibitively complex graphs of event flows and service dependencies\. The architecture’s scalability is limited by the services’ databases and the pub/sub framework employed\.
 
-*Event\-Driven Architecture* may involve a [*Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) as a user\-facing event source and sink and a [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) for an application\-wise pub/sub engine\. [*Front Controller*]({{< relref "../extension-metapatterns/combined-component.md#front-controller" >}}) \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\] or [*Stamp Coupling*]({{< relref "../extension-metapatterns/shared-repository.md#inexact-stamp-coupling" >}}) \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\] are used if it is important to know the state of requests that are being processed by the pipeline\.
+*Event\-Driven Architecture* may involve a [*Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) as a user\-facing event source and sink and a [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) for an application\-wise pub/sub engine\. [*Front Controller*]({{< relref "../extension-metapatterns/orchestrator.md#inexact-front-controller" >}}) \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\] or [*Stamp Coupling*]({{< relref "../extension-metapatterns/shared-repository.md#inexact-stamp-coupling" >}}) \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\] are used if it is important to know the state of requests that are being processed by the pipeline\.
 
 Examples: high performance web services\.
 
@@ -223,13 +223,13 @@ A [*nanoservice*]({{< relref "../basic-metapatterns/services.md#single-function-
 
 *Nanoservices* are good for rapid development of small elastic \(dynamically scalable\) applications\. The supported load is limited by the *Shared Database*, and the project evolvability is limited by the complexity of scenarios\. As any use case is going to involve many asynchronous steps, latency is not a strong side of *Nanoservices*\.
 
-## Evolutions
+## [Evolutions]({{< relref "../appendices/evolutions-of-architectures/evolutions-of-a-pipeline.md" >}})
 
 *Pipeline* [inherits its set of evolutions from *Services*]({{< relref "../basic-metapatterns/services.md#evolutions" >}})\. Filters can be added, split in two, merged, or replaced\. Many systems employ a [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) \(a pub/sub or pipeline framework\), a [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) \(which may be a database or a file system\), or [*Proxies*]({{< relref "../extension-metapatterns/proxy.md" >}})\.
 
 There are a couple of [pipeline\-specific evolutions]({{< relref "../appendices/evolutions-of-architectures/evolutions-of-a-pipeline.md" >}}), with more details provided in [Appendix E]({{< relref "../appendices/evolutions-of-architectures/_index.md" >}}):
 
-- The first service of the *Pipeline* can be promoted to a [*Front Controller*]({{< relref "../extension-metapatterns/combined-component.md#front-controller" >}}) \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\] which tracks the status updates for every request it handles\.
+- The first service of the *Pipeline* can be promoted to a [*Front Controller*]({{< relref "../extension-metapatterns/orchestrator.md#inexact-front-controller" >}}) \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\] which tracks the status updates for every request it handles\.
 
 
 <figure>

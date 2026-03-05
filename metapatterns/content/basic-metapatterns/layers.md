@@ -153,7 +153,7 @@ There is a number of optimizations to skip interlayer calls:
 </a>
 </figure>
 
-*Strategy injection*: an upper layer installs an event handler \(hook\) into the lower layer\. The goal is for the hook to do basic pre\-processing, filtering, aggregation, and decision making to process the majority of events autonomously while escalating to the upper layer in exceptional or important cases\. That may help in such time\-critical domains as high\-frequency trading\.
+*Strategy injection*: an upper layer installs an event handler \(hook or [*Ambassador Plugin*]({{< relref "../implementation-metapatterns/plugins.md#ambassador-plugin-logic-extension" >}})\) into the lower layer\. The goal is for the hook to do basic pre\-processing, filtering, aggregation, and decision making to process the majority of events autonomously while escalating to the upper layer in exceptional or important cases\. That may help in such time\-critical domains as high\-frequency trading\.
 
 Layers can be scaled independently, as [exemplified]({{< relref "../foundations-of-software-architecture/forces--asynchronicity--and-distribution.md#distribution" >}}) by common web applications that comprise a highly scalable and resource\-consuming frontend, somewhat scalable backend and unscalable data layer\. Another example is an OS \(lower layer\) that runs multiple user applications \(upper layer\)\.
 
@@ -232,7 +232,7 @@ If you ever need to *scale* \(run multiple instances of\) a layer, you may notic
 
 - Can be applied to the internals of any module, for example, layering [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) results in [*Layered Services*]({{< relref "../fragmented-metapatterns/layered-services.md" >}})\.
 - Can be altered by [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) or extended with a [*Proxy*]({{< relref "../extension-metapatterns/proxy.md" >}}), [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}), and/or [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) to form an extra layer\.
-- Can be implemented by [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) yielding layers of services present in [*Service\-Oriented Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}), [*Backends for Frontends*]({{< relref "../fragmented-metapatterns/backends-for-frontends--bff-.md" >}}), or [*Polyglot Persistence*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md" >}})\.
+- Can be implemented by [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) yielding layers of services present in [*Sandwich*]({{< relref "../extension-metapatterns/sandwich.md" >}}), [*Service\-Oriented Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}), [*Backends for Frontends*]({{< relref "../fragmented-metapatterns/backends-for-frontends--bff-.md" >}}), or [*Polyglot Persistence*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md" >}})\.
 - May be closely related to [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) or the derived [*Separated Presentation*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#examples--separated-presentation" >}})\.
 - A layer often serves as a [*Proxy*]({{< relref "../extension-metapatterns/proxy.md" >}}), [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}), and/or [*\(Shared\) Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}})\.
 
@@ -357,7 +357,7 @@ An interface layer can contain multiple components \(services, modules, or high\
 
 ### Application \(use cases or integration\)
 
-The *application* is *what* your system does\. If it faces clients, the *application* runs client commands, called *use cases*, by executing chains of calls to its [*model*]({{< relref "#domain-business-rules-or-model" >}}) which knows *how* to do simple actions – the building blocks from which a use case consists\.
+The *application* determines *what* a system does\. If it faces clients, the *application* runs client commands, called *use cases*, by executing chains of calls to its [*model*]({{< relref "#domain-business-rules-or-model" >}}) which knows *how* to do simple actions – the building blocks from which a use case consists\.
 
 For example, to transfer money between accounts, the *application* asks the *model* to:
 
@@ -370,7 +370,7 @@ For example, to transfer money between accounts, the *application* asks the *mod
 
 It is also responsible for dealing with any error that may occur in the process\. For example, if the target account does not exist or is blocked, the *application* will need to both refund the client and return a meaningful error message in the client’s preferred language\.
 
-Another form of application, called [*control systems*]({{< relref "../foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}}), is written to supervise hardware or software entities\. In that case there are no client requests or use cases – instead, the system reacts to signals from the components controlled\. It is the application layer which is responsible for the system’s behavior: if a smoke sensor detects fire, the application tells an alarm to sound\. This role is called *integration* – the system acts as a living organism, all its parts orderly moving in response to a stimulus perceived by a sense\.
+Other software, called [*control systems*]({{< relref "../foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}}), is written to supervise hardware or software entities\. In that case there are no client requests or use cases – instead, the system reacts to signals from the components controlled\. It is the application layer which is responsible for the system’s behavior: if a smoke sensor detects fire, the application tells an alarm to sound\. This role is called *integration* – the system acts as a living organism, all its parts orderly moving in response to a stimulus perceived by a sense\.
 
 When an application resides in a dedicated layer, it is called an [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}})\. Like the [*interface*]({{< relref "#interface-api-or-ui" >}}) layer, the *application* layer may also contain multiple components: the bank will likely have distinct applications for its clients and for its managers\. The corresponding pattern is also called [*Backends for Frontends*]({{< relref "../fragmented-metapatterns/backends-for-frontends--bff-.md" >}}) \(there is little distinction between [*Proxies*]({{< relref "../extension-metapatterns/proxy.md" >}}) and *Orchestrators* in that topology\)\.
 
@@ -404,7 +404,7 @@ In most cases the *domain* layer is the largest one and it is the one which make
 
 As the largest layer, the *domain* is the first among them to be subdivided:
 
-- The most common way is to partition it into *subdomains* – loosely coupled subsets of your system’s functionality – yielding [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) \(when other layers are fragmented along the same lines or replicated among the subdomain components\) or a [derived architecture with several layers remaining intact]({{< relref "../extension-metapatterns/_index.md" >}})\.
+- The most common way is to partition it into *subdomains* – loosely coupled subsets of your system’s functionality – yielding [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) \(when other layers are fragmented along the same lines or replicated among the subdomain components\) or a [*Sandwich*]({{< relref "../extension-metapatterns/sandwich.md" >}})\.
 - Rare cases allow for [*hierarchical* decomposition]({{< relref "../fragmented-metapatterns/hierarchy.md" >}}) where most components blend [*application*]({{< relref "#application-use-cases-or-integration" >}}) and *domain* roles\.
 - Last but not least, we can use separate *models* for making changes \(executing *commands*\) and for analytics \(running *queries*\), giving rise to [*Command Query Responsibility Segregation* \(*CQRS*\)]({{< relref "../fragmented-metapatterns/layered-services.md#command-query-responsibility-segregation-cqrs" >}})\. This makes sense because a command usually involves many fields of a single record \(database row\) while a query runs over select rows of all the records – they vary in how they access and treat the data\. It is common to have a record wrapped into an OOP class in the command model, while the query model, if it is not omitted completely, provides for direct access to the database\.
 
@@ -663,7 +663,7 @@ It is also common to:
 
 The main drawback \(and benefit as well\) of *Layers* is that much or all of the business logic is kept together in one or two components\. That allows for easy debugging and fast development in the initial stages of the project but slows down and complicates work as the project grows in size \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\]\. The only way for a growing project to survive and continue evolving at a reasonable speed is to divide its business logic into several smaller, [thus less complex]({{< relref "../foundations-of-software-architecture/modules-and-complexity.md" >}}), components that match subdomains \(*bounded contexts* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\)\. There are several options for such a change, with their applicability depending on the domain:
 
-- The middle layer with the main business logic can be divided into [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) leaving the upper [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) and lower [*database*]({{< relref "../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) layers intact for future evolutions\.
+- In a [*Sandwich*]({{< relref "../extension-metapatterns/sandwich.md" >}}) the middle layer with the main business logic is divided into [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) leaving the upper [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) and lower [*database*]({{< relref "../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) layers intact for future evolutions\.
 
 
 <figure>

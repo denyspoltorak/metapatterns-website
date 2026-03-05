@@ -156,7 +156,6 @@ Systems of [*Services*]({{< relref "../../basic-metapatterns/services.md" >}}) o
 - [*Shared Repository*]({{< relref "../../extension-metapatterns/shared-repository.md" >}}) lets services operate on and communicate through [shared data]({{< relref "../../foundations-of-software-architecture/arranging-communication/shared-data.md" >}})\.
 - [*Proxies*]({{< relref "../../extension-metapatterns/proxy.md" >}}) are ready\-to\-use components that add generic functionality to the system\.
 - [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) encapsulates use cases that involve multiple services, so that the services don’t need to know about each other\.
-- Finally, there are [*Combined Components*]({{< relref "../../extension-metapatterns/combined-component.md" >}}) that implement two or more of the above patterns in a single framework\. 
 
 
 <figure>

@@ -52,7 +52,7 @@ Applicable to:
 
 <ins>References:</ins> The [original article](https://samnewman.io/patterns/architectural/bff/), a [smaller one](https://learn.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends) from Microsoft and an [excerpt](https://microservices.io/patterns/apigateway.html) from \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\]\. Here are [reference diagrams](https://github.com/wso2/reference-architecture/blob/master/api-driven-microservice-architecture.md) from WSO2 \(notice multiple *Microgateway* \+ *Integration Microservice* pairs\)\.
 
-If some aspect\(s\) of serving our system’s clients strongly vary by client type \(e\.g\. OLAP vs OLTP, user vs admin, buyer vs seller vs customer support\), it makes sense to use a dedicated component \(the titular *Backend for Frontend* or *BFF*\) per client type to encapsulate the variation\. Protocol variations call for multiple [*Proxies*]({{< relref "../extension-metapatterns/proxy.md" >}}), workflow variations – for several [*Orchestrators*]({{< relref "../extension-metapatterns/orchestrator.md" >}}), both coming together – for [*API Gateways*]({{< relref "../extension-metapatterns/combined-component.md#api-gateway" >}}) or *Proxy \+ Orchestrator* pairs\. It is even possible to vary the *BFF*’s programming language on a per client basis\. The drawback is that once the clients get their dedicated *BFFs* it becomes hard to share a common functionality between them, unless you are willing to add yet another new utility [*service*]({{< relref "../basic-metapatterns/services.md" >}}) or [*layer*]({{< relref "../basic-metapatterns/layers.md" >}}) that can be used by each of them \(and that will strongly smell of [*SOA*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}})\)\.
+If some aspect\(s\) of serving our system’s clients strongly vary by client type \(e\.g\. OLAP vs OLTP, user vs admin, buyer vs seller vs customer support\), it makes sense to use a dedicated component \(the titular *Backend for Frontend* or *BFF*\) per client type to encapsulate the variation\. Protocol variations call for multiple [*Proxies*]({{< relref "../extension-metapatterns/proxy.md" >}}), workflow variations – for several [*Orchestrators*]({{< relref "../extension-metapatterns/orchestrator.md" >}}), both coming together – for [*API Gateways*]({{< relref "../extension-metapatterns/orchestrator.md#api-gateway" >}}) or *Proxy \+ Orchestrator* pairs\. It is even possible to vary the *BFF*’s programming language on a per client basis\. The drawback is that once the clients get their dedicated *BFFs* it becomes hard to share a common functionality between them, unless you are willing to add yet another new utility [*service*]({{< relref "../basic-metapatterns/services.md" >}}) or [*layer*]({{< relref "../basic-metapatterns/layers.md" >}}) that can be used by each of them \(and that will strongly smell of [*SOA*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}})\)\.
 
 ### Performance
 
@@ -101,14 +101,14 @@ Each *BFF* depends on all the services it uses \(usually every service in the sy
 *Backends for Frontends*:
 
 - Extends [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) or rarely [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}), [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}), or [*Shards*]({{< relref "../basic-metapatterns/shards.md" >}})\.
-- Is derived from a client\-facing extension metapattern: [*Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}), [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}), [*API Gateway*]({{< relref "../extension-metapatterns/combined-component.md#event-mediator" >}}), or [*Event Mediator*]({{< relref "../extension-metapatterns/combined-component.md#event-mediator" >}})\.
+- Is derived from a client\-facing extension metapattern: [*Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}), [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}), [*API Gateway*]({{< relref "../extension-metapatterns/orchestrator.md#api-gateway" >}}), or [*Event Mediator*]({{< relref "../extension-metapatterns/orchestrator.md#event-mediator" >}})\.
 
 
 ## Variants
 
 *Backends for Frontends* vary in the kind of component that gets dedicated to each client:
 
-### Proxies
+### [Proxies]({{< relref "../extension-metapatterns/proxy.md" >}})
 
 <figure>
 <a href="/diagrams/Variants/3/BFF%20-%20Gateways.png">
@@ -122,7 +122,7 @@ Each *BFF* depends on all the services it uses \(usually every service in the sy
 
 Dedicating a [*Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) per client is useful when the clients differ in the mode of access to the system \(protocols / encryption / authorization\) but not in workflows\.
 
-### Orchestrators
+### [Orchestrators]({{< relref "../extension-metapatterns/orchestrator.md" >}})
 
 <figure>
 <a href="/diagrams/Variants/3/BFF%20-%20Orchestrators.png">
@@ -136,7 +136,7 @@ Dedicating a [*Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-
 
 An [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) per client makes sense if the clients use the system in completely unrelated ways, e\.g\. a shop’s customers have little to share with its administrators\.
 
-### Proxy \+ Orchestrator pairs
+### [Proxy]({{< relref "../extension-metapatterns/proxy.md" >}}) \+ [Orchestrator]({{< relref "../extension-metapatterns/orchestrator.md" >}}) pairs
 
 <figure>
 <a href="/diagrams/Variants/3/BFF%20-%20Gateways%20+%20Orchestrators.png">
@@ -150,7 +150,7 @@ An [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) 
 
 Clients vary in both access mode \(protocol\) and workflow\. [*Orchestrators*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) or [*Proxies*]({{< relref "../extension-metapatterns/proxy.md" >}}) may be reused if some kinds of clients share only protocol or [*application logic*]({{< relref "../basic-metapatterns/layers.md#application-use-cases-or-integration" >}})\.
 
-### API Gateways
+### [API Gateways]({{< relref "../extension-metapatterns/orchestrator.md#api-gateway" >}})
 
 <figure>
 <a href="/diagrams/Variants/3/BFF%20-%20API%20gateways.png">
@@ -162,11 +162,11 @@ Clients vary in both access mode \(protocol\) and workflow\. [*Orchestrators*]({
 </a>
 </figure>
 
-Clients vary in access mode \(protocol\) and workflow and there is a third\-party [*API Gateway*]({{< relref "../extension-metapatterns/combined-component.md#api-gateway" >}}) framework which seems to fit your requirements off the shelf\.
+Clients vary in access mode \(protocol\) and workflow and there is a third\-party [*API Gateway*]({{< relref "../extension-metapatterns/orchestrator.md#api-gateway" >}}) framework which seems to fit your requirements off the shelf\.
 
 Multiple *API Gateways* match the literal meaning of *Backends for Frontends* – each UI team \([backend, mobile, desktop](https://www.thoughtworks.com/insights/blog/bff-soundcloud); or [end\-device\-specific](https://netflixtechblog.com/embracing-the-differences-inside-the-netflix-api-redesign-15fd8b3dc49d) teams\) gets some code on the backend side to adapt the system’s API and protocols to its needs by building a new, probably higher\-level specialized API with a convenient transport\.
 
-### Event Mediators
+### [Event Mediators]({{< relref "../extension-metapatterns/orchestrator.md#event-mediator" >}})
 
 <figure>
 <a href="/diagrams/Variants/3/BFF%20-%20Event%20mediators.png">
@@ -178,7 +178,7 @@ Multiple *API Gateways* match the literal meaning of *Backends for Frontends* �
 </a>
 </figure>
 
-\[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] mentions that multiple [*Event Mediators*]({{< relref "../extension-metapatterns/combined-component.md#event-mediator" >}}) may be deployed in [*Event\-Driven Architecture*]({{< relref "../basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}}) to split the codebase and improve stability\.
+\[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] mentions that multiple [*Event Mediators*]({{< relref "../extension-metapatterns/orchestrator.md#event-mediator" >}}) may be deployed in [*Event\-Driven Architecture*]({{< relref "../basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}}) to split the codebase and improve stability\.
 
 ## Evolutions
 
@@ -186,7 +186,7 @@ Multiple *API Gateways* match the literal meaning of *Backends for Frontends* �
 
 - The *BFF*s can be merged into a single [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) if their functionality becomes mostly identical\.
 - A shared *orchestration* [*layer*]({{< relref "../basic-metapatterns/layers.md" >}}) with common functionality may be added for use by the *BFF*s\.
-- A layer of *Integration Services* under the *BFF*s simplifies them by providing shared high\-level APIs for the resulting [*Cells*]({{< relref "../basic-metapatterns/services.md#cell-wso2-definition-service-of-services-domain-uber-definition-cluster" >}})\.
+- A layer of *Integration Services* under the *BFF*s simplifies them by providing shared high\-level APIs for the resulting [*Cells*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#examples--cell" >}})\.
 - [*Sidecars*]({{< relref "../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] \(of [*Service Mesh*]({{< relref "../implementation-metapatterns/mesh.md#service-mesh" >}})\) are a way to share libraries among the *BFF*s\.
 
 

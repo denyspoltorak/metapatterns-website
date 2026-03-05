@@ -114,7 +114,7 @@ You may decide to use an [*Anticorruption Layer*]({{< relref "../extension-metap
 *Middleware*:
 
 - Extends [*Services*]({{< relref "../basic-metapatterns/services.md" >}}), [*Service\-Oriented Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}), or in rare cases, [*Shards*]({{< relref "../basic-metapatterns/shards.md" >}}) or [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}})\.
-- Can make a [*Bus of Buses*]({{< relref "../fragmented-metapatterns/hierarchy.md#bottom-up-hierarchy-bus-of-buses-network-of-networks" >}}) \([*Hierarchy*]({{< relref "../fragmented-metapatterns/hierarchy.md" >}})\) or be merged with other *extension metapatterns* into several kinds of [*Combined Components*]({{< relref "../extension-metapatterns/combined-component.md" >}})\.
+- Can make a [*Bus of Buses*]({{< relref "../fragmented-metapatterns/hierarchy.md#bottom-up-hierarchy-bus-of-buses-network-of-networks" >}}) \([*Hierarchy*]({{< relref "../fragmented-metapatterns/hierarchy.md" >}})\) or be merged with other *extension metapatterns*\.
 - Is closely related to [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}})\. A persistent *Middleware* employs a *Shared Repository*\.
 - Is usually implemented by a [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}}) or [*Microkernel*]({{< relref "../implementation-metapatterns/microkernel.md" >}}) \(which is often based on a *Mesh*\)\.
 
@@ -123,7 +123,7 @@ You may decide to use an [*Anticorruption Layer*]({{< relref "../extension-metap
 
 There are several dimensions of freedom with a *Middleware*, some of them may be configurable:
 
-### By addressing \(channels, actors, pub/sub, gossip\)
+### By addressing \(channels, [actors]({{< relref "../implementation-metapatterns/mesh.md#actors" >}}), pub/sub, gossip\)
 
 Systems vary in the way their components address each other:
 
@@ -161,16 +161,16 @@ A *Middleware* with a delivery guarantee needs to store messages whose delivery 
 - Replicated over an in\-memory *Mesh* storage \(like [*Data Grid*]({{< relref "../extension-metapatterns/shared-repository.md#data-grid-of-space-based-architecture-sba-replicated-cache-distributed-cache" >}})\)\.
 
 
-If the messages are stored indefinitely, the *Middleware* becomes a *Persistent* [*Event Log*](https://medium.com/sundaytech/event-sourcing-audit-logs-and-event-logs-deb8f3c54663) or even a *Shared* [*Event Store*](https://cloudnative.ly/event-driven-architectures-edas-vs-event-sourcing-c8582578e87) with the schemas of the stored events coupling the involved services \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\] just like the database schema does in [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}})\.
+If the messages are stored indefinitely, the *Middleware* [becomes]({{< relref "#persistent-event-log-shared-event-store" >}}) a *Persistent* [*Event Log*](https://medium.com/sundaytech/event-sourcing-audit-logs-and-event-logs-deb8f3c54663) or even a *Shared* [*Event Store*](https://cloudnative.ly/event-driven-architectures-edas-vs-event-sourcing-c8582578e87) with the schemas of the stored events coupling the involved services \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\] just like the database schema does in [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}})\.
 
-### By structure \(Microkernel, Mesh, Broker\)
+### By structure \([Microkernel]({{< relref "../implementation-metapatterns/microkernel.md" >}}), [Mesh]({{< relref "../implementation-metapatterns/mesh.md" >}}), Broker\)
 
 <figure>
-<a href="/diagrams/Misc/Middleware.png">
+<a href="/diagrams/Variants/2/Middleware%20-%20Structure.png">
 <picture>
-<source srcset="/diagrams/Misc/Middleware.svg" media="(prefers-color-scheme: light)"/>
-<source srcset="/diagrams/Misc/Middleware.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Misc/Middleware.png" alt="Middleware" loading="lazy" width="1583" height="343" style="width:100%"/>
+<source srcset="/diagrams/Variants/2/Middleware%20-%20Structure.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/2/Middleware%20-%20Structure.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/2/Middleware%20-%20Structure.png" alt="Middleware - Structure" loading="lazy" width="1583" height="343" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -188,7 +188,7 @@ The last configuration is simpler but features a single point of failure unless 
 
 There are several patterns which extend *Middleware* with other functions:
 
-### Persistent Event Log, Shared Event Store
+### [Persistent Event Log, Shared Event Store]({{< relref "../extension-metapatterns/shared-repository.md#persistent-event-log-shared-event-store" >}})
 
 <figure>
 <a href="/diagrams/Variants/2/Middleware%20-%20Shared%20Event%20Store.png">
@@ -202,9 +202,7 @@ There are several patterns which extend *Middleware* with other functions:
 
 When a *Middleware* persists messages, it takes on the function \(and drawbacks\) of a [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}})\. A *Persistent Event Log* allows to replay incoming events for a given service \(to help a debug session or fix data corrupted by a bug\) while a *Shared Event Store* also captures changes of the internal states of the services \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\], [replacing their private databases](https://cloudnative.ly/event-driven-architectures-edas-vs-event-sourcing-c8582578e87)\. However, with either approach, changing an event field impacts all the services that use the event and may involve rewriting the entire event log \(system’s history\) \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\]\.
 
-This pattern is detailed in the [*Combined Component* chapter]({{< relref "../extension-metapatterns/combined-component.md#persistent-event-log-shared-event-store" >}})\.
-
-### Service Mesh
+### [Service Mesh]({{< relref "../implementation-metapatterns/mesh.md#service-mesh" >}})
 
 <figure>
 <a href="/diagrams/Variants/1/Microservices.png">
@@ -234,7 +232,7 @@ The internals of [*Service Mesh*]({{< relref "../implementation-metapatterns/mes
 
 A *Message Bus* \[[EIP]({{< relref "../appendices/books-referenced.md#eip" >}})\] employs one or more [*Adapters*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) per service to let the services intercommunicate even if they differ in protocols\. That helps to integrate legacy services without much change to their code but it degrades overall performance as up to two protocol translations per message are involved\.
 
-### Event Mediator
+### [Event Mediator]({{< relref "../extension-metapatterns/orchestrator.md#event-mediator" >}})
 
 <figure>
 <a href="/diagrams/Variants/2/Event%20Mediator.png">
@@ -250,7 +248,7 @@ A *Message Bus* \[[EIP]({{< relref "../appendices/books-referenced.md#eip" >}})\
 
 Slightly more details on the *Event Mediator* are [provided in the *Orchestrator* chapter]({{< relref "../extension-metapatterns/orchestrator.md#event-mediator" >}})\.
 
-### Enterprise Service Bus \(ESB\)
+### [Enterprise Service Bus]({{< relref "../extension-metapatterns/orchestrator.md#enterprise-service-bus-esb" >}}) \(ESB\)
 
 <figure>
 <a href="/diagrams/Variants/2/Enterprise%20Service%20Bus.png">
@@ -266,7 +264,7 @@ Slightly more details on the *Event Mediator* are [provided in the *Orchestrator
 
 See the [chapter about *Service\-Oriented Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#enterprise-soa" >}})\.
 
-## Evolutions
+## [Evolutions]({{< relref "../appendices/evolutions-of-architectures/evolutions-of-a-middleware.md" >}})
 
 A *Middleware* is unlikely to be removed \(though it may be replaced\) once it is built into a system\. There are [few evolutions for *Middleware*]({{< relref "../appendices/evolutions-of-architectures/evolutions-of-a-middleware.md" >}}) because it is usually a third\-party product and thus unlikely to be modified in\-house:
 

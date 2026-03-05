@@ -102,7 +102,7 @@ In fact, because *Proxies* tend to have their dependencies configured on startup
 *Proxy* <ins>helps</ins> with:
 
 - *Multi\-component systems\.* Having multiple types and/or instances of services means there is a need to know the components’ addresses to access them\. A *Proxy* encapsulates that knowledge and may also provide other common functionality as an extra benefit\.
-- *Dynamic scaling or sharding\.* The *Proxy* both knows the system’s structure \(the address of each instance of a service\) and delivers user requests, thus it is the place to implement *sharding* \(when a service instance is [dedicated to a subset of users]({{< relref "../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-multitenancy-cells-amazon-definition" >}})\) or *load balancing* \(when any service instance can [serve any user]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}})\) and even manage the size of the service instance *Pool*\.
+- *Dynamic scaling or sharding\.* The *Proxy* both knows the system’s structure \(the address of each instance of a service\) and delivers user requests, thus it is the place to implement *sharding* \(when a service instance is [dedicated to a subset of users]({{< relref "../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-multitenancy-cells-amazon-definition" >}})\) or *load balancing* \(when any service instance can [serve any user]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}})\) and even manage the size of the service instance *Pool*\.
 - *Multiple client protocols*\. When the *Proxy* is the endpoint for the system’s users it may translate multiple external \(user\-facing\) protocols into a unified internal representation\.
 - *System security\.* Though a *Proxy* does not make a system more secure, it takes away the burden of security considerations from the services which implement the business logic, improving the separation of concerns and making the system components more simple and stupid\. An off\-the\-shelf *Proxy* may be less vulnerable compared to in\-house services \(but don’t disregard [security through obscurity](https://en.wikipedia.org/wiki/Security_through_obscurity)\!\)\.
 
@@ -127,8 +127,9 @@ In fact, because *Proxies* tend to have their dependencies configured on startup
 *Proxy*:
 
 - Extends [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) or [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}) \(forming *Layers*\), [*Shards*]({{< relref "../basic-metapatterns/shards.md" >}}), or [*Services*]({{< relref "../basic-metapatterns/services.md" >}})\.
-- Can be extended by another *Proxy* or merged with an [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) into an [*API Gateway*]({{< relref "../extension-metapatterns/combined-component.md#api-gateway" >}})\.
-- At least one *Proxy* per [*service*]({{< relref "../basic-metapatterns/services.md" >}}) is employed by [*Message Bus*]({{< relref "../extension-metapatterns/combined-component.md#message-bus" >}}), [*Enterprise Service Bus*]({{< relref "../extension-metapatterns/combined-component.md#enterprise-service-bus-esb" >}}), [*Service Mesh*]({{< relref "../implementation-metapatterns/mesh.md#service-mesh" >}}), and [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}})\.
+- Can be extended by another *Proxy* or merged with an [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) into an [*API Gateway*]({{< relref "../extension-metapatterns/orchestrator.md#api-gateway" >}})\.
+- Can be a part of a [*Sandwich*]({{< relref "../extension-metapatterns/sandwich.md" >}})\.
+- At least one *Proxy* per [*service*]({{< relref "../basic-metapatterns/services.md" >}}) is employed by [*Message Bus*]({{< relref "../extension-metapatterns/middleware.md#message-bus" >}}), [*Enterprise Service Bus*]({{< relref "../extension-metapatterns/middleware.md#enterprise-service-bus-esb" >}}), [*Service Mesh*]({{< relref "../implementation-metapatterns/mesh.md#service-mesh" >}}), and [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}})\.
 - Is a special case \(when there is a single kind of client\) of [*Backends for Frontends*]({{< relref "../fragmented-metapatterns/backends-for-frontends--bff-.md" >}})\.
 
 
@@ -166,7 +167,7 @@ A *Half\-Proxy* intercepts, analyzes, and routes the session establishment reque
 
 ## Variants by placement
 
-As a *Proxy* stands between a \(sub\)system and its client\(s\), we can imagine a few ways to deploy it:
+As a *Proxy* stands between a \(sub\)system and its client\(s\), we can imagine a few ways to deploy it and generalize our observation to other kinds of components:
 
 ### Separate deployment: Standalone
 
@@ -218,7 +219,7 @@ It should be noted that *Sidecar* – co\-locating a generic component and busin
 </a>
 </figure>
 
-[*Service Mesh*]({{< relref "../implementation-metapatterns/mesh.md#service-mesh" >}}) \([*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) for [*Microservices*]({{< relref "../basic-metapatterns/services.md#microservices" >}})\) makes heavy use of *Sidecars*\.
+[*Service Mesh*]({{< relref "../implementation-metapatterns/mesh.md#service-mesh" >}}) \([*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) for [*Microservices*]({{< relref "../basic-metapatterns/services.md#microservices" >}})\) makes heavy use of *Sidecars* for co\-locating any kind of generic code with every instance of a *Microservice*\.
 
 ### On the client side: Ambassador
 
@@ -238,9 +239,21 @@ Finally, a *Proxy* may be co\-located with a component’s clients, making it an
 - [*Adapters*]({{< relref "#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) that help client applications use an optimized or secure protocol\.
 
 
+Notably, a [*Plugin*]({{< relref "../implementation-metapatterns/plugins.md" >}}) may act as an *Ambassador* for its origin subsystem\. It makes local decisions in some scenarios while others cause it to communicate with the service it represents\. See [*Ambassador Plugin*]({{< relref "../implementation-metapatterns/plugins.md#ambassador-plugin-logic-extension" >}})\.
+
+<figure>
+<a href="/diagrams/Variants/4/Ambassador%20Plugin.png">
+<picture>
+<source srcset="/diagrams/Variants/4/Ambassador%20Plugin.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/4/Ambassador%20Plugin.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/4/Ambassador%20Plugin.png" alt="Ambassador Plugin" loading="lazy" width="1003" height="283" style="width:100%"/>
+</picture>
+</a>
+</figure>
+
 ## Examples
 
-*Proxies* are ubiquitous in backend systems as using one or several of them frees the underlying code from the need to provide boilerplate non\-business\-logic functionality\. It is common to have several kinds of *Proxies* deployed sequentially \(e\.g\. [*API Gateways*]({{< relref "#api-gateway" >}}) behind [*Load Balancers*]({{< relref "#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) behind a [*Firewall*]({{< relref "#firewall-api-rate-limiter-api-throttling" >}})\) with many of them [*pooled*]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}}) to improve performance and stability\. It is also possible to employ multiple kinds of *Proxies*, each serving its own kind of client, in parallel, resulting in [*Backends for Frontends*]({{< relref "../fragmented-metapatterns/backends-for-frontends--bff-.md" >}})\.
+*Proxies* are ubiquitous in backend systems as using one or several of them frees the underlying code from the need to provide boilerplate non\-business\-logic functionality\. It is common to have several kinds of *Proxies* deployed sequentially \(e\.g\. [*API Gateways*]({{< relref "#api-gateway" >}}) behind [*Load Balancers*]({{< relref "#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) behind a [*Firewall*]({{< relref "#firewall-api-rate-limiter-api-throttling" >}})\) with many of them [*pooled*]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}}) to improve performance and stability\. It is also possible to employ multiple kinds of *Proxies*, each serving its own kind of client, in parallel, resulting in [*Backends for Frontends*]({{< relref "../fragmented-metapatterns/backends-for-frontends--bff-.md" >}})\.
 
 As *Proxies* are used for many purposes, there are a variety of their specializations and names\. Below is a very rough categorization, complicated by the fact that real\-world *Proxies* often implement several categories at once\.
 
@@ -268,7 +281,7 @@ The *Firewall* is a component for white\- and black\-listing network traffic, mo
 
 *Throttling* differs from *Rate Limiting* in that over\-the\-limit requests are queued for later processing, effectively slowing down communication with aggressive clients\.
 
-### Response Cache, Read\-Through Cache, Write\-Through Cache, Write\-Behind Cache, Cache, Caching Layer, Distributed Cache, Replicated Cache
+### Response Cache, Read\-Through Cache, Write\-Through Cache, Write\-Behind Cache, Cache, Caching Layer, [Distributed Cache, Replicated Cache]({{< relref "../extension-metapatterns/shared-repository.md#data-grid-of-space-based-architecture-sba-replicated-cache-distributed-cache" >}})
 
 <figure>
 <a href="/diagrams/Variants/2/Cache.png">
@@ -313,7 +326,7 @@ It is possible to combine multiple servers into a virtual *Caching Layer* \[[DDS
 Here we have a hardware or software component which distributes user traffic among multiple [instances]({{< relref "../basic-metapatterns/shards.md" >}}) of a service:
 
 - A *Sharding Proxy* \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] selects a [*shard*]({{< relref "../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-multitenancy-cells-amazon-definition" >}}) based on specific data which is present in a request \(OSI level 7 request routing\) for a system where each shard owns a part of the system’s state, therefore only one \(or a few for [*replicated*]({{< relref "../basic-metapatterns/shards.md#persistent-copy-replica" >}}) *shards*\) of the shards has the data required to process the client’s request\.
-- A [*Load Balancer*](https://en.wikipedia.org/wiki/Load_balancing_(computing)) \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] for a [*Pool of stateless instances*]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}}) or [*Replicas*]({{< relref "../basic-metapatterns/shards.md#persistent-copy-replica" >}}), or a *Messaging Grid* \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] of [*Space\-Based Architecture*]({{< relref "../extension-metapatterns/combined-component.md#middleware-of-space-based-architecture" >}}) evenly distributes the incoming traffic over identical request processors \([OSI level](https://en.wikipedia.org/wiki/OSI_model) 4 load balancing\) to protect any instance of the underlying system from overload\. In some cases it needs to be session\-aware \(process OSI level 7\) to assure that all the requests from a client are forwarded to the same instance of the service \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\]\.
+- A [*Load Balancer*](https://en.wikipedia.org/wiki/Load_balancing_(computing)) \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] for a [*Pool of stateless instances*]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}}) or [*Replicas*]({{< relref "../basic-metapatterns/shards.md#persistent-copy-replica" >}}), or a *Messaging Grid* \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] of [*Space\-Based Architecture*]({{< relref "../extension-metapatterns/sandwich.md#space-based-architecture" >}}) evenly distributes the incoming traffic over identical request processors \([OSI level](https://en.wikipedia.org/wiki/OSI_model) 4 load balancing\) to protect any instance of the underlying system from overload\. In some cases it needs to be session\-aware \(process OSI level 7\) to assure that all the requests from a client are forwarded to the same instance of the service \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\]\.
 - It may forward read requests to [*Read\-Only Replicas*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#read-only-replicas" >}}) of the data while write requests are sent to the *master* database \([*CQRS*](https://learn.microsoft.com/en-us/azure/architecture/patterns/cqrs)\-like behavior\)\.
 - A [*Cell Router*](https://docs.aws.amazon.com/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/cell-routing.html) chooses a data center which is the closest to the user’s location\.
 
@@ -352,11 +365,11 @@ You could have noticed that *Dispatcher* or *Reverse Proxy* is quite similar to 
 
 An [*Adapter*](https://refactoring.guru/design-patterns/adapter) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}}), [DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] is a mostly stateless *Proxy* that translates between an internal and public protocol and API formats\. It may often be co\-located with a *Reverse Proxy*\. When it adapts messages, it is called a *Message Translator* \[[EIP]({{< relref "../appendices/books-referenced.md#eip" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\]\.
 
-As an *Adapter* adapts in two directions, it is often found between two components \(in [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}})\) or between a component and [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) \(in [*Enterprise Service Bus*]({{< relref "../extension-metapatterns/combined-component.md#enterprise-service-bus-esb" >}}) and [*Service Mesh*]({{< relref "../extension-metapatterns/combined-component.md#service-mesh" >}})\)\.
+As an *Adapter* adapts in two directions, it is often found between two components \(in [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}})\) or between a component and [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) \(in [*Enterprise Service Bus*]({{< relref "../extension-metapatterns/middleware.md#enterprise-service-bus-esb" >}}) and [*Service Mesh*]({{< relref "../extension-metapatterns/middleware.md#service-mesh" >}})\)\.
 
 In \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\], when one component \(*consumer*\) depends on another \(*supplier*\), there may be an *Adapter* in between to decouple them\. It is called *Anticorruption Layer* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] when owned by the *consumer*’s team or *Open Host Service* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] if the *supplier* adds it to grant one or more stable interfaces \(*Published Languages* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\)\.
 
-A *Gateway* \[[PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\] or [*API Service*](https://backendless.com/what-is-api-as-a-service/) often implies an *Adapter* with extra functionality, like *Reverse Proxy*, authorization and authentication\. [*Cell Gateway*](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md) is a *Gateway* for a [*Cell*]({{< relref "../basic-metapatterns/services.md#cell-wso2-definition-service-of-services-domain-uber-definition-cluster" >}})\.
+A *Gateway* \[[PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\] or [*API Service*](https://backendless.com/what-is-api-as-a-service/) often implies an *Adapter* with extra functionality, like *Reverse Proxy*, authorization and authentication\. [*Cell Gateway*](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md) is a *Gateway* for a [*Cell*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#examples--cell" >}})\.
 
 When a *Gateway* translates a single public API method into several calls towards internal services, it becomes an *API Gateway* \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] which is an aggregate of *Proxy* \(for protocol translation\) and [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}})\.
 
@@ -376,7 +389,7 @@ There is also a whole bunch of *Abstraction Layers* that aim to protect the busi
 
 </aside>
 
-### API Gateway
+### [API Gateway]({{< relref "../extension-metapatterns/orchestrator.md#api-gateway" >}})
 
 <figure>
 <a href="/diagrams/Variants/2/API%20Gateway.png">
@@ -415,7 +428,7 @@ An *Adapter* between a human and a computer system is called a [*User Interface*
 
 [*Separated Presentation*](https://martinfowler.com/eaaDev/SeparatedPresentation.html) is, basically, another name for *User Interface* except that this pattern focuses on dispensability of any implementation of a *UI*: the same system can be driven by a *CLI*, *GUI* or *Frontend* without noticing any difference\. Many variants of *Separated Presentation* are discussed in a [dedicated section]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#examples--separated-presentation" >}}) under [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}})\.
 
-## Evolutions
+## [Evolutions]({{< relref "../appendices/evolutions-of-architectures/evolutions-of-a-proxy.md" >}})
 
 It usually makes little sense to get rid of a *Proxy* once it has been integrated into a system\. The only real drawback to using a *Proxy* is a slight increase in latency for user requests which may be mitigated through the creation of [bypass channels]({{< relref "#half-proxy" >}}) between the clients and a service that needs low latency\. The other drawback of the pattern, the *Proxy* being a single point of failure, is countered by deploying multiple instances of the *Proxy*\.
 

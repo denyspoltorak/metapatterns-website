@@ -21,13 +21,14 @@ images = ["/diagrams/Web/og/Plugins.png"]
 
 *Overspecialize, and you breed in weakness\.* Customize the system through attachable modules\.
 
-<ins>Known as:</ins> Plug\-In Architecture \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\], \(misapplied\) Microkernel \(Architecture\) \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}}), [SAP]({{< relref "../appendices/books-referenced.md#sap" >}}), [FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\], Plugin \[[PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\], [Strategy](https://refactoring.guru/design-patterns/strategy) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\], Reflection \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\], Aspects, Hooks\.
+<ins>Known as:</ins> Plug\-In Architecture \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\], [Extension Architecture](https://www.uber.com/en-UA/blog/microservice-architecture/), \(misapplied\) Microkernel \(Architecture\) \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}}), [SAP]({{< relref "../appendices/books-referenced.md#sap" >}}), [FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\], Plugin \[[PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\], [Strategy](https://refactoring.guru/design-patterns/strategy) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\], Reflection \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\], Aspects, Hooks\.
 
 <ins>Variants:</ins> [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) and [*Microkernel*]({{< relref "../implementation-metapatterns/microkernel.md" >}}) got dedicated chapters\. *Plugins* have many variations\.
 
 <ins>Examples:</ins>
 
 - True Plugin / Plug\-in \(low\-level\),
+- Ambassador Plugin / [Logic Extension](https://www.uber.com/en-UA/blog/microservice-architecture/),
 - Extension \(high\-level\),
 - Addin / Add\-in \(mid\-level\),
 - \(inexact\) Addon / Add\-on \(topping\)\.
@@ -52,11 +53,11 @@ Most systems require some extent of customizability all the way from the basic c
 
 Using plugins usually degrades performance\. The effect may be negligible for in\-process plugins \(such as strategies or codecs\) but it becomes noticeable if inter\-process communication or networking is involved\.
 
-The only case for a plugin to improve performance of a system that I can think up is when a part of the client’s business logic moves to a plugin of a lower layer of a system\. That is similar to the [strategy injection optimization for *Layers*]({{< relref "../basic-metapatterns/layers.md#performance" >}})\. Real\-world examples include:
+The only case for a plugin to improve performance of a system that I can think of is when a part of the client’s business logic moves to a lower layer of a system or to another service forming an [*Ambassador Plugin*]({{< relref "#ambassador-plugin-logic-extension" >}})\. That is similar to the [strategy injection optimization for *Layers*]({{< relref "../basic-metapatterns/layers.md#performance" >}})\. Real\-world examples include:
 
 - The use of *stored procedures* in databases,
 - HFT rules and price tables [uploaded](https://www.youtube.com/watch?v=sX2nF1fW7kI) to a network card or FPGA,
-- Customization of supplier services for varying needs of their client services in [*Domain\-Oriented Microservice Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#domain-oriented-microservice-architecture-doma" >}})\.
+- Customization of supplier [*Cells*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#full-featured-cell-domain" >}}) for varying needs of their client *Cells* in [*Domain\-Oriented Microservice Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#domain-oriented-microservice-architecture-doma" >}})\.
 
 
 <figure>
@@ -64,7 +65,7 @@ The only case for a plugin to improve performance of a system that I can think u
 <picture>
 <source srcset="/diagrams/Performance/Plugins-injection.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Performance/Plugins-injection.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Performance/Plugins-injection.png" alt="Plugins-injection" loading="lazy" width="1003" height="321" style="width:100%"/>
+<img src="/diagrams/Performance/Plugins-injection.png" alt="Plugins-injection" loading="lazy" width="1043" height="623" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -104,15 +105,15 @@ Each *plugin* depends on the *core*’s *API* \(for *Addons*\) or *SPI* \(for *P
 <picture>
 <source srcset="/diagrams/Relations/Plugins.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Relations/Plugins.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Relations/Plugins.png" alt="Plugins" loading="lazy" width="643" height="603" style="width:65%"/>
+<img src="/diagrams/Relations/Plugins.png" alt="Plugins" loading="lazy" width="1063" height="603" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
 *Plugins*:
 
-- Implement [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) or sometimes [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}})\.
-- Extend [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) or [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}) with one or two layers of services\.
+- Implement [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}), [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}), or [*Cell*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#examples--cell" >}})\.
+- Extend [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}), [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}), or [*Cell*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#examples--cell" >}}) with one or two layers of services\.
 
 
 ## Variants
@@ -186,7 +187,25 @@ A true *Plugin* is registered with and called by the system’s *core* to provid
 
 Customizable software often exposes multiple interfaces for different kinds of *Plugins*, some of which are *optional* \(0 or 1 instance\) or *subscriptional* \(multiple instances\) as explained [earlier]({{< relref "#by-the-number-of-instances" >}})\.
 
-Examples: codecs in a video player, country\-specific tax calculation rules in accounting software, or filters in a traffic sniffer\. In [*DOMA*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#domain-oriented-microservice-architecture-doma" >}}) any team can [write *Plugins* for other teams’ components](https://www.uber.com/en-UA/blog/microservice-architecture/)\. That decouples the teams’ codebases and minimizes network calls\.
+Examples: codecs in a video player, country\-specific tax calculation rules in accounting software, or filters in a traffic sniffer\.
+
+### [Ambassador]({{< relref "../extension-metapatterns/proxy.md#on-the-client-side-ambassador" >}}) Plugin, Logic Extension
+
+<figure>
+<a href="/diagrams/Variants/4/Ambassador%20Plugin.png">
+<picture>
+<source srcset="/diagrams/Variants/4/Ambassador%20Plugin.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/4/Ambassador%20Plugin.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/4/Ambassador%20Plugin.png" alt="Ambassador Plugin" loading="lazy" width="1003" height="283" style="width:100%"/>
+</picture>
+</a>
+</figure>
+
+A service may accept *Plugins* that [act on behalf of peer services](https://www.uber.com/en-UA/blog/microservice-architecture/) \(are [*Ambassadors*]({{< relref "../extension-metapatterns/proxy.md#on-the-client-side-ambassador" >}})\) and are implemented by their teams\. That inverts dependencies: whoever wants to affect the behavior of your service uses your SPI to inject their code into your service which apart from that remains self\-contained\. As a result, whatever used to be a system\-wide workflow becomes limited to a single subdomain\.
+
+Though an *Ambassador Plugin* \(aka Uber’s [*Logic Extension*](https://www.uber.com/en-UA/blog/microservice-architecture/)\) may call the service on whose behalf it acts, it is preferable performance\-wise for it to make independent decisions without cross\-service calls \(it works like a smart [*Cache*]({{< relref "../extension-metapatterns/proxy.md#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}}) that provides decisions instead of data\)\. For data\-driven decisions the *Ambassador* may need to opaquely receive and store data \([*Data Extension*](https://www.uber.com/en-UA/blog/microservice-architecture/)\) in its host’s database\.
+
+*Ambassador Plugins* are widely used in Uber’s [*Domain\-Oriented Microservice Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#domain-oriented-microservice-architecture-doma" >}}) to decouple its [*Cells*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#full-featured-cell-domain" >}})\.
 
 ### Extension
 

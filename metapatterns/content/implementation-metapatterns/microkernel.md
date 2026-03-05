@@ -109,7 +109,7 @@ The *applications* depend on the *API* of the *microkernel* while the *providers
 
 - Is a specialization of [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}})\.
 - Is related to [*Backends for Frontends*]({{< relref "../fragmented-metapatterns/backends-for-frontends--bff-.md" >}}), which is a layer of [*Orchestrators*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) over a layer of [*Services*]({{< relref "../basic-metapatterns/services.md" >}}); *Microkernel* adds a [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) in between\.
-- Is a kind of 2\-layered [*SOA*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#enterprise-soa" >}}) with an [*ESB*]({{< relref "../extension-metapatterns/combined-component.md#enterprise-service-bus-esb" >}})\.
+- Is a kind of 2\-layered [*SOA*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#enterprise-soa" >}}) with an [*ESB*]({{< relref "../extension-metapatterns/orchestrator.md#enterprise-service-bus-esb" >}})\.
 - The *microkernel* layer serves as \(implements\) a [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) for the upper \(*external*\) [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) and often makes an [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) for the lower \(*internal*\) *Services*\.
 - May be implemented by [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}})\.
 
@@ -146,7 +146,7 @@ The original inspiration for *Microkernel*, namely *operating systems*, provides
 
 The *microkernel* is a [*Facade*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] that integrates a set of libraries and exposes a user\-friendly high\-level interface\. [PAM](https://docs.oracle.com/cd/E23824_01/html/819-2145/pam-01.html) looks like a reasonably good example\.
 
-### Virtualizer, Hypervisor, Container Orchestrator, Distributed Runtime
+### Virtualizer, Hypervisor, Container Orchestrator, [Distributed Runtime]({{< relref "../basic-metapatterns/services.md#distributed-runtime-backend-actors" >}})
 
 <figure>
 <a href="/diagrams/Variants/4/Virtualizer.png">
@@ -188,7 +188,7 @@ User\-provided *scripts* are run by an *Interpreter* \[[GoF]({{< relref "../appe
 
 *Configuration files* may be regarded as short\-lived *scripts* that configure the underlying modules at the start of the system\. The parser of the configuration file is a transient *microkernel*\.
 
-### Saga Engine
+### [Saga]({{< relref "../extension-metapatterns/orchestrator.md#orchestrated-saga-saga-orchestrator-saga-execution-component-transaction-script-coordinator" >}}) Engine
 
 <figure>
 <a href="/diagrams/Variants/4/Saga%20engine.png">

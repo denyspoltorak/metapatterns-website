@@ -19,7 +19,7 @@ There are several patterns with no system\-wide layers\. Some of them incorporat
 <picture>
 <source srcset="/diagrams/Contents/Layered%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Layered%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Layered%20Services.png" alt="Layered Services" loading="lazy" width="1133" height="343" style="width:100%"/>
+<img src="/diagrams/Contents/Layered%20Services.png" alt="Layered Services" loading="lazy" width="1133" height="363" style="width:100%"/>
 </picture>
 </a>
 </figure>

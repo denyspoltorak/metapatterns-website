@@ -13,7 +13,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 There are a couple of *Pipeline*\-specific evolutions:
 
-- The first service of the *Pipeline* can be promoted to [*Front Controller*]({{< relref "../../extension-metapatterns/combined-component.md#front-controller" >}}) \[[SAHP]({{< relref "../../appendices/books-referenced.md#sahp" >}})\] which tracks status updates for every request it handles\.
+- The first service of the *Pipeline* can be promoted to [*Front Controller*]({{< relref "../../extension-metapatterns/orchestrator.md#inexact-front-controller" >}}) \[[SAHP]({{< relref "../../appendices/books-referenced.md#sahp" >}})\] which tracks status updates for every request it handles\.
 - Adding an [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) turns a [*Pipeline*]({{< relref "../../basic-metapatterns/pipeline.md" >}}) into [*Services*]({{< relref "../../basic-metapatterns/services.md" >}})\. As the high\-level business logic moves to the orchestration layer, the services don’t need to interact directly, the interservice communication channels disappear and the system becomes identical to [*Orchestrated Services*]({{< relref "../../extension-metapatterns/orchestrator.md" >}})\.
 
 

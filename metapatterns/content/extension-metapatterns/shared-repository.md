@@ -55,7 +55,7 @@ images = ["/diagrams/Web/og/Shared%20Repository.png"]
 
 <ins>References:</ins> \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\] is all about databases; \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] has chapters on *Service\-Based Architecture* and *Space\-Based Architecture*; \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\] deals with *Shared Event Store\.*
 
-A *Shared Repository* builds communication in the system around its data, which is natural for [data\-centric domains]({{< relref "../foundations-of-software-architecture/arranging-communication/shared-data.md" >}}) and multiple [instances of a stateless service]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}}) and may often simplify development of a system of [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) that need to exchange data\. It covers the following concerns:
+A *Shared Repository* builds communication in the system around its data, which is natural for [data\-centric domains]({{< relref "../foundations-of-software-architecture/arranging-communication/shared-data.md" >}}) and multiple [instances of a stateless service]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}}) and may often simplify development of a system of [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) that need to exchange data\. It covers the following concerns:
 
 - Storage of the entire domain data\.
 - Keeping the data self\-consistent by providing atomic transactions for use by the application code\.
@@ -94,7 +94,7 @@ The dependency on repository technology and a data schema is dangerous for long\
 <picture>
 <source srcset="/diagrams/Dependencies/SharedRepository-2.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Dependencies/SharedRepository-2.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Dependencies/SharedRepository-2.png" alt="SharedRepository-2" loading="lazy" width="1059" height="661" style="width:100%"/>
+<img src="/diagrams/Dependencies/SharedRepository-2.png" alt="SharedRepository-2" loading="lazy" width="1063" height="623" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -106,7 +106,7 @@ Still, the DAL does not remove shared dependencies and only adds some flexibilit
 *Shared Repository* is <ins>good</ins> for:
 
 - *Data\-centric domains\.* If most of your domain’s data is used in every subdomain, keeping any part of it private to a single service will be a pain in the system design\. Examples include a [ticket reservation system]({{< relref "../foundations-of-software-architecture/arranging-communication/shared-data.md" >}}) and even the minesweeper game\.
-- *A scalable service\.* When you run several [instances]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}}) of a service, like in [*Microservices*]({{< relref "../basic-metapatterns/services.md#microservices" >}}), the instances are likely to be identical and stateless, with the service’s data pushed out to a database shared among the instances\.
+- *A scalable service\.* When you run several [instances]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}}) of a service, like in [*Microservices*]({{< relref "../basic-metapatterns/services.md#microservices" >}}), the instances are likely to be identical and stateless, with the service’s data pushed out to a database shared among the instances\.
 - *Huge datasets*\. Sometimes you may need to deal with a lot of data\. It is unwise \(meaning expensive\) to stream and replicate it between your services just for the sake of ensuring their isolation\. Share it instead\. If the data does not fit in an ordinary database, some kind of [*Space\-Based Architecture*]({{< relref "../implementation-metapatterns/mesh.md#space-based-architecture" >}}) \(which [was invented to this end](https://en.wikipedia.org/wiki/Space-based_architecture#History)\) may become your friend\.
 - *Quick simple projects\.* Don’t over\-engineer if the project won’t live long enough to benefit from its flexibility\. You may also save a buck or two on the storage\.
 
@@ -133,7 +133,7 @@ Still, the DAL does not remove shared dependencies and only adds some flexibilit
 *Shared Repository*:
 
 - Extends [*Services*]({{< relref "../basic-metapatterns/services.md" >}}), [*Service\-Oriented Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}), [*Shards*]({{< relref "../basic-metapatterns/shards.md" >}}), or occasionally [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}})\.
-- Is a part of a [persistent *Middleware*]({{< relref "../extension-metapatterns/middleware.md#persistent-event-log-shared-event-store" >}}) or [*Nanoservices*]({{< relref "../basic-metapatterns/pipeline.md#function-as-a-service-faas-nanoservices-pipelined" >}})\.
+- Is a part of a [*Sandwich*]({{< relref "../extension-metapatterns/sandwich.md" >}}), [persistent *Middleware*]({{< relref "../extension-metapatterns/middleware.md#persistent-event-log-shared-event-store" >}}), or [*Nanoservices*]({{< relref "../basic-metapatterns/pipeline.md#function-as-a-service-faas-nanoservices-pipelined" >}})\.
 - Is [closely related](https://itnext.io/a-practical-guide-to-modular-monoliths-with-net-59da23c01137) to [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}})\.
 - May be implemented by a [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}})\.
 
@@ -144,7 +144,7 @@ Still, the DAL does not remove shared dependencies and only adds some flexibilit
 
 A *Shared Repository* may provide a generic interface \(e\.g\. SQL\) or a custom API \(with a domain\-aware [*Adapter*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) / [*ORM*](https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping) for the database\)\. The *repository* can be anything ranging from a trivial OS file system or a memory block accessible from all the components to an ordinary database to a [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}})\-based, distributed [*tuple space*](https://en.wikipedia.org/wiki/Tuple_space):
 
-### Shared Database, Integration Database, Data Domain, Database of Service\-Based Architecture
+### Shared Database, Integration Database, Data Domain, Database of [Service\-Based Architecture]({{< relref "../extension-metapatterns/sandwich.md#service-based-architecture" >}})
 
 <figure>
 <a href="/diagrams/Variants/2/Shared%20Database.png">
@@ -186,7 +186,7 @@ As a file system is a kind of shared dictionary, writing and reading files can b
 
 Several actors \(processes, modules, device drivers\) communicate through one or more mutually accessible data structures \(arrays, trees, or dictionaries\)\. Accessing a shared object may require some kind of synchronization \(e\.g\. taking a *mutex*\) or employ [*atomic variables*](https://codescoddler.medium.com/concurrency-made-simple-the-role-of-atomic-variables-8327b9b35023)\. Notwithstanding that communication via *shared memory* is the archenemy of \([*shared\-nothing*](https://www.scylladb.com/glossary/shared-nothing-architecture/)\) messaging it is actually used to implement messaging: high\-load multi\-process systems \(web browsers and high\-frequency trading\) rely on shared memory *mailboxes* for messaging between their [constituent processes]({{< relref "../basic-metapatterns/services.md#multiple-processes" >}})\.
 
-### Blackboard
+### [Blackboard]({{< relref "../extension-metapatterns/sandwich.md#blackboard-system" >}})
 
 <figure>
 <a href="/diagrams/Variants/2/Blackboard.png">
@@ -202,7 +202,7 @@ Several actors \(processes, modules, device drivers\) communicate through one or
 
 Examples: several use cases are [mentioned on Wikipedia](https://en.wikipedia.org/wiki/Blackboard_system)\.
 
-### Data Grid of Space\-Based Architecture \(SBA\), Replicated Cache, Distributed Cache
+### Data Grid of [Space\-Based Architecture]({{< relref "../extension-metapatterns/sandwich.md#space-based-architecture" >}}) \(SBA\), [Replicated Cache, Distributed Cache]({{< relref "../extension-metapatterns/proxy.md#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}})
 
 <figure>
 <a href="/diagrams/Variants/2/Data%20Grid.png">
@@ -218,7 +218,7 @@ The [*Space\-Based Architecture*](https://en.wikipedia.org/wiki/Space-based_arch
 
 The main components of the architecture are:
 
-- *Processing Units* – the [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) with the business logic\. There may be one class of *Processing Units*, making *SBA* look like [*Pool*]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}}) \([*Shards*]({{< relref "../basic-metapatterns/shards.md" >}})\), or multiple classes, in which case the architecture becomes similar to [*Microservices*]({{< relref "../basic-metapatterns/services.md#microservices" >}}) with a *Shared Database*\.
+- *Processing Units* – the [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) with the business logic\. There may be one class of *Processing Units*, making *SBA* look like [*Pool*]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}}) \([*Shards*]({{< relref "../basic-metapatterns/shards.md" >}})\), or multiple classes, in which case the architecture becomes similar to [*Microservices*]({{< relref "../basic-metapatterns/services.md#microservices" >}}) with a *Shared Database*\.
 - *Data Grid* \(*Replicated Cache* \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\]\) – a [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}})\-based in\-memory database\. Each node of the *Data Grid* is co\-located with a single instance of a *Processing Unit*, providing the latter with very fast access to the data\. Changes to the data are replicated across the grid by its virtual *Data Replication Engine* which is usually implemented by every node of the grid\.
 - *Persistent Database* – an external database which the *Data Grid* replicates \(caches\)\. Its schema is encapsulated in the *Readers* and *Writers*\.
 - *Data Readers* – components that read any data unavailable in the *Data Grid* from the *Persistent Database*\. Most cases see *Readers* employed upon starting the system to upload the entire contents of the database into the memory of the nodes\.
@@ -235,7 +235,7 @@ The drawbacks of this architecture include:
 - Data collisions if multiple clients change the same piece of data simultaneously\.
 
 
-### Persistent Event Log, Shared Event Store
+### [Persistent Event Log, Shared Event Store]({{< relref "../extension-metapatterns/middleware.md#persistent-event-log-shared-event-store" >}})
 
 <figure>
 <a href="/diagrams/Variants/2/Shared%20Database%20-%20Event%20Log.png">
@@ -247,9 +247,7 @@ The drawbacks of this architecture include:
 </a>
 </figure>
 
-A database which stores events \(*event log* for interservice events, *event store* for internal state changes\) can be used as a [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}): an event producer writes its events to a topic in the repository while event consumers get notified as soon as a new record appears\.
-
-More details are [available]({{< relref "../extension-metapatterns/combined-component.md#persistent-event-log-shared-event-store" >}}) in the *Combined Component* chapter\.
+A database which stores events \(*event log* for interservice events, *event store* for internal state changes\) [can be used]({{< relref "../foundations-of-software-architecture/arranging-communication/shared-data.md#messaging" >}}) as a [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}): an event producer writes its events to a topic in the repository while event consumers get notified as soon as a new record appears\.
 
 ### \(inexact\) Stamp Coupling
 
@@ -267,7 +265,7 @@ More details are [available]({{< relref "../extension-metapatterns/combined-comp
 
 A [*choreographed*]({{< relref "../foundations-of-software-architecture/arranging-communication/choreography.md" >}}) system with no shared databases does not provide any way to aggregate the data spread over its multiple services\. If we need to collect everything known about a user or purchase, we pass a query message through the system, and every service appends to it whatever it knows of the subject \(just like post offices add their *stamps* to a letter\)\. The unified message becomes a kind of virtual \(temporary\) *Shared Repository* which the services \(*Content Enrichers* according to \[[EIP]({{< relref "../appendices/books-referenced.md#eip" >}})\]\) write to\. This also manifests in the dependencies: all the services [depend on the format of the query message]({{< relref "../foundations-of-software-architecture/arranging-communication/choreography.md#dependencies" >}}) as they would on the schema of a *Shared Repository*, instead of depending on each other, as is usual with *Pipelines*\.
 
-## Evolutions
+## [Evolutions]({{< relref "../appendices/evolutions-of-architectures/evolutions-of-a-shared-repository.md" >}})
 
 Once a database appears, it is unlikely to go away\. I see the [following evolutions]({{< relref "../appendices/evolutions-of-architectures/evolutions-of-a-shared-repository.md" >}}) to improve performance of the data layer:
 

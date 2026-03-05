@@ -152,7 +152,7 @@ As we aspire to build a unified classification for both distributed and local sy
 
 A true *Monolith* features [no clear internal structure](http://laputan.org/mud/)\. If it has any components, they are so tightly coupled that the entire thing behaves as a single cohesive module\. This is what we explore in the current chapter\.
 
-### \(inexact\) Lambda Monolith, Monolambda, Lambdalith
+### \(inexact\) Lambda Monolith, Monolambda, [Lambdalith]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}})
 
 <figure>
 <a href="/diagrams/Variants/1/Lambdalith.png">
@@ -164,9 +164,9 @@ A true *Monolith* features [no clear internal structure](http://laputan.org/mud/
 </a>
 </figure>
 
-A [*Monolambda*](https://jesseduffield.com/Notes-On-Lambda/) or [*Lambdalith*](https://theburningmonk.com/2025/03/the-pros-and-cons-of-lambdalith/) is a dynamic [*Pool* of stateless instances]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}}) of a system\. Though each instance may contain [*layers*]({{< relref "../basic-metapatterns/layers.md" >}}) or [*subdomain modules*]({{< relref "../basic-metapatterns/services.md#synchronous-modules-modular-monolith-modulith" >}}), the whole is often called a *Monolith* [because it is deployed as a single unit]({{< relref "../analytics/ambiguous-patterns.md#monolith" >}})\.
+A [*Monolambda*](https://jesseduffield.com/Notes-On-Lambda/) or [*Lambdalith*](https://theburningmonk.com/2025/03/the-pros-and-cons-of-lambdalith/) is a dynamic [*Pool* of stateless instances]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}}) of a system\. Though each instance may contain [*layers*]({{< relref "../basic-metapatterns/layers.md" >}}) or [*subdomain modules*]({{< relref "../basic-metapatterns/services.md#synchronous-modules-modular-monolith-modulith" >}}), the whole is often called a *Monolith* [because it is deployed as a single unit]({{< relref "../analytics/ambiguous-patterns.md#monolith" >}})\.
 
-### \(misapplied\) Layered Monolith
+### \(misapplied\) [Layered Monolith]({{< relref "../basic-metapatterns/layers.md#synchronous-layers-layered-monolith" >}})
 
 <figure>
 <a href="/diagrams/Variants/1/Layered%20Monolith.png">
@@ -180,7 +180,7 @@ A [*Monolambda*](https://jesseduffield.com/Notes-On-Lambda/) or [*Lambdalith*](h
 
 When they say [*Layered Monolith*]({{< relref "../basic-metapatterns/layers.md#synchronous-layers-layered-monolith" >}}) \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\], that refers to a non\-distributed application with a layered structure, which is a proper [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}) architecture and will be discussed in the corresponding chapter\. It is called a *Monolith* for the [sole reason that it is not distributed]({{< relref "../analytics/ambiguous-patterns.md#monolith" >}})\. Nevertheless, *Layers* resemble *Monolith* in many aspects, including easy debugging and the risk of outgrowing the comfort zone of developers\.
 
-### \(misapplied\) Modular Monolith \(Modulith\)
+### \(misapplied\) [Modular Monolith]({{< relref "../basic-metapatterns/services.md#synchronous-modules-modular-monolith-modulith" >}}) \(Modulith\)
 
 <figure>
 <a href="/diagrams/Variants/1/Modular%20Monolith.png">
@@ -194,7 +194,7 @@ When they say [*Layered Monolith*]({{< relref "../basic-metapatterns/layers.md#s
 
 A [*Modular Monolith*]({{< relref "../basic-metapatterns/services.md#asynchronous-modules-modular-monolith-modulith-embedded-actors" >}}) \(*Modulith*\) \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] is a single\-process application subdivided into modules that correspond to subdomains\. If the modules communicate via in\-process messaging, the architecture is nearly identical to coarse\-grained [*Actors*]({{< relref "../basic-metapatterns/services.md#actors" >}}), thus it is a *Monolith* only in name\. *Modulith* [is a kind of](https://en.wikipedia.org/wiki/Duck_typing) [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) – it supports development by multiple teams and the asynchronous variant is hard to debug\. The relation to *Monolith* is mostly limited to the inability to scale individual parts of the system\.
 
-### \(misapplied\) Distributed Monolith
+### \(misapplied\) [Distributed Monolith]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#distributed-monolith" >}})
 
 <figure>
 <a href="/diagrams/Variants/1/Distributed%20Monolith.png">
@@ -208,7 +208,7 @@ A [*Modular Monolith*]({{< relref "../basic-metapatterns/services.md#asynchronou
 
 A [*Distributed Monolith*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#distributed-monolith" >}}) \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] is a highly distributed system \(usually [*Service\-Oriented Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}) or [*Services*]({{< relref "../basic-metapatterns/services.md" >}})\) where all the components still need to be deployed together because of their interdependencies\. It is said to have the drawbacks of both *Monolith* \(low fault tolerance and coupled release cycles\) and *Services* \(poor debuggability, high latency, and operational complexity\)\.
 
-### \(inexact\) Plugins and Hexagonal Architecture
+### \(inexact\) [Plugins]({{< relref "../implementation-metapatterns/plugins.md" >}}) and [Hexagonal Architecture]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}})
 
 <figure>
 <a href="/diagrams/Variants/1/Hexagonal%20Monolith.png">
@@ -266,7 +266,7 @@ That makes sense when the module owns and provides access to a hardware componen
 </a>
 </figure>
 
-A [*Reactor*](https://www.dre.vanderbilt.edu/~schmidt/PDF/reactor-siemens.pdf) \[[POSA2]({{< relref "../appendices/books-referenced.md#posa2" >}})\] may employ multiple threads by having a [*pool*]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}}) of them waiting for a request or data to come\. The incoming event activates a thread, which becomes dedicated to processing it, does several blocking calls and, finally, sends back a response\. When the request processing is complete, the thread returns to the pool of idle threads to wait for the next event to process\.
+A [*Reactor*](https://www.dre.vanderbilt.edu/~schmidt/PDF/reactor-siemens.pdf) \[[POSA2]({{< relref "../appendices/books-referenced.md#posa2" >}})\] may employ multiple threads by having a [*pool*]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}}) of them waiting for a request or data to come\. The incoming event activates a thread, which becomes dedicated to processing it, does several blocking calls and, finally, sends back a response\. When the request processing is complete, the thread returns to the pool of idle threads to wait for the next event to process\.
 
 This is the default simple & stupid implementation of backend services\. Its pitfalls include contention for shared resources, deadlocks, and high memory consumption by OS\-level threads\.
 
@@ -376,7 +376,7 @@ One of the main drawbacks of monolithic architecture is its lack of scalability 
 </a>
 </figure>
 
-- A [*Pool*]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-stateless-services-work-queue-lambdas" >}}) of stateless instances with a [*Load Balancer*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) and a [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) – any instance can process any request, but the shared database or file system limits the throughput\.
+- A [*Pool*]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}}) of stateless instances with a [*Load Balancer*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) and a [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) – any instance can process any request, but the shared database or file system limits the throughput\.
 
 
 <figure>

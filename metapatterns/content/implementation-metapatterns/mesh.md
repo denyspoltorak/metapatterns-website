@@ -150,7 +150,7 @@ Examples: torrent, onion routing \(Tor\), blockchain\.
 
 This [datacenter network architecture](https://www.geeksforgeeks.org/spine-leaf-architecture/) is a rare example of a *structured fully connected Mesh*\. It consists of client\-facing \(*leaf*\) and internal \(*spine*\) switches\. Each *leaf* is connected to every *spine*, allowing for very high bandwidth \(by distributing the traffic over multiple routes\) that is almost insensitive to failures of individual hardware as there are always many parallel connections\.
 
-### Actors
+### [Actors]({{< relref "../basic-metapatterns/shards.md#temporary-state-create-on-demand-actors" >}})
 
 <figure>
 <a href="/diagrams/Variants/4/Actors.png">
@@ -164,7 +164,7 @@ This [datacenter network architecture](https://www.geeksforgeeks.org/spine-leaf-
 
 A system of *Actors* may be classified as a *fully connected Mesh* with the actors’ message queues being the nodes of the *Mesh*\. Any actor can post messages to the queue of any other actor it knows about, as all the actors share a virtual namespace or physical address space\.
 
-### Service Mesh
+### [Service Mesh]({{< relref "../extension-metapatterns/middleware.md#service-mesh" >}})
 
 <figure>
 <a href="/diagrams/Variants/4/Service%20Mesh.png">
@@ -189,7 +189,7 @@ The control plane \(re\-\)starts, updates, scales, and collects statistics from 
 
 Ready\-to\-use *Service Mesh* frameworks are popular with the *Microservices* architecture\.
 
-### Space\-Based Architecture
+### [Space\-Based Architecture]({{< relref "../extension-metapatterns/sandwich.md#space-based-architecture" >}})
 
 <figure>
 <a href="/diagrams/Variants/4/Space-Based%20Architecture.png">

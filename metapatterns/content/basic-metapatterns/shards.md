@@ -36,7 +36,7 @@ By state:
 
 - Persistent slice: [Sharding](https://learn.microsoft.com/en-us/azure/architecture/patterns/sharding) / Shards \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] / Partitions \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\] / [Multitenancy](https://en.wikipedia.org/wiki/Multitenancy) / Cells \([Amazon definition](https://docs.aws.amazon.com/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/what-is-a-cell-based-architecture.html)\),
 - Persistent copy: Replica \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\],
-- Stateless: Pool \[[POSA3]({{< relref "../appendices/books-referenced.md#posa3" >}})\] / Instances / Replicated Stateless Services \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] / Work Queue \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] / [Lambdas](https://jesseduffield.com/Notes-On-Lambda/),
+- Stateless: Pool \[[POSA3]({{< relref "../appendices/books-referenced.md#posa3" >}})\] / Instances / Replicated Load\-Balanced Services \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] / Work Queue \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] / [Lambdas](https://jesseduffield.com/Notes-On-Lambda/),
 - Temporary state: Create on Demand / Actors\.
 
 
@@ -213,7 +213,7 @@ And if your traffic is read\-heavy, you may turn to [*Polyglot Persistence*]({{<
 
 Finally, you can mix sharding and replication to make sure that the data of each shard is replicated, either in whole among identical components \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] or piecemeal all over the system \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\]\. That achieves fault tolerance for volumes of data too large to store unsharded\.
 
-### Stateless: Pool, Instances, Replicated Stateless Services, Work Queue, Lambdas
+### Stateless: Pool, Instances, [Replicated Load\-Balanced Services]({{< relref "../extension-metapatterns/sandwich.md#inexact-replicated-load-balanced-services-lambdas" >}}), Work Queue, Lambdas
 
 <figure>
 <a href="/diagrams/Variants/1/Shards%20-%20Pool.png">
@@ -225,13 +225,13 @@ Finally, you can mix sharding and replication to make sure that the data of each
 </a>
 </figure>
 
-A predefined number \(*pool* \[[POSA3]({{< relref "../appendices/books-referenced.md#posa3" >}})\]\) of instances \(*workers*\) is created during the initialization of the system \(*Work Queue* \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\]\)\. When the system receives a task, a [*Load Balancer*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) assigns it to one of the idle instances from the pool\. As soon as the instance finishes processing its task it returns to the pool\. The instances don’t store any state while idle, thus they are also called *Replicated Stateless Services* \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\]\. A well\-known example of this pattern is [FastCGI](https://en.wikipedia.org/wiki/FastCGI)\.
+A predefined number \(*pool* \[[POSA3]({{< relref "../appendices/books-referenced.md#posa3" >}})\]\) of instances \(*workers*\) is created during the initialization of the system \(*Work Queue* \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\]\)\. When the system receives a task, a [*Load Balancer*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) assigns it to one of the idle instances, called *Replicated Load\-Balanced Services* \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\], from the pool\. As soon as the instance finishes processing its task it returns to the pool and its state is reset\. A well\-known example of this pattern is [FastCGI](https://en.wikipedia.org/wiki/FastCGI)\.
 
 This approach allows for rapid allocation of a worker to any incoming task, but it uses a lot of resources even when there are no requests to serve and the system may still be overwhelmed at peak load\. Moreover, a [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) \(database or file storage\) is usually involved for the sake of persistence, thus limiting the pattern’s scalability\.
 
 Many cloud services implement dynamic pools, the number of instances \([*lambdas*](https://jesseduffield.com/Notes-On-Lambda/)\) growing and shrinking according to the overall load: if all the current instances are busy serving user requests, new instances are created and added to the pool\. If some of the instances are idle for a while, they are destroyed\. Dynamic pooling is often implemented through [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}}), as in [*Microservices*]({{< relref "../implementation-metapatterns/mesh.md#service-mesh" >}}) or [*Space\-Based Architecture*]({{< relref "../implementation-metapatterns/mesh.md#space-based-architecture" >}})\.
 
-### Temporary state: Create on Demand, Actors
+### Temporary state: Create on Demand, [Actors]({{< relref "../basic-metapatterns/services.md#actors" >}})
 
 <figure>
 <a href="/diagrams/Variants/1/Shards%20-%20Create%20on%20Demand.png">

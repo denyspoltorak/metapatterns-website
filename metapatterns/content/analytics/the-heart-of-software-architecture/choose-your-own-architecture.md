@@ -27,7 +27,7 @@ Therefore, a one day task will likely be [*monolithic*]({{< relref "../../basic-
 </a>
 </figure>
 
-Any inherent decoupling within your domain is another factor to consider in the initial design\. For example, the layer with [domain logic]({{< relref "../../basic-metapatterns/layers.md#domain-business-rules-or-model" >}}) is very likely to contain independent subdomains which naturally make modules or services at next to no development or runtime cost\. Likewise, [*Top\-Down Hierarchy*]({{< relref "../../fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}}) is a good fit for a hierarchical domain\. A domain that builds around stepwise processing of data or events may be modeled as a [*Pipeline*]({{< relref "../../basic-metapatterns/pipeline.md" >}}), which is a very flexible architectural style\.
+Any inherent decoupling within your domain is another factor to consider in the initial design\. For example, the layer with [*domain* logic]({{< relref "../../basic-metapatterns/layers.md#domain-business-rules-or-model" >}}) is very likely to contain independent subdomains which naturally make modules or services at next to no development or runtime cost \(see [*Sandwich*]({{< relref "../../extension-metapatterns/sandwich.md" >}})\)\. Likewise, [*Top\-Down Hierarchy*]({{< relref "../../fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}}) is a good fit for a hierarchical domain\. A domain that builds around stepwise processing of data or events may be modeled as a [*Pipeline*]({{< relref "../../basic-metapatterns/pipeline.md" >}}), which is a very flexible architectural style\.
 
 <figure>
 <a href="/diagrams/Heart/Size-2.png">
@@ -54,7 +54,7 @@ Sometimes you expect to have many complex use cases which cannot be matched to y
 <picture>
 <source srcset="/diagrams/Heart/Features-1.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Heart/Features-1.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Heart/Features-1.png" alt="Features-1" loading="lazy" width="1323" height="1063" style="width:100%"/>
+<img src="/diagrams/Heart/Features-1.png" alt="Features-1" loading="lazy" width="1323" height="1043" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -87,7 +87,7 @@ Once you go distributed, you will likely employ a [*Middleware*]({{< relref "../
 
 Moreover, there are non\-functional requirements, such as performance and fault tolerance\.
 
-High throughput is achieved by [*sharding*]({{< relref "../../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-multitenancy-cells-amazon-definition" >}}) or [*replicating*]({{< relref "../../basic-metapatterns/shards.md#persistent-copy-replica" >}}) your business logic or even your data\. Sharding also helps process huge datasets while replication improves fault tolerance\. [*Space\-Based Architecture*]({{< relref "../../extension-metapatterns/combined-component.md#middleware-of-space-based-architecture" >}}) replicates the entire dataset in memory for faster access\.
+High throughput is achieved by [*sharding*]({{< relref "../../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-multitenancy-cells-amazon-definition" >}}) or [*replicating*]({{< relref "../../basic-metapatterns/shards.md#persistent-copy-replica" >}}) your business logic or even your data\. Sharding also helps process huge datasets while replication improves fault tolerance\. [*Space\-Based Architecture*]({{< relref "../../extension-metapatterns/sandwich.md#space-based-architecture" >}}) replicates the entire dataset in memory for faster access\.
 
 <figure>
 <a href="/diagrams/Heart/Performance-1.png">
@@ -111,7 +111,7 @@ Alternatively, you may use several specialized databases \([*Polyglot Persistenc
 </a>
 </figure>
 
-Scalability under uneven load is achieved through [*Function as a Service*]({{< relref "../../basic-metapatterns/services.md#single-function-faas-nanoservices" >}}) \(*Nanoservices*\), [*Service\-Mesh*]({{< relref "../../extension-metapatterns/combined-component.md#service-mesh" >}})\-based [*Microservices*]({{< relref "../../basic-metapatterns/services.md#microservices" >}}) and, to a greater extent, [*Space\-Based Architecture*]({{< relref "../../implementation-metapatterns/mesh.md#space-based-architecture" >}})\.
+Scalability under uneven load is achieved through [*Function as a Service*]({{< relref "../../basic-metapatterns/services.md#single-function-faas-nanoservices" >}}) \(*Nanoservices*\), [*Service\-Mesh*]({{< relref "../../implementation-metapatterns/mesh.md#service-mesh" >}})\-based [*Microservices*]({{< relref "../../basic-metapatterns/services.md#microservices" >}}) and, to a greater extent, [*Space\-Based Architecture*]({{< relref "../../implementation-metapatterns/mesh.md#space-based-architecture" >}})\.
 
 <figure>
 <a href="/diagrams/Heart/Performance-3.png">
@@ -177,7 +177,7 @@ When your teams develop services and you want them to be [less interdependent]({
 <picture>
 <source srcset="/diagrams/Heart/Flexibility-2.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Heart/Flexibility-2.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Heart/Flexibility-2.png" alt="Flexibility-2" loading="lazy" width="913" height="429" style="width:100%"/>
+<img src="/diagrams/Heart/Flexibility-2.png" alt="Flexibility-2" loading="lazy" width="912" height="431" style="width:100%"/>
 </picture>
 </a>
 </figure>
