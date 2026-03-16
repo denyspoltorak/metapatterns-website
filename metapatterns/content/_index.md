@@ -23,7 +23,7 @@ The content is lavishly illustrated with intuitive NoUML diagrams. It’s concis
 
 <a class="grid-row" href="https://speakerdeck.com/denyspoltorak">
 
-<h2>Presentations</h2>
+<h2>Presentations (outdated)</h2>
 
 </a>
 
