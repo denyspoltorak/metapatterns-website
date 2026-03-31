@@ -1,7 +1,7 @@
 +++
 weight = 3
 title = "Architecture and product life cycle"
-description = "The architecture of a software project evolves over its lifetime. It starts monolithic, transforms into Layers and Services, then merges back to a Monolith."
+description = "This chapter explores how the architecture of a software project expands from Monolith through Layers to Layered Services and contracts back over its lifetime."
 images = ["/diagrams/Web/og/Life%20cycle.png"]
 [sitemap]
   priority = 0.5
@@ -18,7 +18,7 @@ In my practice, a product’s architecture changes over its lifetime\. For a R&D
 <picture>
 <source srcset="/diagrams/Conclusion/Lifecycle-1.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Lifecycle-1.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Lifecycle-1.png" alt="Lifecycle-1" loading="lazy" width="802" height="228" style="width:100%"/>
+<img src="/diagrams/Conclusion/Lifecycle-1.png" alt="A diagram of a monolith." loading="lazy" width="802" height="228" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -32,7 +32,7 @@ A project in an unknown domain starts humble and small, likely as a proof of con
 <picture>
 <source srcset="/diagrams/Conclusion/Lifecycle-2.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Lifecycle-2.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Lifecycle-2.png" alt="Lifecycle-2" loading="lazy" width="810" height="323" style="width:89%"/>
+<img src="/diagrams/Conclusion/Lifecycle-2.png" alt="Diagrams of Layers and Hexagonal Architecture." loading="lazy" width="683" height="523" style="width:78%"/>
 </picture>
 </a>
 </figure>
@@ -46,12 +46,12 @@ When you have the thing working, you may start reflecting on the rules and the c
 <picture>
 <source srcset="/diagrams/Conclusion/Lifecycle-3.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Lifecycle-3.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Lifecycle-3.png" alt="Lifecycle-3" loading="lazy" width="1363" height="394" style="width:100%"/>
+<img src="/diagrams/Conclusion/Lifecycle-3.png" alt="Diagrams of Layered Services, Orchestrated Services, and Top-Down Hierarchy." loading="lazy" width="1323" height="434" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
-As you acquire domain experience, you start discerning subdomains \(or *bounded contexts* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\) and isolating them to reduce the [complexity]({{< relref "../foundations-of-software-architecture/modules-and-complexity.md" >}}) of your code\. The layered structure turns into a system of subdomain\-dedicated components: [modules]({{< relref "../basic-metapatterns/services.md#synchronous-modules-modular-monolith-modulith" >}}), [services]({{< relref "../basic-metapatterns/services.md#distributed-services-service-based-architecture-space-based-architecture-microservices" >}}), [device drivers]({{< relref "../basic-metapatterns/services.md#inexact-device-drivers" >}}) – whatever you used to name them throughout your career\. The actual architecture follows the structure of the domain, with [*Layered Services*]({{< relref "../fragmented-metapatterns/layered-services.md" >}}), [*Orchestrated Services*]({{< relref "../extension-metapatterns/orchestrator.md" >}}), and [*Top\-Down Hierarchy*]({{< relref "../fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}}) among common examples\. The fragmentation of the system enables development by multiple teams with diverse technologies and styles, reduces ripple effect of changes, and helps testability\. However, use cases for the system as a whole become harder to understand and fix – if only because they traverse the parts of the code owned by multiple teams – which is not extremely bad given you have enough humanpower to do the work\.
+As you acquire domain experience, you start discerning subdomains \(or *bounded contexts* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\) and isolating them to reduce the [complexity]({{< relref "../foundations-of-software-architecture/modules-and-complexity.md" >}}) of your code\. The layered structure turns into a system of subdomain\-dedicated components: [modules]({{< relref "../basic-metapatterns/services.md#synchronous-modules-modular-monolith-modulith" >}}), [services]({{< relref "../basic-metapatterns/services.md#distributed-services-service-based-architecture-space-based-architecture-microservices" >}}), [device drivers]({{< relref "../basic-metapatterns/services.md#inexact-device-drivers-pedestal" >}}) – whatever you used to name them throughout your career\. The actual architecture follows the structure of the domain, with [*Layered Services*]({{< relref "../fragmented-metapatterns/layered-services.md" >}}), [*Orchestrated Services*]({{< relref "../extension-metapatterns/orchestrator.md" >}}), and [*Top\-Down Hierarchy*]({{< relref "../fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}}) among common examples\. The fragmentation of the system enables development by multiple teams with diverse technologies and styles, reduces ripple effect of changes, and helps testability\. However, use cases for the system as a whole become harder to understand and fix – if only because they traverse the parts of the code owned by multiple teams – which is not extremely bad given you have enough humanpower to do the work\.
 
 ### Adulthood \(production\) – ad\-hoc composition
 
@@ -60,7 +60,7 @@ As you acquire domain experience, you start discerning subdomains \(or *bounded 
 <picture>
 <source srcset="/diagrams/Conclusion/Lifecycle-4.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Lifecycle-4.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Lifecycle-4.png" alt="Lifecycle-4" loading="lazy" width="1123" height="394" style="width:100%"/>
+<img src="/diagrams/Conclusion/Lifecycle-4.png" alt="Layered Services evolve into a pragmatic architecture where the application layers of some services are merged while the domain layer of another service is subdivided." loading="lazy" width="1123" height="414" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -74,7 +74,7 @@ As the product enters the market, its development tends to slow down with more a
 <picture>
 <source srcset="/diagrams/Conclusion/Lifecycle-5.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Lifecycle-5.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Lifecycle-5.png" alt="Lifecycle-5" loading="lazy" width="463" height="323" style="width:54%"/>
+<img src="/diagrams/Conclusion/Lifecycle-5.png" alt="A diagram of Layers with multiple databases." loading="lazy" width="463" height="323" style="width:54%"/>
 </picture>
 </a>
 </figure>
@@ -88,7 +88,7 @@ When active development ceases, you lose even more people and funding as you dri
 <picture>
 <source srcset="/diagrams/Conclusion/Lifecycle-6.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Lifecycle-6.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Lifecycle-6.png" alt="Lifecycle-6" loading="lazy" width="463" height="283" style="width:55%"/>
+<img src="/diagrams/Conclusion/Lifecycle-6.png" alt="A diagram of a monolith with multiple databases." loading="lazy" width="463" height="283" style="width:55%"/>
 </picture>
 </a>
 </figure>

@@ -12,7 +12,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 The most common modifications to a [system of *Services*]({{< relref "../../basic-metapatterns/services.md" >}}) involve supplementary system\-wide *layers* which compensate for the inability of the *Services* to share anything among themselves:
 
 - A [*Middleware*]({{< relref "../../extension-metapatterns/middleware.md" >}}) knows of all the deployed service [instances]({{< relref "../../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}})\. It mediates communication between them and may manage their scaling and failure recovery\.
-- [*Sidecars*]({{< relref "../../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \[[DDS]({{< relref "../../appendices/books-referenced.md#dds" >}})\] of a [*Service Mesh*]({{< relref "../../implementation-metapatterns/mesh.md#service-mesh" >}}) make a virtual layer of [shared libraries]({{< relref "../../analytics/comparison-of-architectural-patterns/sharing-functionality-or-data-among-services.md" >}}) for the [*Microservices*]({{< relref "../../basic-metapatterns/services.md#microservices" >}}) it hosts\.
+- [*Sidecars*]({{< relref "../../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) of a [*Service Mesh*]({{< relref "../../implementation-metapatterns/mesh.md#service-mesh" >}}) make a virtual layer of [shared libraries]({{< relref "../../analytics/comparison-of-architectural-patterns/sharing-functionality-or-data-among-services.md" >}}) for the [*Microservices*]({{< relref "../../basic-metapatterns/services.md#microservices" >}}) it hosts\.
 - A [*Shared Database*]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) simplifies the initial phases of development and provides data consistency and [interservice communication]({{< relref "../../foundations-of-software-architecture/arranging-communication/shared-data.md" >}})\.
 - [*Proxies*]({{< relref "../../extension-metapatterns/proxy.md" >}}) stand between the system and its clients and take care of shared aspects that otherwise would need to be implemented by every service\.
 - An [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) is the single place for the high\-level logic of every use case\.
@@ -26,7 +26,7 @@ The most common modifications to a [system of *Services*]({{< relref "../../basi
 <picture>
 <source srcset="/diagrams/Evolutions/Services/Services%20add%20Middleware.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Services/Services%20add%20Middleware.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Services/Services%20add%20Middleware.png" alt="Services add Middleware" loading="lazy" width="1307" height="304" style="width:100%"/>
+<img src="/diagrams/Evolutions/Services/Services%20add%20Middleware.png" alt="The communication aspect of services can be covered by a dedicated middleware." loading="lazy" width="1307" height="304" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -63,7 +63,7 @@ Distributed systems may fail in a zillion ways\. You want to ruminate neither on
 <picture>
 <source srcset="/diagrams/Variants/2/Multifunctional%20-%20Service%20Mesh.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Multifunctional%20-%20Service%20Mesh.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/2/Multifunctional%20-%20Service%20Mesh.png" alt="Multifunctional - Service Mesh" loading="lazy" width="1083" height="323" style="width:100%"/>
+<img src="/diagrams/Variants/2/Multifunctional%20-%20Service%20Mesh.png" alt="Scaled services reside on a shared layer of sidecars which is placed on top of a shared mesh engine. All instances of each service access the service's database." loading="lazy" width="1083" height="323" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -74,7 +74,7 @@ Distributed systems may fail in a zillion ways\. You want to ruminate neither on
 
 <ins>Prerequisite</ins>: service instances are mostly [stateless]({{< relref "../../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}})\.
 
-The [*Microservices*]({{< relref "../../basic-metapatterns/services.md#microservices" >}}) architecture boasts dynamic scaling under load thanks to its *Mesh*\-based *Middleware*\. It also allows for the services to share libraries in *Sidecars* \[[DDS]({{< relref "../../appendices/books-referenced.md#dds" >}})\] – additional containers co\-located with each service instance – to avoid duplication of generic code among the services\.
+The [*Microservices*]({{< relref "../../basic-metapatterns/services.md#microservices" >}}) architecture boasts dynamic scaling under load thanks to its *Mesh*\-based *Middleware*\. It also allows for the services to share libraries in *Sidecars* – additional containers co\-located with each service instance – to avoid duplication of generic code among the services\.
 
 <ins>Pros</ins>: 
 
@@ -96,7 +96,7 @@ The [*Microservices*]({{< relref "../../basic-metapatterns/services.md#microserv
 <picture>
 <source srcset="/diagrams/Evolutions/Services/Services%20to%20Shared%20Database.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Services/Services%20to%20Shared%20Database.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Services/Services%20to%20Shared%20Database.png" alt="Services to Shared Database" loading="lazy" width="1267" height="284" style="width:100%"/>
+<img src="/diagrams/Evolutions/Services/Services%20to%20Shared%20Database.png" alt="The data of individual services is merged into a shared repository." loading="lazy" width="1267" height="284" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -136,7 +136,7 @@ You don’t really need every service to have a private database\. A shared one 
 <picture>
 <source srcset="/diagrams/Evolutions/Services/Services%20add%20Proxy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Services/Services%20add%20Proxy.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Services/Services%20add%20Proxy.png" alt="Services add Proxy" loading="lazy" width="1307" height="385" style="width:100%"/>
+<img src="/diagrams/Evolutions/Services/Services%20add%20Proxy.png" alt="Generic aspects of services move to a shared proxy." loading="lazy" width="1307" height="385" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -174,7 +174,7 @@ Putting a generic component between the system and its clients helps the program
 <picture>
 <source srcset="/diagrams/Evolutions/Services/Services%20use%20Orchestrator.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Services/Services%20use%20Orchestrator.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Services/Services%20use%20Orchestrator.png" alt="Services use Orchestrator" loading="lazy" width="1307" height="385" style="width:100%"/>
+<img src="/diagrams/Evolutions/Services/Services%20use%20Orchestrator.png" alt="The application logic is extracted from individual services into a shared orchestrator." loading="lazy" width="1307" height="385" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -183,7 +183,7 @@ Putting a generic component between the system and its clients helps the program
 
 <ins>Goal</ins>: have the high\-level logic of use cases distilled as intelligible code\.
 
-<ins>Prerequisite</ins>: the use cases comprise sequences of high\-level steps \(which is very likely to be true for a system of [*subdomain services*]({{< relref "../../basic-metapatterns/services.md#whole-subdomain-sub-domain-services" >}})\)\.
+<ins>Prerequisite</ins>: the use cases comprise sequences of high\-level steps \(which is very likely to be true for a system of [*subdomain services*]({{< relref "../../basic-metapatterns/services.md#whole-subdomain-sub-domain-services-macroservices" >}})\)\.
 
 When a use case jumps over several services in a dance of [*choreography*]({{< relref "../../foundations-of-software-architecture/arranging-communication/choreography.md" >}}), there is no easy way to understand it as there is no single place to see it in the code\. It may be even worse with [*Pipelined*]({{< relref "../../basic-metapatterns/pipeline.md" >}}) systems where use cases are embodied in the structure of event channels between the components\.
 
@@ -219,7 +219,7 @@ Extract the high\-level business logic from the choreographed services or their 
 <picture>
 <source srcset="/diagrams/Evolutions/Services/Services%20to%20Sandwich.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Services/Services%20to%20Sandwich.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Services/Services%20to%20Sandwich.png" alt="Services to Sandwich" loading="lazy" width="1307" height="323" style="width:100%"/>
+<img src="/diagrams/Evolutions/Services/Services%20to%20Sandwich.png" alt="The application and data parts of services are separated from the domain logic and merged into system-wide layers, resulting in a Sandwich." loading="lazy" width="1307" height="323" style="width:100%"/>
 </picture>
 </a>
 </figure>

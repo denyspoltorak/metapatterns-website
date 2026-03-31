@@ -1,7 +1,7 @@
 +++
 weight = 8
 title = "Proxy"
-description = "A Proxy represents a system to its clients and takes care of some aspects of the communication."
+description = "This chapter discusses proxies such as: Firewall, Response Cache, Load Balancer, Sharding Proxy, Reverse Proxy, Adapter, API Gateway, and even User Interface."
 images = ["/diagrams/Web/og/Proxy.png"]
 [sitemap]
   priority = 0.8
@@ -14,7 +14,7 @@ images = ["/diagrams/Web/og/Proxy.png"]
 <picture>
 <source srcset="/diagrams/Main/Proxy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Proxy.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Proxy.png" alt="Proxy" loading="lazy" width="1082" height="574" style="width:100%"/>
+<img src="/diagrams/Main/Proxy.png" alt="A diagram for Services with a proxy, in abstractness-subdomain-sharding coordinates." loading="lazy" width="1082" height="574" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -23,45 +23,9 @@ images = ["/diagrams/Web/og/Proxy.png"]
 
 <ins>Known as:</ins> [Proxy](https://refactoring.guru/design-patterns/proxy) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\]\.
 
-<ins>Aspects:</ins>
-
-- Isolation,
-- Translation,
-- Routing,
-- Offloading\.
-
-
-<ins>Variants:</ins>
-
-By [transparency](https://community.f5.com/kb/technicalarticles/what-is-a-proxy/282718):
-
-- Full Proxy,
-- Half\-Proxy\.
-
-
-By placement:
-
-- Separate deployment,
-- On the system side: Sidecar \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\],
-- On the client side: Ambassador \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\]\.
-
-
-<ins>Examples:</ins>
-
-- Firewall / [\(API\) Rate Limiter](https://testfully.io/blog/api-rate-limit/) / API Throttling,
-- Response Cache / [Read\-Through Cache](https://www.enjoyalgorithms.com/blog/read-through-caching-strategy) / [Write\-Through Cache](https://www.enjoyalgorithms.com/blog/write-through-caching-strategy) / [Write\-Behind Cache](https://www.enjoyalgorithms.com/blog/write-behind-caching-pattern) / Cache \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] / Caching Layer \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] / Distributed Cache / Replicated Cache,
-- [Load Balancer](https://en.wikipedia.org/wiki/Load_balancing_(computing)) \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] / Sharding Proxy \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] / [Cell Router](https://docs.aws.amazon.com/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/cell-routing.html) / Messaging Grid \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] / Scheduler, 
-- Dispatcher \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}})\] / [Reverse Proxy](https://traefik.io/blog/reverse-proxy-vs-ingress-controller-vs-api-gateway/) / [Ingress Controller](https://traefik.io/blog/reverse-proxy-vs-ingress-controller-vs-api-gateway/) / [Edge Service](https://medium.com/knerd/api-infrastructure-at-knewton-whats-in-an-edge-service-51a3777aeb41) / [Microgateway](https://github.com/wso2/reference-architecture/blob/master/event-driven-api-architecture.md), 
-- [Adapter](https://refactoring.guru/design-patterns/adapter) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}}), [DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] / Anticorruption Layer \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] / Abstraction Layer / Open Host Service \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] / Gateway \[[PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\] / Message Translator \[[EIP]({{< relref "../appendices/books-referenced.md#eip" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\] / [API Service](https://backendless.com/what-is-api-as-a-service/) / [Cell Gateway](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md) / \(inexact\) Backend for Frontend / Database Access Layer \[[POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\] / Data Mapper \[[PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\] / [Repository](https://martinfowler.com/eaaCatalog/repository.html) \[[PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}}), [DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\.
-- \(with [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}})\) API Gateway \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\],
-- User Interface / Presentation Layer \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] / [Separated Presentation](https://martinfowler.com/eaaDev/SeparatedPresentation.html) / Command Line Interface \(CLI\) / Graphical User Interface \(GUI\) / Frontend / [Human\-Machine Interface](https://en.wikipedia.org/wiki/User_interface#Terminology) \(HMI\) / [Man\-Machine Interface](https://en.wikipedia.org/wiki/User_interface#Terminology) \(MMI\) / [Operator Interface](https://en.wikipedia.org/wiki/User_interface#Terminology)\.
-
-
-See also [*Backends for Frontends*]({{< relref "../fragmented-metapatterns/backends-for-frontends--bff-.md" >}}) \(a *Gateway* per client type\)\.
-
 <ins>Structure:</ins> A layer that pre\-processes and/or routes user requests\.
 
-<ins>Type:</ins> Extension\.
+<ins>Type:</ins> Extension component\.
 
 | *Benefits* | *Drawbacks* |
 | --- | --- |
@@ -86,7 +50,7 @@ Most kinds of proxies trade latency \(the extra network hop\) for some other qua
 
 - A [*Firewall*]({{< relref "#firewall-api-rate-limiter-api-throttling" >}}) slows down processing of good requests but *protects* the system from attacks\.
 - Both a [*Load Balancer*]({{< relref "#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) and a [*Dispatcher*]({{< relref "#dispatcher-reverse-proxy-ingress-controller-edge-service-microgateway" >}}) allow for the use of multiple servers \(with identical or specialized components, respectively\) to improve the system’s *throughput* but they still add to the minimum latency\.
-- An [*Adapter*]({{< relref "#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) adds *compatibility* but its latency cost is higher than with other *Proxies* as it not only forwards the original message but also changes its payload – an activity which involves data processing and serialization\.
+- An [*Adapter*]({{< relref "#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) adds *compatibility* but its latency cost is higher than with other *Proxies* as it not only forwards the original message but also changes its payload – an activity which involves data processing and serialization\.
 
 
 A [*Cache*]({{< relref "#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}}) is a bit weird in that respect\. It improves latency and throughput for repeated requests but degrades latency for unique ones\. Furthermore, it is often colocated with some other kind of *Proxy* to avoid the extra network hop between the *Proxies*, which makes caching almost free in terms of latency\.
@@ -119,7 +83,7 @@ In fact, because *Proxies* tend to have their dependencies configured on startup
 <picture>
 <source srcset="/diagrams/Relations/Proxy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Relations/Proxy.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Relations/Proxy.png" alt="Proxy" loading="lazy" width="1263" height="462" style="width:100%"/>
+<img src="/diagrams/Relations/Proxy.png" alt="A proxy for a monolith, shards, layers, and services." loading="lazy" width="1263" height="462" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -144,12 +108,12 @@ A *Proxy* [may either fully isolate the system it represents or merely help esta
 <picture>
 <source srcset="/diagrams/Variants/2/Full%20Proxy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Full%20Proxy.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/2/Full%20Proxy.png" alt="Full Proxy" loading="lazy" width="703" height="363" style="width:94%"/>
+<img src="/diagrams/Variants/2/Full%20Proxy.png" alt="A full proxy mediates all messages between a client and a server." loading="lazy" width="703" height="363" style="width:94%"/>
 </picture>
 </a>
 </figure>
 
-A *Full Proxy* processes every message between the system and its clients\. It completely isolates the system and may meddle with the protocols but it is resource\-heavy and adds to latency\. [*Adapters*]({{< relref "#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) and [*Response Caches*]({{< relref "#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}}) are always *Full Proxies*\.
+A *Full Proxy* processes every message between the system and its clients\. It completely isolates the system and may meddle with the protocols but it is resource\-heavy and adds to latency\. [*Adapters*]({{< relref "#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) and [*Response Caches*]({{< relref "#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}}) are always *Full Proxies*\.
 
 ### Half\-Proxy
 
@@ -158,7 +122,7 @@ A *Full Proxy* processes every message between the system and its clients\. It c
 <picture>
 <source srcset="/diagrams/Variants/2/Half%20Proxy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Half%20Proxy.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/2/Half%20Proxy.png" alt="Half Proxy" loading="lazy" width="707" height="363" style="width:100%"/>
+<img src="/diagrams/Variants/2/Half%20Proxy.png" alt="A half-proxy intercepts only the session establishment request and is transparent to the following in-session communication between the client and server." loading="lazy" width="707" height="363" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -176,7 +140,7 @@ As a *Proxy* stands between a \(sub\)system and its client\(s\), we can imagine 
 <picture>
 <source srcset="/diagrams/Variants/2/Proxy%20placement%20-%20Standalone.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Proxy%20placement%20-%20Standalone.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/2/Proxy%20placement%20-%20Standalone.png" alt="Proxy placement - Standalone" loading="lazy" width="963" height="345" style="width:100%"/>
+<img src="/diagrams/Variants/2/Proxy%20placement%20-%20Standalone.png" alt="A standalone proxy is placed between a client and a layer of services." loading="lazy" width="963" height="345" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -194,12 +158,12 @@ We can deploy a *Proxy* as a separate system component\. This has the downside o
 <picture>
 <source srcset="/diagrams/Variants/2/Proxy%20placement%20-%20Sidecar.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Proxy%20placement%20-%20Sidecar.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/2/Proxy%20placement%20-%20Sidecar.png" alt="Proxy placement - Sidecar" loading="lazy" width="763" height="263" style="width:100%"/>
+<img src="/diagrams/Variants/2/Proxy%20placement%20-%20Sidecar.png" alt="A sidecar is co-located with the services and translates from the client's protocol to the service's API." loading="lazy" width="763" height="263" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
-We can often co\-locate a *Proxy* with our system when the latter is not distributed\. That avoids the extra network delay, traffic, operational complexity and does not add any new hardware which can fail at the most untimely moments\. Such a placement is called *Sidecar* \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] and it is mostly applicable to [*Adapters*]({{< relref "#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}})\.
+We can often co\-locate a *Proxy* with our system when the latter is not distributed\. That avoids the extra network delay, traffic, operational complexity and does not add any new hardware which can fail at the most untimely moments\. Such a placement is called *Sidecar* \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] \(after the motorcycle add\-on\) and it is mostly applicable to [*Adapters*]({{< relref "#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}})\.
 
 It should be noted that *Sidecar* – co\-locating a generic component and business logic – is more of a DevOps approach than an architectural pattern, thus we can see it used in a variety of ways \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\]:
 
@@ -214,7 +178,7 @@ It should be noted that *Sidecar* – co\-locating a generic component and busin
 <picture>
 <source srcset="/diagrams/Variants/2/Sidecars.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Sidecars.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/2/Sidecars.png" alt="Sidecars" loading="lazy" width="1203" height="264" style="width:100%"/>
+<img src="/diagrams/Variants/2/Sidecars.png" alt="A proxy between a service and its client; one between a service and a middleware; an extension aside of a service; a utility layer below a service." loading="lazy" width="1203" height="264" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -228,7 +192,7 @@ It should be noted that *Sidecar* – co\-locating a generic component and busin
 <picture>
 <source srcset="/diagrams/Variants/2/Proxy%20placement%20-%20Ambassador.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Proxy%20placement%20-%20Ambassador.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/2/Proxy%20placement%20-%20Ambassador.png" alt="Proxy placement - Ambassador" loading="lazy" width="783" height="261" style="width:100%"/>
+<img src="/diagrams/Variants/2/Proxy%20placement%20-%20Ambassador.png" alt="An ambassador runs on the client side and translates the client's protocol into the one in use with the service." loading="lazy" width="783" height="261" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -236,7 +200,7 @@ It should be noted that *Sidecar* – co\-locating a generic component and busin
 Finally, a *Proxy* may be co\-located with a component’s clients, making it an *Ambassador*  \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\]\. Its use cases include:
 
 - Low\-latency systems with [stateful *shards*]({{< relref "../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-multitenancy-cells-amazon-definition" >}}) – each client should access the shard that has their data, which the *Proxy* knows how to choose\.
-- [*Adapters*]({{< relref "#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) that help client applications use an optimized or secure protocol\.
+- [*Adapters*]({{< relref "#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) that help client applications use an optimized or secure protocol\.
 
 
 Notably, a [*Plugin*]({{< relref "../implementation-metapatterns/plugins.md" >}}) may act as an *Ambassador* for its origin subsystem\. It makes local decisions in some scenarios while others cause it to communicate with the service it represents\. See [*Ambassador Plugin*]({{< relref "../implementation-metapatterns/plugins.md#ambassador-plugin-logic-extension" >}})\.
@@ -246,7 +210,7 @@ Notably, a [*Plugin*]({{< relref "../implementation-metapatterns/plugins.md" >}}
 <picture>
 <source srcset="/diagrams/Variants/4/Ambassador%20Plugin.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/Ambassador%20Plugin.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/4/Ambassador%20Plugin.png" alt="Ambassador Plugin" loading="lazy" width="1003" height="283" style="width:100%"/>
+<img src="/diagrams/Variants/4/Ambassador%20Plugin.png" alt="An ambassador plugin is a part of one service hosted inside another service. When called, it may consult its origin service or make independent decisions." loading="lazy" width="1003" height="283" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -255,13 +219,22 @@ Notably, a [*Plugin*]({{< relref "../implementation-metapatterns/plugins.md" >}}
 
 *Proxies* are ubiquitous in backend systems as using one or several of them frees the underlying code from the need to provide boilerplate non\-business\-logic functionality\. It is common to have several kinds of *Proxies* deployed sequentially \(e\.g\. [*API Gateways*]({{< relref "#api-gateway" >}}) behind [*Load Balancers*]({{< relref "#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) behind a [*Firewall*]({{< relref "#firewall-api-rate-limiter-api-throttling" >}})\) with many of them [*pooled*]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}}) to improve performance and stability\. It is also possible to employ multiple kinds of *Proxies*, each serving its own kind of client, in parallel, resulting in [*Backends for Frontends*]({{< relref "../fragmented-metapatterns/backends-for-frontends--bff-.md" >}})\.
 
-As *Proxies* are used for many purposes, there are a variety of their specializations and names\. Below is a very rough categorization, complicated by the fact that real\-world *Proxies* often implement several categories at once\.
+As *Proxies* are used for many purposes, there are a variety of their specializations and names\. Below is a very rough categorization, complicated by the fact that real\-world *Proxies* often implement several categories at once:
 
 <aside>
 
 > For example, NGINX claims to be: an HTTP web server, [*Reverse Proxy*]({{< relref "#dispatcher-reverse-proxy-ingress-controller-edge-service-microgateway" >}}), content [*Cache*]({{< relref "#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}}), [*Load Balancer*]({{< relref "#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}), TCP/UDP *Proxy* server, and mail *Proxy* server – all at once\.
 
 </aside>
+
+- A [*Firewall*]({{< relref "#firewall-api-rate-limiter-api-throttling" >}}) defends a system from attacks\.
+- A [*Response Cache*]({{< relref "#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}}) reuses a system’s responses to reduce load on the system\.
+- A [*Load Balancer*]({{< relref "#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) evenly distributes requests over several instances of a service\.
+- A [*Reverse Proxy*]({{< relref "#dispatcher-reverse-proxy-ingress-controller-edge-service-microgateway" >}}) dispatches requests that come through a single entry point to several internal services\.
+- An [*Adapter*]({{< relref "#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) translates between a pair of protocols or interfaces\.
+- An [*API Gateway*]({{< relref "#api-gateway" >}}) parses a client protocol, interprets compound requests, and forwards the subrequests to multiple internal services\.
+- A [*User Interface*]({{< relref "#user-interface-presentation-layer-separated-presentation-command-line-interface-cli-graphical-user-interface-gui-frontend-human-machine-interface-hmi-man-machine-interface-mmi-operator-interface" >}}) represents a system in a way convenient for human interaction\.
+
 
 ### Firewall, \(API\) Rate Limiter, API Throttling
 
@@ -270,7 +243,7 @@ As *Proxies* are used for many purposes, there are a variety of their specializa
 <picture>
 <source srcset="/diagrams/Variants/2/Firewall.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Firewall.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/2/Firewall.png" alt="Firewall" loading="lazy" width="923" height="423" style="width:92%"/>
+<img src="/diagrams/Variants/2/Firewall.png" alt="A firewall lets a request from a good client pass through while requests from a malicious client are blocked." loading="lazy" width="923" height="423" style="width:92%"/>
 </picture>
 </a>
 </figure>
@@ -288,12 +261,12 @@ The *Firewall* is a component for white\- and black\-listing network traffic, mo
 <picture>
 <source srcset="/diagrams/Variants/2/Cache.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Cache.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/2/Cache.png" alt="Cache" loading="lazy" width="1143" height="425" style="width:100%"/>
+<img src="/diagrams/Variants/2/Cache.png" alt="A cache proxies requests and remembers responses to shortcircuit the processing of future requests." loading="lazy" width="1143" height="425" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
-If a system often gets identical requests, it is possible to remember its responses to most frequent of them and return the cached response without fully re\-processing the request\. The real thing is more complicated because users tend to change the data which the system stores, necessitating a variety of *cache refresh policies*\. A *Response Cache* may be co\-located with a *Load Balancer* or it may be \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] [*sharded*]({{< relref "../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-multitenancy-cells-amazon-definition" >}}) \(each *Cache* processes a unique subset of requests\) and/or [*replicated*]({{< relref "../basic-metapatterns/shards.md#persistent-copy-replica" >}}) \(all the *Caches* are similar\) and thus require a *Load Balancer* of its own\.
+If a system often gets identical requests, it is possible to remember its responses to most frequent of them and return the cached response without fully re\-processing the request\. The real thing is more complicated because users tend to change the data which the system stores, necessitating a variety of *cache refresh policies*\. A *Response Cache* may be co\-located with a [*Load Balancer*]({{< relref "#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) or it may be \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] [*sharded*]({{< relref "../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-multitenancy-cells-amazon-definition" >}}) \(each *Cache* processes a unique subset of requests\) and/or [*replicated*]({{< relref "../basic-metapatterns/shards.md#persistent-copy-replica" >}}) \(all the *Caches* are similar\) and thus require a *Load Balancer* of its own\.
 
 It is called *Response Cache* because it stores the system’s responses to requests of its users or just *Cache* \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] because it is the most common kind of *Cache* in system architecture\.
 
@@ -318,7 +291,7 @@ It is possible to combine multiple servers into a virtual *Caching Layer* \[[DDS
 <picture>
 <source srcset="/diagrams/Variants/2/Load%20Balancer.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Load%20Balancer.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/2/Load%20Balancer.png" alt="Load Balancer" loading="lazy" width="1163" height="366" style="width:100%"/>
+<img src="/diagrams/Variants/2/Load%20Balancer.png" alt="A load balancer forwards a client's request to any idle instance of a stateless service. A sharding proxy forwards a client's request to the shard that contains the client's data." loading="lazy" width="1163" height="366" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -340,7 +313,7 @@ Here we have a hardware or software component which distributes user traffic amo
 <picture>
 <source srcset="/diagrams/Variants/2/Dispatcher.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Dispatcher.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/2/Dispatcher.png" alt="Dispatcher" loading="lazy" width="763" height="321" style="width:100%"/>
+<img src="/diagrams/Variants/2/Dispatcher.png" alt="A dispatcher exposes an interface which merges the interfaces of the services below the dispatcher." loading="lazy" width="763" height="321" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -349,16 +322,16 @@ The [*Reverse Proxy*, *Ingress Controller*](https://traefik.io/blog/reverse-prox
 
 *Dispatcher* \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}})\] is a similar component for a single\-process application\. It serves a complex command line interface by receiving and preprocessing user commands only to forward each command to a module which knows how to handle it\. The modules may register their commands with the *Dispatcher* at startup or there may be a static dispatch table in the code\.
 
-You could have noticed that *Dispatcher* or *Reverse Proxy* is quite similar to *Load Balancer* or *Sharding Proxy* – they differ mostly in what kind of system lies below them: [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) or [*Shards*]({{< relref "../basic-metapatterns/shards.md" >}})\.
+You could have noticed that *Dispatcher* or *Reverse Proxy* is quite similar to [*Load Balancer* or *Sharding Proxy*]({{< relref "#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) – they differ mostly in what kind of system lies below them: [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) or [*Shards*]({{< relref "../basic-metapatterns/shards.md" >}})\.
 
-### Adapter, Anticorruption Layer, Abstraction Layer, Open Host Service, Gateway, Message Translator, API Service, Cell Gateway, \(inexact\) Backend for Frontend, Database Access Layer, Data Mapper, Repository
+### Adapter, [Anticorruption Layer, Abstraction Layer]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#lower-half-pedestal-abstraction-layer-anticorruption-layer" >}}), [Open Host Service]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#upper-half-separated-presentation-open-host-service" >}}), Gateway, Message Translator, API Service, Cell Gateway, \(inexact\) Backend for Frontend, Database Access Layer, Data Mapper, Repository, [Driver]({{< relref "../basic-metapatterns/services.md#inexact-device-drivers-pedestal" >}})
 
 <figure>
 <a href="/diagrams/Variants/2/Adapter.png">
 <picture>
 <source srcset="/diagrams/Variants/2/Adapter.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Adapter.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/2/Adapter.png" alt="Adapter" loading="lazy" width="763" height="321" style="width:100%"/>
+<img src="/diagrams/Variants/2/Adapter.png" alt="An adapter between a client and a service provider translates between their protocols." loading="lazy" width="763" height="321" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -367,15 +340,17 @@ An [*Adapter*](https://refactoring.guru/design-patterns/adapter) \[[GoF]({{< rel
 
 As an *Adapter* adapts in two directions, it is often found between two components \(in [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}})\) or between a component and [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) \(in [*Enterprise Service Bus*]({{< relref "../extension-metapatterns/middleware.md#enterprise-service-bus-esb" >}}) and [*Service Mesh*]({{< relref "../extension-metapatterns/middleware.md#service-mesh" >}})\)\.
 
-In \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\], when one component \(*consumer*\) depends on another \(*supplier*\), there may be an *Adapter* in between to decouple them\. It is called *Anticorruption Layer* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] when owned by the *consumer*’s team or *Open Host Service* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] if the *supplier* adds it to grant one or more stable interfaces \(*Published Languages* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\)\.
+In \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\], when one component \(*consumer*\) depends on another \(*supplier*\), there may be an *Adapter* in between to decouple them\. It is called *Anticorruption Layer* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] \(as it protects its host from changes in its dependencies\) when owned by the *consumer*’s team or *Open Host Service* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] \(for its readiness to serve any clients\) if the *supplier* adds it to grant one or more stable interfaces \(*Published Languages* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\)\.
 
-A *Gateway* \[[PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\] or [*API Service*](https://backendless.com/what-is-api-as-a-service/) often implies an *Adapter* with extra functionality, like *Reverse Proxy*, authorization and authentication\. [*Cell Gateway*](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md) is a *Gateway* for a [*Cell*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#examples--cell" >}})\.
+A *Gateway* \[[PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\] or [*API Service*](https://backendless.com/what-is-api-as-a-service/) often implies an *Adapter* with extra functionality, like *Reverse Proxy*, authorization and authentication\. [*Cell Gateway*](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md) is a *Gateway* for a [*Cell*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}})\.
 
 When a *Gateway* translates a single public API method into several calls towards internal services, it becomes an *API Gateway* \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] which is an aggregate of *Proxy* \(for protocol translation\) and [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}})\.
 
 An *Adapter* between an end\-user client \(web interface, mobile application, etc\.\) and the system’s API is often called [*Backend for Frontend*]({{< relref "../fragmented-metapatterns/backends-for-frontends--bff-.md" >}})\. It decouples the UI from the backend\-owned system’s API, giving the teams behind both components freedom to work with less synchronization\.
 
-There is also a whole bunch of *Abstraction Layers* that aim to protect the business logic from its environment, the idea which is perfected by [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}):
+Adapters between software and hardware components are called \(*device*\) *Drivers*\.
+
+There is also a whole bunch of *Abstraction Layers* that aim to protect the business logic from its environment, the idea which [is perfected]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#lower-half-pedestal-abstraction-layer-anticorruption-layer" >}}) by [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}):
 
 - [*Hardware Abstraction Layer*](https://en.wikipedia.org/wiki/Hardware_abstraction) \(*HAL*\) hides details of hardware to make the code portable\.
 - [*Operating System Abstraction Layer*](https://en.wikipedia.org/wiki/Operating_system_abstraction_layer) \(*OSAL*\) or *Platform Abstraction Layer* \(*PAL*\) abstracts the OS to make the application cross\-platform\.
@@ -396,28 +371,28 @@ There is also a whole bunch of *Abstraction Layers* that aim to protect the busi
 <picture>
 <source srcset="/diagrams/Variants/2/API%20Gateway.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/API%20Gateway.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/2/API%20Gateway.png" alt="API Gateway" loading="lazy" width="923" height="365" style="width:100%"/>
+<img src="/diagrams/Variants/2/API%20Gateway.png" alt="An API Gateway both translates from the client's to the system's protocol and calls services in parallel." loading="lazy" width="923" height="365" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
-*API Gateway* \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] is a fusion of [*Gateway*]({{< relref "#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \(*Proxy*\) and [*API Composer*]({{< relref "../extension-metapatterns/orchestrator.md#api-composer-remote-facade-gateway-aggregation-composed-message-processor-scatter-gather-mapreduce" >}}) \([*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}})\)\. The *Gateway* aspect encapsulates the external \(public\) protocol while the *API Compose*r translates the system’s high\-level public API methods into multiple \(usually parallel\) calls to the APIs of internal components, collects the results and conjoins them into a response\.
+*API Gateway* \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] is a fusion of [*Gateway*]({{< relref "#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) \(*Proxy*\) and [*API Composer*]({{< relref "../extension-metapatterns/orchestrator.md#api-composer-remote-facade-gateway-aggregation-composed-message-processor-scatter-gather-mapreduce" >}}) \([*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}})\)\. The *Gateway* aspect encapsulates the external \(public\) protocol while the *API Compose*r translates the system’s high\-level public API methods into multiple \(usually parallel\) calls to the APIs of internal components, collects the results and conjoins them into a response\.
 
 *API Gateway* is [discussed in more detail]({{< relref "../extension-metapatterns/orchestrator.md#api-gateway" >}}) under *Orchestrator*\.
 
-### User Interface, Presentation Layer, Separated Presentation, Command Line Interface \(CLI\), Graphical User Interface \(GUI\), Frontend, Human\-Machine Interface \(HMI\), Man\-Machine Interface \(MMI\), Operator Interface
+### User Interface, Presentation Layer, [Separated Presentation]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#upper-half-separated-presentation-open-host-service" >}}), Command Line Interface \(CLI\), Graphical User Interface \(GUI\), Frontend, Human\-Machine Interface \(HMI\), Man\-Machine Interface \(MMI\), Operator Interface
 
 <figure>
 <a href="/diagrams/Variants/2/User%20Interface.png">
 <picture>
 <source srcset="/diagrams/Variants/2/User%20Interface.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/User%20Interface.negated.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/2/User%20Interface.png" alt="User Interface" loading="lazy" width="783" height="301" style="width:100%"/>
+<img src="/diagrams/Variants/2/User%20Interface.png" alt="A user interface stands between a human and software. It receives mouse input and produces output on a display." loading="lazy" width="783" height="301" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
-An *Adapter* between a human and a computer system is called a [*User Interface*]({{< relref "../basic-metapatterns/layers.md#interface-api-or-ui" >}}) \(*UI*\) or *Presentation Layer* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\. It translates user actions into commands to the underlying system and presents the results it returns and other information supposedly important to the user\. *UI* comes in several flavors:
+An *Adapter* between a human and a computer system is called a [*User Interface*]({{< relref "../basic-metapatterns/layers.md#interface-api-or-ui" >}}) \(*UI*\) or *Presentation Layer* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\. Though a *UI* mainly translates user actions into commands to the underlying system and presents the results the system returns and other information supposedly important to the user, it may also include [*integration logic*]({{< relref "../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) \(use cases\) which may be tightly coupled to the visual behavior\. *UI* comes in several flavors:
 
 - *Command Line Interface* \(*CLI*\) is text\-based and sequential – it executes one command at a time\. It’s the simplest kind of *UI*\.
 - *Graphical User Interface* \(*GUI*\) is built around graphical representation of information and controls\. It may rely on the windowing system of the underlying OS, a third\-party framework, or build something unique, which takes place in games\.
@@ -426,7 +401,7 @@ An *Adapter* between a human and a computer system is called a [*User Interface*
 - [*Operator Interface*](https://en.wikipedia.org/wiki/User_interface#Terminology) is an *HMI* that grants its user access to a system of several embedded devices\.
 
 
-[*Separated Presentation*](https://martinfowler.com/eaaDev/SeparatedPresentation.html) is, basically, another name for *User Interface* except that this pattern focuses on dispensability of any implementation of a *UI*: the same system can be driven by a *CLI*, *GUI* or *Frontend* without noticing any difference\. Many variants of *Separated Presentation* are discussed in a [dedicated section]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#examples--separated-presentation" >}}) under [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}})\.
+[*Separated Presentation*](https://martinfowler.com/eaaDev/SeparatedPresentation.html) is, basically, another name for *User Interface* except that this pattern focuses on dispensability of any implementation of a *UI*: the same system can be driven by a *CLI*, *GUI* or *Frontend* without noticing any difference\. Many variants of *Separated Presentation* are known as [*MVP*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-presenter-mvp-model-view-adapter-mva-model-view-viewmodel-mvvm-model-1-mvc1-document-view" >}}) and [*MVC*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}}) families of patterns discussed under [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}})\.
 
 ## [Evolutions]({{< relref "../appendices/evolutions-of-architectures/evolutions-of-a-proxy.md" >}})
 
@@ -442,7 +417,7 @@ As *Proxies* are usually third\-party products, there is not much [we can change
 <picture>
 <source srcset="/diagrams/Evolutions/2/Proxy%20add%20Proxy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Proxy%20add%20Proxy.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/2/Proxy%20add%20Proxy.png" alt="Proxy add Proxy" loading="lazy" width="1266" height="423" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Proxy%20add%20Proxy.png" alt="A proxy is added on top of an existing proxy." loading="lazy" width="1266" height="423" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -455,7 +430,7 @@ As *Proxies* are usually third\-party products, there is not much [we can change
 <picture>
 <source srcset="/diagrams/Evolutions/2/Proxy%20to%20Backends%20for%20Frontends.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Proxy%20to%20Backends%20for%20Frontends.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/2/Proxy%20to%20Backends%20for%20Frontends.png" alt="Proxy to Backends for Frontends" loading="lazy" width="1283" height="384" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Proxy%20to%20Backends%20for%20Frontends.png" alt="A proxy is subdivided into Backends for Frontends." loading="lazy" width="1283" height="384" style="width:100%"/>
 </picture>
 </a>
 </figure>

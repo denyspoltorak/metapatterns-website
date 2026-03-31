@@ -30,7 +30,7 @@ There is one way to counter the first point and more ways to solve the second on
 <picture>
 <source srcset="/diagrams/Evolutions/2/Orchestrator%20to%20Layered%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Orchestrator%20to%20Layered%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/2/Orchestrator%20to%20Layered%20Services.png" alt="Orchestrator to Layered Services" loading="lazy" width="1343" height="403" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Orchestrator%20to%20Layered%20Services.png" alt="An orchestrator is subdivided into subdomain components which become the application layers of respective services." loading="lazy" width="1343" height="403" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -59,7 +59,7 @@ If the *orchestration* logic mostly follows the subdomains, it may be possible t
 
 <ins>Further steps</ins>:
 
-- [*CQRS Views*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) \[[MP]({{< relref "../../appendices/books-referenced.md#mp" >}})\] or a [*Query Service*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#query-service-front-controller-data-warehouse-data-lake-aggregate-data-product-quantum-dpq-of-data-mesh" >}}) \[[MP]({{< relref "../../appendices/books-referenced.md#mp" >}})\] help a service access and join data that belongs to other services, further reducing the need for interservice communication\.
+- [*CQRS Views*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) or a [*Query Service*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#query-service-front-controller-data-warehouse-data-lake-aggregate-data-product-quantum-dpq-of-data-mesh" >}}) help a service access and join data that belongs to other services, further reducing the need for interservice communication\.
 
 
 ## Subdivide to form Backends for Frontends
@@ -69,7 +69,7 @@ If the *orchestration* logic mostly follows the subdomains, it may be possible t
 <picture>
 <source srcset="/diagrams/Evolutions/2/Orchestrator%20to%20Backends%20for%20Frontends.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Orchestrator%20to%20Backends%20for%20Frontends.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/2/Orchestrator%20to%20Backends%20for%20Frontends.png" alt="Orchestrator to Backends for Frontends" loading="lazy" width="1283" height="384" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Orchestrator%20to%20Backends%20for%20Frontends.png" alt="An orchestrator is subdivided into Backends for Frontends." loading="lazy" width="1283" height="384" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -97,7 +97,7 @@ When use cases for clients vary, it makes sense for each kind of client to have 
 
 - You may want to add client\-specific [*Proxies*]({{< relref "../../extension-metapatterns/proxy.md" >}}) and, maybe, co\-locate them with the *Orchestrators* to avoid the extra network hop\.
 - Adding another shared [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) below the ones dedicated to clients creates a place for sharing functionality among the *Orchestrators*\.
-- If you are running [*Microservices*]({{< relref "../../basic-metapatterns/services.md#microservices" >}}) over a [*Service Mesh*]({{< relref "../../implementation-metapatterns/mesh.md#service-mesh" >}}), [*Sidecars*]({{< relref "../../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \[[DDS]({{< relref "../../appendices/books-referenced.md#dds" >}})\] may help to share generic code\.
+- If you are running [*Microservices*]({{< relref "../../basic-metapatterns/services.md#microservices" >}}) over a [*Service Mesh*]({{< relref "../../implementation-metapatterns/mesh.md#service-mesh" >}}), [*Sidecars*]({{< relref "../../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) may help to share generic code\.
 
 
 ## Add a layer of orchestration
@@ -107,7 +107,7 @@ When use cases for clients vary, it makes sense for each kind of client to have 
 <picture>
 <source srcset="/diagrams/Evolutions/2/Orchestrator%20add%20Orchestrator.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Orchestrator%20add%20Orchestrator.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/2/Orchestrator%20add%20Orchestrator.png" alt="Orchestrator add Orchestrator" loading="lazy" width="1307" height="464" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Orchestrator%20add%20Orchestrator.png" alt="An orchestrator is subdivided into a pair of simple and complex orchestrators." loading="lazy" width="1307" height="464" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -145,7 +145,7 @@ You may use two or three *orchestration frameworks* \(engines\) which differ in 
 <picture>
 <source srcset="/diagrams/Evolutions/2/Orchestrator%20to%20Hierarchy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Orchestrator%20to%20Hierarchy.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/2/Orchestrator%20to%20Hierarchy.png" alt="Orchestrator to Hierarchy" loading="lazy" width="1326" height="305" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Orchestrator%20to%20Hierarchy.png" alt="An orchestrator is subdivided into a hierarchy." loading="lazy" width="1326" height="305" style="width:100%"/>
 </picture>
 </a>
 </figure>

@@ -9,7 +9,9 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 # Index of patterns {anchor=false}
 
-[Abstraction Layer]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}})
+[Abstraction Layer]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) \(as a Proxy\)
+
+[Abstraction Layer]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#lower-half-pedestal-abstraction-layer-anticorruption-layer" >}}) \(as a part of Hexagonal Architecture\)
 
 [Action\-Domain\-Responder]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}}) \(ADR\)
 
@@ -25,7 +27,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Actors]({{< relref "../basic-metapatterns/services.md#class-like-actors" >}}) \(scope\)
 
-[Adapter]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}})
+[Adapter]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}})
 
 [Add\-in]({{< relref "../implementation-metapatterns/plugins.md#addin-or-add-in" >}}) \(component\)
 
@@ -37,17 +39,19 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Ambassador Plugin]({{< relref "../implementation-metapatterns/plugins.md#ambassador-plugin-logic-extension" >}})
 
-[Anticorruption Layer]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}})
+[Anticorruption Layer]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) \(as a Proxy\)
+
+[Anticorruption Layer]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#lower-half-pedestal-abstraction-layer-anticorruption-layer" >}}) \(as a part of Hexagonal Architecture\)
 
 [API Composer]({{< relref "../extension-metapatterns/orchestrator.md#api-composer-remote-facade-gateway-aggregation-composed-message-processor-scatter-gather-mapreduce" >}})
 
-[API Gateway]({{< relref "../extension-metapatterns/orchestrator.md#api-gateway" >}}) \(as Orchestrator\)
+[API Gateway]({{< relref "../extension-metapatterns/orchestrator.md#api-gateway" >}}) \(as an Orchestrator\)
 
-[API Gateway]({{< relref "../extension-metapatterns/proxy.md#api-gateway" >}}) \(as Proxy\)
+[API Gateway]({{< relref "../extension-metapatterns/proxy.md#api-gateway" >}}) \(as a Proxy\)
 
 [API Rate Limiter]({{< relref "../extension-metapatterns/proxy.md#firewall-api-rate-limiter-api-throttling" >}})
 
-[API Service]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \(adapter\)
+[API Service]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) \(adapter\)
 
 [API Throttling]({{< relref "../extension-metapatterns/proxy.md#firewall-api-rate-limiter-api-throttling" >}})
 
@@ -63,7 +67,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [AUTOSAR Classic Platform]({{< relref "../implementation-metapatterns/microkernel.md#autosar-classic-platform" >}}) \(as Microkernel\)
 
-[Backend for Frontend]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \(adapter\)
+[Backend for Frontend]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) \(adapter\)
 
 [Backends for Frontends]({{< relref "../fragmented-metapatterns/backends-for-frontends--bff-.md" >}}) \(BFF\)
 
@@ -91,9 +95,9 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Caching Layer]({{< relref "../extension-metapatterns/proxy.md#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}})
 
-[Cell]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#examples--cell" >}}) \(WSO2 definition\)
+[Cell]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}}) \(WSO2 definition\)
 
-[Cell Gateway]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \(WSO2 Cell\-Based Architecture\)
+[Cell Gateway]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) \(WSO2 Cell\-Based Architecture\)
 
 [Cell Router]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) \(Amazon Cell\-Based Architecture\)
 
@@ -109,7 +113,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Clean Architecture]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#ddd-style-hexagonal-architecture-onion-architecture-clean-architecture" >}})
 
-[Cluster]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#basic-cell-cluster" >}}) \(group of services\)
+[Cluster]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}}) \(group of services\)
 
 [Command Line Interface]({{< relref "../extension-metapatterns/proxy.md#user-interface-presentation-layer-separated-presentation-command-line-interface-cli-graphical-user-interface-gui-frontend-human-machine-interface-hmi-man-machine-interface-mmi-operator-interface" >}}) \(CLI\)
 
@@ -151,13 +155,13 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Database Cache]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#database-cache-cache-aside" >}})
 
-[Database Abstraction Layer]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \(DBAL or DAL\)
+[Database Abstraction Layer]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) \(DBAL or DAL\)
 
 [Dependency Inversion]({{< relref "../analytics/comparison-of-architectural-patterns/dependency-inversion-in-architectural-patterns.md" >}})
 
 [Deployment Manager]({{< relref "../extension-metapatterns/middleware.md" >}})
 
-[Device Drivers]({{< relref "../basic-metapatterns/services.md#inexact-device-drivers" >}})
+[Device Drivers]({{< relref "../basic-metapatterns/services.md#inexact-device-drivers-pedestal" >}})
 
 [Direct Server Return]({{< relref "../extension-metapatterns/proxy.md#half-proxy" >}})
 
@@ -175,15 +179,17 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Document\-View]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-presenter-mvp-model-view-adapter-mva-model-view-viewmodel-mvvm-model-1-mvc1-document-view" >}})
 
-[Domain]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#full-featured-cell-domain" >}}) \(Uber definition for WSO2\-style Cell\)
+[Domain]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}}) \(Uber definition for WSO2\-style Cell\)
 
 [Domain\-Driven Design]({{< relref "../basic-metapatterns/layers.md#domain-driven-design-ddd-layers" >}}) \(layers\)
 
 [Domain\-Oriented Microservice Architecture]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#domain-oriented-microservice-architecture-doma" >}}) \(DOMA\)
 
-[Domain Services]({{< relref "../basic-metapatterns/services.md#whole-subdomain-sub-domain-services" >}}) \(scope\)
+[Domain Services]({{< relref "../basic-metapatterns/services.md#whole-subdomain-sub-domain-services-macroservices" >}}) \(scope\)
 
 [Domain\-Specific Language]({{< relref "../implementation-metapatterns/microkernel.md#interpreter-script-domain-specific-language-dsl" >}}) \(DSL\)
+
+[Driver]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}})
 
 [Edge Service]({{< relref "../extension-metapatterns/proxy.md#dispatcher-reverse-proxy-ingress-controller-edge-service-microgateway" >}})
 
@@ -194,8 +200,6 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 [Enterprise Service Bus]({{< relref "../extension-metapatterns/orchestrator.md#enterprise-service-bus-esb" >}}) \(as Orchestrator\)
 
 [Enterprise Service\-Oriented Architecture]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#enterprise-soa" >}})
-
-[Enterprise SOA]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#enterprise-soa" >}})
 
 [Entity\-Boundary\-Control]({{< relref "../basic-metapatterns/layers.md#entity-control-boundary-ecb-entity-boundary-control-ebc-boundary-control-entity-bce" >}}) \(EBC\)
 
@@ -235,11 +239,9 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Full Proxy]({{< relref "../extension-metapatterns/proxy.md#full-proxy" >}})
 
-[Function as a Service]({{< relref "../basic-metapatterns/services.md#distributed-runtime-backend-actors" >}})
-
 [Game Development Engine]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}})
 
-[Gateway]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \(adapter\)
+[Gateway]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) \(adapter\)
 
 [Gateway Aggregation]({{< relref "../extension-metapatterns/orchestrator.md#api-composer-remote-facade-gateway-aggregation-composed-message-processor-scatter-gather-mapreduce" >}})
 
@@ -251,7 +253,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Half\-Sync/Half\-Async]({{< relref "../basic-metapatterns/monolith.md#inexact-half-synchalf-async-coroutines-or-fibers" >}})
 
-[Hardware Abstraction Layer]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \(HAL\)
+[Hardware Abstraction Layer]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) \(HAL\)
 
 [Hexagonal Architecture]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}})
 
@@ -307,6 +309,8 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Logic Extension]({{< relref "../implementation-metapatterns/plugins.md#ambassador-plugin-logic-extension" >}})
 
+[Macroservices]({{< relref "../basic-metapatterns/services.md#service-based-architecture-sba-macroservices" >}})
+
 [Man\-Machine Interface]({{< relref "../extension-metapatterns/proxy.md#user-interface-presentation-layer-separated-presentation-command-line-interface-cli-graphical-user-interface-gui-frontend-human-machine-interface-hmi-man-machine-interface-mmi-operator-interface" >}}) \(MMI\)
 
 [MapReduce]({{< relref "../extension-metapatterns/orchestrator.md#api-composer-remote-facade-gateway-aggregation-composed-message-processor-scatter-gather-mapreduce" >}})
@@ -323,7 +327,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Message Bus]({{< relref "../extension-metapatterns/middleware.md#message-bus" >}})
 
-[Message Translator]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \(adapter\)
+[Message Translator]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) \(adapter\)
 
 [Messaging Grid]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) \(Space\-Based Architecture\)
 
@@ -355,6 +359,8 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Modular Monolith]({{< relref "../basic-metapatterns/services.md#asynchronous-modules-modular-monolith-modulith-embedded-actors" >}})
 
+[Modules]({{< relref "../basic-metapatterns/services.md" >}})
+
 [Modulith]({{< relref "../basic-metapatterns/services.md#asynchronous-modules-modular-monolith-modulith-embedded-actors" >}})
 
 [Monolambda]({{< relref "../basic-metapatterns/monolith.md#inexact-lambda-monolith-monolambda-lambdalith" >}}) \(lambda Monolith\)
@@ -375,6 +381,8 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Nanoservices]({{< relref "../basic-metapatterns/services.md#distributed-runtime-backend-actors" >}}) \(as runtime\)
 
+[Nanoservices]({{< relref "../extension-metapatterns/sandwich.md#nanoservices" >}}) \(as a Sandwich\)
+
 [Nanoservices]({{< relref "../basic-metapatterns/pipeline.md#function-as-a-service-faas-nanoservices-pipelined" >}}) \(pipelined\)
 
 [Nanoservices]({{< relref "../basic-metapatterns/services.md#single-function-faas-nanoservices" >}}) \(scope\)
@@ -393,11 +401,13 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Onion Architecture]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#ddd-style-hexagonal-architecture-onion-architecture-clean-architecture" >}})
 
-[Open Host Service]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}})
+[Open Host Service]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) \(as a Proxy\)
+
+[Open Host Service]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#upper-half-separated-presentation-open-host-service" >}}) \(as a part of Hexagonal Architecture\)
 
 [Operating System]({{< relref "../implementation-metapatterns/microkernel.md#operating-system" >}})
 
-[Operating System Abstraction Layer]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \(OSAL or OAL\)
+[Operating System Abstraction Layer]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) \(OSAL or OAL\)
 
 [Operator Interface]({{< relref "../extension-metapatterns/proxy.md#user-interface-presentation-layer-separated-presentation-command-line-interface-cli-graphical-user-interface-gui-frontend-human-machine-interface-hmi-man-machine-interface-mmi-operator-interface" >}})
 
@@ -413,6 +423,8 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Partition]({{< relref "../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-multitenancy-cells-amazon-definition" >}})
 
+[Pedestal]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#pedestal" >}})
+
 [Peer\-to\-Peer Networks]({{< relref "../implementation-metapatterns/mesh.md#peer-to-peer-networks" >}})
 
 [Persistent Event Log]({{< relref "../extension-metapatterns/middleware.md#persistent-event-log-shared-event-store" >}}) \(as Middleware\)
@@ -423,7 +435,9 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Pipes and Filters]({{< relref "../basic-metapatterns/pipeline.md#pipes-and-filters-workflow-system" >}})
 
-[Platform Abstraction Layer]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \(PAL\)
+[Platform Abstraction Layer]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) \(PAL\)
+
+[Pluggable Component Framework]({{< relref "../implementation-metapatterns/microkernel.md#software-framework-pluggable-component-framework" >}})
 
 [Plug\-In Architecture]({{< relref "../implementation-metapatterns/plugins.md" >}})
 
@@ -433,7 +447,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Polyglot Persistence]({{< relref "../fragmented-metapatterns/polyglot-persistence.md" >}})
 
-[Ports and Adapters]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#hexagonal-architecture-ports-and-adapters" >}})
+[Ports and Adapters]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#ports-and-adapters-hexagonal-architecture" >}})
 
 [Pool]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}}) \(stateless instances\)
 
@@ -449,7 +463,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Proxy]({{< relref "../extension-metapatterns/proxy.md" >}})
 
-[Published Language]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}})
+[Published Language]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}})
 
 [Query Service]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#query-service-front-controller-data-warehouse-data-lake-aggregate-data-product-quantum-dpq-of-data-mesh" >}})
 
@@ -477,7 +491,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Reporting Database]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}})
 
-[Repository]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}})
+[Repository]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}})
 
 [Request Hedging]({{< relref "../basic-metapatterns/shards.md#persistent-copy-replica" >}})
 
@@ -505,9 +519,9 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Segmented Microservice Architecture]({{< relref "../fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services" >}})
 
-[Separated Presentation]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#examples--separated-presentation" >}})
+[Separated Presentation]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#upper-half-separated-presentation-open-host-service" >}})
 
-[Service\-Based Architecture]({{< relref "../basic-metapatterns/services.md#service-based-architecture-sba" >}}) \(architecture\)
+[Service\-Based Architecture]({{< relref "../basic-metapatterns/services.md#service-based-architecture-sba-macroservices" >}}) \(architecture\)
 
 [Service\-Based Architecture]({{< relref "../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) \(shared database\)
 
@@ -547,7 +561,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Sidecar]({{< relref "../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}})
 
-[Software Framework]({{< relref "../implementation-metapatterns/microkernel.md#software-framework" >}}) \(Microkernel\)
+[Software Framework]({{< relref "../implementation-metapatterns/microkernel.md#software-framework-pluggable-component-framework" >}}) \(Microkernel\)
 
 [Source\-Aligned Data Product Quantum]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) \(Data Mesh\)
 

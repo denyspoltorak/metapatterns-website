@@ -1,7 +1,7 @@
 +++
 weight = 1
 title = "Modules and complexity"
-description = "Complexity is how much you must know about a system to understand it."
+description = "This chapter graphically explores the basic concepts of software architecture: complexity, modularity, encapsulation, bounded contexts, coupling, and cohesion."
 images = ["/diagrams/Web/og/Complexity.png"]
 [sitemap]
   priority = 0.5
@@ -15,7 +15,7 @@ images = ["/diagrams/Web/og/Complexity.png"]
 
 </aside>
 
-Any software system which we encounter is very likely to be too complex to comprehend all at once – the human mind is incapable of discerning a large number of entities and their relations\. It tends to simplify reality by building abstractions: as soon as we define the many shiny pieces of metal, glass and rubber as a ‘car’ we can identify ‘highways’, ‘parking spaces’ and ‘passengers’ – we live in a world of the abstractions which we create\. In the same way the software we write is built of services, processes, files, classes, procedures – modules that conceal the swarm of bits and pieces which we are powerless against\. Let’s reflect on that\.
+Any software system which we encounter is very likely to be too complex to comprehend all at once – the human mind is incapable of discerning a large number of entities and their relations \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\. It tends to simplify reality by building abstractions: as soon as we define the many shiny pieces of metal, glass and rubber as a ‘car’ we can identify ‘highways’, ‘parking spaces’ and ‘passengers’ – we live in a world of the abstractions which we create\. In the same way the software we write is built of services, processes, files, classes, procedures – modules that conceal the swarm of bits and pieces which we are powerless against\. Let’s reflect on that\.
 
 ## Concepts and complexity
 
@@ -30,7 +30,7 @@ Concepts are important because it is their number \(or the number of the corresp
 <picture>
 <source srcset="/diagrams/Intro/Modules-1.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Intro/Modules-1.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Intro/Modules-1.png" alt="Modules-1" loading="lazy" width="562" height="522" style="width:52%"/>
+<img src="/diagrams/Intro/Modules-1.png" alt="Complexity represented as the number of interconnected nodes." loading="lazy" width="562" height="522" style="width:52%"/>
 </picture>
 </a>
 <figcaption>Figure 1: Complexity correlates with the number of entities.</figcaption>
@@ -40,14 +40,14 @@ Concepts are important because it is their number \(or the number of the corresp
 
 Let’s return to our example\. As you implement the phonebook you find out that sorting and search are way more complex than you originally thought\. Once you prepare to enter the international market you are in [deep trouble](https://en.wikipedia.org/wiki/Alphabetical_order#Language-specific_conventions)\. Some telephony providers send 7\-digit numbers, others use 10 digits, still others – 13 digits \(with either “\+” or “0” for the first character\)\. German has “ß” which is identical to “ss” while Japanese uses two alphabets simultaneously\. Once you start reading standards, implementing all the weird behavior and responding to user complaints you feel that your phonebook implementation is drowning in the unrelated logic of foreign alphabets’ special cases\. You need *encapsulation*\.
 
-Enter *modules*\. A module wraps several concepts, effectively hiding them from external users, and exposes a simplified view of its contents\. Introducing modules splits a complex system into several, usually less complex, parts\.
+Enter *modules*\. A module wraps several concepts, effectively hiding them from external users, and exposes a simplified view of its contents \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\. Introducing modules splits a complex system into several, usually less complex, parts\.
 
 <figure>
 <a href="/diagrams/Intro/Modules-2.png">
 <picture>
 <source srcset="/diagrams/Intro/Modules-2.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Intro/Modules-2.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Intro/Modules-2.png" alt="Modules-2" loading="lazy" width="662" height="563" style="width:66%"/>
+<img src="/diagrams/Intro/Modules-2.png" alt="A module hides a cluster of the original nodes but creates new interface nodes which add to the complexity of the modules that use them." loading="lazy" width="662" height="563" style="width:66%"/>
 </picture>
 </a>
 <figcaption>Figure 2: Dividing a system into modules, bounded contexts highlighted.</figcaption>
@@ -78,7 +78,7 @@ Apart from dividing the problem into simpler subproblems, modules open the path 
 <picture>
 <source srcset="/diagrams/Intro/Modules-3.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Intro/Modules-3.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Intro/Modules-3.png" alt="Modules-3" loading="lazy" width="662" height="563" style="width:64%"/>
+<img src="/diagrams/Intro/Modules-3.png" alt="Some of the interface nodes are grouped to lower the complexity." loading="lazy" width="662" height="563" style="width:64%"/>
 </picture>
 </a>
 <figcaption>Figure 3: Merged two API concepts in the green module.</figcaption>
@@ -94,14 +94,14 @@ We need to learn a couple of new concepts in order to use modules efficiently:
 
 *Cohesion* is a measure of the number \(density\) of connections inside a module relative to the module’s size\.
 
-The rule of thumb is to aim for *low coupling and high cohesion*, meaning that each module should encapsulate a cluster of related \(intensely interacting\) concepts\. This is how we have split the system in figures 2 and 3\. Now let’s see what happens if we violate the rules:
+The rule of thumb is to aim for *low coupling and high cohesion*, meaning that each module should encapsulate a cluster of related \(intensely interacting\) concepts \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\. This is how we have split the system in figures 2 and 3\. Now let’s see what happens if we violate the rules:
 
 <figure>
 <a href="/diagrams/Intro/Modules-4.png">
 <picture>
 <source srcset="/diagrams/Intro/Modules-4.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Intro/Modules-4.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Intro/Modules-4.png" alt="Modules-4" loading="lazy" width="802" height="563" style="width:75%"/>
+<img src="/diagrams/Intro/Modules-4.png" alt="Subdividing a complex module with many internal connections results in two complex modules because many new interface nodes are created." loading="lazy" width="802" height="563" style="width:75%"/>
 </picture>
 </a>
 <figcaption>Figure 4: The upper modules are tightly coupled.</figcaption>
@@ -114,7 +114,7 @@ Splitting a cohesive module \(a cluster of concepts that interact with each othe
 <picture>
 <source srcset="/diagrams/Intro/Modules-5.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Intro/Modules-5.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Intro/Modules-5.png" alt="Modules-5" loading="lazy" width="622" height="562" style="width:64%"/>
+<img src="/diagrams/Intro/Modules-5.png" alt="Merging loosely coupled modules only marginally reduces the overall number of nodes in the system." loading="lazy" width="622" height="562" style="width:64%"/>
 </picture>
 </a>
 <figcaption>Figure 5: The lower module has low cohesion.</figcaption>
@@ -147,7 +147,7 @@ A module may encapsulate not only individual concepts, but even other modules\. 
 <picture>
 <source srcset="/diagrams/Intro/Modules-6.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Intro/Modules-6.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Intro/Modules-6.png" alt="Modules-6" loading="lazy" width="542" height="642" style="width:58%"/>
+<img src="/diagrams/Intro/Modules-6.png" alt="When a module is hidden inside another module, there is no clear way to expose it to external clients." loading="lazy" width="542" height="642" style="width:58%"/>
 </picture>
 </a>
 <figcaption>Figure 6: Composition of modules prevents reuse.</figcaption>
@@ -162,7 +162,7 @@ If the functionality of our internal module is needed by our clients, we have tw
 <picture>
 <source srcset="/diagrams/Intro/Modules-7.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Intro/Modules-7.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Intro/Modules-7.png" alt="Modules-7" loading="lazy" width="542" height="662" style="width:59%"/>
+<img src="/diagrams/Intro/Modules-7.png" alt="The interface of the internal module is duplicated in the interface of the wrapping module." loading="lazy" width="542" height="662" style="width:59%"/>
 </picture>
 </a>
 <figcaption>Figure 7: Forwarding the API of an internal module.</figcaption>
@@ -175,7 +175,7 @@ We can add the API of a module which we encapsulate to our public API and forwar
 <picture>
 <source srcset="/diagrams/Intro/Modules-8.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Intro/Modules-8.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Intro/Modules-8.png" alt="Modules-8" loading="lazy" width="722" height="642" style="width:78%"/>
+<img src="/diagrams/Intro/Modules-8.png" alt="The internal module itself is duplicated outside of the module which wraps it." loading="lazy" width="722" height="642" style="width:78%"/>
 </picture>
 </a>
 <figcaption>Figure 8: Duplicating an internal module.</figcaption>

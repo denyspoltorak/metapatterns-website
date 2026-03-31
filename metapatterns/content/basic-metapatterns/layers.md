@@ -1,7 +1,7 @@
 +++
 weight = 8
 title = "Layers"
-description = "Layers (or distributed Tiers) separate the high-level logic from the low-level details."
+description = "This chapter explores layered architectures (Layers and Tiers) and individual layers: interface, application, domain, utilities, middleware, and persistence."
 images = ["/diagrams/Web/og/Layers.png"]
 [sitemap]
   priority = 0.8
@@ -14,7 +14,7 @@ images = ["/diagrams/Web/og/Layers.png"]
 <picture>
 <source srcset="/diagrams/Main/Layers.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Layers.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Layers.png" alt="Layers" loading="lazy" width="942" height="494" style="width:100%"/>
+<img src="/diagrams/Main/Layers.png" alt="A diagram for Layered Architecture, in abstractness-subdomain-sharding coordinates." loading="lazy" width="942" height="494" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -23,38 +23,9 @@ images = ["/diagrams/Web/og/Layers.png"]
 
 <ins>Known as:</ins> Layers \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\], Layered Architecture \[[SAP]({{< relref "../appendices/books-referenced.md#sap" >}}), [FSA]({{< relref "../appendices/books-referenced.md#fsa" >}}), [LDDD]({{< relref "../appendices/books-referenced.md#lddd" >}})\], Multitier Architecture, and N\-tier Architecture \[[LDDD]({{< relref "../appendices/books-referenced.md#lddd" >}})\]\.
 
-<ins>Variants:</ins> Open or closed, the number of layers\.
-
-By isolation:
-
-- Synchronous layers / Layered Monolith \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\],
-- Asynchronous layers,
-- A process per layer,
-- Distributed tiers\.
-
-
-Layer roles:
-
-- Interface \(API or UI\),
-- Application \(use cases or integration\),
-- Domain \(business rules or model\),
-- Generic code \(libraries and utilities\),
-- Communication \(middleware\),
-- Data \(persistence\),
-- Operating system and hardware\.
-
-
-Examples:
-
-- [Entity\-Control\-Boundary \(ECB\) / Entity\-Boundary\-Control \(EBC\) / Boundary\-Control\-Entity \(BCE\)](https://en.wikipedia.org/wiki/Entity%E2%80%93control%E2%80%93boundary),
-- Domain\-Driven Design \(DDD\) Layers \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\],
-- Three\-Tier Architecture,
-- Embedded Systems\.
-
-
 <ins>Structure:</ins> A component per level of abstractness\.
 
-<ins>Type:</ins> Main, implementation\.
+<ins>Type:</ins> System topology, implementation\.
 
 | *Benefits* | *Drawbacks* |
 | --- | --- |
@@ -80,7 +51,7 @@ Many patterns have one or more of their layers split by subdomain, resulting in 
 <picture>
 <source srcset="/diagrams/Misc/Layers%20of%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Misc/Layers%20of%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Misc/Layers%20of%20Services.png" alt="Layers of Services" loading="lazy" width="1643" height="477" style="width:100%"/>
+<img src="/diagrams/Misc/Layers%20of%20Services.png" alt="Diagrams of Backends for Frontends and Services with Polyglot Persistence." loading="lazy" width="1643" height="477" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -112,7 +83,7 @@ There is a number of optimizations to skip interlayer calls:
 <picture>
 <source srcset="/diagrams/Performance/Layers-caching.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Performance/Layers-caching.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Performance/Layers-caching.png" alt="Layers-caching" loading="lazy" width="1123" height="303" style="width:100%"/>
+<img src="/diagrams/Performance/Layers-caching.png" alt="Caching the latest known state of the system in its highest layer." loading="lazy" width="1123" height="303" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -124,7 +95,7 @@ There is a number of optimizations to skip interlayer calls:
 <picture>
 <source srcset="/diagrams/Performance/Layers-aggregation.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Performance/Layers-aggregation.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Performance/Layers-aggregation.png" alt="Layers-aggregation" loading="lazy" width="1143" height="284" style="width:100%"/>
+<img src="/diagrams/Performance/Layers-aggregation.png" alt="Aggregation of events from hardware by the lowest layer of a layered system." loading="lazy" width="1143" height="284" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -136,7 +107,7 @@ There is a number of optimizations to skip interlayer calls:
 <picture>
 <source srcset="/diagrams/Performance/Layers-batching.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Performance/Layers-batching.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Performance/Layers-batching.png" alt="Layers-batching" loading="lazy" width="1063" height="283" style="width:100%"/>
+<img src="/diagrams/Performance/Layers-batching.png" alt="Sending a batch of commands all the way down to the lowest layer of a system." loading="lazy" width="1063" height="283" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -148,7 +119,7 @@ There is a number of optimizations to skip interlayer calls:
 <picture>
 <source srcset="/diagrams/Performance/Layers-injection.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Performance/Layers-injection.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Performance/Layers-injection.png" alt="Layers-injection" loading="lazy" width="1083" height="281" style="width:100%"/>
+<img src="/diagrams/Performance/Layers-injection.png" alt="Moving a part of the business logic from the highest layer to the lowest layer of the system." loading="lazy" width="1083" height="281" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -163,14 +134,14 @@ Usually an upper layer depends on the *API* \(application programming interface\
 
 Some domains, including embedded systems and telecom, require their lower layers to be polymorphic as they deal with varied hardware or communication protocols\. In that case an upper layer \(e\.g\. OS kernel\) defines a *service provider interface* \(*SPI*\) which is implemented by every variant of the lower layer \(e\.g\. a device driver\)\. That allows for a single implementation of the upper layer to be interoperable with any subclass of the lower layer\. Such an approach enables [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}), [*Microkernel*]({{< relref "../implementation-metapatterns/microkernel.md" >}}), and [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}})\. 
 
-There may also be an [*Adapter*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) layer between your system’s SPI and an external API\. It is called *Anticorruption Layer* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\], [*Database Abstraction Layer*](https://en.wikipedia.org/wiki/Database_abstraction_layer) / *Database Access Layer* \[[POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\] / *Data Mapper* \[[PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\], *OS Abstraction Layer* or *Platform Abstraction Layer / Hardware Abstraction Layer*, depending on what kind of component it adapts\.
+There may also be an [*Adapter*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) layer between your system’s SPI and an external API\. It is called *Anticorruption Layer* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\], [*Database Abstraction Layer*](https://en.wikipedia.org/wiki/Database_abstraction_layer) / *Database Access Layer* \[[POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\] / *Data Mapper* \[[PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\], *OS Abstraction Layer* or *Platform Abstraction Layer / Hardware Abstraction Layer*, depending on what kind of component it adapts\.
 
 <figure>
 <a href="/diagrams/Dependencies/Layers-1.png">
 <picture>
 <source srcset="/diagrams/Dependencies/Layers-1.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Dependencies/Layers-1.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Dependencies/Layers-1.png" alt="Layers-1" loading="lazy" width="967" height="323" style="width:89%"/>
+<img src="/diagrams/Dependencies/Layers-1.png" alt="Individual layers may depend on other layers' APIs, SPIs, or both. In the last case the layer between the SPI and API is an adapter." loading="lazy" width="967" height="323" style="width:89%"/>
 </picture>
 </a>
 </figure>
@@ -182,7 +153,7 @@ A layer can be *closed* \(*strict*\) or *open* \(*relaxed*\)\. A layer above a c
 <picture>
 <source srcset="/diagrams/Dependencies/Layers-2.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Dependencies/Layers-2.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Dependencies/Layers-2.png" alt="Layers-2" loading="lazy" width="1143" height="302" style="width:93%"/>
+<img src="/diagrams/Dependencies/Layers-2.png" alt="Dependencies for open and closed layers." loading="lazy" width="1143" height="302" style="width:93%"/>
 </picture>
 </a>
 </figure>
@@ -194,7 +165,7 @@ If you ever need to *scale* \(run multiple instances of\) a layer, you may notic
 <picture>
 <source srcset="/diagrams/Dependencies/Layers-3.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Dependencies/Layers-3.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Dependencies/Layers-3.png" alt="Layers-3" loading="lazy" width="823" height="363" style="width:93%"/>
+<img src="/diagrams/Dependencies/Layers-3.png" alt="A load balancer helps access multiple instances of a layer directly below it." loading="lazy" width="823" height="363" style="width:93%"/>
 </picture>
 </a>
 </figure>
@@ -223,7 +194,7 @@ If you ever need to *scale* \(run multiple instances of\) a layer, you may notic
 <picture>
 <source srcset="/diagrams/Relations/Layers.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Relations/Layers.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Relations/Layers.png" alt="Layers" loading="lazy" width="1063" height="462" style="width:100%"/>
+<img src="/diagrams/Relations/Layers.png" alt="Splitting a layer into services and splitting a service into layers." loading="lazy" width="1063" height="462" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -233,7 +204,7 @@ If you ever need to *scale* \(run multiple instances of\) a layer, you may notic
 - Can be applied to the internals of any module, for example, layering [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) results in [*Layered Services*]({{< relref "../fragmented-metapatterns/layered-services.md" >}})\.
 - Can be altered by [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) or extended with a [*Proxy*]({{< relref "../extension-metapatterns/proxy.md" >}}), [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}), and/or [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) to form an extra layer\.
 - Can be implemented by [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) yielding layers of services present in [*Sandwich*]({{< relref "../extension-metapatterns/sandwich.md" >}}), [*Service\-Oriented Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}), [*Backends for Frontends*]({{< relref "../fragmented-metapatterns/backends-for-frontends--bff-.md" >}}), or [*Polyglot Persistence*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md" >}})\.
-- May be closely related to [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) or the derived [*Separated Presentation*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#examples--separated-presentation" >}})\.
+- May be closely related to [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) or the derived [*Separated Presentation*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#upper-half-separated-presentation-open-host-service" >}})\.
 - A layer often serves as a [*Proxy*]({{< relref "../extension-metapatterns/proxy.md" >}}), [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}), and/or [*\(Shared\) Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}})\.
 
 
@@ -310,7 +281,7 @@ Balancing the [cohesers and decouplers]({{< relref "../analytics/the-heart-of-so
 <picture>
 <source srcset="/diagrams/Variants/1/Layer%20Roles.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Layer%20Roles.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Layer%20Roles.png" alt="Layer Roles" loading="lazy" width="883" height="664" style="width:100%"/>
+<img src="/diagrams/Variants/1/Layer%20Roles.png" alt="A stack of layers: client or user, interface, application, domain, generic code, communication, data, and operating system and hardware." loading="lazy" width="883" height="664" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -319,7 +290,7 @@ Balancing the [cohesers and decouplers]({{< relref "../analytics/the-heart-of-so
 
 If a system serves a human user or remote client software, there is a part of it, called an *interface*, that deals with communication and translation between the system’s internal data model and one convenient for its clients\.
 
-As an *interface* represents the system to its clients, it is a kind of [*Proxy*]({{< relref "../extension-metapatterns/proxy.md" >}}) by definition \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\]\. If the client is another software system, the *interface* is called *Application Programming Interface* \(*API*\) and is likely to be implemented by a [*Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) which will receive a message through a well\-known protocol, check its correctness and authenticity of the sender, and forward the message’s payload to a layer below it\. In most cases it will also send response and notification messages by executing the converse tasks: translation from the system’s internal data format to something more convenient for its clients and sending the resulting message over a network protocol\.
+As an *interface* represents the system to its clients, it is a kind of [*Proxy*]({{< relref "../extension-metapatterns/proxy.md" >}}) by definition \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\]\. If the client is another software system, the *interface* is called *Application Programming Interface* \(*API*\) and is likely to be implemented by a [*Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) which will receive a message through a well\-known protocol, check its correctness and authenticity of the sender, and forward the message’s payload to a layer below it\. In most cases it will also send response and notification messages by executing the converse tasks: translation from the system’s internal data format to something more convenient for its clients and sending the resulting message over a network protocol\.
 
 When a system interacts with a human, it exposes another kind of *interface* – [*Human\-Machine Interface* \(*HMI*\) or *User Interface* \(*UI*\)]({{< relref "../extension-metapatterns/proxy.md#user-interface-presentation-layer-separated-presentation-command-line-interface-cli-graphical-user-interface-gui-frontend-human-machine-interface-hmi-man-machine-interface-mmi-operator-interface" >}})\. The basics of its action are similar to the case of software\-to\-software interaction described above save that humans prefer visual or textual information instead of a highly structured Internet protocol\.
 
@@ -327,8 +298,8 @@ Another, less common kind of interface is called *Service Provider Interface* \(
 
 Other kinds of *Proxies* adapt a system to foreign interfaces:
 
-- An [*Anticorruption Layer* or *Open Host Service*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) translates between two software subsystems to loosen dependencies between them\.
-- A [*Hardware Abstraction Layer* or *Operating System Abstraction Layer*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) stands between a system and an underlying hardware or OS, respectively, to make the system portable\.
+- An [*Anticorruption Layer* or *Open Host Service*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) translates between two software subsystems to loosen dependencies between them\.
+- A [*Hardware Abstraction Layer* or *Operating System Abstraction Layer*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) stands between a system and an underlying hardware or OS, respectively, to make the system portable\.
 
 
 <figure>
@@ -336,7 +307,7 @@ Other kinds of *Proxies* adapt a system to foreign interfaces:
 <picture>
 <source srcset="/diagrams/Variants/1/Interface%20-%20Kinds.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Interface%20-%20Kinds.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Interface%20-%20Kinds.png" alt="Interface - Kinds" loading="lazy" width="1083" height="444" style="width:100%"/>
+<img src="/diagrams/Variants/1/Interface%20-%20Kinds.png" alt="A service wrapped with: a gateway with its API, a user interface, an Anticorruption Layer, a plugin and an Open Host Service with a Published Language." loading="lazy" width="1083" height="444" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -350,7 +321,7 @@ An interface layer can contain multiple components \(services, modules, or high\
 <picture>
 <source srcset="/diagrams/Variants/1/Interface%20-%20Derived.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Interface%20-%20Derived.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Interface%20-%20Derived.png" alt="Interface - Derived" loading="lazy" width="1505" height="388" style="width:100%"/>
+<img src="/diagrams/Variants/1/Interface%20-%20Derived.png" alt="Diagrams of an API Gateway and Backends for Frontends." loading="lazy" width="1505" height="388" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -381,7 +352,7 @@ Some systems lack the *application* role – they are structured as [*Pipelines*
 <picture>
 <source srcset="/diagrams/Variants/1/Application%20-%20Derived.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Application%20-%20Derived.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Application%20-%20Derived.png" alt="Application - Derived" loading="lazy" width="1323" height="403" style="width:100%"/>
+<img src="/diagrams/Variants/1/Application%20-%20Derived.png" alt="Backends for Frontends between a gateway and a monolithic service; a pipeline with use case logic hardwired into the graph of connections." loading="lazy" width="1323" height="403" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -414,7 +385,7 @@ As the largest layer, the *domain* is the first among them to be subdivided:
 <picture>
 <source srcset="/diagrams/Variants/1/Domain%20-%20Derived.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Domain%20-%20Derived.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Domain%20-%20Derived.png" alt="Domain - Derived" loading="lazy" width="863" height="783" style="width:74%"/>
+<img src="/diagrams/Variants/1/Domain%20-%20Derived.png" alt="Diagrams of Services, Sandwich, Hierarchy, and Command-Query Responsibility Segregation." loading="lazy" width="863" height="783" style="width:74%"/>
 </picture>
 </a>
 </figure>
@@ -437,7 +408,7 @@ In most cases *generic code* stays together with the [*domain*\-level code]({{< 
 <picture>
 <source srcset="/diagrams/Variants/1/Generic%20Code%20-%20Derived.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Generic%20Code%20-%20Derived.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Generic%20Code%20-%20Derived.png" alt="Generic Code - Derived" loading="lazy" width="1363" height="483" style="width:100%"/>
+<img src="/diagrams/Variants/1/Generic%20Code%20-%20Derived.png" alt="Diagrams of Services, Service-Oriented Architecture, and Microservices with sidecars, with components that carry generic code highlighted." loading="lazy" width="1363" height="483" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -451,7 +422,7 @@ If your system is comprised of multiple components, they need a way to communica
 <picture>
 <source srcset="/diagrams/Variants/1/Communication%20-%20Derived.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Communication%20-%20Derived.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Communication%20-%20Derived.png" alt="Communication - Derived" loading="lazy" width="1343" height="324" style="width:100%"/>
+<img src="/diagrams/Variants/1/Communication%20-%20Derived.png" alt="Multiple instances of a communication library represented as a virtual middleware layer." loading="lazy" width="1343" height="324" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -470,7 +441,7 @@ Most systems but the simplest [*Pipelines*]({{< relref "../basic-metapatterns/pi
 <picture>
 <source srcset="/diagrams/Variants/1/Data%20-%20Derived.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Data%20-%20Derived.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Data%20-%20Derived.png" alt="Data - Derived" loading="lazy" width="1063" height="449" style="width:100%"/>
+<img src="/diagrams/Variants/1/Data%20-%20Derived.png" alt="Diagrams of a three-tier system, hierarchical control system, and Space-Based Architecture." loading="lazy" width="1063" height="449" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -482,7 +453,7 @@ If the *persistence layer* becomes a system’s performance bottleneck, as it of
 <picture>
 <source srcset="/diagrams/Variants/1/Data%20-%20Evolutions.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Data%20-%20Evolutions.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Data%20-%20Evolutions.png" alt="Data - Evolutions" loading="lazy" width="1162" height="523" style="width:100%"/>
+<img src="/diagrams/Variants/1/Data%20-%20Evolutions.png" alt="A load-balanced service over a database evolves into a monolith with two specialized databases or into a load-balanced stateless service over database replicas with a single leader." loading="lazy" width="1162" height="523" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -491,14 +462,14 @@ If the *persistence layer* becomes a system’s performance bottleneck, as it of
 
 Your software always runs on *hardware* and usually relies on an *operating system* \(*OS*\) for file and network access and memory management\. Even though many modern backends don’t care about such low\-level details and omit them on their diagrams, embedded or system software communicates with its *OS* or *hardware* directly, making the corresponding components indispensable parts of its topology\.
 
-Integrating multiple pieces of *hardware* into an intelligently behaving system is usually what [*control software*]({{< relref "../foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}}) is written for\. Such systems [often follow]({{< relref "../foundations-of-software-architecture/four-kinds-of-software.md#variants" >}}) [*Actors*]({{< relref "../basic-metapatterns/services.md#class-like-actors" >}}) or [*Hierarchy*]({{< relref "../fragmented-metapatterns/hierarchy.md" >}}) architectures\.
+Integrating multiple pieces of *hardware* into an intelligently behaving system is usually what [*control software*]({{< relref "../foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}}) is written for\. Such systems [often follow]({{< relref "../foundations-of-software-architecture/four-kinds-of-software.md#variants" >}}) the [*Pedestal*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#pedestal" >}}), [*Actors*]({{< relref "../basic-metapatterns/services.md#class-like-actors" >}}), or [*Hierarchy*]({{< relref "../fragmented-metapatterns/hierarchy.md" >}}) architectures\.
 
 <figure>
 <a href="/diagrams/4Kinds/Control%20-%20variants.png">
 <picture>
 <source srcset="/diagrams/4Kinds/Control%20-%20variants.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/4Kinds/Control%20-%20variants.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/4Kinds/Control%20-%20variants.png" alt="Control - variants" loading="lazy" width="1224" height="664" style="width:100%"/>
+<img src="/diagrams/4Kinds/Control%20-%20variants.png" alt="Diagrams of control systems with the following architectures: monolithic, actors, Pedestal, hierarchical." loading="lazy" width="1224" height="664" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -507,6 +478,12 @@ Integrating multiple pieces of *hardware* into an intelligently behaving system 
 
 The notion of layering seems to be so natural to our minds that most known architectures are layered\. Not surprisingly, there are several approaches to assigning functionality to and naming the layers:
 
+- [*ECB*]({{< relref "#entity-control-boundary-ecb-entity-boundary-control-ebc-boundary-control-entity-bce" >}}) distinguishes a client\-facing layer, use cases and domain logic\.
+- [*DDD*]({{< relref "#domain-driven-design-ddd-layers" >}}) adds the infrastructure layer\.
+- [*Tiers*]({{< relref "#three-tier-architecture" >}}) are distributed *Layers* that usually include frontend, backend and database\.
+- [Layering of an embedded system]({{< relref "#embedded-systems" >}}) often matches its supply chain\. 
+
+
 ### Entity\-Control\-Boundary \(ECB\), Entity\-Boundary\-Control \(EBC\), Boundary\-Control\-Entity \(BCE\)
 
 <figure>
@@ -514,7 +491,7 @@ The notion of layering seems to be so natural to our minds that most known archi
 <picture>
 <source srcset="/diagrams/Variants/1/ECB.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/ECB.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/ECB.png" alt="ECB" loading="lazy" width="903" height="383" style="width:100%"/>
+<img src="/diagrams/Variants/1/ECB.png" alt="The boundary, control and entity layers." loading="lazy" width="903" height="383" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -533,7 +510,7 @@ A closer look at an *ECB* system may reveal a finer\-grained structure that rese
 <picture>
 <source srcset="/diagrams/Variants/1/ECB%20as%20SOA.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/ECB%20as%20SOA.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/ECB%20as%20SOA.png" alt="ECB as SOA" loading="lazy" width="866" height="483" style="width:100%"/>
+<img src="/diagrams/Variants/1/ECB%20as%20SOA.png" alt="The boundary, control and entity layers, each subdivided into several services." loading="lazy" width="866" height="483" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -545,14 +522,14 @@ A closer look at an *ECB* system may reveal a finer\-grained structure that rese
 <picture>
 <source srcset="/diagrams/Variants/1/DDD.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/DDD.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/DDD.png" alt="DDD" loading="lazy" width="743" height="476" style="width:86%"/>
+<img src="/diagrams/Variants/1/DDD.png" alt="The four layers of Domain-Driven Design: presentation, application, domain, and infrastructure." loading="lazy" width="743" height="476" style="width:86%"/>
 </picture>
 </a>
 </figure>
 
 \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\], a methodology for enterprise\-scale backend development, extends the more generic [*Entity\-Control\-Boundary*]({{< relref "#entity-control-boundary-ecb-entity-boundary-control-ebc-boundary-control-entity-bce" >}}) with a new *Infrastructure* layer responsible for [*communication*]({{< relref "#communication-middleware" >}}) and [*persistence*]({{< relref "#data-persistence" >}}) roles which don’t exist in most desktop applications\. Its layers are called:
 
-- *Presentation* \([*User Interface*]({{< relref "../extension-metapatterns/proxy.md#user-interface-presentation-layer-separated-presentation-command-line-interface-cli-graphical-user-interface-gui-frontend-human-machine-interface-hmi-man-machine-interface-mmi-operator-interface" >}})\) – the user\-facing component \(frontend, UI\)\. It should be highly responsive to the user's input\. See [*Separated Presentation*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#examples--separated-presentation" >}})\.
+- *Presentation* \([*User Interface*]({{< relref "../extension-metapatterns/proxy.md#user-interface-presentation-layer-separated-presentation-command-line-interface-cli-graphical-user-interface-gui-frontend-human-machine-interface-hmi-man-machine-interface-mmi-operator-interface" >}})\) – the user\-facing component \(frontend, UI\)\. It should be highly responsive to the user's input\. See [*Separated Presentation*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#upper-half-separated-presentation-open-host-service" >}})\.
 - *Application* \([*Integration*]({{< relref "#application-use-cases-or-integration" >}}), *Service*\) – the high\-level scenarios which build upon the API of the *domain* layer\. It should be easy to change and to deploy\. See [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}})\.
 - *Domain* \([*Model*]({{< relref "#domain-business-rules-or-model" >}}), *Business Rules*\) – the bulk of the mid\- and low\-level business logic\. It should usually be well\-tested and performant\.
 - *Infrastructure* \(*Utility*, *Data Access*\) – the utility components devoid of business logic\. Their stability and performance is business\-critical but updates to their code are rare\.
@@ -575,7 +552,7 @@ However in practice you are much more likely to encounter the derived [*DDD\-sty
 <picture>
 <source srcset="/diagrams/Variants/1/Three-Tier.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Three-Tier.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Three-Tier.png" alt="Three-Tier" loading="lazy" width="760" height="394" style="width:100%"/>
+<img src="/diagrams/Variants/1/Three-Tier.png" alt="Four instances of the presentation layer accessing two instances of the logic layer accessing a single database." loading="lazy" width="760" height="394" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -602,7 +579,7 @@ In this case the division into layers resolves the conflict between scalability,
 <picture>
 <source srcset="/diagrams/Variants/1/Embedded.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Embedded.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Embedded.png" alt="Embedded" loading="lazy" width="763" height="373" style="width:100%"/>
+<img src="/diagrams/Variants/1/Embedded.png" alt="An embedded system with the following pairs of layers: user interface and human-machine interface, software development kit and hardware abstraction layer, firmware and hardware." loading="lazy" width="763" height="373" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -612,7 +589,7 @@ Bare metal and micro\-OS systems which run on low\-end chips use a different ter
 - *Presentation* – a UI engine used by the *HMI*\. It may be a third\-party library or come as a part of the *SDK*\.
 - [*Human\-Machine Interface*]({{< relref "../extension-metapatterns/proxy.md#user-interface-presentation-layer-separated-presentation-command-line-interface-cli-graphical-user-interface-gui-frontend-human-machine-interface-hmi-man-machine-interface-mmi-operator-interface" >}}) \(*HMI* aka *MMI*\) – the UI and high\-level business logic for user scenarios, written by a [value\-added reseller](https://en.wikipedia.org/wiki/Value-added_reseller)\.
 - *Software Development Kit* \(*SDK*\) – the mid\-level business logic and device drivers, written by the [original equipment manufacturer](https://en.wikipedia.org/wiki/Original_equipment_manufacturer)\.
-- [*Hardware Abstraction Layer*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \(*HAL*\) – the low\-level code that abstracts hardware registers to enable code reuse between hardware platforms\.
+- [*Hardware Abstraction Layer*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) \(*HAL*\) – the low\-level code that abstracts hardware registers to enable code reuse between hardware platforms\.
 - *Firmware of Hardware Components* – usually closed\-source binary pre\-programmed into chips by chipmakers\.
 - *Hardware* itself\.
 
@@ -639,7 +616,7 @@ Not all the layered architectures are equally layered\. A [*Monolith*]({{< relre
 <picture>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Layers.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Layers.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Layers/Layers%20to%20Layers.png" alt="Layers to Layers" loading="lazy" width="943" height="424" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20to%20Layers.png" alt="A diagram of calls in a layered system. A single request from a client is translated by an Orchestrator into multiple calls to lower layers." loading="lazy" width="943" height="424" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -654,7 +631,7 @@ It is also common to:
 <picture>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20Split%20in%20Two.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20Split%20in%20Two.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Layers/Layers%20Split%20in%20Two.png" alt="Layers Split in Two" loading="lazy" width="1027" height="243" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20Split%20in%20Two.png" alt="A backend is subdivided into application and domain layers." loading="lazy" width="1027" height="243" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -671,7 +648,7 @@ The main drawback \(and benefit as well\) of *Layers* is that much or all of the
 <picture>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.png" alt="Layers Split Domain to Services" loading="lazy" width="1083" height="243" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.png" alt="The domain layer is split into subdomain components, making a Sandwich." loading="lazy" width="1083" height="243" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -684,7 +661,7 @@ The main drawback \(and benefit as well\) of *Layers* is that much or all of the
 <picture>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20Split%20to%20Event-Driven%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20Split%20to%20Event-Driven%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Layers/Layers%20Split%20to%20Event-Driven%20Architecture.png" alt="Layers Split to Event-Driven Architecture" loading="lazy" width="1166" height="264" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20Split%20to%20Event-Driven%20Architecture.png" alt="A backend is subdivided into a pipeline." loading="lazy" width="1166" height="264" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -697,7 +674,7 @@ The main drawback \(and benefit as well\) of *Layers* is that much or all of the
 <picture>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Hierarchy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Hierarchy.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Layers/Layers%20to%20Hierarchy.png" alt="Layers to Hierarchy" loading="lazy" width="1103" height="249" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20to%20Hierarchy.png" alt="The lower layers of a system are subdivided, resulting in a hierarchy." loading="lazy" width="1103" height="249" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -714,7 +691,7 @@ There are several ways to improve the performance of a layered system\. One we h
 <picture>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.png" alt="Layers to Space-Based Architecture" loading="lazy" width="1051" height="264" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.png" alt="The database is migrated to a Data Grid, resulting in a scalable Space-Based Architecture." loading="lazy" width="1051" height="264" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -729,7 +706,7 @@ Others are new:
 <picture>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20Merge.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20Merge.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Layers/Layers%20Merge.png" alt="Layers Merge" loading="lazy" width="1023" height="243" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20Merge.png" alt="The application and domain layers are merged." loading="lazy" width="1023" height="243" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -742,7 +719,7 @@ Others are new:
 <picture>
 <source srcset="/diagrams/Evolutions/Layers/Layers_%20Shard.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Layers/Layers_%20Shard.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Layers/Layers_%20Shard.png" alt="Layers: Shard" loading="lazy" width="983" height="305" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers_%20Shard.png" alt="The application and domain layers are independently sharded." loading="lazy" width="983" height="305" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -755,7 +732,7 @@ Others are new:
 <picture>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.png" alt="Layers to Polyglot Persistence" loading="lazy" width="1023" height="248" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.png" alt="The database layer is subdivided into specialized databases, resulting in Polyglot Persistence." loading="lazy" width="1023" height="248" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -774,7 +751,7 @@ The last group of evolutions to consider is about making the system more adaptab
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png" alt="Monolith to Layers - Further 2" loading="lazy" width="983" height="461" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png" alt="Diagrams of Layers with plugins, Layers with scripts, and Hexagonal Architecture with a layered core." loading="lazy" width="983" height="503" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -789,7 +766,7 @@ There is one new evolution which modifies the upper \(*orchestration*\) layer:
 <picture>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.png" alt="Layers to Backends for Frontends" loading="lazy" width="1003" height="323" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.png" alt="The application layer is split into Backends for Frontends." loading="lazy" width="1003" height="323" style="width:100%"/>
 </picture>
 </a>
 </figure>

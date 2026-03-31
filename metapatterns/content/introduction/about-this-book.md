@@ -1,7 +1,7 @@
 +++
-weight = 5
+weight = 4
 title = "About this book"
-description = "There are too many patterns to remember, therefore we need a system to sort them out and remove duplicates."
+description = "This is the introduction to the Architectural Metapatterns book. It discusses the book's rationale, structure, and the types of diagrams used in the text."
 images = ["/diagrams/Web/og/About.png"]
 [sitemap]
   priority = 0.5
@@ -42,7 +42,7 @@ The diagrams are *NoUML* and most of them belong to one of the following kinds:
 <picture>
 <source srcset="/diagrams/Misc/Diagrams.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Misc/Diagrams.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Misc/Diagrams.png" alt="Diagrams" loading="lazy" width="1043" height="463" style="width:100%"/>
+<img src="/diagrams/Misc/Diagrams.png" alt="A structural, sequence, and dependency diagrams in NoSQL notation as used throughout the Architectural Metapatterns book." loading="lazy" width="1043" height="463" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -53,6 +53,12 @@ Components in the diagrams are colored according to the kind of code they contai
 - Business rules \([domain logic]({{< relref "../basic-metapatterns/layers.md#domain-business-rules-or-model" >}})\) are blue\.
 - Generic code is white\.
 - The data is gray\.
+
+
+There are also non\-code \(external\) components:
+
+- Users and clients resemble milk chocolate\.
+- Hardware and the operating system are steel\-colored\.
 
 
 Please refer to the [following chapter]({{< relref "../introduction/metapatterns.md#the-system-of-coordinates" >}}) for the system of coordinates used in the diagrams\.

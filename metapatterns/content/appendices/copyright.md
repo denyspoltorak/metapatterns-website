@@ -1,7 +1,7 @@
 +++
 weight = 3
 title = "Copyright"
-description = "Creative Commons Attribution 4.0 International Public License."
+description = "The full text of Creative Commons Attribution 4.0 International Public License."
 images = ["/diagrams/Web/og/Favicon-plain.png"]
 [sitemap]
   disable = true

@@ -1,7 +1,7 @@
 +++
 weight = 4
 title = "Disclaimer"
-description = "IN NO EVENT SHALL THE COPYRIGHT HOLDERS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES."
+description = "The disclaimer for readers of Architectural Metapatterns."
 images = ["/diagrams/Web/og/Favicon-plain.png"]
 [sitemap]
   disable = true

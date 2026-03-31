@@ -1,7 +1,7 @@
 +++
 weight = 6
 title = "Middleware"
-description = "A Middleware provides a system of services with means of communication, scalability, and error recovery."
+description = "This chapter discusses Middleware and its variants: Message Bus, Event Mediator, Service Mesh, Enterprise Service Bus, and Persistent Event Log."
 images = ["/diagrams/Web/og/Middleware.png"]
 [sitemap]
   priority = 0.8
@@ -14,7 +14,7 @@ images = ["/diagrams/Web/og/Middleware.png"]
 <picture>
 <source srcset="/diagrams/Main/Middleware.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Middleware.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Middleware.png" alt="Middleware" loading="lazy" width="1062" height="494" style="width:100%"/>
+<img src="/diagrams/Main/Middleware.png" alt="A diagram for Services with a middleware, in abstractness-subdomain-sharding coordinates." loading="lazy" width="1062" height="494" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -23,26 +23,9 @@ images = ["/diagrams/Web/og/Middleware.png"]
 
 <ins>Known as:</ins> \(Distributed\) Middleware\.
 
-<ins>Aspects:</ins>
-
-- Message Broker \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}}), [EIP]({{< relref "../appendices/books-referenced.md#eip" >}}), [MP]({{< relref "../appendices/books-referenced.md#mp" >}})\],
-- Deployment Manager \[[SAP]({{< relref "../appendices/books-referenced.md#sap" >}}), [FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\]\.
-
-
-<ins>Variants:</ins> Implementations differ in many dimensions\.
-
-<ins>Examples</ins> of combined patterns:
-
-- \(with a [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}})\) Persistent Event Log / Shared Event Store,
-- \(with [*Proxies*]({{< relref "../extension-metapatterns/proxy.md" >}})\) Service Mesh \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}}), [MP]({{< relref "../appendices/books-referenced.md#mp" >}})\],
-- \(with [*Adapters*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}})\) Message Bus \[[EIP]({{< relref "../appendices/books-referenced.md#eip" >}})\],
-- \(with an [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}})\) Event Mediator \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\],
-- \(with an [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) and [*Adapters*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}})\) [Enterprise Service Bus](https://www.confluent.io/learn/enterprise-service-bus/) \(ESB\) \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\]\.
-
-
 <ins>Structure:</ins> A low\-level layer that provides connectivity\.
 
-<ins>Type:</ins> Extension\.
+<ins>Type:</ins> Extension component\.
 
 | *Benefits* | *Drawbacks* |
 | --- | --- |
@@ -77,12 +60,12 @@ Each service depends both on the *Middleware* and on the API of every service it
 <picture>
 <source srcset="/diagrams/Dependencies/Middleware.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Dependencies/Middleware.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Dependencies/Middleware.png" alt="Middleware" loading="lazy" width="986" height="264" style="width:100%"/>
+<img src="/diagrams/Dependencies/Middleware.png" alt="Each service depends on the middleware and on every service which it uses." loading="lazy" width="986" height="264" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
-You may decide to use an [*Anticorruption Layer*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] over your *Middleware* just in case you may need to change its vendor in the future\.
+You may decide to use an [*Anticorruption Layer*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) over your *Middleware* just in case you may need to change its vendor in the future\.
 
 ### Applicability
 
@@ -106,7 +89,7 @@ You may decide to use an [*Anticorruption Layer*]({{< relref "../extension-metap
 <picture>
 <source srcset="/diagrams/Relations/Middleware.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Relations/Middleware.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Relations/Middleware.png" alt="Middleware" loading="lazy" width="1226" height="463" style="width:100%"/>
+<img src="/diagrams/Relations/Middleware.png" alt="Middleware for Services, Shards, and Service-Oriented Architecture." loading="lazy" width="1226" height="463" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -170,7 +153,7 @@ If the messages are stored indefinitely, the *Middleware* [becomes]({{< relref "
 <picture>
 <source srcset="/diagrams/Variants/2/Middleware%20-%20Structure.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Middleware%20-%20Structure.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/2/Middleware%20-%20Structure.png" alt="Middleware - Structure" loading="lazy" width="1583" height="343" style="width:100%"/>
+<img src="/diagrams/Variants/2/Middleware%20-%20Structure.png" alt="In middleware each service is co-located with a generic component which may either be a node of a mesh or forward the service's requests to a centralized broker as a proxy." loading="lazy" width="1583" height="343" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -184,9 +167,16 @@ A *Middleware* may be:
 
 The last configuration is simpler but features a single point of failure unless multiple instances of the broker are deployed and kept synchronized\.
 
-## Examples of merging Middleware and other metapatterns
+## Examples
 
 There are several patterns which extend *Middleware* with other functions:
+
+- A [*Persistent Event Log*]({{< relref "#persistent-event-log-shared-event-store" >}}) allows for replaying past events\.
+- A [*Service Mesh*]({{< relref "#service-mesh" >}}) adds a *Sidecar* with shared libraries to every service instance it hosts\.
+- A [*Message Bus*]({{< relref "#message-bus" >}}) uses *Adapters* to support a variety of protocols\.
+- An [*Event Mediator*]({{< relref "#event-mediator" >}}) orchestrates request processing for the services it connects\.
+- An [*Enterprise Service Bus*]({{< relref "#enterprise-service-bus-esb" >}}) both supports multiple protocols and orchestrates request processing\.
+
 
 ### [Persistent Event Log, Shared Event Store]({{< relref "../extension-metapatterns/shared-repository.md#persistent-event-log-shared-event-store" >}})
 
@@ -195,7 +185,7 @@ There are several patterns which extend *Middleware* with other functions:
 <picture>
 <source srcset="/diagrams/Variants/2/Middleware%20-%20Shared%20Event%20Store.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Middleware%20-%20Shared%20Event%20Store.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/2/Middleware%20-%20Shared%20Event%20Store.png" alt="Middleware - Shared Event Store" loading="lazy" width="1263" height="244" style="width:100%"/>
+<img src="/diagrams/Variants/2/Middleware%20-%20Shared%20Event%20Store.png" alt="Both persistent event log and shared event store merge the functionality of middleware and shared repository." loading="lazy" width="1263" height="244" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -209,12 +199,12 @@ When a *Middleware* persists messages, it takes on the function \(and drawbacks\
 <picture>
 <source srcset="/diagrams/Variants/1/Microservices.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Microservices.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Microservices.png" alt="Microservices" loading="lazy" width="1303" height="421" style="width:100%"/>
+<img src="/diagrams/Variants/1/Microservices.png" alt="Multiple instances of several services connected to their sidecars which are connected to a shared mesh engine. Instances of each service access its single database." loading="lazy" width="1303" height="421" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
-*Service Mesh* \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}}), [MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] is a smart [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}})\-based *Middleware* that manages service instances and employs at least one co\-located [*Proxy*]({{< relref "../extension-metapatterns/proxy.md" >}}) \(called [*Sidecar*]({{< relref "../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\]\) per service instance deployed\. The *Sidecars* may provide protocol translation and cover cross\-cutting concerns such as encryption or logging\. They make a good place for shared libraries\.
+*Service Mesh* \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}}), [MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] is a smart [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}})\-based *Middleware* that manages service instances and employs at least one co\-located [*Proxy*]({{< relref "../extension-metapatterns/proxy.md" >}}) \(called [*Sidecar*]({{< relref "../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}})\) per service instance deployed\. The *Sidecars* may provide protocol translation and cover cross\-cutting concerns such as encryption or logging\. They make a good place for shared libraries\.
 
 The internals of [*Service Mesh*]({{< relref "../implementation-metapatterns/mesh.md#service-mesh" >}}) are discussed in the [*Mesh* chapter]({{< relref "../implementation-metapatterns/mesh.md" >}})\.
 
@@ -225,12 +215,12 @@ The internals of [*Service Mesh*]({{< relref "../implementation-metapatterns/mes
 <picture>
 <source srcset="/diagrams/Variants/2/Message%20Bus.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Message%20Bus.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/2/Message%20Bus.png" alt="Message Bus" loading="lazy" width="883" height="283" style="width:100%"/>
+<img src="/diagrams/Variants/2/Message%20Bus.png" alt="A message bus has an adapter per service to allow each service to use its own protocol." loading="lazy" width="883" height="283" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
-A *Message Bus* \[[EIP]({{< relref "../appendices/books-referenced.md#eip" >}})\] employs one or more [*Adapters*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) per service to let the services intercommunicate even if they differ in protocols\. That helps to integrate legacy services without much change to their code but it degrades overall performance as up to two protocol translations per message are involved\.
+A *Message Bus* \[[EIP]({{< relref "../appendices/books-referenced.md#eip" >}})\] employs one or more [*Adapters*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) per service to let the services intercommunicate even if they differ in protocols\. That helps to integrate legacy services without much change to their code but it degrades overall performance as up to two protocol translations per message are involved\.
 
 ### [Event Mediator]({{< relref "../extension-metapatterns/orchestrator.md#event-mediator" >}})
 
@@ -239,7 +229,7 @@ A *Message Bus* \[[EIP]({{< relref "../appendices/books-referenced.md#eip" >}})\
 <picture>
 <source srcset="/diagrams/Variants/2/Event%20Mediator.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Event%20Mediator.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/2/Event%20Mediator.png" alt="Event Mediator" loading="lazy" width="1103" height="385" style="width:100%"/>
+<img src="/diagrams/Variants/2/Event%20Mediator.png" alt="An event mediator calls event processors one by one." loading="lazy" width="1103" height="385" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -255,12 +245,12 @@ Slightly more details on the *Event Mediator* are [provided in the *Orchestrator
 <picture>
 <source srcset="/diagrams/Variants/2/Enterprise%20Service%20Bus.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Enterprise%20Service%20Bus.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/2/Enterprise%20Service%20Bus.png" alt="Enterprise Service Bus" loading="lazy" width="1323" height="552" style="width:100%"/>
+<img src="/diagrams/Variants/2/Enterprise%20Service%20Bus.png" alt="An Enterprise Service Bus is between the fragmented task and entity layers of Service-Oriented Architecture. It mediates all calls and messages between the system components." loading="lazy" width="1323" height="552" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
-[*Enterprise Service Bus*](https://www.confluent.io/learn/enterprise-service-bus/) \(*ESB*\) \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] is a mixture of *Message Bus* and *Event Mediator*\. A *ESB* blends a *Middleware* and an [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) and adds an [*Adapter*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) per service as a topping\. It emerged to connect components that originated in incompatible networks of organizations that had been acquired by a corporation\.
+[*Enterprise Service Bus*](https://www.confluent.io/learn/enterprise-service-bus/) \(*ESB*\) \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] is a mixture of *Message Bus* and *Event Mediator*\. A *ESB* blends a *Middleware* and an [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) and adds an [*Adapter*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) per service as a topping\. It emerged to connect components that originated in incompatible networks of organizations that had been acquired by a corporation\.
 
 See the [chapter about *Service\-Oriented Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#enterprise-soa" >}})\.
 
@@ -276,7 +266,7 @@ A *Middleware* is unlikely to be removed \(though it may be replaced\) once it i
 <picture>
 <source srcset="/diagrams/Evolutions/2/Middleware%20add%20Middleware.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Middleware%20add%20Middleware.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/2/Middleware%20add%20Middleware.png" alt="Middleware add Middleware" loading="lazy" width="1223" height="344" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Middleware%20add%20Middleware.png" alt="A specialized middleware added to a system that already has a generic middleware." loading="lazy" width="1223" height="344" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -289,7 +279,7 @@ A *Middleware* is unlikely to be removed \(though it may be replaced\) once it i
 <picture>
 <source srcset="/diagrams/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.png" alt="Middleware to Bus of Buses" loading="lazy" width="1903" height="405" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.png" alt="A low-level middleware interconnects several higher-level middlewares." loading="lazy" width="1903" height="405" style="width:100%"/>
 </picture>
 </a>
 </figure>

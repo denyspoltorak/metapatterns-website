@@ -1,7 +1,7 @@
 +++
 weight = 8
 title = "Appendices"
-description = "This part contains miscellaneous information which ranges from marginally useful (e.g. pattern evolutions) to copyright and revisions history."
+description = "This part of the book contains miscellaneous information which ranges from marginally useful (e.g. pattern evolutions) to copyright and revision history."
 images = ["/diagrams/Web/og/Favicon-plain.png"]
 bookCollapseSection = true
 [sitemap]
@@ -9,6 +9,16 @@ bookCollapseSection = true
 +++
 
 # Appendices {anchor=false}
+
+Though I don’t think that you should be reading this, this book contains a few useful appendices:
+
+- The [list of books referenced]({{< relref "../appendices/books-referenced.md" >}}) in the text\. Many of them are actually good to read\.
+- The [list of evolutions]({{< relref "../appendices/evolutions-of-architectures/_index.md" >}}) of architectures\. It is very boring to read and should rather be consulted as need arises\.
+- A short [description of the structure of metapattern chapters]({{< relref "../appendices/format-of-a-metapattern.md" >}})\.
+- The [glossary]({{< relref "../appendices/glossary.md" >}}), probably redundant\.
+- The [history of changes]({{< relref "../appendices/history-of-changes.md" >}}) \(revisions\)\.
+- The [index of patterns]({{< relref "../appendices/index-of-patterns.md" >}}) described in the book\. This one may be handy\.
+
 
 ## Contents:
 

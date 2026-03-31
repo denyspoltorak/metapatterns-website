@@ -22,7 +22,7 @@ A [*Middleware*]({{< relref "../../extension-metapatterns/middleware.md" >}}) is
 <picture>
 <source srcset="/diagrams/Evolutions/2/Middleware%20add%20Middleware.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Middleware%20add%20Middleware.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/2/Middleware%20add%20Middleware.png" alt="Middleware add Middleware" loading="lazy" width="1223" height="344" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Middleware%20add%20Middleware.png" alt="A specialized middleware added to a system that already has a generic middleware." loading="lazy" width="1223" height="344" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -53,7 +53,7 @@ If the current *Middleware* is too generic for the system’s needs, you can add
 <picture>
 <source srcset="/diagrams/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.png" alt="Middleware to Bus of Buses" loading="lazy" width="1903" height="405" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Middleware%20to%20Bus%20of%20Buses.png" alt="A low-level middleware interconnects several higher-level middlewares." loading="lazy" width="1903" height="405" style="width:100%"/>
 </picture>
 </a>
 </figure>

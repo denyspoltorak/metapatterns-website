@@ -1,7 +1,7 @@
 +++
 weight = 5
 title = "Fragmented metapatterns"
-description = "Layered Services, Polyglot Persistence, Backends for Frontends, Service-Oriented Architecture, or Hierarchy builds a system from many smaller components."
+description = "This book part discusses fragmented topologies: Layered Services, Polyglot Persistence, Backends for Frontends, Service-Oriented Architecture, and Hierarchy."
 images = ["/diagrams/Web/og/Favicon-plain.png"]
 bookCollapseSection = true
 [sitemap]
@@ -10,7 +10,7 @@ bookCollapseSection = true
 
 # Fragmented metapatterns {anchor=false}
 
-There are several patterns with no system\-wide layers\. Some of them incorporate two or three orthogonal domains which vary in abstractness to the extent that a service \(limited to a subdomain\) of one domain acts as a layer for another domain\.
+There are several topologies with no system\-wide layers\. Some of them incorporate two or three orthogonal domains which vary in abstractness to the extent that a service \(limited to a subdomain\) of one domain acts as a layer for another domain\.
 
 ### [Layered Services]({{< relref "../fragmented-metapatterns/layered-services.md" >}})
 
@@ -19,7 +19,7 @@ There are several patterns with no system\-wide layers\. Some of them incorporat
 <picture>
 <source srcset="/diagrams/Contents/Layered%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Layered%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Layered%20Services.png" alt="Layered Services" loading="lazy" width="1133" height="363" style="width:100%"/>
+<img src="/diagrams/Contents/Layered%20Services.png" alt="A diagram of Layered Services, with explanations." loading="lazy" width="1133" height="363" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -35,7 +35,7 @@ There are several patterns with no system\-wide layers\. Some of them incorporat
 <picture>
 <source srcset="/diagrams/Contents/Polyglot%20Persistence.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Polyglot%20Persistence.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Polyglot%20Persistence.png" alt="Polyglot Persistence" loading="lazy" width="1023" height="303" style="width:100%"/>
+<img src="/diagrams/Contents/Polyglot%20Persistence.png" alt="A diagram of Services with Polyglot Persistence, with explanations." loading="lazy" width="1023" height="303" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -51,7 +51,7 @@ There are several patterns with no system\-wide layers\. Some of them incorporat
 <picture>
 <source srcset="/diagrams/Contents/Backends%20for%20Frontends.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Backends%20for%20Frontends.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Backends%20for%20Frontends.png" alt="Backends for Frontends" loading="lazy" width="1003" height="383" style="width:100%"/>
+<img src="/diagrams/Contents/Backends%20for%20Frontends.png" alt="A diagram of Services with Backends for Frontends, with explanations." loading="lazy" width="1003" height="383" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -67,7 +67,7 @@ There are several patterns with no system\-wide layers\. Some of them incorporat
 <picture>
 <source srcset="/diagrams/Contents/Service-Oriented%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Service-Oriented%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" loading="lazy" width="983" height="401" style="width:100%"/>
+<img src="/diagrams/Contents/Service-Oriented%20Architecture.png" alt="A diagram of Service-Oriented Architecture, with explanations." loading="lazy" width="983" height="401" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -83,7 +83,7 @@ There are several patterns with no system\-wide layers\. Some of them incorporat
 <picture>
 <source srcset="/diagrams/Contents/Hierarchy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Hierarchy.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Hierarchy.png" alt="Hierarchy" loading="lazy" width="907" height="303" style="width:100%"/>
+<img src="/diagrams/Contents/Hierarchy.png" alt="A diagram of Hierarchy, with explanations." loading="lazy" width="907" height="303" style="width:100%"/>
 </picture>
 </a>
 </figure>

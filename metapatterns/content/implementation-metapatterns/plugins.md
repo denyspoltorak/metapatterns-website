@@ -1,7 +1,7 @@
 +++
 weight = 5
 title = "Plugins"
-description = "Plugins allow for customization of a component’s behavior"
+description = "This chapter explores the highly customizable Plugins architecture and its subtypes: Plugin, Ambassador Plugin, Extension, Addin, and Addon."
 images = ["/diagrams/Web/og/Plugins.png"]
 [sitemap]
   priority = 0.8
@@ -14,7 +14,7 @@ images = ["/diagrams/Web/og/Plugins.png"]
 <picture>
 <source srcset="/diagrams/Main/Plugins.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Plugins.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Plugins.png" alt="Plugins" loading="lazy" width="942" height="554" style="width:100%"/>
+<img src="/diagrams/Main/Plugins.png" alt="A diagram for Plugins Architecture, in abstractness-subdomain-sharding coordinates." loading="lazy" width="942" height="554" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -23,20 +23,9 @@ images = ["/diagrams/Web/og/Plugins.png"]
 
 <ins>Known as:</ins> Plug\-In Architecture \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\], [Extension Architecture](https://www.uber.com/en-UA/blog/microservice-architecture/), \(misapplied\) Microkernel \(Architecture\) \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}}), [SAP]({{< relref "../appendices/books-referenced.md#sap" >}}), [FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\], Plugin \[[PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\], [Strategy](https://refactoring.guru/design-patterns/strategy) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\], Reflection \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\], Aspects, Hooks\.
 
-<ins>Variants:</ins> [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) and [*Microkernel*]({{< relref "../implementation-metapatterns/microkernel.md" >}}) got dedicated chapters\. *Plugins* have many variations\.
-
-<ins>Examples:</ins>
-
-- True Plugin / Plug\-in \(low\-level\),
-- Ambassador Plugin / [Logic Extension](https://www.uber.com/en-UA/blog/microservice-architecture/),
-- Extension \(high\-level\),
-- Addin / Add\-in \(mid\-level\),
-- \(inexact\) Addon / Add\-on \(topping\)\.
-
-
 <ins>Structure:</ins> A [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) extended with one or more modules that customize its behavior\.
 
-<ins>Type:</ins> Implementation, extension\.
+<ins>Type:</ins> Implementation, extension components\.
 
 | *Benefits* | *Drawbacks* |
 | --- | --- |
@@ -57,7 +46,7 @@ The only case for a plugin to improve performance of a system that I can think o
 
 - The use of *stored procedures* in databases,
 - HFT rules and price tables [uploaded](https://www.youtube.com/watch?v=sX2nF1fW7kI) to a network card or FPGA,
-- Customization of supplier [*Cells*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#full-featured-cell-domain" >}}) for varying needs of their client *Cells* in [*Domain\-Oriented Microservice Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#domain-oriented-microservice-architecture-doma" >}})\.
+- Customization of supplier [*Cells*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}}) for varying needs of their client *Cells* in [*Domain\-Oriented Microservice Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#domain-oriented-microservice-architecture-doma" >}})\.
 
 
 <figure>
@@ -65,7 +54,7 @@ The only case for a plugin to improve performance of a system that I can think o
 <picture>
 <source srcset="/diagrams/Performance/Plugins-injection.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Performance/Plugins-injection.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Performance/Plugins-injection.png" alt="Plugins-injection" loading="lazy" width="1043" height="623" style="width:100%"/>
+<img src="/diagrams/Performance/Plugins-injection.png" alt="Business logic injection in Layers and Services." loading="lazy" width="1043" height="623" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -79,7 +68,7 @@ Each *plugin* depends on the *core*’s *API* \(for *Addons*\) or *SPI* \(for *P
 <picture>
 <source srcset="/diagrams/Dependencies/Plugins.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Dependencies/Plugins.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Dependencies/Plugins.png" alt="Plugins" loading="lazy" width="743" height="324" style="width:100%"/>
+<img src="/diagrams/Dependencies/Plugins.png" alt="Each plugin depends on an interface of the core." loading="lazy" width="743" height="324" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -105,15 +94,15 @@ Each *plugin* depends on the *core*’s *API* \(for *Addons*\) or *SPI* \(for *P
 <picture>
 <source srcset="/diagrams/Relations/Plugins.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Relations/Plugins.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Relations/Plugins.png" alt="Plugins" loading="lazy" width="1063" height="603" style="width:100%"/>
+<img src="/diagrams/Relations/Plugins.png" alt="A monolith with plugins; layers with plugins; a Cell with a plugin." loading="lazy" width="1063" height="603" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
 *Plugins*:
 
-- Implement [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}), [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}), or [*Cell*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#examples--cell" >}})\.
-- Extend [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}), [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}), or [*Cell*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#examples--cell" >}}) with one or two layers of services\.
+- Implement [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}), [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}), or [*Cell*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}})\.
+- Extend [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}), [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}), or [*Cell*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}}) with one or two layers of services\.
 
 
 ## Variants
@@ -169,7 +158,14 @@ Plugins may be:
 
 ## Examples
 
-*Plugins* can take different roles and places in the system\. Though their classification and naming has never been well established, we can discern the following four kinds of *plugins*, which are non\-exclusive, meaning that a single application may support some or all of them at once:
+*Plugins* can take different roles and places in the system\. Though their classification and naming has never been well established, we can discern the following kinds of *plugins*, which are non\-exclusive, meaning that a single application may support some or all of them at once:
+
+- A [true *Plugin*]({{< relref "#true-plugin-or-plug-in" >}}) provides custom low\-level functionality, such as a video codec or national tax calculation rule\.
+- An [*Ambassador Plugin*]({{< relref "#ambassador-plugin-logic-extension" >}}) injects a part of a given service’s business logic into another service\.
+- An [*Extension*]({{< relref "#extension" >}}) modifies its target’s workflow \(use cases\)\.
+- An [*Addin*]({{< relref "#addin-or-add-in" >}}) is a deeply integrated optional part of a system’s core logic\.
+- An [*Addon*]({{< relref "#inexact-addon-or-add-on" >}}) is an addition that wraps an application to improve user experience\.
+
 
 ### True Plugin \(or Plug\-in\)
 
@@ -178,7 +174,7 @@ Plugins may be:
 <picture>
 <source srcset="/diagrams/Variants/4/Plugins.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/Plugins.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/4/Plugins.png" alt="Plugins" loading="lazy" width="883" height="383" style="width:100%"/>
+<img src="/diagrams/Variants/4/Plugins.png" alt="Several low-level plugins are called by a use case running in a system." loading="lazy" width="883" height="383" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -196,16 +192,16 @@ Examples: codecs in a video player, country\-specific tax calculation rules in a
 <picture>
 <source srcset="/diagrams/Variants/4/Ambassador%20Plugin.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/Ambassador%20Plugin.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/4/Ambassador%20Plugin.png" alt="Ambassador Plugin" loading="lazy" width="1003" height="283" style="width:100%"/>
+<img src="/diagrams/Variants/4/Ambassador%20Plugin.png" alt="An ambassador plugin is a part of one service hosted inside another service. When called, it may consult its origin service or make independent decisions." loading="lazy" width="1003" height="283" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
-A service may accept *Plugins* that [act on behalf of peer services](https://www.uber.com/en-UA/blog/microservice-architecture/) \(are [*Ambassadors*]({{< relref "../extension-metapatterns/proxy.md#on-the-client-side-ambassador" >}})\) and are implemented by their teams\. That inverts dependencies: whoever wants to affect the behavior of your service uses your SPI to inject their code into your service which apart from that remains self\-contained\. As a result, whatever used to be a system\-wide workflow becomes limited to a single subdomain\.
+A service may accept *Plugins* that [act on behalf of peer services](https://www.uber.com/en-UA/blog/microservice-architecture/) \(are [*Ambassadors*]({{< relref "../extension-metapatterns/proxy.md#on-the-client-side-ambassador" >}})\) and are implemented by their teams\. That [inverts dependencies]({{< relref "../analytics/comparison-of-architectural-patterns/dependency-inversion-in-architectural-patterns.md" >}}): whoever wants to affect the behavior of your service uses your SPI to inject their code into your service which apart from that remains self\-contained\. As a result, whatever used to be a system\-wide workflow becomes limited to a single subdomain\.
 
 Though an *Ambassador Plugin* \(aka Uber’s [*Logic Extension*](https://www.uber.com/en-UA/blog/microservice-architecture/)\) may call the service on whose behalf it acts, it is preferable performance\-wise for it to make independent decisions without cross\-service calls \(it works like a smart [*Cache*]({{< relref "../extension-metapatterns/proxy.md#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}}) that provides decisions instead of data\)\. For data\-driven decisions the *Ambassador* may need to opaquely receive and store data \([*Data Extension*](https://www.uber.com/en-UA/blog/microservice-architecture/)\) in its host’s database\.
 
-*Ambassador Plugins* are widely used in Uber’s [*Domain\-Oriented Microservice Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#domain-oriented-microservice-architecture-doma" >}}) to decouple its [*Cells*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#full-featured-cell-domain" >}})\.
+*Ambassador Plugins* are widely used in Uber’s [*Domain\-Oriented Microservice Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#domain-oriented-microservice-architecture-doma" >}}) to decouple its [*Cells*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}})\.
 
 ### Extension
 
@@ -214,7 +210,7 @@ Though an *Ambassador Plugin* \(aka Uber’s [*Logic Extension*](https://www.ube
 <picture>
 <source srcset="/diagrams/Variants/4/Extension.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/Extension.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/4/Extension.png" alt="Extension" loading="lazy" width="843" height="363" style="width:100%"/>
+<img src="/diagrams/Variants/4/Extension.png" alt="An extension is called as a high-level part of a system's use case." loading="lazy" width="843" height="363" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -230,7 +226,7 @@ Examples: IDE customization\.
 <picture>
 <source srcset="/diagrams/Variants/4/Addin.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/Addin.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/4/Addin.png" alt="Addin" loading="lazy" width="763" height="264" style="width:94%"/>
+<img src="/diagrams/Variants/4/Addin.png" alt="An addin is hosted inside a system and implements a part of its control flow." loading="lazy" width="763" height="264" style="width:94%"/>
 </picture>
 </a>
 </figure>
@@ -246,14 +242,14 @@ Examples: complex extensions for web browsers or static website generators\.
 <picture>
 <source srcset="/diagrams/Variants/4/Addon.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/Addon.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/4/Addon.png" alt="Addon" loading="lazy" width="883" height="364" style="width:100%"/>
+<img src="/diagrams/Variants/4/Addon.png" alt="An addon is a layer between a system and its client. It translates a single client request into multiple calls to the underlying system." loading="lazy" width="883" height="364" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
 Though any of the variants of *Plugins* described above may sometimes be called an *addon*, there is a kind of system extension which perfectly matches the meaning of the word\.
 
-A true *Addon* is built on top of the system’s API and calls into the system from outside – it is a kind of external [*Adapter*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) or even [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) for the system\.
+A true *Addon* is built on top of the system’s API and calls into the system from outside – it is a kind of external [*Adapter*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) or even [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) for the system\.
 
 Examples: applications that provide [user interface]({{< relref "../extension-metapatterns/proxy.md#user-interface-presentation-layer-separated-presentation-command-line-interface-cli-graphical-user-interface-gui-frontend-human-machine-interface-hmi-man-machine-interface-mmi-operator-interface" >}}) for command\-line tools such as git\.
 

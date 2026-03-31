@@ -2,7 +2,7 @@
 weight = 1
 layout = "landing"
 title = "The pattern language of software architecture"
-description = "Explore how patterns relate to each other and work together."
+description = "This is an online version of the Architectural Metapatterns book which explores system topologies and arranges architectural patterns into a pattern language."
 images = ["/diagrams/Web/og/Favicon-plain.png"]
 bookCollapseSection = true
 [sitemap]
@@ -77,7 +77,7 @@ The content is lavishly illustrated with intuitive NoUML diagrams. It’s concis
 
 <source srcset="/diagrams/Web/About.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/About.png" alt="" loading="lazy" width="720" height="680"/>
+<img src="/diagrams/Web/About.png" alt="A text: there are too many patterns!" loading="lazy" width="720" height="680"/>
 
 </picture>
 
@@ -93,7 +93,7 @@ About this book
 
 <source srcset="/diagrams/Web/Metapatterns.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Metapatterns.png" alt="" loading="lazy" width="375" height="363"/>
+<img src="/diagrams/Web/Metapatterns.png" alt="Abstraction, subdomain, and sharding axes with the following text between them: your pattern here." loading="lazy" width="375" height="363"/>
 
 </picture>
 
@@ -115,7 +115,7 @@ Metapatterns
 
 <source srcset="/diagrams/Web/Complexity.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Complexity.png" alt="" loading="lazy" width="543" height="564"/>
+<img src="/diagrams/Web/Complexity.png" alt="A diagram of three components each encapsulating a graph of nodes." loading="lazy" width="543" height="564"/>
 
 </picture>
 
@@ -131,7 +131,7 @@ Modules and complexity
 
 <source srcset="/diagrams/Web/Forces.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Forces.png" alt="" loading="lazy" width="409" height="403"/>
+<img src="/diagrams/Web/Forces.png" alt="A diagram of messaging in a three-layered system with the lower layer making multiple calls to hardware." loading="lazy" width="409" height="403"/>
 
 </picture>
 
@@ -147,7 +147,7 @@ Forces, asynchronicity, and distribution
 
 <source srcset="/diagrams/Web/4Kinds.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/4Kinds.png" alt="" loading="lazy" width="622" height="627"/>
+<img src="/diagrams/Web/4Kinds.png" alt="Diagrams of control, interactive, streaming, and computational systems." loading="lazy" width="622" height="627"/>
 
 </picture>
 
@@ -163,7 +163,7 @@ Four kinds of software
 
 <source srcset="/diagrams/Web/Communication.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Communication.png" alt="" loading="lazy" width="263" height="263"/>
+<img src="/diagrams/Web/Communication.png" alt="A diagram of a client above three services with question marks between the components." loading="lazy" width="263" height="263"/>
 
 </picture>
 
@@ -185,7 +185,7 @@ Arranging communication
 
 <source srcset="/diagrams/Web/Monolith.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Monolith.png" alt="" loading="lazy" width="363" height="243"/>
+<img src="/diagrams/Web/Monolith.png" alt="A diagram of a monolithic system that blends application, domain rules, generic code, and data in a single component." loading="lazy" width="363" height="243"/>
 
 </picture>
 
@@ -201,7 +201,7 @@ Monolith
 
 <source srcset="/diagrams/Web/Shards.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Shards.png" alt="" loading="lazy" width="366" height="243"/>
+<img src="/diagrams/Web/Shards.png" alt="A diagram of three interacting instances of a subsystem." loading="lazy" width="366" height="243"/>
 
 </picture>
 
@@ -217,7 +217,7 @@ Shards
 
 <source srcset="/diagrams/Web/Layers.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Layers.png" alt="" loading="lazy" width="363" height="245"/>
+<img src="/diagrams/Web/Layers.png" alt="A diagram of a system with three layers: application, domain, and database." loading="lazy" width="363" height="245"/>
 
 </picture>
 
@@ -233,7 +233,7 @@ Layers
 
 <source srcset="/diagrams/Web/Services.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Services.png" alt="" loading="lazy" width="363" height="246"/>
+<img src="/diagrams/Web/Services.png" alt="A diagram of three interacting services." loading="lazy" width="363" height="246"/>
 
 </picture>
 
@@ -249,7 +249,7 @@ Services
 
 <source srcset="/diagrams/Web/Pipeline.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Pipeline.png" alt="" loading="lazy" width="364" height="243"/>
+<img src="/diagrams/Web/Pipeline.png" alt="A diagram of a pipeline made from input, three processing steps, and output." loading="lazy" width="364" height="243"/>
 
 </picture>
 
@@ -271,7 +271,7 @@ Pipeline
 
 <source srcset="/diagrams/Web/Middleware.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Middleware.png" alt="" loading="lazy" width="363" height="304"/>
+<img src="/diagrams/Web/Middleware.png" alt="A diagram of three services that use a shared transport." loading="lazy" width="363" height="304"/>
 
 </picture>
 
@@ -287,7 +287,7 @@ Middleware
 
 <source srcset="/diagrams/Web/Shared%20Repository.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Shared%20Repository.png" alt="" loading="lazy" width="363" height="304"/>
+<img src="/diagrams/Web/Shared%20Repository.png" alt="A diagram of three services above a shared data layer." loading="lazy" width="363" height="304"/>
 
 </picture>
 
@@ -303,7 +303,7 @@ Shared Repository
 
 <source srcset="/diagrams/Web/Proxy.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Proxy.png" alt="" loading="lazy" width="363" height="303"/>
+<img src="/diagrams/Web/Proxy.png" alt="A diagram of a client above a proxy above three services." loading="lazy" width="363" height="303"/>
 
 </picture>
 
@@ -319,7 +319,7 @@ Proxy
 
 <source srcset="/diagrams/Web/Orchestrator.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Orchestrator.png" alt="" loading="lazy" width="363" height="303"/>
+<img src="/diagrams/Web/Orchestrator.png" alt="A diagram with an integration layer above three services." loading="lazy" width="363" height="303"/>
 
 </picture>
 
@@ -335,7 +335,7 @@ Orchestrator
 
 <source srcset="/diagrams/Web/Sandwich.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Sandwich.png" alt="" loading="lazy" width="363" height="305"/>
+<img src="/diagrams/Web/Sandwich.png" alt="A diagram with an integration layer above three services above a data layer." loading="lazy" width="363" height="305"/>
 
 </picture>
 
@@ -357,7 +357,7 @@ Sandwich
 
 <source srcset="/diagrams/Web/Layered%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Layered%20Services.png" alt="" loading="lazy" width="443" height="344"/>
+<img src="/diagrams/Web/Layered%20Services.png" alt="A diagram of three three-layered services." loading="lazy" width="443" height="344"/>
 
 </picture>
 
@@ -373,7 +373,7 @@ Layered Services
 
 <source srcset="/diagrams/Web/Polyglot%20Persistence.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Polyglot%20Persistence.png" alt="" loading="lazy" width="443" height="341"/>
+<img src="/diagrams/Web/Polyglot%20Persistence.png" alt="A diagram of three services that share two databases." loading="lazy" width="443" height="341"/>
 
 </picture>
 
@@ -389,7 +389,7 @@ Polyglot Persistence
 
 <source srcset="/diagrams/Web/Backends%20for%20Frontends.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Backends%20for%20Frontends.png" alt="" loading="lazy" width="443" height="343"/>
+<img src="/diagrams/Web/Backends%20for%20Frontends.png" alt="A diagram with three layers, from top to bottom: mobile and desktop clients; mobile and desktop backends; three services." loading="lazy" width="443" height="343"/>
 
 </picture>
 
@@ -405,7 +405,7 @@ Backends for Frontends
 
 <source srcset="/diagrams/Web/Service-Oriented%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Service-Oriented%20Architecture.png" alt="" loading="lazy" width="443" height="343"/>
+<img src="/diagrams/Web/Service-Oriented%20Architecture.png" alt="A diagram of three layers subdivided into two, three, and four services, respectively." loading="lazy" width="443" height="343"/>
 
 </picture>
 
@@ -421,7 +421,7 @@ Service-Oriented Architecture
 
 <source srcset="/diagrams/Web/Hierarchy.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Hierarchy.png" alt="" loading="lazy" width="443" height="343"/>
+<img src="/diagrams/Web/Hierarchy.png" alt="A diagram of a hierarchy with three layers. There is one component in the top layer, two components below it, and five components in the lowest layer." loading="lazy" width="443" height="343"/>
 
 </picture>
 
@@ -443,7 +443,7 @@ Hierarchy
 
 <source srcset="/diagrams/Web/Plugins.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Plugins.png" alt="" loading="lazy" width="303" height="343"/>
+<img src="/diagrams/Web/Plugins.png" alt="A diagram with three layers: two extensions above a large core with business logic above three plugins." loading="lazy" width="323" height="383"/>
 
 </picture>
 
@@ -459,7 +459,7 @@ Plugins
 
 <source srcset="/diagrams/Web/Hexagonal%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Hexagonal%20Architecture.png" alt="" loading="lazy" width="303" height="344"/>
+<img src="/diagrams/Web/Hexagonal%20Architecture.png" alt="A diagram of Hexagonal Architecture with adapters between its core and input, output, database, and libraries." loading="lazy" width="323" height="383"/>
 
 </picture>
 
@@ -475,7 +475,7 @@ Hexagonal Architecture
 
 <source srcset="/diagrams/Web/Microkernel.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Microkernel.png" alt="" loading="lazy" width="303" height="343"/>
+<img src="/diagrams/Web/Microkernel.png" alt="A diagram of two applications above a microkernel above three provider services." loading="lazy" width="323" height="383"/>
 
 </picture>
 
@@ -491,7 +491,7 @@ Microkernel
 
 <source srcset="/diagrams/Web/Mesh.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Mesh.png" alt="" loading="lazy" width="303" height="343"/>
+<img src="/diagrams/Web/Mesh.png" alt="A diagram of three applications each connected to a node of a mesh. The nodes are communicating to each other." loading="lazy" width="323" height="383"/>
 
 </picture>
 
@@ -513,7 +513,7 @@ Mesh
 
 <source srcset="/diagrams/Web/Comparison.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Comparison.png" alt="" loading="lazy" width="665" height="645"/>
+<img src="/diagrams/Web/Comparison.png" alt="Diagrams of services sharing a dataset, a pipeline, dependency inversion in an operating system with device drivers, and an adapter between a client and a service." loading="lazy" width="665" height="645"/>
 
 </picture>
 
@@ -529,7 +529,7 @@ Comparison of architectural patterns
 
 <source srcset="/diagrams/Web/Ambiguous.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Ambiguous.png" alt="" loading="lazy" width="1003" height="983"/>
+<img src="/diagrams/Web/Ambiguous.png" alt="Five diagrams of various systems called monoliths." loading="lazy" width="1003" height="983"/>
 
 </picture>
 
@@ -545,7 +545,7 @@ Ambiguous patterns
 
 <source srcset="/diagrams/Web/Life%20cycle.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Life%20cycle.png" alt="" loading="lazy" width="1185" height="1123"/>
+<img src="/diagrams/Web/Life%20cycle.png" alt="A diagram that shows a cycle with the following architectures: Monolith, Layers, Layered Services, a Sandwich Cell interacting with orchestrated layered services, and Layers with two databases." loading="lazy" width="1185" height="1123"/>
 
 </picture>
 
@@ -561,7 +561,7 @@ Architecture and product life cycle
 
 <source srcset="/diagrams/Web/Real-world.negated.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Real-world.png" alt="" loading="lazy" width="483" height="463"/>
+<img src="/diagrams/Web/Real-world.png" alt="A diagram of three services with queues of people and luggage above a transport layer with train stations and trains." loading="lazy" width="483" height="463"/>
 
 </picture>
 
@@ -577,7 +577,7 @@ Real-world inspirations for architectural patterns
 
 <source srcset="/diagrams/Web/Heart.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Heart.png" alt="" loading="lazy" width="403" height="384"/>
+<img src="/diagrams/Web/Heart.png" alt="A plot of pain level of maintaining a project against the project's size, with different architectures being optimal for different project sizes." loading="lazy" width="403" height="384"/>
 
 </picture>
 

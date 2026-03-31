@@ -1,7 +1,7 @@
 +++
 weight = 2
 title = "Forces, asynchronicity, and distribution"
-description = "Forces are our expectations about a system’s properties."
+description = "This chapter explores non-functional requirements (forces), their conflicts, and the ways to address them in modular, asynchronous, or distributed systems."
 images = ["/diagrams/Web/og/Forces.png"]
 [sitemap]
   priority = 0.5
@@ -44,7 +44,7 @@ Remember how old Windows used to freeze on formatting a floppy or when it encoun
 <picture>
 <source srcset="/diagrams/Intro/Floppy-Sync.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Intro/Floppy-Sync.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Intro/Floppy-Sync.png" alt="Floppy-Sync" loading="lazy" width="625" height="606" style="width:80%"/>
+<img src="/diagrams/Intro/Floppy-Sync.png" alt="Synchronous communication freezes the system UI and format windows while a driver formats a floppy." loading="lazy" width="625" height="606" style="width:80%"/>
 </picture>
 </a>
 </figure>
@@ -60,7 +60,7 @@ If the modules cannot communicate directly \(call each other and wait for the re
 <picture>
 <source srcset="/diagrams/Intro/Floppy-Async.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Intro/Floppy-Async.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Intro/Floppy-Async.png" alt="Floppy-Async" loading="lazy" width="745" height="602" style="width:100%"/>
+<img src="/diagrams/Intro/Floppy-Async.png" alt="Asynchronous communication unblocks the system UI and format windows while a driver formats a floppy." loading="lazy" width="745" height="602" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -83,7 +83,7 @@ This common division makes quite a lot of sense:
 <picture>
 <source srcset="/diagrams/Intro/3-Tier.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Intro/3-Tier.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Intro/3-Tier.png" alt="3-Tier" loading="lazy" width="521" height="423" style="width:72%"/>
+<img src="/diagrams/Intro/3-Tier.png" alt="Frontend, backend, and database layers differ in their scalability, security, and operational costs." loading="lazy" width="521" height="423" style="width:72%"/>
 </picture>
 </a>
 </figure>
@@ -112,7 +112,7 @@ Here reliability conflicts with accuracy: a human operator makes an accurate est
 <picture>
 <source srcset="/diagrams/Intro/Field%20Gateway.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Intro/Field%20Gateway.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Intro/Field%20Gateway.png" alt="Field Gateway" loading="lazy" width="1060" height="453" style="width:100%"/>
+<img src="/diagrams/Intro/Field%20Gateway.png" alt="Normal and autonomous operation of a field gateway of a fire alarm system." loading="lazy" width="1060" height="453" style="width:100%"/>
 </picture>
 </a>
 </figure>

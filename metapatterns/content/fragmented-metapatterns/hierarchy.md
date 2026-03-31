@@ -1,7 +1,7 @@
 +++
 weight = 10
 title = "Hierarchy"
-description = "Hierarchy distributes responsibilities throughout a tree of components."
+description = "This chapter explores hierarchical architectures: Cell-Based Architecture, Presentation-Abstraction-Control (PAC), HMVC, and Network of Networks."
 images = ["/diagrams/Web/og/Hierarchy.png"]
 [sitemap]
   priority = 0.8
@@ -14,31 +14,16 @@ images = ["/diagrams/Web/og/Hierarchy.png"]
 <picture>
 <source srcset="/diagrams/Main/Hierarchy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Hierarchy.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Hierarchy.png" alt="Hierarchy" loading="lazy" width="1082" height="534" style="width:100%"/>
+<img src="/diagrams/Main/Hierarchy.png" alt="A diagram for Hierarchy, in abstractness-subdomain-sharding coordinates." loading="lazy" width="1082" height="534" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
 *Command and conquer\.* Build a tree of responsibilities\.
 
-<ins>Variants:</ins>
-
-By structure:
-
-- Polymorphic children,
-- Functionally distinct children\.
-
-
-By direction:
-
-- Top\-Down Hierarchy / Orchestrator of Orchestrators / [Presentation\-Abstraction\-Control](https://en.wikipedia.org/wiki/Presentation%E2%80%93abstraction%E2%80%93control) \(PAC\) \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\] / [Hierarchical Model\-View\-Controller](https://herbertograca.com/2017/08/17/mvc-and-its-variants/#hierarchical-model-view-controller) \(HMVC\),
-- Bottom\-Up Hierarchy / Bus of Buses / Network of Networks,
-- In\-Depth Hierarchy / [Cell\-Based \(Microservice\) Architecture](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md) \(WSO2 version\) / [Segmented Microservice Architecture](https://github.com/wso2/reference-architecture/blob/master/api-driven-microservice-architecture.md) / Services of Services / Clusters of Services \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\]\.
-
-
 <ins>Structure:</ins> A tree of components\.
 
-<ins>Type:</ins> Main or extension\.
+<ins>Type:</ins> System topology or extension component\.
 
 | *Benefits* | *Drawbacks* |
 | --- | --- |
@@ -63,7 +48,7 @@ No kind of distributed hierarchy is latency\-friendly as many use cases involve 
 <picture>
 <source srcset="/diagrams/Performance/Hierarchy%20-%20speed.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Performance/Hierarchy%20-%20speed.negated.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Performance/Hierarchy%20-%20speed.png" alt="Hierarchy - speed" loading="lazy" width="1583" height="565" style="width:100%"/>
+<img src="/diagrams/Performance/Hierarchy%20-%20speed.png" alt="Comparison of latency for decision-making at various levels of a hierarchy." loading="lazy" width="1583" height="565" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -80,7 +65,7 @@ Maintaining high throughput usually requires deploying multiple instances of the
 <picture>
 <source srcset="/diagrams/Performance/Hierarchy%20-%20optimizations.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Performance/Hierarchy%20-%20optimizations.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Performance/Hierarchy%20-%20optimizations.png" alt="Hierarchy - optimizations" loading="lazy" width="1483" height="483" style="width:100%"/>
+<img src="/diagrams/Performance/Hierarchy%20-%20optimizations.png" alt="Aggregation of data in mid-level nodes; autonomous decision-making by mid-level nodes; direct communication between low-level nodes of a hierarchy." loading="lazy" width="1483" height="483" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -94,7 +79,7 @@ A parent node would usually define one \(for polymorphic children\) or more \(ot
 <picture>
 <source srcset="/diagrams/Dependencies/Hierarchy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Dependencies/Hierarchy.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Dependencies/Hierarchy.png" alt="Hierarchy" loading="lazy" width="1103" height="423" style="width:100%"/>
+<img src="/diagrams/Dependencies/Hierarchy.png" alt="In Hierarchy a child component depends on an SPI of its parent component. If the children are polymorphic, their parent has a single SPI." loading="lazy" width="1103" height="423" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -123,7 +108,7 @@ A parent node would usually define one \(for polymorphic children\) or more \(ot
 <picture>
 <source srcset="/diagrams/Relations/Hierarchy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Relations/Hierarchy.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Relations/Hierarchy.png" alt="Hierarchy" loading="lazy" width="1463" height="426" style="width:100%"/>
+<img src="/diagrams/Relations/Hierarchy.png" alt="Diagrams of Orchestrator of Orchestrators, Middleware of Middlewares, and Services of Services." loading="lazy" width="1463" height="426" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -151,14 +136,16 @@ Example: an intrusion alarm logic may need to discern between cat\-affected IR s
 
 ## Variants by direction
 
-### Top\-Down Hierarchy, [Orchestrator]({{< relref "../extension-metapatterns/orchestrator.md" >}}) of Orchestrators, Presentation\-Abstraction\-Control \(PAC\), Hierarchical [Model\-View\-Controller]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}}) \(HMVC\)
+A *Hierarchy* may have its root [at the top]({{< relref "#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}}) \(client side\), [at the bottom]({{< relref "#bottom-up-hierarchy-bus-of-buses-network-of-networks" >}}) \(deep infrastructure\), or [no root at all]({{< relref "#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services" >}}) \(recursive composition\):
+
+### Top\-Down Hierarchy: [Orchestrator]({{< relref "../extension-metapatterns/orchestrator.md" >}}) of Orchestrators, Presentation\-Abstraction\-Control \(PAC\), Hierarchical [Model\-View\-Controller]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}}) \(HMVC\)
 
 <figure>
 <a href="/diagrams/Variants/3/Hierarchy%20-%20Top-down.png">
 <picture>
 <source srcset="/diagrams/Variants/3/Hierarchy%20-%20Top-down.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/Hierarchy%20-%20Top-down.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/Hierarchy%20-%20Top-down.png" alt="Hierarchy - Top-down" loading="lazy" width="903" height="343" style="width:100%"/>
+<img src="/diagrams/Variants/3/Hierarchy%20-%20Top-down.png" alt="A single component calls two components in the layer below it, each of which calls two or three lower-level leaf components." loading="lazy" width="903" height="343" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -174,19 +161,19 @@ In the most common case *Hierarchy* is applied to business logic to build a laye
 <picture>
 <source srcset="/diagrams/Variants/3/PAC.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/PAC.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/PAC.png" alt="PAC" loading="lazy" width="1463" height="824" style="width:100%"/>
+<img src="/diagrams/Variants/3/PAC.png" alt="Both Presentation-Abstraction-Control and Hierarchical Model-View-Controller are top-down hierarchies with three-component nodes, which share a database in the second pattern." loading="lazy" width="1463" height="824" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
-### Bottom\-Up Hierarchy, [Bus]({{< relref "../extension-metapatterns/middleware.md#message-bus" >}}) of Buses, Network of Networks
+### Bottom\-Up Hierarchy: [Bus]({{< relref "../extension-metapatterns/middleware.md#message-bus" >}}) of Buses, Network of Networks
 
 <figure>
 <a href="/diagrams/Variants/3/Hierarchy%20-%20Bottom-up.png">
 <picture>
 <source srcset="/diagrams/Variants/3/Hierarchy%20-%20Bottom-up.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/Hierarchy%20-%20Bottom-up.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/Hierarchy%20-%20Bottom-up.png" alt="Hierarchy - Bottom-up" loading="lazy" width="1243" height="384" style="width:100%"/>
+<img src="/diagrams/Variants/3/Hierarchy%20-%20Bottom-up.png" alt="An integration middleware interconnects the middlewares of two systems." loading="lazy" width="1243" height="384" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -195,19 +182,19 @@ Other cases require building a common base for intercommunication between severa
 
 Example: [Automotive networks](https://www.mdpi.com/1424-8220/21/23/7917), integration of corporate networks, [the Internet](https://en.wikipedia.org/wiki/Internet_service_provider)\.
 
-### In\-Depth Hierarchy, [Cell]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#examples--cell" >}})\-Based \(Microservice\) Architecture \(WSO2 version\), Segmented Microservice Architecture, [Services]({{< relref "../basic-metapatterns/services.md" >}}) of Services, Clusters of Services
+### In\-Depth Hierarchy: [Cell]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}})\-Based \(Microservice\) Architecture \(WSO2 version\), Segmented Microservice Architecture, [Services]({{< relref "../basic-metapatterns/services.md" >}}) of Services, Clusters of Services
 
 <figure>
 <a href="/diagrams/Variants/3/Cell-Based%20Architecture.png">
 <picture>
 <source srcset="/diagrams/Variants/3/Cell-Based%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/Cell-Based%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/Cell-Based%20Architecture.png" alt="Cell-Based Architecture" loading="lazy" width="1193" height="583" style="width:100%"/>
+<img src="/diagrams/Variants/3/Cell-Based%20Architecture.png" alt="Cells of different kinds communicate with each other through cell gateways." loading="lazy" width="1193" height="583" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
-When several [*services*]({{< relref "../basic-metapatterns/services.md" >}}) in a system grow large, in some cases it is possible to divide each of them into *subservices*\. Each group of the resulting subservices \(known as a [*Cell*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#examples--cell" >}}), [*Domain*](https://www.uber.com/blog/microservice-architecture/) or *Cluster* \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\]\) usually implements a *bounded context* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\. It is hidden behind its own [*Cell Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) and may even use its own [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}})\. Subservices of a *Cell* may [*share a database*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) and may be deployed as a single unit\. This keeps the system’s integration complexity \(the length of its APIs and the number of deployable units\) reasonable while still scaling development among many teams, each owning a service\. If each instance of a *Cell* owns a [*shard*]({{< relref "../basic-metapatterns/shards.md" >}}) of its database, the system [becomes more stable](https://docs.aws.amazon.com/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/what-is-a-cell-based-architecture.html) as there is no single point of failure \(except for the [*Load Balancer*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) called *Cell Router*\)\. Another benefit is that *Cells* can be deployed to regional data centers to improve locality for users of the system\. However, that will likely cause data synchronization traffic between the data centers\.
+When several [*services*]({{< relref "../basic-metapatterns/services.md" >}}) in a system grow large, in some cases it is possible to divide each of them into *subservices*\. Each group of the resulting subservices \(known as a [*Cell*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}}), [*Domain*](https://www.uber.com/blog/microservice-architecture/) or *Cluster* \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\]\) usually implements a *bounded context* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\. It is hidden behind its own [*Cell Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) and may even use its own [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}})\. Subservices of a *Cell* may [*share a database*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) and may be deployed as a single unit\. This keeps the system’s integration complexity \(the length of its APIs and the number of deployable units\) reasonable while still scaling development among many teams, each owning a service\. If each instance of a *Cell* owns a [*shard*]({{< relref "../basic-metapatterns/shards.md" >}}) of its database, the system [becomes more stable](https://docs.aws.amazon.com/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/what-is-a-cell-based-architecture.html) as there is no single point of failure \(except for the [*Load Balancer*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) called *Cell Router*\)\. Another benefit is that *Cells* can be deployed to regional data centers to improve locality for users of the system\. However, that will likely cause data synchronization traffic between the data centers\.
 
 The [*Cell\-Based Architecture*](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md) \([*Segmented Microservice Architecture*](https://github.com/wso2/reference-architecture/blob/master/api-driven-microservice-architecture.md)\) may be seen as a combination of an *Orchestrator of Orchestrators* and a *Bus of Buses* where the subservices are leaf nodes of both *hierarchies* while the [*API Gateways*]({{< relref "../extension-metapatterns/proxy.md#api-gateway" >}}) of the *Cells* are their internal nodes\.
 
@@ -223,7 +210,7 @@ Uber [compacted](https://www.uber.com/blog/microservice-architecture/) 2200 [*Mi
 <picture>
 <source srcset="/diagrams/Evolutions/3/Hierarchy%20-%201.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/3/Hierarchy%20-%201.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/3/Hierarchy%20-%201.png" alt="Hierarchy - 1" loading="lazy" width="1223" height="384" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/Hierarchy%20-%201.png" alt="The upper layer of a top-down hierarchy is subdivided into Backends for Frontends." loading="lazy" width="1223" height="384" style="width:100%"/>
 </picture>
 </a>
 </figure>

@@ -1,7 +1,7 @@
 +++
 weight = 1
 title = "Cohesers and decouplers"
-description = "Some architectural constraints or forces cause the code to be kept together, others pull it apart, and still others prefer components of a definite size."
+description = "This section discusses hierarchical decomposition, the influence of a project's modularity on its properties, and lists common cohesers and decouplers."
 images = ["/diagrams/Web/og/Heart.png"]
 [sitemap]
   priority = 0.5
@@ -20,7 +20,7 @@ Let’s explore how a force influences the structure of a project\. Consider the
 <picture>
 <source srcset="/diagrams/Heart/Pain.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Heart/Pain.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Heart/Pain.png" alt="Pain" loading="lazy" width="787" height="364" style="width:100%"/>
+<img src="/diagrams/Heart/Pain.png" alt="A chart that shows that unstructured code is the least painful solution for a tiny project while something large is unbearable if not decomposed into services." loading="lazy" width="787" height="364" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -44,7 +44,7 @@ Such a behavior is common for forces and, by the way, it is also the case with e
 <picture>
 <source srcset="/diagrams/Heart/Hierarchy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Heart/Hierarchy.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Heart/Hierarchy.png" alt="Hierarchy" loading="lazy" width="1283" height="273" style="width:100%"/>
+<img src="/diagrams/Heart/Hierarchy.png" alt="The hierarchical decomposition of logic into methods of classes in a service is compared to that of data in a B-tree." loading="lazy" width="1283" height="273" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -87,7 +87,7 @@ And there are forces that try to keep your code fragmented:
 <picture>
 <source srcset="/diagrams/Heart/Lifecycle.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Heart/Lifecycle.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Heart/Lifecycle.png" alt="Lifecycle" loading="lazy" width="1803" height="303" style="width:100%"/>
+<img src="/diagrams/Heart/Lifecycle.png" alt="A monolith transforming into Layered Services, whose application layers partially merge and domain layers split, only to finally glue into Layers with multiple databases." loading="lazy" width="1803" height="303" style="width:100%"/>
 </picture>
 </a>
 </figure>

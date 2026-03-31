@@ -1,7 +1,7 @@
 +++
 weight = 10
 title = "Pipeline"
-description = "A Pipeline represents a data processing algorithm as a sequence of steps."
+description = "This chapter explores pipelined architectures that process streams: Pipes and Filters, Choreographed Event-Driven Architecture, Data Mesh, and Nanoservices."
 images = ["/diagrams/Web/og/Pipeline.png"]
 [sitemap]
   priority = 0.8
@@ -14,7 +14,7 @@ images = ["/diagrams/Web/og/Pipeline.png"]
 <picture>
 <source srcset="/diagrams/Main/Pipeline.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Pipeline.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Pipeline.png" alt="Pipeline" loading="lazy" width="1182" height="434" style="width:100%"/>
+<img src="/diagrams/Main/Pipeline.png" alt="A diagram for Pipeline, in abstractness-subdomain-sharding coordinates." loading="lazy" width="1182" height="434" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -23,25 +23,9 @@ images = ["/diagrams/Web/og/Pipeline.png"]
 
 <ins>Known as:</ins> Pipeline \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\]\.
 
-<ins>Variants:</ins>
-
-By scheduling:
-
-- Stream processing \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\] / Nearline system \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\],
-- Batch processing \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}}), [DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] / Offline system \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\]\.
-
-
-Examples:
-
-- Pipes and Filters \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}}), [EIP]({{< relref "../appendices/books-referenced.md#eip" >}})\] / Workflow System \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}}), [DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\], 
-- Choreographed \(Broker Topology\) Event\-Driven Architecture \(EDA\) \[[SAP]({{< relref "../appendices/books-referenced.md#sap" >}}), [FSA]({{< relref "../appendices/books-referenced.md#fsa" >}}), [DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] / [Event Collaboration](https://martinfowler.com/eaaDev/EventCollaboration.html) \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\],
-- [Data Mesh](https://martinfowler.com/articles/data-mesh-principles.html) \[[LDDD]({{< relref "../appendices/books-referenced.md#lddd" >}}), [SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\],
-- [Function as a Service](https://en.wikipedia.org/wiki/Function_as_a_service) \(FaaS\) \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] / [Nanoservices](https://increment.com/software-architecture/the-rise-of-nanoservices/) \(pipelined\)\.
-
-
 <ins>Structure:</ins> A component per step of data processing\.
 
-<ins>Type:</ins> Main\.
+<ins>Type:</ins> System topology\.
 
 | *Benefits* | *Drawbacks* |
 | --- | --- |
@@ -75,7 +59,7 @@ There are three ways to build communication in a pipeline, each with different d
 <picture>
 <source srcset="/diagrams/Dependencies/Pipeline.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Dependencies/Pipeline.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Dependencies/Pipeline.png" alt="Pipeline" loading="lazy" width="1243" height="325" style="width:100%"/>
+<img src="/diagrams/Dependencies/Pipeline.png" alt="Commands cause downstream dependencies. Notifications cause upstream dependencies. If a shared message schema is used, every component depends on the shared message." loading="lazy" width="1243" height="325" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -125,6 +109,12 @@ A pipeline may be either always active or just run once in a while:
 
 Such a variety of options enables the use of pipelines in a wide range of domains\. Notwithstanding, there are a few mainstream types of *Pipeline* architectures:
 
+- [*Pipes and Filters*]({{< relref "#pipes-and-filters-workflow-system" >}}) for local processing of data streams\.
+- Distributed and usually branched [*Choreographed Event\-Driven Architecture*]({{< relref "#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}})\.
+- [*Data Mesh*]({{< relref "#data-mesh" >}}) which builds a reporting pipeline for analytical data\.
+- Extremely elastic [*Pipelined Nanoservices*]({{< relref "#function-as-a-service-faas-nanoservices-pipelined" >}})\.
+
+
 ### Pipes and Filters, Workflow System
 
 <figure>
@@ -132,12 +122,12 @@ Such a variety of options enables the use of pipelines in a wide range of domain
 <picture>
 <source srcset="/diagrams/Variants/1/Pipes%20and%20Filters.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Pipes%20and%20Filters.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Pipes%20and%20Filters.png" alt="Pipes and Filters" loading="lazy" width="938" height="293" style="width:100%"/>
+<img src="/diagrams/Variants/1/Pipes%20and%20Filters.png" alt="A pipeline chaining: source, three filters, and sink." loading="lazy" width="938" height="293" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
-*Pipes and Filters* \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}}), [EIP]({{< relref "../appendices/books-referenced.md#eip" >}})\] usually name a linear local system which obtains data with its *source*, passes the data through a chain of *filters*, connected by *pipes*, and outputs it via a *sink*\. The entire *pipeline* may run as a single process to avoid the overhead of data serialization\. It may range from a Unix shell script which passes file contents through a series of utilities to a hardware pipeline for image processing in a video [camera]({{< relref "../foundations-of-software-architecture/four-kinds-of-software.md#camera" >}})\. The filters tend to be single\-purpose \(handle one type of payload\) and stateless\. In some cases a filter may use dedicated hardware \(for encryption or audio/video processing\)\. The entire pipeline often operates a single data format \([*Stamp Coupling*]({{< relref "../extension-metapatterns/shared-repository.md#inexact-stamp-coupling" >}}) \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\]\)\.
+*Pipes and Filters* \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}}), [EIP]({{< relref "../appendices/books-referenced.md#eip" >}})\] usually name a linear local system which obtains data with its *source*, passes the data through a chain of *filters*, connected by *pipes*, and outputs it via a *sink*\. The entire *pipeline* may run as a single process to avoid the overhead of data serialization\. It may range from a Unix shell script which passes file contents through a series of utilities to a hardware pipeline for image processing in a video [camera]({{< relref "../foundations-of-software-architecture/four-kinds-of-software.md#camera" >}})\. The filters tend to be single\-purpose \(handle one type of payload\) and stateless\. In some cases a filter may use dedicated hardware \(for encryption or audio/video processing\)\. The entire pipeline often operates a single data format \([*Stamp Coupling*]({{< relref "../extension-metapatterns/shared-repository.md#inexact-stamp-coupling" >}})\)\.
 
 Though most commonly a filter waits for data to appear in its input pipe, processes it, and pushes the result to its output pipe, thus allowing for multiple filters to run in parallel, some implementations may let the source push the data through the entire pipeline all the way to the sink, with each filter directly calling the next filter in the line or, alternatively, the sink can pull the data by making direct upstream calls \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}})\]\. The last two approaches remove the need for pipes but are then limited to using a single CPU core\.
 
@@ -152,7 +142,7 @@ Examples: Unix shell pipes, processing of video streams, many types of hardware\
 <picture>
 <source srcset="/diagrams/Variants/1/Event-Driven%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Event-Driven%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Event-Driven%20Architecture.png" alt="Event-Driven Architecture" loading="lazy" width="843" height="286" style="width:100%"/>
+<img src="/diagrams/Variants/1/Event-Driven%20Architecture.png" alt="Event-Driven Architecture as a branched pipeline built from a group of services." loading="lazy" width="843" height="286" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -178,7 +168,7 @@ Those points translate to difference in structure: while *Pipes and Filters* is 
 
 Pipelined *Event\-Driven Architecture* \(often boosted with [event sourcing](https://learn.microsoft.com/en-us/azure/architecture/patterns/event-sourcing)\) works well for highly loaded systems of moderate size, but larger projects are likely to grow prohibitively complex graphs of event flows and service dependencies\. The architecture’s scalability is limited by the services’ databases and the pub/sub framework employed\.
 
-*Event\-Driven Architecture* may involve a [*Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) as a user\-facing event source and sink and a [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) for an application\-wise pub/sub engine\. [*Front Controller*]({{< relref "../extension-metapatterns/orchestrator.md#inexact-front-controller" >}}) \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\] or [*Stamp Coupling*]({{< relref "../extension-metapatterns/shared-repository.md#inexact-stamp-coupling" >}}) \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\] are used if it is important to know the state of requests that are being processed by the pipeline\.
+*Event\-Driven Architecture* may involve a [*Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) as a user\-facing event source and sink and a [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) for an application\-wise pub/sub engine\. [*Front Controller*]({{< relref "../extension-metapatterns/orchestrator.md#inexact-front-controller" >}}) or [*Stamp Coupling*]({{< relref "../extension-metapatterns/shared-repository.md#inexact-stamp-coupling" >}}) are used if it is important to know the state of requests that are being processed by the pipeline\.
 
 Examples: high performance web services\.
 
@@ -189,7 +179,7 @@ Examples: high performance web services\.
 <picture>
 <source srcset="/diagrams/Variants/1/Data%20Mesh.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Data%20Mesh.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Data%20Mesh.png" alt="Data Mesh" loading="lazy" width="1094" height="264" style="width:100%"/>
+<img src="/diagrams/Variants/1/Data%20Mesh.png" alt="Data Mesh builds an extra graph of services that stream and process analytical data." loading="lazy" width="1094" height="264" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -207,14 +197,14 @@ The *analytical system* contains *Data Product Quanta* \(*DPQ*\) – services th
 
 There is a pragmatic option to allow an operational service to resort to the analytical system’s *DPQs* to query other services’ data instead of messaging them directly or implementing a [*CQRS View*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) and subscribing it to events that flow in the operational system\.
 
-### Function as a Service \(FaaS\), Nanoservices \(pipelined\)
+### Function as a Service \(FaaS\), [Nanoservices]({{< relref "../extension-metapatterns/sandwich.md#nanoservices" >}}) \(pipelined\)
 
 <figure>
 <a href="/diagrams/Variants/1/Nanoservices.png">
 <picture>
 <source srcset="/diagrams/Variants/1/Nanoservices.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Nanoservices.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Nanoservices.png" alt="Nanoservices" loading="lazy" width="2223" height="484" style="width:100%"/>
+<img src="/diagrams/Variants/1/Nanoservices.png" alt="Many Nanoservices access a shared database to implement CRUD functionality." loading="lazy" width="2223" height="484" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -229,7 +219,7 @@ A [*nanoservice*]({{< relref "../basic-metapatterns/services.md#single-function-
 
 There are a couple of [pipeline\-specific evolutions]({{< relref "../appendices/evolutions-of-architectures/evolutions-of-a-pipeline.md" >}}), with more details provided in [Appendix E]({{< relref "../appendices/evolutions-of-architectures/_index.md" >}}):
 
-- The first service of the *Pipeline* can be promoted to a [*Front Controller*]({{< relref "../extension-metapatterns/orchestrator.md#inexact-front-controller" >}}) \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\] which tracks the status updates for every request it handles\.
+- The first service of the *Pipeline* can be promoted to a [*Front Controller*]({{< relref "../extension-metapatterns/orchestrator.md#inexact-front-controller" >}}) which tracks the status updates for every request it handles\.
 
 
 <figure>
@@ -237,7 +227,7 @@ There are a couple of [pipeline\-specific evolutions]({{< relref "../appendices/
 <picture>
 <source srcset="/diagrams/Evolutions/Services/Pipeline%20promote%20Front%20Controller.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Services/Pipeline%20promote%20Front%20Controller.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png" alt="Pipeline promote Front Controller" loading="lazy" width="1299" height="347" style="width:100%"/>
+<img src="/diagrams/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png" alt="The first service of a pipeline subscribes to notifications from other services and thus becomes a Front Controller." loading="lazy" width="1299" height="347" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -250,7 +240,7 @@ There are a couple of [pipeline\-specific evolutions]({{< relref "../appendices/
 <picture>
 <source srcset="/diagrams/Evolutions/Services/Pipeline%20use%20Orchestrator.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Services/Pipeline%20use%20Orchestrator.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Services/Pipeline%20use%20Orchestrator.png" alt="Pipeline use Orchestrator" loading="lazy" width="1303" height="384" style="width:100%"/>
+<img src="/diagrams/Evolutions/Services/Pipeline%20use%20Orchestrator.png" alt="Adding an orchestrator transforms a pipeline into Orchestrated Services." loading="lazy" width="1303" height="384" style="width:100%"/>
 </picture>
 </a>
 </figure>

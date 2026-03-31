@@ -1,7 +1,7 @@
 +++
 weight = 3
 title = "Four kinds of software"
-description = "Control, interactive, streaming and computational software differ in design."
+description = "This chapter discusses the internal structure and architectural patterns for control, interactive, streaming, and computational software."
 images = ["/diagrams/Web/og/4Kinds.png"]
 [sitemap]
   priority = 0.5
@@ -30,7 +30,7 @@ Those dimensions make four corner cases that vary in architectural styles:
 <picture>
 <source srcset="/diagrams/4Kinds/4%20Kinds.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/4Kinds/4%20Kinds.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/4Kinds/4%20Kinds.png" alt="4 Kinds" loading="lazy" width="1341" height="683" style="width:100%"/>
+<img src="/diagrams/4Kinds/4%20Kinds.png" alt="Diagrams of control, interactive, streaming, and computational systems." loading="lazy" width="1341" height="683" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -42,7 +42,7 @@ Those dimensions make four corner cases that vary in architectural styles:
 <picture>
 <source srcset="/diagrams/4Kinds/Control%20-%20main.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/4Kinds/Control%20-%20main.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/4Kinds/Control%20-%20main.png" alt="Control - main" loading="lazy" width="972" height="423" style="width:100%"/>
+<img src="/diagrams/4Kinds/Control%20-%20main.png" alt="A control system receives an event from a hardware component, processes it with a hardware driver, passes the result to a mediator, which calls another driver, which activates another hardware." loading="lazy" width="972" height="423" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -83,7 +83,7 @@ At the architectural level, control systems are [event\-driven](https://en.wikip
 
 - [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) is the simplest and fastest implementation, usually tiny enough to run everything in a single [super loop](https://blog.mbedded.ninja/programming/design-patterns/how-to-write-super-loops-in-firmware/)\.
 - Plain \([*choreographed*]({{< relref "../foundations-of-software-architecture/arranging-communication/choreography.md" >}})\) [*Actors*]({{< relref "../basic-metapatterns/services.md#actors" >}}) fit systems of trivial logic but massive scale, like messenger backends\. Each actor models the component \(remote device or user\) it interacts with, and there is no global model except for a registry of actors\.
-- [*Orchestrated*]({{< relref "../foundations-of-software-architecture/arranging-communication/orchestration.md" >}}) [*modules*]({{< relref "../basic-metapatterns/services.md#asynchronous-modules-modular-monolith-modulith-embedded-actors" >}}) are a better solution for complicated \([*cohesive*]({{< relref "../foundations-of-software-architecture/modules-and-complexity.md#coupling-and-cohesion" >}})\) systems that need centralized management\. The [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) contains the whole system’s model and integration logic\.
+- [*Pedestal*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#pedestal" >}}) is a better solution for complicated \([*cohesive*]({{< relref "../foundations-of-software-architecture/modules-and-complexity.md#coupling-and-cohesion" >}})\) systems that need centralized management\. In it, the [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) contains the whole system’s model and integration logic\. Each hardware component is encapsulated with a [*driver*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) which hides its specifics from the business logic that resides in the hardware\-agnostic, thus reusable and portable, *Orchestrator*\.
 - A [*Hierarchical Orchestrator*]({{< relref "../fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}}) can manage even more complex systems\. The *Orchestrator* may run synchronously with polymorphic specialized components or asynchronously\. In the last case each sub\-orchestrator reacts independently based on its own model but also sends a notification to the high\-level component which builds a global strategy and programs the smaller models of sub\-orchestrators\.
 
 
@@ -92,7 +92,7 @@ At the architectural level, control systems are [event\-driven](https://en.wikip
 <picture>
 <source srcset="/diagrams/4Kinds/Control%20-%20variants.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/4Kinds/Control%20-%20variants.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/4Kinds/Control%20-%20variants.png" alt="Control - variants" loading="lazy" width="1224" height="664" style="width:100%"/>
+<img src="/diagrams/4Kinds/Control%20-%20variants.png" alt="Diagrams of control systems with the following architectures: monolithic, actors, Pedestal, hierarchical." loading="lazy" width="1224" height="664" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -102,9 +102,9 @@ At the architectural level, control systems are [event\-driven](https://en.wikip
 The following patterns are prominent in control software:
 
 - [*Actors*]({{< relref "../basic-metapatterns/services.md#actors" >}}) – partitioning the domain into self\-consistent asynchronous entities allows fine control over the order of execution of system activities, provided that we run a [preemptive scheduler](https://micrium.atlassian.net/wiki/spaces/osiiidoc/pages/131347/Preemptive+Scheduling) \(from [POSIX real\-time threads](https://man7.org/linux/man-pages/man7/sched.7.html) or [RTOS](https://en.wikipedia.org/wiki/Real-time_operating_system)\) – we can assign top priority to reading data from communication interfaces \(which would quickly overflow if the data is not retrieved\), make reacting to events a bit less urgent, and still have leftovers of our CPU time for such long\-running tasks as file access or strategic planning\.
-- [*Proactor*]({{< relref "../basic-metapatterns/monolith.md#proactor-one-thread-many-tasks" >}}) \[[POSA2]({{< relref "../appendices/books-referenced.md#posa2" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\] – almost every component is single\-threaded, reactive, and non\-blocking, which makes the system very responsive\. The downside is being unable to represent a multi\-step scenario as a single function, which is usually unimportant as no predefined scenario ever survives event\-driven reality unshattered\. Following a planned path leads directly to your grave\. Proceed stepwise, checking for dangers every millisecond, being ready to jump away from any approaching trouble\.
+- [*Proactor*]({{< relref "../basic-metapatterns/monolith.md#proactor-one-thread-many-tasks" >}}) – almost every component is single\-threaded, reactive, and non\-blocking, which makes the system very responsive\. The downside is being unable to represent a multi\-step scenario as a single function, which is usually unimportant as no predefined scenario ever survives event\-driven reality unshattered\. Following a planned path leads directly to your grave\. Proceed stepwise, checking for dangers every millisecond, being ready to jump away from any approaching trouble\.
 - [*Mediator*](https://refactoring.guru/design-patterns/mediator) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] \(a kind of [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}})\) – when you rely on information from and manage several devices or interfaces, you need a single entity that knows what is going on, makes informed decisions and dispatches commands to be executed\. It integrates all the lower\-level components into a coherent system\. It is a *Mediator*\.
-- [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) – hardware components quickly become obsolete, and if you want your software to survive for a decade, you must be able to change them at will\. And if you want to run, test, and debug your code on your desktop, you often need to [stub](https://martinfowler.com/articles/mocksArentStubs.html) or [mock the hardware](https://stackoverflow.com/questions/38745542/unit-testing-application-interface-to-hardware-to-mock-or-not)\.
+- [*Pedestal*]({{< relref "../basic-metapatterns/services.md#inexact-device-drivers-pedestal" >}}) \(a kind of [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}})\) – hardware components quickly become obsolete, and if you want your software to survive for a decade, you must be able to change them at will\. And if you want to run, test, and debug your code on your desktop, you often need to [stub](https://martinfowler.com/articles/mocksArentStubs.html) or [mock the hardware](https://stackoverflow.com/questions/38745542/unit-testing-application-interface-to-hardware-to-mock-or-not)\. Therefore wrap each hardware component with a dedicated [*driver*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) that provides a generic interface to the upper layers of the system\. This way you will be able to emulate or replace the hardware together with its *driver*\.
 - [*Hierarchy*]({{< relref "../fragmented-metapatterns/hierarchy.md" >}}) – if you manage a variety of interfaces that have the same role \(telephony protocols, account providers, or payment systems\) you want to make them polymorphic towards your main application logic\. In other cases, like [IIoT](https://en.wikipedia.org/wiki/Industrial_internet_of_things), you may need to start reacting immediately with little precision and correct your actions after you have spent more time on better planning, which is achieved through a hierarchy of feedback loops\.
 
 
@@ -123,7 +123,7 @@ Messages may be dispatched through multilevel index arrays or [*Visitors*](https
 <picture>
 <source srcset="/diagrams/4Kinds/Interactive%20-%20main.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/4Kinds/Interactive%20-%20main.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/4Kinds/Interactive%20-%20main.png" alt="Interactive - main" loading="lazy" width="922" height="362" style="width:100%"/>
+<img src="/diagrams/4Kinds/Interactive%20-%20main.png" alt="An interactive system workflow with an event coming from the presentation layer to the model and back." loading="lazy" width="922" height="362" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -135,7 +135,7 @@ An *interactive* software deals with users who expect it to provide immediate fe
 - UI of embedded devices, such as clocks or air conditioning systems\.
 
 
-The [user interface layer]({{< relref "../basic-metapatterns/layers.md#interface-api-or-ui" >}}) \([*Separated Presentation*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#examples--separated-presentation" >}})\) receives input \(mouse, keyboard, or touchscreen events\), interprets it as a user action based on the current application’s *state* \(pressing enter in a text editor may break a line of text in two, begin a new line or even activate a menu item\), forwards the action to the lower levels of the software and displays any feedback received, producing a **U**\-shaped flow\.
+The [user interface layer]({{< relref "../basic-metapatterns/layers.md#interface-api-or-ui" >}}) \([*Separated Presentation*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#upper-half-separated-presentation-open-host-service" >}})\) receives input \(mouse, keyboard, or touchscreen events\), interprets it as a user action based on the current application’s *state* \(pressing enter in a text editor may break a line of text in two, begin a new line or even activate a menu item\), forwards the action to the lower levels of the software and displays any feedback received, producing a **U**\-shaped flow\.
 
 ### Variants
 
@@ -149,7 +149,7 @@ Interactive systems vary in a couple of ways:
 <picture>
 <source srcset="/diagrams/4Kinds/Interactive%20-%20variants%201.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/4Kinds/Interactive%20-%20variants%201.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/4Kinds/Interactive%20-%20variants%201.png" alt="Interactive - variants 1" loading="lazy" width="1143" height="311" style="width:100%"/>
+<img src="/diagrams/4Kinds/Interactive%20-%20variants%201.png" alt="With blocking interaction between the presentation and model layers the user interface is frozen for the duration of processing. With non-blocking it is mostly active." loading="lazy" width="1143" height="311" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -162,7 +162,7 @@ Interactive systems vary in a couple of ways:
 <picture>
 <source srcset="/diagrams/4Kinds/Interactive%20-%20variants%202.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/4Kinds/Interactive%20-%20variants%202.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/4Kinds/Interactive%20-%20variants%202.png" alt="Interactive - variants 2" loading="lazy" width="1103" height="367" style="width:100%"/>
+<img src="/diagrams/4Kinds/Interactive%20-%20variants%202.png" alt="Model-View-Controller features separate components for input and output. In Model-View-Presenter both layers above its model participate in both input and output." loading="lazy" width="1103" height="367" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -171,10 +171,10 @@ Interactive systems vary in a couple of ways:
 
 You will likely encounter:
 
-- [*Separated Presentation*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#examples--separated-presentation" >}}) – the business logic is unaware of the implementation of the UI layer, though this may not be the case with some games that rely on *game development frameworks*\. This pattern is usually implemented by:
+- [*Separated Presentation*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#upper-half-separated-presentation-open-host-service" >}}) – the business logic is unaware of the implementation of the UI layer, though this may not be the case with some games that rely on *game development frameworks*\. This pattern is usually implemented by:
   - [*Model\-View\-Presenter*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-presenter-mvp-model-view-adapter-mva-model-view-viewmodel-mvvm-model-1-mvc1-document-view" >}}) \(MVP\) – two input layers, namely: *view* which receives input and shows output and *presenter* which translates between the business logic, called *model*, and the view\.
   - [*Model\-View\-ViewModel*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-presenter-mvp-model-view-adapter-mva-model-view-viewmodel-mvvm-model-1-mvc1-document-view" >}}) \(MVVM\) also has two layers, but the intermediate *ViewModel* [binds](https://en.wikipedia.org/wiki/Data_binding) to the view and bears its state\.
-  - [*Model\-View\-Controller*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}}) \(MVC\) \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\] separates the input \(*controller*\) from the output \(*view*\)\.
+  - [*Model\-View\-Controller*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}}) \(MVC\) separates the input \(*controller*\) from the output \(*view*\)\.
 - [*State*](https://refactoring.guru/design-patterns/state) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\], subclassed by \[[POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\] into *Objects for States*, *Methods for States*, and *Collections for States*, is prominent in games, though it may not always be implemented explicitly\.
 - [*Flyweight*](https://refactoring.guru/design-patterns/flyweight), [*Command*](https://refactoring.guru/design-patterns/command), [*Observer*](https://refactoring.guru/design-patterns/observer) and many other \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] patterns originated with desktop software and [may often appear](https://gameprogrammingpatterns.com/contents.html) in games\.
 
@@ -194,7 +194,7 @@ The presentation would usually subscribe to updates from the business logic\.
 <picture>
 <source srcset="/diagrams/4Kinds/Streaming%20-%20main.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/4Kinds/Streaming%20-%20main.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/4Kinds/Streaming%20-%20main.png" alt="Streaming - main" loading="lazy" width="1122" height="304" style="width:100%"/>
+<img src="/diagrams/4Kinds/Streaming%20-%20main.png" alt="A streaming system is a pipeline of data processing steps." loading="lazy" width="1122" height="304" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -219,10 +219,10 @@ As stream\-processing [*Pipelines*]({{< relref "../basic-metapatterns/pipeline.m
 
 ### Patterns
 
-- [*Pipes and Filters*]({{< relref "../basic-metapatterns/pipeline.md#pipes-and-filters-workflow-system" >}}) \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\] is *the* stream processing pattern that describes pipelines: the system is built of *filters* \(individual data processing steps\) connected through *pipes* \(data channels\)\.
+- [*Pipes and Filters*]({{< relref "../basic-metapatterns/pipeline.md#pipes-and-filters-workflow-system" >}}) is *the* stream processing pattern that describes pipelines: the system is built of *filters* \(individual data processing steps\) connected through *pipes* \(data channels\)\.
 
 
-- [*Choreographed Event\-Driven Architecture*]({{< relref "../basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}}) \(EDA\) \[[SAP]({{< relref "../appendices/books-referenced.md#sap" >}}), [FSA]({{< relref "../appendices/books-referenced.md#fsa" >}}), [DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] and [*Data Mesh*]({{< relref "../basic-metapatterns/pipeline.md#data-mesh" >}}) \[[LDDD]({{< relref "../appendices/books-referenced.md#lddd" >}}), [SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\] are tree\-like pipelines that process streams of domain events or data, respectively\.
+- [*Choreographed Event\-Driven Architecture*]({{< relref "../basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}}) \(EDA\) and [*Data Mesh*]({{< relref "../basic-metapatterns/pipeline.md#data-mesh" >}}) are tree\-like pipelines that process streams of domain events or data, respectively\.
 
 
 \[[EIP]({{< relref "../appendices/books-referenced.md#eip" >}})\] is full of patterns for the distributed processing of event streams\.
@@ -238,7 +238,7 @@ Every filter is likely to run in its own thread and be unaware of other filters 
 <picture>
 <source srcset="/diagrams/4Kinds/Computational%20-%20main.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/4Kinds/Computational%20-%20main.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/4Kinds/Computational%20-%20main.png" alt="Computational - main" loading="lazy" width="922" height="343" style="width:100%"/>
+<img src="/diagrams/4Kinds/Computational%20-%20main.png" alt="A computational system makes multiple calls to the underlying OS during a single run." loading="lazy" width="922" height="343" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -260,8 +260,8 @@ Some computational systems are single\-use with a hard\-coded task \(calculation
 
 Long\-running programs with user input are probably the most common, ancient, and well\-studied kind of software, which also inspired many design patterns\. Those of special significance are:
 
-- [*Interpreter*]({{< relref "../implementation-metapatterns/microkernel.md#interpreter-script-domain-specific-language-dsl" >}}) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] that supports very complex user commands\.
-- [*Facade*](https://refactoring.guru/design-patterns/facade) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] or [*Process Manager*]({{< relref "../extension-metapatterns/orchestrator.md#process-manager-orchestrator" >}}) \[[EIP]({{< relref "../appendices/books-referenced.md#eip" >}})\] \(kinds of [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}})\) that executes a user command as a sequence of calls to lower\-level components\.
+- [*Interpreter*]({{< relref "../implementation-metapatterns/microkernel.md#interpreter-script-domain-specific-language-dsl" >}}) that supports very complex user commands\.
+- [*Facade*](https://refactoring.guru/design-patterns/facade) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] or [*Process Manager*]({{< relref "../extension-metapatterns/orchestrator.md#process-manager-orchestrator" >}}) \(kinds of [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}})\) that executes a user command as a sequence of calls to lower\-level components\.
 
 
 ### Implementation
@@ -283,7 +283,7 @@ Most real\-life software is too complex to fit the classification outlined above
 <picture>
 <source srcset="/diagrams/4Kinds/Camera.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/4Kinds/Camera.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/4Kinds/Camera.png" alt="Camera" loading="lazy" width="1044" height="525" style="width:100%"/>
+<img src="/diagrams/4Kinds/Camera.png" alt="Internal components of a camera with interactive, control, and streaming communication highlighted." loading="lazy" width="1044" height="525" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -302,7 +302,7 @@ A digital camera incorporates subsystems of different kinds:
 <picture>
 <source srcset="/diagrams/4Kinds/3D%20action.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/4Kinds/3D%20action.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/4Kinds/3D%20action.png" alt="3D action" loading="lazy" width="1033" height="322" style="width:100%"/>
+<img src="/diagrams/4Kinds/3D%20action.png" alt="A game framework receives data from hardware and sends an event to the business logic which updates multiple game objects. Finally, the framework sends updates to the hardware." loading="lazy" width="1033" height="322" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -316,7 +316,7 @@ Games with 3D graphics often bypass the host OS’ [desktop environment](https:/
 <picture>
 <source srcset="/diagrams/4Kinds/Database.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/4Kinds/Database.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/4Kinds/Database.png" alt="Database" loading="lazy" width="1101" height="703" style="width:100%"/>
+<img src="/diagrams/4Kinds/Database.png" alt="Internals of a database with the following groups of components: session, parser, task, metadata manager, and tables." loading="lazy" width="1101" height="703" style="width:100%"/>
 </picture>
 </a>
 </figure>

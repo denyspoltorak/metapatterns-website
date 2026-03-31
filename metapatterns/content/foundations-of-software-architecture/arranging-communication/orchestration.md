@@ -1,7 +1,7 @@
 +++
 weight = 2
 title = "Orchestration"
-description = "A single component, called Orchestrator, coordinates other system components."
+description = "This section discusses orchestration, where a single component coordinates the entire system, and mutual orchestration, where components call each other."
 images = ["/diagrams/Web/og/Orchestration.png"]
 [sitemap]
   priority = 0.5
@@ -9,14 +9,14 @@ images = ["/diagrams/Web/og/Orchestration.png"]
 
 # Orchestration {anchor=false}
 
-The most straightforward way to integrate services is to add a coordinating layer \([*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}})\) on top of them:
+The most straightforward way to integrate services is to add a coordinating layer, called [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) after the person that assigns parts in an orchestra, on top of them:
 
 <figure>
 <a href="/diagrams/Communication/Services%20to%20Orchestrator.png">
 <picture>
 <source srcset="/diagrams/Communication/Services%20to%20Orchestrator.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Services%20to%20Orchestrator.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Services%20to%20Orchestrator.png" alt="Services to Orchestrator" loading="lazy" width="1063" height="293" style="width:100%"/>
+<img src="/diagrams/Communication/Services%20to%20Orchestrator.png" alt="After a monolith is subdivided into services, an orchestrator is added to communicate with the client and with each service." loading="lazy" width="1063" height="293" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -27,14 +27,14 @@ Orchestration is the default approach for single\-process \(desktop\) applicatio
 
 ## Roles
 
-In a backend which serves client requests an *Orchestrator* takes the role of [*Facade*](https://refactoring.guru/design-patterns/facade) \[[GoF]({{< relref "../../appendices/books-referenced.md#gof" >}})\] – a module that provides and implements a high\-level interface for a multicomponent system\. It sends requests to the underlying services and waits for their confirmations – the mode of action that can be wrapped in an [*RPC*](https://en.wikipedia.org/wiki/Remote_procedure_call) \(*remote procedure call*\)\. The state of each scenario that the facade runs resides in the associated thread’s or coroutine’s call stack \(for [*Reactor*]({{< relref "../../basic-metapatterns/monolith.md#single-threaded-reactor-one-thread-one-task" >}}) \[[POSA2]({{< relref "../../appendices/books-referenced.md#posa2" >}})\] or [*Half\-Sync/Half\-Async*]({{< relref "../../basic-metapatterns/monolith.md#inexact-half-synchalf-async-coroutines-or-fibers" >}}) \[[POSA2]({{< relref "../../appendices/books-referenced.md#posa2" >}})\] implementations, respectively\) or in a dedicated object \(for [*Proactor*]({{< relref "../../basic-metapatterns/monolith.md#proactor-one-thread-many-tasks" >}}) \[[POSA2]({{< relref "../../appendices/books-referenced.md#posa2" >}})\]\)\.
+In a backend which serves client requests an *Orchestrator* takes the role of [*Facade*](https://refactoring.guru/design-patterns/facade) \[[GoF]({{< relref "../../appendices/books-referenced.md#gof" >}})\] – a module that provides and implements a high\-level interface for a multicomponent system\. It sends requests to the underlying services and waits for their confirmations – the mode of action that can be wrapped in an [*RPC*](https://en.wikipedia.org/wiki/Remote_procedure_call) \(*remote procedure call*\)\. The state of each scenario that the facade runs resides in the associated thread’s or coroutine’s call stack \(for [*Reactor*]({{< relref "../../basic-metapatterns/monolith.md#single-threaded-reactor-one-thread-one-task" >}}) or [*Half\-Sync/Half\-Async*]({{< relref "../../basic-metapatterns/monolith.md#inexact-half-synchalf-async-coroutines-or-fibers" >}}) implementations, respectively\) or in a dedicated object \(for [*Proactor*]({{< relref "../../basic-metapatterns/monolith.md#proactor-one-thread-many-tasks" >}})\)\.
 
 <figure>
 <a href="/diagrams/Communication/Facade.png">
 <picture>
 <source srcset="/diagrams/Communication/Facade.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Facade.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Facade.png" alt="Facade" loading="lazy" width="983" height="303" style="width:100%"/>
+<img src="/diagrams/Communication/Facade.png" alt="A facade uses request/confirm pairs of messages to communicate with the services which it orchestrates." loading="lazy" width="983" height="303" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -46,7 +46,7 @@ A *Facade* also supports querying the services in parallel and collecting the da
 <picture>
 <source srcset="/diagrams/Communication/Facade%20-%20Parallel.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Facade%20-%20Parallel.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Facade%20-%20Parallel.png" alt="Facade - Parallel" loading="lazy" width="783" height="303" style="width:90%"/>
+<img src="/diagrams/Communication/Facade%20-%20Parallel.png" alt="A facade initiates communication with every service that it orchestrates simultaneously in a fan-out manner." loading="lazy" width="783" height="303" style="width:90%"/>
 </picture>
 </a>
 </figure>
@@ -58,7 +58,7 @@ Embedded and system programming – the areas that deal with automating [*contro
 <picture>
 <source srcset="/diagrams/Communication/Mediator.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Mediator.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Mediator.png" alt="Mediator" loading="lazy" width="903" height="303" style="width:100%"/>
+<img src="/diagrams/Communication/Mediator.png" alt="A mediator receives an input from one component, processes it, and initiates actions in other components." loading="lazy" width="903" height="303" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -67,14 +67,14 @@ Such a difference may be rooted in the direction of the control and information 
 
 ## Dependencies
 
-By default an *Orchestrator* depends on each service which it manages – that means that a change in a service’s interface or contract – caused by fixing a bug, adding a feature, or optimizing performance – requires corresponding changes in the *Orchestrator*\. That is acceptable as the *Orchestrator*’s client\-facing, high\-level logic tends to evolve much faster than the business rules of the lower layer of services, therefore the team behind the orchestrator, unrestricted by other components depending on it, will likely release way more often than any other team\. However, as the number of the managed services and the lengths of their APIs increase, so does the amount of information that the *Orchestrator*’s team must remember and the influx of changes they must integrate in their code\. For a large project the workload of supporting the *orchestration layer* may paralyze its development – that was a major reason behind the decline of [*Enterprise SOA*]({{< relref "../../fragmented-metapatterns/service-oriented-architecture--soa-.md#enterprise-soa" >}}) \[[FSA]({{< relref "../../appendices/books-referenced.md#fsa" >}})\] where [*ESB*]({{< relref "../../extension-metapatterns/orchestrator.md#enterprise-service-bus-esb" >}}) used to orchestrate all the interactions in the system, including those between domain\-level services and components of the utility layer\.
+By default an *Orchestrator* depends on each service which it manages – that means that a change in a service’s interface or contract – caused by fixing a bug, adding a feature, or optimizing performance – requires corresponding changes in the *Orchestrator*\. That is acceptable as the *Orchestrator*’s client\-facing, high\-level logic tends to evolve much faster than the business rules of the lower layer of services, therefore the team behind the orchestrator, unrestricted by other components depending on it, will likely release way more often than any other team\. However, as the number of the managed services and the lengths of their APIs increase, so does the amount of information that the *Orchestrator*’s team must remember and the influx of changes they must integrate in their code\. For a large project the workload of supporting the *orchestration layer* may paralyze its development – that was a major reason behind the decline of [*Enterprise SOA*]({{< relref "../../fragmented-metapatterns/service-oriented-architecture--soa-.md#enterprise-soa" >}}) where [*ESB*]({{< relref "../../extension-metapatterns/orchestrator.md#enterprise-service-bus-esb" >}}) used to orchestrate all the interactions in the system, including those between domain\-level services and components of the utility layer\.
 
 <figure>
 <a href="/diagrams/Communication/Orchestrator%20-%20Dependencies.png">
 <picture>
 <source srcset="/diagrams/Communication/Orchestrator%20-%20Dependencies.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Orchestrator%20-%20Dependencies.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Orchestrator%20-%20Dependencies.png" alt="Orchestrator - Dependencies" loading="lazy" width="943" height="205" style="width:100%"/>
+<img src="/diagrams/Communication/Orchestrator%20-%20Dependencies.png" alt="An orchestrator depends on every service which it uses." loading="lazy" width="943" height="205" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -86,7 +86,7 @@ Another option, which appears in [*Plugins*]({{< relref "../../implementation-me
 <picture>
 <source srcset="/diagrams/Communication/Microkernel%20-%20Dependencies.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Microkernel%20-%20Dependencies.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Microkernel%20-%20Dependencies.png" alt="Microkernel - Dependencies" loading="lazy" width="963" height="205" style="width:100%"/>
+<img src="/diagrams/Communication/Microkernel%20-%20Dependencies.png" alt="In a Microkernel each managed service depends on a dedicated Service Provider Interface of the microkernel." loading="lazy" width="963" height="205" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -98,7 +98,7 @@ Furthermore, some domains develop that idea into a [*Hierarchy*]({{< relref "../
 <picture>
 <source srcset="/diagrams/Communication/Hierarchy%20-%20Dependencies.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Hierarchy%20-%20Dependencies.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Hierarchy%20-%20Dependencies.png" alt="Hierarchy - Dependencies" loading="lazy" width="903" height="243" style="width:100%"/>
+<img src="/diagrams/Communication/Hierarchy%20-%20Dependencies.png" alt="In a hierarchy each child component depends on the same Service Provider Interface of their parent component." loading="lazy" width="903" height="243" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -110,7 +110,7 @@ All kinds of orchestration allow for an easy addition of new use cases which may
 <picture>
 <source srcset="/diagrams/Communication/Orchestrator%20add%20a%20Use%20Case.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Orchestrator%20add%20a%20Use%20Case.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Orchestrator%20add%20a%20Use%20Case.png" alt="Orchestrator add a Use Case" loading="lazy" width="1123" height="303" style="width:100%"/>
+<img src="/diagrams/Communication/Orchestrator%20add%20a%20Use%20Case.png" alt="Adding a new use case to an orchestrated system changes only the orchestrator." loading="lazy" width="1123" height="303" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -124,7 +124,7 @@ In some systems there are several services that have their own kinds of clients 
 <picture>
 <source srcset="/diagrams/Communication/Mutual%20Orchestration%20-%201.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Mutual%20Orchestration%20-%201.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Mutual%20Orchestration%20-%201.png" alt="Mutual Orchestration - 1" loading="lazy" width="883" height="263" style="width:100%"/>
+<img src="/diagrams/Communication/Mutual%20Orchestration%20-%201.png" alt="A set of services which call each other while executing requests from their clients." loading="lazy" width="883" height="263" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -136,7 +136,7 @@ As each of the services depends on the APIs of the others, any change to any int
 <picture>
 <source srcset="/diagrams/Communication/Mutual%20Orchestration%20-%202.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Mutual%20Orchestration%20-%202.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Mutual%20Orchestration%20-%202.png" alt="Mutual Orchestration - 2" loading="lazy" width="883" height="185" style="width:100%"/>
+<img src="/diagrams/Communication/Mutual%20Orchestration%20-%202.png" alt="Each service depends on every other service which it calls." loading="lazy" width="883" height="185" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -148,7 +148,7 @@ In real life services are likely to be layered, with their upper layers acting a
 <picture>
 <source srcset="/diagrams/Communication/Mutual%20Orchestration%20-%203.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Mutual%20Orchestration%20-%203.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Mutual%20Orchestration%20-%203.png" alt="Mutual Orchestration - 3" loading="lazy" width="1023" height="363" style="width:100%"/>
+<img src="/diagrams/Communication/Mutual%20Orchestration%20-%203.png" alt="In Layered Services only the application layers of the services call each other." loading="lazy" width="1023" height="363" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -158,7 +158,7 @@ In real life services are likely to be layered, with their upper layers acting a
 <picture>
 <source srcset="/diagrams/Communication/Mutual%20Orchestration%20-%204.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Mutual%20Orchestration%20-%204.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Mutual%20Orchestration%20-%204.png" alt="Mutual Orchestration - 4" loading="lazy" width="1023" height="294" style="width:100%"/>
+<img src="/diagrams/Communication/Mutual%20Orchestration%20-%204.png" alt="In Layered Services only the application layers of the services are interdependent." loading="lazy" width="1023" height="294" style="width:100%"/>
 </picture>
 </a>
 </figure>

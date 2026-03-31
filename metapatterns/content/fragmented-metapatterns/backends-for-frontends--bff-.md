@@ -1,7 +1,7 @@
 +++
 weight = 8
 title = "Backends for Frontends (BFF)"
-description = "Backends for Frontends dedicate a component to each kind of a system's client."
+description = "This chapter discusses Backends for Frontends (BFF) which dedicates a component (proxy, orchestrator, or an API Gateway) to each kind of a system's client."
 images = ["/diagrams/Web/og/Backends%20for%20Frontends.png"]
 [sitemap]
   priority = 0.8
@@ -14,7 +14,7 @@ images = ["/diagrams/Web/og/Backends%20for%20Frontends.png"]
 <picture>
 <source srcset="/diagrams/Main/Backends%20for%20Frontends.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Backends%20for%20Frontends.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Backends%20for%20Frontends.png" alt="Backends for Frontends" loading="lazy" width="904" height="634" style="width:100%"/>
+<img src="/diagrams/Main/Backends%20for%20Frontends.png" alt="A diagram for Services with Backends for Frontends, in abstractness-subdomain-sharding coordinates." loading="lazy" width="904" height="634" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -23,26 +23,9 @@ images = ["/diagrams/Web/og/Backends%20for%20Frontends.png"]
 
 <ins>Known as:</ins> Backends for Frontends \(BFF\), [Layered Microservice Architecture](https://github.com/wso2/reference-architecture/blob/master/api-driven-microservice-architecture.md)\.
 
-<ins>Aspects:</ins>
-
-- [Proxy]({{< relref "../extension-metapatterns/proxy.md" >}}),
-- [Orchestrator]({{< relref "../extension-metapatterns/orchestrator.md" >}})\.
-
-
-<ins>Variants:</ins> 
-
-Applicable to:
-
-- Proxies, 
-- Orchestrators,
-- Proxy \+ Orchestrator pairs,
-- API Gateways,
-- Event Mediators\.
-
-
 <ins>Structure:</ins> A layer of integration services over a shared layer of core services\.
 
-<ins>Type:</ins> Extension, derived from [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) and/or [*Proxy*]({{< relref "../extension-metapatterns/proxy.md" >}})\.
+<ins>Type:</ins> Extension component, derived from [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) and/or [*Proxy*]({{< relref "../extension-metapatterns/proxy.md" >}})\.
 
 | *Benefits* | *Drawbacks* |
 | --- | --- |
@@ -67,7 +50,7 @@ Each *BFF* depends on all the services it uses \(usually every service in the sy
 <picture>
 <source srcset="/diagrams/Dependencies/Backends%20for%20Frontends.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Dependencies/Backends%20for%20Frontends.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Dependencies/Backends%20for%20Frontends.png" alt="Backends for Frontends" loading="lazy" width="963" height="323" style="width:91%"/>
+<img src="/diagrams/Dependencies/Backends%20for%20Frontends.png" alt="Each Backend for Frontend depends on every service which it calls." loading="lazy" width="963" height="323" style="width:91%"/>
 </picture>
 </a>
 </figure>
@@ -76,14 +59,14 @@ Each *BFF* depends on all the services it uses \(usually every service in the sy
 
 *Backends for Frontends* are <ins>good</ins> for:
 
-- *Multiple client protocols\.* Deploying a [*Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) per protocol hides the variation from the underlying system\.
+- *Multiple client protocols\.* Deploying a [*Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) per protocol hides the variation from the underlying system\.
 - *Multiple UIs\.* When you have one team per UI, each of them may [want to have](https://netflixtechblog.com/embracing-the-differences-inside-the-netflix-api-redesign-15fd8b3dc49d) an API which they feel comfortable with\.
 - *Drastically different workflows\.* Let each client\-facing development team own a component and choose the best fitting technologies and practices\.
 
 
 *Backends for Frontends* <ins>should be avoided</ins> when:
 
-- *The clients are mostly similar\.* It is hard to share code and functionality between *BFF*s\. If the clients have much in common, the shared aspects either find their place in a shared monolithic layer \(e\.g\. multiple client protocols call for multiple [*Gateways*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) but a shared [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}})\) or are duplicated\. *BFF* may not be the best choice â€“ use OOD \(conditions, factories, strategies, inheritance\) instead to handle the clientsâ€™ differences within a single codebase\.
+- *The clients are mostly similar\.* It is hard to share code and functionality between *BFF*s\. If the clients have much in common, the shared aspects either find their place in a shared monolithic layer \(e\.g\. multiple client protocols call for multiple [*Gateways*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) but a shared [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}})\) or are duplicated\. *BFF* may not be the best choice â€“ use OOD \(conditions, factories, strategies, inheritance\) instead to handle the clientsâ€™ differences within a single codebase\.
 
 
 ### Relations
@@ -93,7 +76,7 @@ Each *BFF* depends on all the services it uses \(usually every service in the sy
 <picture>
 <source srcset="/diagrams/Relations/BFF.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Relations/BFF.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Relations/BFF.png" alt="BFF" loading="lazy" width="1343" height="422" style="width:100%"/>
+<img src="/diagrams/Relations/BFF.png" alt="Diagrams of Backends for Frontends over a monolith, layers, shards, and services." loading="lazy" width="1343" height="422" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -101,12 +84,17 @@ Each *BFF* depends on all the services it uses \(usually every service in the sy
 *Backends for Frontends*:
 
 - Extends [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) or rarely [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}), [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}), or [*Shards*]({{< relref "../basic-metapatterns/shards.md" >}})\.
-- Is derived from a client\-facing extension metapattern: [*Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}), [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}), [*API Gateway*]({{< relref "../extension-metapatterns/orchestrator.md#api-gateway" >}}), or [*Event Mediator*]({{< relref "../extension-metapatterns/orchestrator.md#event-mediator" >}})\.
+- Is derived from a client\-facing extension metapattern: [*Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}), [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}), [*API Gateway*]({{< relref "../extension-metapatterns/orchestrator.md#api-gateway" >}}), or [*Event Mediator*]({{< relref "../extension-metapatterns/orchestrator.md#event-mediator" >}})\.
 
 
 ## Variants
 
 *Backends for Frontends* vary in the kind of component that gets dedicated to each client:
+
+- A [*Proxy*]({{< relref "#proxies" >}}) per client when clients differ in protocols\.
+- An [*Orchestrator*]({{< relref "#orchestrators" >}}) or [*Event Mediator*]({{< relref "#event-mediators" >}}) per client for different client roles and use cases\.
+- A [*Proxy \+ Orchestrator* pair]({{< relref "#proxy--orchestrator-pairs" >}}) or an [*API Gateway*]({{< relref "#api-gateways" >}}) when clients differ in both protocol and role\.
+
 
 ### [Proxies]({{< relref "../extension-metapatterns/proxy.md" >}})
 
@@ -115,12 +103,12 @@ Each *BFF* depends on all the services it uses \(usually every service in the sy
 <picture>
 <source srcset="/diagrams/Variants/3/BFF%20-%20Gateways.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/BFF%20-%20Gateways.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/BFF%20-%20Gateways.png" alt="BFF - Gateways" loading="lazy" width="843" height="403" style="width:100%"/>
+<img src="/diagrams/Variants/3/BFF%20-%20Gateways.png" alt="Each gateway in the Backends for Frontends layer adapts its client's protocol and calls the services of the domain layer." loading="lazy" width="843" height="403" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
-Dedicating a [*Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) per client is useful when the clients differ in the mode of access to the system \(protocols / encryption / authorization\) but not in workflows\.
+Dedicating a [*Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) per client is useful when the clients differ in the mode of access to the system \(protocols / encryption / authorization\) but not in workflows\.
 
 ### [Orchestrators]({{< relref "../extension-metapatterns/orchestrator.md" >}})
 
@@ -129,7 +117,7 @@ Dedicating a [*Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-
 <picture>
 <source srcset="/diagrams/Variants/3/BFF%20-%20Orchestrators.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/BFF%20-%20Orchestrators.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/BFF%20-%20Orchestrators.png" alt="BFF - Orchestrators" loading="lazy" width="833" height="403" style="width:100%"/>
+<img src="/diagrams/Variants/3/BFF%20-%20Orchestrators.png" alt="Each orchestrator in the Backends for Frontends layer calls the services of the domain layer." loading="lazy" width="833" height="403" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -143,7 +131,7 @@ An [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) 
 <picture>
 <source srcset="/diagrams/Variants/3/BFF%20-%20Gateways%20+%20Orchestrators.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/BFF%20-%20Gateways%20+%20Orchestrators.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/BFF%20-%20Gateways%20+%20Orchestrators.png" alt="BFF - Gateways + Orchestrators" loading="lazy" width="803" height="503" style="width:100%"/>
+<img src="/diagrams/Variants/3/BFF%20-%20Gateways%20+%20Orchestrators.png" alt="In each pair in the Backends for Frontends layer the gateway adapts its client's protocol while the orchestrator calls the services of the domain layer." loading="lazy" width="803" height="503" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -157,7 +145,7 @@ Clients vary in both access mode \(protocol\) and workflow\. [*Orchestrators*]({
 <picture>
 <source srcset="/diagrams/Variants/3/BFF%20-%20API%20gateways.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/BFF%20-%20API%20gateways.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/BFF%20-%20API%20gateways.png" alt="BFF - API gateways" loading="lazy" width="823" height="463" style="width:100%"/>
+<img src="/diagrams/Variants/3/BFF%20-%20API%20gateways.png" alt="Each API Gateway in the Backends for Frontends layer both adapts its client's protocol and orchestrates the services of the domain layer." loading="lazy" width="823" height="463" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -173,7 +161,7 @@ Multiple *API Gateways* match the literal meaning of *Backends for Frontends* â€
 <picture>
 <source srcset="/diagrams/Variants/3/BFF%20-%20Event%20mediators.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/BFF%20-%20Event%20mediators.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/BFF%20-%20Event%20mediators.png" alt="BFF - Event mediators" loading="lazy" width="923" height="443" style="width:100%"/>
+<img src="/diagrams/Variants/3/BFF%20-%20Event%20mediators.png" alt="Each event mediator in the Backends for Frontends layer orchestrates the services of the domain layer." loading="lazy" width="923" height="443" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -186,8 +174,8 @@ Multiple *API Gateways* match the literal meaning of *Backends for Frontends* â€
 
 - The *BFF*s can be merged into a single [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) if their functionality becomes mostly identical\.
 - A shared *orchestration* [*layer*]({{< relref "../basic-metapatterns/layers.md" >}}) with common functionality may be added for use by the *BFF*s\.
-- A layer of *Integration Services* under the *BFF*s simplifies them by providing shared high\-level APIs for the resulting [*Cells*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#examples--cell" >}})\.
-- [*Sidecars*]({{< relref "../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] \(of [*Service Mesh*]({{< relref "../implementation-metapatterns/mesh.md#service-mesh" >}})\) are a way to share libraries among the *BFF*s\.
+- A layer of *Integration Services* under the *BFF*s simplifies them by providing shared high\-level APIs for the resulting [*Cells*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}})\.
+- [*Sidecars*]({{< relref "../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \(of [*Service Mesh*]({{< relref "../implementation-metapatterns/mesh.md#service-mesh" >}})\) are a way to share libraries among the *BFF*s\.
 
 
 <figure>
@@ -195,7 +183,7 @@ Multiple *API Gateways* match the literal meaning of *Backends for Frontends* â€
 <picture>
 <source srcset="/diagrams/Evolutions/3/BFF.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/3/BFF.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/3/BFF.png" alt="BFF" loading="lazy" width="1543" height="1165" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/BFF.png" alt="Backends for Frontends can be merged into an Orchestrator, can share code via sidecars, or put shared functionality into a dedicated orchestration layer or into Cell gateways." loading="lazy" width="1543" height="1165" style="width:100%"/>
 </picture>
 </a>
 </figure>

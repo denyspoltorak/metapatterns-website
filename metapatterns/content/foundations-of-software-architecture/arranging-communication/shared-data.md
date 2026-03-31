@@ -1,7 +1,7 @@
 +++
 weight = 4
 title = "Shared data"
-description = "Components communicate by changing a shared state."
+description = "This section illustrates the use of shared data for integration of system components with an example of a ticketing service."
 images = ["/diagrams/Web/og/Shared%20data.png"]
 [sitemap]
   priority = 0.5
@@ -16,7 +16,7 @@ The final approach is integration through shared data \([*Shared Repository*]({{
 <picture>
 <source srcset="/diagrams/Communication/Services%20to%20Shared%20Data.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Services%20to%20Shared%20Data.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Services%20to%20Shared%20Data.png" alt="Services to Shared Data" loading="lazy" width="1043" height="284" style="width:100%"/>
+<img src="/diagrams/Communication/Services%20to%20Shared%20Data.png" alt="After a monolith is subdivided into services, a shared database is used to integrate the services." loading="lazy" width="1043" height="284" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -34,7 +34,7 @@ The most common case of shared data is storage \(usually a database, sometimes a
 <picture>
 <source srcset="/diagrams/Communication/Purchase%20and%20Return.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Purchase%20and%20Return.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Purchase%20and%20Return.png" alt="Purchase and Return" loading="lazy" width="923" height="323" style="width:100%"/>
+<img src="/diagrams/Communication/Purchase%20and%20Return.png" alt="Both purchase and refund services see and edit the entire system's data." loading="lazy" width="923" height="323" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -46,7 +46,7 @@ With this model the services don’t depend on each other – instead, they depe
 <picture>
 <source srcset="/diagrams/Communication/Shared%20Data%20-%20Dependencies.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Shared%20Data%20-%20Dependencies.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Shared%20Data%20-%20Dependencies.png" alt="Shared Data - Dependencies" loading="lazy" width="803" height="202" style="width:92%"/>
+<img src="/diagrams/Communication/Shared%20Data%20-%20Dependencies.png" alt="Each service depends only on the shared database." loading="lazy" width="803" height="202" style="width:92%"/>
 </picture>
 </a>
 </figure>
@@ -56,7 +56,7 @@ With this model the services don’t depend on each other – instead, they depe
 <picture>
 <source srcset="/diagrams/Communication/Shared%20Data%20add%20a%20Service.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Shared%20Data%20add%20a%20Service.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Shared%20Data%20add%20a%20Service.png" alt="Shared Data add a Service" loading="lazy" width="1103" height="203" style="width:100%"/>
+<img src="/diagrams/Communication/Shared%20Data%20add%20a%20Service.png" alt="Adding a service to a system integrated through shared data does not require changes to other services." loading="lazy" width="1103" height="203" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -68,7 +68,7 @@ Services usually need to coordinate their actions\. Commonly, services with a sh
 <picture>
 <source srcset="/diagrams/Communication/Notification%20to%20Notification.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Notification%20to%20Notification.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Notification%20to%20Notification.png" alt="Notification to Notification" loading="lazy" width="983" height="323" style="width:100%"/>
+<img src="/diagrams/Communication/Notification%20to%20Notification.png" alt="A diagram of a ticketing service whose components use direct messaging to intercommunicate." loading="lazy" width="983" height="323" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -80,7 +80,7 @@ Another case is found with data processing pipelines where an element may period
 <picture>
 <source srcset="/diagrams/Communication/Shared%20files.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Shared%20files.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Shared%20files.png" alt="Shared files" loading="lazy" width="1016" height="423" style="width:100%"/>
+<img src="/diagrams/Communication/Shared%20files.png" alt="Stepwise processing of a batch of files." loading="lazy" width="1016" height="423" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -92,7 +92,7 @@ Finally, there is the rarely used option of an external [*Scheduler*]({{< relref
 <picture>
 <source srcset="/diagrams/Communication/Blackboard.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Blackboard.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Blackboard.png" alt="Blackboard" loading="lazy" width="803" height="283" style="width:100%"/>
+<img src="/diagrams/Communication/Blackboard.png" alt="Components of the Blackboard Architecture." loading="lazy" width="803" height="283" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -106,7 +106,7 @@ The other, not as obvious, use case for shared data is messaging, which is imple
 <picture>
 <source srcset="/diagrams/Communication/Queues.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Queues.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Queues.png" alt="Queues" loading="lazy" width="803" height="603" style="width:100%"/>
+<img src="/diagrams/Communication/Queues.png" alt="Diagrams for: a queue per service, separate input and output queues, a queue per channel, and a single system queue." loading="lazy" width="803" height="603" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -117,14 +117,14 @@ There should be a means for the recipient of a message to know about its arrival
 
 ## Full\-featured
 
-Finally, some \(usually distributed\) datastores implement data change notifications\. That allows for the services to communicate through the datastore in real\-time, removing both the need for an additional *Middleware* and interdependencies for the services\. Such a system follows the [*Shared Repository*]({{< relref "../../extension-metapatterns/shared-repository.md" >}}) pattern of \[[POSA4]({{< relref "../../appendices/books-referenced.md#posa4" >}})\] which was rectified as [*Space\-Based Architecture*]({{< relref "../../extension-metapatterns/shared-repository.md#data-grid-of-space-based-architecture-sba-replicated-cache-distributed-cache" >}}) \[[SAP]({{< relref "../../appendices/books-referenced.md#sap" >}}), [FSA]({{< relref "../../appendices/books-referenced.md#fsa" >}})\]\. In our example, the available seats notification service subscribes to changes in the seats data in the database – this way it does not need to be aware of the existence of other services at all\. We can also move the email notifications logic of the ticket purchase service into a separate component which would track purchases in the database and send a printable version of each newly acquired ticket to the buyer’s email address which can be found in the ticket details in the database\.
+Finally, some \(usually distributed\) datastores implement data change notifications\. That allows for the services to communicate through the datastore in real\-time, removing both the need for an additional *Middleware* and interdependencies for the services\. Such a system follows the [*Shared Repository*]({{< relref "../../extension-metapatterns/shared-repository.md" >}}) pattern of \[[POSA4]({{< relref "../../appendices/books-referenced.md#posa4" >}})\] which was rectified as [*Space\-Based Architecture*]({{< relref "../../extension-metapatterns/shared-repository.md#data-grid-of-space-based-architecture-sba-replicated-cache-distributed-cache" >}})\. In our example, the available seats notification service subscribes to changes in the seats data in the database – this way it does not need to be aware of the existence of other services at all\. We can also move the email notifications logic of the ticket purchase service into a separate component which would track purchases in the database and send a printable version of each newly acquired ticket to the buyer’s email address which can be found in the ticket details in the database\.
 
 <figure>
 <a href="/diagrams/Communication/Notification%20inside%20the%20DB.png">
 <picture>
 <source srcset="/diagrams/Communication/Notification%20inside%20the%20DB.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Notification%20inside%20the%20DB.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Notification%20inside%20the%20DB.png" alt="Notification inside the DB" loading="lazy" width="1123" height="323" style="width:100%"/>
+<img src="/diagrams/Communication/Notification%20inside%20the%20DB.png" alt="A diagram of a ticketing service whose components rely on database notifications." loading="lazy" width="1123" height="323" style="width:100%"/>
 </picture>
 </a>
 </figure>

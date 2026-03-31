@@ -1,7 +1,7 @@
 +++
 weight = 7
 title = "Polyglot Persistence"
-description = "Polyglot Persistence is the pattern for using multiple databases."
+description = "This chapter discusses Polyglot Persistence and its variants: read-only replicas, Cache-Aside, Memory Image, Reporting Database, CQRS View, and Query Service."
 images = ["/diagrams/Web/og/Polyglot%20Persistence.png"]
 [sitemap]
   priority = 0.8
@@ -14,7 +14,7 @@ images = ["/diagrams/Web/og/Polyglot%20Persistence.png"]
 <picture>
 <source srcset="/diagrams/Main/Polyglot%20Persistence.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Polyglot%20Persistence.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Polyglot%20Persistence.png" alt="Polyglot Persistence" loading="lazy" width="944" height="514" style="width:100%"/>
+<img src="/diagrams/Main/Polyglot%20Persistence.png" alt="A diagram for Services with Polyglot Persistence, in abstractness-subdomain-sharding coordinates." loading="lazy" width="944" height="514" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -23,31 +23,9 @@ images = ["/diagrams/Web/og/Polyglot%20Persistence.png"]
 
 <ins>Known as:</ins> Polyglot Persistence\.
 
-<ins>Aspects:</ins> those of the [databases]({{< relref "../extension-metapatterns/shared-repository.md" >}}) involved\.
-
-<ins>Examples:</ins> 
-
-Independent storage:
-
-- Private and Shared Databases,
-- Specialized Databases,
-- Data File / Content Delivery Network \(CDN\)\.
-
-
-Derived storage:
-
-- Read\-Only Replicas,
-- Database Cache / [Cache\-Aside](https://www.enjoyalgorithms.com/blog/cache-aside-caching-strategy),
-- [Memory Image](https://martinfowler.com/bliki/MemoryImage.html) / Materialized View \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\],
-- [Reporting Database](https://martinfowler.com/bliki/ReportingDatabase.html) / CQRS View Database \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] / Event\-Sourced View \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\] / Source\-Aligned \(Native\) Data Product Quantum \(DPQ\) of Data Mesh \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\],
-- Query Service \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] / Front Controller \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}}) but [not]({{< relref "../analytics/ambiguous-patterns.md#front-controller" >}}) [PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\] / Data Warehouse \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\] / Data Lake \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\] / Aggregate Data Product Quantum \(DPQ\) of Data Mesh \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\],
-- External Search Index,
-- Historical Data / [Data Archiving](https://www.datacore.com/glossary/what-is-data-archiving/)\.
-
-
 <ins>Structure:</ins> A layer of data services used by higher\-level components\.
 
-<ins>Type:</ins> Extension, derived from [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}})\.
+<ins>Type:</ins> Extension component, derived from [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}})\.
 
 | *Benefits* | *Drawbacks* |
 | --- | --- |
@@ -84,7 +62,7 @@ In general, each service depends on all of the databases which it uses\. There m
 <picture>
 <source srcset="/diagrams/Dependencies/PolyglotPersistence.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Dependencies/PolyglotPersistence.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Dependencies/PolyglotPersistence.png" alt="PolyglotPersistence" loading="lazy" width="1243" height="263" style="width:100%"/>
+<img src="/diagrams/Dependencies/PolyglotPersistence.png" alt="The business logic depends on every database. A derived database depends on its data source." loading="lazy" width="1243" height="263" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -112,7 +90,7 @@ In general, each service depends on all of the databases which it uses\. There m
 <picture>
 <source srcset="/diagrams/Relations/Polyglot%20Persistence.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Relations/Polyglot%20Persistence.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Relations/Polyglot%20Persistence.png" alt="Polyglot Persistence" loading="lazy" width="1343" height="463" style="width:100%"/>
+<img src="/diagrams/Relations/Polyglot%20Persistence.png" alt="Polyglot Persistence for Monolith, Layers, Shards, and Services." loading="lazy" width="1343" height="463" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -128,6 +106,11 @@ In general, each service depends on all of the databases which it uses\. There m
 
 Many cases of *Polyglot Persistence* use multiple datastores just because there is no single technology that matches all the application’s needs\. The databases used are filled with different subsets of the system’s data:
 
+- Each service may have its own private data when [another dataset is shared]({{< relref "#private-and-shared-databases" >}})\.
+- [Specialized databases]({{< relref "#specialized-databases" >}}) that differ in storage and analytical technologies may be used\.
+- Many kinds of data can be [stored as files]({{< relref "#data-file-content-delivery-network-cdn" >}})\. 
+
+
 ### Private and Shared Databases
 
 <figure>
@@ -135,7 +118,7 @@ Many cases of *Polyglot Persistence* use multiple datastores just because there 
 <picture>
 <source srcset="/diagrams/Variants/3/PP%20-%20Private%20and%20Shared.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/PP%20-%20Private%20and%20Shared.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/PP%20-%20Private%20and%20Shared.png" alt="PP - Private and Shared" loading="lazy" width="1303" height="303" style="width:100%"/>
+<img src="/diagrams/Variants/3/PP%20-%20Private%20and%20Shared.png" alt="A subset of data shared between shards and between services." loading="lazy" width="1303" height="303" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -149,7 +132,7 @@ If several services or shards become coupled through a subset of the system’s 
 <picture>
 <source srcset="/diagrams/Variants/3/PP%20-%20Specialized.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/PP%20-%20Specialized.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/PP%20-%20Specialized.png" alt="PP - Specialized" loading="lazy" width="863" height="282" style="width:100%"/>
+<img src="/diagrams/Variants/3/PP%20-%20Specialized.png" alt="A service which uses both SQL and NoSQL databases." loading="lazy" width="863" height="282" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -163,7 +146,7 @@ Databases [vary in their optimal use cases](https://www.jamesserra.com/archive/2
 <picture>
 <source srcset="/diagrams/Variants/3/PP%20-%20File%20Storage.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/PP%20-%20File%20Storage.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/PP%20-%20File%20Storage.png" alt="PP - File Storage" loading="lazy" width="863" height="243" style="width:100%"/>
+<img src="/diagrams/Variants/3/PP%20-%20File%20Storage.png" alt="A backend reads page templates while a frontend reads content from a content delivery network." loading="lazy" width="863" height="243" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -187,7 +170,7 @@ The updates to the derived databases may come from:
 <picture>
 <source srcset="/diagrams/Variants/3/PP%20-%20Derived%20Storage.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/PP%20-%20Derived%20Storage.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/PP%20-%20Derived%20Storage.png" alt="PP - Derived Storage" loading="lazy" width="1343" height="687" style="width:100%"/>
+<img src="/diagrams/Variants/3/PP%20-%20Derived%20Storage.png" alt="A derived database is fed data from the main database, from an indexer which scans the main database, from application events, or from events originating with another service." loading="lazy" width="1343" height="687" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -199,7 +182,7 @@ The updates to the derived databases may come from:
 <picture>
 <source srcset="/diagrams/Variants/3/Read-only%20Replica.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/Read-only%20Replica.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/Read-only%20Replica.png" alt="Read-only Replica" loading="lazy" width="713" height="425" style="width:75%"/>
+<img src="/diagrams/Variants/3/Read-only%20Replica.png" alt="An instance of a backend writes to a leader database which streams updates to database replicas. Other backend instances read from the replicas." loading="lazy" width="713" height="425" style="width:75%"/>
 </picture>
 </a>
 </figure>
@@ -213,7 +196,7 @@ Multiple instances of the database are deployed and one of them is the *leader* 
 <picture>
 <source srcset="/diagrams/Variants/3/Cache-Aside.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/Cache-Aside.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/Cache-Aside.png" alt="Cache-Aside" loading="lazy" width="803" height="364" style="width:84%"/>
+<img src="/diagrams/Variants/3/Cache-Aside.png" alt="A cache hit only reads from the cache; a cache miss reads from the cache, reads from the database, and writes to the cache; a write writes to the database and to the cache." loading="lazy" width="803" height="364" style="width:84%"/>
 </picture>
 </a>
 </figure>
@@ -229,7 +212,7 @@ Keeping the cache consistent with the main database is the hard part\. There are
 <picture>
 <source srcset="/diagrams/Variants/3/Memory%20Image.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/Memory%20Image.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/Memory%20Image.png" alt="Memory Image" loading="lazy" width="1303" height="311" style="width:100%"/>
+<img src="/diagrams/Variants/3/Memory%20Image.png" alt="At startup a service reads from an event store and writes to a memory image. At runtime it reads from the memory image and updates both the memory image and event store." loading="lazy" width="1303" height="311" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -243,7 +226,7 @@ Keeping the cache consistent with the main database is the hard part\. There are
 <picture>
 <source srcset="/diagrams/Variants/3/Reporting%20DB%20and%20CQRS%20View.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/Reporting%20DB%20and%20CQRS%20View.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/Reporting%20DB%20and%20CQRS%20View.png" alt="Reporting DB and CQRS View" loading="lazy" width="1303" height="304" style="width:100%"/>
+<img src="/diagrams/Variants/3/Reporting%20DB%20and%20CQRS%20View.png" alt="A service reads from a CQRS view which aggregates updates streamed by another service. An analyst queries a reporting database which aggregates a stream of events from the main database." loading="lazy" width="1303" height="304" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -259,7 +242,7 @@ A [*Reporting Database*](https://martinfowler.com/bliki/ReportingDatabase.html) 
 <picture>
 <source srcset="/diagrams/Variants/3/Query%20Service.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/Query%20Service.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/Query%20Service.png" alt="Query Service" loading="lazy" width="1263" height="283" style="width:100%"/>
+<img src="/diagrams/Variants/3/Query%20Service.png" alt="Several services both stream updates and query data from a shared query service." loading="lazy" width="1263" height="283" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -277,7 +260,7 @@ A [*Front Controller*]({{< relref "../extension-metapatterns/orchestrator.md#ine
 <picture>
 <source srcset="/diagrams/Variants/3/Search%20Index.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/Search%20Index.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/Search%20Index.png" alt="Search Index" loading="lazy" width="1243" height="307" style="width:100%"/>
+<img src="/diagrams/Variants/3/Search%20Index.png" alt="An external index receives events from the main datastore. A service queries the external index to find ids of specific records which it later reads from the main database." loading="lazy" width="1243" height="307" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -291,7 +274,7 @@ Some domains require a kind of search which is not naturally supported by ordina
 <picture>
 <source srcset="/diagrams/Variants/3/Historical%20Data.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/Historical%20Data.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/Historical%20Data.png" alt="Historical Data" loading="lazy" width="983" height="282" style="width:92%"/>
+<img src="/diagrams/Variants/3/Historical%20Data.png" alt="A service works with an operational database. An archiver reads from the operational database and writes to an archive. An analyst reads from both the archive and operational database." loading="lazy" width="983" height="282" style="width:92%"/>
 </picture>
 </a>
 </figure>
@@ -310,7 +293,7 @@ It is common to store the history of sales in a database\. However, once a month
 <picture>
 <source srcset="/diagrams/Evolutions/3/Polyglor%20Persistence%20-%201.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/3/Polyglor%20Persistence%20-%201.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/3/Polyglor%20Persistence%20-%201.png" alt="Polyglor Persistence - 1" loading="lazy" width="1123" height="264" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/Polyglor%20Persistence%20-%201.png" alt="The backend layer that uses OLAP and OLTP databases is subdivided into command and query backends, resulting in full-featured Command-Query Responsibility Segregation." loading="lazy" width="1123" height="264" style="width:100%"/>
 </picture>
 </a>
 </figure>

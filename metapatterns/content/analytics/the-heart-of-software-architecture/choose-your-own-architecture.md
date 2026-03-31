@@ -1,7 +1,7 @@
 +++
 weight = 3
 title = "Choose your own architecture"
-description = "This is a guide to choosing an architectural style based on project size, domain features, target performance, and flexibility requirements."
+description = "This section is a guide to choosing an architectural style based on project size, domain features, target performance, and flexibility requirements."
 images = ["/diagrams/Web/og/Heart3.png"]
 [sitemap]
   priority = 0.5
@@ -22,7 +22,7 @@ Therefore, a one day task will likely be [*monolithic*]({{< relref "../../basic-
 <picture>
 <source srcset="/diagrams/Heart/Size-1.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Heart/Size-1.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Heart/Size-1.png" alt="Size-1" loading="lazy" width="1082" height="1324" style="width:100%"/>
+<img src="/diagrams/Heart/Size-1.png" alt="Diagrams of Monolith, Layers, Services, Service-Oriented Architecture, and Cell-Based Architecture." loading="lazy" width="1082" height="1324" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -34,7 +34,7 @@ Any inherent decoupling within your domain is another factor to consider in the 
 <picture>
 <source srcset="/diagrams/Heart/Size-2.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Heart/Size-2.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Heart/Size-2.png" alt="Size-2" loading="lazy" width="1241" height="345" style="width:100%"/>
+<img src="/diagrams/Heart/Size-2.png" alt="Diagrams of Sandwich, Top-Down Hierarchy, and Pipeline." loading="lazy" width="1241" height="345" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -54,7 +54,7 @@ Sometimes you expect to have many complex use cases which cannot be matched to y
 <picture>
 <source srcset="/diagrams/Heart/Features-1.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Heart/Features-1.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Heart/Features-1.png" alt="Features-1" loading="lazy" width="1323" height="1043" style="width:100%"/>
+<img src="/diagrams/Heart/Features-1.png" alt="Diagrams of Services with: a monolithic orchestrator, Backends for Frontends, an orchestrator per use case, a hierarchical orchestrator and a layered orchestrator." loading="lazy" width="1323" height="1043" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -66,7 +66,7 @@ Other systems are built around data\. You cannot split it into private databases
 <picture>
 <source srcset="/diagrams/Heart/Features-2.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Heart/Features-2.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Heart/Features-2.png" alt="Features-2" loading="lazy" width="1003" height="763" style="width:100%"/>
+<img src="/diagrams/Heart/Features-2.png" alt="Diagrams of Services with a shared database and Space-Based Architecture." loading="lazy" width="1003" height="763" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -78,7 +78,7 @@ Once you go distributed, you will likely employ a [*Middleware*]({{< relref "../
 <picture>
 <source srcset="/diagrams/Heart/Features-3.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Heart/Features-3.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Heart/Features-3.png" alt="Features-3" loading="lazy" width="1363" height="483" style="width:100%"/>
+<img src="/diagrams/Heart/Features-3.png" alt="Diagrams of Services with a middleware, Services with a proxy, and Backends for Frontends." loading="lazy" width="1363" height="483" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -94,7 +94,7 @@ High throughput is achieved by [*sharding*]({{< relref "../../basic-metapatterns
 <picture>
 <source srcset="/diagrams/Heart/Performance-1.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Heart/Performance-1.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Heart/Performance-1.png" alt="Performance-1" loading="lazy" width="986" height="463" style="width:100%"/>
+<img src="/diagrams/Heart/Performance-1.png" alt="Diagrams of stateless instances with a load balancer and a shared database, shards behind a sharding proxy, and replicas behind a load balancer." loading="lazy" width="986" height="463" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -106,7 +106,7 @@ Alternatively, you may use several specialized databases \([*Polyglot Persistenc
 <picture>
 <source srcset="/diagrams/Heart/Performance-2.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Heart/Performance-2.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Heart/Performance-2.png" alt="Performance-2" loading="lazy" width="1102" height="426" style="width:100%"/>
+<img src="/diagrams/Heart/Performance-2.png" alt="Diagrams of Services with Polyglot Persistence and a Cell with a scaled pipeline." loading="lazy" width="1102" height="426" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -118,7 +118,7 @@ Scalability under uneven load is achieved through [*Function as a Service*]({{< 
 <picture>
 <source srcset="/diagrams/Heart/Performance-3.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Heart/Performance-3.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Heart/Performance-3.png" alt="Performance-3" loading="lazy" width="1383" height="623" style="width:100%"/>
+<img src="/diagrams/Heart/Performance-3.png" alt="Diagrams of scaled single-layer Nanoservices, Microservices, and processing units of Space-Based Architecture." loading="lazy" width="1383" height="623" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -130,7 +130,7 @@ Fault tolerance requires you to have [*replicas*]({{< relref "../../basic-metapa
 <picture>
 <source srcset="/diagrams/Heart/Performance-4.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Heart/Performance-4.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Heart/Performance-4.png" alt="Performance-4" loading="lazy" width="1128" height="424" style="width:100%"/>
+<img src="/diagrams/Heart/Performance-4.png" alt="Diagrams of whole-system replicas of Services with an API Gateway, actors running in a distributed framework, and a peer-to-peer mesh." loading="lazy" width="1128" height="424" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -147,7 +147,7 @@ Low latency makes you place simplified first response logic close to your input,
 <picture>
 <source srcset="/diagrams/Heart/Performance-5.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Heart/Performance-5.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Heart/Performance-5.png" alt="Performance-5" loading="lazy" width="1104" height="943" style="width:100%"/>
+<img src="/diagrams/Heart/Performance-5.png" alt="Shortcuts in the control flow of Model-View-Presenter, Model-View-Controller, Layers optimized through business logic injection, and Top-Down Hierarchy in a control system." loading="lazy" width="1103" height="903" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -165,19 +165,19 @@ If you mediate between resource or service providers and consumers, you build a 
 <picture>
 <source srcset="/diagrams/Heart/Flexibility-1.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Heart/Flexibility-1.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Heart/Flexibility-1.png" alt="Flexibility-1" loading="lazy" width="1023" height="443" style="width:100%"/>
+<img src="/diagrams/Heart/Flexibility-1.png" alt="Diagrams of Plugins, Hexagonal Architecture, and Microkernel." loading="lazy" width="1023" height="481" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
-When your teams develop services and you want them to be [less interdependent]({{< relref "../../analytics/comparison-of-architectural-patterns/indirection-in-commands-and-queries.md" >}}), you insert an [*Anticorruption Layer*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}), [*Open Host Service*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}), or [*CQRS View*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) between them\.
+When your teams develop services and you want them to be [less interdependent]({{< relref "../../analytics/comparison-of-architectural-patterns/indirection-in-commands-and-queries.md" >}}), you insert an [*Anticorruption Layer*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}), [*Open Host Service*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}), or [*CQRS View*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) between them\.
 
 <figure>
 <a href="/diagrams/Heart/Flexibility-2.png">
 <picture>
 <source srcset="/diagrams/Heart/Flexibility-2.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Heart/Flexibility-2.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Heart/Flexibility-2.png" alt="Flexibility-2" loading="lazy" width="912" height="431" style="width:100%"/>
+<img src="/diagrams/Heart/Flexibility-2.png" alt="Diagrams of Anticorruption Layer, Open Host Service, and CQRS View." loading="lazy" width="912" height="431" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -189,7 +189,7 @@ When you have built a large system and really need that thorough data analytics,
 <picture>
 <source srcset="/diagrams/Variants/1/Data%20Mesh.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Data%20Mesh.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Data%20Mesh.png" alt="Data Mesh" loading="lazy" width="1094" height="264" style="width:100%"/>
+<img src="/diagrams/Variants/1/Data%20Mesh.png" alt="Data Mesh builds an extra graph of services that stream and process analytical data." loading="lazy" width="1094" height="264" style="width:100%"/>
 </picture>
 </a>
 </figure>

@@ -1,7 +1,7 @@
 +++
 weight = 8
 title = "Mesh"
-description = "A Mesh or Grid is a virtual layer of interconnected components which makes a distributed Middleware."
+description = "This chapter explores meshes, their types and examples: peer-to-peer networks, Service Mesh, Space-Based Architecture, Leaf-Spine Architecture, and Actors."
 images = ["/diagrams/Web/og/Mesh.png"]
 [sitemap]
   priority = 0.8
@@ -14,7 +14,7 @@ images = ["/diagrams/Web/og/Mesh.png"]
 <picture>
 <source srcset="/diagrams/Main/Mesh.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Mesh.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Mesh.png" alt="Mesh" loading="lazy" width="804" height="436" style="width:100%"/>
+<img src="/diagrams/Main/Mesh.png" alt="A diagram for Services over a mesh, in abstractness-subdomain-sharding coordinates." loading="lazy" width="804" height="436" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -22,19 +22,6 @@ images = ["/diagrams/Web/og/Mesh.png"]
 *Hive mind\.* Go decentralized\.
 
 <ins>Known as:</ins> Mesh, Grid\.
-
-<ins>Aspects:</ins> those of [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}})\.
-
-<ins>Variants:</ins> *Meshes* vary greatly\. 
-
-<ins>Examples:</ins>
-
-- [Peer\-to\-Peer Networks](https://en.wikipedia.org/wiki/Peer-to-peer),
-- Leaf\-Spine Architecture / [Spine\-Leaf Architecture](https://www.geeksforgeeks.org/spine-leaf-architecture/),
-- Actors,
-- [Service Mesh](https://buoyant.io/service-mesh-manifesto) \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}}), [MP]({{< relref "../appendices/books-referenced.md#mp" >}})\],
-- [Space\-Based Architecture](https://en.wikipedia.org/wiki/Space-based_architecture) \[[SAP]({{< relref "../appendices/books-referenced.md#sap" >}}), [FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\]\.
-
 
 <ins>Structure:</ins> A system of interconnected [*Shards*]({{< relref "../basic-metapatterns/shards.md" >}}) which usually make a [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}})\.
 
@@ -120,6 +107,15 @@ The connected *nodes* of a *Mesh* may be:
 
 ## Examples
 
+The diversity of *Meshes* can be seen in the following examples:
+
+- [*Peer\-to\-Peer Networks*]({{< relref "#peer-to-peer-networks" >}}) for sharing files, CPU time, or Internet access\.
+- [*Leaf\-Spine Architecture*]({{< relref "#leaf-spine-architecture-spine-leaf-architecture" >}}) found in datacenters\.
+- [*Actors*]({{< relref "#actors" >}}) – class\-like software entities that communicate through messaging\.
+- [*Service Mesh*]({{< relref "#service-mesh" >}}) which hosts *Microservices*\.
+- [*Space\-Based Architecture*]({{< relref "#space-based-architecture" >}}) co\-locates services instances with nodes of a distributed in\-memory database\.
+
+
 ### Peer\-to\-Peer Networks
 
 <figure>
@@ -127,7 +123,7 @@ The connected *nodes* of a *Mesh* may be:
 <picture>
 <source srcset="/diagrams/Variants/4/P2P.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/P2P.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/4/P2P.png" alt="P2P" loading="lazy" width="802" height="403" style="width:100%"/>
+<img src="/diagrams/Variants/4/P2P.png" alt="Each application is connected to a node of a mesh. The nodes find each other's addresses in a registry and then communicate directly." loading="lazy" width="802" height="403" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -143,7 +139,7 @@ Examples: torrent, onion routing \(Tor\), blockchain\.
 <picture>
 <source srcset="/diagrams/Variants/4/Leaf-Spine.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/Leaf-Spine.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/4/Leaf-Spine.png" alt="Leaf-Spine" loading="lazy" width="603" height="361" style="width:81%"/>
+<img src="/diagrams/Variants/4/Leaf-Spine.png" alt="Each server of a datacenter is connected to a leaf node. Each leaf communicates with every spine node." loading="lazy" width="603" height="361" style="width:81%"/>
 </picture>
 </a>
 </figure>
@@ -157,7 +153,7 @@ This [datacenter network architecture](https://www.geeksforgeeks.org/spine-leaf-
 <picture>
 <source srcset="/diagrams/Variants/4/Actors.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/Actors.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/4/Actors.png" alt="Actors" loading="lazy" width="862" height="304" style="width:100%"/>
+<img src="/diagrams/Variants/4/Actors.png" alt="Each actor reads from its message queue and writes to other actors' message queues." loading="lazy" width="862" height="304" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -171,7 +167,7 @@ A system of *Actors* may be classified as a *fully connected Mesh* with the acto
 <picture>
 <source srcset="/diagrams/Variants/4/Service%20Mesh.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/Service%20Mesh.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/4/Service%20Mesh.png" alt="Service Mesh" loading="lazy" width="822" height="549" style="width:100%"/>
+<img src="/diagrams/Variants/4/Service%20Mesh.png" alt="A service mesh comprises services each of which is connected to a sidecar connected to a mesh node. The mesh nodes communicate with a monitoring and control infrastructure." loading="lazy" width="822" height="549" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -179,7 +175,7 @@ A system of *Actors* may be classified as a *fully connected Mesh* with the acto
 A [*Service Mesh*](https://buoyant.io/service-mesh-manifesto) \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}}), [MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] is a distributed [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) for running [*Microservices*]({{< relref "../basic-metapatterns/services.md#microservices" >}})\. It is a 2\-layer *Mesh* which contains one or few management nodes \(*control plane*\) and many user nodes \(*data plane*\)\. Each data plane node colocates:
 
 - A *mesh engine node* that deals with connectivity,
-- One or more [*Sidecars*]({{< relref "../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] \([*Proxies*]({{< relref "../extension-metapatterns/proxy.md" >}}) where the support of *cross\-cutting concerns* – the identical code for use by every service, e\.g\. logging or encryption – resides\),
+- One or more [*Sidecars*]({{< relref "../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \([*Proxies*]({{< relref "../extension-metapatterns/proxy.md" >}}) where the support of *cross\-cutting concerns* – the identical code for use by every service, e\.g\. logging or encryption – resides\),
 - A user *application* \(*microservice*\) that differs from node to node\.
 
 
@@ -196,7 +192,7 @@ Ready\-to\-use *Service Mesh* frameworks are popular with the *Microservices* ar
 <picture>
 <source srcset="/diagrams/Variants/4/Space-Based%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/Space-Based%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/4/Space-Based%20Architecture.png" alt="Space-Based Architecture" loading="lazy" width="743" height="483" style="width:100%"/>
+<img src="/diagrams/Variants/4/Space-Based%20Architecture.png" alt="Each processing unit is connected to a node of a data grid. The nodes directly exchange data updates and store them into a persistent database via a writer. There is also a reader to initiate nodes." loading="lazy" width="743" height="483" style="width:100%"/>
 </picture>
 </a>
 </figure>

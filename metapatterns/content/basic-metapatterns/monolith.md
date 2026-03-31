@@ -1,7 +1,7 @@
 +++
 weight = 6
 title = "Monolith"
-description = "A Monolith is an unstructured application, fast to write but hard to maintain."
+description = "This chapter explores monolithic architectures: Reactor, Proactor, Half-Sync/Half-Async (coroutines), and (Re)Actor-with-Extractors (phased simulation)."
 images = ["/diagrams/Web/og/Monolith.png"]
 [sitemap]
   priority = 0.8
@@ -16,7 +16,7 @@ Let’s take a look at the simplest possible [metapattern]({{< relref "../introd
 <picture>
 <source srcset="/diagrams/Main/Monolith.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Monolith.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Monolith.png" alt="Monolith" loading="lazy" width="942" height="474" style="width:100%"/>
+<img src="/diagrams/Main/Monolith.png" alt="A diagram for Monolith, in abstractness-subdomain-sharding coordinates." loading="lazy" width="942" height="474" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -25,29 +25,9 @@ Let’s take a look at the simplest possible [metapattern]({{< relref "../introd
 
 <ins>Known as:</ins> Monolith, Monolithic Architecture\.
 
-<ins>Variants:</ins> 
-
-By internal structure:
-
-- True Monolith / [Big Ball of Mud](http://laputan.org/mud/),
-- \(inexact\) Lambda Monolith / [Monolambda](https://jesseduffield.com/Notes-On-Lambda/) / [Lambdalith](https://theburningmonk.com/2025/03/the-pros-and-cons-of-lambdalith/),
-- \(misapplied\) Layered Monolith \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\],
-- \(misapplied\) Modular Monolith \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] \(Modulith\),
-- \(misapplied\) Distributed Monolith \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\],
-- \(inexact\) Plugins \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] and Hexagonal Architecture\.
-
-
-By mode of action:
-
-- [Reactor](https://www.dre.vanderbilt.edu/~schmidt/PDF/reactor-siemens.pdf) \[[POSA2]({{< relref "../appendices/books-referenced.md#posa2" >}})\], 
-- [Proactor](https://hillside.net/plop/plop97/Proceedings/pyarali.proactor.pdf) \[[POSA2]({{< relref "../appendices/books-referenced.md#posa2" >}})\], 
-- \(inexact\) [Half\-Sync/Half\-Async](https://www.dre.vanderbilt.edu/~schmidt/PDF/PLoP-95.pdf) \[[POSA2]({{< relref "../appendices/books-referenced.md#posa2" >}})\],
-- \(inexact\) [\(Re\)Actor\-with\-Extractors](http://ithare.com/multi-coring-and-non-blocking-instead-of-multi-threading-with-a-script/3/)\.
-
-
 <ins>Structure:</ins> A monoblock with no strong internal modularity\.
 
-<ins>Type:</ins> Main, root of the hierarchy of metapatterns\.
+<ins>Type:</ins> System topology, the root of the hierarchy of metapatterns\.
 
 | *Benefits* | *Drawbacks* |
 | --- | --- |
@@ -77,7 +57,7 @@ Overall, tiny *Monoliths* provide the best latency and throughput per CPU core\.
 
 ### Dependencies
 
-Even though a *Monolith* is a single module, meaning that there are no dependencies among its parts \(in fact, everything depends on everything\), it still may depend on some external components or services which it uses\. Those dependencies tend to cause [*vendor lock\-in*](https://en.wikipedia.org/wiki/Vendor_lock-in) or make the software OS\- or hardware\-dependent\. [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) \(including [*MVP*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-presenter-mvp-model-view-adapter-mva-model-view-viewmodel-mvvm-model-1-mvc1-document-view" >}}) and [*MVC*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}})\) decouples a monolithic implementation from its dependencies by isolating the latter behind [*Adapters*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}})\.
+Even though a *Monolith* is a single module, meaning that there are no dependencies among its parts \(in fact, everything depends on everything\), it still may depend on some external components or services which it uses\. Those dependencies tend to cause [*vendor lock\-in*](https://en.wikipedia.org/wiki/Vendor_lock-in) or make the software OS\- or hardware\-dependent\. [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) \(including [*MVP*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-presenter-mvp-model-view-adapter-mva-model-view-viewmodel-mvvm-model-1-mvc1-document-view" >}}) and [*MVC*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}})\) decouples a monolithic implementation from its dependencies by isolating the latter behind [*Adapters*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}})\.
 
 ### Applicability
 
@@ -108,7 +88,7 @@ Even though a *Monolith* is a single module, meaning that there are no dependenc
 <picture>
 <source srcset="/diagrams/Relations/Monolith.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Relations/Monolith.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Relations/Monolith.png" alt="Monolith" loading="lazy" width="1623" height="1620" style="width:100%"/>
+<img src="/diagrams/Relations/Monolith.png" alt="Intermediary architectures between Monolith and distributed Shards, Layers, and Services." loading="lazy" width="1623" height="1620" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -129,7 +109,7 @@ Even though a *Monolith* is a single module, meaning that there are no dependenc
 <picture>
 <source srcset="/diagrams/Variants/1/MonolithAsUnzoomed.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/MonolithAsUnzoomed.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/MonolithAsUnzoomed.png" alt="MonolithAsUnzoomed" loading="lazy" width="1523" height="466" style="width:100%"/>
+<img src="/diagrams/Variants/1/MonolithAsUnzoomed.png" alt="A Sandwich Architecture looks like a monolith when the details of its internal structure are omitted." loading="lazy" width="1523" height="466" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -145,7 +125,7 @@ As we aspire to build a unified classification for both distributed and local sy
 <picture>
 <source srcset="/diagrams/Variants/1/True%20Monolith.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/True%20Monolith.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/True%20Monolith.png" alt="True Monolith" loading="lazy" width="783" height="243" style="width:83%"/>
+<img src="/diagrams/Variants/1/True%20Monolith.png" alt="A square that represents a non-modular monolith." loading="lazy" width="783" height="243" style="width:83%"/>
 </picture>
 </a>
 </figure>
@@ -159,7 +139,7 @@ A true *Monolith* features [no clear internal structure](http://laputan.org/mud/
 <picture>
 <source srcset="/diagrams/Variants/1/Lambdalith.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Lambdalith.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Lambdalith.png" alt="Lambdalith" loading="lazy" width="744" height="303" style="width:80%"/>
+<img src="/diagrams/Variants/1/Lambdalith.png" alt="Instances of a stateless component between a load balancer and a database." loading="lazy" width="744" height="303" style="width:80%"/>
 </picture>
 </a>
 </figure>
@@ -173,7 +153,7 @@ A [*Monolambda*](https://jesseduffield.com/Notes-On-Lambda/) or [*Lambdalith*](h
 <picture>
 <source srcset="/diagrams/Variants/1/Layered%20Monolith.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Layered%20Monolith.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Layered%20Monolith.png" alt="Layered Monolith" loading="lazy" width="783" height="243" style="width:81%"/>
+<img src="/diagrams/Variants/1/Layered%20Monolith.png" alt="Application, domain, and infrastructure layers." loading="lazy" width="783" height="243" style="width:81%"/>
 </picture>
 </a>
 </figure>
@@ -187,7 +167,7 @@ When they say [*Layered Monolith*]({{< relref "../basic-metapatterns/layers.md#s
 <picture>
 <source srcset="/diagrams/Variants/1/Modular%20Monolith.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Modular%20Monolith.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Modular%20Monolith.png" alt="Modular Monolith" loading="lazy" width="903" height="204" style="width:88%"/>
+<img src="/diagrams/Variants/1/Modular%20Monolith.png" alt="A diagram of subdomain services." loading="lazy" width="903" height="204" style="width:88%"/>
 </picture>
 </a>
 </figure>
@@ -201,7 +181,7 @@ A [*Modular Monolith*]({{< relref "../basic-metapatterns/services.md#asynchronou
 <picture>
 <source srcset="/diagrams/Variants/1/Distributed%20Monolith.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Distributed%20Monolith.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Distributed%20Monolith.png" alt="Distributed Monolith" loading="lazy" width="1063" height="421" style="width:100%"/>
+<img src="/diagrams/Variants/1/Distributed%20Monolith.png" alt="A distributed monolith as three layers of services." loading="lazy" width="1063" height="421" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -215,14 +195,14 @@ A [*Distributed Monolith*]({{< relref "../fragmented-metapatterns/service-orient
 <picture>
 <source srcset="/diagrams/Variants/1/Hexagonal%20Monolith.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Hexagonal%20Monolith.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Hexagonal%20Monolith.png" alt="Hexagonal Monolith" loading="lazy" width="903" height="364" style="width:91%"/>
+<img src="/diagrams/Variants/1/Hexagonal%20Monolith.png" alt="Hexagonal Architecture with adapters between its core and each component the core interacts with." loading="lazy" width="962" height="483" style="width:93%"/>
 </picture>
 </a>
 </figure>
 
-[*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] and [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) extend a \(sub\)system with external components\. These architectures can be applied to a *Monolith* without drastically changing its properties – it still remains relatively easy to write and debug but hard to support when outgrown\. Therefore, we will not currently discuss these modifications, mainly because each of them has a dedicated chapter\.
+[*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) and [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) extend a \(sub\)system with external components\. These architectures can be applied to a *Monolith* without drastically changing its properties – it still remains relatively easy to write and debug but hard to support when outgrown\. Therefore, we will not currently discuss these modifications, mainly because each of them has a dedicated chapter\.
 
-## Variants by the mode of action
+## Examples
 
 Let’s take a look inside a *Monolith*\.
 
@@ -233,10 +213,18 @@ Any software module reacts to incoming events or data and produces outgoing even
 <picture>
 <source srcset="/diagrams/Variants/1/Subtypes%20of%20Monolith.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Subtypes%20of%20Monolith.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Subtypes%20of%20Monolith.png" alt="Subtypes of Monolith" loading="lazy" width="848" height="366" style="width:100%"/>
+<img src="/diagrams/Variants/1/Subtypes%20of%20Monolith.png" alt="Control flow diagrams for Reactor, Proactor, and Half-Sync/Half-Async." loading="lazy" width="848" height="366" style="width:100%"/>
 </picture>
 </a>
 </figure>
+
+- *Reactor* runs each request in a separate thread:
+  - A [single\-threaded version]({{< relref "#single-threaded-reactor-one-thread-one-task" >}}) is used to serialize access to a hardware device\.
+  - A [multi\-threaded *Reactor*]({{< relref "#multi-threaded-reactor-a-thread-per-task" >}}) is the simplest backend implementation\.
+- [*Proactor*]({{< relref "#proactor-one-thread-many-tasks" >}}) relies on short event handlers to run multiple requests in a single thread\.
+- [*Half\-Sync/Half\-Async*]({{< relref "#inexact-half-synchalf-async-coroutines-or-fibers" >}}) implements coroutines by changing call stacks of a thread\.
+- [*\(Re\)Actor\-with\-Extractors*]({{< relref "#inexact-reactor-with-extractors-phased-processing" >}}) passes the whole system through alternating plan and execute phases to run lock\-free\.
+
 
 ### Single\-threaded Reactor \(one thread, one task\)
 
@@ -245,7 +233,7 @@ Any software module reacts to incoming events or data and produces outgoing even
 <picture>
 <source srcset="/diagrams/Variants/1/Reactor%20-%20Single%20Thread.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Reactor%20-%20Single%20Thread.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Reactor%20-%20Single%20Thread.png" alt="Reactor - Single Thread" loading="lazy" width="862" height="442" style="width:100%"/>
+<img src="/diagrams/Variants/1/Reactor%20-%20Single%20Thread.png" alt="A single thread that blocks on calls to an operating system executes a request and then another request which has to wait in a queue." loading="lazy" width="862" height="442" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -261,7 +249,7 @@ That makes sense when the module owns and provides access to a hardware componen
 <picture>
 <source srcset="/diagrams/Variants/1/Reactor%20-%20Multiple%20Threads.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Reactor%20-%20Multiple%20Threads.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Reactor%20-%20Multiple%20Threads.png" alt="Reactor - Multiple Threads" loading="lazy" width="781" height="382" style="width:100%"/>
+<img src="/diagrams/Variants/1/Reactor%20-%20Multiple%20Threads.png" alt="Two threads, each runs a single request and blocks on accessing an operating system." loading="lazy" width="781" height="382" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -277,7 +265,7 @@ This is the default simple & stupid implementation of backend services\. Its pit
 <picture>
 <source srcset="/diagrams/Variants/1/Proactor.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Proactor.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Proactor.png" alt="Proactor" loading="lazy" width="782" height="382" style="width:100%"/>
+<img src="/diagrams/Variants/1/Proactor.png" alt="A single thread handles messages that belong to several use cases in an interleaved manner." loading="lazy" width="782" height="382" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -293,7 +281,7 @@ This approach is good for real\-time systems where thread synchronization is lar
 <picture>
 <source srcset="/diagrams/Variants/1/Half-Sync%20Half-Async.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Half-Sync%20Half-Async.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Half-Sync%20Half-Async.png" alt="Half-Sync Half-Async" loading="lazy" width="785" height="423" style="width:100%"/>
+<img src="/diagrams/Variants/1/Half-Sync%20Half-Async.png" alt="A system subdivided into two layers: the upper one with a coroutine per request and the lower one with a generic event handling thread." loading="lazy" width="785" height="423" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -317,7 +305,7 @@ Moreover, people [often call]({{< relref "../analytics/ambiguous-patterns.md#rea
 <picture>
 <source srcset="/diagrams/Variants/1/Reactor%20with%20Extractors.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Reactor%20with%20Extractors.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Reactor%20with%20Extractors.png" alt="Reactor with Extractors" loading="lazy" width="783" height="583" style="width:100%"/>
+<img src="/diagrams/Variants/1/Reactor%20with%20Extractors.png" alt="In the extraction phase components call each other and add actions to their queues. In the reaction phase they execute the actions from their queues but don't interact. The phases alternate." loading="lazy" width="783" height="583" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -358,7 +346,7 @@ One of the main drawbacks of monolithic architecture is its lack of scalability 
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Mesh%20of%20Shards.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Mesh%20of%20Shards.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Mesh%20of%20Shards.png" alt="Monolith to Mesh of Shards" loading="lazy" width="1103" height="343" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Mesh%20of%20Shards.png" alt="Several instances of a monolith are run as intercommunicating shards, each of which holds a subset of the system's data." loading="lazy" width="1103" height="343" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -371,7 +359,7 @@ One of the main drawbacks of monolithic architecture is its lack of scalability 
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Isolated%20Shards%20with%20Load%20Balancer.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Isolated%20Shards%20with%20Load%20Balancer.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Isolated%20Shards%20with%20Load%20Balancer.png" alt="Monolith to Isolated Shards with Load Balancer" loading="lazy" width="1073" height="423" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Isolated%20Shards%20with%20Load%20Balancer.png" alt="Multiple instances of a monolith, each a subset of the system's data, are run behind a sharding proxy." loading="lazy" width="1073" height="423" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -384,7 +372,7 @@ One of the main drawbacks of monolithic architecture is its lack of scalability 
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Stateless%20Shards%20with%20Shared%20DB.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Stateless%20Shards%20with%20Shared%20DB.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Stateless%20Shards%20with%20Shared%20DB.png" alt="Monolith to Stateless Shards with Shared DB" loading="lazy" width="1083" height="423" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Stateless%20Shards%20with%20Shared%20DB.png" alt="A monolith is transformed into stateless instances which run behind a load balancer and access a shared database." loading="lazy" width="1083" height="423" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -397,7 +385,7 @@ One of the main drawbacks of monolithic architecture is its lack of scalability 
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Instance%20per%20Client.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Instance%20per%20Client.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Instance%20per%20Client.png" alt="Monolith to Instance per Client" loading="lazy" width="1103" height="343" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Instance%20per%20Client.png" alt="Each user is allocated a temporary instance of a subsystem which loads their data at the start of the session and persists any changes to the database." loading="lazy" width="1103" height="343" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -414,7 +402,7 @@ Another drawback of *Monolith* is its… er… monolithism\. The entire applicat
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers.png" alt="Monolith to Layers" loading="lazy" width="1087" height="285" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers.png" alt="A monolith is split into application, domain and database layers." loading="lazy" width="1087" height="285" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -427,7 +415,7 @@ Another drawback of *Monolith* is its… er… monolithism\. The entire applicat
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20add%20Database.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20add%20Database.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20add%20Database.png" alt="Monolith add Database" loading="lazy" width="1107" height="244" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20add%20Database.png" alt="The data of a monolithic system is moved to a database, leaving the business logic stateless." loading="lazy" width="1107" height="244" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -440,7 +428,7 @@ Another drawback of *Monolith* is its… er… monolithism\. The entire applicat
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20add%20Proxy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20add%20Proxy.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20add%20Proxy.png" alt="Monolith add Proxy" loading="lazy" width="1087" height="361" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20add%20Proxy.png" alt="A part of generic functionality of a monolith is moved to a proxy." loading="lazy" width="1087" height="361" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -453,7 +441,7 @@ Another drawback of *Monolith* is its… er… monolithism\. The entire applicat
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20add%20Orchestrator.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20add%20Orchestrator.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20add%20Orchestrator.png" alt="Monolith add Orchestrator" loading="lazy" width="1047" height="323" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20add%20Orchestrator.png" alt="An orchestrator is added to a monolithic system, allowing for higher-level client requests." loading="lazy" width="1047" height="323" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -470,7 +458,7 @@ The final major drawback of *Monolith* is the cohesiveness of its code\. The rap
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Services.png" alt="Monolith to Services" loading="lazy" width="1143" height="251" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Services.png" alt="A monolith is subdivided into services." loading="lazy" width="1143" height="251" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -483,7 +471,7 @@ The final major drawback of *Monolith* is the cohesiveness of its code\. The rap
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20Split%20Service.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20Split%20Service.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20Split%20Service.png" alt="Monolith Split Service" loading="lazy" width="1123" height="251" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20Split%20Service.png" alt="A service is split from a monolith." loading="lazy" width="1123" height="251" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -496,7 +484,7 @@ The final major drawback of *Monolith* is the cohesiveness of its code\. The rap
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Pipeline.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Pipeline.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Pipeline.png" alt="Monolith to Pipeline" loading="lazy" width="1147" height="247" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Pipeline.png" alt="A Monolith is transformed into a pipeline." loading="lazy" width="1147" height="247" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -513,7 +501,7 @@ The last group of evolutions does not really change the monolithic nature of the
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Plugins.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Plugins.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Plugins.png" alt="Monolith to Plugins" loading="lazy" width="1003" height="363" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Plugins.png" alt="Plugins customize the monolith's behavior." loading="lazy" width="1003" height="363" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -526,7 +514,7 @@ The last group of evolutions does not really change the monolithic nature of the
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Hexagonal.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Hexagonal.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Hexagonal.png" alt="Monolith to Hexagonal" loading="lazy" width="1007" height="323" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Hexagonal.png" alt="The database, external libraries, and a protocol support component are separated from the business logic and isolated with adapters." loading="lazy" width="1047" height="443" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -539,7 +527,7 @@ The last group of evolutions does not really change the monolithic nature of the
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Interpreter.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Interpreter.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Interpreter.png" alt="Monolith to Interpreter" loading="lazy" width="1087" height="323" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Interpreter.png" alt="The high-level logic is rewritten as scripts which are run by an interpreter." loading="lazy" width="1087" height="323" style="width:100%"/>
 </picture>
 </a>
 </figure>

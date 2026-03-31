@@ -1,7 +1,7 @@
 +++
 weight = 4
 title = "Indirection in commands and queries"
-description = "Indirection is implemented with Anticorruption Layer or Open Host Service in OLTP and with CQRS View or Reporting Database in OLAP systems."
+description = "This section discusses indirection as implemented with Anticorruption Layer or Open Host Service in OLTP and with CQRS View or Reporting Database in OLAP."
 images = ["/diagrams/Web/og/Indirection.png"]
 [sitemap]
   priority = 0.5
@@ -28,18 +28,18 @@ If we want for each module or service to continue with a model that fits its nee
 <picture>
 <source srcset="/diagrams/Conclusion/Indirection-Command.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Indirection-Command.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Indirection-Command.png" alt="Indirection-Command" loading="lazy" width="1052" height="424" style="width:100%"/>
+<img src="/diagrams/Conclusion/Indirection-Command.png" alt="Dependency diagrams for Anticorruption Layer, Open Host Service, and Orchestrated Services." loading="lazy" width="1052" height="424" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
 More often than not our system consists of services that command each other: via [RPC](https://en.wikipedia.org/wiki/Remote_procedure_call)s, requests or even notifications – no matter how, one component makes a call to action which other\(s\) should obey\.
 
-In such a case we employ an [*Adapter*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) between two services or an [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) when cooperation of several services is needed to execute our command:
+In such a case we employ an [*Adapter*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) between two services or an [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) when cooperation of several services is needed to execute our command:
 
-- An [*Anticorruption Layer*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \[[DDD]({{< relref "../../appendices/books-referenced.md#ddd" >}})\] is an *Adapter* on the dependent service’s side: as soon as we call another service, we start depending on its interface, while it is in our interest to isolate ourselves from its peculiarities and possible future changes\. Thus we should better write and maintain a component to translate the foreign interface, defined in terms of the foreign domain model, into terms convenient for use with our code\. Even if we subscribe to notifications, we may also want to have an *Adapter* to transform their payload\.
-- An [*Open Host Service*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \[[DDD]({{< relref "../../appendices/books-referenced.md#ddd" >}})\] resides on the other side of the connection – it is an *Adapter* that a service provider installs to hide the implementation details of its service from its users\. It will typically translate from the provider’s domain model into a more generic \(subdomain\-agnostic\) interface suitable for use by services that implement other subdomains\.
-- An [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) \(which can be an [*API Composer*]({{< relref "../../extension-metapatterns/orchestrator.md#api-composer-remote-facade-gateway-aggregation-composed-message-processor-scatter-gather-mapreduce" >}}) \[[MP]({{< relref "../../appendices/books-referenced.md#mp" >}})\], [*Process Manager*]({{< relref "../../extension-metapatterns/orchestrator.md#process-manager-orchestrator" >}}) \[[EIP]({{< relref "../../appendices/books-referenced.md#eip" >}}), [LDDD]({{< relref "../../appendices/books-referenced.md#lddd" >}})\], or [*Saga Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md#orchestrated-saga-saga-orchestrator-saga-execution-component-transaction-script-coordinator" >}}) \[[MP]({{< relref "../../appendices/books-referenced.md#mp" >}})\]\) spreads a command to multiple services, waits for each of them to execute their part, and cleans up after possible failures\. It tends to be more complex than other translators because of the coordination logic involved\.
+- An [*Anticorruption Layer*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) is an *Adapter* on the dependent service’s side: as soon as we call another service, we start depending on its interface, while it is in our interest to isolate ourselves from its peculiarities and possible future changes\. Thus we should better write and maintain a component to translate the foreign interface, defined in terms of the foreign domain model, into terms convenient for use with our code\. Even if we subscribe to notifications, we may also want to have an *Adapter* to transform their payload\.
+- An [*Open Host Service*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) resides on the other side of the connection – it is an *Adapter* that a service provider team installs to hide the implementation details of its service from its users\. It will typically translate from the provider’s domain model into a more generic \(subdomain\-agnostic\) interface suitable for use by services that implement other subdomains\.
+- An [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) \(which can be an [*API Composer*]({{< relref "../../extension-metapatterns/orchestrator.md#api-composer-remote-facade-gateway-aggregation-composed-message-processor-scatter-gather-mapreduce" >}}), [*Process Manager*]({{< relref "../../extension-metapatterns/orchestrator.md#process-manager-orchestrator" >}}), or [*Saga Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md#orchestrated-saga-saga-orchestrator-saga-execution-component-transaction-script-coordinator" >}})\) spreads a command to multiple services, waits for each of them to execute their part, and cleans up after possible failures\. It tends to be more complex than other translators because of the coordination logic involved\.
 
 
 ## Query \(OLAP\) systems
@@ -49,7 +49,7 @@ In such a case we employ an [*Adapter*]({{< relref "../../extension-metapatterns
 <picture>
 <source srcset="/diagrams/Conclusion/Indirection-Query.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Indirection-Query.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Indirection-Query.png" alt="Indirection-Query" loading="lazy" width="1043" height="426" style="width:100%"/>
+<img src="/diagrams/Conclusion/Indirection-Query.png" alt="Dependency diagrams for CQRS View, Reporting Database, and Query Service." loading="lazy" width="1043" height="426" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -60,17 +60,33 @@ Each service operates and stores data in its own format and schema which matches
 
 The solution employs an intermediate database as a translator from the provider’s to consumer’s preferred data access mode, format, and schema:
 
-- A [*CQRS View*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) \[[MP]({{< relref "../../appendices/books-referenced.md#mp" >}})\] resides in the data consumer and aggregates the stream of changes published by the data provider\. This way the consumer can know whatever it needs about the state of the provider without making an interservice call\.
-- [*Data Mesh*]({{< relref "../../basic-metapatterns/pipeline.md#data-mesh" >}}) \[[LDDD]({{< relref "../../appendices/books-referenced.md#lddd" >}})\] is about each service exposing a general\-use public interface for streaming and/or querying its data\. Maintaining one often requires the service to set up an internal [*Reporting Database*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}})\.
-- A [*Query Service*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#query-service-front-controller-data-warehouse-data-lake-aggregate-data-product-quantum-dpq-of-data-mesh" >}}) \[[MP]({{< relref "../../appendices/books-referenced.md#mp" >}})\] aggregates streams from multiple services to collect their data together, making it available for efficient queries \(joins\)\.
+- A [*CQRS View*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) resides in the data consumer and aggregates the stream of changes published by the data provider\. This way the consumer can know whatever it needs about the state of the provider without making an interservice call\.
+- [*Data Mesh*]({{< relref "../../basic-metapatterns/pipeline.md#data-mesh" >}}) is about each service exposing a general\-use public interface for streaming and/or querying its data\. Maintaining one often requires the service to set up an internal [*Reporting Database*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}})\.
+- A [*Query Service*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#query-service-front-controller-data-warehouse-data-lake-aggregate-data-product-quantum-dpq-of-data-mesh" >}}) aggregates streams from multiple services to collect their data together, making it available for efficient queries \(joins\)\.
 
+
+## A mixed case
+
+<figure>
+<a href="/diagrams/Conclusion/Indirection-Plugin.png">
+<picture>
+<source srcset="/diagrams/Conclusion/Indirection-Plugin.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Conclusion/Indirection-Plugin.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Conclusion/Indirection-Plugin.png" alt="A service which injects a plugin into another service and streams data for use by the plugin." loading="lazy" width="783" height="283" style="width:93%"/>
+</picture>
+</a>
+</figure>
+
+[*Ambassador Plugins*]({{< relref "../../implementation-metapatterns/plugins.md#ambassador-plugin-logic-extension" >}}) \([called *Extensions* by Uber](https://www.uber.com/en-UA/blog/microservice-architecture/)\) employ both logic and data indirection\. When a service needs to modify the behavior of another service, it both writes a *Plugin* for the target service and extends its domain events stream with opaque data fields which the newly created *Plugin* needs to operate without consulting its origin service\. The host \(*Plugin*’s target\) service passes the extra data fields to the *Plugin* which processes them and stores the data it needs in a dedicated table in its host’s database\.
+
+When the service with *Plugins* needs to make a decision, it calls every registered *Plugin* as a part of its workflow\. The *Plugin* reads the data it saved to the host’s database, processes it according to the business rules or its origin subdomain, and returns results – without any slow and failure\-prone interservice calls\!
 
 ## Summary
 
 We see that though command\-dominated \(*operational* or *transactional*\) and query\-dominated \(*analytical*\) systems differ in their problems, the architectural solutions which they employ to decouple their component services match perfectly:
 
-- [*Anticorruption Layer*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) or [*CQRS View*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) is used on the consumer’s side,
-- [*Open Host Service*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) or [*Data Mesh*]({{< relref "../../basic-metapatterns/pipeline.md#data-mesh" >}})’s [*Reporting Database*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) is on the provider’s side,
+- [*Anticorruption Layer*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) or [*CQRS View*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) is used on the consumer’s side,
+- [*Open Host Service*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) or [*Data Mesh*]({{< relref "../../basic-metapatterns/pipeline.md#data-mesh" >}})’s [*Reporting Database*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) is on the provider’s side,
 - [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) or [*Query Service*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#query-service-front-controller-data-warehouse-data-lake-aggregate-data-product-quantum-dpq-of-data-mesh" >}}) coordinates multiple providers\.
 
 

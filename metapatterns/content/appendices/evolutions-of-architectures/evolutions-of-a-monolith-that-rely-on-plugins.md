@@ -1,7 +1,7 @@
 +++
 weight = 4
 title = "Evolutions of a Monolith that rely on Plugins"
-description = "Plugins or Interpreter make a monolithic component customizable. Hexagonal Architecture protects its business logic from unstable external dependencies. "
+description = "Plugins or an Interpreter make a monolithic component customizable. Hexagonal Architecture protects its business logic from unstable external dependencies."
 images = ["/diagrams/Web/og/Favicon-plain.png"]
 [sitemap]
   priority = 0.3
@@ -23,7 +23,7 @@ The last group of evolutions which we review does not really change the monolith
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Plugins.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Plugins.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Plugins.png" alt="Monolith to Plugins" loading="lazy" width="1003" height="363" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Plugins.png" alt="Plugins customize the monolith's behavior." loading="lazy" width="1003" height="363" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -56,7 +56,7 @@ The last group of evolutions which we review does not really change the monolith
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Hexagonal.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Hexagonal.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Hexagonal.png" alt="Monolith to Hexagonal" loading="lazy" width="1007" height="323" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Hexagonal.png" alt="The database, external libraries, and a protocol support component are separated from the business logic and isolated with adapters." loading="lazy" width="1047" height="443" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -90,7 +90,7 @@ The main business logic will communicate with all the external components throug
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Interpreter.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Interpreter.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Interpreter.png" alt="Monolith to Interpreter" loading="lazy" width="1087" height="323" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Interpreter.png" alt="The high-level logic is rewritten as scripts which are run by an interpreter." loading="lazy" width="1087" height="323" style="width:100%"/>
 </picture>
 </a>
 </figure>
