@@ -23,7 +23,7 @@ The main drawback \(and benefit\) of [*Layers*]({{< relref "../../basic-metapatt
 <picture>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.png" alt="Layers Split Domain to Services" loading="lazy" width="1083" height="243" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.png" alt="The domain layer is split into subdomain components, making a Sandwich." loading="lazy" width="1083" height="243" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -65,7 +65,7 @@ It is very common for a system’s domain to consist of weakly interacting *boun
 <picture>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20Split%20to%20Event-Driven%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20Split%20to%20Event-Driven%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Layers/Layers%20Split%20to%20Event-Driven%20Architecture.png" alt="Layers Split to Event-Driven Architecture" loading="lazy" width="1166" height="264" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20Split%20to%20Event-Driven%20Architecture.png" alt="A backend is subdivided into a pipeline." loading="lazy" width="1166" height="264" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -76,7 +76,7 @@ It is very common for a system’s domain to consist of weakly interacting *boun
 
 <ins>Prerequisite</ins>: use cases are sequences of loosely coupled coarse\-grained steps\.
 
-If your system has a well\-defined workflow for processing every kind of input request, it can be divided into several [*subdomain services*]({{< relref "../../basic-metapatterns/services.md#whole-subdomain-sub-domain-services" >}}), each hosting a few related steps of multiple use cases\. Each service subscribes to inputs from other services and/or system’s clients and publishes output events\.
+If your system has a well\-defined workflow for processing every kind of input request, it can be divided into several [*subdomain services*]({{< relref "../../basic-metapatterns/services.md#whole-subdomain-sub-domain-services-macroservices" >}}), each hosting a few related steps of multiple use cases\. Each service subscribes to inputs from other services and/or system’s clients and publishes output events\.
 
 <ins>Pros</ins>: 
 
@@ -110,7 +110,7 @@ If your system has a well\-defined workflow for processing every kind of input r
 <picture>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Hierarchy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Hierarchy.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Layers/Layers%20to%20Hierarchy.png" alt="Layers to Hierarchy" loading="lazy" width="1103" height="249" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20to%20Hierarchy.png" alt="The lower layers of a system are subdivided, resulting in a hierarchy." loading="lazy" width="1103" height="249" style="width:100%"/>
 </picture>
 </a>
 </figure>

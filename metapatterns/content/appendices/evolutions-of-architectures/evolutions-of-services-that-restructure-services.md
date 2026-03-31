@@ -15,7 +15,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 - A service may grow too large to be developed by a single team, calling for division\.
 - Two services may become so strongly coupled that they fare better when merged together\.
 - The entire system may need to be glued back into a [*Monolith*]({{< relref "../../basic-metapatterns/monolith.md" >}}) if domain knowledge changes or interservice communication strongly degrades performance\.
-- Alternatively, coupled services may be clustered into co\-deployed [*Cells*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md#examples--cell" >}}) to reduce operational complexity\.
+- Alternatively, coupled services may be clustered into co\-deployed [*Cells*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}}) to reduce operational complexity\.
 
 
 ## Add or split a service
@@ -25,7 +25,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 <picture>
 <source srcset="/diagrams/Evolutions/Services/Services_%20Split.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Services/Services_%20Split.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Services/Services_%20Split.png" alt="Services: Split" loading="lazy" width="1303" height="251" style="width:100%"/>
+<img src="/diagrams/Evolutions/Services/Services_%20Split.png" alt="A service is split in half." loading="lazy" width="1303" height="251" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -62,7 +62,7 @@ If one of your services has grown too large, you should look for a way to subdiv
 <picture>
 <source srcset="/diagrams/Evolutions/Services/Services_%20Merge.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Services/Services_%20Merge.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Services/Services_%20Merge.png" alt="Services: Merge" loading="lazy" width="1083" height="245" style="width:100%"/>
+<img src="/diagrams/Evolutions/Services/Services_%20Merge.png" alt="Two services are merged." loading="lazy" width="1083" height="245" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -102,12 +102,12 @@ Alternatively, as domain knowledge changes \[[DDD]({{< relref "../../appendices/
 <picture>
 <source srcset="/diagrams/Evolutions/Services/Services_%20Cluster.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Services/Services_%20Cluster.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Services/Services_%20Cluster.png" alt="Services: Cluster" loading="lazy" width="1567" height="387" style="width:100%"/>
+<img src="/diagrams/Evolutions/Services/Services_%20Cluster.png" alt="Services are grouped into Cells, reducing their interdependencies." loading="lazy" width="1567" height="387" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
-<ins>Patterns</ins>: [Cell]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md#examples--cell" >}}) \([Hexagonal Architecture]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md" >}}), [Services]({{< relref "../../basic-metapatterns/services.md" >}})\)\.
+<ins>Patterns</ins>: [Cell]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}}) \([Hexagonal Architecture]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md" >}}), [Services]({{< relref "../../basic-metapatterns/services.md" >}})\)\.
 
 <ins>Goal</ins>: reduce operational complexity, decouple subdomains, and improve performance\.
 
@@ -134,5 +134,5 @@ Therefore cluster services that share a subdomain into a co\-deployed cohesive *
 
 <ins>Further steps</ins>:
 
-- [Complete *Cell* encapsulation]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md#full-featured-cell-domain" >}}) through the use of [*Adapters*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) and [*Ambassador Plugins*]({{< relref "../../implementation-metapatterns/plugins.md#ambassador-plugin-logic-extension" >}})\.
+- Complete *Cell* encapsulation through the use of [*Adapters*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) and [*Ambassador Plugins*]({{< relref "../../implementation-metapatterns/plugins.md#ambassador-plugin-logic-extension" >}})\.
 - Transform any strongly coupled *Cells* into [*Sandwiches*]({{< relref "../../extension-metapatterns/sandwich.md" >}})\.

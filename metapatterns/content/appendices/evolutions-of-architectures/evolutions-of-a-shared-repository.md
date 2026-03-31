@@ -24,7 +24,7 @@ Once a database appears, it is unlikely to go away\. I see the following evoluti
 <picture>
 <source srcset="/diagrams/Evolutions/2/Shared%20Database_%20Shard.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Shared%20Database_%20Shard.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/2/Shared%20Database_%20Shard.png" alt="Shared Database: Shard" loading="lazy" width="1303" height="324" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Shared%20Database_%20Shard.png" alt="The shared database is sharded so that each database instance holds a subset of data," loading="lazy" width="1303" height="324" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -55,6 +55,7 @@ Modern distributed databases support sharding out of the box, but an overgrown t
 
 <ins>Further steps</ins>:
 
+- [*Replicate*]({{< relref "../../basic-metapatterns/shards.md#persistent-copy-replica" >}}) each shard to improve fault tolerance and possibly read throughput\.
 - [*Polyglot Persistence*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md" >}}) or [*CQRS*]({{< relref "../../fragmented-metapatterns/layered-services.md#command-query-responsibility-segregation-cqrs" >}}) describe pre\-calculating aggregates into another analytical database \([*Reporting Database*](https://martinfowler.com/bliki/ReportingDatabase.html)\)\.
 - [*Space\-Based Architecture*]({{< relref "../../implementation-metapatterns/mesh.md#space-based-architecture" >}}) may be cheaper as it scales dynamically\. However, in its default and highly performant configuration it is prone to write collisions\.
 
@@ -66,7 +67,7 @@ Modern distributed databases support sharding out of the box, but an overgrown t
 <picture>
 <source srcset="/diagrams/Evolutions/2/Shared%20Database%20to%20Space-Based%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Shared%20Database%20to%20Space-Based%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/2/Shared%20Database%20to%20Space-Based%20Architecture.png" alt="Shared Database to Space-Based Architecture" loading="lazy" width="1323" height="385" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Shared%20Database%20to%20Space-Based%20Architecture.png" alt="The shared database is migrated to a Data Grid, resulting in Space-Based Architecture" loading="lazy" width="1323" height="385" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -101,7 +102,7 @@ Modern distributed databases support sharding out of the box, but an overgrown t
 <picture>
 <source srcset="/diagrams/Evolutions/2/Shared%20Database%20to%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Shared%20Database%20to%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/2/Shared%20Database%20to%20Services.png" alt="Shared Database to Services" loading="lazy" width="1323" height="289" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Shared%20Database%20to%20Services.png" alt="The shared database is split into databases dedicated to subdomains, resulting in Layered Services." loading="lazy" width="1323" height="289" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -130,7 +131,7 @@ If the data clearly follows subdomains, it may be possible to subdivide it accor
 
 <ins>Further steps</ins>:
 
-- [*CQRS Views*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) \[[MP]({{< relref "../../appendices/books-referenced.md#mp" >}})\] or a [*Query Service*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#query-service-front-controller-data-warehouse-data-lake-aggregate-data-product-quantum-dpq-of-data-mesh" >}}) \[[MP]({{< relref "../../appendices/books-referenced.md#mp" >}})\] help a service access and join data that belongs to other services\.
+- [*CQRS Views*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) or a [*Query Service*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#query-service-front-controller-data-warehouse-data-lake-aggregate-data-product-quantum-dpq-of-data-mesh" >}}) help a service access and join data that belongs to other services\.
 
 
 ## Deploy specialized databases
@@ -140,7 +141,7 @@ If the data clearly follows subdomains, it may be possible to subdivide it accor
 <picture>
 <source srcset="/diagrams/Evolutions/2/Shared%20Database%20to%20Polyglot%20Persistence.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Shared%20Database%20to%20Polyglot%20Persistence.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/2/Shared%20Database%20to%20Polyglot%20Persistence.png" alt="Shared Database to Polyglot Persistence" loading="lazy" width="1343" height="289" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Shared%20Database%20to%20Polyglot%20Persistence.png" alt="The shared database is migrated to specialized databases." loading="lazy" width="1343" height="289" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -151,7 +152,7 @@ If the data clearly follows subdomains, it may be possible to subdivide it accor
 
 <ins>Prerequisite</ins>: there are diverse data types or patterns of data access\.
 
-It is very likely that you can either use [*specialized databases*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#specialized-databases" >}}) for various data types or deploy [*read\-only replicas*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#read-only-replicas" >}}) of your data for analytics\.
+It is very likely that you can either use [*specialized databases*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#specialized-databases" >}}) for various data types or deploy [*read\-only replicas*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#read-only-replicas" >}}) of your data for queries\.
 
 <ins>Pros</ins>:
 

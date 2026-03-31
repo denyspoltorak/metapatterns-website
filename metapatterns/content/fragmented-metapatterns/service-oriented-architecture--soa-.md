@@ -1,7 +1,7 @@
 +++
 weight = 9
 title = "Service-Oriented Architecture (SOA)"
-description = "Service-Oriented Architecture builds a system from layers of services."
+description = "This chapter explores Service-Oriented Architecture (SOA) and its variants: Distributed Monolith, Domain-Oriented Microservice Architecture, and Nanoservices."
 images = ["/diagrams/Web/og/Service-Oriented%20Architecture.png"]
 [sitemap]
   priority = 0.8
@@ -14,7 +14,7 @@ images = ["/diagrams/Web/og/Service-Oriented%20Architecture.png"]
 <picture>
 <source srcset="/diagrams/Main/Service-Oriented%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Service-Oriented%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" loading="lazy" width="924" height="722" style="width:100%"/>
+<img src="/diagrams/Main/Service-Oriented%20Architecture.png" alt="A diagram for Service-Oriented Architecture, in abstractness-subdomain-sharding coordinates." loading="lazy" width="924" height="722" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -23,18 +23,9 @@ images = ["/diagrams/Web/og/Service-Oriented%20Architecture.png"]
 
 <ins>Known as:</ins> Service\-Oriented Architecture \(SOA\), [Segmented Architecture](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-layered-segmented.md)\.
 
-<ins>Examples:</ins>
-
-- Distributed Monolith,
-- Enterprise SOA,
-- [Domain\-Oriented Microservice Architecture](https://www.uber.com/blog/microservice-architecture/) \(DOMA\),
-- \(misapplied\) Automotive SOA,
-- [Nanoservices](https://medium.com/@ido.vapner/unlocking-the-power-of-nano-services-a-new-era-in-microservices-architecture-22647ea36f22)\.
-
-
 <ins>Structure:</ins> Usually three layers of services where each service can access any other service in its own or lower layers\.
 
-<ins>Type:</ins> Main, derived from [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}})\.
+<ins>Type:</ins> System topology, derived from [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}})\.
 
 | *Benefits* | *Drawbacks* |
 | --- | --- |
@@ -65,7 +56,7 @@ Each service of each layer depends on everything it uses\. As a result, developm
 <picture>
 <source srcset="/diagrams/Dependencies/Service-Oriented%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Dependencies/Service-Oriented%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Dependencies/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" loading="lazy" width="983" height="403" style="width:88%"/>
+<img src="/diagrams/Dependencies/Service-Oriented%20Architecture.png" alt="Tasks depend on entities. Entities depend on utilities and libraries. The many dependencies make it hard to change almost any component." loading="lazy" width="983" height="403" style="width:88%"/>
 </picture>
 </a>
 </figure>
@@ -96,7 +87,14 @@ Each service of each layer depends on everything it uses\. As a result, developm
 
 ## Examples
 
-This architecture was hyped at the time when enterprises were expanding by acquiring smaller companies and conjoining their IT systems\. The resulting merged systems were still heterogeneous and the development experience unpleasant, which inclined popular opinion towards the then novel notion of [*Microservices*]({{< relref "../basic-metapatterns/services.md#microservices" >}})\. As nearly everybody has turned from merging existing systems to failing to apply *Microservices* in practice, the chance to find a pure greenfield *SOA* project in the wild is quite low\. Many systems which are marketed as *SOA* are strongly modified:
+This architecture was hyped at the time when enterprises were expanding by acquiring smaller companies and conjoining their IT systems\. The resulting merged systems were still heterogeneous and the development experience unpleasant, which inclined popular opinion towards the then novel notion of [*Microservices*]({{< relref "../basic-metapatterns/services.md#microservices" >}})\. As nearly everybody has turned from merging existing systems to failing to apply *Microservices* in practice, the chance to find a pure greenfield *SOA* project in the wild is quite low\. Known examples of this topology include:
+
+- [*Distributed Monolith*]({{< relref "#distributed-monolith" >}}) with synchronous interactions\.
+- [*Enterprise SOA*]({{< relref "#enterprise-soa" >}}) that features a notorious *Enterprise Service Bus*\.
+- [*Domain\-Oriented Microservice Architecture*]({{< relref "#domain-oriented-microservice-architecture-doma" >}}) built of *Cells*\.
+- [*Automotive SOA*]({{< relref "#misapplied-automotive-soa" >}}) which may actually be a *Microkernel*\.
+- *SOA*\-topology [*Nanoservices*]({{< relref "#nanoservices" >}})\.
+
 
 ### Distributed Monolith
 
@@ -105,12 +103,12 @@ This architecture was hyped at the time when enterprises were expanding by acqui
 <picture>
 <source srcset="/diagrams/Variants/3/Distributed%20Monolith.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/Distributed%20Monolith.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/Distributed%20Monolith.png" alt="Distributed Monolith" loading="lazy" width="963" height="442" style="width:100%"/>
+<img src="/diagrams/Variants/3/Distributed%20Monolith.png" alt="There are three segmented layers: tasks, services and infrastructure. Each component of a layer accesses multiple components in layers below it." loading="lazy" width="963" height="442" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
-If a [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) gets too complex and resource\-hungry, the most simple & stupid way out of the trouble is to deploy each of its component modules to separate, dedicated hardware\. The resulting services still communicate synchronously and are subject to domino effect on failure\. Such an architecture may be seen as a \(hopefully\) intermediate structure in transition to more independent and stable event\-driven [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) \(or [*Cells*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#examples--cell" >}})\)\.
+If a [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) gets too complex and resource\-hungry, the most simple & stupid way out of the trouble is to deploy each of its component modules to separate, dedicated hardware\. The resulting services still communicate synchronously and are subject to domino effect on failure\. Such an architecture may be seen as a \(hopefully\) intermediate structure in transition to more independent and stable event\-driven [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) \(or [*Cells*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}})\)\.
 
 ### Enterprise SOA
 
@@ -119,7 +117,7 @@ If a [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) gets too c
 <picture>
 <source srcset="/diagrams/Variants/3/Enterprise%20SOA.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/Enterprise%20SOA.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/Enterprise%20SOA.png" alt="Enterprise SOA" loading="lazy" width="1403" height="541" style="width:100%"/>
+<img src="/diagrams/Variants/3/Enterprise%20SOA.png" alt="An Enterprise Service Bus interconnects multilayered segmented subsystems each using its own protocol." loading="lazy" width="1403" height="541" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -140,19 +138,19 @@ The layers of *SOA* are:
 <picture>
 <source srcset="/diagrams/Variants/3/DOMA.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/DOMA.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/DOMA.png" alt="DOMA" loading="lazy" width="994" height="809" style="width:100%"/>
+<img src="/diagrams/Variants/3/DOMA.png" alt="There are five layers: segmented gateways, segmented presentation, segmented product made of cells, segmented business made of cells, and monolithic infrastructure." loading="lazy" width="994" height="809" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
-A huge business may build *SOA* of [*Cells*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#full-featured-cell-domain" >}}) \(called *Domains*\) instead of plain [*Services*]({{< relref "../basic-metapatterns/services.md" >}})\. That greatly simplifies:
+A huge business may build *SOA* of [*Cells*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}}) \(called *Domains*\) instead of plain [*Services*]({{< relref "../basic-metapatterns/services.md" >}})\. That greatly simplifies:
 
 - administration \(by reducing the number of components at the system level – Uber [packed](https://www.uber.com/blog/microservice-architecture/) 2200 [*Microservices*]({{< relref "../basic-metapatterns/services.md#microservices" >}}) into 70 *Domains*\),
-- refactoring of individual subsystems \(which are isolated behind [*Cell Gateways*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}})\),
+- refactoring of individual subsystems \(which are isolated behind [*Cell Gateways*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}})\),
 - development of business logic \(as programmers need to learn much fewer interfaces of components they rely on\)\.
 
 
-Uber’s *DOMA* also [makes heavy use](https://www.uber.com/blog/microservice-architecture/) of [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) which programmers from a client service team develop for the services they rely on\. That allows for cross\-*Domain* customization \(injection of business logic from another *Cell*\) of a service’s behavior without making \(slow\) interservice calls\.
+Uber’s *DOMA* also [makes heavy use](https://www.uber.com/blog/microservice-architecture/) of [*Ambassador Plugins*]({{< relref "../implementation-metapatterns/plugins.md#ambassador-plugin-logic-extension" >}}) which programmers from a client service team develop for the services they rely on\. That allows for cross\-*Domain* customization \(injection of business logic from another *Cell*\) of a service’s behavior without making \(slow\) interservice calls\.
 
 ### \(misapplied\) [Automotive SOA]({{< relref "../implementation-metapatterns/microkernel.md#autosar-classic-platform" >}})
 
@@ -161,7 +159,7 @@ Uber’s *DOMA* also [makes heavy use](https://www.uber.com/blog/microservice-ar
 <picture>
 <source srcset="/diagrams/Variants/3/SOA%20-%20AUTOSAR.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/SOA%20-%20AUTOSAR.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/SOA%20-%20AUTOSAR.png" alt="SOA - AUTOSAR" loading="lazy" width="1213" height="483" style="width:100%"/>
+<img src="/diagrams/Variants/3/SOA%20-%20AUTOSAR.png" alt="User applications run on top of a system-wide Virtual Functional Bus which communicates to various services that run on different chips in the system." loading="lazy" width="1213" height="483" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -184,12 +182,12 @@ It seems that some proponents of [*Nanoservices*]({{< relref "../basic-metapatte
 <picture>
 <source srcset="/diagrams/Evolutions/3/SOA%20-%201.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/3/SOA%20-%201.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/3/SOA%20-%201.png" alt="SOA - 1" loading="lazy" width="1323" height="383" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/SOA%20-%201.png" alt="The shared components are replicated into services which use them." loading="lazy" width="1323" height="383" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
-- Or into [*Sidecars*]({{< relref "../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] if you employ a [*Service Mesh*]({{< relref "../implementation-metapatterns/mesh.md#service-mesh" >}}), resulting in much fewer network hops \(thus lower latency\) in request processing, but retaining the inter\-team dependencies\.
+- Or into [*Sidecars*]({{< relref "../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) if you employ a [*Service Mesh*]({{< relref "../implementation-metapatterns/mesh.md#service-mesh" >}}), resulting in much fewer network hops \(thus lower latency\) in request processing, but retaining the inter\-team dependencies\.
 
 
 <figure>
@@ -197,7 +195,7 @@ It seems that some proponents of [*Nanoservices*]({{< relref "../basic-metapatte
 <picture>
 <source srcset="/diagrams/Evolutions/3/SOA%20-%202.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/3/SOA%20-%202.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/3/SOA%20-%202.png" alt="SOA - 2" loading="lazy" width="1383" height="384" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/SOA%20-%202.png" alt="The shared components are replicated into sidecars." loading="lazy" width="1383" height="384" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -208,7 +206,7 @@ Afterwards you may deal with the remaining orchestration\. The idea is to move t
 
 - Either a monolithic *Orchestrator* over all the services\.
 - Or [*Backends for Frontends*]({{< relref "../fragmented-metapatterns/backends-for-frontends--bff-.md" >}}) with an *Orchestrator* per client type \(department of an enterprise\) if each client uses most of the services\.
-- Or go for [*Cells*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#examples--cell" >}}) with an *Orchestrator* per subdomain if your clients are subdomain\-bound\.
+- Or go for [*Cells*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}}) with an *Orchestrator* per subdomain if your clients are subdomain\-bound\.
 - Or a combination of the above\.
 
 
@@ -217,14 +215,14 @@ Afterwards you may deal with the remaining orchestration\. The idea is to move t
 <picture>
 <source srcset="/diagrams/Evolutions/3/SOA%20-%203.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/3/SOA%20-%203.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/3/SOA%20-%203.png" alt="SOA - 3" loading="lazy" width="1363" height="446" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/SOA%20-%203.png" alt="Diagrams for Services with an orchestrator, Backends for Frontends, and Cell-Based Architecture." loading="lazy" width="1363" height="446" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
-Still another step is unbundling the [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}), which supports multiple protocols via [*Adapters*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}):
+Still another step is unbundling the [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}), which supports multiple protocols via [*Adapters*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}):
 
-- If you have a [*Service Mesh*]({{< relref "../implementation-metapatterns/mesh.md#service-mesh" >}}), an *Adapter* may be put to a [*Sidecar*]({{< relref "../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\]\.
+- If you have a [*Service Mesh*]({{< relref "../implementation-metapatterns/mesh.md#service-mesh" >}}), an *Adapter* may be put to a [*Sidecar*]({{< relref "../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}})\.
 - Otherwise there is an option of a [*hierarchical Middleware*]({{< relref "../fragmented-metapatterns/hierarchy.md#bottom-up-hierarchy-bus-of-buses-network-of-networks" >}}) \(*Bus of Buses*\) if closely related components share protocols\.
 
 

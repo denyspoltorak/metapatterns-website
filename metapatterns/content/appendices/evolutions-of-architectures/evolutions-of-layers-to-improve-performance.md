@@ -19,7 +19,7 @@ There are several ways to improve the performance of a [*layered system*]({{< re
 <picture>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.png" alt="Layers to Space-Based Architecture" loading="lazy" width="1051" height="264" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.png" alt="The database is migrated to a Data Grid, resulting in a scalable Space-Based Architecture." loading="lazy" width="1051" height="264" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -38,7 +38,7 @@ Others are new here and thus deserve more attention:
 <picture>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20Merge.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20Merge.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Layers/Layers%20Merge.png" alt="Layers Merge" loading="lazy" width="1023" height="243" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20Merge.png" alt="The application and domain layers are merged." loading="lazy" width="1023" height="243" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -75,7 +75,7 @@ If your system’s development [is finished]({{< relref "../../analytics/archite
 <picture>
 <source srcset="/diagrams/Evolutions/Layers/Layers_%20Shard.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Layers/Layers_%20Shard.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Layers/Layers_%20Shard.png" alt="Layers: Shard" loading="lazy" width="983" height="305" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers_%20Shard.png" alt="The application and domain layers are independently sharded." loading="lazy" width="983" height="305" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -113,7 +113,7 @@ Multiple instances or layers can be created, with their number and deployment [v
 <picture>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.png" alt="Layers to Polyglot Persistence" loading="lazy" width="1023" height="248" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.png" alt="The database layer is subdivided into specialized databases, resulting in Polyglot Persistence." loading="lazy" width="1023" height="248" style="width:100%"/>
 </picture>
 </a>
 </figure>

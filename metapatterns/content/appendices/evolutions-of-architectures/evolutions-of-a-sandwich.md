@@ -24,7 +24,7 @@ Unique evolutions of a [*Sandwich*]({{< relref "../../extension-metapatterns/san
 <picture>
 <source srcset="/diagrams/Evolutions/2/Sandwich%20add%20remove%20Service.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Sandwich%20add%20remove%20Service.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/2/Sandwich%20add%20remove%20Service.png" alt="Sandwich add remove Service" loading="lazy" width="1183" height="243" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Sandwich%20add%20remove%20Service.png" alt="One of the domain-level services is removed and another one is added." loading="lazy" width="1183" height="243" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -57,7 +57,7 @@ Though the *Sandwich* architecture allows for subdomains to be pretty independen
 <picture>
 <source srcset="/diagrams/Evolutions/2/Sandwich%20split%20merge%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Sandwich%20split%20merge%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/2/Sandwich%20split%20merge%20Services.png" alt="Sandwich split merge Services" loading="lazy" width="1240" height="243" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Sandwich%20split%20merge%20Services.png" alt="One domain-level service is split in half while two other services are merged together." loading="lazy" width="1240" height="243" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -70,9 +70,15 @@ Though the *Sandwich* architecture allows for subdomains to be pretty independen
 
 [Ideally]({{< relref "../../foundations-of-software-architecture/modules-and-complexity.md#coupling-and-cohesion" >}}), each service should be kept cohesive, while the services should be decoupled from each other\. However, business likes to mess up your plans\. If you ignore the results, your teams will be slowed down by mutual dependencies or become overburdened by the size of the components which they maintain\. Therefore restructure both the system and teams once the divergence between the domain knowledge and system architecture starts to negatively impact development\.
 
+<aside>
+
+> If an architecture is misaligned with the domain which it models, some components implement functions which don’t properly belong to them while others need a lot of help from their neighbors\. There are many dependencies between components which both increase complexity \(you cannot develop a component without knowing other components\) and slow down the system \(calls between components tend to be inefficient\)\.
+
+</aside>
+
 <ins>Pros</ins>: 
 
-- The system architecture is kept clear as it follows the domain knowledge\.
+- The system architecture is realigned with the domain knowledge\.
 - System components remain cohesive inside and decoupled from each other\.
 - The development teams are narrowly specialized, thus effective\.
 
@@ -90,7 +96,7 @@ Though the *Sandwich* architecture allows for subdomains to be pretty independen
 <picture>
 <source srcset="/diagrams/Evolutions/2/Sandwich%20to%20Layers.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Sandwich%20to%20Layers.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/2/Sandwich%20to%20Layers.png" alt="Sandwich to Layers" loading="lazy" width="1104" height="243" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Sandwich%20to%20Layers.png" alt="The entire domain layer is merged, resulting in Layers." loading="lazy" width="1104" height="243" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -122,7 +128,7 @@ Often the project grows in an unexpected manner\. If you see that the domain\-le
 <picture>
 <source srcset="/diagrams/Evolutions/2/Sandwich%20to%20Layered%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Sandwich%20to%20Layered%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/2/Sandwich%20to%20Layered%20Services.png" alt="Sandwich to Layered Services" loading="lazy" width="1343" height="263" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Sandwich%20to%20Layered%20Services.png" alt="The integration and data layers are divided into subdomains, producing Three-Layered Services." loading="lazy" width="1343" height="263" style="width:100%"/>
 </picture>
 </a>
 </figure>

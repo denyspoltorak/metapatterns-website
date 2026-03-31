@@ -1,7 +1,7 @@
 +++
 weight = 2
 title = "Evolutions of a Monolith that result in Layers"
-description = "A Monolith can be split into Layers, or a specialized layer, such as a Proxy or an Orchestrator, may be added between an existing Monolith and its clients."
+description = "A Monolith can be split into Layers. Or, a specialized layer, such as a Proxy or an Orchestrator, may be added between an existing Monolith and its clients."
 images = ["/diagrams/Web/og/Favicon-plain.png"]
 [sitemap]
   priority = 0.3
@@ -24,7 +24,7 @@ Another drawback of [*Monolith*]({{< relref "../../basic-metapatterns/monolith.m
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers.png" alt="Monolith to Layers" loading="lazy" width="1087" height="285" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers.png" alt="A monolith is split into application, domain and database layers." loading="lazy" width="1087" height="285" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -62,7 +62,7 @@ Most systems apply *layering* by default as it grants a lot of flexibility at ve
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20add%20Database.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20add%20Database.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20add%20Database.png" alt="Monolith add Database" loading="lazy" width="1107" height="244" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20add%20Database.png" alt="The data of a monolithic system is moved to a database, leaving the business logic stateless." loading="lazy" width="1107" height="244" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -108,7 +108,7 @@ A datastore is non\-trivial to implement\. While ordinary files are good for sma
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20add%20Proxy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20add%20Proxy.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20add%20Proxy.png" alt="Monolith add Proxy" loading="lazy" width="1087" height="361" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20add%20Proxy.png" alt="A part of generic functionality of a monolith is moved to a proxy." loading="lazy" width="1087" height="361" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -119,7 +119,7 @@ A datastore is non\-trivial to implement\. While ordinary files are good for sma
 
 <ins>Prerequisite</ins>: Your system serves clients \(as opposed to [controlling hardware]({{< relref "../../foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}})\)\.
 
-A *Proxy* is placed between your system and its clients to provide generic functionality that otherwise would have to be implemented by the system\. The kinds of *Proxy* to use with [*Monolith*]({{< relref "../../basic-metapatterns/monolith.md" >}}) are: [*Firewall*]({{< relref "../../extension-metapatterns/proxy.md#firewall-api-rate-limiter-api-throttling" >}}), [*Cache*]({{< relref "../../extension-metapatterns/proxy.md#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}}), [*Reverse Proxy*]({{< relref "../../extension-metapatterns/proxy.md#dispatcher-reverse-proxy-ingress-controller-edge-service-microgateway" >}}), and [*Adapter*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}})\. Multiple *Proxies* can be deployed\.
+A *Proxy* is placed between your system and its clients to provide generic functionality that otherwise would have to be implemented by the system\. The kinds of *Proxy* to use with [*Monolith*]({{< relref "../../basic-metapatterns/monolith.md" >}}) are: [*Firewall*]({{< relref "../../extension-metapatterns/proxy.md#firewall-api-rate-limiter-api-throttling" >}}), [*Cache*]({{< relref "../../extension-metapatterns/proxy.md#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}}), [*Reverse Proxy*]({{< relref "../../extension-metapatterns/proxy.md#dispatcher-reverse-proxy-ingress-controller-edge-service-microgateway" >}}), and [*Adapter*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}})\. Multiple *Proxies* can be deployed\.
 
 <ins>Pros</ins>: 
 
@@ -148,7 +148,7 @@ A *Proxy* is placed between your system and its clients to provide generic funct
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20add%20Orchestrator.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20add%20Orchestrator.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20add%20Orchestrator.png" alt="Monolith add Orchestrator" loading="lazy" width="1047" height="323" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20add%20Orchestrator.png" alt="An orchestrator is added to a monolithic system, allowing for higher-level client requests." loading="lazy" width="1047" height="323" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -205,7 +205,7 @@ Another set of evolutions stems from splitting one or more *layers* into [*Servi
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%201.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%201.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%201.png" alt="Monolith to Layers - Further 1" loading="lazy" width="1126" height="826" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%201.png" alt="Diagrams of Backends for Frontends over Layers, Service-Oriented Architecture, Sandwich, Layered Services, Hierarchy, and Layers with Polyglot Persistence." loading="lazy" width="1126" height="826" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -214,7 +214,7 @@ In addition,
 
 - Distributed systems usually allow for the [scaling]({{< relref "../../basic-metapatterns/shards.md" >}}) of one or more layers\.
 - A layer may employ [*Plugins*]({{< relref "../../implementation-metapatterns/plugins.md" >}}) for better customizability\.
-- The UI and infrastructure layers may be split and abstracted according to the rules of [*Hexagonal Architecture*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md" >}}) \(or its subtype [*Separated Presentation*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md#examples--separated-presentation" >}})\)\.
+- The UI and infrastructure layers may be split and abstracted according to the rules of [*Hexagonal Architecture*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md" >}}) \(or its subtype [*Separated Presentation*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md#upper-half-separated-presentation-open-host-service" >}})\)\.
 - The system can often be extended with [*Scripts*]({{< relref "../../implementation-metapatterns/microkernel.md#interpreter-script-domain-specific-language-dsl" >}}), resulting in a kind of [*Microkernel*]({{< relref "../../implementation-metapatterns/microkernel.md" >}})\.
 
 
@@ -223,7 +223,7 @@ In addition,
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png" alt="Monolith to Layers - Further 2" loading="lazy" width="983" height="461" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png" alt="Diagrams of Layers with plugins, Layers with scripts, and Hexagonal Architecture with a layered core." loading="lazy" width="983" height="503" style="width:100%"/>
 </picture>
 </a>
 </figure>

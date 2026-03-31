@@ -1,7 +1,7 @@
 +++
 weight = 1
 title = "Programming and architectural paradigms"
-description = "The object-oriented, functional, and procedural paradigms also emerge in system design."
+description = "This section discusses the object-oriented, functional, and procedural programming paradigms and their relation to common architectural styles."
 images = ["/diagrams/Web/og/Paradigms.png"]
 [sitemap]
   priority = 0.5
@@ -43,7 +43,7 @@ Adding *control* to the blend is more subtle, but no less crucial than the encap
 <picture>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Object-oriented.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Object-oriented.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Paradigms%20-%20Object-oriented.png" alt="Paradigms - Object-oriented" loading="lazy" width="1084" height="543" style="width:100%"/>
+<img src="/diagrams/Communication/Paradigms%20-%20Object-oriented.png" alt="A diagram of an object-oriented system built through composition." loading="lazy" width="1084" height="543" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -55,7 +55,7 @@ The ability to address complex domains by reducing the whole to self\-contained 
 <picture>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Object-oriented%20-%20Variants.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Object-oriented%20-%20Variants.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Paradigms%20-%20Object-oriented%20-%20Variants.png" alt="Paradigms - Object-oriented - Variants" loading="lazy" width="1303" height="483" style="width:100%"/>
+<img src="/diagrams/Communication/Paradigms%20-%20Object-oriented%20-%20Variants.png" alt="Diagrams of: Microservices, Orchestrated Services, and Service-Oriented Architecture." loading="lazy" width="1303" height="483" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -69,7 +69,7 @@ Sometimes you don’t need that level of fine\-tuning for the behavior of the sy
 <picture>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Functional.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Functional.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Paradigms%20-%20Functional.png" alt="Paradigms - Functional" loading="lazy" width="994" height="362" style="width:100%"/>
+<img src="/diagrams/Communication/Paradigms%20-%20Functional.png" alt="A diagram of a pipeline with components implementing steps of data processing." loading="lazy" width="994" height="362" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -83,7 +83,7 @@ In distributed systems the functional paradigm is disguised as [*Choreographed E
 <picture>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Functional%20-%20Variants.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Functional%20-%20Variants.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Paradigms%20-%20Functional%20-%20Variants.png" alt="Paradigms - Functional - Variants" loading="lazy" width="1124" height="345" style="width:100%"/>
+<img src="/diagrams/Communication/Paradigms%20-%20Functional%20-%20Variants.png" alt="Diagrams of Event-Driven Architecture and Data Mesh." loading="lazy" width="1124" height="345" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -97,7 +97,7 @@ The final approach is integration through data\. There are cases where the domai
 <picture>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Data-centric.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Data-centric.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Paradigms%20-%20Data-centric.png" alt="Paradigms - Data-centric" loading="lazy" width="944" height="501" style="width:100%"/>
+<img src="/diagrams/Communication/Paradigms%20-%20Data-centric.png" alt="A diagram of a procedural system where logic and data make independent hierarchies." loading="lazy" width="944" height="501" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -109,7 +109,7 @@ In the data\-centric paradigm *logic* and *data* are structured independently\. 
 <picture>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Data-centric%20-%20Notifications.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Data-centric%20-%20Notifications.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Paradigms%20-%20Data-centric%20-%20Notifications.png" alt="Paradigms - Data-centric - Notifications" loading="lazy" width="944" height="463" style="width:100%"/>
+<img src="/diagrams/Communication/Paradigms%20-%20Data-centric%20-%20Notifications.png" alt="Components of a data-centric system rely on data change notifications." loading="lazy" width="944" height="463" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -121,7 +121,7 @@ The data\-centric approach works well for moderately\-sized projects with a stab
 <picture>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Data-centric%20-%20Variants.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Data-centric%20-%20Variants.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Paradigms%20-%20Data-centric%20-%20Variants.png" alt="Paradigms - Data-centric - Variants" loading="lazy" width="943" height="463" style="width:100%"/>
+<img src="/diagrams/Communication/Paradigms%20-%20Data-centric%20-%20Variants.png" alt="Diagrams for Services with a shared database and Space-Based Architecture." loading="lazy" width="943" height="463" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -131,7 +131,7 @@ The data\-centric approach works well for moderately\-sized projects with a stab
 The three programming paradigms tend to collaborate:
 
 - An ordinary class is object\-oriented on the outside but procedural inside: each of its methods can access any of its private data members\. Moreover, code inside methods may chain function calls, locally applying the functional paradigm\.
-- [*Cell\-Based Architecture*]({{< relref "../../fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services" >}}) tends to use [*choreography*]({{< relref "../../foundations-of-software-architecture/arranging-communication/choreography.md" >}}) \(pub/sub\) between [*Cells*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md#examples--cell" >}}) and [*orchestration*]({{< relref "../../foundations-of-software-architecture/arranging-communication/orchestration.md" >}}) or communication via a [*shared database*]({{< relref "../../foundations-of-software-architecture/arranging-communication/shared-data.md" >}}) inside them \[[DEDS]({{< relref "../../appendices/books-referenced.md#deds" >}})\]\.
+- [*Cell\-Based Architecture*]({{< relref "../../fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services" >}}) tends to use [*choreography*]({{< relref "../../foundations-of-software-architecture/arranging-communication/choreography.md" >}}) \(pub/sub\) between [*Cells*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}}) and [*orchestration*]({{< relref "../../foundations-of-software-architecture/arranging-communication/orchestration.md" >}}) or communication via a [*shared database*]({{< relref "../../foundations-of-software-architecture/arranging-communication/shared-data.md" >}}) inside them \[[DEDS]({{< relref "../../appendices/books-referenced.md#deds" >}})\]\.
 - A system of [*Services*]({{< relref "../../basic-metapatterns/services.md" >}}) \(or [*Space\-Based Architecture*]({{< relref "../../extension-metapatterns/sandwich.md#space-based-architecture" >}})\) may be integrated through both [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) and [*Shared Database*]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) \(or *processing grid* and [*data grid*]({{< relref "../../extension-metapatterns/shared-repository.md#data-grid-of-space-based-architecture-sba-replicated-cache-distributed-cache" >}}), respectively\), see [*Sandwich*]({{< relref "../../extension-metapatterns/sandwich.md" >}})\.
 
 
@@ -154,9 +154,9 @@ Some of the combinations look impossible or impractical, others are narrowly spe
 
 We have deconstructed the most common programming paradigms into their driving forces and shown how those forces shape distributed architectures:
 
-- An object\-oriented system relies on hierarchical decomposition of a complex domain, just like *SOA* and *Orchestrated \(Micro\-\)Services* do\.
-- Functional programming streams data through a sequence of transformations, which is the idea behind *Choreographed Event\-Driven Architecture* and *Data Mesh*\.
-- Procedural style lets any piece of logic access the entire project’s data, resembling *Space\-Based Architecture* and *Services with a Shared Database*\.
+- An object\-oriented system relies on hierarchical decomposition of a complex domain, just like [*SOA*]({{< relref "../../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}) and [*Orchestrated*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) *\(*[*Micro*]({{< relref "../../basic-metapatterns/services.md#microservices" >}})*\-\)*[*Services*]({{< relref "../../basic-metapatterns/services.md" >}}) do\.
+- Functional programming streams data through a sequence of transformations, which is the idea behind [*Choreographed Event\-Driven Architecture*]({{< relref "../../basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}}) and [*Data Mesh*]({{< relref "../../basic-metapatterns/pipeline.md#data-mesh" >}})\.
+- Procedural style lets any piece of logic access the entire project’s data, resembling [*Space\-Based Architecture*]({{< relref "../../extension-metapatterns/sandwich.md#space-based-architecture" >}}) and [*Services*]({{< relref "../../basic-metapatterns/services.md" >}}) *with a* [*Shared Database*]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}})\.
 
 
 Now let’s examine each of these approaches in depth:

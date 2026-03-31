@@ -1,7 +1,7 @@
 +++
 weight = 6
 title = "Layered Services"
-description = "Layered Services is an umbrella architecture for common implementations of systems of services."
+description = "This chapter discusses layered services, their orchestrated and choreographed variants, and Command-Query Responsibility Segregation (CQRS) systems."
 images = ["/diagrams/Web/og/Layered%20Services.png"]
 [sitemap]
   priority = 0.8
@@ -14,23 +14,16 @@ images = ["/diagrams/Web/og/Layered%20Services.png"]
 <picture>
 <source srcset="/diagrams/Main/Layered%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Layered%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Layered%20Services.png" alt="Layered Services" loading="lazy" width="1122" height="534" style="width:100%"/>
+<img src="/diagrams/Main/Layered%20Services.png" alt="A diagram for Layered Services, in abstractness-subdomain-sharding coordinates." loading="lazy" width="1122" height="534" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
 *Cut the cake\.* Divide each service into layers\.
 
-<ins>Variants:</ins> 
-
-- [Orchestrated]({{< relref "../foundations-of-software-architecture/arranging-communication/orchestration.md" >}}) Three\-Layered Services,
-- \(*Pipelined*\) [Choreographed]({{< relref "../foundations-of-software-architecture/arranging-communication/choreography.md" >}}) Two\-Layered Services,
-- \(*Pipelined*\) Command Query Responsibility Segregation \(CQRS\) \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}}), [LDDD]({{< relref "../appendices/books-referenced.md#lddd" >}})\]\.
-
-
 <ins>Structure:</ins> Subdomain services divided into layers\.
 
-<ins>Type:</ins> Implementation of [*Services*]({{< relref "../basic-metapatterns/services.md" >}}), [*Pipeline*]({{< relref "../basic-metapatterns/pipeline.md" >}}) or [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}), respectively\.
+<ins>Type:</ins> Implementation of [*Services*]({{< relref "../basic-metapatterns/services.md" >}}), [*Pipeline*]({{< relref "../basic-metapatterns/pipeline.md" >}}) or [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}})\.
 
 *Layered Services* is an umbrella architecture for common implementations of systems of [*Services*]({{< relref "../basic-metapatterns/services.md" >}})\. It does not introduce any special features as layers are completely encapsulated by the service which they belong to\. Still, as the services may communicate at different layers, there are a couple of things to learn by exploring the subject matter\.
 
@@ -48,7 +41,7 @@ Remarkable features of *Layered Services* include:
 <picture>
 <source srcset="/diagrams/Performance/Layered%20Services%20-%20sharding.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Performance/Layered%20Services%20-%20sharding.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Performance/Layered%20Services%20-%20sharding.png" alt="Layered Services - sharding" loading="lazy" width="1003" height="423" style="width:100%"/>
+<img src="/diagrams/Performance/Layered%20Services%20-%20sharding.png" alt="The use of scaled stateless services and load balancers in Layered Services." loading="lazy" width="1003" height="423" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -61,7 +54,7 @@ Remarkable features of *Layered Services* include:
 <picture>
 <source srcset="/diagrams/Performance/Layered%20Services%20-%20channels.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Performance/Layered%20Services%20-%20channels.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Performance/Layered%20Services%20-%20channels.png" alt="Layered Services - channels" loading="lazy" width="1123" height="403" style="width:100%"/>
+<img src="/diagrams/Performance/Layered%20Services%20-%20channels.png" alt="Data streams in Three-Layered Services: from data layer to data layer, from domain layer to data layer, and between two domain-level components." loading="lazy" width="1123" height="403" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -70,6 +63,11 @@ Remarkable features of *Layered Services* include:
 
 *Layered Services* vary in the number of [layers]({{< relref "../basic-metapatterns/layers.md" >}}) and in the layer through which the [services]({{< relref "../basic-metapatterns/services.md" >}}) communicate:
 
+- In [*Orchestrated Three\-Layered Services*]({{< relref "#orchestrated-three-layered-services" >}}) the application layer of any service may call the same layer in other services\.
+- In [*Choreographed Two\-Layered Services*]({{< relref "#choreographed-two-layered-services" >}}) the domain layers of services are assembled into a *Pipeline*\.
+- [*Command Query Responsibility Segregation*]({{< relref "#command-query-responsibility-segregation-cqrs" >}}) streams changes from a transactional to an analytical database\.
+
+
 ## Orchestrated Three\-Layered Services 
 
 <figure>
@@ -77,7 +75,7 @@ Remarkable features of *Layered Services* include:
 <picture>
 <source srcset="/diagrams/Variants/3/Three-Layered%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/Three-Layered%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/Three-Layered%20Services.png" alt="Three-Layered Services" loading="lazy" width="923" height="332" style="width:100%"/>
+<img src="/diagrams/Variants/3/Three-Layered%20Services.png" alt="In three-layered services the application layer of every service calls the domain layer of its service and the application layers of other services." loading="lazy" width="923" height="332" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -95,7 +93,7 @@ The upper \([*application*]({{< relref "../basic-metapatterns/layers.md#applicat
 <picture>
 <source srcset="/diagrams/Communication/Mutual%20Orchestration%20-%204.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Mutual%20Orchestration%20-%204.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Mutual%20Orchestration%20-%204.png" alt="Mutual Orchestration - 4" loading="lazy" width="1023" height="294" style="width:100%"/>
+<img src="/diagrams/Communication/Mutual%20Orchestration%20-%204.png" alt="In Layered Services only the application layers of the services are interdependent." loading="lazy" width="1023" height="294" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -125,15 +123,15 @@ The good thing is that the majority of the code belongs to the domain layer whic
 <picture>
 <source srcset="/diagrams/Evolutions/3/Three-Layered%20Services%20-%201.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/3/Three-Layered%20Services%20-%201.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/3/Three-Layered%20Services%20-%201.png" alt="Three-Layered Services - 1" loading="lazy" width="1004" height="814" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/Three-Layered%20Services%20-%201.png" alt="Diagrams for Three-Layered Services with partially merged application layer, partially merged databases and shared databases, and a Sandwich." loading="lazy" width="1004" height="814" style="width:84%"/>
 </picture>
 </a>
 </figure>
 
 or by building derived datasets:
 
-- A [*CQRS View*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] inside a service aggregates any events from other services which its owner is interested in\.
-- A dedicated [*Query Service*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#query-service-front-controller-data-warehouse-data-lake-aggregate-data-product-quantum-dpq-of-data-mesh" >}}) \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] captures the whole system’s state by subscribing to events from all the services\.
+- A [*CQRS View*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) inside a service aggregates any events from other services which its owner is interested in\.
+- A dedicated [*Query Service*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#query-service-front-controller-data-warehouse-data-lake-aggregate-data-product-quantum-dpq-of-data-mesh" >}}) captures the whole system’s state by subscribing to events from all the services\.
 
 
 <figure>
@@ -141,14 +139,14 @@ or by building derived datasets:
 <picture>
 <source srcset="/diagrams/Evolutions/3/Three-Layered%20Services%20-%202.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/3/Three-Layered%20Services%20-%202.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/3/Three-Layered%20Services%20-%202.png" alt="Three-Layered Services - 2" loading="lazy" width="1143" height="494" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/Three-Layered%20Services%20-%202.png" alt="Diagrams for Three-Layered Services employing CQRS views and a Query Service." loading="lazy" width="1143" height="494" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
 If the services become too large:
 
-- The middle layer can be split into [*Sandwiches*]({{< relref "../extension-metapatterns/sandwich.md" >}}) or [*Cells*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#examples--cell" >}})\.
+- The middle layer can be split into [*Sandwiches*]({{< relref "../extension-metapatterns/sandwich.md" >}}) or [*Cells*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}})\.
 
 
 <figure>
@@ -156,7 +154,7 @@ If the services become too large:
 <picture>
 <source srcset="/diagrams/Evolutions/3/Three-Layered%20Services%20-%203.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/3/Three-Layered%20Services%20-%203.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/3/Three-Layered%20Services%20-%203.png" alt="Three-Layered Services - 3" loading="lazy" width="1503" height="334" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/Three-Layered%20Services%20-%203.png" alt="The domain layer of a large three-layered service is split into sub-subdomain components, resulting in a Sandwich Cell." loading="lazy" width="1503" height="334" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -168,7 +166,7 @@ If the services become too large:
 <picture>
 <source srcset="/diagrams/Variants/3/Two-Layered%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/Two-Layered%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/Two-Layered%20Services.png" alt="Two-Layered Services" loading="lazy" width="963" height="245" style="width:100%"/>
+<img src="/diagrams/Variants/3/Two-Layered%20Services.png" alt="The domain-level components of two-layered services participate in multiple pipelines and access their service's databases." loading="lazy" width="963" height="245" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -200,19 +198,19 @@ If *Choreographed Layered Services* become coupled:
 <picture>
 <source srcset="/diagrams/Evolutions/3/Two-Layered%20Services%20-%201.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/3/Two-Layered%20Services%20-%201.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/3/Two-Layered%20Services%20-%201.png" alt="Two-Layered Services - 1" loading="lazy" width="1324" height="324" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/Two-Layered%20Services%20-%201.png" alt="Diagrams for Two-Layered Services with partially merged domain layer, partially merged databases, and shared databases." loading="lazy" width="1324" height="324" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
-[*CQRS Views*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] or [*Query Services*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#query-service-front-controller-data-warehouse-data-lake-aggregate-data-product-quantum-dpq-of-data-mesh" >}}) \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] are also an option:
+[*CQRS Views*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) or [*Query Services*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#query-service-front-controller-data-warehouse-data-lake-aggregate-data-product-quantum-dpq-of-data-mesh" >}}) are also an option:
 
 <figure>
 <a href="/diagrams/Evolutions/3/Two-Layered%20Services%20-%202.png">
 <picture>
 <source srcset="/diagrams/Evolutions/3/Two-Layered%20Services%20-%202.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/3/Two-Layered%20Services%20-%202.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/3/Two-Layered%20Services%20-%202.png" alt="Two-Layered Services - 2" loading="lazy" width="1104" height="404" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/Two-Layered%20Services%20-%202.png" alt="Diagrams for Two-Layered Services employing CQRS views and a Query Service." loading="lazy" width="1104" height="404" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -227,7 +225,7 @@ An overgrown service can be:
 <picture>
 <source srcset="/diagrams/Evolutions/3/Two-Layered%20Services%20-%203.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/3/Two-Layered%20Services%20-%203.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/3/Two-Layered%20Services%20-%203.png" alt="Two-Layered Services - 3" loading="lazy" width="1503" height="301" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/Two-Layered%20Services%20-%203.png" alt="The domain layer of a large two-layered service is split in half." loading="lazy" width="1503" height="301" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -239,7 +237,7 @@ An overgrown service can be:
 <picture>
 <source srcset="/diagrams/Variants/3/CQRS.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/CQRS.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/CQRS.png" alt="CQRS" loading="lazy" width="1007" height="324" style="width:100%"/>
+<img src="/diagrams/Variants/3/CQRS.png" alt="Write requests from a client go to the write backend and OLTP database which feeds OLAP databases. Read requests go to the scaled read backend and the scaled OLAP database." loading="lazy" width="1007" height="324" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -251,7 +249,7 @@ An overgrown service can be:
 <picture>
 <source srcset="/diagrams/Variants/3/CQRS%20-%20pipeline%20view.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/CQRS%20-%20pipeline%20view.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/CQRS%20-%20pipeline%20view.png" alt="CQRS - pipeline view" loading="lazy" width="1003" height="323" style="width:100%"/>
+<img src="/diagrams/Variants/3/CQRS%20-%20pipeline%20view.png" alt="In CQRS data streams from the client to the write backend, then to the OLTP database, to the OLAP database, to the read backend and, finally, returns to the client." loading="lazy" width="1003" height="323" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -260,7 +258,7 @@ This separation brings in the pros and cons of [*Services*]({{< relref "../basic
 
 *CQRS* has several variations:
 
-- The database may be shared, commands and queries may use dedicated databases, or the read service may maintain a [*Memory Image*](https://martinfowler.com/bliki/MemoryImage.html) / [*Materialized View*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#memory-image-materialized-view" >}}) \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\] fed by events from the write service \(as in other kinds of *Layered Services*\)\.
+- The database may be shared, commands and queries may use dedicated databases, or the read service may maintain a [*Memory Image*](https://martinfowler.com/bliki/MemoryImage.html) / [*Materialized View*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#memory-image-materialized-view" >}}) fed by events from the write service \(as in other kinds of *Layered Services*\)\.
 - Data [replication]({{< relref "../basic-metapatterns/shards.md#persistent-copy-replica" >}}) may be implemented as a [*pipeline*]({{< relref "../basic-metapatterns/pipeline.md" >}}) between the databases \(based on nightly snapshots or [log\-based replication](https://www.dremio.com/wiki/log-based-replication/)\) or a [direct event feed](https://martinfowler.com/bliki/EagerReadDerivation.html) from the OLTP code to the OLAP database\.
 
 
@@ -269,7 +267,7 @@ This separation brings in the pros and cons of [*Services*]({{< relref "../basic
 <picture>
 <source srcset="/diagrams/Variants/3/CQRS%20-%20subtypes.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/CQRS%20-%20subtypes.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/CQRS%20-%20subtypes.png" alt="CQRS - subtypes" loading="lazy" width="1303" height="446" style="width:100%"/>
+<img src="/diagrams/Variants/3/CQRS%20-%20subtypes.png" alt="In CQRS the OLAP databases receive data from the OLTP database or from events originating in the write backend. Alternatively, the read and write backends may share a database." loading="lazy" width="1303" height="446" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -287,7 +285,7 @@ Each backend depends on its database \(its technology and schema\)\. The OLTP to
 <picture>
 <source srcset="/diagrams/Dependencies/CQRS.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Dependencies/CQRS.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Dependencies/CQRS.png" alt="CQRS" loading="lazy" width="1243" height="326" style="width:100%"/>
+<img src="/diagrams/Dependencies/CQRS.png" alt="In CQRS each service depends on its database while the OLAP database depends on the source of its event feed." loading="lazy" width="1243" height="326" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -305,7 +303,7 @@ Each backend depends on its database \(its technology and schema\)\. The OLTP to
 
 - You will usually need a [*Reverse Proxy*]({{< relref "../extension-metapatterns/proxy.md#dispatcher-reverse-proxy-ingress-controller-edge-service-microgateway" >}}) or an [*API Gateway*]({{< relref "../extension-metapatterns/proxy.md#api-gateway" >}}) to segregate commands from queries\.
 - If the commands and queries become intermixed, the business logic can be merged together but the databases are left separate, resulting in [*Polyglot Persistence*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md" >}})\.
-- Both read and write backends can be split into [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}) or [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) \(yielding [*Cells*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#examples--cell" >}})\)\.
+- Both read and write backends can be split into [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}) or [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) \(yielding [*Cells*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}})\)\.
 - Applying [*Space\-Based Architecture*]({{< relref "../extension-metapatterns/shared-repository.md#data-grid-of-space-based-architecture-sba-replicated-cache-distributed-cache" >}}) may further improve performance\.
 - Multiple schemas or even kinds of OLAP databases can be used simultaneously \([*Polyglot Persistence*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md" >}})\)\.
 
@@ -315,7 +313,7 @@ Each backend depends on its database \(its technology and schema\)\. The OLTP to
 <picture>
 <source srcset="/diagrams/Evolutions/3/CQRS.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/3/CQRS.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/3/CQRS.png" alt="CQRS" loading="lazy" width="1284" height="1023" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/CQRS.png" alt="Diagrams of CQRS behind an API Gateway, with a single backend, with multiple OLAP databases, with layered backends, Cells for backends, and Data Grid for a database." loading="lazy" width="1284" height="1023" style="width:100%"/>
 </picture>
 </a>
 </figure>

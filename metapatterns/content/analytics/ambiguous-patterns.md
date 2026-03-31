@@ -1,7 +1,7 @@
 +++
 weight = 2
 title = "Ambiguous patterns"
-description = "There are patterns with meanings which vary from source to source. They include Monolith, Reactor, Microkernel, Domain Services, Cells, and Nanoservices."
+description = "This chapter explores ambiguous patterns: Monolith, Reactor, Microkernel, Domain Services, Service-Based Architecture, Cell, and Nanoservices."
 images = ["/diagrams/Web/og/Ambiguous.png"]
 [sitemap]
   priority = 0.5
@@ -18,7 +18,7 @@ We’ve seen a single pattern come under many names, as happens with [*Orchestra
 <picture>
 <source srcset="/diagrams/Conclusion/Ambiguous-Monolith.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Ambiguous-Monolith.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Ambiguous-Monolith.png" alt="Ambiguous-Monolith" loading="lazy" width="1083" height="763" style="width:100%"/>
+<img src="/diagrams/Conclusion/Ambiguous-Monolith.png" alt="Diagrams of a Monolith as a single component, a co-deployed system, a synchronous distributed system, a Layered Architecture, and modules with a shared database." loading="lazy" width="1083" height="763" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -38,7 +38,7 @@ The novel misnomers, [*Layered Monolith*]({{< relref "../basic-metapatterns/laye
 <picture>
 <source srcset="/diagrams/Variants/1/Subtypes%20of%20Monolith.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Subtypes%20of%20Monolith.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Subtypes%20of%20Monolith.png" alt="Subtypes of Monolith" loading="lazy" width="848" height="366" style="width:100%"/>
+<img src="/diagrams/Variants/1/Subtypes%20of%20Monolith.png" alt="Control flow diagrams for Reactor, Proactor, and Half-Sync/Half-Async." loading="lazy" width="848" height="366" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -59,7 +59,7 @@ In most cases we’ll hear of *Proactor* being called *Reactor* – probably bec
 <picture>
 <source srcset="/diagrams/Conclusion/Ambiguous-Microkernel.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Ambiguous-Microkernel.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Ambiguous-Microkernel.png" alt="Ambiguous-Microkernel" loading="lazy" width="663" height="607" style="width:80%"/>
+<img src="/diagrams/Conclusion/Ambiguous-Microkernel.png" alt="Diagrams of Microkernel according to Pattern-Oriented Software Architecture and of Plugins Architecture" loading="lazy" width="663" height="607" style="width:80%"/>
 </picture>
 </a>
 </figure>
@@ -79,12 +79,12 @@ Thus, here we have two architectural patterns of arguably similar structure \([*
 <picture>
 <source srcset="/diagrams/Conclusion/Ambiguous-DomainServices.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Ambiguous-DomainServices.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Ambiguous-DomainServices.png" alt="Ambiguous-DomainServices" loading="lazy" width="663" height="443" style="width:74%"/>
+<img src="/diagrams/Conclusion/Ambiguous-DomainServices.png" alt="Diagrams of domain services according to Domain-Driven Design and Fundamentals of Software Architecture." loading="lazy" width="663" height="443" style="width:74%"/>
 </picture>
 </a>
 </figure>
 
-I was told that [*Domain Services*]({{< relref "../basic-metapatterns/services.md#whole-subdomain-sub-domain-services" >}}) of \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] are an incorrect term – because a *domain service* is always limited to the [*domain* layer]({{< relref "../basic-metapatterns/layers.md#domain-driven-design-ddd-layers" >}}) of \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] while those of \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] also cover the [*application*]({{< relref "../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) and, maybe, *infrastructure*\.
+I was told that [*Domain Services*]({{< relref "../basic-metapatterns/services.md#whole-subdomain-sub-domain-services-macroservices" >}}) of \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] are an incorrect term – because a *domain service* is always limited to the [*domain* layer]({{< relref "../basic-metapatterns/layers.md#domain-driven-design-ddd-layers" >}}) of \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] while those of \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] also cover the [*application*]({{< relref "../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) and, maybe, *infrastructure*\.
 
 I believe that both definitions are technically correct, if the difference in the meaning of *domain* is accounted for\. In \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] *domain* is almost synonymous with a *bounded context* of \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\], while \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] more often uses that word for the name of its middle layer which contains *business rules*\.
 
@@ -95,14 +95,14 @@ I believe that both definitions are technically correct, if the difference in th
 <picture>
 <source srcset="/diagrams/Conclusion/Ambiguous-ServiceBasedArchitecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Ambiguous-ServiceBasedArchitecture.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Ambiguous-ServiceBasedArchitecture.png" alt="Ambiguous-ServiceBasedArchitecture" loading="lazy" width="1401" height="442" style="width:100%"/>
+<img src="/diagrams/Conclusion/Ambiguous-ServiceBasedArchitecture.png" alt="Diagrams of Service-Based Architecture, Microservices, and Service-Oriented Architecture." loading="lazy" width="1401" height="442" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
 \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\] calls anything service\-based a *service\-based architecture*\.
 
-\[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] differentiates [*Microservices*]({{< relref "../basic-metapatterns/services.md#microservices" >}}) and [*Service\-Oriented Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}), leaving whatever remains \(large [subdomain\-scale services]({{< relref "../basic-metapatterns/services.md#whole-subdomain-sub-domain-services" >}})\) under the name of [*Service\-Based Architecture*]({{< relref "../basic-metapatterns/services.md#service-based-architecture-sba" >}})\.
+\[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] differentiates [*Microservices*]({{< relref "../basic-metapatterns/services.md#microservices" >}}) and [*Service\-Oriented Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}), leaving whatever remains \(large [subdomain\-scale services]({{< relref "../basic-metapatterns/services.md#whole-subdomain-sub-domain-services-macroservices" >}})\) under the name of [*Service\-Based Architecture*]({{< relref "../basic-metapatterns/services.md#service-based-architecture-sba-macroservices" >}})\.
 
 Both definitions are technically correct\. One is wider than the other\.
 
@@ -113,7 +113,7 @@ Both definitions are technically correct\. One is wider than the other\.
 <picture>
 <source srcset="/diagrams/Conclusion/Ambiguous-FrontController.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Ambiguous-FrontController.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Ambiguous-FrontController.png" alt="Ambiguous-FrontController" loading="lazy" width="668" height="383" style="width:70%"/>
+<img src="/diagrams/Conclusion/Ambiguous-FrontController.png" alt="Diagrams of Front Controller according to Patterns of Enterprise Application Architecture and Software Architecture: the Hard Parts." loading="lazy" width="668" height="383" style="width:70%"/>
 </picture>
 </a>
 </figure>
@@ -129,14 +129,14 @@ The definition from \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp"
 <picture>
 <source srcset="/diagrams/Conclusion/Ambiguous-Cells.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Ambiguous-Cells.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Ambiguous-Cells.png" alt="Ambiguous-Cells" loading="lazy" width="1203" height="444" style="width:100%"/>
+<img src="/diagrams/Conclusion/Ambiguous-Cells.png" alt="Diagrams of WSO2 Cells and Amazon Cells." loading="lazy" width="1203" height="444" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
 The fresh *Cell\-Based Architecture* also has multiple definitions\. 
 
-- WSO2 [wrote](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md) about a [*Cell*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#examples--cell" >}}) as a group of services which is encapsulated from the remaining system by a [*Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) \(for incoming traffic\) and sometimes *Adapters* \(for outgoing traffic\) and often uses a dedicated [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) – causing each *Cell*, though internally distributed, to be treated by other components as a single service\. This makes designing and managing a large system a bit simpler by introducing a [*hierarchy*]({{< relref "../fragmented-metapatterns/hierarchy.md" >}})\.
+- WSO2 [wrote](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md) about a [*Cell*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}}) as a group of services which is encapsulated from the remaining system by a [*Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) \(for incoming traffic\) and sometimes *Adapters* \(for outgoing traffic\) and often uses a dedicated [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) – causing each *Cell*, though internally distributed, to be treated by other components as a single service\. This makes designing and managing a large system a bit simpler by introducing a [*hierarchy*]({{< relref "../fragmented-metapatterns/hierarchy.md" >}})\.
 - Amazon [promotes](https://docs.aws.amazon.com/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/what-is-a-cell-based-architecture.html) its [*Cells*]({{< relref "../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-multitenancy-cells-amazon-definition" >}}) as [*Shards*]({{< relref "../basic-metapatterns/shards.md" >}}) of the whole system which run in multiple geographic regions\. That grants fault tolerance and improves performance as each client has an instance of the system deployed to a nearby datacenter, but it does not have much impact on organization and complexity of the code\.
 
 
@@ -149,7 +149,7 @@ This case looks like Amazon’s hijacking and redefining a popular emerging tech
 <picture>
 <source srcset="/diagrams/Conclusion/Ambiguous-Nanoservices.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Ambiguous-Nanoservices.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Ambiguous-Nanoservices.png" alt="Ambiguous-Nanoservices" loading="lazy" width="1263" height="883" style="width:100%"/>
+<img src="/diagrams/Conclusion/Ambiguous-Nanoservices.png" alt="Diagrams of Nanoservices as an API layer over a shared database, a pipeline, a Space-Based Architecture, actors, and a Service-Based Architecture." loading="lazy" width="1263" height="883" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -157,13 +157,13 @@ This case looks like Amazon’s hijacking and redefining a popular emerging tech
 The *Nanoservices* pattern is another emerging technology and it seems to have never been strictly defined\. Most sources agree that a [*nanoservice*]({{< relref "../basic-metapatterns/services.md#single-function-faas-nanoservices" >}}) is a cloud\-based function \([*FaaS*](https://en.wikipedia.org/wiki/Function_as_a_service)\), similar to a *service* with a single API method but, just as with the old good [*services*]({{< relref "../basic-metapatterns/services.md" >}}), they differ in the ways they use the novel technology:
 
 - Diego Zanon in *Building Serverless Web Applications* proposes a [single layer of nanoservices]({{< relref "../basic-metapatterns/services.md#inexact-nanoservices-api-layer" >}}), each implementing a method of the system’s public API, to be used as a thin backend\.
-- [Here](https://increment.com/software-architecture/the-rise-of-nanoservices/) we have nanoservices [built into]({{< relref "../basic-metapatterns/pipeline.md#function-as-a-service-faas-nanoservices-pipelined" >}}) a [*Pipeline*]({{< relref "../basic-metapatterns/pipeline.md" >}}), similar to [*Choreographed Event\-Driven Architecture*]({{< relref "../basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}}) \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\]\. 
+- [Here](https://increment.com/software-architecture/the-rise-of-nanoservices/) we have nanoservices [built into]({{< relref "../basic-metapatterns/pipeline.md#function-as-a-service-faas-nanoservices-pipelined" >}}) a [*Pipeline*]({{< relref "../basic-metapatterns/pipeline.md" >}}), similar to [*Choreographed Event\-Driven Architecture*]({{< relref "../basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}})\. 
 - [Another article](https://medium.com/@ido.vapner/unlocking-the-power-of-nano-services-a-new-era-in-microservices-architecture-22647ea36f22) proposes to [\(re\)use them]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#nanoservices" >}}) in [*SOA*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}) style\.
 
 
 Moreover, there are a couple of sources that call a nanoservice something totally different:
 
-- [There is a concept](https://nanoservices.io/docs/docs/building/introduction/) of nanoservice as a module that can run both as a separate service and as a part of a binary – allowing for a team to choose if they want their system to run as a single process or become distributed\. *Nano\-* is because an in\-process module is more lightweight than a [*microservice*]({{< relref "../basic-metapatterns/services.md#microservices" >}})\. This idea resembles [*Modular Monolith*]({{< relref "../basic-metapatterns/services.md#asynchronous-modules-modular-monolith-modulith-embedded-actors" >}}) \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] and [*Actor Frameworks*]({{< relref "../basic-metapatterns/services.md#actors" >}})\.
+- [There is a concept](https://nanoservices.io/docs/docs/building/introduction/) of nanoservice as a module that can run both as a separate service and as a part of a binary – allowing for a team to choose if they want their system to run as a single process or become distributed\. *Nano\-* is because an in\-process module is more lightweight than a [*microservice*]({{< relref "../basic-metapatterns/services.md#microservices" >}})\. This idea resembles [*Modular Monolith*]({{< relref "../basic-metapatterns/services.md#asynchronous-modules-modular-monolith-modulith-embedded-actors" >}}) and [*Actor Frameworks*]({{< relref "../basic-metapatterns/services.md#actors" >}})\.
 - And [here](https://dev.to/siy/nanoservices-or-alternative-to-monoliths-and-microservices-12bb) we have something akin to [*Space\-Based Architecture*]({{< relref "../implementation-metapatterns/mesh.md#space-based-architecture" >}}) but it is also called *Nanoservices* – as the proposed framework makes new components so easy to create that programmers tend to write many smaller *nanoservices* instead of a single [*microservice*]({{< relref "../basic-metapatterns/services.md#part-of-a-subdomain-microservices" >}})\.
 
 

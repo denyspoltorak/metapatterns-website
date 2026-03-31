@@ -1,7 +1,7 @@
 +++
 weight = 7
 title = "Analytics"
-description = "The analytics compares architectural patterns, highlights ambiguous patterns, and shows how a project’s architecture evolves over time."
+description = "This part of the book compares architectural patterns, highlights ambiguous cases, shows how a system evolves over time, and revisits coupling and cohesion."
 images = ["/diagrams/Web/og/Favicon-plain.png"]
 bookCollapseSection = true
 [sitemap]
@@ -24,6 +24,13 @@ I had no time to research every idea collected while the book was being written 
 
 Other smaller topics that I was able to look into made the following chapters:
 
+- [Comparison]({{< relref "../analytics/comparison-of-architectural-patterns/_index.md" >}}) of the ways different architectures [share functionality or data]({{< relref "../analytics/comparison-of-architectural-patterns/sharing-functionality-or-data-among-services.md" >}}), [build pipelines]({{< relref "../analytics/comparison-of-architectural-patterns/pipelines-in-architectural-patterns.md" >}}), and use [dependency inversion]({{< relref "../analytics/comparison-of-architectural-patterns/dependency-inversion-in-architectural-patterns.md" >}}) and [indirection]({{< relref "../analytics/comparison-of-architectural-patterns/indirection-in-commands-and-queries.md" >}})\.
+- [Ambiguous patterns]({{< relref "../analytics/ambiguous-patterns.md" >}}) whose meaning differs from author to author\.
+- [Evolution of software architecture]({{< relref "../analytics/architecture-and-product-life-cycle.md" >}}) during a product’s life cycle\.
+- [Real\-world examples]({{< relref "../analytics/real-world-inspirations-for-architectural-patterns.md" >}}) that inspire metapatterns\.
+- [Cohesion and decoupling]({{< relref "../analytics/the-heart-of-software-architecture/_index.md" >}}) as the main architectural drivers: their [influence on forces]({{< relref "../analytics/the-heart-of-software-architecture/cohesers-and-decouplers.md" >}}), [interplay in patterns]({{< relref "../analytics/the-heart-of-software-architecture/deconstructing-patterns.md" >}}) and, finally, a short guide on [choosing an architecture]({{< relref "../analytics/the-heart-of-software-architecture/choose-your-own-architecture.md" >}}) suitable for your project\.
+
+
 ## Contents:
 
 <nav class="grid3">
@@ -36,7 +43,7 @@ Other smaller topics that I was able to look into made the following chapters:
 
 <source srcset="/diagrams/Web/Comparison.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Comparison.png" alt="" loading="lazy" width="665" height="645"/>
+<img src="/diagrams/Web/Comparison.png" alt="Diagrams of services sharing a dataset, a pipeline, dependency inversion in an operating system with device drivers, and an adapter between a client and a service." loading="lazy" width="665" height="645"/>
 
 </picture>
 
@@ -52,7 +59,7 @@ Comparison of architectural patterns
 
 <source srcset="/diagrams/Web/Ambiguous.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Ambiguous.png" alt="" loading="lazy" width="1003" height="983"/>
+<img src="/diagrams/Web/Ambiguous.png" alt="Five diagrams of various systems called monoliths." loading="lazy" width="1003" height="983"/>
 
 </picture>
 
@@ -68,7 +75,7 @@ Ambiguous patterns
 
 <source srcset="/diagrams/Web/Life%20cycle.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Life%20cycle.png" alt="" loading="lazy" width="1185" height="1123"/>
+<img src="/diagrams/Web/Life%20cycle.png" alt="A diagram that shows a cycle with the following architectures: Monolith, Layers, Layered Services, a Sandwich Cell interacting with orchestrated layered services, and Layers with two databases." loading="lazy" width="1185" height="1123"/>
 
 </picture>
 
@@ -84,7 +91,7 @@ Architecture and product life cycle
 
 <source srcset="/diagrams/Web/Real-world.negated.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Real-world.png" alt="" loading="lazy" width="483" height="463"/>
+<img src="/diagrams/Web/Real-world.png" alt="A diagram of three services with queues of people and luggage above a transport layer with train stations and trains." loading="lazy" width="483" height="463"/>
 
 </picture>
 
@@ -100,7 +107,7 @@ Real-world inspirations for architectural patterns
 
 <source srcset="/diagrams/Web/Heart.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Heart.png" alt="" loading="lazy" width="403" height="384"/>
+<img src="/diagrams/Web/Heart.png" alt="A plot of pain level of maintaining a project against the project's size, with different architectures being optimal for different project sizes." loading="lazy" width="403" height="384"/>
 
 </picture>
 

@@ -1,7 +1,7 @@
 +++
 weight = 1
 title = "Sharing functionality or data among services"
-description = "Functionality or data may be shared among components through direct access, building a dedicated service, delegation, and replication."
+description = "This section discusses various ways to share functionality or data in a complex or distributed system, including separation, delegation, and replication."
 images = ["/diagrams/Web/og/Sharing.png"]
 [sitemap]
   priority = 0.5
@@ -22,7 +22,7 @@ Sharing data inside a process is similar, but usually requires some kind of prot
 <picture>
 <source srcset="/diagrams/Conclusion/Sharing-DirectCall.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Sharing-DirectCall.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Sharing-DirectCall.png" alt="Sharing-DirectCall" loading="lazy" width="1183" height="323" style="width:100%"/>
+<img src="/diagrams/Conclusion/Sharing-DirectCall.png" alt="A logger and counter accessible for direct calls inside a monolith or in an infrastructure layer of Layered Architecture." loading="lazy" width="1183" height="323" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -36,7 +36,7 @@ In a distributed system you can place the functionality or data to share into a 
 <picture>
 <source srcset="/diagrams/Conclusion/Sharing-DedicatedService.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Sharing-DedicatedService.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Sharing-DedicatedService.png" alt="Sharing-DedicatedService" loading="lazy" width="1223" height="303" style="width:100%"/>
+<img src="/diagrams/Conclusion/Sharing-DedicatedService.png" alt="A shared logger deployed as a service in Service-Oriented Architecture. A shared counter deployed as a stand-alone shared database in Polyglot Persistence." loading="lazy" width="1223" height="303" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -52,7 +52,7 @@ In a similar way a service may [behave as a function]({{< relref "../../foundati
 <picture>
 <source srcset="/diagrams/Conclusion/Sharing-Delegate.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Sharing-Delegate.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Sharing-Delegate.png" alt="Sharing-Delegate" loading="lazy" width="1341" height="443" style="width:100%"/>
+<img src="/diagrams/Conclusion/Sharing-Delegate.png" alt="Message loggers in a proxy and middleware. A request counter in a gateway of a pipeline." loading="lazy" width="1341" height="443" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -68,7 +68,7 @@ Another case of replication is importing the same code in multiple services, whi
 <picture>
 <source srcset="/diagrams/Conclusion/Sharing-Duplicate.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Sharing-Duplicate.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Sharing-Duplicate.png" alt="Sharing-Duplicate" loading="lazy" width="1363" height="644" style="width:100%"/>
+<img src="/diagrams/Conclusion/Sharing-Duplicate.png" alt="Replicated loggers in each instance of a service in Shards, in code imported by every Nanoservice, and in sidecars of Microservices. A replicated counter in a Data Grid." loading="lazy" width="1363" height="644" style="width:100%"/>
 </picture>
 </a>
 </figure>

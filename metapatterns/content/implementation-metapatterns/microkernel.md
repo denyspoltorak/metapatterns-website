@@ -1,7 +1,7 @@
 +++
 weight = 7
 title = "Microkernel"
-description = "A microkernel mediates between resource providers and resource consumers."
+description = "This chapter explores Microkernel architecture and its variants: Interpreter, Virtualizer, Configurator, Saga engine, AUTOSAR Classic, and operating system."
 images = ["/diagrams/Web/og/Microkernel.png"]
 [sitemap]
   priority = 0.8
@@ -14,7 +14,7 @@ images = ["/diagrams/Web/og/Microkernel.png"]
 <picture>
 <source srcset="/diagrams/Main/Microkernel.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Microkernel.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Microkernel.png" alt="Microkernel" loading="lazy" width="844" height="534" style="width:100%"/>
+<img src="/diagrams/Main/Microkernel.png" alt="A diagram for Microkernel, in abstractness-subdomain-sharding coordinates." loading="lazy" width="844" height="534" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -23,26 +23,9 @@ images = ["/diagrams/Web/og/Microkernel.png"]
 
 <ins>Known as:</ins> Microkernel \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}}) but [not]({{< relref "../analytics/ambiguous-patterns.md#microkernel" >}}) [SAP]({{< relref "../appendices/books-referenced.md#sap" >}}) and [FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\]\.
 
-<ins>Aspects:</ins>
-
-- [Middleware]({{< relref "../extension-metapatterns/middleware.md" >}}),
-- [Orchestrator]({{< relref "../extension-metapatterns/orchestrator.md" >}})\.
-
-
-<ins>Examples:</ins>
-
-- Operating System,
-- Software Framework,
-- Virtualizer / Hypervisor / Container Orchestrator \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] / Distributed Runtime,
-- Interpreter \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] / Script / Domain\-Specific Language \(DSL\),
-- Configurator / Configuration File,
-- Saga Engine,
-- [AUTOSAR Classic Platform](https://www.autosar.org/fileadmin/standards/R20-11/CP/AUTOSAR_EXP_VFB.pdf)\.
-
-
 <ins>Structure:</ins> A layer of [*Orchestrators*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) over a [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) over a layer of [*Services*]({{< relref "../basic-metapatterns/services.md" >}})\.
 
-<ins>Type:</ins> Implementation\.
+<ins>Type:</ins> System topology, Implementation\.
 
 | *Benefits* | *Drawbacks* |
 | --- | --- |
@@ -74,7 +57,7 @@ The *applications* depend on the *API* of the *microkernel* while the *providers
 <picture>
 <source srcset="/diagrams/Dependencies/Microkernel.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Dependencies/Microkernel.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Dependencies/Microkernel.png" alt="Microkernel" loading="lazy" width="843" height="283" style="width:100%"/>
+<img src="/diagrams/Dependencies/Microkernel.png" alt="Applications depend on the API of the microkernel. Providers depend on its SPIs." loading="lazy" width="843" height="283" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -85,7 +68,7 @@ The *applications* depend on the *API* of the *microkernel* while the *providers
 
 - *System programming\.* You manage system resources and services which will be used by untrusted client applications\. Hide the real resources behind a trusted proxy layer\. Be ready to change the hardware platform without affecting existing client code\.
 - *Frameworks that integrate several subdomains\.* The microkernel component coordinates multiple specialized libraries\. Its API is a [*Facade*](https://refactoring.guru/design-patterns/facade) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] for the managed functionality\.
-- *Scripting or* [*DSL*](https://en.wikipedia.org/wiki/Domain-specific_language)*s\.* The microkernel is an *Interpreter* \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] which lets your clients’ code manage the underlying system\.
+- *Scripting or* [*DSL*](https://en.wikipedia.org/wiki/Domain-specific_language)*s\.* The microkernel is an [*Interpreter*]({{< relref "#interpreter-script-domain-specific-language-dsl" >}}) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] which lets your clients’ code manage the underlying system\.
 
 
 *Microkernel* <ins>does not fit</ins>:
@@ -100,7 +83,7 @@ The *applications* depend on the *API* of the *microkernel* while the *providers
 <picture>
 <source srcset="/diagrams/Relations/Microkernel.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Relations/Microkernel.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Relations/Microkernel.png" alt="Microkernel" loading="lazy" width="1143" height="523" style="width:100%"/>
+<img src="/diagrams/Relations/Microkernel.png" alt="Microkernel as a middleware and as an orchestrator; applications of Microkernel Architecture as Backends for Frontends." loading="lazy" width="1143" height="523" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -118,6 +101,15 @@ The *applications* depend on the *API* of the *microkernel* while the *providers
 
 *Microkernel* can appear in many forms:
 
+- An [*Operating System*]({{< relref "#operating-system" >}}) shares hardware resources among many applications\.
+- A [*Software Framework*]({{< relref "#software-framework-pluggable-component-framework" >}}) provides a unified interface to access several libraries\.
+- A [*Virtualizer*]({{< relref "#virtualizer-hypervisor-container-orchestrator-distributed-runtime" >}}) maintains a generic interface to run guest software on any host OS and hardware\.
+- An [*Interpreter*]({{< relref "#interpreter-script-domain-specific-language-dsl" >}}) executes client scripts in a sandbox\.
+- A [*Configurator*]({{< relref "#configurator-configuration-file" >}}) sets up a system in accordance with a configuration file\.
+- A [*Saga Engine*]({{< relref "#saga-engine" >}}) runs distributed transactions\.
+- An [*AUTOSAR Classic Platform*]({{< relref "#autosar-classic-platform" >}}) provides automotive applications with access to any chip on board\.
+
+
 ### Operating System
 
 <figure>
@@ -125,26 +117,26 @@ The *applications* depend on the *API* of the *microkernel* while the *providers
 <picture>
 <source srcset="/diagrams/Variants/4/OS.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/OS.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/4/OS.png" alt="OS" loading="lazy" width="903" height="373" style="width:100%"/>
+<img src="/diagrams/Variants/4/OS.png" alt="Each application communicates with its runtime interfacing the shared operating system kernel which communicates with device drivers that adapt hardware components." loading="lazy" width="903" height="373" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
-The original inspiration for *Microkernel*, namely *operating systems*, provides an almost perfect example of the pattern, even though their kernels are not that “micro\-” \(unless you are running [MINIX](https://en.wikipedia.org/wiki/Minix_3#Architecture) or [QNX](https://en.wikipedia.org/wiki/QNX#Technology)\)\. [Device *drivers*]({{< relref "../basic-metapatterns/services.md#inexact-device-drivers" >}}) \(*internal services*\) encapsulate available hardware resources and make them accessible to user\-space *applications* \(*external services*\) via an OS *kernel*\. *Drivers* for a given kind of subsystem \(e\.g\. network adapter or disk drive\) are polymorphic towards the kernel and match the hardware installed\. 
+The original inspiration for *Microkernel*, namely *operating systems*, provides an almost perfect example of the pattern, even though their kernels are not that “micro\-” \(unless you are running [MINIX](https://en.wikipedia.org/wiki/Minix_3#Architecture) or [QNX](https://en.wikipedia.org/wiki/QNX#Technology)\)\. [Device *drivers*]({{< relref "../basic-metapatterns/services.md#inexact-device-drivers-pedestal" >}}) \(*internal services*\) encapsulate available hardware resources \(see [*Pedestal*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#pedestal" >}})\) and make them accessible to user\-space *applications* \(*external services*\) via an OS *kernel*\. *Drivers* for a given kind of subsystem \(e\.g\. network adapter or disk drive\) are polymorphic towards the kernel and match the hardware installed\. 
 
-### Software Framework
+### Software Framework, Pluggable Component Framework
 
 <figure>
 <a href="/diagrams/Variants/4/Framework.png">
 <picture>
 <source srcset="/diagrams/Variants/4/Framework.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/Framework.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/4/Framework.png" alt="Framework" loading="lazy" width="903" height="303" style="width:100%"/>
+<img src="/diagrams/Variants/4/Framework.png" alt="A framework is a facade between a user application and several lower-level components." loading="lazy" width="903" height="303" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
-The *microkernel* is a [*Facade*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] that integrates a set of libraries and exposes a user\-friendly high\-level interface\. [PAM](https://docs.oracle.com/cd/E23824_01/html/819-2145/pam-01.html) looks like a reasonably good example\.
+In a *Software Framework* or *Pluggable Component Framework* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] the *microkernel* \(*abstract core* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\) is a [*Facade*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] that integrates a set of libraries and exposes a user\-friendly high\-level interface\. [PAM](https://docs.oracle.com/cd/E23824_01/html/819-2145/pam-01.html) looks like a reasonably good example\.
 
 ### Virtualizer, Hypervisor, Container Orchestrator, [Distributed Runtime]({{< relref "../basic-metapatterns/services.md#distributed-runtime-backend-actors" >}})
 
@@ -153,7 +145,7 @@ The *microkernel* is a [*Facade*]({{< relref "../extension-metapatterns/orchestr
 <picture>
 <source srcset="/diagrams/Variants/4/Virtualizer.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/Virtualizer.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/4/Virtualizer.png" alt="Virtualizer" loading="lazy" width="840" height="383" style="width:100%"/>
+<img src="/diagrams/Variants/4/Virtualizer.png" alt="A virtualizer stands between user applications and several instances of an operating system each running on a separate computer." loading="lazy" width="840" height="383" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -167,7 +159,7 @@ The *microkernel* is a [*Facade*]({{< relref "../extension-metapatterns/orchestr
 <picture>
 <source srcset="/diagrams/Variants/4/Interpreter.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/Interpreter.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/4/Interpreter.png" alt="Interpreter" loading="lazy" width="902" height="303" style="width:100%"/>
+<img src="/diagrams/Variants/4/Interpreter.png" alt="Each script runs over its instance of an interprester. All the interpreters share a set of libraries." loading="lazy" width="902" height="303" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -181,7 +173,7 @@ User\-provided *scripts* are run by an *Interpreter* \[[GoF]({{< relref "../appe
 <picture>
 <source srcset="/diagrams/Variants/4/Config%20file.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/Config%20file.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/4/Config%20file.png" alt="Config file" loading="lazy" width="883" height="383" style="width:100%"/>
+<img src="/diagrams/Variants/4/Config%20file.png" alt="A configurator runs at a system's startup, reads a configuration file, and sets up a system of services." loading="lazy" width="883" height="383" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -195,7 +187,7 @@ User\-provided *scripts* are run by an *Interpreter* \[[GoF]({{< relref "../appe
 <picture>
 <source srcset="/diagrams/Variants/4/Saga%20engine.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/Saga%20engine.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/4/Saga%20engine.png" alt="Saga engine" loading="lazy" width="943" height="384" style="width:100%"/>
+<img src="/diagrams/Variants/4/Saga%20engine.png" alt="A saga engine calls several services while executing multiple short-lived sagas." loading="lazy" width="943" height="384" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -209,7 +201,7 @@ A [*Saga*]({{< relref "../extension-metapatterns/orchestrator.md#orchestrated-sa
 <picture>
 <source srcset="/diagrams/Variants/4/AUTOSAR%20classic.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/AUTOSAR%20classic.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/4/AUTOSAR%20classic.png" alt="AUTOSAR classic" loading="lazy" width="982" height="623" style="width:100%"/>
+<img src="/diagrams/Variants/4/AUTOSAR%20classic.png" alt="AUTOSAR Classic defines three segmented layers: applications, runtime environment with a shared Virtual Functional Bus, and basic software with generic and hardware-specific services." loading="lazy" width="982" height="623" style="width:100%"/>
 </picture>
 </a>
 </figure>

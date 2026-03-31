@@ -24,7 +24,7 @@ Other cases are better solved by extracting the logic that manipulates multiple 
 <picture>
 <source srcset="/diagrams/Evolutions/Shards/Shards%20add%20Middleware.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Shards/Shards%20add%20Middleware.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Shards/Shards%20add%20Middleware.png" alt="Shards add Middleware" loading="lazy" width="1065" height="324" style="width:100%"/>
+<img src="/diagrams/Evolutions/Shards/Shards%20add%20Middleware.png" alt="A middleware manages shards and lets them communicate to each other." loading="lazy" width="1065" height="324" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -56,7 +56,7 @@ A *Middleware* transports messages between shards, checks their health and recov
 <picture>
 <source srcset="/diagrams/Evolutions/Shards/Shards%20add%20Load%20Balancer.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Shards/Shards%20add%20Load%20Balancer.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Shards/Shards%20add%20Load%20Balancer.png" alt="Shards add Load Balancer" loading="lazy" width="1026" height="423" style="width:100%"/>
+<img src="/diagrams/Evolutions/Shards/Shards%20add%20Load%20Balancer.png" alt="A sharding proxy relieves clients from the need to find the appropriate shard." loading="lazy" width="1026" height="423" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -78,7 +78,7 @@ The client application may know the address of the shard which serves it and con
 
 <ins>Cons</ins>: 
 
-- The extra network hop increases latency unless you deploy the *Sharding Proxy* as an [*Ambassador*]({{< relref "../../extension-metapatterns/proxy.md#on-the-client-side-ambassador" >}}) \[[DDS]({{< relref "../../appendices/books-referenced.md#dds" >}})\] co\-located with every client, which brings back the issue of client software updates\.
+- The extra network hop increases latency unless you deploy the *Sharding Proxy* as an [*Ambassador*]({{< relref "../../extension-metapatterns/proxy.md#on-the-client-side-ambassador" >}}) co\-located with every client, which brings back the issue of client software updates\.
 - The *Sharding Proxy* is a single point of failure unless [*replicated*]({{< relref "../../basic-metapatterns/shards.md#persistent-copy-replica" >}})\.
 
 
@@ -89,7 +89,7 @@ The client application may know the address of the shard which serves it and con
 <picture>
 <source srcset="/diagrams/Evolutions/Shards/Shards%20use%20Orchestrator.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Shards/Shards%20use%20Orchestrator.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Shards/Shards%20use%20Orchestrator.png" alt="Shards use Orchestrator" loading="lazy" width="1045" height="244" style="width:100%"/>
+<img src="/diagrams/Evolutions/Shards/Shards%20use%20Orchestrator.png" alt="The high-level logic of shards moves to a shared orchestrator which integrates the data stored within and processed by individual shards." loading="lazy" width="1045" height="244" style="width:100%"/>
 </picture>
 </a>
 </figure>

@@ -39,18 +39,13 @@ In [*choreographed*]({{< relref "../foundations-of-software-architecture/arrangi
 
 <ins>Known as:</ins> the list of aliases for the general metapattern\.
 
-<ins>Aspects:</ins> an optional list of roles the subject component may have\.
-
-<ins>Variants</ins> or <ins>examples:</ins> one or more lists of notable variations in, patterns or common architectures that derive from or implement the subject metapattern\.
-
 <ins>Structure:</ins> a short description of the structure of the metapattern\.
 
-<ins>Type:</ins> Root, main, extension or implementation\.
+<ins>Type:</ins> system topology, extension component, or implementation\.
 
-- The *root* of all the metapatterns is [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}), as any system both looks monolithic to its clients and comes about through division of the continuous \(monolithic\) design space\.
-- Main metapatterns \([*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}), [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) and few others derived from them\) stay at the *core* of any architecture\.
-- An *extension* adds components to an architecture, built around a main metapattern, to modify its properties\.
-- An *implementation* metapattern shows the internal structure of a component which is usually treated as monolithic\.
+- A *system topology* \([*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}), [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) and few others derived from them\) makes the backbone of any system\.
+- An *extension component* is an addition to a *system topology* which modifies its properties\.
+- An *implementation* shows the internal structure of a component, indistinguishable to its clients\.
 
 
 A short *table of benefits and drawbacks*\.
@@ -71,7 +66,7 @@ This section may also discuss optimization techniques that apply to the metapatt
 
 Some components of the metapattern depend on other components\. If a component changes, everything that depends on it may need to be re\-tested with the updated version\. If a component’s interface changes, all the components that depend on it must be updated\. Therefore, components that evolve quickly should depend on others, not the other way around\.
 
-Some patterns, like [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}), use [*Adapters*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) to break dependencies\. An *Adapter* depends on components on both sides of itself, making those components independent of each other\. The *Adapters* are small enough to update quickly and may easily be replaced with stubs for testing or running a component in isolation\.
+Some patterns, like [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}), use [*Adapters*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) to break dependencies\. An *Adapter* depends on components on both sides of itself, making those components independent of each other\. The *Adapters* are small enough to update quickly and may easily be replaced with stubs for testing or running a component in isolation\.
 
 ### Applicability
 

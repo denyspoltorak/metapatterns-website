@@ -13,7 +13,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 There are a couple of *Pipeline*\-specific evolutions:
 
-- The first service of the *Pipeline* can be promoted to [*Front Controller*]({{< relref "../../extension-metapatterns/orchestrator.md#inexact-front-controller" >}}) \[[SAHP]({{< relref "../../appendices/books-referenced.md#sahp" >}})\] which tracks status updates for every request it handles\.
+- The first service of the *Pipeline* can be promoted to [*Front Controller*]({{< relref "../../extension-metapatterns/orchestrator.md#inexact-front-controller" >}}) which tracks status updates for every request it handles\.
 - Adding an [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) turns a [*Pipeline*]({{< relref "../../basic-metapatterns/pipeline.md" >}}) into [*Services*]({{< relref "../../basic-metapatterns/services.md" >}})\. As the high\-level business logic moves to the orchestration layer, the services don’t need to interact directly, the interservice communication channels disappear and the system becomes identical to [*Orchestrated Services*]({{< relref "../../extension-metapatterns/orchestrator.md" >}})\.
 
 
@@ -24,7 +24,7 @@ There are a couple of *Pipeline*\-specific evolutions:
 <picture>
 <source srcset="/diagrams/Evolutions/Services/Pipeline%20promote%20Front%20Controller.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Services/Pipeline%20promote%20Front%20Controller.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png" alt="Pipeline promote Front Controller" loading="lazy" width="1299" height="347" style="width:100%"/>
+<img src="/diagrams/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png" alt="The first service of a pipeline subscribes to notifications from other services and thus becomes a Front Controller." loading="lazy" width="1299" height="347" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -59,7 +59,7 @@ If request processing steps require heavy calculations or manual action, clients
 <picture>
 <source srcset="/diagrams/Evolutions/Services/Pipeline%20use%20Orchestrator.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Services/Pipeline%20use%20Orchestrator.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Services/Pipeline%20use%20Orchestrator.png" alt="Pipeline use Orchestrator" loading="lazy" width="1303" height="384" style="width:100%"/>
+<img src="/diagrams/Evolutions/Services/Pipeline%20use%20Orchestrator.png" alt="Adding an orchestrator transforms a pipeline into Orchestrated Services." loading="lazy" width="1303" height="384" style="width:100%"/>
 </picture>
 </a>
 </figure>

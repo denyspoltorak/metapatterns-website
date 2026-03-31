@@ -1,7 +1,7 @@
 +++
-weight = 6
+weight = 5
 title = "Metapatterns"
-description = "A metapattern is a group of patterns related in their structure and function."
+description = "This chapter explores metapatterns (clusters of closely related patterns), design space, and the abstractness-subdomain-sharding system of coordinates."
 images = ["/diagrams/Web/og/Metapatterns.png"]
 [sitemap]
   priority = 0.8
@@ -51,7 +51,7 @@ Our set of architectural patterns is still not known to be complete, is not smal
 
 ## The system of coordinates
 
-Inventing a generic coordinate system to fit any pattern’s representation, from [*Iterator*](https://refactoring.guru/design-patterns/iterator) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] to [*Half\-Sync/Half\-Async*]({{< relref "../basic-metapatterns/monolith.md#inexact-half-synchalf-async-coroutines-or-fibers" >}}) \[[POSA2]({{< relref "../appendices/books-referenced.md#posa2" >}})\], may be too hard, but we surely can find something for architectural patterns, as all of them share the scope, namely the system as a whole\. Which dimensions an implementation of a system would usually be plotted along?
+Inventing a generic coordinate system to fit any pattern’s representation, from [*Iterator*](https://refactoring.guru/design-patterns/iterator) to [*Half\-Sync/Half\-Async*]({{< relref "../basic-metapatterns/monolith.md#inexact-half-synchalf-async-coroutines-or-fibers" >}}), may be too hard, but we surely can find something for architectural patterns, as all of them share the scope, namely the system as a whole\. Which dimensions an implementation of a system would usually be plotted along?
 
 1.  *Abstractness* – there are high\-level [use cases]({{< relref "../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) and low\-level details\. A single highly abstract operation unrolls into many lower\-level ones: Python scripts run on top of a C runtime and assembly drivers; orchestrators call API methods of services, which themselves run SQL queries towards their databases which are full of low\-level computations and disk operations\.
 2.  *Subdomain* – any complex system manages multiple subdomains\. An OS needs to deal with a variety of peripheral devices and protocols: a video card driver has very little resemblance to an HDD driver or to the TCP/IP stack\. An enterprise has multiple departments, each operating a software that fits its needs\.
@@ -65,7 +65,7 @@ We’ll draw the abstractness axis vertically with higher\-level modules positio
 <picture>
 <source srcset="/diagrams/Intro/CQRS%20with%20notes.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Intro/CQRS%20with%20notes.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Intro/CQRS%20with%20notes.png" alt="CQRS with notes" loading="lazy" width="981" height="674" style="width:100%"/>
+<img src="/diagrams/Intro/CQRS%20with%20notes.png" alt="A diagram of a CQRS system in abstractness-subdomain-sharding coordinates with a detailed legend." loading="lazy" width="981" height="674" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -95,7 +95,7 @@ Let’s consider the following structure:
 <picture>
 <source srcset="/diagrams/Intro/Example-Undefined.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Intro/Example-Undefined.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Intro/Example-Undefined.png" alt="Example-Undefined" loading="lazy" width="943" height="223" style="width:93%"/>
+<img src="/diagrams/Intro/Example-Undefined.png" alt="Two high-level components interact with one low-level component." loading="lazy" width="943" height="223" style="width:93%"/>
 </picture>
 </a>
 </figure>
@@ -112,7 +112,7 @@ It features two \(or more in real life\) high\-level modules that communicate wi
 <picture>
 <source srcset="/diagrams/Intro/Example-Defined.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Intro/Example-Defined.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Intro/Example-Defined.png" alt="Example-Defined" loading="lazy" width="863" height="223" style="width:100%"/>
+<img src="/diagrams/Intro/Example-Defined.png" alt="Diagrams for Services with a Middleware, Services with a shared database and Model-View-Controller." loading="lazy" width="863" height="223" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -121,9 +121,9 @@ My idea of grouping patterns by structure seems to have backfired – we got thr
 
 Notwithstanding, each of the patterns we found is a part of a distinct cluster:
 
-- [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) is also known as *\(Message\) Broker* \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}}), [EIP]({{< relref "../appendices/books-referenced.md#eip" >}}), [MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] and is an integral part of *Message Bus* \[[EIP]({{< relref "../appendices/books-referenced.md#eip" >}})\], *Service Mesh* \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\], *Event Mediator* \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\], *Enterprise Service Bus* \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] and *Space\-Based Architecture* \[[SAP]({{< relref "../appendices/books-referenced.md#sap" >}}), [FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\]\.
-- *Shared Database* is a kind of [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) \[[POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\] \(*Shared Memory*, *Shared File System*\), and the foundation for *Blackboard* \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\], *Space\-Based Architecture* \[[SAP]({{< relref "../appendices/books-referenced.md#sap" >}}), [FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\], and *Service\-Based Architecture* \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\]\.
-- *Model\-View\-Controller* \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\] is a special kind of [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) \(aka *Ports and Adapters*, *Onion Architecture* and *Clean Architecture*\) which itself is derived from [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) \[[PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\] \(*Addons*, *Plug\-In Architecture* \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\], or the misnomer *Microkernel Architecture* \[[SAP]({{< relref "../appendices/books-referenced.md#sap" >}}), [FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\]\)\.
+- [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) is also known as *\(Message\) Broker* \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}}), [EIP]({{< relref "../appendices/books-referenced.md#eip" >}}), [MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] and is an integral part of [*Message Bus*]({{< relref "../extension-metapatterns/middleware.md#message-bus" >}}) \[[EIP]({{< relref "../appendices/books-referenced.md#eip" >}})\], [*Service Mesh*]({{< relref "../extension-metapatterns/middleware.md#service-mesh" >}}) \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\], [*Event Mediator*]({{< relref "../extension-metapatterns/middleware.md#event-mediator" >}}) \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\], [*Enterprise Service Bus*]({{< relref "../extension-metapatterns/middleware.md#enterprise-service-bus-esb" >}}) \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] and [*Space\-Based Architecture*]({{< relref "../extension-metapatterns/sandwich.md#space-based-architecture" >}}) \[[SAP]({{< relref "../appendices/books-referenced.md#sap" >}}), [FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\]\.
+- *Shared Database* is a kind of [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) \[[POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\] \([*Shared Memory*]({{< relref "../extension-metapatterns/shared-repository.md#shared-memory" >}}), [*Shared File System*]({{< relref "../extension-metapatterns/shared-repository.md#shared-file-system" >}})\), and the foundation for [*Blackboard*]({{< relref "../extension-metapatterns/shared-repository.md#blackboard" >}}) \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\], [*Space\-Based Architecture*]({{< relref "../extension-metapatterns/sandwich.md#space-based-architecture" >}}) \[[SAP]({{< relref "../appendices/books-referenced.md#sap" >}}), [FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\], and [*Service\-Based Architecture*]({{< relref "../extension-metapatterns/sandwich.md#service-based-architecture" >}}) \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\]\.
+- *Model\-View\-Controller* \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\] is a special kind of [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) \(aka [*Ports and Adapters*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#ports-and-adapters-hexagonal-architecture" >}}), [*Onion Architecture* and *Clean Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#ddd-style-hexagonal-architecture-onion-architecture-clean-architecture" >}})\) which itself is derived from [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) \[[PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\] \(*Addons*, *Plug\-In Architecture* \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\], or the [misnomer]({{< relref "../analytics/ambiguous-patterns.md#microkernel" >}}) *Microkernel Architecture* \[[SAP]({{< relref "../appendices/books-referenced.md#sap" >}}), [FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\]\)\.
 
 
 Our touching on a single geometry of structural diagrams revealed a web of 20 or so pattern names that spreads all around\. With such a pace there is a hope of exploring the whole fabric which is known as *pattern language* \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}}), [POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA2]({{< relref "../appendices/books-referenced.md#posa2" >}}), [POSA5]({{< relref "../appendices/books-referenced.md#posa5" >}})\]\.

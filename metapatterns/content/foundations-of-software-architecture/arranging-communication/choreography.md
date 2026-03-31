@@ -1,7 +1,7 @@
 +++
 weight = 3
 title = "Choreography"
-description = "Components communicate with each other without any explicit supervisor."
+description = "This section discusses choreography, where a system component processes inputs and produces outputs without any knowledge about other components."
 images = ["/diagrams/Web/og/Choreography.png"]
 [sitemap]
   priority = 0.5
@@ -9,14 +9,14 @@ images = ["/diagrams/Web/og/Choreography.png"]
 
 # Choreography {anchor=false}
 
-Another integration option is to build a [*Pipeline*]({{< relref "../../basic-metapatterns/pipeline.md" >}}) to pass every client’s request through a chain of components:
+Another integration option, named *choreography* after seemingly spontaneous interactions between dancers, is to build a [*Pipeline*]({{< relref "../../basic-metapatterns/pipeline.md" >}}) to pass every client’s request through a chain of components:
 
 <figure>
 <a href="/diagrams/Communication/Services%20to%20Pipeline.png">
 <picture>
 <source srcset="/diagrams/Communication/Services%20to%20Pipeline.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Services%20to%20Pipeline.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Services%20to%20Pipeline.png" alt="Services to Pipeline" loading="lazy" width="1063" height="223" style="width:100%"/>
+<img src="/diagrams/Communication/Services%20to%20Pipeline.png" alt="After a monolith is subdivided into services, the services are assembled into a pipeline." loading="lazy" width="1063" height="223" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -30,7 +30,7 @@ On the bright side, there is no communication overhead caused by response messag
 <picture>
 <source srcset="/diagrams/Communication/Pipeline%20Enricher.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Pipeline%20Enricher.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Pipeline%20Enricher.png" alt="Pipeline Enricher" loading="lazy" width="863" height="223" style="width:100%"/>
+<img src="/diagrams/Communication/Pipeline%20Enricher.png" alt="A request collects data from every service in a pipeline as it passes those services." loading="lazy" width="863" height="223" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -42,7 +42,7 @@ Latency may also be suboptimal as parallelizing execution of a request is easier
 <picture>
 <source srcset="/diagrams/Communication/Pipeline%20Not%20Parallel.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Pipeline%20Not%20Parallel.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Pipeline%20Not%20Parallel.png" alt="Pipeline Not Parallel" loading="lazy" width="1103" height="283" style="width:100%"/>
+<img src="/diagrams/Communication/Pipeline%20Not%20Parallel.png" alt="An Orchestrator can run subrequests in parallel which is impossible for a sequential pipeline." loading="lazy" width="1103" height="283" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -54,21 +54,21 @@ Still another trouble with choreography comes from its weakness in error process
 <picture>
 <source srcset="/diagrams/Communication/Pipeline%20Error.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Pipeline%20Error.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Pipeline%20Error.png" alt="Pipeline Error" loading="lazy" width="863" height="231" style="width:100%"/>
+<img src="/diagrams/Communication/Pipeline%20Error.png" alt="Rollback of changes done by services arranged into a pipeline." loading="lazy" width="863" height="231" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
 ## Early response
 
-The ordinary mode of action for a pipeline – sending the final results of processing to the client – requires either for the tail of the pipeline to send data to its head or for existence of a stateful intermediate component – [*Gateway*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) – to receive the client’s request, forward it to the head of the pipeline, wait on the pipeline’s tail for the result of processing, and return it to the client\. That is necessary because a client would usually open a single connection which is impossible to share between multiple services, namely the \(receiving\) head and \(sending\) tail of the pipeline\.
+The ordinary mode of action for a pipeline – sending the final results of processing to the client – requires either for the tail of the pipeline to send data to its head or for existence of a stateful intermediate component – [*Gateway*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) – to receive the client’s request, forward it to the head of the pipeline, wait on the pipeline’s tail for the result of processing, and return it to the client\. That is necessary because a client would usually open a single connection which is impossible to share between multiple services, namely the \(receiving\) head and \(sending\) tail of the pipeline\.
 
 <figure>
 <a href="/diagrams/Communication/Pipeline%20Gateway.png">
 <picture>
 <source srcset="/diagrams/Communication/Pipeline%20Gateway.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Pipeline%20Gateway.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Pipeline%20Gateway.png" alt="Pipeline Gateway" loading="lazy" width="1123" height="323" style="width:100%"/>
+<img src="/diagrams/Communication/Pipeline%20Gateway.png" alt="The component that receives a client request should send back the response. It can be a dedicated Gateway or the first service of a looped pipeline." loading="lazy" width="1123" height="323" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -80,7 +80,7 @@ The gateway, if used, may parallelize processing of [scatter or gather](https://
 <picture>
 <source srcset="/diagrams/Communication/Gateway%20to%20API%20Gateway.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Gateway%20to%20API%20Gateway.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Gateway%20to%20API%20Gateway.png" alt="Gateway to API Gateway" loading="lazy" width="1123" height="324" style="width:100%"/>
+<img src="/diagrams/Communication/Gateway%20to%20API%20Gateway.png" alt="An API Gateway runs subrequests in parallel while a pipeline runs them consecutively by passing a message through a chain of services." loading="lazy" width="1123" height="324" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -92,12 +92,12 @@ It is possible to avoid both adding a *Gateway* and having the cyclic dependency
 <picture>
 <source srcset="/diagrams/Communication/Pipeline%20Early%20Response.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Pipeline%20Early%20Response.negated.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Pipeline%20Early%20Response.png" alt="Pipeline Early Response" loading="lazy" width="823" height="265" style="width:100%"/>
+<img src="/diagrams/Communication/Pipeline%20Early%20Response.png" alt="The first service of a pipeline responds to the client immediately while forwarding the client's request to other services, which will eventually produce the result." loading="lazy" width="823" height="265" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
-*Early response* allows for choreography to shine in its purest form: with extensibility, high performance, but also high latency\. A similar approach may be used in [*Service\-Based Architecture*]({{< relref "../../basic-metapatterns/services.md#service-based-architecture-sba" >}}) \[[FSA]({{< relref "../../appendices/books-referenced.md#fsa" >}})\] \(aka *Macroservices*\) [for communication between the services](https://learn.microsoft.com/en-us/azure/architecture/patterns/choreography) \(*bounded contexts*\) if they only need to notify each other of events without waiting for responses\.
+*Early response* allows for choreography to shine in its purest form: with extensibility, high performance, but also high latency\. A similar approach may be used in [*Service\-Based Architecture*]({{< relref "../../basic-metapatterns/services.md#service-based-architecture-sba-macroservices" >}}) \(aka *Macroservices*\) [for communication between the services](https://learn.microsoft.com/en-us/azure/architecture/patterns/choreography) \(*bounded contexts*\) if they only need to notify each other of events without waiting for responses\.
 
 ## Dependencies
 
@@ -110,31 +110,31 @@ If services communicate through commands, each service depends on all the direct
 <picture>
 <source srcset="/diagrams/Communication/Downstream%20Dependencies.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Downstream%20Dependencies.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Downstream%20Dependencies.png" alt="Downstream Dependencies" loading="lazy" width="823" height="425" style="width:100%"/>
+<img src="/diagrams/Communication/Downstream%20Dependencies.png" alt="Adding an upstream component in a command-based pipeline." loading="lazy" width="823" height="425" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
-Upstream dependencies come from the [publish/subscribe](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) model where each service broadcasts notifications about what it has done to any interested subscriber\. This way of building systems engines [*Event\-Driven Architecture*]({{< relref "../../basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}}) \[[FSA]({{< relref "../../appendices/books-referenced.md#fsa" >}})\] which is used in high\-load backends\. Extending or truncating an already implemented request processing tree is as easy as adding or removing subscribers to existing events but the creation of a new event source will require changes in the downstream components\. The easy addition of downstream branches supports new customer experiences and analytical features which business is hungry for\.
+Upstream dependencies come from the [publish/subscribe](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) model where each service broadcasts notifications about what it has done to any interested subscriber\. This way of building systems engines [*Event\-Driven Architecture*]({{< relref "../../basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}}) which is used in high\-load backends\. Extending or truncating an already implemented request processing tree is as easy as adding or removing subscribers to existing events but the creation of a new event source will require changes in the downstream components\. The easy addition of downstream branches supports new customer experiences and analytical features which business is hungry for\.
 
 <figure>
 <a href="/diagrams/Communication/Upstream%20Dependencies.png">
 <picture>
 <source srcset="/diagrams/Communication/Upstream%20Dependencies.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Upstream%20Dependencies.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Upstream%20Dependencies.png" alt="Upstream Dependencies" loading="lazy" width="783" height="524" style="width:100%"/>
+<img src="/diagrams/Communication/Upstream%20Dependencies.png" alt="Downstream services are easily added to a pub/sub pipeline, turning it into a tree." loading="lazy" width="783" height="524" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
-The final option is for the entire pipeline to use a uniform message format \([*Stamp Coupling*]({{< relref "../../extension-metapatterns/shared-repository.md#inexact-stamp-coupling" >}}) \[[SAHP]({{< relref "../../appendices/books-referenced.md#sahp" >}})\]\) which often contains one dedicated field per service involved\. This way a service depends only on the message header \(with the list of the fields and a record id\) and the format of the single field it reads \(stores data\) or writes \(retrieves data as *Content Enricher* \[[EIP]({{< relref "../../appendices/books-referenced.md#eip" >}})\]\)\. That works well with system\-wide queries but binds all the services to the schema of the message in a way similar to accessing a shared database \(to be discussed [below]({{< relref "../../foundations-of-software-architecture/arranging-communication/shared-data.md" >}})\)\. Such an architecture decouples the services to the extent that any of them can be freely added or removed, together with the message field\(s\) it fills or reads\.
+The final option is for the entire pipeline to use a uniform message format \([*Stamp Coupling*]({{< relref "../../extension-metapatterns/shared-repository.md#inexact-stamp-coupling" >}})\) which often contains one dedicated field per service involved\. This way a service depends only on the message header \(with the list of the fields and a record id\) and the format of the single field it reads \(stores data\) or writes \(retrieves data as *Content Enricher* \[[EIP]({{< relref "../../appendices/books-referenced.md#eip" >}})\]\)\. That works well with system\-wide queries but binds all the services to the schema of the message in a way similar to accessing a shared database \(to be discussed [below]({{< relref "../../foundations-of-software-architecture/arranging-communication/shared-data.md" >}})\)\. Such an architecture decouples the services to the extent that any of them can be freely added or removed, together with the message field\(s\) it fills or reads\.
 
 <figure>
 <a href="/diagrams/Communication/Shared%20Message%20Format.png">
 <picture>
 <source srcset="/diagrams/Communication/Shared%20Message%20Format.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Shared%20Message%20Format.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Shared%20Message%20Format.png" alt="Shared Message Format" loading="lazy" width="963" height="243" style="width:100%"/>
+<img src="/diagrams/Communication/Shared%20Message%20Format.png" alt="Each component depends on the message header and the message field(s) it accesses." loading="lazy" width="963" height="243" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -144,7 +144,7 @@ The final option is for the entire pipeline to use a uniform message format \([*
 <picture>
 <source srcset="/diagrams/Communication/Add%20Remove%20with%20Shared%20Message.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Add%20Remove%20with%20Shared%20Message.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Add%20Remove%20with%20Shared%20Message.png" alt="Add Remove with Shared Message" loading="lazy" width="1043" height="223" style="width:100%"/>
+<img src="/diagrams/Communication/Add%20Remove%20with%20Shared%20Message.png" alt="A service in a pipeline with a shared message format can be replaced with another service if the message fields which it uses are also replaced." loading="lazy" width="1043" height="223" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -156,7 +156,7 @@ A peculiar feature of choreography is the ability to cut and cross\-link pipelin
 <picture>
 <source srcset="/diagrams/Communication/Cross-link%20Pipeline.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Cross-link%20Pipeline.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Cross-link%20Pipeline.png" alt="Cross-link Pipeline" loading="lazy" width="1243" height="226" style="width:100%"/>
+<img src="/diagrams/Communication/Cross-link%20Pipeline.png" alt="Cross-linking independent pipelines by establishing new data or event streams." loading="lazy" width="1243" height="226" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -170,7 +170,7 @@ It is very common for a service to participate in multiple pipelines, especially
 <picture>
 <source srcset="/diagrams/Communication/Multi-choreography.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Multi-choreography.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Multi-choreography.png" alt="Multi-choreography" loading="lazy" width="943" height="223" style="width:100%"/>
+<img src="/diagrams/Communication/Multi-choreography.png" alt="A set of services participates in multiple pipelines." loading="lazy" width="943" height="223" style="width:100%"/>
 </picture>
 </a>
 </figure>

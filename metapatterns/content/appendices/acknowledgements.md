@@ -1,7 +1,7 @@
 +++
 weight = 1
 title = "Acknowledgements"
-description = "Thanks to the people who made Architectural Metapatterns possible."
+description = "Thanks to all the people who made the Architectural Metapatterns book possible."
 images = ["/diagrams/Web/og/Favicon-plain.png"]
 [sitemap]
   disable = true
@@ -20,7 +20,7 @@ Thanks to Max Grom and other participants of the Ukrainian software architecture
 
 Many thanks to Lars Noodén for editing the entire book\.
 
-I must thank my mother and our neighbor Halyna for helping me throughout the war\.
+I must thank my mother and our neighbor Halyna for helping me throughout the war\. Thanks to Yaroslav for his support\.
 
 I want to thank everybody who prayed for me\.
 

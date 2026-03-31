@@ -1,7 +1,7 @@
 +++
 weight = 3
 title = "Dependency inversion in architectural patterns"
-description = "Plugins, Hexagonal Architecture, Microkernel, and Hierarchy rely on dependency inversion. Other patterns, such as Layers and Services, occasionally use it."
+description = "This section discusses dependency inversion in Plugins, Hexagonal Architecture, Microkernel, Hierarchy, Layers, and Services."
 images = ["/diagrams/Web/og/DI.png"]
 [sitemap]
   priority = 0.5
@@ -20,7 +20,7 @@ Let’s see how dependency inversion is used on system level\.
 <picture>
 <source srcset="/diagrams/Conclusion/DI-1.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/DI-1.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/DI-1.png" alt="DI-1" loading="lazy" width="1253" height="264" style="width:100%"/>
+<img src="/diagrams/Conclusion/DI-1.png" alt="Plugins depend on the core's SPIs. There are multiple versions of plugins. Adapters of Hexagonal Architecture depend on both the core's SPIs and APIs of the adapted components." loading="lazy" width="1253" height="264" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -30,7 +30,7 @@ Both [*Plugins*]({{< relref "../../implementation-metapatterns/plugins.md" >}}) 
 It is the nature of the polymorphic components that distinguishes the patterns:
 
 - [*Plugins*]({{< relref "../../implementation-metapatterns/plugins.md" >}}) allow for small pieces of code, typically contributed by outside developers, to provide customizable parts of the system’s algorithms and decision making\. Oftentimes the core team has no idea of how many diverse plugins will be written for their product\.
-- [*Hexagonal Architecture*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md" >}}) is about breaking dependency of the core on external libraries or services by employing [*adapters*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}})\. Each adapter depends both on the core’s SPI and on the API of the component which it adapts\. As interfaces and contracts vary among vendors and even versions of software, which we want to be interchangeable, we need adapters to wrap the external components to make them look identical to our core\. Besides, [*stub* or *mock*](https://stackoverflow.com/questions/3459287/whats-the-difference-between-a-mock-stub) adapters help develop and test the core in isolation\.
+- [*Hexagonal Architecture*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md" >}}) is about breaking dependency of the core on external libraries or services by employing [*adapters*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}})\. Each adapter depends both on the core’s SPI and on the API of the component which it adapts\. As interfaces and contracts vary among vendors and even versions of software, which we want to be interchangeable, we need adapters to wrap the external components to make them look identical to our core\. Besides, [*stub* or *mock*](https://stackoverflow.com/questions/3459287/whats-the-difference-between-a-mock-stub) adapters help develop and test the core in isolation\.
 
 
 ## Patterns that often rely on it
@@ -40,16 +40,16 @@ It is the nature of the polymorphic components that distinguishes the patterns:
 <picture>
 <source srcset="/diagrams/Conclusion/DI-2.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/DI-2.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/DI-2.png" alt="DI-2" loading="lazy" width="1323" height="683" style="width:100%"/>
+<img src="/diagrams/Conclusion/DI-2.png" alt="In an operating system, device drivers depend on the kernel's SPIs. In a hierarchy, child nodes depend on their parent's SPI. Cell-Based Architecture uses adapters to break dependencies between Cells." loading="lazy" width="1323" height="703" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
 A few more metapatterns tend to use this approach to earn its benefits, even though dependency inversion is not among their integral features:
 
-- [*Microkernel*]({{< relref "../../implementation-metapatterns/microkernel.md" >}}), yet another metapattern derived from [*Plugins*]({{< relref "../../implementation-metapatterns/plugins.md" >}}), distributes resources of *providers* among *consumers*\. Polymorphism is crucial for some of its variants, including [*Operating System*]({{< relref "../../implementation-metapatterns/microkernel.md#operating-system" >}}), but may rarely benefit others, such as [*Software Framework*]({{< relref "../../implementation-metapatterns/microkernel.md#software-framework" >}})\.
+- [*Microkernel*]({{< relref "../../implementation-metapatterns/microkernel.md" >}}), yet another metapattern derived from [*Plugins*]({{< relref "../../implementation-metapatterns/plugins.md" >}}), distributes resources of *providers* among *consumers*\. Polymorphism is crucial for some of its variants, including [*Operating System*]({{< relref "../../implementation-metapatterns/microkernel.md#operating-system" >}}), but may rarely benefit others, such as [*Software Framework*]({{< relref "../../implementation-metapatterns/microkernel.md#software-framework-pluggable-component-framework" >}})\.
 - [*Top\-Down Hierarchy*]({{< relref "../../fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}}) distributes responsibility over a tree of components\. If the nodes of the tree are polymorphic, they are easier to operate, and there is dependency inversion\. However, in practice, a parent node may often be strongly coupled to the types of its children and access them directly\.
-- In another kind of [*Hierarchy*]({{< relref "../../fragmented-metapatterns/hierarchy.md" >}}), namely [*Cell\-Based Architecture*]({{< relref "../../fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services" >}}) \(aka *Services of Services*\), each [*Cell*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md#examples--cell" >}}) [may employ](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md) a [*Cell Gateway*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) and outbound [*Adapters*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) to isolate its business logic from the environment – just like [*Hexagonal Architecture*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md" >}}) does for its monolithic core\.
+- In another kind of [*Hierarchy*]({{< relref "../../fragmented-metapatterns/hierarchy.md" >}}), namely [*Cell\-Based Architecture*]({{< relref "../../fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services" >}}) \(aka *Services of Services*\), each [*Cell*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}}) [may employ](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md) a [*Cell Gateway*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) and outbound [*Adapters*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) or [*Ambassador Plugins*]({{< relref "../../implementation-metapatterns/plugins.md#ambassador-plugin-logic-extension" >}}) to isolate its business logic from the environment – just like its parent [*Hexagonal Architecture*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md" >}}) does for a monolithic core\.
 
 
 ## Patterns that may use it
@@ -59,7 +59,7 @@ A few more metapatterns tend to use this approach to earn its benefits, even tho
 <picture>
 <source srcset="/diagrams/Conclusion/DI-3.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/DI-3.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/DI-3.png" alt="DI-3" loading="lazy" width="1323" height="372" style="width:100%"/>
+<img src="/diagrams/Conclusion/DI-3.png" alt="Standard APIs are used between frontend and backend, and backend and database. CQRS views and adapters protect a service from dependencies on other services." loading="lazy" width="1323" height="372" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -67,7 +67,7 @@ A few more metapatterns tend to use this approach to earn its benefits, even tho
 Finally, two basic architectures, [*Layers*]({{< relref "../../basic-metapatterns/layers.md" >}}) and [*Services*]({{< relref "../../basic-metapatterns/services.md" >}}), may resort to something similar to dependency inversion to decouple their constituents:
 
 - We often see a higher layer to depend on and a lower layer to implement a standardized interface, like POSIX or SQL, to achieve *interoperability* with other implementations \(which is yet another wording for polymorphism\)\.
-- A service may follow the concept of [*Hexagonal Architecture*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md" >}}) by using an [*Anti\-Corruption Layer*]({{< relref "../../basic-metapatterns/services.md#dependencies" >}}) \[[DDD]({{< relref "../../appendices/books-referenced.md#ddd" >}})\] or [*CQRS Views*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) \[[MP]({{< relref "../../appendices/books-referenced.md#mp" >}})\] as [*Adapters*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) that protect it from changes in other system components\.
+- A service may follow the concept of [*Hexagonal Architecture*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md" >}}) by using an [*Anti\-Corruption Layer*]({{< relref "../../basic-metapatterns/services.md#dependencies" >}}) or [*CQRS Views*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) as [*Adapters*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) that protect it from changes in other system components\.
 
 
 ## Summary
@@ -75,7 +75,7 @@ Finally, two basic architectures, [*Layers*]({{< relref "../../basic-metapattern
 Many architectural patterns employ dependency inversion by adding:
 
 - an *interface* to enable polymorphism of their lower\-level components or 
-- [*Adapters*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository" >}}) to protect a component from changes in its dependencies\.
+- [*Adapters*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) to protect a component from changes in its dependencies\.
 
 
 The two approaches apply in different circumstances:

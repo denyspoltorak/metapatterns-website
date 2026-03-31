@@ -1,7 +1,7 @@
 +++
 weight = 2
 title = "Deconstructing patterns"
-description = "Both SOLID principles, Gang of Four design patterns, and architectural metapatterns emerge from the interplay of coupling and cohesion."
+description = "This section analyzes SOLID principles, Gang of Four design patterns, and architectural metapatterns from the basic principles of coupling and cohesion."
 images = ["/diagrams/Web/og/Heart2.png"]
 [sitemap]
   priority = 0.5
@@ -80,7 +80,7 @@ Finally, let’s close the book by iterating over the metapatterns and looking i
 <picture>
 <source srcset="/diagrams/Heart/Basic.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Heart/Basic.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Heart/Basic.png" alt="Basic" loading="lazy" width="1206" height="663" style="width:100%"/>
+<img src="/diagrams/Heart/Basic.png" alt="Diagrams of Monolith, Shards, Layers, Services, and Pipeline, with cohesive and decoupled components highlighted." loading="lazy" width="1206" height="663" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -106,7 +106,7 @@ Finally, let’s close the book by iterating over the metapatterns and looking i
 <picture>
 <source srcset="/diagrams/Heart/Extension.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Heart/Extension.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Heart/Extension.png" alt="Extension" loading="lazy" width="1246" height="763" style="width:100%"/>
+<img src="/diagrams/Heart/Extension.png" alt="Diagrams of Services with a middleware, Services with a shared repository, Services with a proxy, Services with an orchestrator, and Sandwich, with cohesive and decoupled components highlighted." loading="lazy" width="1246" height="763" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -135,7 +135,7 @@ Finally, let’s close the book by iterating over the metapatterns and looking i
 <picture>
 <source srcset="/diagrams/Heart/Fragmented.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Heart/Fragmented.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Heart/Fragmented.png" alt="Fragmented" loading="lazy" width="1466" height="922" style="width:100%"/>
+<img src="/diagrams/Heart/Fragmented.png" alt="Diagrams of Layered Services, Services with Polyglot Persistence, Backends for Frontends, Service-Oriented Architecture, and Top-Down Hierarchy, with cohesive and decoupled components highlighted." loading="lazy" width="1466" height="922" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -160,7 +160,7 @@ Finally, let’s close the book by iterating over the metapatterns and looking i
 <picture>
 <source srcset="/diagrams/Heart/Implementation.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Heart/Implementation.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Heart/Implementation.png" alt="Implementation" loading="lazy" width="1406" height="444" style="width:100%"/>
+<img src="/diagrams/Heart/Implementation.png" alt="Diagrams of Plugins, Hexagonal Architecture, Microkernel, and Mesh, with cohesive and decoupled components highlighted." loading="lazy" width="1406" height="424" style="width:100%"/>
 </picture>
 </a>
 </figure>

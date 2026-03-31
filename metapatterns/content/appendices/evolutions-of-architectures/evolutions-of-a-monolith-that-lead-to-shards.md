@@ -24,7 +24,7 @@ One of the main drawbacks of the monolithic architecture is its lack of scalabil
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Mesh%20of%20Shards.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Mesh%20of%20Shards.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Mesh%20of%20Shards.png" alt="Monolith to Mesh of Shards" loading="lazy" width="1103" height="343" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Mesh%20of%20Shards.png" alt="Several instances of a monolith are run as intercommunicating shards, each of which holds a subset of the system's data." loading="lazy" width="1103" height="343" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -58,7 +58,7 @@ It is possible to run several instances of an application \(*shards*\), with eac
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Isolated%20Shards%20with%20Load%20Balancer.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Isolated%20Shards%20with%20Load%20Balancer.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Isolated%20Shards%20with%20Load%20Balancer.png" alt="Monolith to Isolated Shards with Load Balancer" loading="lazy" width="1073" height="423" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Isolated%20Shards%20with%20Load%20Balancer.png" alt="Multiple instances of a monolith, each a subset of the system's data, are run behind a sharding proxy." loading="lazy" width="1073" height="423" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -80,7 +80,7 @@ If all the data a user operates on, directly or indirectly, is never accessed by
 
 <ins>Cons</ins>: 
 
-- The *Sharding Proxy* is a single point of failure unless [*replicated*]({{< relref "../../basic-metapatterns/shards.md#persistent-copy-replica" >}}) and increases latency unless deployed as an [*Ambassador*]({{< relref "../../extension-metapatterns/proxy.md#on-the-client-side-ambassador" >}}) \[[DDS]({{< relref "../../appendices/books-referenced.md#dds" >}})\]\.
+- The *Sharding Proxy* is a single point of failure unless [*replicated*]({{< relref "../../basic-metapatterns/shards.md#persistent-copy-replica" >}}) and increases latency unless deployed as an [*Ambassador*]({{< relref "../../extension-metapatterns/proxy.md#on-the-client-side-ambassador" >}})\.
 
 
 ## Separate the data layer and add a Load Balancer
@@ -90,7 +90,7 @@ If all the data a user operates on, directly or indirectly, is never accessed by
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Stateless%20Shards%20with%20Shared%20DB.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Stateless%20Shards%20with%20Shared%20DB.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Stateless%20Shards%20with%20Shared%20DB.png" alt="Monolith to Stateless Shards with Shared DB" loading="lazy" width="1083" height="423" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Stateless%20Shards%20with%20Shared%20DB.png" alt="A monolith is transformed into stateless instances which run behind a load balancer and access a shared database." loading="lazy" width="1083" height="423" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -124,7 +124,7 @@ As data moves into a dedicated layer \([*Shared Database*]({{< relref "../../ext
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Instance%20per%20Client.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Instance%20per%20Client.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Instance%20per%20Client.png" alt="Monolith to Instance per Client" loading="lazy" width="1103" height="343" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Instance%20per%20Client.png" alt="Each user is allocated a temporary instance of a subsystem which loads their data at the start of the session and persists any changes to the database." loading="lazy" width="1103" height="343" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -166,7 +166,7 @@ In most cases *sharding* does not change much inside the application, thus the c
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%201.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%201.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%201.png" alt="Monolith to Shards - Further 1" loading="lazy" width="1244" height="363" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%201.png" alt="Diagrams of Layers with individual scaling, Services with a middleware and individual scaling, and pipeline scaled as a whole." loading="lazy" width="1244" height="363" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -182,7 +182,7 @@ There are specific evolutions of [*Shards*]({{< relref "../../basic-metapatterns
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%202.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%202.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%202.png" alt="Monolith to Shards - Further 2" loading="lazy" width="1243" height="346" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%202.png" alt="Diagrams of Space-Based Architecture that replicates data and Shards with multiple orchestrators." loading="lazy" width="1243" height="346" style="width:100%"/>
 </picture>
 </a>
 </figure>

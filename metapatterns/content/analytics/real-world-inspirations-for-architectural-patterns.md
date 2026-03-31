@@ -1,7 +1,7 @@
 +++
 weight = 4
 title = "Real-world inspirations for architectural patterns"
-description = "Styles and patterns of software architecture have real-world inspirations and parallels. Learning about them may help us to invent new patterns when needed."
+description = "This chapter discusses inspirations and parallels for architectural patterns found in the world around us, devices we use, and the code we write."
 images = ["/diagrams/Web/og/Real-world.png"]
 [sitemap]
   priority = 0.5
@@ -26,7 +26,7 @@ The [basic patterns]({{< relref "../basic-metapatterns/_index.md" >}}) lay the f
 <picture>
 <source srcset="/diagrams/Contents/Monolith.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Monolith.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Monolith.png" alt="Monolith" loading="lazy" width="1003" height="243" style="width:100%"/>
+<img src="/diagrams/Contents/Monolith.png" alt="A diagram of Monolith, with explanations." loading="lazy" width="1003" height="243" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -48,7 +48,7 @@ The [basic patterns]({{< relref "../basic-metapatterns/_index.md" >}}) lay the f
 <picture>
 <source srcset="/diagrams/Contents/Shards.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Shards.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Shards.png" alt="Shards" loading="lazy" width="783" height="243" style="width:100%"/>
+<img src="/diagrams/Contents/Shards.png" alt="A diagram of Shards, with explanations." loading="lazy" width="783" height="243" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -70,7 +70,7 @@ The [basic patterns]({{< relref "../basic-metapatterns/_index.md" >}}) lay the f
 <picture>
 <source srcset="/diagrams/Contents/Layers.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Layers.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Layers.png" alt="Layers" loading="lazy" width="783" height="243" style="width:95%"/>
+<img src="/diagrams/Contents/Layers.png" alt="A diagram of Layered Architecture, with explanations." loading="lazy" width="783" height="243" style="width:95%"/>
 </picture>
 </a>
 </figure>
@@ -90,7 +90,7 @@ The [basic patterns]({{< relref "../basic-metapatterns/_index.md" >}}) lay the f
 <picture>
 <source srcset="/diagrams/Contents/Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Services.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Services.png" alt="Services" loading="lazy" width="943" height="246" style="width:95%"/>
+<img src="/diagrams/Contents/Services.png" alt="A diagram of Services, with explanations." loading="lazy" width="943" height="246" style="width:95%"/>
 </picture>
 </a>
 </figure>
@@ -112,7 +112,7 @@ The [basic patterns]({{< relref "../basic-metapatterns/_index.md" >}}) lay the f
 <picture>
 <source srcset="/diagrams/Contents/Pipeline.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Pipeline.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Pipeline.png" alt="Pipeline" loading="lazy" width="1003" height="203" style="width:95%"/>
+<img src="/diagrams/Contents/Pipeline.png" alt="A diagram of Pipeline, with explanations." loading="lazy" width="1003" height="203" style="width:95%"/>
 </picture>
 </a>
 </figure>
@@ -138,7 +138,7 @@ An [extension pattern]({{< relref "../extension-metapatterns/_index.md" >}}) enc
 <picture>
 <source srcset="/diagrams/Contents/Middleware.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Middleware.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Middleware.png" alt="Middleware" loading="lazy" width="1003" height="263" style="width:100%"/>
+<img src="/diagrams/Contents/Middleware.png" alt="A diagram of Services with a middleware, with explanations." loading="lazy" width="1003" height="263" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -159,7 +159,7 @@ A [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) abstr
 <picture>
 <source srcset="/diagrams/Contents/Shared%20Repository.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Shared%20Repository.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Shared%20Repository.png" alt="Shared Repository" loading="lazy" width="963" height="243" style="width:100%"/>
+<img src="/diagrams/Contents/Shared%20Repository.png" alt="A diagram of Services with a shared repository, with explanations." loading="lazy" width="963" height="243" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -180,7 +180,7 @@ A [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.
 <picture>
 <source srcset="/diagrams/Contents/Proxy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Proxy.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Proxy.png" alt="Proxy" loading="lazy" width="1023" height="363" style="width:100%"/>
+<img src="/diagrams/Contents/Proxy.png" alt="A diagram of Services with a proxy, with explanations." loading="lazy" width="1023" height="363" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -200,7 +200,7 @@ A [*Proxy*]({{< relref "../extension-metapatterns/proxy.md" >}}) isolates a syst
 <picture>
 <source srcset="/diagrams/Contents/Orchestrator.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Orchestrator.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Orchestrator.png" alt="Orchestrator" loading="lazy" width="1023" height="263" style="width:100%"/>
+<img src="/diagrams/Contents/Orchestrator.png" alt="A diagram of Services with an orchestrator, with explanations." loading="lazy" width="1023" height="263" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -219,7 +219,7 @@ An [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) 
 <picture>
 <source srcset="/diagrams/Contents/Sandwich.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Sandwich.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Sandwich.png" alt="Sandwich" loading="lazy" width="743" height="243" style="width:91%"/>
+<img src="/diagrams/Contents/Sandwich.png" alt="A diagram of Sandwich Architecture, with explanations." loading="lazy" width="743" height="243" style="width:91%"/>
 </picture>
 </a>
 </figure>
@@ -242,7 +242,7 @@ A [fragmented pattern]({{< relref "../fragmented-metapatterns/_index.md" >}}) us
 <picture>
 <source srcset="/diagrams/Contents/Polyglot%20Persistence.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Polyglot%20Persistence.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Polyglot%20Persistence.png" alt="Polyglot Persistence" loading="lazy" width="1023" height="303" style="width:100%"/>
+<img src="/diagrams/Contents/Polyglot%20Persistence.png" alt="A diagram of Services with Polyglot Persistence, with explanations." loading="lazy" width="1023" height="303" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -261,7 +261,7 @@ A [fragmented pattern]({{< relref "../fragmented-metapatterns/_index.md" >}}) us
 <picture>
 <source srcset="/diagrams/Contents/Backends%20for%20Frontends.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Backends%20for%20Frontends.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Backends%20for%20Frontends.png" alt="Backends for Frontends" loading="lazy" width="1003" height="383" style="width:100%"/>
+<img src="/diagrams/Contents/Backends%20for%20Frontends.png" alt="A diagram of Services with Backends for Frontends, with explanations." loading="lazy" width="1003" height="383" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -280,7 +280,7 @@ A [fragmented pattern]({{< relref "../fragmented-metapatterns/_index.md" >}}) us
 <picture>
 <source srcset="/diagrams/Contents/Service-Oriented%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Service-Oriented%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture" loading="lazy" width="983" height="401" style="width:100%"/>
+<img src="/diagrams/Contents/Service-Oriented%20Architecture.png" alt="A diagram of Service-Oriented Architecture, with explanations." loading="lazy" width="983" height="401" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -299,7 +299,7 @@ A [fragmented pattern]({{< relref "../fragmented-metapatterns/_index.md" >}}) us
 <picture>
 <source srcset="/diagrams/Contents/Hierarchy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Hierarchy.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Hierarchy.png" alt="Hierarchy" loading="lazy" width="907" height="303" style="width:100%"/>
+<img src="/diagrams/Contents/Hierarchy.png" alt="A diagram of Hierarchy, with explanations." loading="lazy" width="907" height="303" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -307,7 +307,7 @@ A [fragmented pattern]({{< relref "../fragmented-metapatterns/_index.md" >}}) us
 [*Hierarchy*]({{< relref "../fragmented-metapatterns/hierarchy.md" >}}) distributes system’s complexity over multiple levels:
 
 - This is how large companies and armies are managed\.
-- Large projects are made of services which contain modules which contain classes which contain methods\.
+- Large projects [are made]({{< relref "../analytics/the-heart-of-software-architecture/cohesers-and-decouplers.md#building-a-hierarchy" >}}) of services which contain modules which contain classes which contain methods\.
 
 
 ## [Implementation metapatterns]({{< relref "../implementation-metapatterns/_index.md" >}})
@@ -321,7 +321,7 @@ An [implementation pattern]({{< relref "../implementation-metapatterns/_index.md
 <picture>
 <source srcset="/diagrams/Contents/Plugins.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Plugins.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Plugins.png" alt="Plugins" loading="lazy" width="843" height="403" style="width:100%"/>
+<img src="/diagrams/Contents/Plugins.png" alt="A diagram of Plugins Architecture, with explanations." loading="lazy" width="843" height="403" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -339,7 +339,7 @@ An [implementation pattern]({{< relref "../implementation-metapatterns/_index.md
 <picture>
 <source srcset="/diagrams/Contents/Hexagonal%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Hexagonal%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Hexagonal%20Architecture.png" alt="Hexagonal Architecture" loading="lazy" width="980" height="363" style="width:100%"/>
+<img src="/diagrams/Contents/Hexagonal%20Architecture.png" alt="A diagram of Hexagonal Architecture, with explanations." loading="lazy" width="980" height="483" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -347,8 +347,8 @@ An [implementation pattern]({{< relref "../implementation-metapatterns/_index.md
 [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) protects the internals of a system from its environment:
 
 - A drill or a screwdriver has replaceable bits\.
-- A living cell is encapsulated by its [membrane](https://en.wikipedia.org/wiki/Cell_membrane) and relies on [protein adapters](https://en.wikipedia.org/wiki/Membrane_protein) for interactions with its environment\. [A kind of *Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#examples--cell" >}}) was named after it\.
-- *OS Abstraction Layer* and *Hardware Abstraction Layer* in embedded systems or *Anti\-Corruption Layer* in \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] are all about that\.
+- A living cell is encapsulated by its [membrane](https://en.wikipedia.org/wiki/Cell_membrane) and relies on [protein adapters](https://en.wikipedia.org/wiki/Membrane_protein) for interactions with its environment\. [A kind of *Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}}) was named after it\.
+- [*OS Abstraction Layer* and *Hardware Abstraction Layer*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) in embedded systems or [*Anti\-Corruption Layer*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) in \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] are all about that\.
 - The [*impure/pure/impure sandwich*](https://blog.ploeh.dk/2020/03/02/impureim-sandwich/) of functional programming is closely related\. In both cases the core of the system cannot change anything outside of itself directly \(any external communication relies on *adapters*\) and it is [deterministic if single\-threaded](http://ithare.com/chapter-vc-modular-architecture-client-side-on-debugging-distributed-systems-deterministic-logic-and-finite-state-machines/)\.
 
 
@@ -359,7 +359,7 @@ An [implementation pattern]({{< relref "../implementation-metapatterns/_index.md
 <picture>
 <source srcset="/diagrams/Contents/Microkernel.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Microkernel.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Microkernel.png" alt="Microkernel" loading="lazy" width="1031" height="304" style="width:100%"/>
+<img src="/diagrams/Contents/Microkernel.png" alt="A diagram of Microkernel, with explanations." loading="lazy" width="1031" height="304" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -378,7 +378,7 @@ An [implementation pattern]({{< relref "../implementation-metapatterns/_index.md
 <picture>
 <source srcset="/diagrams/Contents/Mesh.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Mesh.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Mesh.png" alt="Mesh" loading="lazy" width="863" height="261" style="width:100%"/>
+<img src="/diagrams/Contents/Mesh.png" alt="A diagram of Services over a mesh, with explanations." loading="lazy" width="863" height="261" style="width:100%"/>
 </picture>
 </a>
 </figure>
