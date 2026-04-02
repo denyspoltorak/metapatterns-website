@@ -3,6 +3,7 @@ weight = 9
 title = "Services"
 description = "This chapter explores architectures with subdomain modules or services: Modulith, Actors, Service-Based Architecture, Microservices, and Nanoservices."
 images = ["/diagrams/Web/og/Services.png"]
+primary_image = "/diagrams/Main/Services.png"
 [sitemap]
   priority = 0.8
 +++

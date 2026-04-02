@@ -3,6 +3,7 @@ weight = 7
 title = "Shards"
 description = "This chapter explores sharded systems that run multiple instances of a component: partitions, replicas, replicated load-balanced services, lambdas, and actors."
 images = ["/diagrams/Web/og/Shards.png"]
+primary_image = "/diagrams/Main/Shards.png"
 [sitemap]
   priority = 0.8
 +++

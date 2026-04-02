@@ -3,6 +3,7 @@ weight = 8
 title = "Backends for Frontends (BFF)"
 description = "This chapter discusses Backends for Frontends (BFF) which dedicates a component (proxy, orchestrator, or an API Gateway) to each kind of a system's client."
 images = ["/diagrams/Web/og/Backends%20for%20Frontends.png"]
+primary_image = "/diagrams/Main/Backends%20for%20Frontends.png"
 [sitemap]
   priority = 0.8
 +++

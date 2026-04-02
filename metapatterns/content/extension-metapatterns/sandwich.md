@@ -3,6 +3,7 @@ weight = 10
 title = "Sandwich"
 description = "This chapter explores sandwiched architectures: Blackboard System, Space-Based Architecture, Service-Based Architecture, CQRS, Nanoservices, and Lambdas."
 images = ["/diagrams/Web/og/Sandwich.png"]
+primary_image = "/diagrams/Main/Sandwich.png"
 [sitemap]
   priority = 0.8
 +++

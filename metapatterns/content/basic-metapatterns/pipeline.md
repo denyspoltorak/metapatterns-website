@@ -3,6 +3,7 @@ weight = 10
 title = "Pipeline"
 description = "This chapter explores pipelined architectures that process streams: Pipes and Filters, Choreographed Event-Driven Architecture, Data Mesh, and Nanoservices."
 images = ["/diagrams/Web/og/Pipeline.png"]
+primary_image = "/diagrams/Main/Pipeline.png"
 [sitemap]
   priority = 0.8
 +++

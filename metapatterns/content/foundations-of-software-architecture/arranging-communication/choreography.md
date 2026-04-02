@@ -3,6 +3,7 @@ weight = 3
 title = "Choreography"
 description = "This section discusses choreography, where a system component processes inputs and produces outputs without any knowledge about other components."
 images = ["/diagrams/Web/og/Choreography.png"]
+primary_image = "/diagrams/Communication/Services%20to%20Pipeline.png"
 [sitemap]
   priority = 0.5
 +++

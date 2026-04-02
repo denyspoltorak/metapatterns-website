@@ -3,6 +3,7 @@ weight = 6
 title = "Hexagonal Architecture"
 description = "This chapter explores Hexagonal Architecture and its subtypes: Ports and Adapters, Onion Architecture, MVC, MVP and MVVM, Pedestal, and Cell (Cluster)."
 images = ["/diagrams/Web/og/Hexagonal%20Architecture.png"]
+primary_image = "/diagrams/Main/Hexagonal%20Architecture.png"
 [sitemap]
   priority = 0.8
 +++

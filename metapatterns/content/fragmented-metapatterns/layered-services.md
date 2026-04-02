@@ -3,6 +3,7 @@ weight = 6
 title = "Layered Services"
 description = "This chapter discusses layered services, their orchestrated and choreographed variants, and Command-Query Responsibility Segregation (CQRS) systems."
 images = ["/diagrams/Web/og/Layered%20Services.png"]
+primary_image = "/diagrams/Main/Layered%20Services.png"
 [sitemap]
   priority = 0.8
 +++

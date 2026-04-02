@@ -3,6 +3,7 @@ weight = 5
 title = "Plugins"
 description = "This chapter explores the highly customizable Plugins architecture and its subtypes: Plugin, Ambassador Plugin, Extension, Addin, and Addon."
 images = ["/diagrams/Web/og/Plugins.png"]
+primary_image = "/diagrams/Main/Plugins.png"
 [sitemap]
   priority = 0.8
 +++

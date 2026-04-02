@@ -3,6 +3,7 @@ weight = 8
 title = "Proxy"
 description = "This chapter discusses proxies such as: Firewall, Response Cache, Load Balancer, Sharding Proxy, Reverse Proxy, Adapter, API Gateway, and even User Interface."
 images = ["/diagrams/Web/og/Proxy.png"]
+primary_image = "/diagrams/Main/Proxy.png"
 [sitemap]
   priority = 0.8
 +++

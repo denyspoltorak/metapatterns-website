@@ -3,6 +3,7 @@ weight = 6
 title = "Monolith"
 description = "This chapter explores monolithic architectures: Reactor, Proactor, Half-Sync/Half-Async (coroutines), and (Re)Actor-with-Extractors (phased simulation)."
 images = ["/diagrams/Web/og/Monolith.png"]
+primary_image = "/diagrams/Main/Monolith.png"
 [sitemap]
   priority = 0.8
 +++

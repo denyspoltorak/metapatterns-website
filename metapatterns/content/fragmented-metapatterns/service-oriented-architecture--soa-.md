@@ -3,6 +3,7 @@ weight = 9
 title = "Service-Oriented Architecture (SOA)"
 description = "This chapter explores Service-Oriented Architecture (SOA) and its variants: Distributed Monolith, Domain-Oriented Microservice Architecture, and Nanoservices."
 images = ["/diagrams/Web/og/Service-Oriented%20Architecture.png"]
+primary_image = "/diagrams/Main/Service-Oriented%20Architecture.png"
 [sitemap]
   priority = 0.8
 +++

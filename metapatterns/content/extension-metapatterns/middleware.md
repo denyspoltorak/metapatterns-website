@@ -3,6 +3,7 @@ weight = 6
 title = "Middleware"
 description = "This chapter discusses Middleware and its variants: Message Bus, Event Mediator, Service Mesh, Enterprise Service Bus, and Persistent Event Log."
 images = ["/diagrams/Web/og/Middleware.png"]
+primary_image = "/diagrams/Main/Middleware.png"
 [sitemap]
   priority = 0.8
 +++

@@ -3,6 +3,7 @@ weight = 2
 title = "Orchestration"
 description = "This section discusses orchestration, where a single component coordinates the entire system, and mutual orchestration, where components call each other."
 images = ["/diagrams/Web/og/Orchestration.png"]
+primary_image = "/diagrams/Communication/Services%20to%20Orchestrator.png"
 [sitemap]
   priority = 0.5
 +++

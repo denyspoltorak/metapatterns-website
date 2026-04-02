@@ -3,6 +3,7 @@ weight = 4
 title = "Shared data"
 description = "This section illustrates the use of shared data for integration of system components with an example of a ticketing service."
 images = ["/diagrams/Web/og/Shared%20data.png"]
+primary_image = "/diagrams/Communication/Services%20to%20Shared%20Data.png"
 [sitemap]
   priority = 0.5
 +++

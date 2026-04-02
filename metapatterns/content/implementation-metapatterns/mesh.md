@@ -3,6 +3,7 @@ weight = 8
 title = "Mesh"
 description = "This chapter explores meshes, their types and examples: peer-to-peer networks, Service Mesh, Space-Based Architecture, Leaf-Spine Architecture, and Actors."
 images = ["/diagrams/Web/og/Mesh.png"]
+primary_image = "/diagrams/Main/Mesh.png"
 [sitemap]
   priority = 0.8
 +++

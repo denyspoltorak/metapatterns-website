@@ -3,6 +3,7 @@ weight = 9
 title = "Orchestrator"
 description = "This chapter discusses Orchestrator and its variants: API Composer, MapReduce, Process Manager, Saga, Coordinator, Integration Service, and Front Controller."
 images = ["/diagrams/Web/og/Orchestrator.png"]
+primary_image = "/diagrams/Main/Orchestrator.png"
 [sitemap]
   priority = 0.8
 +++

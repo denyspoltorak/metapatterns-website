@@ -3,6 +3,7 @@ weight = 4
 title = "Arranging communication"
 description = "This chapter discusses communication paradigms: orchestration, choreography, or shared data. It shows their applicability, benefits, and drawbacks."
 images = ["/diagrams/Web/og/Communication.png"]
+primary_image = "/diagrams/Communication/Monolith%20to%20Services.png"
 bookCollapseSection = true
 [sitemap]
   priority = 0.2

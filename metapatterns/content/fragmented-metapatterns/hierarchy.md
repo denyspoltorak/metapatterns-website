@@ -3,6 +3,7 @@ weight = 10
 title = "Hierarchy"
 description = "This chapter explores hierarchical architectures: Cell-Based Architecture, Presentation-Abstraction-Control (PAC), HMVC, and Network of Networks."
 images = ["/diagrams/Web/og/Hierarchy.png"]
+primary_image = "/diagrams/Main/Hierarchy.png"
 [sitemap]
   priority = 0.8
 +++

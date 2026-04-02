@@ -3,6 +3,7 @@ weight = 7
 title = "Shared Repository"
 description = "This chapter discusses Shared Repository and its variants: Integration Database, Blackboard, Data Grid, shared memory, shared file system, and Stamp Coupling."
 images = ["/diagrams/Web/og/Shared%20Repository.png"]
+primary_image = "/diagrams/Main/Shared%20Repository.png"
 [sitemap]
   priority = 0.8
 +++

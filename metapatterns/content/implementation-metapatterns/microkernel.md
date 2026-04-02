@@ -3,6 +3,7 @@ weight = 7
 title = "Microkernel"
 description = "This chapter explores Microkernel architecture and its variants: Interpreter, Virtualizer, Configurator, Saga engine, AUTOSAR Classic, and operating system."
 images = ["/diagrams/Web/og/Microkernel.png"]
+primary_image = "/diagrams/Main/Microkernel.png"
 [sitemap]
   priority = 0.8
 +++

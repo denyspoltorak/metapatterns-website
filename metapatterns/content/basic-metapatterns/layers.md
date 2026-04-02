@@ -3,6 +3,7 @@ weight = 8
 title = "Layers"
 description = "This chapter explores layered architectures (Layers and Tiers) and individual layers: interface, application, domain, utilities, middleware, and persistence."
 images = ["/diagrams/Web/og/Layers.png"]
+primary_image = "/diagrams/Main/Layers.png"
 [sitemap]
   priority = 0.8
 +++

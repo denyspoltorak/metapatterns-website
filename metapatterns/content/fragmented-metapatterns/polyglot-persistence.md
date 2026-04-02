@@ -3,6 +3,7 @@ weight = 7
 title = "Polyglot Persistence"
 description = "This chapter discusses Polyglot Persistence and its variants: read-only replicas, Cache-Aside, Memory Image, Reporting Database, CQRS View, and Query Service."
 images = ["/diagrams/Web/og/Polyglot%20Persistence.png"]
+primary_image = "/diagrams/Main/Polyglot%20Persistence.png"
 [sitemap]
   priority = 0.8
 +++
