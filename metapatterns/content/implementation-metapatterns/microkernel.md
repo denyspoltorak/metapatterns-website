@@ -3,6 +3,7 @@ weight = 7
 title = "Microkernel"
 description = "This chapter explores Microkernel architecture and its variants: Interpreter, Virtualizer, Configurator, Saga engine, AUTOSAR Classic, and operating system."
 images = ["/diagrams/Web/og/Microkernel.png"]
+primary_image = "/diagrams/Main/Microkernel.png"
 [sitemap]
   priority = 0.8
 +++
@@ -14,7 +15,7 @@ images = ["/diagrams/Web/og/Microkernel.png"]
 <picture>
 <source srcset="/diagrams/Main/Microkernel.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Microkernel.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Microkernel.png" alt="A diagram for Microkernel, in abstractness-subdomain-sharding coordinates." loading="lazy" width="844" height="534" style="width:100%"/>
+<img src="/diagrams/Main/Microkernel.png" alt="Microkernel, with a legend." loading="lazy" width="844" height="534" style="width:100%"/>
 </picture>
 </a>
 </figure>

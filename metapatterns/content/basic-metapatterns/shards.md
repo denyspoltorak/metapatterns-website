@@ -3,6 +3,7 @@ weight = 7
 title = "Shards"
 description = "This chapter explores sharded systems that run multiple instances of a component: partitions, replicas, replicated load-balanced services, lambdas, and actors."
 images = ["/diagrams/Web/og/Shards.png"]
+primary_image = "/diagrams/Main/Shards.png"
 [sitemap]
   priority = 0.8
 +++
@@ -14,7 +15,7 @@ images = ["/diagrams/Web/og/Shards.png"]
 <picture>
 <source srcset="/diagrams/Main/Shards.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Shards.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Shards.png" alt="A diagram for Shards, in abstractness-subdomain-sharding coordinates." loading="lazy" width="942" height="474" style="width:100%"/>
+<img src="/diagrams/Main/Shards.png" alt="Shards, with a legend." loading="lazy" width="942" height="474" style="width:100%"/>
 </picture>
 </a>
 </figure>

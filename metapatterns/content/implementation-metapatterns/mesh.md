@@ -3,6 +3,7 @@ weight = 8
 title = "Mesh"
 description = "This chapter explores meshes, their types and examples: peer-to-peer networks, Service Mesh, Space-Based Architecture, Leaf-Spine Architecture, and Actors."
 images = ["/diagrams/Web/og/Mesh.png"]
+primary_image = "/diagrams/Main/Mesh.png"
 [sitemap]
   priority = 0.8
 +++
@@ -14,7 +15,7 @@ images = ["/diagrams/Web/og/Mesh.png"]
 <picture>
 <source srcset="/diagrams/Main/Mesh.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Mesh.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Mesh.png" alt="A diagram for Services over a mesh, in abstractness-subdomain-sharding coordinates." loading="lazy" width="804" height="436" style="width:100%"/>
+<img src="/diagrams/Main/Mesh.png" alt="Services over a mesh, with a legend." loading="lazy" width="804" height="436" style="width:100%"/>
 </picture>
 </a>
 </figure>

@@ -3,6 +3,7 @@ weight = 8
 title = "Proxy"
 description = "This chapter discusses proxies such as: Firewall, Response Cache, Load Balancer, Sharding Proxy, Reverse Proxy, Adapter, API Gateway, and even User Interface."
 images = ["/diagrams/Web/og/Proxy.png"]
+primary_image = "/diagrams/Main/Proxy.png"
 [sitemap]
   priority = 0.8
 +++
@@ -14,7 +15,7 @@ images = ["/diagrams/Web/og/Proxy.png"]
 <picture>
 <source srcset="/diagrams/Main/Proxy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Proxy.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Proxy.png" alt="A diagram for Services with a proxy, in abstractness-subdomain-sharding coordinates." loading="lazy" width="1082" height="574" style="width:100%"/>
+<img src="/diagrams/Main/Proxy.png" alt="Services with a proxy, with a legend." loading="lazy" width="1082" height="574" style="width:100%"/>
 </picture>
 </a>
 </figure>

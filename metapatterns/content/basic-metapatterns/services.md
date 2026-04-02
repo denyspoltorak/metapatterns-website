@@ -3,6 +3,7 @@ weight = 9
 title = "Services"
 description = "This chapter explores architectures with subdomain modules or services: Modulith, Actors, Service-Based Architecture, Microservices, and Nanoservices."
 images = ["/diagrams/Web/og/Services.png"]
+primary_image = "/diagrams/Main/Services.png"
 [sitemap]
   priority = 0.8
 +++
@@ -14,7 +15,7 @@ images = ["/diagrams/Web/og/Services.png"]
 <picture>
 <source srcset="/diagrams/Main/Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Services.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Services.png" alt="A diagram for Services, in abstractness-subdomain-sharding coordinates." loading="lazy" width="1062" height="454" style="width:100%"/>
+<img src="/diagrams/Main/Services.png" alt="Services, with a legend." loading="lazy" width="1062" height="454" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -301,7 +302,7 @@ A service is not necessarily monolithic inside\. Because a service is encapsulat
 <picture>
 <source srcset="/diagrams/Variants/1/Service%20-%20Monolithic.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Service%20-%20Monolithic.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Service%20-%20Monolithic.png" alt="A diagram of a monolithic component." loading="lazy" width="243" height="304" style="width:27%"/>
+<img src="/diagrams/Variants/1/Service%20-%20Monolithic.png" alt="A monolithic component." loading="lazy" width="243" height="304" style="width:27%"/>
 </picture>
 </a>
 </figure>

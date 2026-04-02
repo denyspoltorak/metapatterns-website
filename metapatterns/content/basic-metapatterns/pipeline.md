@@ -3,6 +3,7 @@ weight = 10
 title = "Pipeline"
 description = "This chapter explores pipelined architectures that process streams: Pipes and Filters, Choreographed Event-Driven Architecture, Data Mesh, and Nanoservices."
 images = ["/diagrams/Web/og/Pipeline.png"]
+primary_image = "/diagrams/Main/Pipeline.png"
 [sitemap]
   priority = 0.8
 +++
@@ -14,7 +15,7 @@ images = ["/diagrams/Web/og/Pipeline.png"]
 <picture>
 <source srcset="/diagrams/Main/Pipeline.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Pipeline.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Pipeline.png" alt="A diagram for Pipeline, in abstractness-subdomain-sharding coordinates." loading="lazy" width="1182" height="434" style="width:100%"/>
+<img src="/diagrams/Main/Pipeline.png" alt="Pipeline, with a legend." loading="lazy" width="1182" height="434" style="width:100%"/>
 </picture>
 </a>
 </figure>

@@ -3,6 +3,7 @@ weight = 5
 title = "Plugins"
 description = "This chapter explores the highly customizable Plugins architecture and its subtypes: Plugin, Ambassador Plugin, Extension, Addin, and Addon."
 images = ["/diagrams/Web/og/Plugins.png"]
+primary_image = "/diagrams/Main/Plugins.png"
 [sitemap]
   priority = 0.8
 +++
@@ -14,7 +15,7 @@ images = ["/diagrams/Web/og/Plugins.png"]
 <picture>
 <source srcset="/diagrams/Main/Plugins.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Plugins.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Plugins.png" alt="A diagram for Plugins Architecture, in abstractness-subdomain-sharding coordinates." loading="lazy" width="942" height="554" style="width:100%"/>
+<img src="/diagrams/Main/Plugins.png" alt="Plugins Architecture, with a legend." loading="lazy" width="942" height="554" style="width:100%"/>
 </picture>
 </a>
 </figure>

@@ -3,6 +3,7 @@ weight = 6
 title = "Monolith"
 description = "This chapter explores monolithic architectures: Reactor, Proactor, Half-Sync/Half-Async (coroutines), and (Re)Actor-with-Extractors (phased simulation)."
 images = ["/diagrams/Web/og/Monolith.png"]
+primary_image = "/diagrams/Main/Monolith.png"
 [sitemap]
   priority = 0.8
 +++
@@ -16,7 +17,7 @@ Let’s take a look at the simplest possible [metapattern]({{< relref "../introd
 <picture>
 <source srcset="/diagrams/Main/Monolith.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Monolith.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Monolith.png" alt="A diagram for Monolith, in abstractness-subdomain-sharding coordinates." loading="lazy" width="942" height="474" style="width:100%"/>
+<img src="/diagrams/Main/Monolith.png" alt="Monolith, with a legend." loading="lazy" width="942" height="474" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -167,7 +168,7 @@ When they say [*Layered Monolith*]({{< relref "../basic-metapatterns/layers.md#s
 <picture>
 <source srcset="/diagrams/Variants/1/Modular%20Monolith.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Modular%20Monolith.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Modular%20Monolith.png" alt="A diagram of subdomain services." loading="lazy" width="903" height="204" style="width:88%"/>
+<img src="/diagrams/Variants/1/Modular%20Monolith.png" alt="Subdomain services." loading="lazy" width="903" height="204" style="width:88%"/>
 </picture>
 </a>
 </figure>
