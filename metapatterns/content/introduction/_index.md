@@ -3,7 +3,6 @@ weight = 1
 title = "Introduction"
 description = "This part of the book covers introductory topics that range from the book's structure to the underlying theory that enabled the research presented in the book."
 images = ["/diagrams/Web/og/Favicon-plain.png"]
-primary_image = "../Pictures/image000.png"
 bookCollapseSection = true
 [sitemap]
   priority = 0.1
