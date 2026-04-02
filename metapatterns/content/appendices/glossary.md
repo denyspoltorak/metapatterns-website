@@ -15,10 +15,10 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 *Action*
 : an act of a *system* that changes its environment\.
 
-[*API*](_49lm93e72vvp) \(*application programming interface*\)
+[*API*]({{< relref "../basic-metapatterns/layers.md#interface-api-or-ui" >}}) \(*application programming interface*\)
 : a set of *methods* or *messages* that a *component* exposes to its *clients*\.
 
-[*Application*](_p69skkxfpsci)
+[*Application*]({{< relref "../basic-metapatterns/layers.md#application-use-cases-or-integration" >}})
 : the most *abstract* layer that usually *integrates components* of a less *abstract* layer\.
 
 *Architectural pattern*
@@ -111,7 +111,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 *Domain*
 : the whole of knowledge \(including *requirements*\) that is needed to build a *system*\.
 
-[*Domain*](_jk5ysqrikfn0)
+[*Domain*]({{< relref "../basic-metapatterns/layers.md#domain-business-rules-or-model" >}})
 : the middle layer of a *system* that contains its *business rules*\.
 
 *Event*
@@ -243,7 +243,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 *Single point of failure*
 : a software or hardware *component* which if fails makes the entire *system* non\-operational\. High\-*availability systems* should avoid *single points of failure*\.
 
-[*SPI*](_49lm93e72vvp) \(*service provider interface*\)
+[*SPI*]({{< relref "../basic-metapatterns/layers.md#interface-api-or-ui" >}}) \(*service provider interface*\)
 : a set of *methods* or *messages* that a *component* expects to be supported by the *components* it uses\.
 
 *State*
