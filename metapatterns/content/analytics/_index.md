@@ -75,7 +75,7 @@ Ambiguous patterns
 
 <source srcset="/diagrams/Web/Life%20cycle.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Life%20cycle.png" alt="A diagram that shows a cycle with the following architectures: Monolith, Layers, Layered Services, a Sandwich Cell interacting with orchestrated layered services, and Layers with two databases." loading="lazy" width="1185" height="1123"/>
+<img src="/diagrams/Web/Life%20cycle.png" alt="A cycle with the following architectures: Monolith, Layers, Layered Services, a Sandwich Cell interacting with orchestrated layered services, and Layers with two databases." loading="lazy" width="1185" height="1123"/>
 
 </picture>
 
@@ -91,7 +91,7 @@ Architecture and product life cycle
 
 <source srcset="/diagrams/Web/Real-world.negated.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Real-world.png" alt="A diagram of three services with queues of people and luggage above a transport layer with train stations and trains." loading="lazy" width="483" height="463"/>
+<img src="/diagrams/Web/Real-world.png" alt="Three services with queues of people and luggage above a transport layer with train stations and trains." loading="lazy" width="483" height="463"/>
 
 </picture>
 

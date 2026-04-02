@@ -14,7 +14,7 @@ images = ["/diagrams/Web/og/Hierarchy.png"]
 <picture>
 <source srcset="/diagrams/Main/Hierarchy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Hierarchy.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Hierarchy.png" alt="A diagram for Hierarchy, in abstractness-subdomain-sharding coordinates." loading="lazy" width="1082" height="534" style="width:100%"/>
+<img src="/diagrams/Main/Hierarchy.png" alt="Hierarchy, with a legend." loading="lazy" width="1082" height="534" style="width:100%"/>
 </picture>
 </a>
 </figure>

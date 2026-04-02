@@ -19,7 +19,7 @@ These patterns extend [*Services*]({{< relref "../basic-metapatterns/services.md
 <picture>
 <source srcset="/diagrams/Contents/Middleware.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Middleware.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Middleware.png" alt="A diagram of Services with a middleware, with explanations." loading="lazy" width="1003" height="263" style="width:100%"/>
+<img src="/diagrams/Contents/Middleware.png" alt="Services with a middleware, with explanations." loading="lazy" width="1003" height="263" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -35,7 +35,7 @@ A [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) is a 
 <picture>
 <source srcset="/diagrams/Contents/Shared%20Repository.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Shared%20Repository.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Shared%20Repository.png" alt="A diagram of Services with a shared repository, with explanations." loading="lazy" width="963" height="243" style="width:100%"/>
+<img src="/diagrams/Contents/Shared%20Repository.png" alt="Services with a shared repository, with explanations." loading="lazy" width="963" height="243" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -51,7 +51,7 @@ A [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.
 <picture>
 <source srcset="/diagrams/Contents/Proxy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Proxy.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Proxy.png" alt="A diagram of Services with a proxy, with explanations." loading="lazy" width="1023" height="363" style="width:100%"/>
+<img src="/diagrams/Contents/Proxy.png" alt="Services with a proxy, with explanations." loading="lazy" width="1023" height="363" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -67,7 +67,7 @@ A [*Proxy*]({{< relref "../extension-metapatterns/proxy.md" >}}) mediates betwee
 <picture>
 <source srcset="/diagrams/Contents/Orchestrator.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Orchestrator.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Orchestrator.png" alt="A diagram of Services with an orchestrator, with explanations." loading="lazy" width="1023" height="263" style="width:100%"/>
+<img src="/diagrams/Contents/Orchestrator.png" alt="Services with an orchestrator, with explanations." loading="lazy" width="1023" height="263" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -83,7 +83,7 @@ An [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) 
 <picture>
 <source srcset="/diagrams/Contents/Sandwich.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Sandwich.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Sandwich.png" alt="A diagram of Sandwich Architecture, with explanations." loading="lazy" width="743" height="243" style="width:93%"/>
+<img src="/diagrams/Contents/Sandwich.png" alt="Sandwich Architecture, with explanations." loading="lazy" width="743" height="243" style="width:93%"/>
 </picture>
 </a>
 </figure>

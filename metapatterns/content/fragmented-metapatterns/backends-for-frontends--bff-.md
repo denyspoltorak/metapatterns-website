@@ -14,7 +14,7 @@ images = ["/diagrams/Web/og/Backends%20for%20Frontends.png"]
 <picture>
 <source srcset="/diagrams/Main/Backends%20for%20Frontends.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Backends%20for%20Frontends.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Backends%20for%20Frontends.png" alt="A diagram for Services with Backends for Frontends, in abstractness-subdomain-sharding coordinates." loading="lazy" width="904" height="634" style="width:100%"/>
+<img src="/diagrams/Main/Backends%20for%20Frontends.png" alt="Services with Backends for Frontends, with a legend." loading="lazy" width="904" height="634" style="width:100%"/>
 </picture>
 </a>
 </figure>

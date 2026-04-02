@@ -14,7 +14,7 @@ images = ["/diagrams/Web/og/Sandwich.png"]
 <picture>
 <source srcset="/diagrams/Main/Sandwich.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Sandwich.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Sandwich.png" alt="A diagram for Sandwich Architecture, in abstractness-subdomain-sharding coordinates." loading="lazy" width="1002" height="474" style="width:100%"/>
+<img src="/diagrams/Main/Sandwich.png" alt="Sandwich Architecture, with a legend." loading="lazy" width="1002" height="474" style="width:100%"/>
 </picture>
 </a>
 </figure>

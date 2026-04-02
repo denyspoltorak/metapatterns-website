@@ -14,7 +14,7 @@ images = ["/diagrams/Web/og/Hexagonal%20Architecture.png"]
 <picture>
 <source srcset="/diagrams/Main/Hexagonal%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Hexagonal%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Hexagonal%20Architecture.png" alt="A diagram for Hexagonal Architecture, in abstractness-subdomain-sharding coordinates." loading="lazy" width="962" height="642" style="width:100%"/>
+<img src="/diagrams/Main/Hexagonal%20Architecture.png" alt="Hexagonal Architecture, with a legend." loading="lazy" width="962" height="642" style="width:100%"/>
 </picture>
 </a>
 </figure>

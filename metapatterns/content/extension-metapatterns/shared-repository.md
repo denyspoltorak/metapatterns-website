@@ -14,7 +14,7 @@ images = ["/diagrams/Web/og/Shared%20Repository.png"]
 <picture>
 <source srcset="/diagrams/Main/Shared%20Repository.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Shared%20Repository.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Shared%20Repository.png" alt="A diagram for Services with a shared repository, in abstractness-subdomain-sharding coordinates." loading="lazy" width="1062" height="500" style="width:100%"/>
+<img src="/diagrams/Main/Shared%20Repository.png" alt="Services with a shared repository, with a legend." loading="lazy" width="1062" height="500" style="width:100%"/>
 </picture>
 </a>
 </figure>

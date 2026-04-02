@@ -24,7 +24,7 @@ There is advice [from Microsoft](https://learn.microsoft.com/en-us/azure/archite
 <picture>
 <source srcset="/diagrams/Communication/Cell-Based%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Cell-Based%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Cell-Based%20Architecture.png" alt="A diagram of the Cell-Based Architecture." loading="lazy" width="923" height="344" style="width:100%"/>
+<img src="/diagrams/Communication/Cell-Based%20Architecture.png" alt="Cell-Based Architecture." loading="lazy" width="923" height="344" style="width:100%"/>
 </picture>
 </a>
 </figure>

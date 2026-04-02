@@ -14,7 +14,7 @@ images = ["/diagrams/Web/og/Middleware.png"]
 <picture>
 <source srcset="/diagrams/Main/Middleware.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Middleware.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Middleware.png" alt="A diagram for Services with a middleware, in abstractness-subdomain-sharding coordinates." loading="lazy" width="1062" height="494" style="width:100%"/>
+<img src="/diagrams/Main/Middleware.png" alt="Services with a middleware, with a legend." loading="lazy" width="1062" height="494" style="width:100%"/>
 </picture>
 </a>
 </figure>

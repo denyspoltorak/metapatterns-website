@@ -65,7 +65,7 @@ We’ll draw the abstractness axis vertically with higher\-level modules positio
 <picture>
 <source srcset="/diagrams/Intro/CQRS%20with%20notes.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Intro/CQRS%20with%20notes.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Intro/CQRS%20with%20notes.png" alt="A diagram of a CQRS system in abstractness-subdomain-sharding coordinates with a detailed legend." loading="lazy" width="981" height="674" style="width:100%"/>
+<img src="/diagrams/Intro/CQRS%20with%20notes.png" alt="A CQRS system with a detailed legend." loading="lazy" width="981" height="674" style="width:100%"/>
 </picture>
 </a>
 </figure>

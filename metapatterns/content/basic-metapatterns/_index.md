@@ -19,7 +19,7 @@ Basic [metapatterns]({{< relref "../introduction/metapatterns.md" >}}) are both 
 <picture>
 <source srcset="/diagrams/Contents/Monolith.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Monolith.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Monolith.png" alt="A diagram of Monolith, with explanations." loading="lazy" width="1003" height="243" style="width:100%"/>
+<img src="/diagrams/Contents/Monolith.png" alt="Monolith, with explanations." loading="lazy" width="1003" height="243" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -35,7 +35,7 @@ Basic [metapatterns]({{< relref "../introduction/metapatterns.md" >}}) are both 
 <picture>
 <source srcset="/diagrams/Contents/Shards.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Shards.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Shards.png" alt="A diagram of Shards, with explanations." loading="lazy" width="783" height="243" style="width:100%"/>
+<img src="/diagrams/Contents/Shards.png" alt="Shards, with explanations." loading="lazy" width="783" height="243" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -51,7 +51,7 @@ Basic [metapatterns]({{< relref "../introduction/metapatterns.md" >}}) are both 
 <picture>
 <source srcset="/diagrams/Contents/Layers.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Layers.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Layers.png" alt="A diagram of Layered Architecture, with explanations." loading="lazy" width="783" height="243" style="width:100%"/>
+<img src="/diagrams/Contents/Layers.png" alt="Layered Architecture, with explanations." loading="lazy" width="783" height="243" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -67,7 +67,7 @@ Basic [metapatterns]({{< relref "../introduction/metapatterns.md" >}}) are both 
 <picture>
 <source srcset="/diagrams/Contents/Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Services.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Services.png" alt="A diagram of Services, with explanations." loading="lazy" width="943" height="246" style="width:93%"/>
+<img src="/diagrams/Contents/Services.png" alt="Services, with explanations." loading="lazy" width="943" height="246" style="width:93%"/>
 </picture>
 </a>
 </figure>
@@ -83,7 +83,7 @@ Basic [metapatterns]({{< relref "../introduction/metapatterns.md" >}}) are both 
 <picture>
 <source srcset="/diagrams/Contents/Pipeline.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Pipeline.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Pipeline.png" alt="A diagram of Pipeline, with explanations." loading="lazy" width="1003" height="203" style="width:100%"/>
+<img src="/diagrams/Contents/Pipeline.png" alt="Pipeline, with explanations." loading="lazy" width="1003" height="203" style="width:100%"/>
 </picture>
 </a>
 </figure>

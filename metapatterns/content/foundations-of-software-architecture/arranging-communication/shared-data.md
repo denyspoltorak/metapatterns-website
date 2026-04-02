@@ -68,7 +68,7 @@ Services usually need to coordinate their actions\. Commonly, services with a sh
 <picture>
 <source srcset="/diagrams/Communication/Notification%20to%20Notification.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Notification%20to%20Notification.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Notification%20to%20Notification.png" alt="A diagram of a ticketing service whose components use direct messaging to intercommunicate." loading="lazy" width="983" height="323" style="width:100%"/>
+<img src="/diagrams/Communication/Notification%20to%20Notification.png" alt="A ticketing service whose components use direct messaging to intercommunicate." loading="lazy" width="983" height="323" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -124,7 +124,7 @@ Finally, some \(usually distributed\) datastores implement data change notificat
 <picture>
 <source srcset="/diagrams/Communication/Notification%20inside%20the%20DB.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Notification%20inside%20the%20DB.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Notification%20inside%20the%20DB.png" alt="A diagram of a ticketing service whose components rely on database notifications." loading="lazy" width="1123" height="323" style="width:100%"/>
+<img src="/diagrams/Communication/Notification%20inside%20the%20DB.png" alt="A ticketing service whose components rely on database notifications." loading="lazy" width="1123" height="323" style="width:100%"/>
 </picture>
 </a>
 </figure>

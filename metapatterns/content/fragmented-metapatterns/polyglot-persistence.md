@@ -14,7 +14,7 @@ images = ["/diagrams/Web/og/Polyglot%20Persistence.png"]
 <picture>
 <source srcset="/diagrams/Main/Polyglot%20Persistence.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Polyglot%20Persistence.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Polyglot%20Persistence.png" alt="A diagram for Services with Polyglot Persistence, in abstractness-subdomain-sharding coordinates." loading="lazy" width="944" height="514" style="width:100%"/>
+<img src="/diagrams/Main/Polyglot%20Persistence.png" alt="Services with Polyglot Persistence, with a legend." loading="lazy" width="944" height="514" style="width:100%"/>
 </picture>
 </a>
 </figure>

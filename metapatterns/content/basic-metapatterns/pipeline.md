@@ -14,7 +14,7 @@ images = ["/diagrams/Web/og/Pipeline.png"]
 <picture>
 <source srcset="/diagrams/Main/Pipeline.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Pipeline.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Pipeline.png" alt="A diagram for Pipeline, in abstractness-subdomain-sharding coordinates." loading="lazy" width="1182" height="434" style="width:100%"/>
+<img src="/diagrams/Main/Pipeline.png" alt="Pipeline, with a legend." loading="lazy" width="1182" height="434" style="width:100%"/>
 </picture>
 </a>
 </figure>
