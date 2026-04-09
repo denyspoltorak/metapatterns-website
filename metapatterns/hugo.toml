@@ -1,6 +1,6 @@
 baseURL = 'https://metapatterns.io/'
 languageCode = 'en-us'
-title = 'Architectural Metapatterns'
+title = 'Metapatterns'
 theme = 'hugo-book'
 BookComments = false
 
