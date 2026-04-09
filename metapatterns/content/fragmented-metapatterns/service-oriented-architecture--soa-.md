@@ -15,7 +15,7 @@ primary_image = "/diagrams/Main/Service-Oriented%20Architecture.png"
 <picture>
 <source srcset="/diagrams/Main/Service-Oriented%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Service-Oriented%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture, with a legend." loading="lazy" width="924" height="722" style="width:100%"/>
+<img src="/diagrams/Main/Service-Oriented%20Architecture.png" alt="A diagram for Service-Oriented Architecture, in abstractness-subdomain-sharding coordinates." loading="lazy" width="924" height="722" style="width:100%"/>
 </picture>
 </a>
 </figure>

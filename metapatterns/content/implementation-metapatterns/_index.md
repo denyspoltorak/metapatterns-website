@@ -19,7 +19,7 @@ A few system topologies relate to the implementation of components:
 <picture>
 <source srcset="/diagrams/Contents/Plugins.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Plugins.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Plugins.png" alt="Plugins Architecture, with explanations." loading="lazy" width="843" height="403" style="width:100%"/>
+<img src="/diagrams/Contents/Plugins.png" alt="A diagram of Plugins Architecture, with explanations." loading="lazy" width="843" height="403" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -35,7 +35,7 @@ The [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) patt
 <picture>
 <source srcset="/diagrams/Contents/Hexagonal%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Hexagonal%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Hexagonal%20Architecture.png" alt="Hexagonal Architecture, with explanations." loading="lazy" width="980" height="483" style="width:100%"/>
+<img src="/diagrams/Contents/Hexagonal%20Architecture.png" alt="A diagram of Hexagonal Architecture, with explanations." loading="lazy" width="980" height="483" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -51,7 +51,7 @@ The [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) patt
 <picture>
 <source srcset="/diagrams/Contents/Microkernel.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Microkernel.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Microkernel.png" alt="Microkernel, with explanations." loading="lazy" width="1031" height="304" style="width:100%"/>
+<img src="/diagrams/Contents/Microkernel.png" alt="A diagram of Microkernel, with explanations." loading="lazy" width="1031" height="304" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -67,7 +67,7 @@ The [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) patt
 <picture>
 <source srcset="/diagrams/Contents/Mesh.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Mesh.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Mesh.png" alt="Services over a mesh, with explanations." loading="lazy" width="863" height="261" style="width:100%"/>
+<img src="/diagrams/Contents/Mesh.png" alt="A diagram of Services over a mesh, with explanations." loading="lazy" width="863" height="261" style="width:100%"/>
 </picture>
 </a>
 </figure>

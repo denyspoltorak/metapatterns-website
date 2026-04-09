@@ -22,7 +22,7 @@ Not all the layered architectures are equally layered\. A [*Monolith*]({{< relre
 <picture>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Layers.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Layers.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Layers/Layers%20to%20Layers.png" alt="Calls in a layered system. A single request from a client is translated by an orchestrator into multiple calls to lower layers." loading="lazy" width="943" height="424" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20to%20Layers.png" alt="A diagram of calls in a layered system. A single request from a client is translated by an Orchestrator into multiple calls to lower layers." loading="lazy" width="943" height="424" style="width:100%"/>
 </picture>
 </a>
 </figure>

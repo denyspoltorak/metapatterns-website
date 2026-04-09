@@ -19,7 +19,7 @@ There are several topologies with no system\-wide layers\. Some of them incorpor
 <picture>
 <source srcset="/diagrams/Contents/Layered%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Layered%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Layered%20Services.png" alt="Layered Services, with explanations." loading="lazy" width="1133" height="363" style="width:100%"/>
+<img src="/diagrams/Contents/Layered%20Services.png" alt="A diagram of Layered Services, with explanations." loading="lazy" width="1133" height="363" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -35,7 +35,7 @@ There are several topologies with no system\-wide layers\. Some of them incorpor
 <picture>
 <source srcset="/diagrams/Contents/Polyglot%20Persistence.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Polyglot%20Persistence.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Polyglot%20Persistence.png" alt="Services with Polyglot Persistence, with explanations." loading="lazy" width="1023" height="303" style="width:100%"/>
+<img src="/diagrams/Contents/Polyglot%20Persistence.png" alt="A diagram of Services with Polyglot Persistence, with explanations." loading="lazy" width="1023" height="303" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -51,7 +51,7 @@ There are several topologies with no system\-wide layers\. Some of them incorpor
 <picture>
 <source srcset="/diagrams/Contents/Backends%20for%20Frontends.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Backends%20for%20Frontends.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Backends%20for%20Frontends.png" alt="Services with Backends for Frontends, with explanations." loading="lazy" width="1003" height="383" style="width:100%"/>
+<img src="/diagrams/Contents/Backends%20for%20Frontends.png" alt="A diagram of Services with Backends for Frontends, with explanations." loading="lazy" width="1003" height="383" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -67,7 +67,7 @@ There are several topologies with no system\-wide layers\. Some of them incorpor
 <picture>
 <source srcset="/diagrams/Contents/Service-Oriented%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Service-Oriented%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture, with explanations." loading="lazy" width="983" height="401" style="width:100%"/>
+<img src="/diagrams/Contents/Service-Oriented%20Architecture.png" alt="A diagram of Service-Oriented Architecture, with explanations." loading="lazy" width="983" height="401" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -83,7 +83,7 @@ There are several topologies with no system\-wide layers\. Some of them incorpor
 <picture>
 <source srcset="/diagrams/Contents/Hierarchy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Contents/Hierarchy.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Contents/Hierarchy.png" alt="Hierarchy, with explanations." loading="lazy" width="907" height="303" style="width:100%"/>
+<img src="/diagrams/Contents/Hierarchy.png" alt="A diagram of Hierarchy, with explanations." loading="lazy" width="907" height="303" style="width:100%"/>
 </picture>
 </a>
 </figure>

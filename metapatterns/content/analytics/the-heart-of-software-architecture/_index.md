@@ -40,7 +40,7 @@ Cohesers and decouplers
 
 <source srcset="/diagrams/Web/Heart2.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Heart2.png" alt="Decoupling between internally cohesive services." loading="lazy" width="363" height="340"/>
+<img src="/diagrams/Web/Heart2.png" alt="A diagram that shows decoupling between internally cohesive services." loading="lazy" width="363" height="340"/>
 
 </picture>
 

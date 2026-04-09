@@ -32,7 +32,7 @@ Please feel free to skip \(through\) it as you probably know most of them quite 
 
 <source srcset="/diagrams/Web/Complexity.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Complexity.png" alt="Three components each encapsulating a graph of nodes." loading="lazy" width="543" height="564"/>
+<img src="/diagrams/Web/Complexity.png" alt="A diagram of three components each encapsulating a graph of nodes." loading="lazy" width="543" height="564"/>
 
 </picture>
 
@@ -48,7 +48,7 @@ Modules and complexity
 
 <source srcset="/diagrams/Web/Forces.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Forces.png" alt="Messaging in a three-layered system with the lower layer making multiple calls to hardware." loading="lazy" width="409" height="403"/>
+<img src="/diagrams/Web/Forces.png" alt="A diagram of messaging in a three-layered system with the lower layer making multiple calls to hardware." loading="lazy" width="409" height="403"/>
 
 </picture>
 
@@ -80,7 +80,7 @@ Four kinds of software
 
 <source srcset="/diagrams/Web/Communication.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Communication.png" alt="C client above three services with question marks between the components." loading="lazy" width="263" height="263"/>
+<img src="/diagrams/Web/Communication.png" alt="A diagram of a client above three services with question marks between the components." loading="lazy" width="263" height="263"/>
 
 </picture>
 
