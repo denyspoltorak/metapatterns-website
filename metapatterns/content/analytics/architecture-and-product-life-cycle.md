@@ -18,7 +18,7 @@ In my practice, a product’s architecture changes over its lifetime\. For a R&D
 <picture>
 <source srcset="/diagrams/Conclusion/Lifecycle-1.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Lifecycle-1.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Lifecycle-1.png" alt="A monolith." loading="lazy" width="802" height="228" style="width:100%"/>
+<img src="/diagrams/Conclusion/Lifecycle-1.png" alt="A diagram of a monolith." loading="lazy" width="802" height="228" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -74,7 +74,7 @@ As the product enters the market, its development tends to slow down with more a
 <picture>
 <source srcset="/diagrams/Conclusion/Lifecycle-5.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Lifecycle-5.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Lifecycle-5.png" alt="Layers with multiple databases." loading="lazy" width="463" height="323" style="width:54%"/>
+<img src="/diagrams/Conclusion/Lifecycle-5.png" alt="A diagram of Layers with multiple databases." loading="lazy" width="463" height="323" style="width:54%"/>
 </picture>
 </a>
 </figure>
@@ -88,7 +88,7 @@ When active development ceases, you lose even more people and funding as you dri
 <picture>
 <source srcset="/diagrams/Conclusion/Lifecycle-6.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Lifecycle-6.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Lifecycle-6.png" alt="A monolith with multiple databases." loading="lazy" width="463" height="283" style="width:55%"/>
+<img src="/diagrams/Conclusion/Lifecycle-6.png" alt="A diagram of a monolith with multiple databases." loading="lazy" width="463" height="283" style="width:55%"/>
 </picture>
 </a>
 </figure>

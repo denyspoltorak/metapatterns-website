@@ -43,7 +43,7 @@ Adding *control* to the blend is more subtle, but no less crucial than the encap
 <picture>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Object-oriented.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Object-oriented.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Paradigms%20-%20Object-oriented.png" alt="An object-oriented system built through composition." loading="lazy" width="1084" height="543" style="width:100%"/>
+<img src="/diagrams/Communication/Paradigms%20-%20Object-oriented.png" alt="A diagram of an object-oriented system built through composition." loading="lazy" width="1084" height="543" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -69,7 +69,7 @@ Sometimes you don’t need that level of fine\-tuning for the behavior of the sy
 <picture>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Functional.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Functional.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Paradigms%20-%20Functional.png" alt="A pipeline with components implementing steps of data processing." loading="lazy" width="994" height="362" style="width:100%"/>
+<img src="/diagrams/Communication/Paradigms%20-%20Functional.png" alt="A diagram of a pipeline with components implementing steps of data processing." loading="lazy" width="994" height="362" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -97,7 +97,7 @@ The final approach is integration through data\. There are cases where the domai
 <picture>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Data-centric.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Data-centric.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Paradigms%20-%20Data-centric.png" alt="A procedural system where logic and data make independent hierarchies." loading="lazy" width="944" height="501" style="width:100%"/>
+<img src="/diagrams/Communication/Paradigms%20-%20Data-centric.png" alt="A diagram of a procedural system where logic and data make independent hierarchies." loading="lazy" width="944" height="501" style="width:100%"/>
 </picture>
 </a>
 </figure>

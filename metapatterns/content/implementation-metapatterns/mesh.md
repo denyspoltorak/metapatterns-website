@@ -15,7 +15,7 @@ primary_image = "/diagrams/Main/Mesh.png"
 <picture>
 <source srcset="/diagrams/Main/Mesh.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Mesh.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Mesh.png" alt="Services over a mesh, with a legend." loading="lazy" width="804" height="436" style="width:100%"/>
+<img src="/diagrams/Main/Mesh.png" alt="A diagram for Services over a mesh, in abstractness-subdomain-sharding coordinates." loading="lazy" width="804" height="436" style="width:100%"/>
 </picture>
 </a>
 </figure>

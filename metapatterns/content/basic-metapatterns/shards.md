@@ -15,7 +15,7 @@ primary_image = "/diagrams/Main/Shards.png"
 <picture>
 <source srcset="/diagrams/Main/Shards.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Shards.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Shards.png" alt="Shards, with a legend." loading="lazy" width="942" height="474" style="width:100%"/>
+<img src="/diagrams/Main/Shards.png" alt="A diagram for Shards, in abstractness-subdomain-sharding coordinates." loading="lazy" width="942" height="474" style="width:100%"/>
 </picture>
 </a>
 </figure>
