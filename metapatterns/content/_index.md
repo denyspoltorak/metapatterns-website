@@ -53,6 +53,16 @@ Metapatterns
 
 <a href="{{< relref "introduction/system-topologies.md" >}}">
 
+<picture>
+
+<source srcset="/diagrams/Web/Topologies.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Topologies.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Topologies.png" alt="Diagrams of Monolith, Layers, Plugins, Hierarchy, and Services in a system of coordinates that shows partitioning into layers and subdomains." loading="lazy" width="762" height="562"/>
+
+</picture>
+
 System topologies
 
 </a>

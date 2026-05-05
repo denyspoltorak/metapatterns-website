@@ -2,7 +2,8 @@
 weight = 5
 title = "System topologies"
 description = "This chapter explores common system topologies arranged according to the measure of their partitioning into layers or subdomains."
-images = ["/diagrams/Web/og/Favicon-plain.png"]
+images = ["/diagrams/Web/og/Topologies.png"]
+primary_image = "/diagrams/Topologies/Topologies%20Map.png"
 [sitemap]
   priority = 0.5
 +++
