@@ -83,7 +83,7 @@ Metapatterns
 
 <source srcset="/diagrams/Web/Topologies.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Topologies.png" alt="Diagrams of Monolith, Layers, Plugins, Hierarchy, and Services in a system of coordinates that shows partitioning into layers and subdomains." loading="lazy" width="762" height="562"/>
+<img src="/diagrams/Web/Topologies.png" alt="Diagrams of Monolith, Layers, Plugins, Hierarchy, and Services in a system of coordinates that shows partitioning into layers and subdomains." loading="lazy" width="764" height="744"/>
 
 </picture>
 
