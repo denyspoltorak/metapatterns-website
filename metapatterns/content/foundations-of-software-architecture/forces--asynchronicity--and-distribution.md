@@ -103,7 +103,7 @@ Another example comes from IoT – a fire alarm system\. They tend to use 3 tier
 - A *control panel* – some place where operators drink their coffee\.
 
 
-Sensors and actuators are cheap and energy\-efficient but dumb devices\. They do not react to events unless explicitly commanded\. The control panel is where all the magic happens, but it may be unreachable if the network is damaged or the wireless communication is jammed\. Field gateways stand in between: they collect information from the sensors, aggregate it to save on traffic, communicate with the control panel, and even activate actuators if the control panel is unreachable\. In this case a part of the business logic is installed in the dedicated devices which are located within the controlled building\.
+Sensors and actuators are cheap and energy\-efficient but too dumb to act on their own –  they do not react to events unless explicitly commanded\. The control panel is where all the magic happens, but it may be unreachable if the network is damaged or the wireless communication is jammed\. Field gateways stand in between: they collect information from the sensors, aggregate it to save on traffic, communicate with the control panel, and even activate actuators if the control panel is unreachable\. In this case a part of the business logic is installed in the dedicated devices which are located within the controlled building\.
 
 Here reliability conflicts with accuracy: a human operator makes an accurate estimate of the threat and chooses an appropriate action, but it is not granted that we can always reach the operator\. Thus to be reliable we add an inaccurate but trustworthy fallback reaction\.
 

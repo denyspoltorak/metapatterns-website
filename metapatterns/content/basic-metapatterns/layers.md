@@ -219,7 +219,7 @@ First you separate the high\-level logic from low\-level implementation details\
 
 | *Benefits* | *Drawbacks* |
 | --- | --- |
-| <span class="book-green">Structured code</span> | <span class="book-red">Lost opportunities for optimization</span> |
+| <span class="book-green">Structured code</span> | <span class="book-red">Lost opportunities for interlayer optimization</span> |
 | <span class="book-green">Two or three teams</span> |  |
 
 ### Asynchronous layers
@@ -228,7 +228,7 @@ For the next step you may decide to take will be to isolate the layers’ execut
 
 | *Benefits* | *Drawbacks* |
 | --- | --- |
-| Structured code | <span class="book-red">No</span> opportunities for optimization |
+| Structured code | <span class="book-red">No</span> opportunities for interlayer optimization |
 | Two or three teams | <span class="book-red">Some troubles with debugging</span> |
 | <span class="book-green">The layers may differ in latency</span> |  |
 
@@ -238,7 +238,7 @@ Next, you may run each layer in a separate process\. You have to devise an effic
 
 | *Benefits* | *Drawbacks* |
 | --- | --- |
-| Structured code | No opportunities for optimization |
+| Structured code | No opportunities for interlayer optimization |
 | Two or three teams | <span class="book-red">Troublesome</span> debugging |
 | The layers may differ in latency | <span class="book-red">Some performance penalty</span> |
 | <span class="book-green">The layers may differ in technologies</span> | <span class="book-red">Error recovery must be addressed</span> |
@@ -253,7 +253,7 @@ Finally, you may separate the hardware which the processes run on – going all 
 
 | *Benefits* | *Drawbacks* |
 | --- | --- |
-| Structured code | No opportunities for optimization |
+| Structured code | No opportunities for interlayer optimization |
 | Two or three teams | <span class="book-red">Even worse</span> debugging |
 | The layers may differ in latency | <span class="book-red">Definite</span> performance penalty |
 | The layers may differ in technologies | Error recovery must be addressed |
@@ -282,7 +282,7 @@ Balancing the [cohesers and decouplers]({{< relref "../analytics/the-heart-of-so
 <picture>
 <source srcset="/diagrams/Variants/1/Layer%20Roles.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Layer%20Roles.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Layer%20Roles.png" alt="A stack of layers: client or user, interface, application, domain, generic code, communication, data, and operating system and hardware." loading="lazy" width="883" height="664" style="width:100%"/>
+<img src="/diagrams/Variants/1/Layer%20Roles.png" alt="A stack of layers: client or user, interface, application, domain, generic code, communication, data, and operating system and hardware." loading="lazy" width="863" height="664" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -295,7 +295,7 @@ As an *interface* represents the system to its clients, it is a kind of [*Proxy*
 
 When a system interacts with a human, it exposes another kind of *interface* – [*Human\-Machine Interface* \(*HMI*\) or *User Interface* \(*UI*\)]({{< relref "../extension-metapatterns/proxy.md#user-interface-presentation-layer-separated-presentation-command-line-interface-cli-graphical-user-interface-gui-frontend-human-machine-interface-hmi-man-machine-interface-mmi-operator-interface" >}})\. The basics of its action are similar to the case of software\-to\-software interaction described above save that humans prefer visual or textual information instead of a highly structured Internet protocol\.
 
-Another, less common kind of interface is called *Service Provider Interface* \(*SPI*\)\. It is declared by a system that relies on an external component and is implemented by that component’s authors to make it pluggable into the system\. *SPI*s are in use by [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) and [*Microkernel*]({{< relref "../implementation-metapatterns/microkernel.md" >}}) topologies, with device drivers being the best known example of pluggable components\.
+Another, less common kind of interface is called *Service Provider Interface* \(*SPI*\)\. It is declared by a system that relies on an external component and is implemented by that component’s authors to make it pluggable into the system\. *SPI*s are in use by [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) and [*Microkernel*]({{< relref "../implementation-metapatterns/microkernel.md" >}}) architectures, with device drivers being the best known example of pluggable components\.
 
 Other kinds of *Proxies* adapt a system to foreign interfaces:
 

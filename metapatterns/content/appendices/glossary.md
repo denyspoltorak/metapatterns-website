@@ -28,7 +28,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 : see *architecture*\.
 
 *Architecture*
-: the structure of a system\. It comprises *components* and their *interactions*\.
+: the structure \(*components* and their *interactions*\) of a system that follows a certain framework or guidelines\.
 
 *ASS diagram*
 : a *structural diagram* with *abstraction*, *subdomain* and *sharding* for coordinates\.

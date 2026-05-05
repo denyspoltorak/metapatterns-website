@@ -101,6 +101,22 @@ Metapatterns
 
 </a>
 
+<a href="{{< relref "introduction/system-topologies.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Topologies.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Topologies.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Topologies.png" alt="Diagrams of Monolith, Layers, Plugins, Hierarchy, and Services in a system of coordinates that shows partitioning into layers and subdomains." loading="lazy" width="764" height="744"/>
+
+</picture>
+
+System topologies
+
+</a>
+
 <a class="grid-row" href="{{< relref "foundations-of-software-architecture/_index.md" >}}">
 
 <h2>Foundations of software architecture</h2>

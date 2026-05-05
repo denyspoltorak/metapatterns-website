@@ -10,7 +10,7 @@ bookCollapseSection = true
 
 # Fragmented metapatterns {anchor=false}
 
-There are several topologies with no system\-wide layers\. Some of them incorporate two or three orthogonal domains which vary in abstractness to the extent that a service \(limited to a subdomain\) of one domain acts as a layer for another domain\.
+There are several [topologies]({{< relref "../introduction/system-topologies.md" >}}) with no system\-wide layers\. Some of them incorporate two or three orthogonal domains which vary in abstractness to the extent that a service \(limited to a subdomain\) of one domain acts as a layer for another domain\.
 
 ### [Layered Services]({{< relref "../fragmented-metapatterns/layered-services.md" >}})
 

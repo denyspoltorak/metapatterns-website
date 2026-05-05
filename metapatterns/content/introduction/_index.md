@@ -12,14 +12,10 @@ bookCollapseSection = true
 
 ## You’ll find inside
 
-- An atlas of system topologies\.
+- An atlas of [system topologies]({{< relref "../introduction/system-topologies.md" >}})\.
 - A compendium of [architectural patterns](https://en.wikipedia.org/wiki/Architectural_pattern)\.
 - One of the largest and most cohesive [pattern languages](https://en.wikipedia.org/wiki/Pattern_language)\.
 
-
-## Opentowork
-
-As a software architecture consultant, my background includes 15 years of hands\-on coding with 6 years of technical project management\.
 
 ## Contents:
 
@@ -54,6 +50,22 @@ About this book
 </picture>
 
 Metapatterns
+
+</a>
+
+<a href="{{< relref "introduction/system-topologies.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Topologies.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Topologies.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Topologies.png" alt="Diagrams of Monolith, Layers, Plugins, Hierarchy, and Services in a system of coordinates that shows partitioning into layers and subdomains." loading="lazy" width="764" height="744"/>
+
+</picture>
+
+System topologies
 
 </a>
 
