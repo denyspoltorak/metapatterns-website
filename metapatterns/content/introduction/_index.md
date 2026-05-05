@@ -17,7 +17,7 @@ bookCollapseSection = true
 
 *of Software Architecture*
 
-*v 1\.2 \(03\-2026\)*
+*v 1\.2 \(05\-2026\)*
 
 Denys Poltorak \(author\)
 
@@ -32,14 +32,10 @@ Lars Noodén \(editor\)
 
 ## You’ll find inside
 
-- An atlas of system topologies\.
+- An atlas of [system topologies]({{< relref "../introduction/system-topologies.md" >}})\.
 - A compendium of [architectural patterns](https://en.wikipedia.org/wiki/Architectural_pattern)\.
 - One of the largest and most cohesive [pattern languages](https://en.wikipedia.org/wiki/Pattern_language)\.
 
-
-## Opentowork
-
-As a software architecture consultant, my background includes 15 years of hands\-on coding with 6 years of technical project management\.
 
 ## Short table of contents
 
@@ -76,6 +72,12 @@ About this book
 </picture>
 
 Metapatterns
+
+</a>
+
+<a href="{{< relref "introduction/system-topologies.md" >}}">
+
+System topologies
 
 </a>
 
