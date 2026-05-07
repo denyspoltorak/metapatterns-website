@@ -9,8 +9,6 @@ bookCollapseSection = true
   priority = 0.5
 +++
 
-<section>
-
 # The pattern language of software architecture {anchor=false}
 
 Patterns of software architecture are all interrelated (*no pattern is an island*). You can rarely make a product in a pure architectural style, and the chances for it to survive undistorted over years are negligible. Software grows iteratively and adapts to its environment.
@@ -665,13 +663,9 @@ Index of patterns
 
 </nav>
 
-</section>
-
 <hr>
 
-<section>
-
-# The map of system topologies {anchor=false}
+<h2 style="text-align: center;">The map of system topologies</h2>
 
 <nav class="map">
 
@@ -772,5 +766,3 @@ Index of patterns
 <a href="/basic-metapatterns/layers/#data-persistence" aria-label="Data" style="position: absolute; top: 96.5%; left: 73%; width: 10.5%; height: 3.5%;"></a>
 
 </nav>
-
-</section>
