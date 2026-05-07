@@ -662,3 +662,103 @@ Index of patterns
 </a>
 
 </nav>
+
+<hr>
+
+<nav>
+
+<div style="position: relative; display: inline-block; width: 100%;">
+
+<picture>
+
+<source srcset="/diagrams/Web/Map.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Map.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Map.png" alt="The map of system topologies. The vertical asix is partitioning into layers, the horizontal axis is partitioning into services" loading="lazy" width="2964" height="2084"/>
+
+</picture>
+
+<a href="/basic-metapatterns/layers/" aria-label="Layers" style="position: absolute; top: 2%; left: 13%; width: 6.5%; height: 12.5%; border: 1px solid red;"></a>
+
+<a href="/fragmented-metapatterns/polyglot-persistence/" aria-label="Layers with Polyglot Persistence" style="position: absolute; top: 2%; left: 24.5%; width: 8%; height: 16.5%; border: 1px solid red;"></a>
+
+<a href="/fragmented-metapatterns/backends-for-frontends--bff-/" aria-label="Layers with Backends for Frontends" style="position: absolute; top: 2%; left: 32.5%; width: 7%; height: 14.5%; border: 1px solid red;"></a>
+
+<a href="/implementation-metapatterns/hexagonal-architecture/#ddd-style-hexagonal-architecture-onion-architecture-clean-architecture" aria-label="Onion Architecture" style="position: absolute; top: 5%; left: 40%; width: 8%; height: 19%; border: 1px solid red;"></a>
+
+<a href="/implementation-metapatterns/microkernel/" aria-label="Microkernel" style="position: absolute; top: 22%; left: 48%; width: 8%; height: 13%; border: 1px solid red;"></a>
+
+<a href="/implementation-metapatterns/hexagonal-architecture/#ports-and-adapters-hexagonal-architecture" aria-label="Hexagonal Architecture" style="position: absolute; top: 29%; left: 39%; width: 8.5%; height: 17.5%; border: 1px solid red;"></a>
+
+<a href="/implementation-metapatterns/hexagonal-architecture/#pedestal" aria-label="Pedestal" style="position: absolute; top: 35.5%; left: 48.5%; width: 7%; height: 11%; border: 1px solid red;"></a>
+
+<a href="/implementation-metapatterns/hexagonal-architecture/#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" aria-label="Model-View-Controller" style="position: absolute; top: 49%; left: 29.5%; width: 7%; height: 11%; border: 1px solid red;"></a>
+
+<a href="/implementation-metapatterns/plugins/" aria-label="Plugins" style="position: absolute; top: 48%; left: 38%; width: 6.5%; height: 12.5%; border: 1px solid red;"></a>
+
+<a href="/implementation-metapatterns/hexagonal-architecture/#cell-cluster-domain" aria-label="Cell" style="position: absolute; top: 47%; left: 49.5%; width: 9%; height: 13%; border: 1px solid red;"></a>
+
+<a href="/implementation-metapatterns/hexagonal-architecture/#model-view-presenter-mvp-model-view-adapter-mva-model-view-viewmodel-mvvm-model-1-mvc1-document-view" aria-label="Model-View-Presenter" style="position: absolute; top: 29%; left: 19.5%; width: 7%; height: 14.5%; border: 1px solid red;"></a>
+
+<a href="/basic-metapatterns/services/#scaled-service" aria-label="Scaled service" style="position: absolute; top: 22.5%; left: 13%; width: 6.5%; height: 16.5%; border: 1px solid red;"></a>
+
+<a href="/basic-metapatterns/layers/#three-tier-architecture" aria-label="Three-Tier" style="position: absolute; top: 22%; left: 5.5%; width: 6.5%; height: 15.5%; border: 1px solid red;"></a>
+
+<a href="/extension-metapatterns/orchestrator/#api-composer-remote-facade-gateway-aggregation-composed-message-processor-scatter-gather-mapreduce" aria-label="MapReuce" style="position: absolute; top: 38%; left: 5%; width: 7.5%; height: 12%; border: 1px solid red;"></a>
+
+<a href="/basic-metapatterns/shards/#persistent-slice-sharding-shards-partitions-multitenancy-cells-amazon-definition" aria-label="Managed Shards" style="position: absolute; top: 44%; left: 14%; width: 7%; height: 14.5%; border: 1px solid red;"></a>
+
+<a href="/implementation-metapatterns/mesh/#peer-to-peer-networks" aria-label="Peer-to-Peer Mesh" style="position: absolute; top: 58.5%; left: 14%; width: 7%; height: 12%; border: 1px solid red;"></a>
+
+<a href="/basic-metapatterns/monolith/" aria-label="Monolith with a database" style="position: absolute; top: 56.5%; left: 4.5%; width: 8.5%; height: 12%; border: 1px solid red;"></a>
+
+<a href="/basic-metapatterns/shards/#persistent-slice-sharding-shards-partitions-multitenancy-cells-amazon-definition" aria-label="Shards" style="position: absolute; top: 70.5%; left: 5.5%; width: 6.5%; height: 10.5%; border: 1px solid red;"></a>
+
+<a href="/basic-metapatterns/monolith/" aria-label="Monolith" style="position: absolute; top: 81.5%; left: 5.5%; width: 6.5%; height: 8.5%; border: 1px solid red;"></a>
+
+<a href="/basic-metapatterns/shards/#persistent-copy-replica" aria-label="Replicas" style="position: absolute; top: 81%; left: 14.5%; width: 7%; height: 10%; border: 1px solid red;"></a>
+
+<a href="/basic-metapatterns/monolith/" aria-label="Monolith with libraries" style="position: absolute; top: 76%; left: 29%; width: 8%; height: 11%; border: 1px solid red;"></a>
+
+<a href="/fragmented-metapatterns/polyglot-persistence/" aria-label="Monolith with Polyglot Persistence" style="position: absolute; top: 61%; left: 25%; width: 8%; height: 14.5%; border: 1px solid red;"></a>
+
+<a href="/fragmented-metapatterns/backends-for-frontends--bff-/" aria-label="Monolith with Backends for Frontends" style="position: absolute; top: 61%; left: 34%; width: 6.5%; height: 12.5%; border: 1px solid red;"></a>
+
+<a href="/basic-metapatterns/services/#synchronous-modules-modular-monolith-modulith" aria-label="Modulith with shared code" style="position: absolute; top: 74.5%; left: 49.5%; width: 9%; height: 10%; border: 1px solid red;"></a>
+
+<a href="/implementation-metapatterns/mesh/#service-mesh" aria-label="Service Mesh" style="position: absolute; top: 64%; left: 68.5%; width: 6%; height: 14.5%; border: 1px solid red;"></a>
+
+<a href="/basic-metapatterns/services/" aria-label="Services" style="position: absolute; top: 82%; left: 90.5%; width: 6.5%; height: 8%; border: 1px solid red;"></a>
+
+<a href="/basic-metapatterns/pipeline/" aria-label="Pipeline" style="position: absolute; top: 70.5%; left: 88.5%; width: 10.5%; height: 7.5%; border: 1px solid red;"></a>
+
+<a href="/fragmented-metapatterns/polyglot-persistence/" aria-label="Services with Polyglot Persistence" style="position: absolute; top: 49%; left: 80%; width: 9%; height: 14.5%; border: 1px solid red;"></a>
+
+<a href="/fragmented-metapatterns/backends-for-frontends--bff-/" aria-label="Services with Backends for Frontends" style="position: absolute; top: 35%; left: 81%; width: 7%; height: 12%; border: 1px solid red;"></a>
+
+<a href="/fragmented-metapatterns/layered-services/#choreographed-two-layered-services" aria-label="Two-Layered Services" style="position: absolute; top: 41.5%; left: 90.5%; width: 6.5%; height: 11.5%; border: 1px solid red;"></a>
+
+<a href="/fragmented-metapatterns/layered-services/#orchestrated-three-layered-services" aria-label="Three-Layered Services" style="position: absolute; top: 19%; left: 90.5%; width: 6.5%; height: 14%; border: 1px solid red;"></a>
+
+<a href="/fragmented-metapatterns/service-oriented-architecture--soa-/" aria-label="Service-Oriented Architecture" style="position: absolute; top: 3%; left: 83%; width: 11%; height: 14.5%; border: 1px solid red;"></a>
+
+<a href="/fragmented-metapatterns/hierarchy/#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" aria-label="Top-Down Hierarchy" style="position: absolute; top: 3%; left: 65.5%; width: 9.5%; height: 14.5%; border: 1px solid red;"></a>
+
+<a href="/extension-metapatterns/sandwich/" aria-label="Sandwich" style="position: absolute; top: 7%; left: 55.5%; width: 6.5%; height: 12%; border: 1px solid red;"></a>
+
+<a href="/fragmented-metapatterns/hierarchy/#bottom-up-hierarchy-bus-of-buses-network-of-networks" aria-label="Hierarchical Middleware" style="position: absolute; top: 18%; left: 63.5%; width: 9.5%; height: 15.5%; border: 1px solid red;"></a>
+
+<a href="/fragmented-metapatterns/hierarchy/#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services" aria-label="Cell-Based Architecture" style="position: absolute; top: 19%; left: 74.5%; width: 9%; height: 14%; border: 1px solid red;"></a>
+
+<a href="/extension-metapatterns/proxy/#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" aria-label="Services with a Gateway" style="position: absolute; top: 35%; left: 67.5%; width: 8.5%; height: 12%; border: 1px solid red;"></a>
+
+<a href="/extension-metapatterns/orchestrator/" aria-label="Orchestrated Services" style="position: absolute; top: 35%; left: 58.5%; width: 8.5%; height: 12%; border: 1px solid red;"></a>
+
+<a href="/extension-metapatterns/shared-repository/" aria-label="Services with a Shared Repository" style="position: absolute; top: 49%; left: 58.5%; width: 8.5%; height: 14.5%; border: 1px solid red;"></a>
+
+<a href="/extension-metapatterns/middleware/" aria-label="Services with a Middleware" style="position: absolute; top: 49%; left: 67.5%; width: 8.5%; height: 12.5%; border: 1px solid red;"></a>
+
+</div>
+
+</nav>
