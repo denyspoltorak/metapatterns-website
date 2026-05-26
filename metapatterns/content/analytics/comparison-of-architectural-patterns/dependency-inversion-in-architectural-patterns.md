@@ -9,9 +9,9 @@ images = ["/diagrams/Web/og/DI.png"]
 
 # Dependency inversion in architectural patterns {anchor=false}
 
-I am no fan of [*SOLID*](https://en.wikipedia.org/wiki/SOLID) – to the extent of being unable to remember what those five letters mean – thus I was really surprised to notice that one of its principles, namely [*dependency inversion*](https://en.wikipedia.org/wiki/Dependency_inversion_principle), is quite common with architectural patterns, which means that it is way more generic than *OOP* it is promoted for\.
+I am no fan of [*SOLID*](https://en.wikipedia.org/wiki/SOLID) – to the extent of being unable to remember what those five letters mean – thus I was really surprised to notice that one of its principles, namely [*dependency inversion*](https://en.wikipedia.org/wiki/Dependency_inversion_principle), is quite common with architectural patterns, which means that it is much more generic than *OOP* which it is promoted for\.
 
-Let’s see how dependency inversion is used on system level\.
+Let’s see how dependency inversion is used at the system level\.
 
 ## Patterns that build around it
 
@@ -25,12 +25,12 @@ Let’s see how dependency inversion is used on system level\.
 </a>
 </figure>
 
-Both [*Plugins*]({{< relref "../../implementation-metapatterns/plugins.md" >}}) and the derived [*Hexagonal Architecture*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md" >}}) rely on dependency inversion for the same reason – to protect the *core*, which contains the bulk of the code, from variability in the external components it uses\. The *core* operates interfaces \([*SPI*](https://en.wikipedia.org/wiki/Service_provider_interface)s\) which it defines so that it may not care whatever is behind an interface\.
+Both [*Plugins*]({{< relref "../../implementation-metapatterns/plugins.md" >}}) and the derived [*Hexagonal Architecture*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md" >}}) rely on dependency inversion for the same reason – to protect the *core*, which contains the bulk of the code, from variability in the external components it uses\. The *core* operates interfaces \([*SPI*](https://en.wikipedia.org/wiki/Service_provider_interface)s\) which it defines so that it may not care exactly what  is behind the interface\.
 
-It is the nature of the polymorphic components that distinguishes the patterns:
+It is the nature of the polymorphic components that distinguishes those patterns:
 
 - [*Plugins*]({{< relref "../../implementation-metapatterns/plugins.md" >}}) allow for small pieces of code, typically contributed by outside developers, to provide customizable parts of the system’s algorithms and decision making\. Oftentimes the core team has no idea of how many diverse plugins will be written for their product\.
-- [*Hexagonal Architecture*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md" >}}) is about breaking dependency of the core on external libraries or services by employing [*adapters*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}})\. Each adapter depends both on the core’s SPI and on the API of the component which it adapts\. As interfaces and contracts vary among vendors and even versions of software, which we want to be interchangeable, we need adapters to wrap the external components to make them look identical to our core\. Besides, [*stub* or *mock*](https://stackoverflow.com/questions/3459287/whats-the-difference-between-a-mock-stub) adapters help develop and test the core in isolation\.
+- [*Hexagonal Architecture*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md" >}}) is about breaking dependency of the core on external libraries or services by employing [*adapters*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}})\. Each adapter depends both on the core’s SPI and on the API of the component which it adapts\. As interfaces and contracts vary among vendors and even versions of software, which we want to be interchangeable, we need adapters to wrap the external components to make them look identical to our core\. Besides that, [*stub* or *mock*](https://stackoverflow.com/questions/3459287/whats-the-difference-between-a-mock-stub) adapters help develop and test the core in isolation\.
 
 
 ## Patterns that often rely on it
@@ -45,10 +45,10 @@ It is the nature of the polymorphic components that distinguishes the patterns:
 </a>
 </figure>
 
-A few more metapatterns tend to use this approach to earn its benefits, even though dependency inversion is not among their integral features:
+A few more patterns tend to use this approach to earn its benefits, even though dependency inversion is not among their integral features:
 
 - [*Microkernel*]({{< relref "../../implementation-metapatterns/microkernel.md" >}}), yet another metapattern derived from [*Plugins*]({{< relref "../../implementation-metapatterns/plugins.md" >}}), distributes resources of *providers* among *consumers*\. Polymorphism is crucial for some of its variants, including [*Operating System*]({{< relref "../../implementation-metapatterns/microkernel.md#operating-system" >}}), but may rarely benefit others, such as [*Software Framework*]({{< relref "../../implementation-metapatterns/microkernel.md#software-framework-pluggable-component-framework" >}})\.
-- [*Top\-Down Hierarchy*]({{< relref "../../fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}}) distributes responsibility over a tree of components\. If the nodes of the tree are polymorphic, they are easier to operate, and there is dependency inversion\. However, in practice, a parent node may often be strongly coupled to the types of its children and access them directly\.
+- [*Top\-Down Hierarchy*]({{< relref "../../fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}}) distributes responsibility over a tree of components\. If the nodes of the tree are polymorphic, they are easier to operate, and there is dependency inversion\. However, in practice, a parent node may often be so strongly coupled to the types of its children that polymorphism becomes impractical\.
 - In another kind of [*Hierarchy*]({{< relref "../../fragmented-metapatterns/hierarchy.md" >}}), namely [*Cell\-Based Architecture*]({{< relref "../../fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services" >}}) \(aka *Services of Services*\), each [*Cell*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}}) [may employ](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md) a [*Cell Gateway*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) and outbound [*Adapters*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) or [*Ambassador Plugins*]({{< relref "../../implementation-metapatterns/plugins.md#ambassador-plugin-logic-extension" >}}) to isolate its business logic from the environment – just like its parent [*Hexagonal Architecture*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md" >}}) does for a monolithic core\.
 
 
@@ -66,7 +66,7 @@ A few more metapatterns tend to use this approach to earn its benefits, even tho
 
 Finally, two basic architectures, [*Layers*]({{< relref "../../basic-metapatterns/layers.md" >}}) and [*Services*]({{< relref "../../basic-metapatterns/services.md" >}}), may resort to something similar to dependency inversion to decouple their constituents:
 
-- We often see a higher layer to depend on and a lower layer to implement a standardized interface, like POSIX or SQL, to achieve *interoperability* with other implementations \(which is yet another wording for polymorphism\)\.
+- We often see a higher layer to depend on, and a lower layer to implement a standardized interface, like POSIX or SQL, to achieve *interoperability* with other implementations \(which is yet another wording for polymorphism\)\.
 - A service may follow the concept of [*Hexagonal Architecture*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md" >}}) by using an [*Anti\-Corruption Layer*]({{< relref "../../basic-metapatterns/services.md#dependencies" >}}) or [*CQRS Views*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) as [*Adapters*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) that protect it from changes in other system components\.
 
 
@@ -78,7 +78,7 @@ Many architectural patterns employ dependency inversion by adding:
 - [*Adapters*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) to protect a component from changes in its dependencies\.
 
 
-The two approaches apply in different circumstances:
+These two approaches apply in different circumstances:
 
 - If you can enforce your rules of the game on the suppliers of the external components, you merely *define an SPI*, and expect the suppliers to implement and obey it\.
 - If the suppliers are independent and it is your side that adapts to their rules, you should *add Adapters* to translate between your lovely SPI and their whimsical APIs\.

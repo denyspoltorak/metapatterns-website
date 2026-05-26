@@ -11,10 +11,10 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 One issue peculiar to [*Shards*]({{< relref "../../basic-metapatterns/shards.md" >}}) is that of coordinating the instances deployed, especially if their data become coupled\. The most direct solution is to let the instances operate a component that wraps the shared data:
 
-- If the whole dataset needs to be shared, it can be split into a [*Shared Repository*]({{< relref "../../extension-metapatterns/shared-repository.md" >}}) layer\. 
+- If the whole dataset needs to be shared, it can be extracted into a [*Shared Repository*]({{< relref "../../extension-metapatterns/shared-repository.md" >}}) layer\. 
 - If data collisions are tolerated, [*Space\-Based Architecture*]({{< relref "../../implementation-metapatterns/mesh.md#space-based-architecture" >}}) promises low latency and dynamic scalability\.
 - If a part of the system’s data becomes coupled, only that part can be moved to a *Shared Repository*, causing each instance to manage two data stores: [private and shared]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#private-and-shared-databases" >}})\.
-- Another option is to split out a [*service*]({{< relref "../../basic-metapatterns/services.md" >}}) to own the coupled data and always deploy it as a single instance\. The remaining parts of the system become coupled to that service, not each other\.
+- Another option is to split out a [*service*]({{< relref "../../basic-metapatterns/services.md" >}}) to own the coupled data and always deploy it as a single instance\. The remaining parts of the system become coupled to that service, not to each other\.
 
 
 ## Move all the data to a Shared Repository
@@ -41,7 +41,7 @@ In case a shard needs to access data owned by any other shard, the prerequisite 
 
 - You can choose one of the many specialized databases available\.
 - The stateless instances of the main application become dynamically scalable\.
-- Failure of a single instance affects few users\.
+- Failure of a single instance affects a few users for a short time\.
 - [*Canary Release*](https://martinfowler.com/bliki/CanaryRelease.html) is supported\.
 
 
@@ -54,8 +54,8 @@ In case a shard needs to access data owned by any other shard, the prerequisite 
 <ins>Further steps</ins>:
 
 - [*Hexagonal Architecture*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md" >}}) will let you change your database in the future\.
-- [*Space\-Based Architecture*]({{< relref "../../implementation-metapatterns/mesh.md#space-based-architecture" >}}) decreases latency by co\-locating subsets of the data and your application\.
-- [*Polyglot Persistence*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md" >}}) uses multiple specialized databases, often by separating commands and queries\. That may greatly relieve the primary \(write\) database\.
+- [*Space\-Based Architecture*]({{< relref "../../implementation-metapatterns/mesh.md#space-based-architecture" >}}) decreases latency by co\-locating subsets of the data and the instances of your application\.
+- [*Polyglot Persistence*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md" >}}) uses multiple specialized databases, often discerning between commands and queries\. That may greatly relieve the primary \(write\) database\.
 - [*CQRS*]({{< relref "../../fragmented-metapatterns/layered-services.md#command-query-responsibility-segregation-cqrs" >}}) goes even further by processing read and write requests with dedicated *services*\. 
 
 
@@ -77,9 +77,9 @@ In case a shard needs to access data owned by any other shard, the prerequisite 
 
 <ins>Prerequisite</ins>: data collisions are acceptable\.
 
-*Space\-Based Architecture* is a *Mesh* of nodes which consist of the application and a cached subset of the system’s data\. A node broadcasts any changes to its data to other nodes and it may request any data that it needs from the other nodes\. Collectively, the nodes of the *Mesh* keep the whole data cached in memory\.
+*Space\-Based Architecture* is a *Mesh* of nodes which comprise the application and a cached subset of the system’s data\. A node broadcasts any changes to its data to other nodes, and it may request any data that it needs from the other nodes\. Collectively, the nodes of the *Mesh* keep the entire system’s data cached in memory\.
 
-Though *Space\-Based Architecture* may provide multiple modes of action, including [single write / multiple read]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#read-only-replicas" >}}) replicas, it is most efficient when there is no write synchronization between its nodes, meaning that data consistency is sacrificed for performance and scalability\.
+Though *Space\-Based Architecture* may provide several modes of action, including [single write / multiple read]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#read-only-replicas" >}}) replicas, it is most efficient when there is no write synchronization between its nodes, in which case data consistency is sacrificed for performance and scalability\.
 
 <ins>Pros</ins>: 
 
@@ -92,11 +92,11 @@ Though *Space\-Based Architecture* may provide multiple modes of action, includi
 
 - Choose one: data collisions or mediocre performance\.
 - Low latency is supported only for datasets that fit in memory of a single node\.
-- High operational cost because the nodes exchange huge amounts of data\.
+- High operational costs because the nodes exchange huge amounts of data\.
 - No support for analytical queries\.
 
 
-## Use a Shared Repository for a coupled subset of the data
+## Use a Shared Repository for the coupled subset of data
 
 <figure>
 <a href="/diagrams/Evolutions/Shards/Shards%20add%20Shared%20DB.png">
@@ -114,7 +114,7 @@ Though *Space\-Based Architecture* may provide multiple modes of action, includi
 
 <ins>Prerequisite</ins>: the shards are coupled through a small subset of data\.
 
-If a subset of the data is accessed by all the shards, that subset can be moved to a dedicated database, which is likely to be fast if only because it is small\. Using a distributed database that keeps its data synchronized on all the shards may be even faster\.
+If a subset of the data is accessed by all the shards, that subset can be moved into a dedicated database, which is likely to be fast if only because it is small\. Using a distributed database that keeps its data synchronized among all the shards may be even faster\.
 
 This approach resembles [*Shared Kernel*](https://ddd-practitioners.com/home/glossary/bounded-context/bounded-context-relationship/shared-kernel/) \[[DDD]({{< relref "../../appendices/books-referenced.md#ddd" >}})\]\.
 
@@ -146,7 +146,7 @@ This approach resembles [*Shared Kernel*](https://ddd-practitioners.com/home/glo
 
 <ins>Prerequisite</ins>: the part of the domain which causes coupling between the shards is weakly coupled to the remaining domain\.
 
-If a part of the domain is too cohesive to be sharded, we can often move it from the main application into a dedicated service\. That way the main application remains sharded while the new service exists as a single instance\. In rare cases there is a chance to re\-shard the new service with a sharding key which is different from the one used for sharding the main application\.
+If a part of the domain is too cohesive to be sharded, we can often extract it from the main application into a dedicated service\. That way the main application remains sharded while the new service exists as a single instance\. In rare cases there is a chance to re\-shard the new service with a sharding key which is different from the one used for sharding the main application\.
 
 This approach resembles [*Shared Kernel*](https://ddd-practitioners.com/home/glossary/bounded-context/bounded-context-relationship/shared-kernel/) \[[DDD]({{< relref "../../appendices/books-referenced.md#ddd" >}})\]\.
 
@@ -154,7 +154,7 @@ This approach resembles [*Shared Kernel*](https://ddd-practitioners.com/home/glo
 
 - The main code should become a little bit simpler\.
 - The new service can be given to a new team\.
-- The new service may choose a database that best fits its needs\.
+- The new service may choose a database which best fits its needs\.
 
 
 <ins>Cons</ins>: 

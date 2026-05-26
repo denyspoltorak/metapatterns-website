@@ -22,9 +22,9 @@ Another integration option, named *choreography* after seemingly spontaneous int
 </a>
 </figure>
 
-In that case there is no owner for *workflows* – each request is just a data packet which is transformed multiple times as it passes through the *Pipeline*\. Debugging is mostly limited to reading logs as there is no dedicated component to connect to for single\-step execution of a use case\. Nor is there a single piece of code to define each of the system\-wide scenarios – their logic emerges from the graph of event channels that connect services and from messages that each involved event handler sends\. Consistency of the services’ states is the responsibility of the services themselves as there is none supervising them\.
+In that case there is no owner for *workflows* – each request is just a data packet which is transformed multiple times as it passes through the *Pipeline*\. Debugging is mostly limited to reading logs as there is no dedicated component to connect a debugger to for single\-step execution of a use case\. Nor is there a single piece of code to define each of the system\-wide scenarios – their logic emerges from the graph of event channels between services and from message types that each involved event handler sends\. Maintaining the consistency of the services’ states is the responsibility of the services themselves as there is none to supervise them\.
 
-On the bright side, there is no communication overhead caused by response messages as there are no responses – the processing cost is one message per service, half of the cost for an orchestrated architecture\. Still, messages in choreographed systems tend to be longer than those used with [orchestration]({{< relref "../../foundations-of-software-architecture/arranging-communication/orchestration.md" >}}) as each message needs to carry the entire request’s state – there is no [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) to own the state and distribute parts of the payload among involved services\.
+On the bright side, there is no communication overhead caused by response messages as there are no responses – the processing cost is one message per service, half of the cost for an orchestrated architecture\. Still, messages in choreographed systems tend to be longer than those used with [orchestration]({{< relref "../../foundations-of-software-architecture/arranging-communication/orchestration.md" >}}) as each message needs to carry the entire request’s state – there is no [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) to own the state and distribute parts of the request’s payload among involved services\.
 
 <figure>
 <a href="/diagrams/Communication/Pipeline%20Enricher.png">
@@ -36,7 +36,7 @@ On the bright side, there is no communication overhead caused by response messag
 </a>
 </figure>
 
-Latency may also be suboptimal as parallelizing execution of a request is easier said than done because there is no place \(*Aggregator* \[[EIP]({{< relref "../../appendices/books-referenced.md#eip" >}})\]\) to collect multiple related messages, which also means that there is no associated cost in resources \(RAM and CPU time\) for storing their fragments\. Please note that an *Aggregator*, when added, starts orchestrating the system – it stands between the client and services and meddles with the traffic and logic\. It spends resources to store the received messages for aggregation, and the messages start forming request/confirm pairs – which are characteristic of orchestration\.
+Latency may also be suboptimal as parallelizing execution of a request is easier said than done because in a purely choreographed system there is no place \(called *Aggregator* \[[EIP]({{< relref "../../appendices/books-referenced.md#eip" >}})\]\) to collect multiple related messages, which also means that there is no associated cost in resources \(RAM and CPU time\) for storing their payloads\. Please note that an *Aggregator*, when added, starts orchestrating the system – it stands between the client and services and meddles with the traffic and logic\. It spends resources to store the received messages for aggregation, and the messages start forming request/confirm pairs – which are characteristic of orchestration\.
 
 <figure>
 <a href="/diagrams/Communication/Pipeline%20Not%20Parallel.png">
@@ -48,7 +48,9 @@ Latency may also be suboptimal as parallelizing execution of a request is easier
 </a>
 </figure>
 
-Still another trouble with choreography comes from its weakness in error processing\. When a service in the middle of a request processing pipeline encounters an error, it cannot generate its normal output to be sent further downstream\. One option is to fill in a null \(or error\) value but then each receiver of the message should remember to check for null and know how to deal with an error\. Another way is adding a dedicated error channel for each service to push failed requests into, but that complicates the whole system’s structure\. Moreover, a failure in the middle of processing a request may cause the services to end up with inconsistent data if no special attention \(a new kind of request to compensate the original one\) is paid to roll back the partial change\. Please note that all of that is conveniently handled by an *Orchestrator*\.
+Still another trouble with choreography comes from its weakness in error processing\. When a service in the middle of a request processing pipeline encounters an error, it cannot generate the normal output which would have been sent further downstream\. One option is to fill in a null \(or error\) value but in that case each receiver of the message should remember to check for null and know how to deal with the error\. Another way is adding a dedicated error channel for each service to push failed requests into, but that complicates the high\-level system’s architecture\. Moreover, a failure in the middle of processing a request may cause the services to end up with inconsistent data if no special attention \(i\.e\. a new kind of request to compensate the original one\) is paid to roll back the partial change\. 
+
+Please note that all of the above is comfortably handled by an *Orchestrator*\. Essentially, the exception handling, which an *Orchestrator* covers within its code, in a choreographed system escalates to the system’s architecture level\.
 
 <figure>
 <a href="/diagrams/Communication/Pipeline%20Error.png">
@@ -74,7 +76,7 @@ The ordinary mode of action for a pipeline – sending the final results of proc
 </a>
 </figure>
 
-The gateway, if used, may parallelize processing of [scatter or gather](https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/scatter-gather.html) requests by turning into an [*API Gateway*]({{< relref "../../extension-metapatterns/orchestrator.md#api-gateway" >}}) which is a kind of *Orchestrator*\. Which means that the system changes its paradigm from choreography to orchestration\.
+The gateway, if used, may parallelize processing of [scatter\-gather](https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/scatter-gather.html) requests by turning into an [*API Gateway*]({{< relref "../../extension-metapatterns/orchestrator.md#api-gateway" >}}) which is a kind of *Orchestrator*\. Which means that the system changes its paradigm from choreography to orchestration\.
 
 <figure>
 <a href="/diagrams/Communication/Gateway%20to%20API%20Gateway.png">
@@ -98,13 +100,13 @@ It is possible to avoid both adding a *Gateway* and having the cyclic dependency
 </a>
 </figure>
 
-*Early response* allows for choreography to shine in its purest form: with extensibility, high performance, but also high latency\. A similar approach may be used in [*Service\-Based Architecture*]({{< relref "../../basic-metapatterns/services.md#service-based-architecture-sba-macroservices" >}}) \(aka *Macroservices*\) [for communication between the services](https://learn.microsoft.com/en-us/azure/architecture/patterns/choreography) \(*bounded contexts*\) if they only need to notify each other of events without waiting for responses\.
+*Early response* allows for choreography to shine in its purest form: with extensibility, high performance, but also high latency\. A similar approach may be used in [*Service\-Based Architecture*]({{< relref "../../basic-metapatterns/services.md#service-based-architecture-sba-macroservices" >}}) \(aka *Macroservices*\) [for communication between the services](https://learn.microsoft.com/en-us/azure/architecture/patterns/choreography) \(*bounded contexts* \[[DDD]({{< relref "../../appendices/books-referenced.md#ddd" >}})\]\) if they only need to notify each other of events without waiting for responses\.
 
 ## Dependencies
 
 A pipeline may be built with downstream or upstream dependencies or with a shared schema\.
 
-If services communicate through commands, each service depends on all the direct destinations of its commands as it must know each of the APIs which it uses\. This mode of communication is mostly used with [*Actors*]({{< relref "../../basic-metapatterns/services.md#class-like-actors" >}}) that power embedded, telecom, messengers, and some banking systems\. Downstream dependencies make it easy to add input chains \(upstream services that deal with new hardware or external components\) although changing anything at the output end of the pipeline is going to break the input parts that send messages to the component changed\.
+If services communicate through commands, each service depends on all the direct destinations of its commands as it must know each of the APIs which it uses\. This mode of communication is mostly used with [*Actors*]({{< relref "../../basic-metapatterns/services.md#class-like-actors" >}}) that power embedded, telecom, messengers, and some banking systems\. Downstream dependencies make it easy to add input chains \(upstream services that deal with new hardware or external clients\) although changing anything at the output end of the pipeline is going to break the input parts that send messages to the component changed\.
 
 <figure>
 <a href="/diagrams/Communication/Downstream%20Dependencies.png">
@@ -116,7 +118,7 @@ If services communicate through commands, each service depends on all the direct
 </a>
 </figure>
 
-Upstream dependencies come from the [publish/subscribe](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) model where each service broadcasts notifications about what it has done to any interested subscriber\. This way of building systems engines [*Event\-Driven Architecture*]({{< relref "../../basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}}) which is used in high\-load backends\. Extending or truncating an already implemented request processing tree is as easy as adding or removing subscribers to existing events but the creation of a new event source will require changes in the downstream components\. The easy addition of downstream branches supports new customer experiences and analytical features which business is hungry for\.
+Upstream dependencies come from the [publish/subscribe](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) model \([*Event Collaboration*](https://martinfowler.com/eaaDev/EventCollaboration.html)\) where each service broadcasts notifications to any interested subscriber about what it has done\. This way of building systems engines [*Event\-Driven Architecture*]({{< relref "../../basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}}) which is used in high\-load backends\. Extending or truncating an already implemented request processing tree is as easy as adding or removing subscribers to existing events but the creation of a new event source will require changes in the downstream components\. The easy addition of downstream branches supports new customer experiences and analytical features which businesses are hungry for\.
 
 <figure>
 <a href="/diagrams/Communication/Upstream%20Dependencies.png">
@@ -128,7 +130,7 @@ Upstream dependencies come from the [publish/subscribe](https://en.wikipedia.org
 </a>
 </figure>
 
-The final option is for the entire pipeline to use a uniform message format \([*Stamp Coupling*]({{< relref "../../extension-metapatterns/shared-repository.md#inexact-stamp-coupling" >}})\) which often contains one dedicated field per service involved\. This way a service depends only on the message header \(with the list of the fields and a record id\) and the format of the single field it reads \(stores data\) or writes \(retrieves data as *Content Enricher* \[[EIP]({{< relref "../../appendices/books-referenced.md#eip" >}})\]\)\. That works well with system\-wide queries but binds all the services to the schema of the message in a way similar to accessing a shared database \(to be discussed [below]({{< relref "../../foundations-of-software-architecture/arranging-communication/shared-data.md" >}})\)\. Such an architecture decouples the services to the extent that any of them can be freely added or removed, together with the message field\(s\) it fills or reads\.
+The final option is for the entire pipeline to use a uniform message format \([*Stamp Coupling*]({{< relref "../../extension-metapatterns/shared-repository.md#inexact-stamp-coupling" >}})\) which often contains one dedicated field per service involved\. This way a service depends only on the message header \(with the list of the fields and a record id\) and the format of the single field it reads \(stores data\) or writes \(retrieves data as a *Content Enricher* \[[EIP]({{< relref "../../appendices/books-referenced.md#eip" >}})\]\)\. That works well with system\-wide queries but binds all the services to the schema of the message in a way similar to accessing a shared database \(to be discussed [below]({{< relref "../../foundations-of-software-architecture/arranging-communication/shared-data.md" >}})\)\. Such an architecture decouples the services to the extent that any of them can be freely added or removed, together with the message field\(s\) it fills or reads\.
 
 <figure>
 <a href="/diagrams/Communication/Shared%20Message%20Format.png">
@@ -164,7 +166,7 @@ A peculiar feature of choreography is the ability to cut and cross\-link pipelin
 
 ## Multi\-choreography
 
-It is very common for a service to participate in multiple pipelines, especially if it owns a database – as there should be a use case which fills in the data and at least one other scenario which reads from that database\. Each pipeline makes the service depend on one or more interfaces it communicates with, which often belong to multiple services, coupling components of the system and making it impair future structural changes\.
+It is very common for a service to participate in multiple pipelines, especially if it owns a database – as there should be a use case which fills in the data and at least one other scenario which reads from that database\. Each pipeline makes the service depend on one or more of the interfaces it communicates with, which often belong to multiple services, thus increasing the coupling between system components and impairing future structural changes\.
 
 <figure>
 <a href="/diagrams/Communication/Multi-choreography.png">

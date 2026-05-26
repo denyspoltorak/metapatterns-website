@@ -16,22 +16,22 @@ The descriptions of most [metapatterns]({{< relref "../introduction/metapatterns
 The structural diagram \(in *abstractness\-subdomain\-sharding* [coordinates]({{< relref "../introduction/metapatterns.md#the-system-of-coordinates" >}})\) of a typical application of the metapattern\. Please note that in practice the number and types of components and their interactions may vary:
 
 - Even though most diagrams show 3 *layers* or *services*, there are many 2\-layered or 4\-layered systems, while the number of services may often be greater than 10\.
-- [*Extension metapatterns*]({{< relref "../extension-metapatterns/_index.md" >}}) add a *layer* \(or a *layer of services*\) to an existing system, which is shown as [*Services*]({{< relref "../basic-metapatterns/services.md" >}}), but may instead comprise [*Shards*]({{< relref "../basic-metapatterns/shards.md" >}}), [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}) or even a [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}})\.
-- Subtypes of [*Hierarchy*]({{< relref "../fragmented-metapatterns/hierarchy.md" >}}) or [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}}) differ in their topologies\. Only one is shown\.
-- Components of metapatterns may communicate in various ways that include in\-process calls, RPC, asynchronous messaging or streams\. Only one of them is shown\. Optional communication pathways may appear as dashed arrows\.
+- [*Extension metapatterns*]({{< relref "../extension-metapatterns/_index.md" >}}) add a *layer* \(or a *layer of services*\) to an existing system, which is shown as [*Services*]({{< relref "../basic-metapatterns/services.md" >}}), but may instead comprise [*Shards*]({{< relref "../basic-metapatterns/shards.md" >}}), [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}), or even a [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}})\.
+- Subtypes of [*Hierarchy*]({{< relref "../fragmented-metapatterns/hierarchy.md" >}}) or [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}}) differ in their [topologies]({{< relref "../introduction/system-topologies.md" >}})\. Only one is shown\.
+- Components of metapatterns may communicate in various ways that include in\-process calls, RPC, asynchronous messaging, or streams\. Only one of them is shown\. Optional communication pathways may appear as dashed arrows\.
 
 
 Most diagrams feature the following colors:
 
 - [*Use cases*]({{< relref "../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) \(aka integration, orchestration, workflow or application logic\) are shown in green\. Those are high\-level scenarios executed by user actions or signals from hardware which keep the system acting as a whole\. Use cases are *what* your software does\.
-- *Domain logic* \(business rules\), shown in blue, is the set of algorithms that models the real\-world system your software describes\. It is *how* your system solves its tasks\.
-- *Generic code* is white\. It stands for tools and libraries unrelated to your business\. Examples include communication protocols, data compression and common maths\.
-- *Data* is gray\. It includes business\-critical in\-memory state \(e\.g\. user’s session\) and persistent storage \(in a database or files\)\.
+- [*Domain logic*]({{< relref "../basic-metapatterns/layers.md#domain-business-rules-or-model" >}}) \(business rules\), shown in blue, is the set of algorithms that models the real\-world system which your software describes\. It is *how* your system solves its tasks\.
+- [*Generic code*]({{< relref "../basic-metapatterns/layers.md#generic-code-libraries-and-utilities" >}}) is white\. It stands for tools and libraries unrelated to your business\. Examples include communication protocols, data compression, and common maths\.
+- [*Data*]({{< relref "../basic-metapatterns/layers.md#data-persistence" >}}) is gray\. It includes business\-critical in\-memory state \(e\.g\. user’s session\) and persistent storage \(in a database or files\)\.
 
 
-[*Use cases*]({{< relref "../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) and [*domain logic*]({{< relref "../basic-metapatterns/layers.md#domain-business-rules-or-model" >}}) comprise *business logic* \[[PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\] – the code that makes your software different from whatever else is on the market\. It is this part of the system which your customers pay for, and it usually is much larger than the other parts, which makes business logic the primary focus of development\.
+*Use cases* and *domain logic* comprise *business logic* \[[PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\] – the code that makes your software different from whatever else is available on the market\. It is this part of the system which your customers pay for, and it usually is much larger than the other parts, which makes business logic the primary focus of development\.
 
-In [*choreographed*]({{< relref "../foundations-of-software-architecture/arranging-communication/choreography.md" >}}) systems use cases are defined by the web of communication channels instead of code inside the system’s components\. That is represented by green arrows and overall lack of green areas on corresponding diagrams\.
+In [*choreographed*]({{< relref "../foundations-of-software-architecture/arranging-communication/choreography.md" >}}) systems use cases are defined by the web of communication channels instead of the code inside the system’s components\. That is represented by green arrows and the overall lack of green areas on the diagrams of system components\.
 
 ### Abstract
 
@@ -45,18 +45,18 @@ In [*choreographed*]({{< relref "../foundations-of-software-architecture/arrangi
 
 - A *system topology* \([*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}), [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) and few others derived from them\) makes the backbone of any system\.
 - An *extension component* is an addition to a *system topology* which modifies its properties\.
-- An *implementation* shows the internal structure of a component, indistinguishable to its clients\.
+- An *implementation* shows the internal structure of a component, usually hidden from its clients\.
 
 
 A short *table of benefits and drawbacks*\.
 
 <ins>References:</ins> select articles and books that describe the topic\.
 
-After that, follow two or three paragraphs of facts and ideas about the metapattern \.
+After that, there follow two or three paragraphs of facts and ideas about the metapattern\.
 
 ### Performance
 
-This section discusses the performance of the subject metapattern in scenarios which vary in their extent: simple requests or events that relate to a single subsystem are usually processed much faster than those that touch multiple components\.
+This section discusses the performance of the subject metapattern in scenarios of various scope: simple requests or events that relate to a single subsystem are usually processed much faster than those that touch multiple components\.
 
 There are two kinds of performance: latency and throughput\. Low latency is possible only if few components are involved because inter\-component communication, especially in distributed systems, increases latency\. Contrariwise, throughput depends on the number of components that work in parallel, thus it scales together with the system\.
 
@@ -66,7 +66,7 @@ This section may also discuss optimization techniques that apply to the metapatt
 
 Some components of the metapattern depend on other components\. If a component changes, everything that depends on it may need to be re\-tested with the updated version\. If a component’s interface changes, all the components that depend on it must be updated\. Therefore, components that evolve quickly should depend on others, not the other way around\.
 
-Some patterns, like [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}), use [*Adapters*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) to break dependencies\. An *Adapter* depends on components on both sides of itself, making those components independent of each other\. The *Adapters* are small enough to update quickly and may easily be replaced with stubs for testing or running a component in isolation\.
+Some patterns, such as [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}), use [*Adapters*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) to [break dependencies]({{< relref "../analytics/comparison-of-architectural-patterns/indirection-in-commands-and-queries.md" >}})\. An *Adapter* depends on components on both sides of itself, making those components independent of each other\. The *Adapters* are small enough to update quickly, and may easily be replaced with stubs for testing or running a component in isolation\.
 
 ### Applicability
 
@@ -74,25 +74,25 @@ Here follows a list of types of projects which may benefit from applying the arc
 
 ### Relations
 
-These are shown through an optional sequence of diagrams, showing the \(*extension* or *implementation*\) metapattern applied to various kinds of architectures, followed by a list of relations between the current and other metapatterns\.
+These are illustrated through an optional sequence of diagrams, showing the \(*extension* or *implementation*\) metapattern applied to various kinds of architectures, followed by a list of relations between the current and other metapatterns\.
 
 ### Variants and examples
 
-A metapattern usually unites many variations of several patterns\. Here we may have a section per dimension of variability and often a section with well\-known patterns and architectures that match the metapattern\.
+A metapattern usually unites many variations of several patterns\. Here we may have a section per dimension of variability, and often another section with well\-known patterns and architectures that match the metapattern\.
 
-When a pattern is listed under several metapatterns \(as often seen with extension components\), the headers of the multiple pattern descriptions cross\-link to each other\.
+When a pattern is listed under several metapatterns \(as often seen with *extension components*\), the headers of the multiple pattern descriptions cross\-link to each other\.
 
-In other cases I had to include several variants that do not properly belong to the metapattern under review, just to avoid confusion with terminology and point the reader to a right chapter\. For example, [*Modular Monolith*]({{< relref "../basic-metapatterns/monolith.md#misapplied-modular-monolith-modulith" >}}) has a module per subdomain, thus it belongs to [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) rather than [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}})\. Still, when the chapter on *Monolith* was not mentioning it, I was blamed for misunderstanding the monolithic architecture\. Such patterns are marked as \(misapplied\) or \(inexact\)\.
+In other cases I had to include several variants that do not properly belong to the metapattern under review, just to avoid confusion with terminology and point the reader to the right chapter\. For example, [*Modular Monolith*]({{< relref "../basic-metapatterns/monolith.md#misapplied-modular-monolith-modulith" >}}) has a module per subdomain, thus it belongs to [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) rather than [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}})\. Still, when the chapter on *Monolith* was not mentioning it, I was blamed for misunderstanding the *Monolithic Architecture*\. Such patterns are marked as \(misapplied\) or \(inexact\)\.
 
 I tried to show the difference between synonymous names for every variant or example whenever I could identify one\.
 
 ### Evolutions
 
-This covers a brief summary of possible changes to the architecture under review\. Each change leads to a new architecture which usually matches another metapattern\.
+This section covers a brief summary of possible changes to the architecture under review\. Each change leads to a new architecture which usually belongs to another metapattern\.
 
 [Appendix E]({{< relref "../appendices/evolutions-of-architectures/_index.md" >}}) discusses many evolutions in greater detail:
 
-- A diagram that shows the original and resulting structure\.
+- A diagram that shows the original and resulting structures\.
 - The list of patterns, present in the resulting architecture\. More general forms of each pattern are given in parentheses, i\.e\. Pattern \(Metapattern \(Parent Metapattern\)\)\.
 - The goal\(s\) of the transition\.
 - The prerequisites that enable the change\.

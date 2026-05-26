@@ -10,7 +10,7 @@ bookCollapseSection = true
 
 # Basic metapatterns {anchor=false}
 
-Basic [metapatterns]({{< relref "../introduction/metapatterns.md" >}}) are both common stand\-alone architectures and building blocks for more complex systems\. They include the single\-component *Monolithic* architecture and the results of its division along each of the [coordinate axes]({{< relref "../introduction/metapatterns.md#the-system-of-coordinates" >}}), namely *abstractness*, *subdomain*, and *sharding*:
+Basic [metapatterns]({{< relref "../introduction/metapatterns.md" >}}) are both common stand\-alone architectures and building blocks for more complex systems\. They include the single\-component *Monolithic Architecture* and the results of its division along each of the [coordinate axes]({{< relref "../introduction/metapatterns.md#the-system-of-coordinates" >}}), namely *abstractness*, *subdomain*, and *sharding*:
 
 ### [Monolith]({{< relref "../basic-metapatterns/monolith.md" >}})
 
@@ -24,7 +24,7 @@ Basic [metapatterns]({{< relref "../introduction/metapatterns.md" >}}) are both 
 </a>
 </figure>
 
-[*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) is a single\-component system, the simplest possible architecture\. It is easy to write but hard to evolve and maintain\.
+A [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) is a single\-component system, the simplest possible architecture\. It is easy to write but hard to evolve and maintain\.
 
 *<ins>Includes</ins>*: Reactor, Proactor, and Half\-Sync/Half\-Async\.
 
@@ -56,7 +56,7 @@ Basic [metapatterns]({{< relref "../introduction/metapatterns.md" >}}) are both 
 </a>
 </figure>
 
-[*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}) contain one component per level of abstraction\. The layers may vary in technologies and forces and scale individually\.
+[*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}) contain one component per level of abstraction\. The layers may vary in technologies and qualities and scale individually\.
 
 *<ins>Includes</ins>*: Layers and Tiers\.
 
@@ -72,7 +72,7 @@ Basic [metapatterns]({{< relref "../introduction/metapatterns.md" >}}) are both 
 </a>
 </figure>
 
-[*Services*]({{< relref "../basic-metapatterns/services.md" >}}) divide a system into subdomains, often resulting in parts of comparable size assignable to dedicated teams\. However, a system of *Services* is hard to synchronize or debug\.
+[*Services*]({{< relref "../basic-metapatterns/services.md" >}}) organize a system into subdomains, often resulting in parts of comparable size which can be assigned to dedicated teams\. However, a system of *Services* is hard to synchronize or debug\.
 
 *<ins>Includes</ins>*: Service\-Based Architecture, Modular Monolith \(Modulith\), Microservices, Device Drivers, and Actors\.
 

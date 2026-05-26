@@ -20,7 +20,7 @@ primary_image = "/diagrams/Main/Services.png"
 </a>
 </figure>
 
-*Divide and conquer\.* Gain flexibility through decoupling subdomains\.
+*Divide and conquer\.* Scale development through decoupling subdomains\.
 
 <ins>Known as:</ins> Services, Domain Services \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}}) and [SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}}), [but not]({{< relref "../analytics/ambiguous-patterns.md#domain-services" >}}) [DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\], Modules \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\.
 
@@ -38,7 +38,7 @@ primary_image = "/diagrams/Main/Services.png"
 
 <ins>References:</ins> \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] has a chapter on *Service\-Based Architecture*; \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] is dedicated to *Microservices*\.
 
-Splitting a [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) by *subdomain* allows for mostly independent properties, development, and deployment of the resulting components \(distributed *services* or colocated *modules*\)\. However, for the system to benefit from the division, the subdomains must be loosely coupled and, ideally, of comparable size\. In that case the partitioning can reduce complexity of the project’s code by cutting accidental dependencies between the subdomains\. Moreover, if one of the resulting services grows unmanageably large, it can often be further partitioned by sub\-subdomains to form a [*Cell*]({{< relref "#cell-wso2-definition-service-of-services-domain-uber-definition-cluster" >}})\. This flexibility is paid for through the complexity and performance of use cases which involve multiple subdomains\. Another issue to remember is that boundaries between services are [nearly impossible](https://martinfowler.com/bliki/MonolithFirst.html) to move at later project stages as the services grow to vary in technologies and implementation styles, thus separation into services assumes perfect practical knowledge of the domain and relatively stable requirements\.
+Splitting a [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) by *subdomain* allows for mostly independent properties, development, and deployment of the resulting components \(distributed *services* or colocated *modules*\)\. However, for the system to benefit from the division, its subdomains must be loosely coupled and, ideally, of comparable size\. In that case the partitioning can reduce complexity of the project’s code by cutting accidental dependencies between the subdomains\. Moreover, if one of the resulting services grows unmanageably large, it can often be further partitioned by sub\-subdomains to form a [*Cell*]({{< relref "#cell-wso2-definition-service-of-services-domain-uber-definition-cluster" >}})\. This flexibility is paid for through the complexity and performance of use cases which involve multiple subdomains\. Another issue to remember is that boundaries between services are [nearly impossible](https://martinfowler.com/bliki/MonolithFirst.html) to move at later project stages as the services grow to vary in technologies and implementation styles, thus separation into services assumes perfect practical knowledge of the domain and relatively stable requirements\.
 
 <aside>
 
@@ -60,13 +60,13 @@ Interservice communication is relatively slow and resource\-consuming, therefore
 </a>
 </figure>
 
-The perfect case is when a single service has enough authority to answer a client’s request or process an event\. That case should not be that rare as a service covers a whole subdomain while subdomains are expected to be loosely coupled \(by definition\)\.
+The perfect case is when a single service has enough authority to answer a client’s request or process an event\. That case should not be that rare as a service often covers a whole subdomain while subdomains are expected to be loosely coupled \(by definition\)\.
 
 Worse is when an event starts a chain reaction throughout the system, likely looping back a response to the original service or changing the target state of another controlled subsystem\.
 
 In the slowest scenario a service needs to synchronize its state with multiple other services, usually via *locks* and *distributed transactions*\.
 
-Multiple [instances]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}}) of an individual service may be deployed to improve throughput of the system\. However, such a case will likely need a [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) or [*Load Balancer*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) to distribute interservice requests among the instances and a [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) to store and synchronize any non\-shardable \(accessed by several instances\) state\.
+Multiple [instances]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}}) of an individual service may be deployed to improve throughput of the system\. However, that will likely need a [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) or [*Load Balancer*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) to distribute interservice requests among the instances and a [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) to store and synchronize any non\-shardable \(accessed by several instances\) state\.
 
 ### Dependencies
 
@@ -106,7 +106,7 @@ If the system relies on notifications \(services publish *domain events*\), it i
 </a>
 </figure>
 
-In general, a large service should wrap its dependencies with an [*Anticorruption Layer*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}), following the ideas of [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}})\. The layer consists of [*Adapters*](https://refactoring.guru/design-patterns/adapter) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] between the internal domain model of the service and the APIs of the components it uses\. The *Adapters* isolate the business logic from the external environment, granting that no change in the interface of an external service or library may ever take much work to support on the side of the team that writes our business logic as all the ensuing updates are limited to a small adapter\.
+In general, a large service should wrap its dependencies with an [*Anticorruption Layer*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}), following the ideas of [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}})\. The layer consists of [*Adapters*](https://refactoring.guru/design-patterns/adapter) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] between the internal domain model of the service and the APIs of the components it uses\. The *Adapters* isolate the business logic from the external environment, granting that no change in the interface of an external service or library may ever take much work to support on the side of the team that writes its own business logic as all the ensuing updates are limited to a small adapter\.
 
 <figure>
 <a href="/diagrams/Dependencies/Services-4.png">
@@ -124,15 +124,15 @@ In general, a large service should wrap its dependencies with an [*Anticorruptio
 
 - *Large projects\.* With multiple services developed independently, a project may grow well above 1 000 000 lines of code and still be comfortable to work on as every team needs to know only the medium\-sized component it owns\.
 - *Specialized teams\.* Each service would often be written and supported by a dedicated team that invests its time in learning its subdomain\. This way no one needs to have a detailed knowledge of the full set of requirements, which is next to impossible in large domains\.
-- *Varied forces*\. In system and embedded programming, components of wildly varying behaviors need to be managed\. Each of them is controlled by a dedicated service \(called *driver*\) which adapts to the specifics of the managed subsystem\.
+- *Varied forces*\. In systems and embedded programming, components of wildly varying behaviors need to be managed\. Each of them is controlled by a dedicated service \(called *driver*\) which adapts to the specifics of the managed subsystem\.
 - *Flexible scaling\.* Some services may be under more load than others\. It makes sense to deploy multiple instances of heavily loaded services\.
 
 
 *Services* <ins>should be avoided</ins> in:
 
-- *Cohesive domains\.* If everything strongly depends on everything, any attempt to cut the knot with interfaces is going to [make things worse]({{< relref "../foundations-of-software-architecture/modules-and-complexity.md#coupling-and-cohesion" >}}) unless the project is already dying because of its huge codebase, in which case you have nothing to lose\.
+- *Cohesive domains\.* If everything strongly depends on everything, any attempt to cut the knot with interfaces is going to [make things worse]({{< relref "../foundations-of-software-architecture/modules-and-complexity.md#coupling-and-cohesion" >}}) unless the project is already dying because of its huge codebase, in which case you have little to lose\.
 - *Unfamiliar domains*\. If you don’t understand the intricacies of the system you are going to build, you may [misalign the interfaces](https://martinfowler.com/bliki/MonolithFirst.html) and, by the time that the mistakes come to light, the architecture will be too hard to change \[[LDDD]({{< relref "../appendices/books-referenced.md#lddd" >}})\]\. The coupled *Services* you get may actually be worse than a [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}})\.
-- *Quick start*\. It takes effort to design good interfaces and contracts for *Services* and managing multiple deployment units is not free of trouble\. Debugging will be an issue\.
+- *Quick start*\. It takes effort to design good interfaces and contracts for *Services* and managing multiple deployment units is not free of trouble\. Debugging will also be an issue\.
 - *Low latency*\. If the system as a whole needs to react to events in real time, complex services should be avoided\. Nevertheless, an individual service can provide low latency for local use cases \(when a single service has enough authority to react to the incoming event\), wherefore [simple non\-blocking actors]({{< relref "#asynchronous-modules-modular-monolith-modulith-embedded-actors" >}}) are widely used in [control software]({{< relref "../foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}})\.
 
 
@@ -155,9 +155,9 @@ In general, a large service should wrap its dependencies with an [*Anticorruptio
 
 ## Variants by isolation
 
-Division by subdomain is so commonplace and varied that no universal terminology emerged over the years\. Below is my summary, in no way complete, of several ways such systems vary\. Each section lists the well\-known architectures it applies to\.
+Division by subdomain is so commonplace that no universal terminology has emerged over the years\. Below is my summary, in no way complete, of several ways such systems can vary\. Each section lists the well\-known architectures it applies to\.
 
-First and foremost, there are multiple grades between a cohesive [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) and distributed *Services*\. You should choose incrementally when to stop because the benefits of these next stages \(color\-coded below\) may not outweigh their drawbacks for your project\.
+First and foremost, there are multiple stages between a cohesive [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) and distributed *Services*\. You should be careful to stop these incremental changes as soon as the benefits of the next step \(color\-coded below\) don’t outweigh its drawbacks for your project\.
 
 <aside>
 
@@ -167,7 +167,7 @@ First and foremost, there are multiple grades between a cohesive [*Monolith*]({{
 
 ### Synchronous modules: Modular Monolith \(Modulith\)
 
-The first stage to take when designing a large project is the division of the codebase into loosely coupled modules that match subdomains \(*bounded contexts* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\)\. If successful, that parallelizes development to a team per module while the entire application still runs in a single process, thus it stays easy to debug, the modules can share data, and any crash kills the whole system \(you don’t need to take care of partial failures\)\. You pay by establishing boundaries which will not be easy to move in the future\.
+The first step to take when designing a large project is the division of its codebase into loosely coupled modules that match subdomains \(*bounded contexts* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\)\. If successful, that parallelizes development to a team per module while the entire application still runs in a single process, thus it stays easy to debug, the modules can share data, and any crash kills the whole system \(meaning that you don’t need to take care of partial failures\)\. You pay by establishing boundaries which will not be easy to move in the future\.
 
 | *Benefits* | *Drawbacks* |
 | --- | --- |
@@ -185,7 +185,7 @@ The next stage is separating the modules’ execution threads and data\. Each mo
 
 ### Multiple processes
 
-There is also the option of running system components as separate binaries which lets them vary in technologies, allows for granular updates, and addresses stability \(a web browser does not stop when one of its tabs crashes\)\. But it adds a whole dimension of error recovery and partially executed scenarios\. Moreover, divergency of technologies makes moving pieces of code between the services impossible\.
+There is also the option of running system components as separate binaries which lets them vary in technologies, allows for granular updates, and addresses stability \(a web browser does not stop when one of its tabs crashes\)\. But it adds a whole new dimension of painful error recovery that includes partially executed scenarios\. Moreover, if the technologies of the components diverge, it is impossible to move code between them\.
 
 | *Benefits* | *Drawbacks* |
 | --- | --- |
@@ -198,7 +198,7 @@ There is also the option of running system components as separate binaries which
 
 ### Distributed runtime: Backend [Actors]({{< relref "#actors" >}})
 
-Modern distributed [runtimes](https://en.wikipedia.org/wiki/Runtime_system) create a virtual namespace that may be deployed on a single machine or over a network\. They may redistribute running components over servers in a way to minimize network communication and may offer distributed debugging\. With [*Actors*](https://en.wikipedia.org/wiki/Actor_model), if one of them crashes, that generates a message to another actor which may decide on how to handle the error\. The convenience of using a runtime has the dark side of vendor lock\-in\.
+Modern distributed [runtimes](https://en.wikipedia.org/wiki/Runtime_system) create virtual namespaces that can be deployed on a single machine or over a network\. They may redistribute running components among servers in a way to minimize network communication and may offer distributed debugging\. With [*Actors*](https://en.wikipedia.org/wiki/Actor_model), if one of them crashes, that generates a message to another actor which may decide on how to handle the error\. The convenience of using a runtime has the dark side of vendor lock\-in\.
 
 | *Benefits* | *Drawbacks* |
 | --- | --- |
@@ -234,7 +234,7 @@ When components run inside the same process and share execution threads, one com
 
 ### RPCs and commands \(request/confirm pairs\)
 
-If a service [calls into another service](https://en.wikipedia.org/wiki/Remote_procedure_call) or requests it to act and return results \(this is how method calls are implemented in distributed systems\) it has to store the state of the scenario it is executing for the duration of the call \(until the confirmation message is received\)\. That uses resources: the stored state is kept in RAM and the interruption and resumption of the execution wastes CPU cycles on context switch and on the resulting cache misses\. Blocked threads are especially heavy while coroutines or fibers are more lightweight but are still not free\.
+If a service [calls another service](https://en.wikipedia.org/wiki/Remote_procedure_call) or requests it to act and return results \(this is how method calls are implemented in distributed systems\) it has to store the state of the scenario it is executing for the duration of the call \(until the confirmation message is received\)\. That uses resources: the stored state is kept in RAM and the interruption and resumption of the execution wastes CPU cycles on context switch and on the resulting cache misses\. Blocked [threads]({{< relref "../basic-metapatterns/monolith.md#multi-threaded-reactor-a-thread-per-task" >}}) are especially heavy while [coroutines or fibers]({{< relref "../basic-metapatterns/monolith.md#inexact-half-synchalf-async-coroutines-or-fibers" >}}) are more lightweight but are still not free\.
 
 Another trouble with distributed systems comes from error recovery: if your component did not receive a timely response, you don’t know if your request was \(or is being, or will be\) executed by its target – and you need to be really careful about possible data corruption if you retry it and it is executed twice \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\]\.
 
@@ -244,11 +244,11 @@ Another trouble with distributed systems comes from error recovery: if your comp
 
 </aside>
 
-On the bright side, [*orchestration*]({{< relref "../foundations-of-software-architecture/arranging-communication/orchestration.md" >}}) is human\- and debugger\-friendly as it keeps consecutive actions close together in the code\. Therefore, synchronous interaction is the default mode of communication in many projects\.
+On the bright side, [*orchestration*]({{< relref "../foundations-of-software-architecture/arranging-communication/orchestration.md" >}}) is human\- and debugger\-friendly as it keeps consecutive actions close together in the code\. Therefore, synchronous interaction is still the default mode of communication in many projects\.
 
 ### Notifications \(pub/sub\) and shared data
 
-A service may do something, publish a notification or write results to a shared datastore for other services to process, and forget about the task as it has completed its role\. [*Choreography*]({{< relref "../foundations-of-software-architecture/arranging-communication/choreography.md" >}}) is resource\-efficient, but you need to find and read multiple pieces of code which are spread out over several services to understand or debug the whole use case\.
+A service may do its part, then publish a notification or [write results to a shared data store]({{< relref "../foundations-of-software-architecture/arranging-communication/shared-data.md" >}}) for other services to process, and finally forget about the task as it has completed its role\. [*Choreography*]({{< relref "../foundations-of-software-architecture/arranging-communication/choreography.md" >}}) is resource\-efficient, but you need to find and read multiple pieces of code which are spread out over several services to understand or debug the whole use case\.
 
 ### \(inexact\) No communication
 
@@ -267,11 +267,11 @@ Last but not least, the simplest classification of subdomain\-separated componen
 
 ### Whole subdomain: [\(Sub\-\)Domain Services, Macroservices]({{< relref "../extension-metapatterns/sandwich.md#service-based-architecture" >}})
 
-Each *Domain Service* \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] \(*Macroservice*\) of [*Service\-Based Architecture*]({{< relref "#service-based-architecture-sba-macroservices" >}}) implements a whole subdomain\. It is the product of the full\-time work of a dedicated team\. A project is unlikely to have more than 10 of such services \(in part because the number of top\-level subdomains in any domain is usually limited\)\.
+Each *Domain Service* \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] \(*Macroservice*\) of [*Service\-Based Architecture*]({{< relref "#service-based-architecture-sba-macroservices" >}}) implements a whole subdomain\. It is the product of the full\-time work of a dedicated team\. A project is unlikely to have more than a dozen of such services \(in part because the number of top\-level subdomains in any domain is usually limited\)\.
 
 ### Part of a subdomain: [Microservices]({{< relref "#microservices" >}})
 
-*Microservices* enthusiasts estimate the best size of a component of their architecture to be below a month of development by a single team\. That allows for a complete rewrite instead of refactoring in case the requirements change\. When a team completes one microservice it can start working on another, probably related, one while still maintaining its previous work\. A project is likely to contain from tens to few hundreds of microservices\.
+*Microservices* enthusiasts estimate the optimal size of a component of their architecture to be below a month of development by a single team\. That allows for a complete rewrite instead of refactoring in case the requirements change\. When a team completes one microservice it can start working on another, probably related, one while still maintaining its previous work\. A system of *Microservices* is likely to contain from tens to few hundreds of them\.  Some projects will cluster these into [*Cells*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}})\.
 
 ### Class\-like: [Actors]({{< relref "#actors" >}})
 
@@ -307,7 +307,7 @@ A service is not necessarily monolithic inside\. Because a service is encapsulat
 </a>
 </figure>
 
-A *monolithic service* is a service with no definite internal structure, probably small enough to allow for complete rewrite instead of refactoring – the ideal of proponents of [*Microservices*]({{< relref "#microservices" >}})\. It is simple & stupid to implement but relies on external sources of persistent data\. For example, *device drivers* and [*Actors*]({{< relref "#actors" >}}) usually get their \(persisted\) configuration during initialization\. A monolithic backend service may receive all the data it needs in incoming requests, via a query to another service, or by reading it from a [*Shared Database*]({{< relref "../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}})\.
+A *monolithic service* is a service with no definite internal structure, probably small enough to allow for complete rewrite instead of refactoring – the ideal of proponents of [*Microservices*]({{< relref "#microservices" >}})\. It is [simple & stupid](https://en.wikipedia.org/wiki/KISS_principle) to implement but relies on external sources of persistent data\. For example, *device drivers* and [*actors*]({{< relref "#actors" >}}) usually get their \(persisted\) configuration during initialization\. A monolithic backend service may receive all the data it needs in incoming requests, via a query to another service, or by reading it from a [*Shared Database*]({{< relref "../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}})\.
 
 ### [Hexagonal]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) service
 
@@ -337,7 +337,7 @@ This is a real\-world application of [*Hexagonal Architecture*]({{< relref "../i
 </a>
 </figure>
 
-With *scaled services* there are multiple [*instances*]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}}) of a service\. In most cases they [*share a database*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) \(though sometimes the database may be [*sharded*]({{< relref "../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-multitenancy-cells-amazon-definition" >}}) or [*replicated*]({{< relref "../basic-metapatterns/shards.md#persistent-copy-replica" >}}) together with the service that uses it\) and get their requests through a [*Load Balancer* or *Sharding Proxy*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}})\.
+With *scaled services* there are multiple [*instances*]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}}) of a service\. In most cases they [*share a database*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) \(though sometimes the database may be [*sharded*]({{< relref "../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-multitenancy-cells-amazon-definition" >}}) or [*replicated*]({{< relref "../basic-metapatterns/shards.md#persistent-copy-replica" >}}) together with the service that uses it\) and get their requests through a [*Load Balancer* or *Sharding Proxy*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}), making [a kind of *Sandwich*]({{< relref "../extension-metapatterns/sandwich.md#inexact-replicated-load-balanced-services-lambdas" >}})\.
 
 ### [Layered]({{< relref "../basic-metapatterns/layers.md" >}}) service
 
@@ -353,7 +353,7 @@ With *scaled services* there are multiple [*instances*]({{< relref "../basic-met
 
 A *layered service* is [divided into *layers*]({{< relref "../fragmented-metapatterns/layered-services.md#orchestrated-three-layered-services" >}})\. This approach is very common both with backend *\(micro\-\)services*, where at least the database is separated from the business logic, and with *device drivers* in system programming, where hardware\-specific low\-level interrupt handlers and register access are separated from the main logic and high\-level OS interface\.
 
-Layering provides all of the benefits from the [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}) pattern, including support for [conflicting forces]({{< relref "../foundations-of-software-architecture/forces--asynchronicity--and-distribution.md" >}}), which may manifest, for example, as the ability to deploy the database to a dedicated server in backend or as a very low latency in the hardware\-facing layer of a device driver\.
+Layering provides all of the benefits of the [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}) pattern, including support for [conflicting forces]({{< relref "../foundations-of-software-architecture/forces--asynchronicity--and-distribution.md" >}}), which may manifest, for example, as the ability to deploy the database to a dedicated server for a backend or as a very low latency in the hardware\-facing layer of a device driver\.
 
 Another benefit comes from the existence of the upper integration layer which may [orchestrate interactions with other services]({{< relref "../foundations-of-software-architecture/arranging-communication/orchestration.md#mutual-orchestration" >}}), isolating the lower layers from external dependencies\.
 
@@ -369,15 +369,15 @@ Another benefit comes from the existence of the upper integration layer which ma
 </a>
 </figure>
 
-When a service is split into a set of subservices, it makes [a kind of *Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}}) called [*Cell*](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md) \(WSO2 name\), [*Domain*](https://www.uber.com/blog/microservice-architecture/) \(Uber name\), or *Cluster* \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\]\. All the incoming communication passes through a [*Cell Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) which encapsulates the *Cell* from its environment\. Outgoing communication may involve the *Cell Gateway* or dedicated [*Adapters*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) \(*Anticorruption Layer* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\) A *Cell* may deploy its own [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) and/or [*share a database*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) among its components\. 
+When a service is split into a set of subservices, it makes [a kind of *Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}}) called [*Cell*](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md) \(WSO2 name\), [*Domain*](https://www.uber.com/blog/microservice-architecture/) \(Uber name\), or *Cluster* \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\]\. All the incoming communication passes through a [*Cell Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) which encapsulates the *Cell* from its environment\. Outgoing communication may involve the *Cell Gateway* or dedicated [*Adapters*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) \(which constitute an *Anticorruption Layer* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\) A *Cell* may deploy its own [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) and/or [*share a database*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) among its components\. 
 
 [*Cell\-Based Architecture*]({{< relref "../fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services" >}}) \([according to WSO2](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md), as opposed to [Amazon's alias](https://docs.aws.amazon.com/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/what-is-a-cell-based-architecture.html) for [*Shards*]({{< relref "../basic-metapatterns/shards.md" >}})\) appears when there is a need to recursively split a service, either because it grew too large or because it makes sense to use several incompatible technologies for its parts\. It may also be applied to group services if there are too many of them in the system\.
 
-[*Domain\-Oriented Microservice Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#domain-oriented-microservice-architecture-doma" >}}) \(DOMA\) is a [*SOA*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}})\-style layered system of *Cells*\.
+[*Domain\-Oriented Microservice Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#domain-oriented-microservice-architecture-doma" >}}) \(DOMA\) is a more complex [*SOA*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}})\-style layered system of *Cells*\.
 
 ## Examples
 
-*Services* are pervasive among advanced architectures which either build around a layer of services that contains the bulk of the business logic \([*Proxy*]({{< relref "../extension-metapatterns/proxy.md" >}}), [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}), [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) and [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}})\) or use small services as an extension of the main monolithic component \([*PlugIns*]({{< relref "../implementation-metapatterns/plugins.md" >}}) and [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}})\)\. [*Polyglot Persistence*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md" >}}), [*Backends for Frontends*]({{< relref "../fragmented-metapatterns/backends-for-frontends--bff-.md" >}}) and [*Service\-Oriented Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}) go all out partitioning the system into interconnected layers of services\. [*Hierarchy*]({{< relref "../fragmented-metapatterns/hierarchy.md" >}}) and [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}}) require the services to implement or use a polymorphic interface to simplify the components that manage them\.
+*Services* are ubiquitous among advanced architectures which either build around a layer of services that contains the bulk of the business logic \(see [*Proxy*]({{< relref "../extension-metapatterns/proxy.md" >}}), [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}), [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) and [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}})\) or use small services as an extension of the main monolithic component \([*PlugIns*]({{< relref "../implementation-metapatterns/plugins.md" >}}) and [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}})\)\. [*Polyglot Persistence*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md" >}}), [*Backends for Frontends*]({{< relref "../fragmented-metapatterns/backends-for-frontends--bff-.md" >}}) and [*Service\-Oriented Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}) go all out partitioning the system into interconnected layers of services\. [*Hierarchy*]({{< relref "../fragmented-metapatterns/hierarchy.md" >}}) and [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}}) often require the services to implement or use a polymorphic interface to simplify the components that manage them\.
 
 Examples of *Services* include:
 
@@ -400,7 +400,7 @@ Examples of *Services* include:
 </a>
 </figure>
 
-This is the simplest use of *Services* where each subdomain gets a dedicated component\. A *Service\-Based Architecture* \(*SBA*\) \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] or *Macroservices* tends to consist of a few coarse\-grained services, some of which may [*share a database*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) and thus have little direct communication\. An [*API Gateway*]({{< relref "../extension-metapatterns/orchestrator.md#api-gateway" >}}) is often present as well, making the *SBA* a kind of [*Sandwich*]({{< relref "../extension-metapatterns/sandwich.md" >}})\.
+Being the simplest use of *Services* where each subdomain gets a dedicated component, a *Service\-Based Architecture* \(*SBA*\) \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] \(aka *Macroservices*\) tends to consist of a few coarse\-grained services, some of which may [*share a database*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) and thus have little direct communication\. An [*API Gateway*]({{< relref "../extension-metapatterns/orchestrator.md#api-gateway" >}}) is often present as well, making the *SBA* into a kind of [*Sandwich*]({{< relref "../extension-metapatterns/sandwich.md" >}})\.
 
 ### Microservices
 
@@ -414,13 +414,13 @@ This is the simplest use of *Services* where each subdomain gets a dedicated com
 </a>
 </figure>
 
-*Microservices* \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}}), [FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] are usually smaller than components of *Service\-Based Architecture* and feature multiple services per subdomain with strict decoupling: no [*Shared Database*]({{< relref "../extension-metapatterns/shared-repository.md" >}}), independent \(and often dynamic\) scaling and deployment\. Even [*orchestration*]({{< relref "../foundations-of-software-architecture/arranging-communication/orchestration.md" >}}) and distributed transactions \([*Sagas*]({{< relref "../extension-metapatterns/orchestrator.md#orchestrated-saga-saga-orchestrator-saga-execution-component-transaction-script-coordinator" >}})\) are considered to be a smell of bad design\.
+*Microservices* \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}}), [FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] are usually smaller than components in *Service\-Based Architecture* and feature multiple services per subdomain with strict decoupling: they never use a [*Shared Database*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) and are scaled and deployed independently \(and often dynamically\)\. Even [*orchestration*]({{< relref "../foundations-of-software-architecture/arranging-communication/orchestration.md" >}}) and distributed transactions \([*Sagas*]({{< relref "../extension-metapatterns/orchestrator.md#orchestrated-saga-saga-orchestrator-saga-execution-component-transaction-script-coordinator" >}})\) are considered to be a smell of bad design\.
 
 *Microservices* fit loosely coupled domains with parts which [vary drastically](https://medium.com/swlh/stop-this-microservices-madness-8e4e0695805b) in both forces and technologies\. Any attempt to use them for an unfamiliar domain is [calling for trouble](https://martinfowler.com/bliki/MonolithFirst.html)\. Some authors insist that the “micro\-” means that a microservice should not be larger in scope than a couple of weeks of work for a programming team\. That allows rewriting one from scratch instead of refactoring\. Others assert that too high a granularity makes everything [overcomplicated](https://dwmkerr.com/the-death-of-microservice-madness-in-2018/)\. Such a diversity of opinions may mean that the applicability and the very definition of *Microservices* varies from domain to domain\.
 
 This architecture usually relies on a [*Service Mesh*]({{< relref "../extension-metapatterns/middleware.md#service-mesh" >}}) for [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) where common functionality, like logging, is implemented in co\-located [*Sidecars*]({{< relref "../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}})\. A layer of [*Orchestrators*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) \(called *Integration Microservices*\) [may be present](https://github.com/wso2/reference-architecture/blob/master/api-driven-microservice-architecture.md), resulting in [*Cell\-Based Architecture*]({{< relref "../fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services" >}}) or [*Backends for Frontends*]({{< relref "../fragmented-metapatterns/backends-for-frontends--bff-.md" >}})\.
 
-*Dynamically scaled* [*Pools*]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}}) of service instances are common thanks to the elasticity of hosting in a cloud\. Extreme elasticity requires [*Space\-Based Architecture*]({{< relref "../implementation-metapatterns/mesh.md#space-based-architecture" >}}), which puts a [distributed in\-memory database]({{< relref "../extension-metapatterns/shared-repository.md#data-grid-of-space-based-architecture-sba-replicated-cache-distributed-cache" >}}) node in each *Sidecar*\.
+*Dynamically scaled* [*Pools*]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}}) of service instances are common thanks to the elasticity of hosting in a cloud\. Extreme elasticity requires [*Space\-Based Architecture*]({{< relref "../implementation-metapatterns/mesh.md#space-based-architecture" >}}), which puts a [distributed in\-memory data store]({{< relref "../extension-metapatterns/shared-repository.md#data-grid-of-space-based-architecture-sba-replicated-cache-distributed-cache" >}}) node within each *Sidecar*\.
 
 <aside>
 
@@ -440,17 +440,17 @@ This architecture usually relies on a [*Service Mesh*]({{< relref "../extension-
 </a>
 </figure>
 
-An [*actor*](https://volodymyrpavlyshyn.medium.com/actors-actor-systems-as-massively-distributed-scalability-architecture-5e40f5ea9e86) is an entity with private data and a public message queue\. They are like objects with the difference that actors communicate only by sending each other asynchronous messages\. The fact that a single execution thread may serve thousands of actors makes actor systems an extremely lightweight approach to asynchronous programming\. As an actor is usually single\-threaded, there is no place for *mutexes* and *deadlocks* in the code and it is possible to [replay events](https://martinfowler.com/eaaDev/EventSourcing.html)\. Non\-blocking [*Proactors*]({{< relref "../basic-metapatterns/monolith.md#proactor-one-thread-many-tasks" >}}) are often used in [real\-time systems]({{< relref "../foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}})\.
-
-*Actors* have long been used in telephony \(which is the domain where real\-time communication meets complex logic and low resources\) and with the invention of distributed runtime environments \(e\.g\. Erlang/OTP or Akka\) they found their place in messengers and banking which need to interconnect millions of users while providing personalized experience and history for everyone\. Every user gets an actor that represents them in the system by communicating both with other actors \(forming a kind of [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}})\) and with the user’s client application\(s\)\.
-
-If we apply a bit of generalization, we can deduce that any server or backend service is an actor because its data cannot be accessed from outside and asynchronous IP packets are its only means of communication\. Services of [*Event\-Driven Architecture*]({{< relref "../basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}}) closely match this definition\.
+An [*actor*](https://volodymyrpavlyshyn.medium.com/actors-actor-systems-as-massively-distributed-scalability-architecture-5e40f5ea9e86) is an entity with private data and a public message queue\. They are like objects with the difference that actors communicate only by sending each other asynchronous messages\. The fact that a single execution thread may serve thousands of actors makes actor systems an extremely lightweight approach to asynchronous programming\. As an actor is usually single\-threaded, there is no place for *mutexes* and *deadlocks* in the code and it is possible to [replay events](https://martinfowler.com/eaaDev/EventSourcing.html)\. Non\-blocking [*Proactors*]({{< relref "../basic-metapatterns/monolith.md#proactor-one-thread-many-tasks" >}}) are often found in [real\-time systems]({{< relref "../foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}})\.
 
 <aside>
 
 > A [*deadlock*](https://en.wikipedia.org/wiki/Deadlock_(computer_science)) happens when several threads in a system wait for each other to release unique resources they have each taken\. As no thread involved in the *deadlock* can continue its operation, the system cannot complete its task\. A single\-threaded actor cannot *deadlock* because it does not contain multiple threads in the first place\.
 
 </aside>
+
+*Actors* have long been used in telephony \(which is a domain where real\-time communication meets complex logic and low resources\) and with the invention of distributed runtime environments \(e\.g\. Erlang/OTP or Akka\) they expanded to messengers and banking which need to interconnect millions of users while providing personalized experience and history for everyone\. Every user gets an actor that represents them in the system by communicating both with other actors \(forming a kind of [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}})\) and with the user’s client application\(s\)\.
+
+If we apply a bit of generalization, we can deduce that any server or backend service is an actor because its data cannot be accessed from outside and asynchronous IP packets are its only means of communication\. Services of [*Event\-Driven Architecture*]({{< relref "../basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}}) closely match this definition\.
 
 ### \(inexact\) [Nanoservices]({{< relref "../basic-metapatterns/pipeline.md#function-as-a-service-faas-nanoservices-pipelined" >}}) \(API layer\)
 
@@ -464,7 +464,7 @@ If we apply a bit of generalization, we can deduce that any server or backend se
 </a>
 </figure>
 
-Though *Nanoservices* are defined by their size \(a single function\), not system topology, I want to mention a specific application from Diego Zanon’s book *Building Serverless Web Applications*\. That example is interesting because it comprises a single layer of isolated functions \(each providing a single API method\) which may share functionality by including code from a common repository\. As nanoservices of this kind never interact directly \([they rely]({{< relref "../foundations-of-software-architecture/arranging-communication/shared-data.md" >}}) on a [*Shared Database*]({{< relref "../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) instead\) the common drawbacks of *Services* \(poor debugging and high latency\) don’t apply to them\.
+Though *Nanoservices* are defined by their size \(a single function\), not system topology, I want to mention a specific application from Diego Zanon’s book *Building Serverless Web Applications*\. That example is interesting because it comprises a single layer of isolated functions \(each providing one API method\) which may share functionality by including code from a common repository\. As nanoservices of this kind never interact directly \([they rely]({{< relref "../foundations-of-software-architecture/arranging-communication/shared-data.md" >}}) on a [*Shared Database*]({{< relref "../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) instead\) the common drawbacks of *Services* \(poor debugging and high latency\) don’t apply to them\.
 
 ### \(inexact\) [Device Drivers]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}), [Pedestal]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#pedestal" >}})
 
@@ -538,7 +538,7 @@ The whole system of kernel, drivers, and user applications comprises the [*Micro
 
 The most common modifications of a system of *Services* involve supplementary system\-wide layers which compensate for the inability of the services to [share]({{< relref "../analytics/comparison-of-architectural-patterns/sharing-functionality-or-data-among-services.md" >}}) anything among themselves:
 
-- A [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) tracks all the deployed service instances\. It mediates the communication between them and may manage their scaling and failure recovery\.
+- A [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) tracks all the deployed service instances\. It mediates the [communication]({{< relref "../basic-metapatterns/layers.md#communication-middleware" >}}) between them and may manage their scaling and failure recovery\.
 
 
 <figure>
@@ -551,7 +551,7 @@ The most common modifications of a system of *Services* involve supplementary sy
 </a>
 </figure>
 
-- [*Sidecars*]({{< relref "../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) of a [*Service Mesh*]({{< relref "../extension-metapatterns/middleware.md#service-mesh" >}}) make a virtual layer of shared libraries for the [*Microservices*]({{< relref "#microservices" >}}) it hosts\.
+- [*Sidecars*]({{< relref "../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) of a [*Service Mesh*]({{< relref "../extension-metapatterns/middleware.md#service-mesh" >}}) make a virtual layer of [shared libraries]({{< relref "../basic-metapatterns/layers.md#generic-code-libraries-and-utilities" >}}) for the [*Microservices*]({{< relref "#microservices" >}}) it hosts\.
 
 
 <figure>
@@ -590,7 +590,7 @@ The most common modifications of a system of *Services* involve supplementary sy
 </a>
 </figure>
 
-- An [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) is the single place where the high\-level logic of all use cases resides\.
+- An [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) is the single place where the high\-level logic of all [use cases]({{< relref "../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) resides\.
 
 
 <figure>
@@ -620,15 +620,15 @@ The most common modifications of a system of *Services* involve supplementary sy
 
 Each service starts as either a [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) or as [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}) and may undergo the corresponding evolutions:
 
-- [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}) help to reuse third\-party components \(e\.g\. a database\), organize the code, support conflicting forces and the upper layer of the service may [orchestrate other services]({{< relref "../foundations-of-software-architecture/arranging-communication/orchestration.md#mutual-orchestration" >}})\.
+- [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}) help to reuse third\-party components \(e\.g\. a database\), organize the code, support conflicting forces, and the upper layer of the service may [orchestrate other services]({{< relref "../foundations-of-software-architecture/arranging-communication/orchestration.md#mutual-orchestration" >}})\.
 - [*Sandwich*]({{< relref "../extension-metapatterns/sandwich.md" >}}) or [*Cell*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}}) subdivide the code into smaller components and allow for the deployment of  multiple teams\.
 - A service may use a [*Load Balancer*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) or a load balancing [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) to scale\. Its [*instances*]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}}) usually rely on a [*Shared Database*]({{< relref "../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) for persistence\.
 - [*Polyglot Persistence*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md" >}}) or [*CQRS*]({{< relref "../fragmented-metapatterns/layered-services.md#command-query-responsibility-segregation-cqrs" >}}) may be used inside a service to improve the performance of its data layer\.
 - [*CQRS Views*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) or a [*Query Service*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#query-service-front-controller-data-warehouse-data-lake-aggregate-data-product-quantum-dpq-of-data-mesh" >}}) help reconstruct the state of other services from *event sourcing*\.
 - [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) isolates the business logic of the service from external dependencies\.
-- In rare cases [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) or [*Scripts*]({{< relref "../implementation-metapatterns/microkernel.md#interpreter-script-domain-specific-language-dsl" >}}) help to vary the behavior of a service\.
+- Occasionally, [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) or [*Scripts*]({{< relref "../implementation-metapatterns/microkernel.md#interpreter-script-domain-specific-language-dsl" >}}) are used to customize the behavior of a service\.
 
 
 ## Summary
 
-*Services* deal with large projects by dividing them into subdomain\-aligned components of smaller sizes which can be handled by dedicated teams\. These may vary in technologies and quality attributes\. However, services have a hard time cooperating in anything, from sharing data to debugging, and come with an innate performance penalty\. There are a few options halfway between [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) and *Distributed Services* that have milder benefits and drawbacks\.
+*Services* deal with large projects by dividing them into subdomain\-aligned components of smaller sizes which can be handled by dedicated teams\. These may vary in technologies and qualities\. However, services have a hard time cooperating in anything, from sharing data to debugging, and come with an innate performance penalty\. There are several options halfway between [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) and distributed *Services* that have milder benefits and drawbacks\.

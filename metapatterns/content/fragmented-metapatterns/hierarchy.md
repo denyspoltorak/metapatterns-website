@@ -30,15 +30,15 @@ primary_image = "/diagrams/Main/Hierarchy.png"
 | --- | --- |
 | Very good in decoupling logic | Global use cases may be hard to debug |
 | Supports multiple development teams and technologies | Poor latency for global use cases |
-| Components may vary in qualities | Operational complexity |
+| Components may vary in their qualities | Operational complexity |
 | Low\-level components are easy to replace | Slow start of the project |
 | Limited fault tolerance |  |
 
 <ins>References:</ins> None good I know of\.
 
-Though not applicable to every domain, hierarchical decomposition is arguably the best way to distribute responsibilities between components\. It limits the connections \(thus the number of interfaces and contracts to keep in mind\) of each component to its parent and a few children, allowing for the building of complex \(and even complicated\) systems in a simple way\. The hierarchical structure is very flexible as it features [multiple layers of indirection](https://en.wikipedia.org/wiki/Fundamental_theorem_of_software_engineering) \(and often polymorphism\), which makes addition, replacement, or [stubbing/mocking](https://stackoverflow.com/questions/3459287/whats-the-difference-between-a-mock-stub) of leaf components trivial\. It is also quite fault\-tolerant as individual subtrees operate independently\. 
+Though not applicable to every domain, hierarchical decomposition is arguably the best way to distribute responsibilities between components\. It limits the connections \(thus the number of interfaces and contracts for the team to keep in mind\) of each component to its parent and a few children, allowing for the building of complex \(and even complicated\) systems in a simple way\. The hierarchical structure is very flexible as it features [multiple layers of indirection](https://en.wikipedia.org/wiki/Fundamental_theorem_of_software_engineering) \(and often polymorphism\), which makes addition, replacement, or [stubbing/mocking](https://stackoverflow.com/questions/3459287/whats-the-difference-between-a-mock-stub) of leaf components trivial\. It is also quite fault\-tolerant as individual subtrees operate independently\. 
 
-This architecture is not ubiquitous because few domains are truly hierarchical\. Its high fragmentation results in increased latency and poor debugging experience\. Moreover, component interfaces should be designed beforehand and are hard to change\.
+This architecture is not ubiquitous because few domains are truly hierarchical\. Its high fragmentation results in increased latency and poor debugging experience\. Moreover, component interfaces must be designed beforehand and are hard to change\.
 
 ### Performance
 
@@ -54,11 +54,11 @@ No kind of distributed hierarchy is latency\-friendly as many use cases involve 
 </a>
 </figure>
 
-Maintaining high throughput usually requires deploying multiple instances of the root component, which is not possible if it is stateful \(in [*control systems*]({{< relref "../foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}})\) and the state cannot be split into [*Shards*]({{< relref "../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-multitenancy-cells-amazon-definition" >}})\. The following tricks may help unloading the root:
+Maintaining high throughput usually requires deployment of multiple instances of the root component, which is not possible if it is stateful \(as in [*control systems*]({{< relref "../foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}})\) and the state cannot be split into [*Shards*]({{< relref "../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-multitenancy-cells-amazon-definition" >}})\. The following tricks may help unloading the root:
 
-- *Aggregation* \(first met in [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}})\): a node of a hierarchy collects reports from its children, aggregates them into a single package, and sends the aggregated data up to its parent\. This greatly reduces traffic to the root in large [IIoT](https://en.wikipedia.org/wiki/Industrial_internet_of_things) networks\.
-- *Delegation* \(resembles strategy injection and batching for [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}})\): a node should try to handle all the low\-level details of communication with its children without consulting its parent node\. For a [control system]({{< relref "../foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}}) that means that its mid\-level nodes should implement control loops for the majority of incoming events\. For a [processing system]({{< relref "../foundations-of-software-architecture/four-kinds-of-software.md#computational-single-run-user-input" >}}) that means that its mid\-level nodes should expose coarse\-grained interfaces to their parent\(s\) while translating each API method call into multiple calls to their child nodes\.
-- *Direct communication channels* \(previously described for [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}})\): if low\-level nodes need to exchange data, their communication should not always go through the higher\-level nodes\. Instead, they may negotiate a direct link \(open a socket\) that bypasses the root of the hierarchy\.
+- *Aggregation* \([first met]({{< relref "../basic-metapatterns/layers.md#performance" >}}) in [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}})\): a node of a hierarchy collects reports from its children, aggregates them into a single package, and sends the aggregated data up to its parent\. This greatly reduces traffic to the root in large [IIoT](https://en.wikipedia.org/wiki/Industrial_internet_of_things) networks\.
+- *Delegation* \(resembles [strategy injection and batching]({{< relref "../basic-metapatterns/layers.md#performance" >}}) for [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}})\): a node should try to handle all the low\-level details of communication with its children without consulting its parent node\. For a [control system]({{< relref "../foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}}) that means that its mid\-level nodes should implement control loops for the majority of incoming events\. For a [computational system]({{< relref "../foundations-of-software-architecture/four-kinds-of-software.md#computational-single-run-user-input" >}}) that means that its mid\-level nodes should expose coarse\-grained interfaces to their parent\(s\) while translating each API method call into multiple calls to their child nodes\.
+- *Direct communication channels* \([previously described]({{< relref "../extension-metapatterns/orchestrator.md#performance" >}}) for [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}})\): if the low\-level nodes need to exchange data, their communication should not always go through the higher\-level nodes\. Instead, they may negotiate a direct link \(open a socket\) that bypasses the root of the hierarchy\.
 
 
 <figure>
@@ -90,14 +90,14 @@ A parent node would usually define one \(for polymorphic children\) or more \(ot
 *Hierarchy* <ins>fits</ins> with:
 
 - *Large and huge projects\.* The natural division by both level of abstractness and subdomain allows for using smaller modules, ideally with intuitive interfaces\. The APIs for each team to learn are limited to just a few which their component interacts with directly\.
-- *Systems of hardware devices\.* Real\-world [IIoT](https://en.wikipedia.org/wiki/Industrial_internet_of_things) systems may use a hierarchy of controllers to benefit from autonomous decision\-making and data aggregation\.
+- *Systems of hardware devices\.* Real\-world [IIoT](https://en.wikipedia.org/wiki/Industrial_internet_of_things) systems may use a hierarchy of controllers to benefit from [autonomous decision\-making and data aggregation]({{< relref "../foundations-of-software-architecture/forces--asynchronicity--and-distribution.md#distribution" >}})\.
 - *Customization*\. The tree\-like structure provides opportunities for easy customization\. A medium\-sized hierarchical system may integrate hundreds of leaf types\.
 - *Survivability*\. A distributed hierarchy retains limited functionality even if several of its nodes fail\.
 
 
 *Hierarchy* <ins>fails</ins> with:
 
-- *Cohesive domains\.* Horizontal interactions \(those between nodes that belong to the same layer\) bloat interfaces as they have to pass through parent nodes\.
+- *Cohesive domains\.* Horizontal interactions between nodes that belong to the same layer bloat interfaces as they have to pass through parent nodes\.
 - *Quick start*\. Finding \(and verifying\) a good hierarchical domain model may be hard if at all possible\. Debugging an initial implementation will not be easy\.
 - *Low latency*\. System\-wide scenarios involve many cross\-component interactions which are slow in distributed systems\.
 
@@ -125,19 +125,19 @@ A parent node would usually define one \(for polymorphic children\) or more \(ot
 
 ### Polymorphic children
 
-All the managed child nodes expose the same interface and contract\. This tends to simplify the implementation of the parent node and resembles inheritance of OOD\.
+All the child nodes managed by a given parent node expose the same interface and contract\. This tends to simplify the implementation of the parent and resembles the inheritance of OOD\.
 
 Example: a fire alarm system may treat all of its fire sensors as identical devices, even though the real hardware comes from many manufacturers\.
 
 ### Functionally distinct children
 
-The managing node is aware of several kinds of children that vary in their APIs and contracts, just like with composition in OOD\.
+The managing node is aware of several kinds of children that vary in their APIs and contracts, just like with the composition in OOD\.
 
 Example: an intrusion alarm logic may need to discern between cat\-affected IR sensors and mostly cat\-proof glass break detectors\.
 
 ## Variants by direction
 
-A *Hierarchy* may have its root [at the top]({{< relref "#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}}) \(client side\), [at the bottom]({{< relref "#bottom-up-hierarchy-bus-of-buses-network-of-networks" >}}) \(deep infrastructure\), or [no root at all]({{< relref "#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services" >}}) \(recursive composition\):
+A *Hierarchy* may have its root [at the top]({{< relref "#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}}) \(client side\), [at the bottom]({{< relref "#bottom-up-hierarchy-bus-of-buses-network-of-networks-hierarchical-middleware" >}}) \(deep infrastructure\), or [no root at all]({{< relref "#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services" >}}) \(recursive decomposition\):
 
 ### Top\-Down Hierarchy: [Orchestrator]({{< relref "../extension-metapatterns/orchestrator.md" >}}) of Orchestrators, Presentation\-Abstraction\-Control \(PAC\), Hierarchical [Model\-View\-Controller]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}}) \(HMVC\)
 
@@ -155,7 +155,7 @@ In the most common case *Hierarchy* is applied to business logic to build a laye
 
 [*Presentation\-Abstraction\-Control*](https://en.wikipedia.org/wiki/Presentation%E2%80%93abstraction%E2%80%93control) \(*PAC*\) \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\] applies *Top\-Down Hierarchy* to a user\-facing application, providing each of the resulting [*layered*]({{< relref "../basic-metapatterns/layers.md" >}}) nodes with its own widget \(*presentation*\) on the UI screen \(which is the *presentation* of the root node\)\. *Controls* are responsible for inter\-node communication and [integration logic]({{< relref "../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}), while [domain logic]({{< relref "../basic-metapatterns/layers.md#domain-business-rules-or-model" >}}) and data reside in *abstractions*\.
 
-[*Hierarchical Model\-View\-Controller*](https://herbertograca.com/2017/08/17/mvc-and-its-variants/#hierarchical-model-view-controller) \(*HMVC*\) is similar, but its views access models directly, like in [*MVC*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}}), and every model synchronizes with the global data\. This pattern [was used](https://web.archive.org/web/20060319064042/http://www.javaworld.com/javaworld/jw-09-2000/jw-0908-letters.html) in [rich clients](https://en.wikipedia.org/wiki/Rich_client)\.
+[*Hierarchical Model\-View\-Controller*](https://herbertograca.com/2017/08/17/mvc-and-its-variants/#hierarchical-model-view-controller) \(*HMVC*\) is similar, but its *views* access *models* directly, like in [*MVC*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}}), and every model synchronizes with the global data\. This pattern [was used](https://web.archive.org/web/20060319064042/http://www.javaworld.com/javaworld/jw-09-2000/jw-0908-letters.html) in [rich clients](https://en.wikipedia.org/wiki/Rich_client)\.
 
 <figure>
 <a href="/diagrams/Variants/3/PAC.png">
@@ -167,7 +167,7 @@ In the most common case *Hierarchy* is applied to business logic to build a laye
 </a>
 </figure>
 
-### Bottom\-Up Hierarchy: [Bus]({{< relref "../extension-metapatterns/middleware.md#message-bus" >}}) of Buses, Network of Networks
+### Bottom\-Up Hierarchy: [Bus]({{< relref "../extension-metapatterns/middleware.md#message-bus" >}}) of Buses, Network of Networks, Hierarchical Middleware
 
 <figure>
 <a href="/diagrams/Variants/3/Hierarchy%20-%20Bottom-up.png">
@@ -179,7 +179,7 @@ In the most common case *Hierarchy* is applied to business logic to build a laye
 </a>
 </figure>
 
-Other cases require building a common base for intercommunication between several networks which vary in their protocols \(and maybe even their hardware\)\. The root of such a *Hierarchy* is a [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) generic and powerful enough to cover the needs of all the specialized networks which it interconnects\.
+Other cases require building a common base for intercommunication between several networks which vary in their protocols \(and often their hardware\)\. The root of such a *Hierarchy* is a [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) generic and powerful enough to cover the needs of all the specialized networks which it interconnects\.
 
 Example: [Automotive networks](https://www.mdpi.com/1424-8220/21/23/7917), integration of corporate networks, [the Internet](https://en.wikipedia.org/wiki/Internet_service_provider)\.
 
@@ -195,11 +195,11 @@ Example: [Automotive networks](https://www.mdpi.com/1424-8220/21/23/7917), integ
 </a>
 </figure>
 
-When several [*services*]({{< relref "../basic-metapatterns/services.md" >}}) in a system grow large, in some cases it is possible to divide each of them into *subservices*\. Each group of the resulting subservices \(known as a [*Cell*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}}), [*Domain*](https://www.uber.com/blog/microservice-architecture/) or *Cluster* \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\]\) usually implements a *bounded context* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\. It is hidden behind its own [*Cell Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) and may even use its own [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}})\. Subservices of a *Cell* may [*share a database*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) and may be deployed as a single unit\. This keeps the system’s integration complexity \(the length of its APIs and the number of deployable units\) reasonable while still scaling development among many teams, each owning a service\. If each instance of a *Cell* owns a [*shard*]({{< relref "../basic-metapatterns/shards.md" >}}) of its database, the system [becomes more stable](https://docs.aws.amazon.com/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/what-is-a-cell-based-architecture.html) as there is no single point of failure \(except for the [*Load Balancer*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) called *Cell Router*\)\. Another benefit is that *Cells* can be deployed to regional data centers to improve locality for users of the system\. However, that will likely cause data synchronization traffic between the data centers\.
+When several [*services*]({{< relref "../basic-metapatterns/services.md" >}}) in a system grow large, in some cases it is possible to divide each of them into *subservices*\. Each group of the resulting subservices \(known as a [*Cell*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}}), [*Domain*](https://www.uber.com/blog/microservice-architecture/) or *Cluster* \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\]\) usually implements a *bounded context* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\. It is hidden behind its own [*Cell Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) and may even use its own [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}})\. Subservices of a *Cell* may [*share a database*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) and may be deployed as a single unit\. This keeps the system’s integration complexity \(the length of its APIs and the number of deployable units\) reasonable while still scaling development among many teams or individuals, each owning a service\. If each instance of a *Cell* owns a [*shard*]({{< relref "../basic-metapatterns/shards.md" >}}) of its database, the system [becomes more stable](https://docs.aws.amazon.com/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/what-is-a-cell-based-architecture.html) as there is no single point of failure \(except for the [*Load Balancer*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) called *Cell Router*\)\. Another benefit is that *Cells* can be deployed to regional data centers to improve locality for users of the system\. However, that will likely cause data synchronization traffic between the data centers\.
 
 The [*Cell\-Based Architecture*](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md) \([*Segmented Microservice Architecture*](https://github.com/wso2/reference-architecture/blob/master/api-driven-microservice-architecture.md)\) may be seen as a combination of an *Orchestrator of Orchestrators* and a *Bus of Buses* where the subservices are leaf nodes of both *hierarchies* while the [*API Gateways*]({{< relref "../extension-metapatterns/proxy.md#api-gateway" >}}) of the *Cells* are their internal nodes\.
 
-Uber [compacted](https://www.uber.com/blog/microservice-architecture/) 2200 [*Microservices*]({{< relref "../basic-metapatterns/services.md#microservices" >}}) into 70 *Cells* arranged in [*SOA*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}})\-style [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}) called [*Domain\-Oriented Microservice Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#domain-oriented-microservice-architecture-doma" >}})\.
+Uber [compacted](https://www.uber.com/blog/microservice-architecture/) 2200 [*Microservices*]({{< relref "../basic-metapatterns/services.md#microservices" >}}) into 70 *Cells* arranged in a [*SOA*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}})\-style topology called [*Domain\-Oriented Microservice Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#domain-oriented-microservice-architecture-doma" >}})\.
 
 ## Evolutions
 

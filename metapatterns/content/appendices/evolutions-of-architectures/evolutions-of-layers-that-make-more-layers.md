@@ -10,11 +10,11 @@ primary_image = "/diagrams/Evolutions/Layers/Layers%20to%20Layers.png"
 
 # Evolutions of Layers that make more layers {anchor=false}
 
-Not all the layered architectures are equally layered\. A [*Monolith*]({{< relref "../../basic-metapatterns/monolith.md" >}}) with a [*Proxy*]({{< relref "../../extension-metapatterns/proxy.md" >}}) or database has already stepped into the realm of [*Layers*]({{< relref "../../basic-metapatterns/layers.md" >}}) but is far from reaping all of its benefits\. It may continue its journey in a few ways that [were earlier discussed]({{< relref "../../appendices/evolutions-of-architectures/evolutions-of-a-monolith-that-result-in-layers.md" >}}) for *Monolith*:
+Not all the layered architectures are equally layered\. A [*Monolith*]({{< relref "../../basic-metapatterns/monolith.md" >}}) with a [*Proxy*]({{< relref "../../extension-metapatterns/proxy.md" >}}) or [database]({{< relref "../../basic-metapatterns/layers.md#data-persistence" >}}) has already stepped into the realm of [*Layers*]({{< relref "../../basic-metapatterns/layers.md" >}}) but is still far from reaping all of its benefits\. It may continue its journey in a few ways that [were earlier discussed]({{< relref "../../appendices/evolutions-of-architectures/evolutions-of-a-monolith-that-result-in-layers.md" >}}) for *Monolith*:
 
-- Employing a *database* \(if you don’t use one\) lets you rely on a thoroughly optimized state\-of\-the\-art subsystem for data processing and storage\.
-- [*Proxies*]({{< relref "../../extension-metapatterns/proxy.md" >}}) are similarly reusable generic modules to be added at will\.
-- Implementing an [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) on top of your system may improve programming experience and runtime performance for your clients\.
+- Employing a [*database*]({{< relref "../../basic-metapatterns/layers.md#data-persistence" >}}) \(if you don’t use one\) lets you rely on a thoroughly optimized state\-of\-the\-art subsystem for data processing and storage\.
+- [*Proxies*]({{< relref "../../extension-metapatterns/proxy.md" >}}) are similarly reusable generic components to be added at will\.
+- Implementing an [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) on top of your system may improve the programming experience and runtime performance for your clients\.
 
 
 <figure>
@@ -46,16 +46,16 @@ It is also common to:
 
 <ins>Patterns</ins>: [Layers]({{< relref "../../basic-metapatterns/layers.md" >}})\.
 
-<ins>Goal</ins>: let parts of the business logic vary in qualities, improve the structure of the code\.
+<ins>Goal</ins>: let parts of the business logic vary in their qualities, improve the structure of the code\.
 
-<ins>Prerequisite</ins>: the high\-level and low\-level logic are loosely coupled\.
+<ins>Prerequisite</ins>: the high\-level and low\-level parts of the business logic are loosely coupled\.
 
 It is often possible to split a backend into [integration]({{< relref "../../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) \([orchestration]({{< relref "../../foundations-of-software-architecture/arranging-communication/orchestration.md" >}})\) and [domain]({{< relref "../../basic-metapatterns/layers.md#domain-business-rules-or-model" >}}) layers\. That allows for one team to specialize in customer use cases while the other one delves deep into the domain knowledge and infrastructure\.
 
 <ins>Pros</ins>: 
 
 - You get an extra development team\.
-- High\-level use cases may be deployed separately from business rules\.
+- The high\-level use cases may be deployed separately from business rules\.
 - The layers may diverge in technologies and styles\.
 - The code may [become less complex]({{< relref "../../foundations-of-software-architecture/modules-and-complexity.md" >}})\.
 

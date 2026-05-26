@@ -50,7 +50,7 @@ As *Middleware* is ubiquitous and does not affect business logic, it is usually 
 
 A *Middleware* may negatively affect performance when compared to direct communication between services\. Old implementations \(star topology\) relied on a *Broker* \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}}), [EIP]({{< relref "../appendices/books-referenced.md#eip" >}})\] that used to add an extra network hop for each message and limited scalability\. Newer [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}})\-based variants avoid those drawbacks but are very complex and may have consistency issues \(according to the [CAP theorem](https://en.wikipedia.org/wiki/CAP_theorem)\)\.
 
-A more subtle drawback is that transports supported or recommended by a *Middleware* may be suboptimal for some of the interactions in your system, causing programmers to hack around the limitations or build higher\-level protocols on top of your *Middleware*\. Both cases can be ameliorated by adding means for direct communication between the services to bypass the *Middleware* or by using multiple specialized kinds of *Middleware*\. However, that adds to the complexity of the system – the very issue the *Middleware* promised to help with\.
+A more subtle drawback is that transports which a *Middleware* supports or uses by default may be suboptimal for some of the interactions in your system, causing programmers to hack around the limitations or build higher\-level protocols on top of your *Middleware*\. Both cases can be ameliorated by adding means for direct communication between the services to bypass the *Middleware* or by using multiple specialized kinds of *Middleware*\. However, that adds to the complexity of the system – the very issue the *Middleware* promised to help with\.
 
 ### Dependencies
 
@@ -66,21 +66,21 @@ Each service depends both on the *Middleware* and on the API of every service it
 </a>
 </figure>
 
-You may decide to use an [*Anticorruption Layer*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) over your *Middleware* just in case you may need to change its vendor in the future\.
+You may decide to use an [*Anticorruption Layer*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) over your *Middleware* just in case you may need to change its vendor in the future\. That will trade performance for flexibility\.
 
 ### Applicability
 
 *Middleware* <ins>helps</ins>:
 
-- *Multi\-component systems\.* When a service has several instances deployed which need to be accessed, its clients must know the addresses of \(or have channels to\) its instances and use an algorithm for instance selection\. As the number of services grows, so does the amount of information about the others that each of them needs to track\. Even worse, services sometimes crash or are being redeployed, requiring complicated algorithms that queue messages to deliver them in order once the service returns to life\. It makes all the sense to use a dedicated component that takes care of all of that\.
-- *Dynamic scaling\.* It is good to have a single component that manages routes for interservice messaging to account for newly deployed \(or destroyed\) service instances\.
+- *Multi\-component systems\.* When a service has several instances deployed which need to be accessed, its clients must know the addresses of \(or have channels to\) its instances and use an algorithm for instance selection\. As the number of services grows, so does the amount of information about the instances of other services that each service needs to track\. Even worse, services sometimes crash or are being redeployed, requiring complicated algorithms that queue messages to deliver them in order once the recipient service returns to life\. It makes all the sense in the world to use a dedicated component to take care of all of that\.
+- *Dynamic scaling\.* It is good to have a single, even if virtual, component that manages routes for interservice messaging to account for newly deployed \(or destroyed\) service instances\.
 - [*Blue\-green deployment*](https://martinfowler.com/bliki/BlueGreenDeployment.html)*,* [*canary release*](https://martinfowler.com/bliki/CanaryRelease.html)*, or* [*dark launching*](https://martinfowler.com/bliki/DarkLaunching.html) *\(traffic mirroring\)*\. It is easier to switch, whether fully or in part, to a new version of a service when the communication is centralized\.
 - *System stability\.* Most implementations of *Middleware* guarantee message delivery with unstable networks and failing components\. Many persist messages to be able to recover from failures of the *Middleware* itself\.
 
 
 *Middleware* <ins>hurts</ins>:
 
-- *Critical real\-time paths\.* An extra layer of message processing is bad for latency\. Such messages may need to bypass the *Middleware*\.
+- *Critical real\-time paths\.* An extra layer of message processing is bad for latency\. Such messages may need to bypass the *Middleware*, likely via pre\-established message channels\.
 
 
 ### Relations
@@ -97,8 +97,8 @@ You may decide to use an [*Anticorruption Layer*]({{< relref "../extension-metap
 
 *Middleware*:
 
-- Extends [*Services*]({{< relref "../basic-metapatterns/services.md" >}}), [*Service\-Oriented Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}), or in rare cases, [*Shards*]({{< relref "../basic-metapatterns/shards.md" >}}) or [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}})\.
-- Can make a [*Bus of Buses*]({{< relref "../fragmented-metapatterns/hierarchy.md#bottom-up-hierarchy-bus-of-buses-network-of-networks" >}}) \([*Hierarchy*]({{< relref "../fragmented-metapatterns/hierarchy.md" >}})\) or be merged with other *extension metapatterns*\.
+- Extends [*Services*]({{< relref "../basic-metapatterns/services.md" >}}), [*Service\-Oriented Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}) or, in rare cases, [*Shards*]({{< relref "../basic-metapatterns/shards.md" >}}) or [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}})\.
+- Can participate in a [*Bus of Buses*]({{< relref "../fragmented-metapatterns/hierarchy.md#bottom-up-hierarchy-bus-of-buses-network-of-networks-hierarchical-middleware" >}}) \([*Hierarchy*]({{< relref "../fragmented-metapatterns/hierarchy.md" >}})\) or be merged with other *extension metapatterns*\.
 - Is closely related to [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}})\. A persistent *Middleware* employs a *Shared Repository*\.
 - Is usually implemented by a [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}}) or [*Microkernel*]({{< relref "../implementation-metapatterns/microkernel.md" >}}) \(which is often based on a *Mesh*\)\.
 
@@ -130,8 +130,8 @@ Control flow may take one or more of the following approaches:
 
 If the transport \(network\) or the destination fails, a message may not be processed, or may be processed twice because of retries\. A *Middleware* may [promise to deliver messages](https://blog.bytebytego.com/p/at-most-once-at-least-once-exactly):
 
-- *Exactly once*\. This is the slowest case which is [implemented through distributed transactions](https://docs.confluent.io/kafka/design/delivery-semantics.html)\. If the network, *Middleware*, or the message handler fails, there is no side effect, and the whole process of delivering and executing the message is repeated\. The *exactly once* contract is used for financial systems where money should never disappear or duplicate during a transfer\.
-- *At least once*\. On failure the message is redelivered, but the previous message could have already been processed \(if only the confirmation was lost\), thus there is a chance for a message to be processed twice\. If the message is *idempotent* \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\], meaning that it sets a value \(x = 42\) instead of incrementing or decrementing it \(x = x \+ 2\), then we can more or less safely process it multiple times \(x = 42; x = 42; x = 42;\) and use the relatively fast *exactly once* guarantee\.
+- *Exactly once*\. This is the slowest case which is [implemented through distributed transactions](https://docs.confluent.io/kafka/design/delivery-semantics.html)\. If the network, *Middleware* itself, or the message handler fails, there is no side effect, and the whole process of delivering and executing the message is repeated\. The *exactly once* contract is used for financial systems and accounting where money should never disappear or duplicate during a transfer\.
+- *At least once*\. On failure the message is redelivered, but the previous message could have already been processed \(if only the confirmation was lost\), thus there is a chance for a message to be processed twice\. If the message is *idempotent* \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\], meaning that it sets a value \(x = 42\) instead of incrementing or decrementing it \(x = x \+ 2\), then we can more or less safely process it multiple times \(x = 42; x = 42; x = 42;\) and use the relatively fast *at least once* guarantee\.
 - *At most once*\. If anything fails, the message is lost and never retried\. This is the fastest of the three guarantees, suitable for such monitoring applications as weather sensors – it is not too bad if a single temperature measurement disappears when you receive hundreds of them every day\.
 - *At will* \(no guarantee\)\. As with the bare [UDP transport](https://en.wikipedia.org/wiki/User_Datagram_Protocol#Reliability_and_congestion_control), a message may disappear, become duplicated, or arrive out of order\. That fits real\-time streaming protocols \(video or audio calls\) where it is acceptable to skip a frame while a frame coming too late is of no use at all\. Each frame contains its sequence number, and it is up to the application to reorder and deduplicate the frames it receives\.
 
@@ -140,8 +140,8 @@ If the transport \(network\) or the destination fails, a message may not be proc
 
 A *Middleware* with a delivery guarantee needs to store messages whose delivery has not yet been confirmed\. They may be:
 
-- Written to a database of the *broker*\.
-- Persisted in a distributed database in brokerless \([*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}})\) systems\.
+- Written to a data store of the *broker*\.
+- Persisted in a distributed data store in brokerless \([*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}})\) systems\.
 - Replicated over an in\-memory *Mesh* storage \(like [*Data Grid*]({{< relref "../extension-metapatterns/shared-repository.md#data-grid-of-space-based-architecture-sba-replicated-cache-distributed-cache" >}})\)\.
 
 
@@ -162,7 +162,7 @@ If the messages are stored indefinitely, the *Middleware* [becomes]({{< relref "
 A *Middleware* may be:
 
 - Implemented by an underlying operating or virtualization system \(see [*Microkernel*]({{< relref "../implementation-metapatterns/microkernel.md" >}})\)\.
-- Run as a [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}}) of identical modules co\-deployed with the distributed components as [*Sidecars*]({{< relref "../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}})\.
+- Run as a [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}}) of identical modules co\-deployed with the distributed components in their [*Sidecars*]({{< relref "../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}})\.
 - Rely on a single *broker* \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}}), [EIP]({{< relref "../appendices/books-referenced.md#eip" >}})\] for coordination\.
 
 
@@ -191,7 +191,7 @@ There are several patterns which extend *Middleware* with other functions:
 </a>
 </figure>
 
-When a *Middleware* persists messages, it takes on the function \(and drawbacks\) of a [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}})\. A *Persistent Event Log* allows to replay incoming events for a given service \(to help a debug session or fix data corrupted by a bug\) while a *Shared Event Store* also captures changes of the internal states of the services \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\], [replacing their private databases](https://cloudnative.ly/event-driven-architectures-edas-vs-event-sourcing-c8582578e87)\. However, with either approach, changing an event field impacts all the services that use the event and may involve rewriting the entire event log \(system’s history\) \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\]\.
+When a *Middleware* persists messages, it takes on the function \(and drawbacks\) of a [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}})\. A *Persistent Event Log* allows to replay events incoming to a given service \(to help a debug session or fix data corrupted by a bug\) while a *Shared Event Store* also captures changes of the internal states of the services \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\], thus [replacing their private databases](https://cloudnative.ly/event-driven-architectures-edas-vs-event-sourcing-c8582578e87)\. However, with either approach, changing an event field impacts all the services that use the event and may involve rewriting the entire event log \(the system’s history\) \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\]\.
 
 ### [Service Mesh]({{< relref "../implementation-metapatterns/mesh.md#service-mesh" >}})
 
@@ -221,7 +221,7 @@ The internals of [*Service Mesh*]({{< relref "../implementation-metapatterns/mes
 </a>
 </figure>
 
-A *Message Bus* \[[EIP]({{< relref "../appendices/books-referenced.md#eip" >}})\] employs one or more [*Adapters*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) per service to let the services intercommunicate even if they differ in protocols\. That helps to integrate legacy services without much change to their code but it degrades overall performance as up to two protocol translations per message are involved\.
+A *Message Bus* \[[EIP]({{< relref "../appendices/books-referenced.md#eip" >}})\] employs one or more [*Adapters*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) per service to let the services intercommunicate even if they differ in protocols\. That helps to integrate legacy services without major changes to their code but it degrades the overall performance as up to two protocol translations per message are involved\.
 
 ### [Event Mediator]({{< relref "../extension-metapatterns/orchestrator.md#event-mediator" >}})
 
@@ -235,7 +235,7 @@ A *Message Bus* \[[EIP]({{< relref "../appendices/books-referenced.md#eip" >}})\
 </a>
 </figure>
 
-*Event Mediator* \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\], which pervades both [*Event\-Driven Architecture*s]({{< relref "../basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}}) and [*Nanoservices*]({{< relref "../basic-metapatterns/pipeline.md#function-as-a-service-faas-nanoservices-pipelined" >}}), melds a *Middleware* \(used for delivery of messages\) and an [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) \(that coordinates high\-level use cases\)\. A message arrives to a service and is responded to without any explicit component on the service’s side – it appears *out of thin Middleware* which implements the entire integration logic\.
+*Event Mediator* \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\], which pervades both [*Event\-Driven Architecture*s]({{< relref "../basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}}) and [*Nanoservices*]({{< relref "../basic-metapatterns/pipeline.md#function-as-a-service-faas-nanoservices-pipelined" >}}), combines a *Middleware* \(used for the delivery of messages\) and an [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) \(that coordinates high\-level use cases\)\. A message arrives to a service and is responded to without any explicit support on the service’s side – it appears *out of thin Middleware* which implements the entire integration logic\.
 
 Slightly more details on the *Event Mediator* are [provided in the *Orchestrator* chapter]({{< relref "../extension-metapatterns/orchestrator.md#event-mediator" >}})\.
 
@@ -272,7 +272,7 @@ A *Middleware* is unlikely to be removed \(though it may be replaced\) once it i
 </a>
 </figure>
 
-- If several existing systems need to be merged, that is accomplished by adding yet another layer of *Middleware*, resulting in a [*Bottom\-up Hierarchy*]({{< relref "../fragmented-metapatterns/hierarchy.md#bottom-up-hierarchy-bus-of-buses-network-of-networks" >}}) *\(Bus of Buses\)*\.
+- If several existing systems need to be merged, that is accomplished by adding yet another layer of *Middleware*, resulting in a [*Bottom\-up Hierarchy*]({{< relref "../fragmented-metapatterns/hierarchy.md#bottom-up-hierarchy-bus-of-buses-network-of-networks-hierarchical-middleware" >}}) *\(Bus of Buses\)*\.
 
 
 <figure>

@@ -24,9 +24,9 @@ These patterns extend [*Services*]({{< relref "../basic-metapatterns/services.md
 </a>
 </figure>
 
-A [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) is a layer that implements communication between instances of the system’s components and it may also manage the instances\. This way each instance is relieved of the need to track the other instances which it accesses\.
+A [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) is a layer which provides communication with instances of the system’s components and it may also manage those instances\. This way each instance is relieved of the need to track the other instances which it accesses\.
 
-*<ins>Includes</ins>*: \(Message\) Broker and Deployment Manager\.
+*<ins>Includes</ins>*: \(Message\) Broker and Deployment Manager; Message Bus, Event Mediator, Enterprise Service Bus, and Service Mesh\.
 
 ### [Shared Repository]({{< relref "../extension-metapatterns/shared-repository.md" >}})
 
@@ -58,7 +58,7 @@ A [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.
 
 A [*Proxy*]({{< relref "../extension-metapatterns/proxy.md" >}}) mediates between a system and its clients, transparently taking care of some generic functionality\.
 
-*<ins>Includes</ins>*: Full Proxy and Half\-Proxy; Sidecar and Ambassador; Firewall, Response Cache, Load Balancer, Reverse Proxy and various Adapters, e\.g\. Anticorruption Layer, Open Host Service, many Abstraction Layers, Repository and even User Interface\.
+*<ins>Includes</ins>*: Full Proxy and Half\-Proxy; Sidecar and Ambassador; Firewall, Response Cache, Load Balancer, Reverse Proxy and various Adapters, e\.g\. Anticorruption Layer, Open Host Service, many Abstraction Layers, Repository, and even User Interface\.
 
 ### [Orchestrator]({{< relref "../extension-metapatterns/orchestrator.md" >}})
 
@@ -90,4 +90,4 @@ An [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) 
 
 [*Sandwich*]({{< relref "../extension-metapatterns/sandwich.md" >}}) subdivides the largest and loosely coupled [*domain* layer]({{< relref "../basic-metapatterns/layers.md#domain-business-rules-or-model" >}}) into modules or services while the other layers remain monolithic\.
 
-*<ins>Includes</ins>*: Service\-Based Architecture, Space\-Based Architecture, Blackboard Architecture, Nanoservices, Command Query Responsibility Segregation \(CQRS\)\.
+*<ins>Includes</ins>*: Service\-Based Architecture, Space\-Based Architecture, Blackboard Architecture, Nanoservices, and Command Query Responsibility Segregation \(CQRS\)\.

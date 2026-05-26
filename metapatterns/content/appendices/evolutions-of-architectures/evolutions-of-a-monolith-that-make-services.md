@@ -10,7 +10,7 @@ primary_image = "/diagrams/Evolutions/Monolith/Monolith_%20Services%20and%20Pipe
 
 # Evolutions of a Monolith that make Services {anchor=false}
 
-The final major drawback of [*Monolith*]({{< relref "../../basic-metapatterns/monolith.md" >}}) is the cohesiveness of its code\. The rapid start of development begets a major obstacle for project growth: every developer needs to know the entire codebase to be productive and changes made by individual developers overlap and may break each other\. Such distress is usually solved by dividing the project into components along *subdomain boundaries* \(which tend to match [*bounded contexts*](https://martinfowler.com/bliki/BoundedContext.html) \[[DDD]({{< relref "../../appendices/books-referenced.md#ddd" >}})\]\)\. However, that requires a lot of work, and good boundaries and APIs are [hard to design](https://martinfowler.com/bliki/MonolithFirst.html)\. Thus many organizations prefer a slower iterative transition\.
+The final major drawback of [*Monolith*]({{< relref "../../basic-metapatterns/monolith.md" >}}) is the cohesiveness of its code\. The rapid start of development begets a major obstacle for project growth: every developer needs to know the entire codebase to be productive, and changes made by individual developers overlap and may break each other\. Such distress is usually solved by dividing the project into components along *subdomain boundaries* \(which tend to match [*bounded contexts*](https://martinfowler.com/bliki/BoundedContext.html) \[[DDD]({{< relref "../../appendices/books-referenced.md#ddd" >}})\]\)\. However, that requires a lot of work, and good boundaries and APIs are [hard to design](https://martinfowler.com/bliki/MonolithFirst.html)\. Thus many organizations prefer a slower iterative transition\.
 
 - A *Monolith* can be split into [*Services*]({{< relref "../../basic-metapatterns/services.md" >}}) right away\.
 - Or only the new features may be added as new services\.
@@ -42,25 +42,25 @@ The final major drawback of [*Monolith*]({{< relref "../../basic-metapatterns/mo
 
 <ins>Patterns</ins>: [Services]({{< relref "../../basic-metapatterns/services.md" >}})\.
 
-<ins>Goal</ins>: facilitate development by multiple teams, improve the code, decouple qualities of subdomains\.
+<ins>Goal</ins>: facilitate development by multiple teams, improve the code, and decouple the qualities of subdomains\.
 
 <ins>Prerequisite</ins>: there is a natural way to split the business logic into loosely coupled subdomains, and the subdomain boundaries are sure to never change in the future\.
 
-Splitting a *Monolith* into *Services* by subdomain [is risky in the early stages of a project](https://martinfowler.com/bliki/MonolithFirst.html) while the domain understanding is evolving \([in\-process *modules*]({{< relref "../../basic-metapatterns/services.md#synchronous-modules-modular-monolith-modulith" >}}) are less risky but provide fewer benefits\)\. However, this is the way to go as soon as the codebase becomes unwieldy due to its size\.
+Splitting a [*Monolith*]({{< relref "../../basic-metapatterns/monolith.md" >}}) into *Services* by subdomain [is risky in the early stages of a project](https://martinfowler.com/bliki/MonolithFirst.html) while the domain understanding is evolving \([in\-process *modules*]({{< relref "../../basic-metapatterns/services.md#synchronous-modules-modular-monolith-modulith" >}}) are less risky but provide fewer benefits\)\. However, this is the way to go as soon as the codebase becomes unwieldy due to its size\.
 
 <ins>Pros</ins>: 
 
 - Supports multiple, relatively independent and specialized development teams\.
 - Lowers the penalty imposed by the project’s size and complexity on the velocity of development and product quality\.
-- Each team may choose the best fitting technologies for its service\.
-- The services can differ in [non\-functional requirements](https://en.wikipedia.org/wiki/Non-functional_requirement)\.
+- Each team may choose the best fitting technologies for its component\.
+- The services can differ in their [qualities](https://en.wikipedia.org/wiki/List_of_system_quality_attributes)\.
 - Flexible deployment and scaling\.
 - A certain degree of error tolerance for asynchronous systems\.
 
 
 <ins>Cons</ins>: 
 
-- It takes lots of work to split a *Monolith*\.
+- It takes a lot of work to split a *Monolith*\.
 - Any future changes to the overall structure of the domain will be hard to implement\.
 - Sharing data between services is complicated and error\-prone\.
 - System\-wide use cases are hard to understand and debug\.
@@ -87,14 +87,14 @@ Splitting a *Monolith* into *Services* by subdomain [is risky in the early stage
 
 If your [*Monolith*]({{< relref "../../basic-metapatterns/monolith.md" >}}) is already hard to manage, but a new functionality is needed, you can try dedicating a separate service to the new feature\(s\)\. This way the *Monolith* does not become larger – it is even possible that you will move a part of its code to the newly established service\.
 
-If you are not adding a new feature but need to change an old one – use the chance to make the existing *Monolith* smaller by first separating the functionality which you are going to change from its bulk\. At the very minimum this two\-step process lowers the probability of breaking something unrelated to the changes of behavior required\.
+If you are not adding a new feature but need to change an old one – use the chance to make the existing *Monolith* smaller by first separating the functionality which you are going to change from its bulk\. At the very minimum this two\-step process lowers the probability of breaking something unrelated to the required changes of behavior\.
 
 <ins>Pros</ins>: 
 
 - The legacy code does not increase in size and complexity\.
-- The new service is transferred to a dedicated team which does not need to know the legacy system\.
+- The new service is transferred to a dedicated team which does not need to know the legacy system or use the old technologies\.
 - The new service can be experimented with and even rewritten from scratch\.
-- The likely faults of the new service don’t crash the main application\.
+- The likely faults of the new service won’t crash the main application\.
 - The new service can be tested and deployed in isolation\.
 - The new service can be scaled independently\.
 
@@ -125,20 +125,20 @@ If you are not adding a new feature but need to change an old one – use the ch
 
 <ins>Patterns</ins>: [Pipeline]({{< relref "../../basic-metapatterns/pipeline.md" >}}) \([Services]({{< relref "../../basic-metapatterns/services.md" >}})\)\.
 
-<ins>Goal</ins>: decrease the complexity of the code, make it easy to experiment with the steps of data processing, distribute the task over multiple CPU cores, processors or computers\.
+<ins>Goal</ins>: decrease the complexity of the code, make it easy to experiment with the steps of data processing, and distribute the task over multiple CPU cores, processors, or computers\.
 
 <ins>Prerequisite</ins>: the domain can be represented as a sequence of coarse\-grained data processing steps\.
 
-If you can treat your application as a chain of independent steps that transform the input data, you can rely on the OS to schedule them and you can also dedicate a development team to each of the steps\. This is the default solution for a system that [processes a stream]({{< relref "../../foundations-of-software-architecture/four-kinds-of-software.md#streaming-continuous-raw-data-input" >}}) of a single type of data \(video, audio, measurements\)\. It has excellent flexibility\.
+If you can treat your application as a chain of independent steps that transform the input data, you can rely on the OS to schedule them, and you can also dedicate a development team to each of the steps\. This is the default solution for a system that [processes a stream]({{< relref "../../foundations-of-software-architecture/four-kinds-of-software.md#streaming-continuous-raw-data-input" >}}) of a single type of data \(video, audio, or measurements\)\. It has excellent flexibility\.
 
 <ins>Pros</ins>: 
 
-- Nearly abolishes the influence of project size on development velocity\.
+- Nearly abolishes the influence of the project size on development velocity\.
 - The project’s teams become almost independent\.
 - Flexible deployment and scaling\.
-- Naturally supports event replay for reproducing bugs, testing or benchmarking individual components\.
-- It is possible to have multiple implementations of each of the steps of data processing\.
-- Does not need any manual scheduling or thread synchronization\.
+- Naturally supports event replay for reproducing bugs, testing, or benchmarking individual components\.
+- It is possible to have multiple implementations for each of the steps of data processing\.
+- Does not require any manual scheduling or thread synchronization\.
 
 
 <ins>Cons</ins>: 
@@ -153,10 +153,10 @@ As your knowledge of the domain and your business requirements change, you may n
 
 Systems of [*Services*]({{< relref "../../basic-metapatterns/services.md" >}}) or [*Pipelines*]({{< relref "../../basic-metapatterns/pipeline.md" >}}) are quite often extended with special kinds of [*layers*]({{< relref "../../basic-metapatterns/layers.md" >}}):
 
-- [*Middleware*]({{< relref "../../extension-metapatterns/middleware.md" >}}) takes care of deployment, intercommunication and scaling of services\.
+- [*Middleware*]({{< relref "../../extension-metapatterns/middleware.md" >}}) takes care of deployment, [intercommunication]({{< relref "../../basic-metapatterns/layers.md#communication-middleware" >}}), and scaling of services\.
 - [*Shared Repository*]({{< relref "../../extension-metapatterns/shared-repository.md" >}}) lets services operate on and communicate through [shared data]({{< relref "../../foundations-of-software-architecture/arranging-communication/shared-data.md" >}})\.
 - [*Proxies*]({{< relref "../../extension-metapatterns/proxy.md" >}}) are ready\-to\-use components that add generic functionality to the system\.
-- [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) encapsulates use cases that involve multiple services, so that the services don’t need to know about each other\.
+- [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) encapsulates [use cases]({{< relref "../../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) that involve multiple services, so that the services don’t need to know about each other\.
 
 
 <figure>
@@ -172,7 +172,7 @@ Systems of [*Services*]({{< relref "../../basic-metapatterns/services.md" >}}) o
 Each service, being a smaller *Monolith*, may evolve on its own\. Most of the evolutions of [*Monolith*]({{< relref "../../basic-metapatterns/monolith.md" >}}) are applicable\. The most common examples include:
 
 - [*Scaled \(Sharded\) Service*]({{< relref "../../basic-metapatterns/services.md#scaled-service" >}}) with a [*Load Balancer*]({{< relref "../../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) and [*Shared Database*]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) to support high load\.
-- [*Layered Service*]({{< relref "../../basic-metapatterns/services.md#layered-service" >}}) to improve the code structure and decouple deployment of parts of a service\.
+- [*Layered Service*]({{< relref "../../basic-metapatterns/services.md#layered-service" >}}) to improve the code structure and decouple the deployment of parts of the service\.
 - [*Cell*]({{< relref "../../basic-metapatterns/services.md#cell-wso2-definition-service-of-services-domain-uber-definition-cluster" >}}) \(*Service of Services*\) to involve multiple teams and technologies within a single subdomain\.
 - [*Hexagonal Service*]({{< relref "../../basic-metapatterns/services.md#hexagonal-service" >}}) to escape vendor lock\-in\.
 

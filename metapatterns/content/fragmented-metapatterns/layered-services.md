@@ -24,9 +24,9 @@ primary_image = "/diagrams/Main/Layered%20Services.png"
 
 <ins>Structure:</ins> Subdomain services divided into layers\.
 
-<ins>Type:</ins> Implementation of [*Services*]({{< relref "../basic-metapatterns/services.md" >}}), [*Pipeline*]({{< relref "../basic-metapatterns/pipeline.md" >}}) or [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}})\.
+<ins>Type:</ins> Implementation of [*Services*]({{< relref "../basic-metapatterns/services.md" >}}), [*Pipeline*]({{< relref "../basic-metapatterns/pipeline.md" >}}), or [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}})\.
 
-*Layered Services* is an umbrella architecture for common implementations of systems of [*Services*]({{< relref "../basic-metapatterns/services.md" >}})\. It does not introduce any special features as layers are completely encapsulated by the service which they belong to\. Still, as the services may communicate at different layers, there are a couple of things to learn by exploring the subject matter\.
+*Layered Services* is an umbrella architecture for common implementations of systems of [*Services*]({{< relref "../basic-metapatterns/services.md" >}})\. It does not introduce any special features as the layers are completely encapsulated by the service which they belong to\. Still, as the services may communicate at different layers, there are a couple of things to learn by exploring the subject matter\.
 
 ### Performance
 
@@ -34,7 +34,7 @@ primary_image = "/diagrams/Main/Layered%20Services.png"
 
 Remarkable features of *Layered Services* include:
 
-- Independent scaling of layers of the services\. It is common to have multiple [instances]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}}) \(with the number varying from service to service and changing dynamically under load\) of the layers that contain business logic while the corresponding data layers \(databases\) are limited to a single instance\.
+- Independent scaling of the layers inside the services\. It is common to have multiple [instances]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}}) \(with the number varying from service to service and changing dynamically under load\) of the layers that contain business logic while the corresponding [data layers]({{< relref "../basic-metapatterns/layers.md#data-persistence" >}}) \(databases\) are limited to a single instance\.
 
 
 <figure>
@@ -47,7 +47,7 @@ Remarkable features of *Layered Services* include:
 </a>
 </figure>
 
-- The option to establish additional communication channels between lower layers in order to drive [*CQRS*]({{< relref "#command-query-responsibility-segregation-cqrs" >}}) databases \([read/write replicas]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#read-only-replicas" >}}) of the same database\) or [*CQRS Views*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) \(cached subsets of data from other services\) \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\]\.
+- The option to establish additional communication channels between the lower layers in order to drive [*CQRS*]({{< relref "#command-query-responsibility-segregation-cqrs" >}}) databases \([read/write replicas]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#read-only-replicas" >}}) of the same database\) or [*CQRS Views*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) \(cached subsets of data from other services\) \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\]\.
 
 
 <figure>
@@ -81,9 +81,9 @@ Remarkable features of *Layered Services* include:
 </a>
 </figure>
 
-Probably the most common backend architecture has [three layers]({{< relref "../basic-metapatterns/layers.md#domain-driven-design-ddd-layers" >}}): [*application*]({{< relref "../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}), [*domain*]({{< relref "../basic-metapatterns/layers.md#domain-business-rules-or-model" >}}), and *infrastructure* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\. The application layer [*orchestrates*]({{< relref "../foundations-of-software-architecture/arranging-communication/orchestration.md" >}}) the domain layer\.
+Likely the most common backend architecture has [three layers]({{< relref "../basic-metapatterns/layers.md#domain-driven-design-ddd-layers" >}}): [*application*]({{< relref "../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}), [*domain*]({{< relref "../basic-metapatterns/layers.md#domain-business-rules-or-model" >}}), and *infrastructure* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\. The application layer [*orchestrates*]({{< relref "../foundations-of-software-architecture/arranging-communication/orchestration.md" >}}) the domain layer\.
 
-If such an architecture is divided into [services]({{< relref "../basic-metapatterns/services.md" >}}), each of them receives a part of every layer, including application, which means that now there are as many *Orchestrators* as services\. Each *Orchestrator* implements the API of its service by integrating \(calling or messaging into\) the domain layer of its service and APIs of other services, which makes all the *Orchestrators* interdependent:
+If such an architecture is divided into [services]({{< relref "../basic-metapatterns/services.md" >}}), each of them receives a part of every layer, including application, which means that now there are as many *Orchestrators* as services\. Each *Orchestrator* implements the API of its service by integrating \(calling or messaging into\) the domain layer of its service and the APIs of other services, which makes all the *Orchestrators* interdependent:
 
 ### Dependencies
 
@@ -99,7 +99,7 @@ The upper \([*application*]({{< relref "../basic-metapatterns/layers.md#applicat
 </a>
 </figure>
 
-The good thing is that the majority of the code belongs to the domain layer which depends only on its databases\. The bad thing is that changes in the application of one service may affect the application layers of all of the other services\.
+The good thing is that the majority of the code belongs to the domain layer which depends only on its service’s database\. The bad thing is that changes in the application of one service may affect the application layers of all of the other services\.
 
 ### Relations
 
@@ -131,7 +131,7 @@ The good thing is that the majority of the code belongs to the domain layer whic
 
 or by building derived datasets:
 
-- A [*CQRS View*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) inside a service aggregates any events from other services which its owner is interested in\.
+- A [*CQRS View*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) inside a service aggregates any events from other services which its host is interested in\.
 - A dedicated [*Query Service*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#query-service-front-controller-data-warehouse-data-lake-aggregate-data-product-quantum-dpq-of-data-mesh" >}}) captures the whole system’s state by subscribing to events from all the services\.
 
 
@@ -145,9 +145,9 @@ or by building derived datasets:
 </a>
 </figure>
 
-If the services become too large:
+If a service becomes too large:
 
-- The middle layer can be split into [*Sandwiches*]({{< relref "../extension-metapatterns/sandwich.md" >}}) or [*Cells*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}})\.
+- Its middle layer can be split, resulting in a [*Sandwich*]({{< relref "../extension-metapatterns/sandwich.md" >}}) or [*Cell*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}})\.
 
 
 <figure>
@@ -172,7 +172,7 @@ If the services become too large:
 </a>
 </figure>
 
-If there is no [*orchestration*]({{< relref "../foundations-of-software-architecture/arranging-communication/orchestration.md" >}}), there is no role for the [*application* layer]({{< relref "../basic-metapatterns/layers.md#application-use-cases-or-integration" >}})\. [*Choreographed*]({{< relref "../foundations-of-software-architecture/arranging-communication/choreography.md" >}}) systems are made up of services that implement individual steps of request processing\. The sequence of actions \(*integration logic*\) which three\-layered systems put in the [*Orchestrators*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) now moves to the graph of *event channels* between the services\. This means that with choreography the high\-level part of the business logic \(use cases\) exists outside of the code of the constituent services\.
+If there is no [*orchestration*]({{< relref "../foundations-of-software-architecture/arranging-communication/orchestration.md" >}}), there is no role for the [*application* layer]({{< relref "../basic-metapatterns/layers.md#application-use-cases-or-integration" >}})\. [*Choreographed*]({{< relref "../foundations-of-software-architecture/arranging-communication/choreography.md" >}}) systems are made up of services that implement individual steps of request processing\. The sequence of actions \(*integration logic*\) which three\-layered systems put in the [*Orchestrators*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) now moves to the graph of *event channels* between the services\. This means that with choreography the high\-level part of the business logic \(use cases\) exists outside of the code for the system’s constituent services\.
 
 ### Dependencies
 
@@ -204,7 +204,7 @@ If *Choreographed Layered Services* become coupled:
 </a>
 </figure>
 
-[*CQRS Views*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) or [*Query Services*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#query-service-front-controller-data-warehouse-data-lake-aggregate-data-product-quantum-dpq-of-data-mesh" >}}) are also an option:
+[*CQRS Views*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) or a [*Query Service*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#query-service-front-controller-data-warehouse-data-lake-aggregate-data-product-quantum-dpq-of-data-mesh" >}}) are also an option:
 
 <figure>
 <a href="/diagrams/Evolutions/3/Two-Layered%20Services%20-%202.png">
@@ -243,7 +243,7 @@ An overgrown service can be:
 </a>
 </figure>
 
-*Command Query Responsibility Segregation* \(*CQRS*\) \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}}), [LDDD]({{< relref "../appendices/books-referenced.md#lddd" >}})\] is, essentially, the division of a [layered]({{< relref "../basic-metapatterns/layers.md" >}}) application or a service into two \(rarely more\) [services]({{< relref "../basic-metapatterns/services.md" >}}), one of which is responsible for write access \(handling *commands*\) to the domain data while the other\(s\) deal with read access \(*queries*\), thus [creating]({{< relref "../analytics/comparison-of-architectural-patterns/pipelines-in-architectural-patterns.md" >}}) a data [*pipeline*]({{< relref "../basic-metapatterns/pipeline.md" >}}) \(see the diagram below\)\. Such an architecture makes sense when the write and read operations don’t rely on a common vision \(*model*\) of the domain, for example, writes are individual changes \([*OLTP*](https://en.wikipedia.org/wiki/Online_transaction_processing)\) that require cross\-checks and validation of input while reads show aggregated data \([*OLAP*](https://en.wikipedia.org/wiki/Online_analytical_processing)\) and may take long time to complete \(meaning that [*forces*]({{< relref "../foundations-of-software-architecture/forces--asynchronicity--and-distribution.md" >}}) for the read and write paths differ\)\. If there is nothing to share in the code, why not separate the implementations?
+*Command Query Responsibility Segregation* \(*CQRS*\) \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}}), [LDDD]({{< relref "../appendices/books-referenced.md#lddd" >}})\] is, essentially, the division of a [layered]({{< relref "../basic-metapatterns/layers.md" >}}) application or a service into two \(rarely more\) [services]({{< relref "../basic-metapatterns/services.md" >}}), one of which is responsible for write access \(handling *commands*\) to the domain data while the other\(s\) deal with read access \(*queries*\), thus [creating]({{< relref "../analytics/comparison-of-architectural-patterns/pipelines-in-architectural-patterns.md" >}}) a data [*pipeline*]({{< relref "../basic-metapatterns/pipeline.md" >}}) \(see the diagram below\)\. Such an architecture makes sense when the write and read operations don’t rely on a common vision \(*model*\) of the domain, for example, writes are individual changes \([*OLTP*](https://en.wikipedia.org/wiki/Online_transaction_processing)\) that require cross\-checks and validation of input while reads show aggregated data \([*OLAP*](https://en.wikipedia.org/wiki/Online_analytical_processing)\) and may take long time to complete \(meaning that the [*forces*]({{< relref "../foundations-of-software-architecture/forces--asynchronicity--and-distribution.md" >}}) for the read and write paths differ\)\. If there is nothing to share in the code, why not separate the implementations?
 
 <figure>
 <a href="/diagrams/Variants/3/CQRS%20-%20pipeline%20view.png">
@@ -255,9 +255,9 @@ An overgrown service can be:
 </a>
 </figure>
 
-This separation brings in the pros and cons of [*Services*]({{< relref "../basic-metapatterns/services.md" >}}): commands and queries may differ in technologies \(including database schemas or even types\), forces, and teams at the expense of [consistency](https://en.wikipedia.org/wiki/Eventual_consistency) \(database replication delay\) and increasing the system’s complexity\. In addition, for read\-heavy applications the read database\(s\) is easy to scale\.
+This separation brings in the pros and cons of [*Services*]({{< relref "../basic-metapatterns/services.md" >}}): commands and queries may differ in technologies \(including schemas or even kinds of the databases\) and forces, and even be developed by separate teams, at the expense of [consistency](https://en.wikipedia.org/wiki/Eventual_consistency) \(database replication delay\) and increasing the system’s complexity\. In addition, for read\-heavy applications the read database\(s\) is easy to scale\.
 
-*CQRS* has several variations:
+*CQRS* has the following variations:
 
 - The database may be shared, commands and queries may use dedicated databases, or the read service may maintain a [*Memory Image*](https://martinfowler.com/bliki/MemoryImage.html) / [*Materialized View*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#memory-image-materialized-view" >}}) fed by events from the write service \(as in other kinds of *Layered Services*\)\.
 - Data [replication]({{< relref "../basic-metapatterns/shards.md#persistent-copy-replica" >}}) may be implemented as a [*pipeline*]({{< relref "../basic-metapatterns/pipeline.md" >}}) between the databases \(based on nightly snapshots or [log\-based replication](https://www.dremio.com/wiki/log-based-replication/)\) or a [direct event feed](https://martinfowler.com/bliki/EagerReadDerivation.html) from the OLTP code to the OLAP database\.
@@ -273,13 +273,13 @@ This separation brings in the pros and cons of [*Services*]({{< relref "../basic
 </a>
 </figure>
 
-It is noteworthy that while ordinary *Layered Services* usually communicate through their upper\-level components that drive use cases, a *CQRS* system is held together by spreading data changes through its lowest layer\.
+It is noteworthy that while ordinary *Layered Services* usually communicate through their upper\-level components that drive the use cases, a *CQRS* system is held together by spreading data changes through its lowest layer\.
 
 Examples: Martin Fowler has a [short article](https://martinfowler.com/bliki/CQRS.html) and Microsoft a [longer one](https://learn.microsoft.com/en-us/azure/architecture/patterns/cqrs)\.
 
 ### Dependencies
 
-Each backend depends on its database \(its technology and schema\)\. The OLTP to OLAP data replication requires an additional dependency that corresponds to the way the replication is implemented:
+Each backend depends on its database \(its technology and schema\)\. The OLTP to OLAP data replication requires an additional dependency that comes from the way the replication is implemented:
 
 <figure>
 <a href="/diagrams/Dependencies/CQRS.png">
@@ -296,7 +296,7 @@ Each backend depends on its database \(its technology and schema\)\. The OLTP to
 *CQRS*:
 
 - Implements [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) \(a whole *system* or a single [*service*]({{< relref "../basic-metapatterns/services.md" >}})\)\.
-- Is derived from [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}) and [*Pipeline*]({{< relref "../basic-metapatterns/pipeline.md" >}})\.
+- Is derived from both [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}) and [*Pipeline*]({{< relref "../basic-metapatterns/pipeline.md" >}})\.
 - Is a development of [*Polyglot Persistence*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md" >}})\.
 
 
@@ -325,4 +325,4 @@ Each backend depends on its database \(its technology and schema\)\. The OLTP to
 
 - *Three\-Layered Services* where each service [*orchestrates*]({{< relref "../foundations-of-software-architecture/arranging-communication/orchestration.md" >}}) other services\.
 - *Two\-Layered Services* that form a [*Pipeline*]({{< relref "../basic-metapatterns/pipeline.md" >}})\.
-- *CQRS* that separates read and write request processing paths\.
+- *CQRS* that separates the read and write request processing paths\.

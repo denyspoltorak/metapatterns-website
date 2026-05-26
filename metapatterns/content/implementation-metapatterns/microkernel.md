@@ -22,32 +22,32 @@ primary_image = "/diagrams/Main/Microkernel.png"
 
 *Communism\.* Share resources among consumers\.
 
-<ins>Known as:</ins> Microkernel \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}}) but [not]({{< relref "../analytics/ambiguous-patterns.md#microkernel" >}}) [SAP]({{< relref "../appendices/books-referenced.md#sap" >}}) and [FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\]\.
+<ins>Known as:</ins> Microkernel \(Architecture\) \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}}), [POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}}) but [not]({{< relref "../analytics/ambiguous-patterns.md#microkernel" >}}) [SAP]({{< relref "../appendices/books-referenced.md#sap" >}}) and [FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\]\.
 
 <ins>Structure:</ins> A layer of [*Orchestrators*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) over a [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) over a layer of [*Services*]({{< relref "../basic-metapatterns/services.md" >}})\.
 
-<ins>Type:</ins> System topology, Implementation\.
+<ins>Type:</ins> System topology, implementation\.
 
 | *Benefits* | *Drawbacks* |
 | --- | --- |
 | The system’s complexity is evenly distributed among the components | The API and SPIs are very hard to change |
-| Polymorphism of the resource providers | Performance is suboptimal |
+| The resource providers are easy to replace | Performance is suboptimal |
 | The components can have independent qualities | Latency is often unpredictable |
 | A resource provider can be implemented and tested in isolation |  |
 | Each application is sandboxed by the microkernel |  |
 | The system is platform\-independent |  |
 
-<ins>References:</ins> Microkernel pattern in \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}})\]\.
+<ins>References:</ins> the Microkernel pattern in \[[POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}})\]\.
 
-While vanilla [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) and [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) keep the business logic in the monolithic *core* component, *Microkernel* treats the core as a thin [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) \(called *microkernel*\) that connects user\-facing applications \(*external services*\) to resource providers \(*internal services*\)\. The *resource* in question can be anything ranging from CPU time or RAM to business functions\. The external services communicate with the microkernel through its *API* while the internal services implement the microkernel's *service provider interfaces* \(*SPIs*\) \(usually there is a kind of internal service and an SPI per resource type\)\.
+While vanilla [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) and [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) keep the business logic in their monolithic *core* components, *Microkernel* treats the core as a thin [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) \(called *microkernel*\) that connects user\-facing applications \(*external services*\) to resource providers \(*internal services*\)\. The *resource* in question can be anything ranging from CPU time or RAM to business functions\. The external services communicate with the microkernel through its *API* while the internal services implement the microkernel's *service provider interfaces* \(*SPIs*\) \(usually there is one kind of internal service and an SPI per resource type\)\.
 
 On one hand, the pattern is very specific and feels esoteric\. On the other – it is indispensable in many domains, with many more real\-life occurrences than would be expected\. *Microkernel* finds its place where there are a variety of applications that need to use multiple shared resources, with each resource being independent of others and requiring complex management\.
 
 ### Performance
 
-The *microkernel*, being an extra layer of indirection, degrades performance\. The actual extent varies from a few percent for *OSes* and *virtualizers* to an order of magnitude for *scripts*\. A more grievous aspect of performance is that latency becomes unpredictable as soon as the system runs short of one of the shared resources: memory, disk space, CPU time, or even storage for deleted objects\. That is why [real\-time systems]({{< relref "../foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}}) rely on minimalistic [real\-time OS](https://en.wikipedia.org/wiki/Real-time_operating_system)es or even run on bare metal\.
+The *microkernel*, being an extra layer of indirection, degrades performance\. The actual extent varies from a few percent for *OSes* and *virtualizers* to an order of magnitude for *scripts*\. There is also a more grievous aspect of performance degradation, namely that latency becomes unpredictable as soon as the system runs short of one of the shared resources: memory, disk space, CPU time, or even storage for deleted objects\. That is why [real\-time systems]({{< relref "../foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}}) rely on extremely minimalistic [real\-time OS](https://en.wikipedia.org/wiki/Real-time_operating_system)es or even run on bare metal\.
 
-It is common to see system components communicate directly via shared memory or sockets bypassing the *microkernel* to alleviate the performance penalty it introduces\.
+It is common to see system components communicate directly via shared memory or sockets bypassing the *microkernel* to alleviate the performance penalty which it introduces\.
 
 ### Dependencies
 
@@ -67,14 +67,14 @@ The *applications* depend on the *API* of the *microkernel* while the *providers
 
 *Microkernel* is <ins>applicable</ins> in:
 
-- *System programming\.* You manage system resources and services which will be used by untrusted client applications\. Hide the real resources behind a trusted proxy layer\. Be ready to change the hardware platform without affecting existing client code\.
-- *Frameworks that integrate several subdomains\.* The microkernel component coordinates multiple specialized libraries\. Its API is a [*Facade*](https://refactoring.guru/design-patterns/facade) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] for the managed functionality\.
+- *Systems programming\.* You manage system resources and services which will be used by untrusted client applications\. Hide the real resources behind a trusted proxy layer\. Be ready to change the hardware platform without affecting the existing client code\.
+- *Frameworks that integrate several subdomains\.* The microkernel component coordinates multiple specialized libraries\. Its API is a [*Facade*](https://refactoring.guru/design-patterns/facade) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] for the functionality which it organizes\.
 - *Scripting or* [*DSL*](https://en.wikipedia.org/wiki/Domain-specific_language)*s\.* The microkernel is an [*Interpreter*]({{< relref "#interpreter-script-domain-specific-language-dsl" >}}) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] which lets your clients’ code manage the underlying system\.
 
 
 *Microkernel* <ins>does not fit</ins>:
 
-- *Coupled domains\.* Any degree of coupling between the resource providers complicates the microkernel and its SPIs and is likely to degrade performance which, however, may be salvaged by introducing direct communication channels between the providers\.
+- *Coupled domains\.* Any degree of coupling between the resource providers complicates the microkernel and its SPIs, and is likely to degrade performance, which, however, may be salvaged by introducing direct communication channels between the providers\.
 
 
 ### Relations
@@ -95,7 +95,7 @@ The *applications* depend on the *API* of the *microkernel* while the *providers
 - Is related to [*Backends for Frontends*]({{< relref "../fragmented-metapatterns/backends-for-frontends--bff-.md" >}}), which is a layer of [*Orchestrators*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) over a layer of [*Services*]({{< relref "../basic-metapatterns/services.md" >}}); *Microkernel* adds a [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) in between\.
 - Is a kind of 2\-layered [*SOA*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#enterprise-soa" >}}) with an [*ESB*]({{< relref "../extension-metapatterns/orchestrator.md#enterprise-service-bus-esb" >}})\.
 - The *microkernel* layer serves as \(implements\) a [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) for the upper \(*external*\) [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) and often makes an [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) for the lower \(*internal*\) *Services*\.
-- May be implemented by [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}})\.
+- May be implemented by a [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}})\.
 
 
 ## Examples
@@ -165,7 +165,7 @@ In a *Software Framework* or *Pluggable Component Framework* \[[DDD]({{< relref 
 </a>
 </figure>
 
-User\-provided *scripts* are run by an *Interpreter* \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] which also allows them to access a set of installed libraries\. The *Interpreter* is a microkernel, and the syntax of the script or [*DSL*](https://en.wikipedia.org/wiki/Domain-specific_language) it interprets is the microkernel’s API\.
+User\-provided *scripts* are run by an *Interpreter* \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] which also allows them to access a set of installed libraries\. The *Interpreter* is a microkernel, and the syntax of the script or [*DSL*](https://en.wikipedia.org/wiki/Domain-specific_language) which it interprets is the microkernel’s API\.
 
 ### Configurator, Configuration File
 
@@ -179,7 +179,7 @@ User\-provided *scripts* are run by an *Interpreter* \[[GoF]({{< relref "../appe
 </a>
 </figure>
 
-*Configuration files* may be regarded as short\-lived *scripts* that configure the underlying modules at the start of the system\. The parser of the configuration file is a transient *microkernel*\.
+*Configuration files* may be regarded as short\-lived [*scripts*]({{< relref "#interpreter-script-domain-specific-language-dsl" >}}) that configure the underlying modules at the start of the system\. The parser of the configuration file is a transient *microkernel*\.
 
 ### [Saga]({{< relref "../extension-metapatterns/orchestrator.md#orchestrated-saga-saga-orchestrator-saga-execution-component-transaction-script-coordinator" >}}) Engine
 
@@ -193,7 +193,7 @@ User\-provided *scripts* are run by an *Interpreter* \[[GoF]({{< relref "../appe
 </a>
 </figure>
 
-A [*Saga*]({{< relref "../extension-metapatterns/orchestrator.md#orchestrated-saga-saga-orchestrator-saga-execution-component-transaction-script-coordinator" >}}) \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] orchestrates distributed transactions\. It may be written in a *DSL* which requires a compiler or interpreter, which is a *microkernel*, to execute\.
+A [*Saga*]({{< relref "../extension-metapatterns/orchestrator.md#orchestrated-saga-saga-orchestrator-saga-execution-component-transaction-script-coordinator" >}}) \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] orchestrates distributed transactions\. It may be written in a [*DSL*](https://en.wikipedia.org/wiki/Domain-specific_language) which requires a compiler or [interpreter]({{< relref "#interpreter-script-domain-specific-language-dsl" >}}), which is a *microkernel*, to execute\.
 
 ### AUTOSAR Classic Platform
 
@@ -207,7 +207,7 @@ A [*Saga*]({{< relref "../extension-metapatterns/orchestrator.md#orchestrated-sa
 </a>
 </figure>
 
-The [notorious](https://www.reddit.com/r/embedded/comments/leq366/comment/gmiq6d0/) [automotive standard](https://www.autosar.org/fileadmin/standards/R20-11/CP/AUTOSAR_EXP_VFB.pdf), though promoted as [*SOA*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#misapplied-automotive-soa" >}}), is structured as a distributed / virtualized *Microkernel*\. The application layer comprises a network of *software components* spread out over hundreds of chips which are, for some secret reason, called *electronic control units* \(*ECU*s\)\. The communication paths between the software components and much of the code are static \(auto\-generated at compilation time\)\. A software component may access hardware of its ECU via standard interfaces\.
+The [notorious](https://www.reddit.com/r/embedded/comments/leq366/comment/gmiq6d0/) [automotive standard](https://www.autosar.org/fileadmin/standards/R20-11/CP/AUTOSAR_EXP_VFB.pdf), though inspired by [*SOA*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#misapplied-automotive-soa" >}}), is structured as a distributed / virtualized *Microkernel*\. The application layer comprises a network of *software components* spread out over hundreds of chips which are, for some secret reason, called *electronic control units* \(*ECU*s\)\. Both communication paths between the software components and much of the system’s code are static \(auto\-generated at compilation time\)\. A software component may access hardware of its ECU via standard interfaces\.
 
 The *microkernel* shows up as *Virtual Functional Bus* \(*VFB*\) which, as a *distributed* [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}), provides communication between the *applications* by virtualizing multiple *Runtime Environments* \(*RTEs*\) – the local [system interfaces](https://www.autosar.org/fileadmin/standards/R22-11/CP/AUTOSAR_EXP_LayeredSoftwareArchitecture.pdf)\.
 

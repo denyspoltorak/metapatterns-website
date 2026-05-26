@@ -10,7 +10,7 @@ bookCollapseSection = true
 
 # Implementation metapatterns {anchor=false}
 
-A few system topologies relate to the implementation of components:
+A few architectures focus on implementation of components:
 
 ### [Plugins]({{< relref "../implementation-metapatterns/plugins.md" >}})
 
@@ -24,7 +24,7 @@ A few system topologies relate to the implementation of components:
 </a>
 </figure>
 
-The [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) pattern is about separating a system’s main logic from the customizable details of its behavior\. That allows for the same codebase to be used for multiple flavors or customers\.
+The [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) family of patterns is about separating a system’s main logic from the customizable details of its behavior\. That allows for the same codebase to be used for multiple flavors or customers\.
 
 *<ins>Includes</ins>*: Plug\-In Architecture, Addons, Strategy, Hooks\.
 
@@ -42,7 +42,7 @@ The [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) patt
 
 [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) is a specialization of [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) where every external dependency is isolated behind an [*Adapter*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}), making it easy to update or replace third\-party components\.
 
-*<ins>Includes</ins>*: Ports and Adapters, Onion Architecture, Clean Architecture; Model\-View\-Presenter \(MVP\), Model\-View\-ViewModel \(MVVM\), Model\-View\-Controller \(MVC\), Action\-Domain\-Responder \(ADR\), Pedestal, and Cell \(Cluster or Domain\)\.
+*<ins>Includes</ins>*: Ports and Adapters, Onion Architecture, and Clean Architecture; Model\-View\-Presenter \(MVP\), Model\-View\-ViewModel \(MVVM\), Model\-View\-Controller \(MVC\), and Action\-Domain\-Responder \(ADR\); Pedestal and Cell \(Cluster or Domain\)\.
 
 ### [Microkernel]({{< relref "../implementation-metapatterns/microkernel.md" >}})
 
@@ -56,9 +56,9 @@ The [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) patt
 </a>
 </figure>
 
-[*Microkernel*]({{< relref "../implementation-metapatterns/microkernel.md" >}}) is another derivation of [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}), with a rudimentary *core* component which mediates between resource *consumers* \(*applications*\) and resource *providers*\. The microkernel is a [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) to the *applications* and an [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) to the *providers*\.
+[*Microkernel*]({{< relref "../implementation-metapatterns/microkernel.md" >}}) is another derivation of [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}), featuring a rudimentary *core* component which mediates between resource *consumers* \(*applications*\) and resource *providers*\. The *microkernel* is a [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) to the *applications* and an [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) to the *providers*\.
 
-*<ins>Includes</ins>*: operating system, software framework, virtualizer, distributed runtime, interpreter, configuration file, Saga Engine, AUTOSAR Classic Platform\.
+*<ins>Includes</ins>*: operating system, software framework, virtualizer, distributed runtime, interpreter, configuration file, Saga Engine, and AUTOSAR Classic Platform\.
 
 ### [Mesh]({{< relref "../implementation-metapatterns/mesh.md" >}})
 
@@ -74,4 +74,4 @@ The [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) patt
 
 A [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}}) consists of intercommunicating shards, each of which may host an application\. The shards coalesce into a fault\-tolerant distributed [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}})\.
 
-*<ins>Includes</ins>*: grid; peer\-to\-peer networks, Leaf\-Spine Architecture, Actors, Service Mesh, Space\-Based Architecture\.
+*<ins>Includes</ins>*: peer\-to\-peer networks, Leaf\-Spine Architecture, Actors, Service Mesh, and Space\-Based Architecture\.
