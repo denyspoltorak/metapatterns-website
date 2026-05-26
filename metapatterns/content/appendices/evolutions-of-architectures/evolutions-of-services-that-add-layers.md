@@ -9,13 +9,13 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 # Evolutions of Services that add layers {anchor=false}
 
-The most common modifications to a [system of *Services*]({{< relref "../../basic-metapatterns/services.md" >}}) involve supplementary system\-wide *layers* which compensate for the inability of the *Services* to share anything among themselves:
+The most common modifications to a [system of *Services*]({{< relref "../../basic-metapatterns/services.md" >}}) involve supplementary system\-wide *layers* which compensate for the inability of the *services* to share anything among themselves:
 
-- A [*Middleware*]({{< relref "../../extension-metapatterns/middleware.md" >}}) knows of all the deployed service [instances]({{< relref "../../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}})\. It mediates communication between them and may manage their scaling and failure recovery\.
-- [*Sidecars*]({{< relref "../../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) of a [*Service Mesh*]({{< relref "../../implementation-metapatterns/mesh.md#service-mesh" >}}) make a virtual layer of [shared libraries]({{< relref "../../analytics/comparison-of-architectural-patterns/sharing-functionality-or-data-among-services.md" >}}) for the [*Microservices*]({{< relref "../../basic-metapatterns/services.md#microservices" >}}) it hosts\.
+- A [*Middleware*]({{< relref "../../extension-metapatterns/middleware.md" >}}) knows of all the deployed service [instances]({{< relref "../../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}})\. It mediates [communication]({{< relref "../../basic-metapatterns/layers.md#communication-middleware" >}}) between them and may manage their scaling and failure recovery\.
+- The [*Sidecars*]({{< relref "../../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) of a [*Service Mesh*]({{< relref "../../implementation-metapatterns/mesh.md#service-mesh" >}}) make a virtual layer of [shared libraries]({{< relref "../../analytics/comparison-of-architectural-patterns/sharing-functionality-or-data-among-services.md" >}}) for the [*Microservices*]({{< relref "../../basic-metapatterns/services.md#microservices" >}}) it hosts\.
 - A [*Shared Database*]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) simplifies the initial phases of development and provides data consistency and [interservice communication]({{< relref "../../foundations-of-software-architecture/arranging-communication/shared-data.md" >}})\.
 - [*Proxies*]({{< relref "../../extension-metapatterns/proxy.md" >}}) stand between the system and its clients and take care of shared aspects that otherwise would need to be implemented by every service\.
-- An [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) is the single place for the high\-level logic of every use case\.
+- An [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) is the single place for the high\-level logic of every [use case]({{< relref "../../basic-metapatterns/layers.md#application-use-cases-or-integration" >}})\.
 - Transforming *Services* into a [*Sandwich*]({{< relref "../../extension-metapatterns/sandwich.md" >}}) greatly simplifies their integration\.
 
 
@@ -48,7 +48,7 @@ Distributed systems may fail in a zillion ways\. You want to ruminate neither on
 <ins>Cons</ins>: 
 
 - There may be a performance penalty which becomes worse for uncommon patterns of communication\.
-- The *Middleware* may be a single point of failure\.
+- The *Middleware* may become a single point of failure\.
 
 
 <ins>Further steps</ins>:
@@ -74,7 +74,7 @@ Distributed systems may fail in a zillion ways\. You want to ruminate neither on
 
 <ins>Prerequisite</ins>: service instances are mostly [stateless]({{< relref "../../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}})\.
 
-The [*Microservices*]({{< relref "../../basic-metapatterns/services.md#microservices" >}}) architecture boasts dynamic scaling under load thanks to its *Mesh*\-based *Middleware*\. It also allows for the services to share libraries in *Sidecars* – additional containers co\-located with each service instance – to avoid duplication of generic code among the services\.
+The [*Microservices*]({{< relref "../../basic-metapatterns/services.md#microservices" >}}) architecture boasts dynamic scaling under load thanks to its *Mesh*\-based *Middleware*\. It also allows for the services to share libraries via their *Sidecars* – additional containers co\-located with each service instance – to avoid duplication of [generic code]({{< relref "../../basic-metapatterns/layers.md#generic-code-libraries-and-utilities" >}}) among the services\.
 
 <ins>Pros</ins>: 
 
@@ -125,8 +125,8 @@ You don’t really need every service to have a private database\. A shared one 
 
 <ins>Further steps</ins>:
 
-- [*Space\-Based Architecture*]({{< relref "../../implementation-metapatterns/mesh.md#space-based-architecture" >}}) scales the data layer but it is a simple key\-value store\.
-- [*Polyglot Persistence*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md" >}}) is about having multiple specialized databases\.
+- [*Space\-Based Architecture*]({{< relref "../../implementation-metapatterns/mesh.md#space-based-architecture" >}}) scales the [data layer]({{< relref "../../basic-metapatterns/layers.md#data-persistence" >}}) but it is a simple key\-value store\.
+- [*Polyglot Persistence*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md" >}}) is about having multiple specialized data stores\.
 
 
 ## Add a Proxy
@@ -143,22 +143,22 @@ You don’t really need every service to have a private database\. A shared one 
 
 <ins>Patterns</ins>: [Proxy]({{< relref "../../extension-metapatterns/proxy.md" >}}), [Services]({{< relref "../../basic-metapatterns/services.md" >}})\.
 
-<ins>Goal</ins>: use a common infrastructure component on behalf of your entire system\.
+<ins>Goal</ins>: use a standard infrastructure component on behalf of your entire system\.
 
 <ins>Prerequisite</ins>: the system serves its clients in a uniform way\.
 
-Putting a generic component between the system and its clients helps the programmers concentrate on business logic rather than protocols, infrastructure or even security\.
+Putting a generic component between the system and its clients helps the programmers concentrate on business logic rather than protocols, infrastructure, or even security\.
 
 <ins>Pros</ins>: 
 
 - You get a choice of generic functionality without investing development time\.
-- It is an additional layer that isolates your system from both clients and attackers\.
+- It is an additional layer that isolates your system from both its clients and attackers\.
 
 
 <ins>Cons</ins>: 
 
 - There is a latency penalty caused by the extra network hop\.
-- Each *Proxy* may be a single point of failure or at least needs some admin oversight\.
+- Each *Proxy* may be a single point of failure, or at least needs some admin oversight\.
 
 
 <ins>Further steps</ins>:
@@ -185,15 +185,15 @@ Putting a generic component between the system and its clients helps the program
 
 <ins>Prerequisite</ins>: the use cases comprise sequences of high\-level steps \(which is very likely to be true for a system of [*subdomain services*]({{< relref "../../basic-metapatterns/services.md#whole-subdomain-sub-domain-services-macroservices" >}})\)\.
 
-When a use case jumps over several services in a dance of [*choreography*]({{< relref "../../foundations-of-software-architecture/arranging-communication/choreography.md" >}}), there is no easy way to understand it as there is no single place to see it in the code\. It may be even worse with [*Pipelined*]({{< relref "../../basic-metapatterns/pipeline.md" >}}) systems where use cases are embodied in the structure of event channels between the components\.
+When a use case jumps over several services in a dance of [*choreography*]({{< relref "../../foundations-of-software-architecture/arranging-communication/choreography.md" >}}), there is no easy way to understand it as there is no single place to see it in the code\. It may be even worse with [*Pipelined*]({{< relref "../../basic-metapatterns/pipeline.md" >}}) systems where the use cases are embodied in the structure of event channels between the components\.
 
-Extract the high\-level business logic from the choreographed services or their interconnections and put it into a dedicated component\.
+Extract the [high\-level business logic]({{< relref "../../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) from the choreographed services or their interconnections and put it into a dedicated component\.
 
 <ins>Pros</ins>: 
 
 - You are not limited in the number and complexity of use cases anymore\.
-- Global use cases become much easier to debug\.
-- You have a new team dedicated to the interaction with customers, freeing the other teams to study their parts of the domain or work on improvements\.
+- The global use cases become much easier to debug\.
+- You have a new team dedicated to the interaction with customers, freeing the other teams to study their parts of the domain or work on code improvements\.
 - Many changes in the high\-level logic can be implemented and deployed without touching the main services\.
 - The extra layer decouples the main services from the system’s clients and from each other\.
 
@@ -202,13 +202,13 @@ Extract the high\-level business logic from the choreographed services or their 
 
 - There is a performance penalty because the number of messages per use case doubles\.
 - The *Orchestrator* may become a single point of failure\.
-- Some flexibility is lost as the *Orchestrator* couples qualities of the services\.
+- Some flexibility is lost as the *Orchestrator* couples the services’ qualities\.
 
 
 <ins>Further steps</ins>:
 
 - If there are several clients that strongly vary in workflows, you can apply [*Backends for Frontends*]({{< relref "../../fragmented-metapatterns/backends-for-frontends--bff-.md" >}}) with an *Orchestrator* per client\.
-- If the *Orchestrator* grows too large, it [can be divided]({{< relref "../../extension-metapatterns/orchestrator.md#variants-by-structure-can-be-combined" >}}) into layers, services or both, the latter option resulting in a [*Top\-Down Hierarchy*]({{< relref "../../fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}})\.
+- If the *Orchestrator* grows too large, it [can be divided]({{< relref "../../extension-metapatterns/orchestrator.md#variants-by-structure-can-be-combined" >}}) into layers, services, or both; the latter option resulting in a [*Top\-Down Hierarchy*]({{< relref "../../fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}})\.
 - The *Orchestrator* can be [scaled]({{< relref "../../extension-metapatterns/orchestrator.md#scaled" >}}) and can have its own database\.
 
 
@@ -226,9 +226,9 @@ Extract the high\-level business logic from the choreographed services or their 
 
 <ins>Patterns</ins>: [Sandwich]({{< relref "../../extension-metapatterns/sandwich.md" >}}) \([Layers]({{< relref "../../basic-metapatterns/layers.md" >}}), [Services]({{< relref "../../basic-metapatterns/services.md" >}}), [Shared Database]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) \([Shared Repository]({{< relref "../../extension-metapatterns/shared-repository.md" >}})\), [Orchestrator]({{< relref "../../extension-metapatterns/orchestrator.md" >}})\)\.
 
-<ins>Goal</ins>: simplify integration of tightly coupled services\.
+<ins>Goal</ins>: simplify the integration of tightly coupled services\.
 
-<ins>Prerequisite</ins>: the services have compatible technologies in their use cases and data layers\.
+<ins>Prerequisite</ins>: the services use compatible technologies in their application and data layers\.
 
 Tightly coupled services waste a lot of programming effort and performance on boilerplate communication and data transfer\. At the same time, their [*domain* logic]({{< relref "../../basic-metapatterns/layers.md#domain-business-rules-or-model" >}}) remains fairly independent, making full merge into a [*Monolith*]({{< relref "../../basic-metapatterns/monolith.md" >}}) impractical\.
 
@@ -239,14 +239,14 @@ Try merging only the [*use cases*]({{< relref "../../basic-metapatterns/layers.m
 - *Use cases* become much easier to debug\.
 - No boilerplate code for communication between the services\.
 - No data duplication or data transfer among the services\.
-- You have a new team dedicated to use cases and interaction with customers\.
+- You have a new team dedicated to use cases and interaction with the customers\.
 - Many changes in *use cases* can be implemented and deployed without touching the *domain* logic\.
 
 
 <ins>Cons</ins>: 
 
 - The services are coupled in their properties\.
-- There are single points of failure that leave the system totally inoperational\.
+- There are now single points of failure that leave the system totally inoperational\.
 - The *Shared Database* limits the system’s performance\.
 
 

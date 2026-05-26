@@ -13,7 +13,7 @@ primary_image = "/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Furt
 The last group of evolutions to consider is about making the system more adaptable\. We have [already discussed]({{< relref "../../appendices/evolutions-of-architectures/evolutions-of-a-monolith-that-rely-on-plugins.md" >}}) the following evolutions for [*Monolith*]({{< relref "../../basic-metapatterns/monolith.md" >}}):
 
 - The behavior of the system may be modified through [*Plugins*]({{< relref "../../implementation-metapatterns/plugins.md" >}})\.
-- [*Hexagonal Architecture*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md" >}}) protects the business logic from dependencies on libraries and databases\.
+- [*Hexagonal Architecture*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md" >}}) protects the business logic from dependencies on libraries and data stores\.
 - [*Scripts*]({{< relref "../../implementation-metapatterns/microkernel.md#interpreter-script-domain-specific-language-dsl" >}}) allow for customization of the system’s logic on a per client basis\.
 
 
@@ -29,7 +29,7 @@ The last group of evolutions to consider is about making the system more adaptab
 
 There is also a new evolution that modifies the upper \(orchestration\) layer:
 
-- The *orchestration layer* may be split into [*Backends for Frontends*]({{< relref "../../fragmented-metapatterns/backends-for-frontends--bff-.md" >}}) to match the needs of several kinds of clients\.
+- The [*orchestration layer*]({{< relref "../../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) may be split into [*Backends for Frontends*]({{< relref "../../fragmented-metapatterns/backends-for-frontends--bff-.md" >}}) to match the needs of several kinds of clients\.
 
 
 ## Divide the orchestration layer into Backends for Frontends
@@ -50,7 +50,7 @@ There is also a new evolution that modifies the upper \(orchestration\) layer:
 
 <ins>Prerequisite</ins>: no high\-level logic is shared between client types\.
 
-It is possible that your system has different kinds of users, e\.g\. buyers, sellers, and admins; or web and mobile applications\. It may be easier to support a separate integration module per kind of client than to keep all the unrelated code together in a single integration layer\.
+It is possible that your system has different kinds of users, e\.g\. buyers, sellers, and admins; or web and mobile applications\. It may be easier to support a separate integration module for each kind of client than to keep all the unrelated code together in a single integration layer\.
 
 <ins>Pros</ins>:
 
@@ -60,10 +60,10 @@ It is possible that your system has different kinds of users, e\.g\. buyers, sel
 
 <ins>Cons</ins>: 
 
-- There is no good way to share code between the *BFFs* \(in [naive implementation]({{< relref "../../extension-metapatterns/orchestrator.md#monolithic" >}})\)\.
+- There is no good way to share code between the *BFFs* \(in the [naive implementation]({{< relref "../../extension-metapatterns/orchestrator.md#monolithic" >}})\)\.
 - There are new components to administer\.
 
 
 <ins>Further steps</ins>:
 
-- [Evolve the *BFFs*]({{< relref "../../fragmented-metapatterns/backends-for-frontends--bff-.md#evolutions" >}}) through adding a shared *layer* or [*Sidecars*]({{< relref "../../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) for common functionality\.
+- [Evolve the *BFFs*]({{< relref "../../fragmented-metapatterns/backends-for-frontends--bff-.md#evolutions" >}}) through adding a shared *layer* or [*Sidecars*]({{< relref "../../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) for the common functionality\.

@@ -79,7 +79,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Blackboard System]({{< relref "../extension-metapatterns/sandwich.md#blackboard-system" >}})
 
-[Bottom\-Up Hierarchy]({{< relref "../fragmented-metapatterns/hierarchy.md#bottom-up-hierarchy-bus-of-buses-network-of-networks" >}})
+[Bottom\-Up Hierarchy]({{< relref "../fragmented-metapatterns/hierarchy.md#bottom-up-hierarchy-bus-of-buses-network-of-networks-hierarchical-middleware" >}})
 
 [Boundary\-Control\-Entity]({{< relref "../basic-metapatterns/layers.md#entity-control-boundary-ecb-entity-boundary-control-ebc-boundary-control-entity-bce" >}}) \(BCE\)
 
@@ -87,7 +87,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Broker Topology Event\-Driven Architecture]({{< relref "../basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}})
 
-[Bus of Buses]({{< relref "../fragmented-metapatterns/hierarchy.md#bottom-up-hierarchy-bus-of-buses-network-of-networks" >}})
+[Bus of Buses]({{< relref "../fragmented-metapatterns/hierarchy.md#bottom-up-hierarchy-bus-of-buses-network-of-networks-hierarchical-middleware" >}})
 
 [Cache]({{< relref "../extension-metapatterns/proxy.md#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}}) \(read\-through\) 
 
@@ -393,7 +393,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Nearline System]({{< relref "../basic-metapatterns/pipeline.md#stream-processing-nearline-system" >}})
 
-[Network of Networks]({{< relref "../fragmented-metapatterns/hierarchy.md#bottom-up-hierarchy-bus-of-buses-network-of-networks" >}})
+[Network of Networks]({{< relref "../fragmented-metapatterns/hierarchy.md#bottom-up-hierarchy-bus-of-buses-network-of-networks-hierarchical-middleware" >}})
 
 [N\-Tier Architecture]({{< relref "../basic-metapatterns/layers.md" >}})
 

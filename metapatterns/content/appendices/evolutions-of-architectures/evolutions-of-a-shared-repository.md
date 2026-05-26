@@ -35,7 +35,7 @@ Once a database appears, it is unlikely to go away\. I see the following evoluti
 
 <ins>Prerequisite</ins>: the data is shardable \(consists of independent records\)\.
 
-If your database is overloaded and the data which it contains describes independent entities \(users, companies, sales\) you can deploy multiple instances of the database with subsets of the data distributed among them\. You will need to deploy a *Sharding Proxy* or the services will have to find out which database *shard* to access by themselves, likely through hashing the record’s *primary key* \[[DDIA]({{< relref "../../appendices/books-referenced.md#ddia" >}})\]\. There is also a good chance that several smaller tables will have to be replicated to all the shards or moved to a [dedicated *Shared Database*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#private-and-shared-databases" >}}) \(resulting in [*Polyglot Persistence*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md" >}})\)\.
+If your database is overloaded and the data which it contains describes independent entities \(users, companies, or sales\) you can deploy multiple instances of the database with subsets of the data distributed among them\. You will need to deploy a *Sharding Proxy* or the services will have to find out which database *shard* to access by themselves, likely through hashing the record’s *primary key* \[[DDIA]({{< relref "../../appendices/books-referenced.md#ddia" >}})\] or with the help of an [*Ambassador*]({{< relref "../../extension-metapatterns/proxy.md#on-the-client-side-ambassador" >}})\. There is also a good chance that several smaller tables will have to be replicated to all the shards or moved to a [dedicated *Shared Database*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#private-and-shared-databases" >}}) \(resulting in [*Polyglot Persistence*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md" >}})\)\.
 
 Modern distributed databases support sharding out of the box, but an overgrown table may still impact the performance of the database\.
 
@@ -48,14 +48,14 @@ Modern distributed databases support sharding out of the box, but an overgrown t
 
 <ins>Cons</ins>: 
 
-- You need to manage many instances of the database\.
+- You will need to manage many instances of the database\.
 - The application or a custom script may have to synchronize shared tables among the instances\.
 - There is no way to do joins or run aggregate functions \(such as *sum* or *count*\) over multiple shards – all that logic moves to the services that use the database\.
 
 
 <ins>Further steps</ins>:
 
-- [*Replicate*]({{< relref "../../basic-metapatterns/shards.md#persistent-copy-replica" >}}) each shard to improve fault tolerance and possibly read throughput\.
+- [*Replicate*]({{< relref "../../basic-metapatterns/shards.md#persistent-copy-replica" >}}) each shard to improve fault tolerance and, possibly, read throughput\.
 - [*Polyglot Persistence*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md" >}}) or [*CQRS*]({{< relref "../../fragmented-metapatterns/layered-services.md#command-query-responsibility-segregation-cqrs" >}}) describe pre\-calculating aggregates into another analytical database \([*Reporting Database*](https://martinfowler.com/bliki/ReportingDatabase.html)\)\.
 - [*Space\-Based Architecture*]({{< relref "../../implementation-metapatterns/mesh.md#space-based-architecture" >}}) may be cheaper as it scales dynamically\. However, in its default and highly performant configuration it is prone to write collisions\.
 
@@ -74,11 +74,11 @@ Modern distributed databases support sharding out of the box, but an overgrown t
 
 <ins>Patterns</ins>: [Space\-Based Architecture]({{< relref "../../implementation-metapatterns/mesh.md#space-based-architecture" >}}) \([Mesh]({{< relref "../../implementation-metapatterns/mesh.md" >}}), [Shared Repository]({{< relref "../../extension-metapatterns/shared-repository.md" >}})\)\.
 
-<ins>Goal</ins>: scale throughput of the database dynamically\.
+<ins>Goal</ins>: dynamically scale throughput of the database\.
 
 <ins>Prerequisite</ins>: data collisions are acceptable\.
 
-*Space\-Based Architecture* \(SBA\) duplicates contents of a persistent database to a distributed in\-memory *cache* co\-located with the services managed by the *SBA*’s *Middleware*\. That makes most database access operations very fast unless one needs to avoid write collisions\. The [*Mesh Middleware*]({{< relref "../../implementation-metapatterns/mesh.md#space-based-architecture" >}}) autoscales both the services and the associated data cache under load, granting nearly perfect scalability\. However, this architecture is costly because of the amount of traffic and CPU time spent on replicating data between the *Mesh nodes*\.
+*Space\-Based Architecture* \(SBA\) duplicates the contents of a persistent database to a distributed in\-memory *cache* co\-located with the services managed by the *SBA*’s *Middleware*\. That makes most data access operations very fast unless one needs to avoid write collisions\. The [*Mesh Middleware*]({{< relref "../../implementation-metapatterns/mesh.md#space-based-architecture" >}}) autoscales both the services and the associated data cache under load, granting nearly perfect scalability\. However, this architecture is costly because of the amount of traffic and CPU time spent on replicating the data between the *Mesh nodes*\.
 
 <ins>Pros</ins>: 
 
@@ -89,7 +89,7 @@ Modern distributed databases support sharding out of the box, but an overgrown t
 
 <ins>Cons</ins>: 
 
-- Choose one: data collisions or poor performance\.
+- Choose one: data collisions or mediocre performance\.
 - Low latency is guaranteed only when the entire dataset fits in the memory of a node\.
 - High operational cost because the nodes will send each other lots of data\.
 - No support for analytical queries\.
@@ -107,9 +107,9 @@ Modern distributed databases support sharding out of the box, but an overgrown t
 </a>
 </figure>
 
-<ins>Patterns</ins>: [Services]({{< relref "../../basic-metapatterns/services.md" >}}) or [Shards]({{< relref "../../basic-metapatterns/shards.md" >}}), [Layers]({{< relref "../../basic-metapatterns/layers.md" >}})\.
+<ins>Patterns</ins>: [Services]({{< relref "../../basic-metapatterns/services.md" >}}), [Layers]({{< relref "../../basic-metapatterns/layers.md" >}})\.
 
-<ins>Goal</ins>: decouple the services or shards, remove the performance bottleneck \(*Shared Database*\)\.
+<ins>Goal</ins>: decouple the services, remove the performance bottleneck \(*Shared Database*\)\.
 
 <ins>Prerequisite</ins>: the domain data is weakly coupled\.
 
@@ -118,7 +118,7 @@ If the data clearly follows subdomains, it may be possible to subdivide it accor
 <ins>Pros</ins>: 
 
 - The services become independent in their persistence and data processing technologies\.
-- Performance of the *data layer*, which tends to limit the scalability of the system, will likely improve thanks to the use of smaller specialized databases\.
+- Performance of the [*data layer*]({{< relref "../../basic-metapatterns/layers.md#data-persistence" >}}), which tends to limit the scalability of the system, will likely improve thanks to the use of smaller specialized databases\.
 
 
 <ins>Cons</ins>: 

@@ -31,22 +31,22 @@ Other cases are better solved by extracting the logic that manipulates multiple 
 
 <ins>Patterns</ins>: [Shards]({{< relref "../../basic-metapatterns/shards.md" >}}), [Middleware]({{< relref "../../extension-metapatterns/middleware.md" >}}), [Layers]({{< relref "../../basic-metapatterns/layers.md" >}})\.
 
-<ins>Goal</ins>: simplify communication between shards, their deployment, and recovery\.
+<ins>Goal</ins>: simplify the communication between shards, their deployment, and recovery\.
 
 <ins>Prerequisite</ins>: many shards need to exchange information, some may fail\.
 
-A *Middleware* transports messages between shards, checks their health and recovers ones which have crashed\. It may manage data replication and deployment of software updates as well\.
+A *Middleware* transports messages between shards, checks their health, and recovers ones which have crashed\. It may manage data replication and deployment of software updates as well\.
 
 <ins>Pros</ins>: 
 
 - The shards become simpler because they don’t need to track each other\.
-- There are many good third\-party implementations\.
+- Many good third\-party implementations are readily available\.
 
 
 <ins>Cons</ins>: 
 
 - Performance may degrade\.
-- Components of the *Middleware* are new points of failure\.
+- The components of the *Middleware* are new points of failure\.
 
 
 ## Add a Sharding Proxy
@@ -78,7 +78,7 @@ The client application may know the address of the shard which serves it and con
 
 <ins>Cons</ins>: 
 
-- The extra network hop increases latency unless you deploy the *Sharding Proxy* as an [*Ambassador*]({{< relref "../../extension-metapatterns/proxy.md#on-the-client-side-ambassador" >}}) co\-located with every client, which brings back the issue of client software updates\.
+- The extra network hop increases latency unless you deploy the *Sharding Proxy* as an [*Ambassador*]({{< relref "../../extension-metapatterns/proxy.md#on-the-client-side-ambassador" >}}) co\-located with every client which, however, brings back the issue of client software updates\.
 - The *Sharding Proxy* is a single point of failure unless [*replicated*]({{< relref "../../basic-metapatterns/shards.md#persistent-copy-replica" >}})\.
 
 
@@ -96,24 +96,24 @@ The client application may know the address of the shard which serves it and con
 
 <ins>Patterns</ins>: [Shards]({{< relref "../../basic-metapatterns/shards.md" >}}), [Orchestrator]({{< relref "../../extension-metapatterns/orchestrator.md" >}}), [Layers]({{< relref "../../basic-metapatterns/layers.md" >}})\.
 
-<ins>Goal</ins>: isolate the shards from awareness of each other\.
+<ins>Goal</ins>: isolate the shards and eliminate their awareness of each other\.
 
-<ins>Prerequisite</ins>: the shards are coupled via their high\-level logic\.
+<ins>Prerequisite</ins>: the shards are coupled through their high\-level logic\.
 
-When a high\-level scenario uses multiple shards \([*Scatter\-Gather* and *MapReduce*]({{< relref "../../extension-metapatterns/orchestrator.md#api-composer-remote-facade-gateway-aggregation-composed-message-processor-scatter-gather-mapreduce" >}}) are the simplest examples\), the way to follow is to extract all such scenarios into a dedicated stateless module\. That makes the shards independent of each other\.
+When a high\-level scenario uses multiple shards \([*Scatter\-Gather* and *MapReduce*]({{< relref "../../extension-metapatterns/orchestrator.md#api-composer-remote-facade-gateway-aggregation-composed-message-processor-scatter-gather-mapreduce" >}}) are the simplest examples\), the way to follow is to extract all such scenarios into a dedicated stateless component\. That makes the shards independent of each other\.
 
 <ins>Pros</ins>: 
 
-- The shards don’t have to be aware of each other\.
+- The shards don’t need to be aware of each other\.
 - The high\-level logic can be written in a high\-level language by a dedicated team\.
 - The high\-level logic can be deployed independently\.
-- The main code should become much simpler\.
+- The main bulk of the code should become much simpler\.
 
 
 <ins>Cons</ins>: 
 
 - Latency will increase\.
-- The *Orchestrator* becomes a single point of failure with a good chance to corrupt your data\.
+- The *Orchestrator* becomes a single point of failure which has a good chance to corrupt your data\.
 
 
 <ins>Further steps</ins>:

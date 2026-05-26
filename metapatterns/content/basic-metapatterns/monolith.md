@@ -40,13 +40,13 @@ Let’s take a look at the simplest possible [metapattern]({{< relref "../introd
 
 <ins>References:</ins> [Big Ball of Mud](http://www.laputan.org/mud/) for a philosophical discussion, [my article](https://itnext.io/introduction-to-software-architecture-with-actors-part-2-on-handling-messages-940c62cb06dc) and \[[POSA2]({{< relref "../appendices/books-referenced.md#posa2" >}})\] for subtypes of *Monolith*, Martin Fowler’s discussion on [starting development with *Monolith*](https://martinfowler.com/bliki/MonolithFirst.html), \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] for the [definition of *monolithic hell*](https://livebook.manning.com/book/microservices-patterns/chapter-1/25) and a post describing the [first\-hand experience of it](https://news.ycombinator.com/item?id=18442941)\.
 
-We distance ourselves from the [systems architecture’s definition]({{< relref "../analytics/ambiguous-patterns.md#monolith" >}}) of *Monolith* as a single unit of deployment because our main focus lies with the internal structure of systems\. Instead, we will use the old definition of a *monolithic* application as a cohesive lump of code containing no discernible components \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}}), [POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}})\]\.
+We distance ourselves from the [systems architecture’s definition]({{< relref "../analytics/ambiguous-patterns.md#monolith" >}}) of *Monolith* as a single unit of deployment because our main focus lies with the internal structure of systems\. Instead, we will use the old definition of a *monolithic* application as a cohesive lump of code which does not contain any discernible components \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}}), [POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}})\]\.
 
-A *Monolith* is non\-modular \(not divided by interfaces\) along all the structural dimensions\. Its thorough cohesiveness is both its blessing \(single\-step debugging, system\-wide optimizations\) and its curse \(messy code, no scalability of development and deployment, zero flexibility\)\.
+A *Monolith* is non\-modular \(not divided by interfaces\) along all the [structural dimensions]({{< relref "../introduction/metapatterns.md#the-system-of-coordinates" >}})\. Its thorough cohesiveness is both its blessing \(single\-step debugging, system\-wide optimizations, and self\-consistent data\) and its curse \(messy code, no scalability of development and deployment, zero flexibility\)\.
 
 ### Performance
 
-On one hand, monolithic applications provide perfect opportunities for performance optimizations as every piece of code is readily accessible from any other\. On the other hand, if the application is stateful, access to the state may [limit the performance benefit](https://stackoverflow.com/questions/16571381/degrading-performance-when-increasing-number-of-cores) of using multiple CPU cores\. Furthermore, large *Monoliths* may become too messy for programmers to identify and too complicated and fragile to implement any non\-local optimizations that could drastically improve performance\.
+On one hand, monolithic applications provide perfect opportunities for performance optimizations as every piece of code is readily accessible from any other\. On the other hand, if the application is stateful, access to the state may [limit the performance benefit](https://stackoverflow.com/questions/16571381/degrading-performance-when-increasing-number-of-cores) of using multiple CPU cores\. Furthermore, large *Monoliths* may become too messy, too complicated, and too fragile for programmers to identify and implement any non\-local optimizations that could drastically improve performance\.
 
 <aside>
 
@@ -58,24 +58,24 @@ Overall, tiny *Monoliths* provide the best latency and throughput per CPU core\.
 
 ### Dependencies
 
-Even though a *Monolith* is a single module, meaning that there are no dependencies among its parts \(in fact, everything depends on everything\), it still may depend on some external components or services which it uses\. Those dependencies tend to cause [*vendor lock\-in*](https://en.wikipedia.org/wiki/Vendor_lock-in) or make the software OS\- or hardware\-dependent\. [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) \(including [*MVP*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-presenter-mvp-model-view-adapter-mva-model-view-viewmodel-mvvm-model-1-mvc1-document-view" >}}) and [*MVC*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}})\) decouples a monolithic implementation from its dependencies by isolating the latter behind [*Adapters*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}})\.
+Even though a *Monolith* is a single module, meaning that there are no dependencies among its parts \(in fact, everything depends on everything\), it still may depend on some external components or services which it uses\. Those dependencies tend to cause [*vendor lock\-in*](https://en.wikipedia.org/wiki/Vendor_lock-in) or make the software OS\- or hardware\-dependent\. [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) \(including [*MVP*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-presenter-mvp-model-view-adapter-mva-model-view-viewmodel-mvvm-model-1-mvc1-document-view" >}}) and [*MVC*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}})\) decouples a monolithic system from its dependencies by isolating the latter behind [*Adapters*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}})\.
 
 ### Applicability
 
 *Monolith* is <ins>good</ins> for cases which are harmed by the introduction of modularity:
 
-- *Tiny projects\.* The project is relatively small \(below 10 000 lines\) and the requirements will never change \(e\.g\. you need to implement an application for running a specific mathematical calculation or a library supporting a well\-established communication protocol\)\.
+- *Tiny projects\.* The project is relatively small \(below 10 000 lines\) and the requirements will never change \(like when you need to implement an application for running a specific mathematical calculation or a library supporting a well\-established communication protocol\)\.
 - *Ultra optimization\.* You already have a working and thoroughly optimized system, but you still need that extra 5% performance improvement achievable through merging all the components together\.
-- *Low latency\.* If you need ultra low latency for the entire application, any asynchronous communication between its modules is not a viable option\. Example: high\-frequency trading\.
-- *Prototyping\.* You are writing a prototype in a domain you are not familiar with, gathering requirements in the process\. Chances for a correct initial identification of weakly coupled subdomains \(to become modules or services\) are [quite low](https://martinfowler.com/bliki/MonolithFirst.html) and it is worse to have wrong module boundaries than to use no modules at all\. [At the later stages]({{< relref "../analytics/architecture-and-product-life-cycle.md" >}}) of the project, when you will know the domain much better and your users will have approved the initial implementation, you will be able to split the system into components in a much better way, if and when that will be needed\. Nevertheless, you may already know enough to apply [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}) or [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) which keep the business logic monolithic while isolating it from the periphery and third\-party libraries\.
+- *Low latency\.* If you need ultra low latency for the entire application, any asynchronous communication between its modules is not a viable option\. Example: [high\-frequency trading](https://en.wikipedia.org/wiki/High-frequency_trading)\.
+- *Prototyping\.* You are writing a prototype in a domain which you are not familiar with, and gathering requirements in the process\. Chances for a correct initial identification of weakly coupled subdomains \(to become [modules or services]({{< relref "../basic-metapatterns/services.md" >}})\) are [quite low](https://martinfowler.com/bliki/MonolithFirst.html) and it is worse to have wrong module boundaries than to use no modules at all\. [At the later stages]({{< relref "../analytics/architecture-and-product-life-cycle.md" >}}) of the project, when you will know the domain much better and your users will have approved the initial implementation, you will be able to split the system into components in a much better way, if and when that will be needed\. Nevertheless, you may already know enough to apply [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}) or [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) which keep the business logic monolithic while isolating it from the periphery and third\-party libraries\.
 - *Quick and dirty\.* You are out of time and money and need to show your customers something right now\. There is no time to think, no money to perfect the code, and no day after tomorrow\.
 
 
 *Monolith* <ins>should be avoided</ins> when we need modules:
 
-- *Incompatible forces\.* There are [conflicting *forces*]({{< relref "../foundations-of-software-architecture/forces--asynchronicity--and-distribution.md#conflicting-forces" >}}) \(non\-functional requirements\) for different subsets of functionality\. They require splitting the system into \(usually asynchronous\) components each of which is specifically designed to satisfy its own subset of forces\. Your main tool is the careful selection of appropriate technologies and architectures on a per component basis which may allow the project to satisfy all the non\-functional requirements even if the task looks impossible during the initial analysis\.
+- *Incompatible forces\.* There are [conflicting *forces*]({{< relref "../foundations-of-software-architecture/forces--asynchronicity--and-distribution.md#conflicting-forces" >}}) for different subsets of functionality\. They require splitting the system into \(usually asynchronous\) components each of which is specifically designed to satisfy its own subset of forces\. Your main tool is the careful selection of technologies and architectures on a per component basis which may allow the project to satisfy all the non\-functional requirements even if the task looks impossible during the initial analysis\.
 - *Long\-running projects\.* The project is going to evolve over time and you believe you can predict the general direction of the future changes\. Modularity brings flexibility which you will need for sure\.
-- *Larger codebases\.* The project grows above average size \(100 000 lines of code\)\. If you don’t split it into smaller components it will grow into a [monolithic hell](https://livebook.manning.com/book/microservices-patterns/chapter-1/25) with development and debugging slowing down year after year till it reaches [terminal stage](https://news.ycombinator.com/item?id=18442941)\. Slow development is a waste of money, both in salary and in time to market\.
+- *Larger codebases\.* The project grows above average size \(100 000 lines of code\)\. If you don’t split it into smaller components it will descend into a [monolithic hell](https://livebook.manning.com/book/microservices-patterns/chapter-1/25) with development and debugging slowing down year after year till it reaches [terminal stage](https://news.ycombinator.com/item?id=18442941)\. Slow development is a waste of money, both in salary and in time to market\.
 - *Multiple teams\.* You have multiple teams to work on the project\. Inter\-team communication is hard and error\-prone whereas merging several teams together is known to greatly reduce the programmers’ productivity \(which peaks with teams of 5 or less members\)\. Explicit interfaces between components will formalize interdependencies between the teams, lowering communication overhead\.
 - *Fault tolerance\.* Your domain requires fault tolerance which is next to impossible for large monolithic applications\.
 - *Resource\-limited\.* Your project is too resource\-hungry for commodity hardware\. Even if you buy the best server for its needs right now, it is going to crave more tomorrow \(or on the next Black Friday\)\.
@@ -97,13 +97,13 @@ Even though a *Monolith* is a single module, meaning that there are no dependenc
 *Monolith*:
 
 - Can be extended with a [*Proxy*]({{< relref "../extension-metapatterns/proxy.md" >}}), or turned into a [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) or [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}})\.
-- Yields [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}), [*Services*]({{< relref "../basic-metapatterns/services.md" >}}), or [*Shards*]({{< relref "../basic-metapatterns/shards.md" >}}) if divided along the *abstractness*, *subdomain*, or *sharding* dimensions, respectively\. All the known architectures are combinations of those three metapatterns\.
+- Yields [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}), [*Services*]({{< relref "../basic-metapatterns/services.md" >}}), or [*Shards*]({{< relref "../basic-metapatterns/shards.md" >}}) if divided along the [*abstractness*, *subdomain*, or *sharding*]({{< relref "../introduction/metapatterns.md#the-system-of-coordinates" >}}) dimensions, respectively\. All the known architectures are combinations of those three metapatterns\.
 - Is the bird’s\-eye view of any architecture\.
 
 
 ## Variants by the internal structure
 
-*Monoliths* are the atoms to create more complex architectures from, the opaque building blocks, each of which satisfies a consistent set of forces\. Any individual component of a more complex architecture either is monolithic or encapsulates another architectural pattern, decomposable into *Monoliths*, and any architecture looks monolithic to its clients\.
+*Monoliths* are the atoms to create more complex architectures from, the opaque building blocks, each of which satisfies a consistent set of [forces]({{< relref "../foundations-of-software-architecture/forces--asynchronicity--and-distribution.md#requirements-and-forces" >}})\. Any individual component of a more complex architecture either is monolithic or encapsulates another architectural pattern, decomposable into *Monoliths*, and any architecture looks monolithic to its clients\.
 
 <figure>
 <a href="/diagrams/Variants/1/MonolithAsUnzoomed.png">
@@ -115,9 +115,9 @@ Even though a *Monolith* is a single module, meaning that there are no dependenc
 </a>
 </figure>
 
-There is a misunderstanding because *software architecture* inspects the internals of *applications* at the level of *modules* or even classes while *systems architecture* deals with *distributed systems* and operates *deployment units* which tend to incorporate multiple modules or even applications\. Each branch of the architecture [calls]({{< relref "../analytics/ambiguous-patterns.md#monolith" >}}) its atomic unit a *Monolith*, leading to the term sticking both to a *module that cannot be subdivided*, as in \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] and \[[POSA1]({{< relref "../extension-metapatterns/shared-repository.md#blackboard" >}})\], and to a *\(sub\)system which must be deployed together*, as in present\-day literature\.
+There is a misunderstanding because *software architecture* inspects the internals of *applications* at the level of *modules* or even classes while *systems architecture* deals with *distributed systems* and operates *deployment units* which tend to incorporate multiple modules or even applications\. Each branch of the architecture [calls]({{< relref "../analytics/ambiguous-patterns.md#monolith" >}}) its atomic unit a *Monolith*, leading to the term sticking both to a *module that cannot be subdivided*, as in \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] and \[[POSA1]({{< relref "../extension-metapatterns/shared-repository.md#blackboard" >}})\], and to a *\(sub\)system which must be deployed as a whole*, as per present\-day literature\.
 
-As we aspire to build a unified classification for both distributed and local systems, we must treat both kinds of components in the same way, whether they are [distributed services]({{< relref "../basic-metapatterns/services.md#distributed-services-service-based-architecture-space-based-architecture-microservices" >}}), [co\-located *Actors*]({{< relref "../basic-metapatterns/services.md#distributed-runtime-backend-actors" >}}), or [in\-process modules]({{< relref "../basic-metapatterns/services.md#asynchronous-modules-modular-monolith-modulith-embedded-actors" >}})\. Thus, for the scope of the current book, we will follow the definition of *Monolith* from \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\]: “Tight coupling leads to *monolithic* systems, where you can't change or remove a class without understanding and changing many other classes”\. Still, we need to account for a couple of misnomers from system architecture\.
+As we aspire to build a unified classification for both distributed and local systems, we must treat both kinds of components in the same way, whether they are [distributed services]({{< relref "../basic-metapatterns/services.md#distributed-services-service-based-architecture-space-based-architecture-microservices" >}}), [co\-located *Actors*]({{< relref "../basic-metapatterns/services.md#distributed-runtime-backend-actors" >}}), or [in\-process modules]({{< relref "../basic-metapatterns/services.md#asynchronous-modules-modular-monolith-modulith-embedded-actors" >}})\. Thus, for the scope of the current book, we will follow the definition of *Monolith* from \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\]: “Tight coupling leads to *monolithic* systems, where you can't change or remove a class without understanding and changing many other classes”\. Still, we need to account for a couple of misnomers from systems architecture\.
 
 ### True Monolith, Big Ball of Mud
 
@@ -131,7 +131,7 @@ As we aspire to build a unified classification for both distributed and local sy
 </a>
 </figure>
 
-A true *Monolith* features [no clear internal structure](http://laputan.org/mud/)\. If it has any components, they are so tightly coupled that the entire thing behaves as a single cohesive module\. This is what we explore in the current chapter\.
+A true *Monolith* features [no clear internal structure](http://laputan.org/mud/)\. If it has any components, they are so tightly coupled that the entire thing behaves as a single cohesive module\. This is the subject of the current chapter\.
 
 ### \(inexact\) Lambda Monolith, Monolambda, [Lambdalith]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}})
 
@@ -145,7 +145,7 @@ A true *Monolith* features [no clear internal structure](http://laputan.org/mud/
 </a>
 </figure>
 
-A [*Monolambda*](https://jesseduffield.com/Notes-On-Lambda/) or [*Lambdalith*](https://theburningmonk.com/2025/03/the-pros-and-cons-of-lambdalith/) is a dynamic [*Pool* of stateless instances]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}}) of a system\. Though each instance may contain [*layers*]({{< relref "../basic-metapatterns/layers.md" >}}) or [*subdomain modules*]({{< relref "../basic-metapatterns/services.md#synchronous-modules-modular-monolith-modulith" >}}), the whole is often called a *Monolith* [because it is deployed as a single unit]({{< relref "../analytics/ambiguous-patterns.md#monolith" >}})\.
+A [*Monolambda*](https://jesseduffield.com/Notes-On-Lambda/) or [*Lambdalith*](https://theburningmonk.com/2025/03/the-pros-and-cons-of-lambdalith/) is a dynamic [*Pool* of stateless instances]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}}) of a system\. Though each instance may contain [*layers*]({{< relref "../basic-metapatterns/layers.md#synchronous-layers-layered-monolith" >}}) or [*subdomain modules*]({{< relref "../basic-metapatterns/services.md#synchronous-modules-modular-monolith-modulith" >}}), the whole is often called a *Monolith* [because it is deployed as a single unit]({{< relref "../analytics/ambiguous-patterns.md#monolith" >}})\.
 
 ### \(misapplied\) [Layered Monolith]({{< relref "../basic-metapatterns/layers.md#synchronous-layers-layered-monolith" >}})
 
@@ -173,7 +173,7 @@ When they say [*Layered Monolith*]({{< relref "../basic-metapatterns/layers.md#s
 </a>
 </figure>
 
-A [*Modular Monolith*]({{< relref "../basic-metapatterns/services.md#asynchronous-modules-modular-monolith-modulith-embedded-actors" >}}) \(*Modulith*\) \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] is a single\-process application subdivided into modules that correspond to subdomains\. If the modules communicate via in\-process messaging, the architecture is nearly identical to coarse\-grained [*Actors*]({{< relref "../basic-metapatterns/services.md#actors" >}}), thus it is a *Monolith* only in name\. *Modulith* [is a kind of](https://en.wikipedia.org/wiki/Duck_typing) [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) – it supports development by multiple teams and the asynchronous variant is hard to debug\. The relation to *Monolith* is mostly limited to the inability to scale individual parts of the system\.
+A [*Modular Monolith*]({{< relref "../basic-metapatterns/services.md#asynchronous-modules-modular-monolith-modulith-embedded-actors" >}}) \(*Modulith*\) \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] is a single\-process application subdivided into modules that correspond to subdomains\. If the modules communicate via in\-process messaging, the architecture is nearly identical to coarse\-grained [*Actors*]({{< relref "../basic-metapatterns/services.md#actors" >}}), thus it is a *Monolith* only in name\. *Modulith* [is a kind of](https://en.wikipedia.org/wiki/Duck_typing) [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) – it supports development by multiple teams and its asynchronous variant is hard to debug\. The relation to *Monolith* is mostly limited to the inability to scale individual parts of the system\.
 
 ### \(misapplied\) [Distributed Monolith]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#distributed-monolith" >}})
 
@@ -201,7 +201,7 @@ A [*Distributed Monolith*]({{< relref "../fragmented-metapatterns/service-orient
 </a>
 </figure>
 
-[*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) and [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) extend a \(sub\)system with external components\. These architectures can be applied to a *Monolith* without drastically changing its properties – it still remains relatively easy to write and debug but hard to support when outgrown\. Therefore, we will not currently discuss these modifications, mainly because each of them has a dedicated chapter\.
+[*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) and [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) extend a \(sub\)system with external components\. These architectures can be applied to a *Monolith* without drastically changing its properties – it still remains relatively easy to write and debug but hard to support when it has grown large\. Therefore, we will not currently discuss these modifications, mainly because each of them has a dedicated chapter\.
 
 ## Examples
 
@@ -224,7 +224,7 @@ Any software module reacts to incoming events or data and produces outgoing even
   - A [multi\-threaded *Reactor*]({{< relref "#multi-threaded-reactor-a-thread-per-task" >}}) is the simplest backend implementation\.
 - [*Proactor*]({{< relref "#proactor-one-thread-many-tasks" >}}) relies on short event handlers to run multiple requests in a single thread\.
 - [*Half\-Sync/Half\-Async*]({{< relref "#inexact-half-synchalf-async-coroutines-or-fibers" >}}) implements coroutines by changing call stacks of a thread\.
-- [*\(Re\)Actor\-with\-Extractors*]({{< relref "#inexact-reactor-with-extractors-phased-processing" >}}) passes the whole system through alternating plan and execute phases to run lock\-free\.
+- [*\(Re\)Actor\-with\-Extractors*]({{< relref "#inexact-reactor-with-extractors-phased-processing" >}}) passes the whole system through alternating planning and execution phases to run lock\-free\.
 
 
 ### Single\-threaded Reactor \(one thread, one task\)
@@ -239,9 +239,9 @@ Any software module reacts to incoming events or data and produces outgoing even
 </a>
 </figure>
 
-In a [*Reactor*](https://www.dre.vanderbilt.edu/~schmidt/PDF/reactor-siemens.pdf) \[[POSA2]({{< relref "../appendices/books-referenced.md#posa2" >}})\] a single thread waits for an incoming event or data packet, processes it with blocking calls to the underlying OS, hardware, and external dependencies and returns the result, rinse and repeat\.
+In a [*Reactor*](https://www.dre.vanderbilt.edu/~schmidt/PDF/reactor-siemens.pdf) \[[POSA2]({{< relref "../appendices/books-referenced.md#posa2" >}})\] a single thread waits for an incoming event, request, or data packet, processes it with blocking calls to the underlying OS, hardware, and external dependencies, and returns the result, rinse and repeat\.
 
-That makes sense when the module owns and provides access to a hardware component which cannot do several actions at once, for example, a communication bus or a HDD firmware capable of a single read or write at any given moment\.
+That makes sense when the module wraps a hardware component which cannot do several actions at once, for example, a communication bus or a HDD firmware capable of a single read or write at any given moment\.
 
 ### Multi\-threaded Reactor \(a thread per task\)
 
@@ -255,9 +255,9 @@ That makes sense when the module owns and provides access to a hardware componen
 </a>
 </figure>
 
-A [*Reactor*](https://www.dre.vanderbilt.edu/~schmidt/PDF/reactor-siemens.pdf) \[[POSA2]({{< relref "../appendices/books-referenced.md#posa2" >}})\] may employ multiple threads by having a [*pool*]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}}) of them waiting for a request or data to come\. The incoming event activates a thread, which becomes dedicated to processing it, does several blocking calls and, finally, sends back a response\. When the request processing is complete, the thread returns to the pool of idle threads to wait for the next event to process\.
+A [*Reactor*](https://www.dre.vanderbilt.edu/~schmidt/PDF/reactor-siemens.pdf) \[[POSA2]({{< relref "../appendices/books-referenced.md#posa2" >}})\] may employ multiple threads by having a [*pool*]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}}) of them waiting for a request or data to arrive\. The incoming event activates one of the waiting threads, which thereby becomes dedicated to processing it, makes several blocking calls and, finally, sends back a response\. When the request processing is complete, the thread returns to the pool of idle threads to wait for the next event to process\.
 
-This is the default simple & stupid implementation of backend services\. Its pitfalls include contention for shared resources, deadlocks, and high memory consumption by OS\-level threads\.
+This is the default [simple & stupid](https://en.wikipedia.org/wiki/KISS_principle) implementation of backend services\. Its pitfalls include contention for shared resources, deadlocks, and high memory consumption by OS\-level threads\.
 
 ### Proactor \(one thread, many tasks\)
 
@@ -271,9 +271,9 @@ This is the default simple & stupid implementation of backend services\. Its pit
 </a>
 </figure>
 
-In [*Proactor*](https://hillside.net/plop/plop97/Proceedings/pyarali.proactor.pdf) \[[POSA2]({{< relref "../appendices/books-referenced.md#posa2" >}})\] a single thread processes all of the incoming events, both from the module’s clients and from the hardware or dependencies it manages\. When an event is received, the thread goes through a short piece of corresponding business logic \(*event handler*\) which usually does one or more non\-blocking actions, such as sending messages to other components, writing to registers of the managed hardware, or initiating an async I/O\. As soon as the event handler returns, the thread becomes ready to process further events\. As the thread never blocks, it is resource\-efficient and serves many interleaved tasks\.
+In [*Proactor*](https://hillside.net/plop/plop97/Proceedings/pyarali.proactor.pdf) \[[POSA2]({{< relref "../appendices/books-referenced.md#posa2" >}})\] a single thread processes all of the incoming events, both from the module’s clients and from the hardware or dependencies which it manages\. When an event is received, the thread goes through a short piece of corresponding business logic \(*event handler*\) which usually does one or more non\-blocking actions, such as sending messages to other components, writing to registers of the managed hardware, or initiating an async I/O\. As soon as the event handler returns, the thread becomes ready to process further events\. As the thread never blocks, it is resource\-efficient \(does not hold anything for a noticeable amount of time\) and can serve many interleaved tasks\.
 
-This approach is good for real\-time systems where thread synchronization is largely forbidden because of the associated delays and for reactive [control]({{< relref "../foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}}) applications which mostly adapt to the environment instead of running pre\-programmed scenarios\. The drawback is very poor structure of the code and debuggability as any complex behavior is broken into many independent event handlers\.
+This approach is good for real\-time systems where thread synchronization is largely forbidden because of the associated delays and for reactive [control]({{< relref "../foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}}) applications which mostly adapt to the environment instead of running pre\-programmed scenarios\. The drawback is very poor structure of the code and nightmarish debuggability as any complex behavior is broken into a swarm of separate event handlers\.
 
 ### \(inexact\) Half\-Sync/Half\-Async \(coroutines or fibers\)
 
@@ -287,17 +287,17 @@ This approach is good for real\-time systems where thread synchronization is lar
 </a>
 </figure>
 
-[*Half\-Sync/Half\-Async*](https://www.dre.vanderbilt.edu/~schmidt/PDF/PLoP-95.pdf) \[[POSA2]({{< relref "../appendices/books-referenced.md#posa2" >}})\] originally described the interaction between user space and kernel threads in operating systems which is not much different from that behind coroutines and fibers\. A single thread \(or a thread pool with one thread per CPU core\) handles all the incoming events and switches its call stack in the process\.
+[*Half\-Sync/Half\-Async*](https://www.dre.vanderbilt.edu/~schmidt/PDF/PLoP-95.pdf) \[[POSA2]({{< relref "../appendices/books-referenced.md#posa2" >}})\] originally described the interaction between user space and kernel threads in operating systems which is not much different from what happens under the hood in coroutines or fibers\. A single thread \(or a thread pool with one thread per CPU core\) handles all the incoming events and switches its call stack in the process\.
 
-Every incoming request is allocated a call stack which stores the processing state \(local variables and methods called\) of the request\. When it needs to access an external component, the [runtime system](https://en.wikipedia.org/wiki/Runtime_system) saves the request’s stack, does a non\-blocking call, and the execution thread returns to its original stack to wait for any new event to handle while the request processing stack remains frozen until the action it has initiated completes asynchronously\. Then the runtime switches the execution thread back to the stored request’s stack and continues processing the request until it completes and its stack is deleted\.
+Every incoming request is allocated a call stack which stores the processing state \(local variables and methods called\) of the request\. When it needs to access an external component, the [runtime system](https://en.wikipedia.org/wiki/Runtime_system) saves the request’s stack, makes a non\-blocking call, and the executing thread returns to its original stack to wait for any new event to handle while the request processing stack remains frozen until the action it has initiated completes asynchronously, raising an event\. Then the runtime, upon receiving the event, switches the execution thread back to the stored request’s stack and continues processing the request until it completes and its stack is deleted\.
 
-This makes programming and debugging feel as easy as they are with [*Reactor*]({{< relref "#single-threaded-reactor-one-thread-one-task" >}}) \(imperative style\) while retaining the low resource consumption and high performance of [*Proactor*]({{< relref "#proactor-one-thread-many-tasks" >}}) \(reactive paradigm\)\. Coroutines and fibers are used in highly efficient [game engines](https://www.gdcvault.com/play/1022186/Parallelizing-the-Naughty-Dog-Engine) and [databases](https://docs.seastar.io/master/tutorial.html#coroutines)\. Though *Half\-Sync/Half\-Async* has two layers \(is not truly monolithic\), I believe it belongs next to *Reactor* and *Proactor* which make up its upper and lower halves, respectively\.
+This makes programming and debugging feel as easy as they are with [*Reactor*]({{< relref "#single-threaded-reactor-one-thread-one-task" >}}) \(imperative style\) while partially retaining the low resource consumption and high performance of [*Proactor*]({{< relref "#proactor-one-thread-many-tasks" >}}) \(reactive paradigm\)\. Coroutines and fibers are used in highly efficient [game engines](https://www.gdcvault.com/play/1022186/Parallelizing-the-Naughty-Dog-Engine) and [databases](https://docs.seastar.io/master/tutorial.html#coroutines)\. Though *Half\-Sync/Half\-Async* has two layers \(is not truly monolithic\), I believe it belongs next to *Reactor* and *Proactor* which make up its upper and lower halves, respectively\.
 
 ### The state of the art
 
-These patterns are not widely known and programmers tend to mix them together, for better or for worse\. One is likely to encounter a heavily multithreaded big ball of mud where some threads serve user requests while others are dedicated to periodic service routines\.
+These patterns are not widely recognized and programmers tend to mix them together, for better or for worse\. One is likely to encounter a heavily multithreaded [big ball of mud](https://www.laputan.org/mud/) where some threads serve user requests while others are dedicated to periodic service routines\.
 
-Moreover, people [often call]({{< relref "../analytics/ambiguous-patterns.md#reactor" >}}) any event\-driven service *Reactor*, causing confusion among those who distinguish between the three patterns\.
+Moreover, people [often call]({{< relref "../analytics/ambiguous-patterns.md#reactor" >}}) any event\-driven service a *Reactor*, causing confusion among those who distinguish between the three patterns\.
 
 ### \(inexact\) \(Re\)Actor\-with\-Extractors \(phased processing\)
 
@@ -311,33 +311,33 @@ Moreover, people [often call]({{< relref "../analytics/ambiguous-patterns.md#rea
 </a>
 </figure>
 
-As a bonus, let’s review an [unconventional execution model](http://ithare.com/multi-coring-and-non-blocking-instead-of-multi-threading-with-a-script/3/) that fits game development or other kinds of simulation with many interacting objects\.
+As a bonus, let’s review an [unconventional execution model](http://ithare.com/multi-coring-and-non-blocking-instead-of-multi-threading-with-a-script/3/) that fits game development and other kinds of simulations with many interacting objects\.
 
 We have a long\-running system where each simulated object with a complex behavior depends on the objects around it\. Common wisdom proposes two ways to implement it:
 
 - [*Actors*](https://doc.akka.io/libraries/akka-core/current/typed/guide/actors-intro.html) \(asynchronous messaging, reactive programming\) – each [*actor*]({{< relref "../basic-metapatterns/services.md#class-like-actors" >}}) \(simulated object\) runs single\-threaded and wakes up only to process incoming messages\. While processing a message, an actor may change its state and/or send messages to other actors\. The entire actor’s data is private and there are no synchronous calls between the actors\. The good thing is that actors are very efficient in highly parallel tasks as there are no locks in their code\. The bad thing is that actors have no way to synchronize their states: you can only request another actor to tell you about its state, and its response may become outdated even before you receive it\. Also, any complex logic that involves multiple actors is fragmented into many event handlers\.
-- The opposite approach is to have the simulated objects access each other synchronously\. This allows for complex logic that depends on states of several objects but gets in trouble with changing the objects’ states from multiple threads: you need to protect them with those inefficient locks and you get those dreadful deadlocks as the outcome\.
+- The opposite approach is to have the simulated objects access each other synchronously\. This allows for complex logic that depends on states of several objects yet gets in trouble with changing the objects’ states from multiple threads: you need to protect them with those inefficient locks and you get those dreadful deadlocks as the outcome\.
 
 
 Here we see two bad options to choose from\. However, it is the simulated nature of the system that saves the day: we can *stop the world to get off*\. The objects’ querying each other and their changing their states neither needs to happen at the same time nor obey the same rules\!
 
 The simulation runs in steps\. Each step consists of two phases:
 
-- *Query phase* \(*extraction*\) is when the object states are immutable, thus the objects can communicate synchronously with no need for locks\. In this phase each object collects information from its surroundings \(other objects\), plans its actions and posts them as commands to its own message queue\. I suppose that objects may also send commands to each other in this phase\.
+- *Query phase* \(*extraction*\) is when the object states are immutable, thus the objects can communicate synchronously with no need for locks\. In this phase each object collects information from its surroundings \(other objects\), plans its actions and posts them as commands to its own message queue\. I suppose that objects may also post events to each other’s queues in this phase\.
 - *Command phase* \(*reaction*\) is when each object executes its planned \(queued\) actions that change its state, but it cannot access other objects\.
 
 
 Each phase lasts until every object in the system completes its tasks scheduled for that particular phase\. The phase toggle is supervised by a [*Scheduler*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) which runs the objects on all the available CPU cores\. The entire process resembles the [game of Mafia](https://en.wikipedia.org/wiki/Mafia_(party_game)) with public daily conversations and covert nightly actions\.
 
-*\(Re\)Actor\-with\-Extractors* is the perfect example of earning the benefits of two architectures without paying the penalties\. It utilizes both the lockless parallelism of *Actors*\-style [*shared\-nothing*](https://en.wikipedia.org/wiki/Shared-nothing_architecture) and the simplicity of synchronous access in [*shared\-memory*](https://en.wikipedia.org/wiki/Shared-memory_architecture) by alternating between those two modes through applying the [*CQRS principle*](https://en.wikipedia.org/wiki/Command_Query_Responsibility_Segregation) to the time dimension\.
+*\(Re\)Actor\-with\-Extractors* is the perfect example of earning the benefits of two architectural styles without paying their penalties\. It utilizes both the lockless parallelism of *Actors*\-style [*shared\-nothing*](https://en.wikipedia.org/wiki/Shared-nothing_architecture) and the simplicity of synchronous access in [*shared\-memory*](https://en.wikipedia.org/wiki/Shared-memory_architecture) by alternating between those two modes through applying the [*CQRS principle*](https://en.wikipedia.org/wiki/Command_Query_Responsibility_Segregation) to the time dimension\.
 
 ## Evolutions
 
-Every architecture has drawbacks and tends to evolve in a variety of ways to address them\. Below is a brief summary of common evolutions of *Monolith* with more information available in [Appendix E]({{< relref "../appendices/evolutions-of-architectures/_index.md" >}})\.
+Every architecture has drawbacks and tends to evolve in a variety of ways to address them as soon as they start causing trouble\. Below is a brief summary of common evolutions of *Monolith* with more information available in [Appendix E]({{< relref "../appendices/evolutions-of-architectures/_index.md" >}})\.
 
 ### [Evolutions to Shards]({{< relref "../appendices/evolutions-of-architectures/evolutions-of-a-monolith-that-lead-to-shards.md" >}})
 
-One of the main drawbacks of monolithic architecture is its lack of scalability – a single running instance of your system may not be enough to serve all the clients no matter how many resources you add in\. If that is the case, you should consider [*Shards*]({{< relref "../basic-metapatterns/shards.md" >}}) – *multiple instances* of a *Monolith*\. There are following options:
+One of the main drawbacks of the *Monolithic Architecture* is its lack of scalability – a single running instance of your system may not be enough to serve all the clients no matter how many resources you add in\. If that is the case, you should consider [*Shards*]({{< relref "../basic-metapatterns/shards.md" >}}) – *multiple instances* of a *Monolith*\. There are following options:
 
 - Self\-managed [*Shards*]({{< relref "../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-multitenancy-cells-amazon-definition" >}}) – each instance owns a part of the system’s data and may communicate with all the other instances \(forming a [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}})\)\.
 
@@ -393,7 +393,7 @@ One of the main drawbacks of monolithic architecture is its lack of scalability 
 
 ### [Evolutions to Layers]({{< relref "../appendices/evolutions-of-architectures/evolutions-of-a-monolith-that-result-in-layers.md" >}})
 
-Another drawback of *Monolith* is its… er… monolithism\. The entire application exposes a single set of qualities and all its parts \(if they ever emerge\) are deployed together\. However, life awards flexibility: parts of a system may benefit from being written in varying languages and styles, deployed with different frequency and amount of testing, sometimes to specific hardware or end users’ devices\. They may need to [vary in security and scalability]({{< relref "../foundations-of-software-architecture/forces--asynchronicity--and-distribution.md#distribution" >}}) as well\. Enter [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}) – a subdivision by the *level of abstractness*:
+Another drawback of *Monolith* is its… er… monolithism\. The entire application exposes a single set of qualities and all its parts \(if they ever emerge\) are deployed together\. However, life awards flexibility: parts of a system may benefit from being written in varying languages and styles and deployed with different frequency and amount of testing, sometimes to specific hardware or end users’ devices\. They may need to [vary in security and scalability]({{< relref "../foundations-of-software-architecture/forces--asynchronicity--and-distribution.md#distribution" >}}) as well\. Enter [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}) – a subdivision by the *level of abstractness*:
 
 - Most *Monoliths* can be divided into 3 or 4 layers of different abstractness\.
 
@@ -434,7 +434,7 @@ Another drawback of *Monolith* is its… er… monolithism\. The entire applicat
 </a>
 </figure>
 
-- An [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) adds a layer of indirection to simplify the system’s external API\.
+- An [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) adds a layer of indirection to make the system’s external API more user\-friendly\.
 
 
 <figure>
@@ -449,7 +449,7 @@ Another drawback of *Monolith* is its… er… monolithism\. The entire applicat
 
 ### [Evolutions to Services]({{< relref "../appendices/evolutions-of-architectures/evolutions-of-a-monolith-that-make-services.md" >}})
 
-The final major drawback of *Monolith* is the cohesiveness of its code\. The rapid start of development with *Monolith* begets a major obstacle as the project grows: every developer needs to know the entire codebase to be productive while changes made by individual developers overlap and may break each other\. Such distress is usually solved by dividing the project into modules along *subdomain boundaries* \(which usually match [bounded contexts](https://martinfowler.com/bliki/BoundedContext.html)\)\. However, that requires much work, and good boundaries and APIs are hard to design\. Thus many organizations prefer a slower iterative transition\.
+The final major drawback of *Monolith* is the cohesiveness of its code\. The rapid start of development with *Monolith* begets a major obstacle as the project grows: every developer needs to know the entire codebase to be productive while changes made by individual developers overlap and may break each other\. Such distress is usually solved by dividing the project into modules along *subdomain boundaries* \(which usually match [*bounded contexts*](https://martinfowler.com/bliki/BoundedContext.html)\)\. However, that requires much work, and good boundaries and APIs are hard to design, wherefore many organizations prefer a slower iterative transition\.
 
 - A *Monolith* can be split into [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) right away\.
 
@@ -464,7 +464,7 @@ The final major drawback of *Monolith* is the cohesiveness of its code\. The rap
 </a>
 </figure>
 
-- A feature may be added or a weakly coupled part separated into a new service\.
+- A feature may be added or a weakly coupled part of the Monolith separated into a new service\.
 
 
 <figure>
@@ -507,7 +507,7 @@ The last group of evolutions does not really change the monolithic nature of the
 </a>
 </figure>
 
-- [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) is a subtype of *Plugins* which is all about isolating the main code from any third\-party components it uses\.
+- [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) is a subtype of *Plugins* which is all about isolating the main code from any third\-party components which it uses\.
 
 
 <figure>

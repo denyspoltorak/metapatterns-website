@@ -39,7 +39,7 @@ Though the *Sandwich* architecture allows for subdomains to be pretty independen
 
 <ins>Pros</ins>: 
 
-- The system architecture is clear as it follows the domain knowledge\.
+- The system’s architecture remains clear as it follows the domain knowledge\.
 - The development teams remain narrowly specialized, thus effective\.
 - Dead domain\-level code is easily identified and removed\.
 
@@ -66,26 +66,26 @@ Though the *Sandwich* architecture allows for subdomains to be pretty independen
 
 <ins>Goal</ins>: maintain effective development\.
 
-<ins>Prerequisite</ins>: business requirements gradually diverge from your original vision\.
+<ins>Prerequisite</ins>: the business requirements gradually diverge from your original vision\.
 
-[Ideally]({{< relref "../../foundations-of-software-architecture/modules-and-complexity.md#coupling-and-cohesion" >}}), each service should be kept cohesive, while the services should be decoupled from each other\. However, business likes to mess up your plans\. If you ignore the results, your teams will be slowed down by mutual dependencies or become overburdened by the size of the components which they maintain\. Therefore restructure both the system and teams once the divergence between the domain knowledge and system architecture starts to negatively impact development\.
+[Ideally]({{< relref "../../foundations-of-software-architecture/modules-and-complexity.md#coupling-and-cohesion" >}}), each service should be kept cohesive, while the services should be decoupled from each other\. However, business likes to mess up your plans\. If you ignore the results, your teams will be slowed down by mutual dependencies or become overburdened by the size of the components which they maintain\. Therefore, restructure both the system and teams once the divergence between the domain knowledge and system’s architecture starts to negatively impact development\.
 
 <aside>
 
-> If an architecture is misaligned with the domain which it models, some components implement functions which don’t properly belong to them while others need a lot of help from their neighbors\. There are many dependencies between components which both increase complexity \(you cannot develop a component without knowing other components\) and slow down the system \(calls between components tend to be inefficient\)\.
+> If an architecture is misaligned with the domain which it models, some components implement functions which don’t properly belong to them, while others need a lot of help from their neighbors\. Many unnecessary dependencies emerge between components and that both increases complexity \(you cannot develop a component without knowing other components\) and slows down the system \(calls between components tend to be inefficient\)\.
 
 </aside>
 
 <ins>Pros</ins>: 
 
-- The system architecture is realigned with the domain knowledge\.
-- System components remain cohesive inside and decoupled from each other\.
-- The development teams are narrowly specialized, thus effective\.
+- The system’s architecture is realigned with the domain knowledge\.
+- The system components remain internally cohesive and decoupled from each other\.
+- The development teams stay narrowly specialized, thus effective\.
 
 
 <ins>Cons</ins>: 
 
-- You will have to update the database schema and integration logic \(use cases\)\.
+- You will have to update the database schema and integration logic \([use cases]({{< relref "../../basic-metapatterns/layers.md#application-use-cases-or-integration" >}})\)\.
 - Splitting or merging teams disrupts them\.
 
 
@@ -135,9 +135,9 @@ Often the project grows in an unexpected manner\. If you see that the domain\-le
 
 <ins>Patterns</ins>: [Three\-Layered Services]({{< relref "../../fragmented-metapatterns/layered-services.md#orchestrated-three-layered-services" >}}) \([Layered Services]({{< relref "../../fragmented-metapatterns/layered-services.md" >}})\)\.
 
-<ins>Goal</ins>: fine\-grained scalability, database performance optimization, limited fault tolerance\.
+<ins>Goal</ins>: fine\-grained scalability, database performance optimization, and limited fault tolerance\.
 
-<ins>Prerequisite</ins>: the subdomains are loosely coupled in both use cases and data\.
+<ins>Prerequisite</ins>: the subdomains are loosely coupled in both [use cases]({{< relref "../../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) and [data]({{< relref "../../basic-metapatterns/layers.md#data-persistence" >}})\.
 
 It is natural to divide a *Sandwich* into [*Services*]({{< relref "../../basic-metapatterns/services.md" >}}), but only if your domain is not [data\-centric]({{< relref "../../foundations-of-software-architecture/arranging-communication/programming-and-architectural-paradigms.md#procedural-data-centric-paradigm--shared-data" >}}) \(built around a [*Shared Repository*]({{< relref "../../extension-metapatterns/shared-repository.md" >}})\) and your use cases are not too complex \(requiring an [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}})\)\.
 

@@ -30,23 +30,23 @@ primary_image = "/diagrams/Main/Shards.png"
 
 | *Benefits* | *Drawbacks* |
 | --- | --- |
-| Good scalability | It’s hard to synchronize the system’s state |
+| Good scalability | It’s hard to synchronize the whole system’s state |
 | Good performance | There is operational effort to deploy or update multiple components |
 | Improved latency and/or fault tolerance |  |
 
-<ins>References:</ins> \[[POSA3]({{< relref "../appendices/books-referenced.md#posa3" >}})\] is dedicated to pooling and resource management; \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] reviews *Shards*, *Replicas* and *Stateless Instances*; \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\] covers sharding and synchronization of *Replicas* in depth; Amazon promotes full\-system sharding as [*Cell\-Based Architecture*](https://docs.aws.amazon.com/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/what-is-a-cell-based-architecture.html)\.
+<ins>References:</ins> \[[POSA3]({{< relref "../appendices/books-referenced.md#posa3" >}})\] is dedicated to pooling and resource management; \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] reviews *Shards*, *Replicas*, and *Stateless Instances*; \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\] covers sharding and synchronization of *Replicas* in depth; Amazon promotes full\-system sharding, calling it [*Cell\-Based Architecture*](https://docs.aws.amazon.com/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/what-is-a-cell-based-architecture.html)\.
 
-*Shards* are multiple and, in most cases, independent instances of a component or subsystem which the pattern is applied to\. They provide scalability, often redundancy and sometimes locality, at the cost of slicing or duplicating the component’s state \(writable data\), which obviously does not affect inherently stateless components\. Most of this pattern’s specific evolutions look for a way to coordinate shards at the logic or data level\.
+*Shards* are multiple and, in most cases, independent instances of a component or subsystem which the pattern is applied to\. They provide scalability, often redundancy, and sometimes locality, at the cost of slicing or duplicating the component’s state \(writable data\), which obviously does not affect inherently stateless components\. Most of this pattern’s specific evolutions look for a way to coordinate shards at the logic or data level\.
 
 <aside>
 
-> There is a sibling metapattern, [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}}), in which instances of a component closely communicate among themselves\. The difference between the patterns lies in the strength of interactions: while each *shard* exists primarily to serve its clients, a *Mesh node*’s priority is preserving the *Mesh* itself from falling prey to entropy, making the *Mesh* into a reliable distributed \(virtual\) layer\. Some systems, such as distributed databases, hold the middle ground – their shards or nodes both intercommunicate intensely and execute a variety of client requests\. 
+> There is a sibling metapattern, namely [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}}), in which instances of a component closely communicate among themselves\. The difference between the patterns lies in the strength of interactions: while each *shard* exists primarily to serve its clients, a *Mesh node*’s priority is preserving the *Mesh* itself from falling prey to entropy, making the *Mesh* into a reliable distributed \(virtual\) layer\. Some systems, such as distributed databases, hold the middle ground – their shards or nodes both intercommunicate intensely and execute a variety of client requests\. 
 
 </aside>
 
 ### Performance
 
-A *shard* retains the performance of the original subsystem \(a [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) in the simplest case\) as long as it runs independently\. Any task that involves intershard communication has its performance degraded by data serialization and network latency\. And as soon as multiple shards need to synchronize their states you find yourself on the horns of a dilemma: damage data consistency through write conflicts or kill performance with distributed transactions \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\]\.
+A *shard* retains the performance of the original subsystem \(a [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) in the simplest case\) as long as it runs independently\. Any task that involves intershard communication has its performance degraded by data serialization and network latency\. And as soon as multiple shards need to synchronize their states you find yourself on the horns of a dilemma: accept the possibility of  data inconsistency caused by  [write conflicts](https://en.wikipedia.org/wiki/Write%E2%80%93write_conflict) or else kill performance with distributed transactions \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\]\.
 
 <figure>
 <a href="/diagrams/Performance/Shards.png">
@@ -66,14 +66,14 @@ You may need to make sure that all the shards are instances of the same version 
 
 ### Applicability
 
-A *sharded* system features properties of a pattern it replicates \(a single\-component [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}), local [*layered*]({{< relref "../basic-metapatterns/layers.md" >}}) application or distributed [*Services*]({{< relref "../basic-metapatterns/services.md" >}})\)\. Its peculiarities that originate with the *Shards’* scalability, are listed below\.
+A *sharded* system features properties of the pattern it replicates \(a single\-component [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}), local [*layered*]({{< relref "../basic-metapatterns/layers.md" >}}) application or distributed [*Services*]({{< relref "../basic-metapatterns/services.md" >}})\)\. Its peculiarities that originate with the *Shards’* scalability, are listed below\.
 
 *Shards* are <ins>good</ins> for:
 
 - *High or variable load\.* You need to scale your service up \(and sometimes down\)\. With *Shards* you are not limited to a single server’s CPU and memory\.
 - *Survival of hardware failures\.* A bad HDD or failing RAM does not affect your business if there is another running instance of your application\. Still, make sure that your [*Load Balancer*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) and Internet connection are replicated as well\.
 - *Improving worst case latency*\. If your service suffers from latency spikes, you can run a few replicas of it in parallel, broadcasting every user request to all of them, and returning the fastest response\. Adding a single replica turns your p90 into [p99](https://dzone.com/articles/mastering-latency-with-p90-p99-and-mean-response-t)\.
-- *Improving locality\.* A world\-wide business optimizes latency and costs by deploying an instance of its software to a local data center in every region of interest \(or even to its clients’ browsers\)\!
+- *Improving locality\.* A world\-wide business optimizes latency and costs by deploying an instance of its software to a local data center in every region of interest\. Web and mobile applications that run on client devices are prominent examples of sharding hidden in plain sight\.
 - [*Canary Release*](https://martinfowler.com/bliki/CanaryRelease.html)\. It is possible to deploy an instance of your application featuring new code along with the old, stable instances\. That tests the update in production\.
 
 
@@ -107,7 +107,7 @@ There are intermediate steps between a single\-threaded component and distribute
 
 ### Multithreading
 
-The first and very common advance towards scaling a component is running multiple execution threads\. That attempts to utilize all the available CPU cores or memory bandwidth but [requires](http://ithare.com/multi-threading-at-business-logic-level-is-considered-harmful/) protecting the data from simultaneous access by several threads, which in turn may cause deadlocks\.
+The first and very common advance towards scaling a component is running multiple execution threads\. That attempts to utilize all the available CPU cores or memory bandwidth but [requires](http://ithare.com/multi-threading-at-business-logic-level-is-considered-harmful/) protecting the data from simultaneous access from several threads, which in turn may cause deadlocks\.
 
 | *Benefits* | *Drawbacks* |
 | --- | --- |
@@ -130,20 +130,20 @@ Finally, instances of the subsystem may be distributed over a network to achieve
 | --- | --- |
 | <span class="book-green">Full</span> scalability | <span class="book-red">No</span> shared data access |
 | <span class="book-green">Full</span> fault isolation | <span class="book-red">Hard</span> multi\-instance debugging |
-|  | <span class="book-red">No good way to synchronize state of the instances</span> |
+|  | <span class="book-red">No good way to synchronize states of the instances</span> |
 
 ## Examples
 
-Sharding can often be transparently applied to individual components of [data processing]({{< relref "../foundations-of-software-architecture/four-kinds-of-software.md#streaming-continuous-raw-data-input" >}}) systems\. That does not hold for [control systems]({{< relref "../foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}}) which need centralized decisions based on the modeled system’s state, which must be accessible as a whole, thus the main business logic that owns the model \(last known state of the system\) cannot be sharded\.
+Sharding can often be transparently applied to individual components of [data processing]({{< relref "../foundations-of-software-architecture/four-kinds-of-software.md#streaming-continuous-raw-data-input" >}}) systems\. That does not hold for [control systems]({{< relref "../foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}}) which make centralized decisions based on the modeled system’s state, which must be accessible as a whole, thus the main business logic that owns the model \(last known state of the system\) cannot be sharded\.
 
-Many kinds of *Shards* require an external coordinating module \([*Load Balancer*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}})\) to assign tasks to the individual instances\. In some cases the coordinator may be implicit, e\.g\. an OS socket or scheduler\. In others it may be replicated and co\-located with each client \(as an [*Ambassador*]({{< relref "../extension-metapatterns/proxy.md#on-the-client-side-ambassador" >}})\)\.
+Many kinds of *Shards* require an external coordinating component \([*Load Balancer*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}})\) to assign tasks to the individual instances\. In some cases the coordinator may be implicit, e\.g\. an OS socket or scheduler\. In others it may be replicated and co\-located with each client \(as an [*Ambassador*]({{< relref "../extension-metapatterns/proxy.md#on-the-client-side-ambassador" >}})\)\.
 
 Shards usually don’t communicate with each other directly\. The common exception is [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}}) which includes distributed databases and [*actor*]({{< relref "../implementation-metapatterns/mesh.md#actors" >}}) systems that explicitly rely on communication between the instances\.
 
 There are several subtypes of sharding that differ in the way they handle state:
 
-- [*Shards* or *Partitions*]({{< relref "#persistent-slice-sharding-shards-partitions-multitenancy-cells-amazon-definition" >}}) are permanents with a unique subset of the system’s data\.
-- [*Replicas*]({{< relref "#persistent-copy-replica" >}}) are permanents holding copies of the same data\.
+- [*Shards* or *Partitions*]({{< relref "#persistent-slice-sharding-shards-partitions-multitenancy-cells-amazon-definition" >}}) are long\-lived service instances which own unique subsets of the system’s data\.
+- [*Replicas*]({{< relref "#persistent-copy-replica" >}}) are also long\-lived but all of them hold copies of the same dataset\.
 - [*Stateless Instances*]({{< relref "#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}}) reset their state after handling a request\.
 - [*Actors*]({{< relref "#temporary-state-create-on-demand-actors" >}}) are stateful but exist only for the duration of a client’s session\.
 
@@ -160,26 +160,26 @@ There are several subtypes of sharding that differ in the way they handle state:
 </a>
 </figure>
 
-*Shards* \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] own the non\-overlapping parts of the system’s state\. For example, a sharded phonebook \(or DNS\) would use one shard for all contacts with initial “A”, another shard for contacts with initial “B” and so on \(in reality they use hashes \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\]\)\. A large wiki or forum may run several servers, each storing a subset of the articles\. This is proper [*sharding*](https://learn.microsoft.com/en-us/azure/architecture/patterns/sharding), which is also called *partitioning* \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\] in the world of databases\.
+*Shards* \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] own non\-overlapping slices of the system’s state\. For example, a sharded phonebook \(or DNS\) would use one shard for all contacts with initial “A”, another shard for contacts with initial “B”, and so on \(in reality they use hashes \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\]\)\. A large wiki or forum may run several servers, each storing a subset of the articles\. This is proper [*sharding*](https://learn.microsoft.com/en-us/azure/architecture/patterns/sharding), which is also called *partitioning* \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\] in the world of databases\.
 
 <aside>
 
-> Names are not evenly distributed among letters\. Many names start with A but few start with Q\. If we use the first letter of a user’s name to assign them to a shard, the shard that serves users whose names start with A will be much more loaded than the one responsible for the letter Q\. Therefore, real\-world systems rely on *hashing* \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\] – calculation of a *checksum* of the user’s name which yields a seemingly random number\. Then we divide the checksum by the total number of shards we have and use the remainder as the id of the shard that has the user’s data\. For example, CRC16\(“Bender”\) = 52722\. If we have 10 shards, Bender goes to \(52722 % 10 = 2\) the 3rd one\. 
+> Names are not evenly distributed across the letters of the alphabet\. Many names start with A but few start with Q\. If we use the first letter of a user’s name to assign them to a shard, the shard that serves users whose names start with A will be much more loaded than the one responsible for the letter Q\. Therefore, real\-world systems rely on *hashing* \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\] – calculation of a *checksum* of the user’s name which yields a seemingly random number\. Then we divide the checksum by the total number of shards we have and use the remainder as the id of the shard that has the user’s data\. For example, CRC16\(“Bender”\) = 52722\. If we have 10 shards, Bender goes to \(52722 % 10 = 2\) the 3rd one\. 
 
 </aside>
 
 Another use of *Shards* is when a service provider allocates a whole shard to each of its clients to grant them data isolation, stable performance, and security\. This approach is contrasted against a cheaper option of [*Multitenancy*](https://en.wikipedia.org/wiki/Multitenancy) where several client organizations \(tenants\) share a shard\. In that case different shards may be customized to vary in functionality, available resources, and [SLA](https://en.wikipedia.org/wiki/Service-level_agreement) to provide better service to higher\-paying tenants\.
 
-*Cells*, according to the [Amazon terminology](https://docs.aws.amazon.com/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/what-is-a-cell-based-architecture.html), are copies of a whole system deployed to several data centers, each serving local users\. The locality improves latency and saves on Internet traffic while having multiple instances of the system up and running provides availability\. The downside of this approach is its complexity and amount of global traffic needed to keep the *Cells* in sync\.
+*Cells*, according to the [Amazon terminology](https://docs.aws.amazon.com/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/what-is-a-cell-based-architecture.html), are copies of a whole system deployed to several data centers, each serving local users\. The locality improves latency and saves on Internet traffic while having multiple instances of the system up and running provides availability\. The downside of this approach is its complexity and the amount of global traffic needed to keep the *Cells* in sync\.
 
-It usually takes a stand\-alone [*Sharding Proxy*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) – a kind of *Load Balancer* – to route client’s requests to the shard that owns its data\. However, there are other options \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\]:
+It usually takes a stand\-alone [*Sharding Proxy*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) – a kind of *Load Balancer* – to route a client’s requests to the shard that owns its data\. However, there are other options \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\]:
 
-- The *Sharding Proxy* may be deployed as a client\-side [*Ambassador*]({{< relref "../extension-metapatterns/proxy.md#on-the-client-side-ambassador" >}}) to avoid the extra network hop\. This approach requires a means for keeping the *Ambassadors* up\-to\-date with your system’s code\.
-- You can publish your *sharding function* \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] and the number of shards in your public API to let your clients choose which shard to access without your help\. That may work for internal clients implemented by your or neighbor team\.
-- Finally, each shard may be able to forward client requests to any other shard – making each shard into a *Sharding Proxy* and an entry point into the resulting [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}})\. If your client accesses a wrong shard, the request is still served, though a little slower, through being forwarded between the shards \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\]\.
+- The *Sharding Proxy* may be deployed to each client as a client\-side [*Ambassador*]({{< relref "../extension-metapatterns/proxy.md#on-the-client-side-ambassador" >}}) to avoid the extra network hop\. This approach requires a means for keeping the *Ambassadors* up\-to\-date with your system’s code\.
+- You can publish your *sharding function* \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] and the number of shards in your public API to let your clients choose which shard to access without your help\. That may work for internal clients implemented by your own or a neighbor team\.
+- Finally, each shard may be able to forward client requests to any other shard – making each shard into a kind of *Sharding Proxy* and an entry point into the resulting [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}})\. If your client accesses a wrong shard, the request is still served, though a little slower, through being forwarded between the shards \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\]\.
 
 
-*Sharding* solves scaling of an application both in regard to the number of its clients and to the size of its data\. However, it works well only if each client’s data is independent from other clients\. Moreover, if one of the shards crashes, the information it owns becomes unavailable unless *replication* \(see below\) has been set up as well\.
+*Sharding* solves scaling of an application both in regard to the number of its clients and to the size of its data\. However, it works well only if each client’s data is independent from other clients\. Moreover, if one of the shards crashes, the information it owns becomes unavailable unless [*replication*]({{< relref "#persistent-copy-replica" >}}) \(see below\) has been set up as well\.
 
 ### Persistent copy: Replica
 
@@ -193,13 +193,13 @@ It usually takes a stand\-alone [*Sharding Proxy*]({{< relref "../extension-meta
 </a>
 </figure>
 
-*Replicas* \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] are identical copies of a stateful \(sub\)system\. Replication improves the system’s throughput \(as each replica serves client requests\) and its stability \(as a fault in one replica does not affect others which may quickly take up the failed replica’s clients\)\. Replicas may also be used to improve tail latency through [*Request Hedging*](https://grpc.io/docs/guides/request-hedging/): each request is sent to several replicas in parallel and you use the first response which you receive\. Mission\-critical hardware [runs three copies](https://en.wikipedia.org/wiki/Triple_modular_redundancy) and relies on majority voting for computation results\.
+*Replicas* \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] are identical copies of a stateful \(sub\)system\. Replication improves the system’s throughput \(as each replica serves client requests\) and its stability \(as a fault in one replica does not affect others which may quickly take up the failed replica’s clients\)\. Replicas may also be used to improve tail latency through [*Request Hedging*](https://grpc.io/docs/guides/request-hedging/): each request is sent to several replicas in parallel and the first response received is returned to the client\. Mission\-critical hardware [runs as three copies](https://en.wikipedia.org/wiki/Triple_modular_redundancy) and relies on majority voting for computation results\.
 
-The hard part comes from the need to keep the replicas’ data in sync\. The ordinary way is to let the replicas talk to each other on each data update\. If the communication is synchronous that may greatly slow down the processing of requests, while if it is asynchronous the system suffers data conflicts when multiple clients change the same value simultaneously\. Synchronization code is quite complex, thus you will likely use a ready\-made [*Space\-Based Architecture*]({{< relref "../implementation-metapatterns/mesh.md#space-based-architecture" >}}) framework instead of writing one of your own\.
+The hard part comes from the need to keep the replicas’ data in sync\. The ordinary way is to let the replicas talk to each other on each data update\. If the communication is synchronous that may greatly slow down the processing of requests, yet if it is asynchronous the system suffers data conflicts when multiple clients change the same value simultaneously\. Synchronization code is quite complex, thus you will likely use a ready\-made [*Space\-Based Architecture*]({{< relref "../implementation-metapatterns/mesh.md#space-based-architecture" >}}) framework instead of writing one of your own\.
 
-Another option found in the field is keeping the replicas only loosely identical\. That happens when isolated cache servers make a [*Caching Layer*]({{< relref "../extension-metapatterns/proxy.md#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}})\. As clients tend to send similar requests, the data inside cache is more or less the same by the law of large numbers\.
+Another option found in the field is keeping the replicas only loosely identical\. That happens when isolated cache servers make a [*Caching Layer*]({{< relref "../extension-metapatterns/proxy.md#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}})\. As clients tend to send similar requests, the data inside each *cache* is more or less the same by the law of large numbers\.
 
-And if your traffic is read\-heavy, you may turn to [*Polyglot Persistence*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md" >}}) by segregating your replicas into the roles of a fully\-functional *leader* \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\] and [derived, read\-only *followers*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#read-only-replicas" >}})\. The followers serve only the read requests while the leader processes the write requests which make it update its data and broadcast the changes to all its followers\. And if the leader dies, one of its followers is elected to become a new leader\. As a refinement of this idea, the code of the service itself may be separated into write \(*command*\) and read \(*query*\) services \([*Command Query Responsibility Segregation*]({{< relref "../fragmented-metapatterns/layered-services.md#command-query-responsibility-segregation-cqrs" >}}) aka *CQRS*\)\.
+And if your traffic is read\-heavy, you may turn to [*Polyglot Persistence*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md" >}}) by segregating your replicas into the roles of a fully\-functional *leader* \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\] and [derived, read\-only *followers*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#read-only-replicas" >}})\. The followers serve only the read requests while the leader processes the write requests which make it update its data and broadcast the changes to all its followers\. And if the leader dies, one of its followers is elected to become a new leader\. As a refinement of this idea, the code of the service itself may be separated into write \(*command*\) and read \(*query*\) services \(see [*Command Query Responsibility Segregation*]({{< relref "../fragmented-metapatterns/layered-services.md#command-query-responsibility-segregation-cqrs" >}}) aka *CQRS*\)\.
 
 Finally, you can mix sharding and replication to make sure that the data of each shard is replicated, either in whole among identical components \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] or piecemeal all over the system \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\]\. That achieves fault tolerance for volumes of data too large to store unsharded\.
 
@@ -215,11 +215,11 @@ Finally, you can mix sharding and replication to make sure that the data of each
 </a>
 </figure>
 
-A predefined number \(*pool* \[[POSA3]({{< relref "../appendices/books-referenced.md#posa3" >}})\]\) of instances \(*workers*\) is created during the initialization of the system \(*Work Queue* \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\]\)\. When the system receives a task, a [*Load Balancer*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) assigns it to one of the idle instances, called *Replicated Load\-Balanced Services* \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\], from the pool\. As soon as the instance finishes processing its task it returns to the pool and its state is reset\. A well\-known example of this pattern is [FastCGI](https://en.wikipedia.org/wiki/FastCGI)\.
+A predefined number \(*pool* \[[POSA3]({{< relref "../appendices/books-referenced.md#posa3" >}})\]\) of instances \(*workers*\) is created during the initialization of the system \(sometimes called a *Work Queue* \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\]\)\. When the system receives a task, a [*Load Balancer*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) assigns it to one of the idle instances, called *Replicated Load\-Balanced Services* \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\], from the pool\. As soon as the instance finishes processing its task it returns to the pool and its state is reset\. A well\-known example of this pattern is [FastCGI](https://en.wikipedia.org/wiki/FastCGI)\.
 
-This approach allows for rapid allocation of a worker to any incoming task, but it uses a lot of resources even when there are no requests to serve and the system may still be overwhelmed at peak load\. Moreover, a [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) \(database or file storage\) is usually involved for the sake of persistence, thus limiting the pattern’s scalability\.
+This approach allows for rapid allocation of a worker to any incoming task, but it uses a lot of resources even when there are no requests to serve, yet the system may still be overwhelmed at peak load\. Moreover, a [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) \(database or file storage\) is usually involved for the sake of persistence, further limiting the pattern’s scalability\.
 
-Many cloud services implement dynamic pools, the number of instances \([*lambdas*](https://jesseduffield.com/Notes-On-Lambda/)\) growing and shrinking according to the overall load: if all the current instances are busy serving user requests, new instances are created and added to the pool\. If some of the instances are idle for a while, they are destroyed\. Dynamic pooling is often implemented through [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}}), as in [*Microservices*]({{< relref "../implementation-metapatterns/mesh.md#service-mesh" >}}) or [*Space\-Based Architecture*]({{< relref "../implementation-metapatterns/mesh.md#space-based-architecture" >}})\.
+Many cloud services implement *dynamic* pools, the number of instances \([*lambdas*](https://jesseduffield.com/Notes-On-Lambda/)\) growing and shrinking according to the overall load: if all the current instances are busy serving user requests, new instances are created and added to the pool\. If some of the instances are idle for a while, they are destroyed\. Dynamic pooling is often implemented through [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}}), as in [*Microservices*]({{< relref "../implementation-metapatterns/mesh.md#service-mesh" >}}) or [*Space\-Based Architecture*]({{< relref "../implementation-metapatterns/mesh.md#space-based-architecture" >}})\.
 
 ### Temporary state: Create on Demand, [Actors]({{< relref "../basic-metapatterns/services.md#actors" >}})
 
@@ -233,9 +233,9 @@ Many cloud services implement dynamic pools, the number of instances \([*lambdas
 </a>
 </figure>
 
-An instance is created for serving an incoming request and is destroyed when the request processing is finished\. Upon creation it is initialized with all the client\-related data to be able to interact with the client without much help from the backend\. Examples include running web applications in clients’ browsers and client\-dedicated [*actors*]({{< relref "../basic-metapatterns/services.md#class-like-actors" >}}) in backends of instant messengers\.
+An instance is created for supporting an incoming client session and is destroyed when the session is closed\. Upon creation it is initialized with all the client\-related data which makes the instance able to interact with its client without much help from the backend\. Examples include web applications that run in users’ browsers and user\-dedicated [*actors*]({{< relref "../basic-metapatterns/services.md#class-like-actors" >}}) in backends of instant messengers\.
 
-This approach provides perfect elasticity and flexibility of deployment at the cost of slower session establishment and it usually relies on an external shared layer for persistence: instances of a frontend are initialized from and send their updates to a backend which itself uses a database\.
+This approach provides responsiveness, perfect elasticity, and flexibility of deployment at the cost of slower session establishment and it usually relies on an external shared layer for persistence: instances of a frontend are initialized from and send their updates to a backend which itself uses a database\.
 
 ## Evolutions
 
@@ -245,8 +245,8 @@ There are two kinds of evolutions for *Shards*: those intrinsic to the component
 
 When *Shards* are applied to a single component, which is a [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}), the resulting \(sub\)system follows most of the [evolutions of *Monolith*]({{< relref "../basic-metapatterns/monolith.md#evolutions" >}}):
 
-- [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}) allow for the parts of the system to differ in *qualities* \([*forces*]({{< relref "../foundations-of-software-architecture/forces--asynchronicity--and-distribution.md#conflicting-forces" >}})\) and [deployment]({{< relref "../foundations-of-software-architecture/forces--asynchronicity--and-distribution.md#distribution" >}})\. Various third\-party components can be integrated and the code becomes better structured\.
-- [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) or [*Pipeline*]({{< relref "../basic-metapatterns/pipeline.md" >}}) help to distribute the work among multiple teams and may decrease the project’s complexity if the division yields loosely coupled components\.
+- [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}) allow for the parts of the system to [differ]({{< relref "../foundations-of-software-architecture/forces--asynchronicity--and-distribution.md#conflicting-forces" >}}) in *qualities*, technologies, and [deployment]({{< relref "../foundations-of-software-architecture/forces--asynchronicity--and-distribution.md#distribution" >}})\. Various third\-party components can be integrated and the code becomes better structured\.
+- [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) or [*Pipeline*]({{< relref "../basic-metapatterns/pipeline.md" >}}) help to distribute the work among multiple teams and may decrease the project’s complexity if the division results in loosely coupled components\.
 - [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) and its subtypes, namely [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) and [*Scripts*]({{< relref "../implementation-metapatterns/microkernel.md#interpreter-script-domain-specific-language-dsl" >}}), make the system more adaptable\.
 
 
@@ -260,11 +260,11 @@ When *Shards* are applied to a single component, which is a [*Monolith*]({{< rel
 </a>
 </figure>
 
-There is a benefit of such transformations which is important in the context of *Shards*: in many cases the resulting components can be scaled independently, arranging for a better resource utilization by the system \(when compared to scaling a *Monolith*\)\. However, scaling individual services usually requires a [*Load Balancer*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) or [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) to distribute requests over the scaled instances\.
+There is a benefit of such transformations which is important in the context of *Shards*: in many cases the resulting components can be scaled independently, arranging for a better resource utilization by the system when compared to scaling a *Monolith*\. However, scaling individual services usually requires a [*Load Balancer*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) or [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) to distribute requests among the scaled instances\.
 
 ### [Evolutions that share data]({{< relref "../appendices/evolutions-of-architectures/evolutions-of-shards-that-share-data.md" >}})
 
-The issue peculiar to *Shards* is that of coordinating deployed instances, especially if their data becomes coupled\. The most direct solution is to let the instances access the shared data:
+The issue peculiar to *Shards* is that of coordinating deployed instances, especially if their data becomes coupled\. The most direct solution is to let every instance access the shared data:
 
 - If the whole dataset needs to be shared, it can be split into a [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) layer\. 
 
@@ -320,7 +320,7 @@ The issue peculiar to *Shards* is that of coordinating deployed instances, espec
 
 ### [Evolutions that share logic]({{< relref "../appendices/evolutions-of-architectures/evolutions-of-shards-that-share-logic.md" >}})
 
-Other cases are better solved by extracting the logic that manipulates multiple shards:
+Other cases are better solved by extracting the logic that couples the shards:
 
 - Splitting a [service]({{< relref "../basic-metapatterns/services.md" >}}) \(as discussed above\) yields a component that represents both shared data and shared logic\.
 - Adding a [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) lets the shards communicate with each other without maintaining direct connections\. It also may do housekeeping: error recovery, replication, and scaling\.

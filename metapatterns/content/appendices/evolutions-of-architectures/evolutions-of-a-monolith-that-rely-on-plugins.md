@@ -9,10 +9,10 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 # Evolutions of a Monolith that rely on Plugins {anchor=false}
 
-The last group of evolutions which we review does not really change the monolithic nature of the application\. Instead, its goal is to improve the *customizability* of the [*Monolith*]({{< relref "../../basic-metapatterns/monolith.md" >}}):
+The last group of evolutions which we will review does not really change the monolithic nature of the application\. Instead, its goal is to improve the *customizability* of the [*Monolith*]({{< relref "../../basic-metapatterns/monolith.md" >}}):
 
-- Vanilla [*Plugins*]({{< relref "../../implementation-metapatterns/plugins.md" >}}) is the most direct approach which relies on replaceable bits of logic\.
-- [*Hexagonal Architecture*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md" >}}) is a subtype of *Plugins* which is all about isolating the main code from any third\-party components it uses\.
+- Vanilla [*Plugins*]({{< relref "../../implementation-metapatterns/plugins.md" >}}) are the most direct approach which relies on tailorable bits of logic\.
+- [*Hexagonal Architecture*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md" >}}) is a subtype of *Plugins* which is all about isolating the main code from any third\-party components which it uses\.
 - [*Scripts*]({{< relref "../../implementation-metapatterns/microkernel.md#interpreter-script-domain-specific-language-dsl" >}}) is a kind of [*Microkernel*]({{< relref "../../implementation-metapatterns/microkernel.md" >}}) – yet another subtype of *Plugins* – which gives users of the system full control over its behavior\.
 
 
@@ -38,14 +38,14 @@ The last group of evolutions which we review does not really change the monolith
 
 <ins>Pros</ins>: 
 
-- The system can be modified by internal and external programmers who don’t know its internal details\.
+- The system’s behavior can be modified by internal and external programmers who don’t know its internal details\.
 - Customized versions become much easier to release and support\.
 
 
 <ins>Cons</ins>: 
 
-- Extensive changes may be required to expose the tunable aspects of the system\.
-- Testability becomes poor because of the number of possible variants\.
+- Extensive changes in the code may be required to expose the tunable aspects of the system\.
+- Testability becomes poor because of the large number of possible variants\.
 - Performance is likely to degrade\.
 
 
@@ -63,11 +63,11 @@ The last group of evolutions which we review does not really change the monolith
 
 <ins>Patterns</ins>: [Hexagonal Architecture]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md" >}}) \([Plugins]({{< relref "../../implementation-metapatterns/plugins.md" >}})\)\.
 
-<ins>Goal</ins>: isolate the business logic from external dependencies\.
+<ins>Goal</ins>: isolate the business logic from its external dependencies\.
 
-<ins>Prerequisite</ins>: there are third\-party or unstable components in the system\.
+<ins>Prerequisite</ins>: there are third\-party or frequently changing components in the system\.
 
-The main business logic will communicate with all the external components through APIs or SPIs defined in the terms of the business logic\. This way it will not depend on anything at all and any component will be replaceable with another implementation or a [stub/mock](https://stackoverflow.com/questions/3459287/whats-the-difference-between-a-mock-stub)\.
+The main business logic will communicate with any external component through an API or SPI defined in the terms of the business logic itself\. This way it will not depend on anything at all, and any component will be replaceable with another implementation or a [stub/mock](https://stackoverflow.com/questions/3459287/whats-the-difference-between-a-mock-stub)\.
 
 <ins>Pros</ins>: 
 
@@ -101,7 +101,7 @@ The main business logic will communicate with all the external components throug
 
 <ins>Prerequisite</ins>: the domain is representable in high\-level terms\.
 
-*Interpreter* lets the users develop high\-level business logic from scratch by programming interactions of pre\-defined building blocks which are implemented in the core of the system\. That provides unparalleled flexibility at the cost of performance and design complexity\.
+*Interpreter* lets the users develop high\-level business logic from scratch by programming interactions of pre\-defined building blocks, which are implemented in the core of the system\. That provides unparalleled flexibility at the cost of degraded performance and design complexity\.
 
 <ins>Pros</ins>: 
 
@@ -112,5 +112,5 @@ The main business logic will communicate with all the external components throug
 <ins>Cons</ins>: 
 
 - Requires much effort to design correctly\.
-- There may be a heavy performance penalty if the API is too fine\-grained\.
+- There may be a heavy performance penalty if the API is overly fine\-grained\.
 - Testability may be an issue\.

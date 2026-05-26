@@ -21,9 +21,9 @@ Any software system which we encounter is very likely to be too complex to compr
 
 Any system is comprised of *concepts* – notions defined in terms of other concepts\. For example, if you are implementing a phonebook, you deal with *first* and *last names*, *numbers*, *sorting*, and *search*, which one must always keep in mind for any phonebook\-related development task – just because requirements for the phonebook are described in terms of those concepts and their relations\.
 
-In the code high\-level concepts are embodied as services, modules or directories while lower\-level concepts match to classes, API methods or source files\.
+In code high\-level concepts are embodied as services, modules, or directories while lower\-level concepts match to individual classes, API methods, or source files\.
 
-Concepts are important because it is their number \(or the number of the corresponding classes and methods\) that defines the *complexity* of a system – the cognitive load which developers of the system face\. If the programmers grasp the behavior of a component they work on in detail they tend to [become extremely productive](https://www.quora.com/What-are-some-habits-of-10x-programmers) and are often able to find [simple solutions for seemingly complex tasks](https://realmensch.org/2017/08/25/the-parable-of-the-two-programmers/)\. Otherwise the development is slow and requires extensive testing because the programmers are [unsure of how their changes affect the system’s behavior](https://news.ycombinator.com/item?id=18442941)\.
+Concepts are important because it is their quantity \(or the number of the corresponding classes and methods\) that defines the *complexity* of a system – the cognitive load which developers of the system face\. If the programmers grasp the behavior of a component they work on in detail they tend to [become extremely productive](https://www.quora.com/What-are-some-habits-of-10x-programmers) and are often able to find [simple solutions for seemingly complex tasks](https://realmensch.org/2017/08/25/the-parable-of-the-two-programmers/)\. Otherwise the development is slow and requires extensive testing because the programmers are [unsure of how their changes affect the system’s behavior](https://news.ycombinator.com/item?id=18442941)\.
 
 <figure>
 <a href="/diagrams/Intro/Modules-1.png">
@@ -62,7 +62,7 @@ This diagram has several important points to note:
 
 Here we see how introducing modularity applies the [divide and conquer](https://en.wikipedia.org/wiki/Divide-and-conquer_algorithm) approach to lessen the cognitive load of working on any part of a system at the cost of a small increase in the total amount of work to be done\.
 
-In our phonebook example the peculiarities \(including case sensitivity\) of the locale\-aware string comparison and alphabetical sorting of contact names should better be kept behind a simple string comparison interface to relieve the programmer of the phonebook engine of the complexity of supporting foreign languages\.
+In our phonebook example, the peculiarities \(including case sensitivity\) of the locale\-aware string comparison and alphabetical sorting of contact names would be better kept behind a simple string comparison interface in order to relieve the programmer of the phonebook engine of the complexity of supporting multiple languages\.
 
 Modules represent *bounded contexts* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] – areas of the knowledge about a system that operate distinct sets of terms\. In the case of phonebook the *collation* and *case sensitivity* do not matter for the phonebook engine – they are defined only in the context of language support\. On the other hand, *matching a contact by number* is not defined in the language support module – that term exists only in the phonebook engine\. It is the complexity of the current bounded context that a programmer struggles with\.
 
@@ -120,7 +120,7 @@ Splitting a cohesive module \(a cluster of concepts that interact with each othe
 <figcaption>Figure 5: The lower module has low cohesion.</figcaption>
 </figure>
 
-What happens if we put several clusters of concepts in the same module? Nothing too evil happens with small modules – the module gets a higher complexity than each of its constituents, but lower than their sum\. In practice, multiple unrelated functions are often gathered in a ‘utils’ or ‘tools’ file or directory to alleviate *operational complexity*\.
+What happens if we put several clusters of concepts into the same module? Nothing too evil if the clusters are small – the module acquires a higher complexity than each of its constituents, but lower overall than their sum\. In practice, multiple unrelated functions are often gathered in a ‘utils’ or ‘tools’ file or directory to alleviate *operational complexity*\.
 
 ## Development and operational complexity
 
@@ -140,7 +140,7 @@ When there are hundreds or thousands of modules deployed nobody knows the answer
 
 ## Composition of modules
 
-A module may encapsulate not only individual concepts, but even other modules\. That is not surprising as an OOP class is a kind of module – it also has public methods and private members\. Hiding a module inside another one removes it from the global scope, decreasing the operational complexity of the system – now it is not the system’s architect’s responsibility but the responsibility of the maintainer of the outer module who cares about the inner module\. On one hand, that builds a manageable hierarchy in both the organization and the code\. On the other hand, code reuse and many optimizations become nearly impossible as internal modules are hardly known organization\-wide:
+A module may encapsulate not only individual concepts, but even other modules\. That is not surprising as an OOP class is a kind of module – it also has public methods and private members\. Hiding a module inside another one removes it from the global scope, decreasing the operational complexity of the system – now it is not the system’s architect but the maintainer of the outer module who cares about the inner module\. On one hand, that builds a manageable hierarchy in both the organization and the code\. On the other hand, code reuse and many optimizations become nearly impossible as internal modules are hardly known organization\-wide:
 
 <figure>
 <a href="/diagrams/Intro/Modules-6.png">
@@ -168,7 +168,7 @@ If the functionality of our internal module is needed by our clients, we have tw
 <figcaption>Figure 7: Forwarding the API of an internal module.</figcaption>
 </figure>
 
-We can add the API of a module which we encapsulate to our public API and forward its calls to the internal module\. However, that increases the complexity and lowers the cohesion of our module – now each client of our module is also exposed to the details of the methods of the module we have encapsulated even if they are not interested in using it\.
+We can add the API of a module which we encapsulate to our public API and forward its calls to the internal module\. However, that increases the complexity and lowers the cohesion of our own module – now each client of our module is also exposed to the details of the methods of the module which we have encapsulated whether they are used or not\.
 
 <figure>
 <a href="/diagrams/Intro/Modules-8.png">

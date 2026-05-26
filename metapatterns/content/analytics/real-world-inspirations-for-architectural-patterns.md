@@ -9,15 +9,15 @@ images = ["/diagrams/Web/og/Real-world.png"]
 
 # Real\-world inspirations for architectural patterns {anchor=false}
 
-As architectural patterns are usually technology\-independent, they must mostly be shaped by the foundational principles of software engineering\. And because the same principles are likely at work at every level of a software system, we may expect similar structures to appear on many levels of software, given similar circumstances – which is not always attainable, for the system\-wide scope \(which means that there are multiple clients and libraries\) and distributed nature \(which deals with faults of individual components\) of many patterns of system architecture don’t have direct counterparts in smaller single\-process software\. Thus we expect to observe a fractal nature for the more generic patterns while narrowly specialized ones are present at only one or two scopes of software design\.
+As architectural patterns are generally technology\-independent, they must mostly be shaped by the foundational principles of software engineering\. And because the same principles are likely at work at every level of a software system, we may expect similar structures to appear on many levels of software, given similar circumstances – which are not always attainable, for the system\-wide scope \(which means that there are multiple clients and libraries\) and distributed nature \(which deals with faults of individual components\) of many patterns of systems architecture don’t have direct counterparts in smaller single\-process software\. Thus we expect to observe the fractal nature for the more generic patterns while narrowly specialized ones are present at only one or two scopes of software design\.
 
-Another thought to consider is that it’s not in human nature to invent something new – we are much more adept in imitating and combining whatever we see around us\. That is why it’s so hard to find a genuine xenopsychology in literature or movies – to the extent that the eponymous Alien is just an overgrown [parasitoid wasp](https://en.wikipedia.org/wiki/Parasitoid_wasp)\. Hence there is another pathway to pursue – identifying the patterns which we know from software engineering in the world around us, as the authors of \[[POSA2]({{< relref "../appendices/books-referenced.md#posa2" >}})\] did decades ago\.
+Another thought to consider is that it’s not in human nature to invent something entirely new – we are much more adept in imitating and combining whatever we see around us\. That is why it’s so hard to find a genuine xenopsychology in literature or movies – to the extent that the eponymous Alien is just an overgrown [parasitoid wasp](https://en.wikipedia.org/wiki/Parasitoid_wasp)\. Hence there is another pathway to pursue – identifying the patterns which we know from software engineering in the world around us, as the authors of \[[POSA2]({{< relref "../appendices/books-referenced.md#posa2" >}})\] did decades ago\.
 
 Let’s go\!
 
 ## [Basic metapatterns]({{< relref "../basic-metapatterns/_index.md" >}})
 
-The [basic patterns]({{< relref "../basic-metapatterns/_index.md" >}}) lay the foundation for any system by paving ways to *divide* it into components to *conquer* its [complexity]({{< relref "../foundations-of-software-architecture/modules-and-complexity.md" >}})\. We are going to observe them all around:
+The [basic topologies]({{< relref "../basic-metapatterns/_index.md" >}}) lay the foundation for any system by paving ways to *divide* it into components to *conquer* its [complexity]({{< relref "../foundations-of-software-architecture/modules-and-complexity.md" >}})\. We are going to observe them everywhere around us:
 
 ### [Monolith]({{< relref "../basic-metapatterns/monolith.md" >}})
 
@@ -31,14 +31,14 @@ The [basic patterns]({{< relref "../basic-metapatterns/_index.md" >}}) lay the f
 </a>
 </figure>
 
-[*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) means encapsulation – we use the thing without looking inside:
+[*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) stands for encapsulation – we use the thing without looking inside:
 
 - You interact with your dog \(or your smartphone\) through their interface without thinking of their internals\.
 - A function exposes its name, arguments and, probably, some comments\. The implementation is hidden from its users\.
-- An object has a list of public methods\.
+- An object has a set of public methods\.
 - A module or a library exports several functions for use by its clients\.
 - A program is configured through its command line parameters and managed through its [CLI](https://en.wikipedia.org/wiki/Command-line_interface)\. We don’t care how the Linux utilities \(e\.g\. *top* or *cat*\) work – we just run them\.
-- A whole distributed system may be hidden behind a web page in your browser – and you never imagine its complexity unless you have worked on something of a kind\.
+- A whole distributed system may be [hidden behind](https://comic.browserling.com/full-stack.png) a web page in your browser – and you never imagine its complexity unless you have worked on something of a kind\.
 
 
 ### [Shards]({{< relref "../basic-metapatterns/shards.md" >}})
@@ -57,10 +57,10 @@ The [basic patterns]({{< relref "../basic-metapatterns/_index.md" >}}) lay the f
 
 - A company employs many programmers to accelerate development of its projects\.
 - Carrying two mobile phones from different operators fits this pattern as well\.
-- This is how they make modern processors more powerful: by adding more cores, not by running them faster\.
+- This is how they make modern processors more powerful: by adding more cores, not by clocking them faster\.
 - Objects in OOP are the perfect example of having multiple instances that vary in their data\.
 - Running several shells in Linux is a kind of sharding\.
-- A client application of a multi\-user online game is a shard\.
+- A client application of a multi\-user online game is a shard as well\.
 
 
 ### [Layers]({{< relref "../basic-metapatterns/layers.md" >}})
@@ -97,12 +97,12 @@ The [basic patterns]({{< relref "../basic-metapatterns/_index.md" >}}) lay the f
 
 [*Services*]({{< relref "../basic-metapatterns/services.md" >}}) boil down to composition and [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns):
 
-- We have legs, arms, and other specialized members\.
-- A gadget contains specialized chips for activities it supports\.
-- \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] advocates for an object to incorporate smaller objects \(composition over inheritance\)\.
+- We have legs, arms, and other narrowly specialized members\.
+- A gadget contains specialized chips for the activities which it supports\.
+- \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] advocates for an object to incorporate smaller, specialized objects \(*composition over inheritance*\)\.
 - Applications often delegate parts of their logic to specialized modules or libraries\.
 - An OS dedicates a driver for each piece of hardware installed\. Moreover, it provides many tools to its users – instead of tackling all the user needs within the kernel\.
-- \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] describes the way to subdivide a large system into loosely coupled components\.
+- \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] describes the way to subdivide a large system into \(hopefully\) loosely coupled components\.
 
 
 ### [Pipeline]({{< relref "../basic-metapatterns/pipeline.md" >}})
@@ -121,15 +121,15 @@ The [basic patterns]({{< relref "../basic-metapatterns/_index.md" >}}) lay the f
 
 - The pattern got its name from real\-world plumbing\.
 - You’ll see similar arrangements in [cellular metabolism](https://en.wikipedia.org/wiki/Metabolism)\.
-- It is the basis for [functional programming]({{< relref "../foundations-of-software-architecture/arranging-communication/programming-and-architectural-paradigms.md#functional-decentralized-streaming-paradigm--choreography" >}})\.
-- Linux command line tools are often skillfully composed into pipelines\.
+- It is the foundation of [functional programming]({{< relref "../foundations-of-software-architecture/arranging-communication/programming-and-architectural-paradigms.md#functional-decentralized-streaming-paradigm--choreography" >}})\.
+- Linux command line tools are often skillfully chained into pipelines\.
 - Hardware is full of pipelines: from [CPU](https://en.wikipedia.org/wiki/Instruction_pipelining) and [GPU](https://en.wikipedia.org/wiki/Graphics_pipeline) to audio and video processing\.
 - Finally, a UI wizard passes its users through a series of screens\.
 
 
 ## [Extension metapatterns]({{< relref "../extension-metapatterns/_index.md" >}})
 
-An [extension pattern]({{< relref "../extension-metapatterns/_index.md" >}}) encapsulates one or two aspects of the system’s implementation\. It may appear only on design levels which have those particular aspects:
+An [extension pattern]({{< relref "../extension-metapatterns/_index.md" >}}) encapsulates one or two aspects of the system’s implementation\. It may appear only at the design levels which have those particular aspects:
 
 ### [Middleware]({{< relref "../extension-metapatterns/middleware.md" >}})
 
@@ -145,7 +145,7 @@ An [extension pattern]({{< relref "../extension-metapatterns/_index.md" >}}) enc
 
 A [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) abstracts scaling and/or intercommunication:
 
-- The network of post offices is a middleware – you push the letter into a mailbox and it automagically appears at its destination’s door\.
+- The network of post offices is a middleware – you push a letter into a mailbox and it automagically appears at its destination’s door\.
 - A [bus depot](https://en.wikipedia.org/wiki/Bus_depot) may mean a bus garage which deploys as many buses as needed to service the traffic or a bus station where people come to have a ride, regardless of the exact vehicle model they’ll take\.
 - Hardware is full of another kind of [buses](https://en.wikipedia.org/wiki/Bus_(computing)) that unify means of communication\.
 - TCP and UDP sockets hide the details of the underlying network\.
@@ -185,12 +185,12 @@ A [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.
 </a>
 </figure>
 
-A [*Proxy*]({{< relref "../extension-metapatterns/proxy.md" >}}) isolates a system from its environment by translating between internal and external protocols and/or implementing generic aspects of communication:
+A [*Proxy*]({{< relref "../extension-metapatterns/proxy.md" >}}) isolates a system from its environment by translating between the internal and external protocols and/or implementing generic aspects of communication:
 
 - You may need a translator to understand foreign people or have a secretary to deal with routine tasks\. A local guide combines both roles\.
-- An adapter makes several hardware plugs \(or software frameworks\) compatible\.
+- An adapter makes several hardware plugs \(or software frameworks\) mutually interoperable\.
 - Your Wi\-Fi router is a proxy between your laptop and the Internet\.
-- A compiler is a kind of proxy between source code and bytecode\.
+- A compiler is a kind of a proxy between source code and bytecode\.
 
 
 ### [Orchestrator]({{< relref "../extension-metapatterns/orchestrator.md" >}})
@@ -205,10 +205,10 @@ A [*Proxy*]({{< relref "../extension-metapatterns/proxy.md" >}}) isolates a syst
 </a>
 </figure>
 
-An [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) integrates several components by implementing high\-level use cases and/or keeping them in sync:
+An [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) integrates several components by implementing high\-level use cases and/or keeping the components in sync:
 
-- A taxi driver orchestrates his car’s internals\.
-- A [*Facade*](https://refactoring.guru/design-patterns/facade) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] provides a high\-level interface for a system while a [*Mediator*](https://refactoring.guru/design-patterns/mediator) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] integrates a system by spreading changes initiated by the system’s components\.
+- A taxi driver orchestrates their car’s internals\.
+- A [*Facade*](https://refactoring.guru/design-patterns/facade) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] provides a high\-level interface for a system while a [*Mediator*](https://refactoring.guru/design-patterns/mediator) \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] integrates a system by spreading the changes initiated by the system’s components\.
 - A linker composes a working program out of disjunct modules\.
 
 
@@ -228,12 +228,12 @@ In [*Sandwich*]({{< relref "../extension-metapatterns/sandwich.md" >}}) a varied
 
 - A sandwich is an obvious example\.  
 - This is how we make down jackets and thermal insulation in general\.
-- A [cell membrane](https://en.wikipedia.org/wiki/Cell_membrane) which includes many transporters and receptors looks like that\.
+- A [cell membrane](https://en.wikipedia.org/wiki/Cell_membrane) which includes many transporters and receptors looks exactly like that\.
 
 
 ## [Fragmented metapatterns]({{< relref "../fragmented-metapatterns/_index.md" >}})
 
-A [fragmented pattern]({{< relref "../fragmented-metapatterns/_index.md" >}}) uses small specialized components to approach a case which is hard to resolve with more generic means\. The high degree of specialization leads to even fewer examples:
+A [fragmented topology]({{< relref "../fragmented-metapatterns/_index.md" >}}) uses small specialized components to approach a case which is hard to resolve with more generic means\. The high degree of specialization limits the number of available examples:
 
 ### [Polyglot Persistence]({{< relref "../fragmented-metapatterns/polyglot-persistence.md" >}})
 
@@ -249,9 +249,9 @@ A [fragmented pattern]({{< relref "../fragmented-metapatterns/_index.md" >}}) us
 
 [*Polyglot Persistence*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md" >}}) is about having multiple containers for data:
 
-- A warehouse or a cargo ship has dedicated storage areas with extra facilities for combustible, toxic, and frozen goods\.
+- A warehouse or a cargo ship has dedicated storage areas with separate facilities for combustible, toxic, and frozen goods\.
 - A computer has CPU caches, RAM, flash, and hard drives for temporary or permanent data storage\.
-- There are map, list, and array – each with its pros and cons\. A large class would often use two or three kinds of containers and not without reason\.
+- There are map, list, and array – each with its pros and cons\. A large class would often use two or three kinds of containers, and not without reason\.
 
 
 ### [Backends for Frontends]({{< relref "../fragmented-metapatterns/backends-for-frontends--bff-.md" >}})
@@ -270,7 +270,7 @@ A [fragmented pattern]({{< relref "../fragmented-metapatterns/_index.md" >}}) us
 
 - A bank is likely to reserve a couple of employees to serve rich clients\.
 - A Wi\-Fi router has many management interfaces: web, mobile application, CLI, and probably [TR\-069](https://en.wikipedia.org/wiki/TR-069)\.
-- A multiplayer game may provide desktop and mobile client applications\.
+- A multiplayer game may provide both desktop and mobile client applications\.
 
 
 ### [Service\-Oriented Architecture]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}})
@@ -312,7 +312,7 @@ A [fragmented pattern]({{< relref "../fragmented-metapatterns/_index.md" >}}) us
 
 ## [Implementation metapatterns]({{< relref "../implementation-metapatterns/_index.md" >}})
 
-An [implementation pattern]({{< relref "../implementation-metapatterns/_index.md" >}}) highlights the peculiar internal arrangements of a component\. Such patterns are deeply specialized:
+An [implementation metapattern]({{< relref "../implementation-metapatterns/_index.md" >}}) highlights the peculiar internal arrangements of a component\. Such patterns are deeply specialized:
 
 ### [Plugins]({{< relref "../implementation-metapatterns/plugins.md" >}})
 
@@ -349,7 +349,7 @@ An [implementation pattern]({{< relref "../implementation-metapatterns/_index.md
 - A drill or a screwdriver has replaceable bits\.
 - A living cell is encapsulated by its [membrane](https://en.wikipedia.org/wiki/Cell_membrane) and relies on [protein adapters](https://en.wikipedia.org/wiki/Membrane_protein) for interactions with its environment\. [A kind of *Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}}) was named after it\.
 - [*OS Abstraction Layer* and *Hardware Abstraction Layer*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) in embedded systems or [*Anti\-Corruption Layer*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) in \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] are all about that\.
-- The [*impure/pure/impure sandwich*](https://blog.ploeh.dk/2020/03/02/impureim-sandwich/) of functional programming is closely related\. In both cases the core of the system cannot change anything outside of itself directly \(any external communication relies on *adapters*\) and it is [deterministic if single\-threaded](http://ithare.com/chapter-vc-modular-architecture-client-side-on-debugging-distributed-systems-deterministic-logic-and-finite-state-machines/)\.
+- The [*impure/pure/impure sandwich*](https://blog.ploeh.dk/2020/03/02/impureim-sandwich/) of functional programming is closely related\. Here also, the core of the system cannot change anything outside of itself directly \(any external communication relies on *adapters*\) and it is [deterministic if single\-threaded](http://ithare.com/chapter-vc-modular-architecture-client-side-on-debugging-distributed-systems-deterministic-logic-and-finite-state-machines/)\.
 
 
 ### [Microkernel]({{< relref "../implementation-metapatterns/microkernel.md" >}})
@@ -368,7 +368,7 @@ An [implementation pattern]({{< relref "../implementation-metapatterns/_index.md
 
 - It’s like a bank that takes money from the rich to distribute them among the poor\.
 - This is what an OS is for\. Its scheduler shares the CPU, the memory subsystem shares RAM, while the device drivers provide access to the peripherals\.
-- Cloud services are based on sharing computation resources among clients\.
+- Cloud services are based on sharing computational resources among clients\.
 
 
 ### [Mesh]({{< relref "../implementation-metapatterns/mesh.md" >}})
@@ -383,7 +383,7 @@ An [implementation pattern]({{< relref "../implementation-metapatterns/_index.md
 </a>
 </figure>
 
-[*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}}) is like grassroots movements – self\-organizing and survival through redundancy:
+[*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}}) resembles grassroots movements – self\-organization and survival through redundancy:
 
 - Ants and bees are small, autonomous, and efficient\. Their strength comes from their numbers\.
 - Road networks and power grids don’t collapse if some of their components are damaged as they are highly redundant\.
@@ -392,4 +392,4 @@ An [implementation pattern]({{< relref "../implementation-metapatterns/_index.md
 
 ## Summary
 
-Architectural patterns have parallels in the natural world, our society and/or different levels of computer hardware and software\. Learning about them helps us feel the driving forces behind patterns and be more flexible and creative in using the patterns we know and devising new ones\.
+Architectural patterns have parallels in the natural world, our society and/or different levels of computer hardware and software\. Learning about them helps us feel the driving forces behind the patterns and be more flexible and creative in both using the patterns which we already know and in devising new ones\.

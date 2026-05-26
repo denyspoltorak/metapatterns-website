@@ -9,13 +9,13 @@ images = ["/diagrams/Web/og/Paradigms.png"]
 
 # Programming and architectural paradigms {anchor=false}
 
-Sharing a database is the greatest sin when you architect [*Microservices*]({{< relref "../../basic-metapatterns/services.md#microservices" >}}) yet [*Space\-Based Architecture*]({{< relref "../../extension-metapatterns/sandwich.md#space-based-architecture" >}}) is built around shared data\. How do these approaches coexist? Do *Microservices* make any sense if blatantly violating their rules still results in successful projects?
+Sharing a database is the greatest sin when you architect [*Microservices*]({{< relref "../../basic-metapatterns/services.md#microservices" >}}) yet [*Space\-Based Architecture*]({{< relref "../../extension-metapatterns/sandwich.md#space-based-architecture" >}}) is built around shared data\. How do these approaches coexist? Does *Microservice Architecture* make any sense if blatantly violating its principles still results in successful projects?
 
 Another programming paradox holds a clue\. There was C\. Then there came C\+\+ to kill C\. Then we’ve got Rust to kill C\+\+\. Now we have C, C\+\+, and Rust, all of them alive and kickin’\.
 
 ## Technologies are specialized
 
-When a new technology emerges, it must show its superiority over existing mature methods\. In most cases that is achieved by specialization\. Is a car superior to a donkey? It depends\. Probably yes, when there are good roads, plenty of gas and spare parts\. A car is narrowly specialized, thus some areas have successfully adopted cars, while others still rely on donkeys\.
+When a new technology emerges, it must show its superiority over existing mature methods\. In most cases that is achieved by specialization\. Is a car superior to a donkey? It depends\. Probably yes, when there are good roads, plenty of gas, and spare parts\. A car is narrowly specialized, thus some areas have successfully adopted cars, while others still rely on donkeys\.
 
 The same holds true for programming languages and architectures\. C is good when you work close to hardware and need complete control over whatever happens in the system\. C\+\+ is great at partitioning business logic, but it lost the simplicity of its predecessor\. Rust will likely shine in communication libraries, which are often targeted by hackers, though we have yet to see its wide adoption\. Hence the usefulness \(and choice\) of a tool or programming language depends on the circumstances\.
 
@@ -32,9 +32,9 @@ Each [programming paradigm](https://en.wikipedia.org/wiki/Programming_paradigm) 
 
 Almost every software project is too complex for a programmer to keep all the details of its requirements and implementation in their mind\. Notwithstanding, those details must be written down and run as code\.
 
-The good old way out of the trouble is called [*divide and conquer*](https://en.wikipedia.org/wiki/Divide-and-conquer_algorithm)\. The global task is divided into several subtasks, and each subtask is subdivided again and again – till the resulting pieces are either simple enough to solve directly or [too messy]({{< relref "../../foundations-of-software-architecture/modules-and-complexity.md" >}}) to allow for further subdivision\. Basically, we need to split our domain’s *control*, *logic*, and *data* into a single hierarchy of moderately sized components\.
+The good old way out of the trouble is called [*divide and conquer*](https://en.wikipedia.org/wiki/Divide-and-conquer_algorithm)\. The global task is divided into several subtasks, and each subtask is subdivided again and again – till the resulting pieces are either simple enough to solve directly or [too messy]({{< relref "../../foundations-of-software-architecture/modules-and-complexity.md" >}}) to allow for further subdivision\. Essentially, we need to split our domain’s *control*, *logic*, and *data* into a single hierarchy of moderately sized components\.
 
-We have heard a lot about keeping *logic and data* together: an object \(or actor, or module, or service – no matter what you call it\) must own its data to assure its consistency and hide the complexity of the component’s internals from its users\. If the encapsulation of an object's data is violated, the object’s code can neither trust nor restructure it\. On the other hand, if the data is bound to the logic that deals with it, the entire thing becomes a useful black box one does not need to look into to operate\.
+We have heard a lot about keeping *logic and data* together: an object \(or [actor]({{< relref "../../basic-metapatterns/services.md#class-like-actors" >}}), or [module]({{< relref "../../basic-metapatterns/services.md#synchronous-modules-modular-monolith-modulith" >}}), or [service]({{< relref "../../basic-metapatterns/services.md#distributed-services-service-based-architecture-space-based-architecture-microservices" >}}) – no matter what you call it\) must own its data to assure its consistency and hide the complexity of the component’s internals from its users\. If the encapsulation of an object's data is violated, the object’s code can neither trust nor ever restructure it\. On the other hand, if the data is bound to the logic that deals with it, the entire thing becomes a useful black box which one does not need to look into to operate\.
 
 Adding *control* to the blend is more subtle, but no less crucial than the encapsulation discussed above\. If an object commands another thing to do something, it must receive the result of the delegated action to know how to proceed with its own task\. Returning control after the action is conducted enables separation of high\-level supervising \(orchestration, integration\) logic from low\-level algorithms which it drives, adding depth to the structure\.
 
@@ -62,7 +62,7 @@ The ability to address complex domains by reducing the whole to self\-contained 
 
 ## Functional \(decentralized, streaming\) paradigm – choreography
 
-Sometimes you don’t need that level of fine\-tuning for the behavior of the system you build – it operates as an [assembly line](https://en.wikipedia.org/wiki/Assembly_line) with high throughput and little variance: its logic is made of steps that resemble work stations along a [conveyor belt](https://en.wikipedia.org/wiki/Conveyor_belt) through which identically structured pieces of data flow, just like goods on the belt\. In that case there is very little to control: if an item is good, it goes further, otherwise it just falls off the line\. Here the *control* resides in the graph of connections*,* the [domain *logic*]({{< relref "../../basic-metapatterns/layers.md#domain-business-rules-or-model" >}}) is subdivided, while the *data* is copied between the components\.
+Sometimes you don’t need that level of fine\-tuning for the behavior of the system you build – it operates as an [assembly line](https://en.wikipedia.org/wiki/Assembly_line) with high throughput and little variance: its logic is made of steps that resemble work stations along a [conveyor belt](https://en.wikipedia.org/wiki/Conveyor_belt) through which identically structured pieces of data flow\. In that case there is very little to control: if an item is good, it goes further, otherwise it just falls off the line\. Here the *control* resides in the graph of connections*,* the [domain *logic*]({{< relref "../../basic-metapatterns/layers.md#domain-business-rules-or-model" >}}) is subdivided, while the *data* is copied \(or, more rarely, moved\) between the components\.
 
 <figure>
 <a href="/diagrams/Communication/Paradigms%20-%20Functional.png">
@@ -102,7 +102,11 @@ The final approach is integration through data\. There are cases where the domai
 </a>
 </figure>
 
-In the data\-centric paradigm *logic* and *data* are structured independently\. In procedural programming, like in object\-oriented paradigm, *control* is implemented inside the logic, making the logic layer hierarchical \([*orchestrated*]({{< relref "../../foundations-of-software-architecture/arranging-communication/orchestration.md" >}})\)\. Another, much less common, option relies on [*Observer*](https://refactoring.guru/design-patterns/observer) \[[GoF]({{< relref "../../appendices/books-referenced.md#gof" >}})\] to provide data change notifications, resulting in decentralized \([*choreographed*]({{< relref "../../foundations-of-software-architecture/arranging-communication/choreography.md" >}})\) application logic:
+In the data\-centric paradigm *logic* and *data* are orthogonal\. There are two ways to deal with the control:
+
+- In procedural programming, like in object\-oriented paradigm, *control* is implemented inside the logic, making the logic layer hierarchical \([*orchestrated*]({{< relref "../../foundations-of-software-architecture/arranging-communication/orchestration.md" >}})\), as on the diagram above\. 
+- Another, much less common, option relies on [*Observer*](https://refactoring.guru/design-patterns/observer) \[[GoF]({{< relref "../../appendices/books-referenced.md#gof" >}})\] to provide data change notifications, resulting in decentralized \([*choreographed*]({{< relref "../../foundations-of-software-architecture/arranging-communication/choreography.md" >}})\) application logic, as shown below\.
+
 
 <figure>
 <a href="/diagrams/Communication/Paradigms%20-%20Data-centric%20-%20Notifications.png">
@@ -114,7 +118,7 @@ In the data\-centric paradigm *logic* and *data* are structured independently\. 
 </a>
 </figure>
 
-The data\-centric approach works well for moderately\-sized projects with a stable data model \(like reservation of seats in trains or game of chess\)\. The best\-known distributed data\-centric architectures include [*Services with a Shared Database*]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) and [*Space\-Based Architecture*]({{< relref "../../extension-metapatterns/sandwich.md#space-based-architecture" >}})\.
+The data\-centric approach works well for moderately\-sized projects with a stable data model \(like reservation of seats in trains or the game of chess\)\. The best\-known distributed data\-centric architectures include [*Services with a Shared Database*]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) and [*Space\-Based Architecture*]({{< relref "../../extension-metapatterns/sandwich.md#space-based-architecture" >}})\.
 
 <figure>
 <a href="/diagrams/Communication/Paradigms%20-%20Data-centric%20-%20Variants.png">
@@ -130,9 +134,9 @@ The data\-centric approach works well for moderately\-sized projects with a stab
 
 The three programming paradigms tend to collaborate:
 
-- An ordinary class is object\-oriented on the outside but procedural inside: each of its methods can access any of its private data members\. Moreover, code inside methods may chain function calls, locally applying the functional paradigm\.
+- An ordinary class is object\-oriented on the outside but procedural inside: each of its methods can access any of its private data members\. Moreover, a class  method may chain function calls, applying the functional paradigm to two or three lines of its code\.
 - [*Cell\-Based Architecture*]({{< relref "../../fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services" >}}) tends to use [*choreography*]({{< relref "../../foundations-of-software-architecture/arranging-communication/choreography.md" >}}) \(pub/sub\) between [*Cells*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}}) and [*orchestration*]({{< relref "../../foundations-of-software-architecture/arranging-communication/orchestration.md" >}}) or communication via a [*shared database*]({{< relref "../../foundations-of-software-architecture/arranging-communication/shared-data.md" >}}) inside them \[[DEDS]({{< relref "../../appendices/books-referenced.md#deds" >}})\]\.
-- A system of [*Services*]({{< relref "../../basic-metapatterns/services.md" >}}) \(or [*Space\-Based Architecture*]({{< relref "../../extension-metapatterns/sandwich.md#space-based-architecture" >}})\) may be integrated through both [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) and [*Shared Database*]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) \(or *processing grid* and [*data grid*]({{< relref "../../extension-metapatterns/shared-repository.md#data-grid-of-space-based-architecture-sba-replicated-cache-distributed-cache" >}}), respectively\), see [*Sandwich*]({{< relref "../../extension-metapatterns/sandwich.md" >}})\.
+- A system of [*Services*]({{< relref "../../basic-metapatterns/services.md" >}}) \(or [*Space\-Based Architecture*]({{< relref "../../extension-metapatterns/sandwich.md#space-based-architecture" >}})\) may be integrated through both [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) and [*Shared Database*]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) \(or [*processing grid*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) and [*data grid*]({{< relref "../../extension-metapatterns/shared-repository.md#data-grid-of-space-based-architecture-sba-replicated-cache-distributed-cache" >}}), respectively\), see [*Sandwich*]({{< relref "../../extension-metapatterns/sandwich.md" >}})\.
 
 
 ## Reality is more complex
@@ -148,15 +152,15 @@ We have reviewed a few cases directly supported by common programming languages\
 - One\-to\-one \(channels\) vs many\-to\-one \(mailboxes\) vs one\-to\-many \(multicast\) vs many\-to\-many \(gossip\) communication\.
 
 
-Some of the combinations look impossible or impractical, others are narrowly specialized thus uncommon, while many more are commonplace\. Discussing all of them would require insights from people who have used them in practice and that would take a dedicated book\.
+Some of the combinations look impossible or impractical, others are narrowly specialized thus uncommon, while many more are commonplace\. Discussing all of them would require insights from people who have used them in practice and would likely take a dedicated book\.
 
 ## Summary
 
 We have deconstructed the most common programming paradigms into their driving forces and shown how those forces shape distributed architectures:
 
-- An object\-oriented system relies on hierarchical decomposition of a complex domain, just like [*SOA*]({{< relref "../../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}) and [*Orchestrated*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) *\(*[*Micro*]({{< relref "../../basic-metapatterns/services.md#microservices" >}})*\-\)*[*Services*]({{< relref "../../basic-metapatterns/services.md" >}}) do\.
+- An object\-oriented system relies on hierarchical decomposition of a complex domain, just like [*SOA*]({{< relref "../../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}) and [*Orchestrated \(Micro\-\)Services*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) do\.
 - Functional programming streams data through a sequence of transformations, which is the idea behind [*Choreographed Event\-Driven Architecture*]({{< relref "../../basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}}) and [*Data Mesh*]({{< relref "../../basic-metapatterns/pipeline.md#data-mesh" >}})\.
-- Procedural style lets any piece of logic access the entire project’s data, resembling [*Space\-Based Architecture*]({{< relref "../../extension-metapatterns/sandwich.md#space-based-architecture" >}}) and [*Services*]({{< relref "../../basic-metapatterns/services.md" >}}) *with a* [*Shared Database*]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}})\.
+- Procedural style lets any piece of logic access the entire project’s data, resembling [*Space\-Based Architecture*]({{< relref "../../extension-metapatterns/sandwich.md#space-based-architecture" >}}) and [*Services with a Shared Database*]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}})\.
 
 
 Now let’s examine each of these approaches in depth:

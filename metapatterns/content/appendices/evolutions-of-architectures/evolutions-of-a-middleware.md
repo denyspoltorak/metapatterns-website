@@ -9,10 +9,10 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 # Evolutions of a Middleware {anchor=false}
 
-A [*Middleware*]({{< relref "../../extension-metapatterns/middleware.md" >}}) is unlikely to be removed \(though it may be replaced\) once it is built into a system\. There are few evolutions as a *Middleware* is a third\-party product and is unlikely to be messed with:
+A [*Middleware*]({{< relref "../../extension-metapatterns/middleware.md" >}}) is unlikely to be removed \(though it still may be replaced\) once it is built into a system\. There are few evolutions as a *Middleware* is a third\-party product and is unlikely to be messed with:
 
 - If the *Middleware* in use does not fit the preferred mode of communication between some of your services, there is an option to deploy a second specialized *Middleware*\.
-- If several existing systems need to be merged, that is accomplished by adding yet another layer of *Middleware*, resulting in a [*Bottom\-Up Hierarchy \(Bus of Buses\)*]({{< relref "../../fragmented-metapatterns/hierarchy.md#bottom-up-hierarchy-bus-of-buses-network-of-networks" >}})\.
+- If several existing systems need to be merged, that is accomplished by adding yet another layer of *Middleware*, resulting in a [*Bottom\-Up Hierarchy \(Bus of Buses\)*]({{< relref "../../fragmented-metapatterns/hierarchy.md#bottom-up-hierarchy-bus-of-buses-network-of-networks-hierarchical-middleware" >}})\.
 
 
 ## Add a secondary Middleware
@@ -58,7 +58,7 @@ If the current *Middleware* is too generic for the system’s needs, you can add
 </a>
 </figure>
 
-<ins>Patterns</ins>: [Bottom\-up Hierarchy]({{< relref "../../fragmented-metapatterns/hierarchy.md#bottom-up-hierarchy-bus-of-buses-network-of-networks" >}}) \([Hierarchy]({{< relref "../../fragmented-metapatterns/hierarchy.md" >}}), [Middleware]({{< relref "../../extension-metapatterns/middleware.md" >}})\)\.
+<ins>Patterns</ins>: [Bottom\-up Hierarchy]({{< relref "../../fragmented-metapatterns/hierarchy.md#bottom-up-hierarchy-bus-of-buses-network-of-networks-hierarchical-middleware" >}}) \([Hierarchy]({{< relref "../../fragmented-metapatterns/hierarchy.md" >}}), [Middleware]({{< relref "../../extension-metapatterns/middleware.md" >}})\)\.
 
 <ins>Goal</ins>: integrate two systems without a heavy refactoring\.
 

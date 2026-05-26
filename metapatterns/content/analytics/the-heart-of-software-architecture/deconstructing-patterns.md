@@ -21,7 +21,7 @@ If *cohesion* and *decoupling* dictate software architecture, they should surfac
 - The *dependency inversion principle* decouples an object’s users from its implementation\.
 
 
-Please beware that each of those principles in and of themselves involves decoupling which is not free – your software may end up having too many moving parts and strict rules to remain easy to read and support\.
+Please beware that each of those principles in and of themselves invokes decoupling which is not free – your software may end up having too many moving parts and strict rules to remain easy to read and support\.
 
 <aside>
 
@@ -31,38 +31,38 @@ Please beware that each of those principles in and of themselves involves decoup
 
 ## Gang of Four patterns
 
-Let’s now discuss something more practical, namely the \[[GoF]({{< relref "../../appendices/books-referenced.md#gof" >}})\] [patterns](https://en.wikipedia.org/wiki/Design_Patterns#Patterns_by_type) which seem to be ingenious but hacky ways for rearranging the roles in your code\. They override ordinary OOP rules, which is useful when you need extra flexibility\. For example, the *creational patterns* interfere with the normally cohesive *select type – create – initialize – use* sequence of operating an object\.
+Let’s now discuss something more practical, namely the \[[GoF]({{< relref "../../appendices/books-referenced.md#gof" >}})\] [patterns](https://en.wikipedia.org/wiki/Design_Patterns#Patterns_by_type) which seem to be ingenious, yet hacky, ways for rearranging the roles in your code\. They override ordinary OOP rules, which is useful when you need extra flexibility\. For example, the *creational patterns* interfere with the normally cohesive *select type – create – initialize – use* sequence of operating an object\.
 
 Some patterns provide a basic decoupling:
 
 - [*Adapter*](https://refactoring.guru/design-patterns/adapter) translates between two interacting components so that they may evolve independently\.
-- [*Observer*](https://refactoring.guru/design-patterns/observer) decouples an event from the reactions it causes by registering handlers at runtime\.
-- [*Chain of Responsibility*](https://refactoring.guru/design-patterns/chain-of-responsibility) separates method invocation from method execution\. A client’s calling a method of an object runs the corresponding method of another object\.
+- [*Observer*](https://refactoring.guru/design-patterns/observer) decouples an event from the reactions which it causes by registering the event handlers at runtime\.
+- [*Chain of Responsibility*](https://refactoring.guru/design-patterns/chain-of-responsibility) separates the method invocation from the method execution\. A client’s calling a method of an object runs the corresponding method of another object\.
 
 
 Others break the functionality or data of a class into two or more parts, juggling them at runtime:
 
 - [*Proxy*](https://refactoring.guru/design-patterns/proxy) separates an object’s representation from its implementation, enabling lazy loading or remote access\.
-- [*Flyweight*](https://refactoring.guru/design-patterns/flyweight) segregates an immutable data member of a class to save memory by merging multiple instances of identical data\.
+- [*Flyweight*](https://refactoring.guru/design-patterns/flyweight) extracts an immutable data member of a class and merges multiple instances of that identical data to save memory\.
 - [*Strategy*](https://refactoring.guru/design-patterns/strategy) and [*Decorator*](https://refactoring.guru/design-patterns/decorator) decouple a dimension of an object’s functionality to allow runtime changes in or composition of the object's behavior, respectively\. 
-- [*State*](https://refactoring.guru/design-patterns/state) separates an object’s behavior into multiple classes based on the object’s state\.
-- [*Template Method*](https://refactoring.guru/design-patterns/template-method) decouples several aspects of a class’s behavior from its main algorithm and envelops variations of those aspects into subclasses\.
+- [*State*](https://refactoring.guru/design-patterns/state) separates an object’s behavior into multiple classes based on the object’s current state\.
+- [*Template Method*](https://refactoring.guru/design-patterns/template-method) decouples several aspects of a class’s behavior from its main algorithm and envelops the variations of those aspects into subclasses\.
 - [*Bridge*](https://refactoring.guru/design-patterns/bridge) separates a high\-level hierarchy of classes from their low\-level implementation details which may comprise an orthogonal hierarchy\.
 - [*Memento*](https://refactoring.guru/design-patterns/memento) decouples the lifetime of an object’s state from the object itself\.
 
 
-On the other hand, a few patterns gather separate components together:
+On the other hand, several patterns gather separate components together:
 
 - [*Command*](https://refactoring.guru/design-patterns/command) collects all the data required to call a method\.
 - [*Mediator*](https://refactoring.guru/design-patterns/mediator) is a cohesive implementation of multi\-object use cases\.
-- [*Composite*](https://refactoring.guru/design-patterns/composite) and [*Facade*](https://refactoring.guru/design-patterns/facade) represent multiple objects as a cohesive entity\. A *Composite* broadcasts a call to its interface to every object it contains while a *Facade* [orchestrates]({{< relref "../../foundations-of-software-architecture/arranging-communication/orchestration.md" >}}) the wrapped subsystem\.
-- [*Abstract Factory*](https://refactoring.guru/design-patterns/abstract-factory) and [*Builder*](https://refactoring.guru/design-patterns/builder) encapsulate *type selection* and *initialization* for several related hierarchies, so that the client code gets objects from a set of consistent types\. On top of that, a *Builder* cross\-links the objects it creates into a cohesive subsystem, which is returned to the *builder*’s client as a whole\.
+- [*Composite*](https://refactoring.guru/design-patterns/composite) and [*Facade*](https://refactoring.guru/design-patterns/facade) represent multiple objects as a cohesive entity\. A *Composite* broadcasts a call made to its interface to every object which it contains, while a *Facade* [orchestrates]({{< relref "../../foundations-of-software-architecture/arranging-communication/orchestration.md" >}}) the subsystem which it wraps\.
+- [*Abstract Factory*](https://refactoring.guru/design-patterns/abstract-factory) and [*Builder*](https://refactoring.guru/design-patterns/builder) encapsulate *type selection* and *initialization* for several related hierarchies, so that the client code gets objects from a consistent set of types\. On top of that, a *Builder* cross\-links the objects it creates into a cohesive subsystem, which is then returned to the *builder*’s client as a whole\.
 
 
 The remaining patterns pick an aspect or two of an object’s behavior and move them elsewhere:
 
-- [*Iterator*](https://refactoring.guru/design-patterns/iterator) moves the code for traversal of a container’s elements from the container’s clients into the container’s implementation, decoupling its clients from the iteration algorithm\.
-- [*Visitor*](https://refactoring.guru/design-patterns/visitor) collects actions that a client needs to perform on each kind of object in a hierarchy, decoupling them from the classes that constitute the hierarchy\.
+- [*Iterator*](https://refactoring.guru/design-patterns/iterator) moves the code for traversal of a container’s elements from the container’s clients into the container’s implementation, decoupling the clients from the iteration algorithm\.
+- [*Visitor*](https://refactoring.guru/design-patterns/visitor) aggregates the actions that a client needs to perform on each kind of object in a hierarchy, decoupling them from the classes that constitute the hierarchy\.
 - *Interpreter* decouples client scenarios from the rest of the system by having them written in a dedicated language and run in a protected environment\.
 - [*Prototype*](https://refactoring.guru/design-patterns/prototype) binds the *type selection* and *initialization* together and decouples them from the object *creation*\.
 - [*Singleton*](https://refactoring.guru/design-patterns/singleton) binds the *creation* and *initialization* of a global object to every call of its methods\.
@@ -90,13 +90,13 @@ Finally, let’s close the book by iterating over the metapatterns and looking i
 - [*Monolith*]({{< relref "../../basic-metapatterns/monolith.md" >}}) keeps everything together for quick and dirty projects:
   - Total *cohesiveness* results in low latency, cost\-efficient performance, and easy debugging\.
 - [*Shards*]({{< relref "../../basic-metapatterns/shards.md" >}}) slice a large\-scale application into multiple instances:
-  - *Decoupling* the instances enables scaling but sacrifices consistency of shared data\.
-- [*Layers*]({{< relref "../../basic-metapatterns/layers.md" >}}) separate the high\-level code from low\-level implementation:
+  - *Decoupling* the instances enables scaling but sacrifices the consistency of shared data\.
+- [*Layers*]({{< relref "../../basic-metapatterns/layers.md" >}}) separate the high\-level code from the low\-level implementation:
   - *Cohesion* within a layer makes it easy to implement and debug\.
-  - *Decoupled* layers may vary in technologies and properties but are somewhat slower and hard to debug in\-depth\.
+  - *Decoupled* layers may vary among themselves in technologies and properties, but are somewhat slower and hard to debug in\-depth\.
 - [*Services*]({{< relref "../../basic-metapatterns/services.md" >}}) divide a complex system into subdomains:
-  - *Cohesiveness* of a service keeps it simple and efficient when it does not need to consult with other services\.
-  - *Decoupling* enables development of larger codebases by multiple specialized teams but global use cases become complicated\.
+  - *Cohesiveness* within a service keeps it simple and efficient when it does not need to consult with other services\.
+  - *Decoupling* enables the development of larger codebases by multiple specialized teams but any global use cases become complicated\.
 - [*Pipeline*]({{< relref "../../basic-metapatterns/pipeline.md" >}}) segregates data processing into self\-contained steps:
   - *Decoupling* simplifies reassembling or expanding the system but increases its latency\.
 
@@ -114,20 +114,20 @@ Finally, let’s close the book by iterating over the metapatterns and looking i
 [Grouping related functionality]({{< relref "../../extension-metapatterns/_index.md" >}}):
 
 - [*Middleware*]({{< relref "../../extension-metapatterns/middleware.md" >}}) separates the implementation of communication and/or instance management from the business logic:
-  - The *cohesive* communication layer is reliable and uniform, thus it is easy to learn\.
-  - *Decoupling* communication concerns from the business logic simplifies the latter\.
+  - The *cohesive* communication layer is not only reliable, but also uniform, which makes it easy to learn\.
+  - *Decoupling* the communication concerns from the business logic simplifies the latter\.
 - [*Shared Repository*]({{< relref "../../extension-metapatterns/shared-repository.md" >}}) dissociates data from code, enabling [data\-centric programming]({{< relref "../../foundations-of-software-architecture/arranging-communication/shared-data.md" >}}):
   - *Cohesive* data is consistent and easy to handle\.
   - *Decoupled* business logic can be scaled or subdivided [independently]({{< relref "../../foundations-of-software-architecture/arranging-communication/programming-and-architectural-paradigms.md#procedural-data-centric-paradigm--shared-data" >}}) of the data\.
-- [*Proxy*]({{< relref "../../extension-metapatterns/proxy.md" >}}) mediates between a system and its clients, taking care of one or more aspects of their communication:
+- [*Proxy*]({{< relref "../../extension-metapatterns/proxy.md" >}}) mediates between a system and its clients, taking care of some aspects of their communication:
   - A *cohesive* edge component is easier to manage and secure\.
-  - *Decoupling* generic aspects simplifies business logic but usually increases latency\.
+  - *Decoupling* generic aspects simplifies the business logic but usually increases latency\.
 - [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) collects a multitude of complex use cases into a dedicated layer:
   - *Cohesive* use cases are easy to comprehend and debug\.
-  - *Decoupling* [use cases]({{< relref "../../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) from [domain logic]({{< relref "../../basic-metapatterns/layers.md#domain-business-rules-or-model" >}}) allows for variation in technologies but increases latency and complicates in\-depth debugging\.
-- [*Sandwich*]({{< relref "../../extension-metapatterns/sandwich.md" >}}) distantiates both control and data from domain rules, which become segmented:
-  - *Cohesive* protocol, use cases, and data integrate the system\.
-  - *Decoupling* subdomain components from each other and from the system\-wide layers keeps every part of the system reasonably small and independent\.
+  - *Decoupling* the [use cases]({{< relref "../../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) from the [domain logic]({{< relref "../../basic-metapatterns/layers.md#domain-business-rules-or-model" >}}) allows for variation in technologies but increases latency and complicates in\-depth debugging\.
+- [*Sandwich*]({{< relref "../../extension-metapatterns/sandwich.md" >}}) distantiates both control and data from the domain rules, which become segmented:
+  - *Cohesive* use cases and data integrate the system\.
+  - *Decoupling* the subdomain components from each other and from the system\-wide layers keeps every part of the system reasonably small and independent\.
 
 
 <figure>
@@ -145,8 +145,8 @@ Finally, let’s close the book by iterating over the metapatterns and looking i
 - [*Layered Services*]({{< relref "../../fragmented-metapatterns/layered-services.md" >}}) first decouple the subdomains, and then the layers within each subdomain:
   - *Decoupled* subdomains allow for multi\-team development and large codebases but complicate global use cases\. *Decoupled* layers enable variation in technologies within a subdomain and [limit interdependencies]({{< relref "../../foundations-of-software-architecture/arranging-communication/orchestration.md#mutual-orchestration" >}}) between subdomains to a single layer\.
 - [*Polyglot Persistence*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md" >}}) divides data among multiple data stores:
-  - *Decoupling* improves performance through database specialization at the cost of consistency\.
-- [*Backends for Frontends*]({{< relref "../../fragmented-metapatterns/backends-for-frontends--bff-.md" >}}) dedicate one or two components \(a [*Proxy*]({{< relref "../../extension-metapatterns/proxy.md" >}}) and/or [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}})\) per each kind of client\.
+  - *Decoupling* improves performance through data store specialization at the cost of consistency\.
+- [*Backends for Frontends*]({{< relref "../../fragmented-metapatterns/backends-for-frontends--bff-.md" >}}) dedicate one or two components \(a [*Proxy*]({{< relref "../../extension-metapatterns/proxy.md" >}}) and/or [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}})\) to each kind of client\.
   - *Decoupling* allows for customization on a per\-client\-type basis but makes it hard to share functionality among the clients\.
 - [*Service\-Oriented Architecture*]({{< relref "../../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}) first segregates a large system into layers, then subdivides each layer into services:
   - *Decoupling* layers strangely enables reuse as any component of an upper layer can access every component below it\. *Decoupling* services within the layers allows for multi\-team development\. Drawbacks include high latency, system complexity, and interdependencies\.
@@ -175,5 +175,5 @@ Finally, let’s close the book by iterating over the metapatterns and looking i
   - *Cohesive* resource management optimizes resource usage\.
   - *Decoupling* allows for seamless replacement of resource providers\.
 - [*Mesh*]({{< relref "../../implementation-metapatterns/mesh.md" >}}) aggregates distributed components into a virtual layer:
-  - Virtual *cohesion* hides the complexity of distributed communication from client code\.
+  - Virtual *cohesion* hides the complexity of distributed communication from the client code\.
   - Actual *decoupling* \(distribution\) of the nodes enables scaling and fault tolerance\.

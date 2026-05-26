@@ -12,12 +12,12 @@ images = ["/diagrams/Web/og/Pipelineliness.png"]
 Several architectural patterns involve a unidirectional data flow – a [*pipeline*](https://en.wikipedia.org/wiki/Pipeline_(software))\. Strictly speaking, every data packet in a pipeline should:
 
 - Move through the system over the same *route* with no loops\.
-- Be of the same *type*, making a *data stream*\.
+- Be of the same *type*, as a part of a *data stream*\.
 - Retain its *identity* on the way\.
 - Retain *temporal order* – the sequence of packets remains the same over the entire pipeline\.
 
 
-Staying true to all of these points makes *Pipes and Filters* – one of the oldest known architectures\. Yet there are other architectures that discard one or more of the conditions:
+Staying true to all of these points makes *Pipes and Filters* – one of the oldest known architectures\. Yet there are other architectures that discard one or more of those conditions:
 
 ## [Pipes and Filters]({{< relref "../../basic-metapatterns/pipeline.md#pipes-and-filters-workflow-system" >}})
 
@@ -31,9 +31,9 @@ Staying true to all of these points makes *Pipes and Filters* – one of the old
 </a>
 </figure>
 
-[*Pipes and Filters*]({{< relref "../../basic-metapatterns/pipeline.md#pipes-and-filters-workflow-system" >}}) is about stepwise [processing of a data stream]({{< relref "../../foundations-of-software-architecture/four-kinds-of-software.md#streaming-continuous-raw-data-input" >}})\. Each piece of data \(a video frame, a line of text or a database record\) passes through the entire system\.
+[*Pipes and Filters*]({{< relref "../../basic-metapatterns/pipeline.md#pipes-and-filters-workflow-system" >}}) is about stepwise [processing of a data stream]({{< relref "../../foundations-of-software-architecture/four-kinds-of-software.md#streaming-continuous-raw-data-input" >}})\. Each piece of data \(a video frame, a line of text, or a database record\) passes through the entire system\.
 
-This architecture is easy to build and has a wide range of applications, from hardware to data analytics\. Though each pipeline is specialized for a single use case, a new one can often be built of the same set of generic components – this skill is mastered by Linux admins through their use of shell scripts\.
+This architecture is easy to build and it has a wide range of applications, from hardware to data analytics\. Though each pipeline specializes in a single use case, it is often possible to build many different pipelines from the same set of generic components, which is actually practiced by Linux admins in their use of shell scripts \[[DDIA]({{< relref "../../appendices/books-referenced.md#ddia" >}})\]\.
 
 ## [Choreographed Event\-Driven Architecture]({{< relref "../../basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}})
 
@@ -47,13 +47,13 @@ This architecture is easy to build and has a wide range of applications, from ha
 </a>
 </figure>
 
-Relaxing the *type* and loosening the *identity* clauses opens the way to [*Choreographed Event\-Driven Architecture*]({{< relref "../../basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}}), in which a service publishes notifications about anything it does that may be of interest to other services\. In such a system:
+Relaxing the *type* and loosening the *identity* criteria opens the way to [*Choreographed Event\-Driven Architecture*]({{< relref "../../basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}}), in which a service publishes notifications about everything it does which may be of interest to other services\. In such a system:
 
-- There are multiple types of events going in different directions, like if several branched pipelines were built over the same set of services\.
-- A service may aggregate multiple incoming events to publish a single, seemingly unrelated, event later when some condition is met\. For example, a warehouse delivery collects individual orders till it gets a truckload of them or until the evening comes and no new orders are accepted\.
+- There are multiple kinds of events going in different directions, as if several branched pipelines were built over the same set of services\.
+- A service may aggregate multiple incoming events to publish a single, seemingly unrelated, event later, when a certain condition is met\. For example, a warehouse delivery collects individual orders till it gets a truckload of them, or until the evening comes and no new orders are accepted\.
 
 
-This architecture covers way more complex use cases than [*Pipes and Filters*]({{< relref "../../basic-metapatterns/pipeline.md#pipes-and-filters-workflow-system" >}}) as multiple pipelines are present in the system and because processing an event is allowed to have loosely related consequences \(as with the parcel and truck\)\.
+This architecture covers way more complex use cases than [*Pipes and Filters*]({{< relref "../../basic-metapatterns/pipeline.md#pipes-and-filters-workflow-system" >}}), because multiple pipelines are present in the system and because processing an event is allowed to have loosely related consequences \(as with the parcel and truck\)\.
 
 ## [Command Query Responsibility Segregation]({{< relref "../../fragmented-metapatterns/layered-services.md#command-query-responsibility-segregation-cqrs" >}}) \(CQRS\)
 
@@ -67,7 +67,7 @@ This architecture covers way more complex use cases than [*Pipes and Filters*]({
 </a>
 </figure>
 
-When data from events is stored for a future use \(as with the aggregation above\), the *type* and *temporal order* are ignored but data *identity* may be retained\. A [*CQRS*\-based system]({{< relref "../../fragmented-metapatterns/layered-services.md#command-query-responsibility-segregation-cqrs" >}}) separates paths for write \(*command*\) and read \(*query*\) requests, making a kind of data processing pipeline with the database in the middle, which stores events for an indeterminate amount of time\. It is the database that reshuffles the order of events, as a record it stores may be queried at any time, maybe in a year from its addition – or never at all\.
+When data from events is stored for a future use \(as with the aggregation above\), both the *type* and the *temporal order* are ignored, but the data *identity* may be retained\. A [*CQRS*\-based system]({{< relref "../../fragmented-metapatterns/layered-services.md#command-query-responsibility-segregation-cqrs" >}}) separates the paths for write \(*command*\) and read \(*query*\) requests, making a kind of data processing pipeline with the database, which stores events for an indeterminate amount of time, in the middle\. It is the database that reshuffles the order of events, as a record it stores may be queried at any time, maybe in a year from its addition – or never at all\.
 
 ## [Model\-View\-Controller]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}}) \(MVC\)
 
@@ -81,7 +81,7 @@ When data from events is stored for a future use \(as with the aggregation above
 </a>
 </figure>
 
-[*Model\-View\-Controller*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}}) completely neglects the *type* and *identity* limitations\. It is a coarse\-grained pattern where the input source produces many kinds of events that go to the main module which does something and outputs another stream of events of no obvious relation to the input\. A mouse click does not necessarily result in a screen redraw, while a redraw may happen on timer with no user actions\. In fact, the pattern conjoins two different short pipelines\.
+[*Model\-View\-Controller*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}}) completely neglects the *type* and *identity* limitations\. It is a coarse\-grained pattern where the input source produces many kinds of events that go to the main module which does something and outputs another stream of events which have no obvious relation to the input\. A mouse click does not necessarily result in a screen redraw, while a redraw may happen on timer without any user actions\. In fact, this pattern conjoins two separate, short pipelines\.
 
 ## Summary
 

@@ -12,7 +12,7 @@ primary_image = "/diagrams/Evolutions/Layers/Layers%20to%20Space-Based%20Archite
 
 There are several ways to improve the performance of a [*layered system*]({{< relref "../../basic-metapatterns/layers.md" >}})\. One we have [already discussed]({{< relref "../../appendices/evolutions-of-architectures/evolutions-of-shards-that-share-data.md#use-space-based-architecture" >}}) for [*Shards*]({{< relref "../../basic-metapatterns/shards.md" >}}):
 
-- [*Space\-Based Architecture*]({{< relref "../../implementation-metapatterns/mesh.md#space-based-architecture" >}}) co\-locates the database and business logic and scales both dynamically\.
+- [*Space\-Based Architecture*]({{< relref "../../implementation-metapatterns/mesh.md#space-based-architecture" >}}) co\-locates the data store and business logic and scales both dynamically\.
 
 
 <figure>
@@ -25,11 +25,11 @@ There are several ways to improve the performance of a [*layered system*]({{< re
 </a>
 </figure>
 
-Others are new here and thus deserve more attention:
+Others are new and thus deserve more attention:
 
 - Merging several layers improves latency by eliminating the communication overhead\.
 - Scaling some of the layers may improve throughput but degrade latency\.
-- [*Polyglot Persistence*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md" >}}) is the name for using multiple specialized databases\.
+- [*Polyglot Persistence*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md" >}}) is the name for using multiple specialized data stores\.
 
 
 ## Merge several layers
@@ -44,11 +44,11 @@ Others are new here and thus deserve more attention:
 </a>
 </figure>
 
-<ins>Patterns</ins>: [Layers]({{< relref "../../basic-metapatterns/layers.md" >}}) or [Monolith]({{< relref "../../basic-metapatterns/monolith.md" >}})
+<ins>Patterns</ins>: [Layers]({{< relref "../../basic-metapatterns/layers.md" >}}) or [Monolith]({{< relref "../../basic-metapatterns/monolith.md" >}})\.
 
 <ins>Goal</ins>: improve performance\.
 
-<ins>Prerequisite</ins>: the layers share programming language, hardware setup and qualities\.
+<ins>Prerequisite</ins>: the layers share programming language, hardware setup, and qualities\.
 
 If your system’s development [is finished]({{< relref "../../analytics/architecture-and-product-life-cycle.md#death-the-ultimate-release--monolith" >}}) \(no changes are expected\) and you really need that extra 5% performance improvement, then you can try merging everything back into a *Monolith* or a [*3\-Tier*]({{< relref "../../basic-metapatterns/layers.md#three-tier-architecture" >}}) system \(front, back, data\)\.
 
@@ -127,7 +127,7 @@ Multiple instances or layers can be created, with their number and deployment [v
 
 If you have separated *commands* \(write requests\) from *queries* \(read requests\), you can serve the queries with [read\-only replicas]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#read-only-replicas" >}}) of the database while the main database is reserved for the commands\.
 
-If your types of data or data processing algorithms vary, you may deploy several [specialized databases]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#specialized-databases" >}}), each matching a subset of your needs\. That lets you achieve the best performance in widely diverging cases\.
+If your types of data or data processing algorithms vary, you may deploy several [specialized databases]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#specialized-databases" >}}), each matching some of your needs\. That lets you achieve the best performance in a wide range of cases\.
 
 <ins>Pros</ins>: 
 
@@ -139,10 +139,10 @@ If your types of data or data processing algorithms vary, you may deploy several
 <ins>Cons</ins>: 
 
 - Someone will need to learn and administer all those databases\.
-- Keeping the databases consistent takes effort and the replication delay may negatively affect UX\.
+- Keeping the databases consistent takes effort and the replication delay may negatively affect the UX\.
 
 
 <ins>Further steps</ins>:
 
-- Serve read and write requests with different backends according to [*Command\-Query Responsibility Segregation \(CQRS\)*]({{< relref "../../fragmented-metapatterns/layered-services.md#command-query-responsibility-segregation-cqrs" >}})\.
+- Serve the read and write requests with different backends in accordance with [*Command\-Query Responsibility Segregation \(CQRS\)*]({{< relref "../../fragmented-metapatterns/layered-services.md#command-query-responsibility-segregation-cqrs" >}})\.
 - Separate the backend into [*services*]({{< relref "../../basic-metapatterns/services.md" >}}) which match the already separated databases\.

@@ -28,7 +28,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 : see *architecture*\.
 
 *Architecture*
-: the structure \(*components* and their *interactions*\) of a system that follows a certain framework or guidelines\.
+: the structure \(*components* and their *interactions*\) of a system which follows a certain framework or guidelines\.
 
 *ASS diagram*
 : a *structural diagram* with *abstraction*, *subdomain* and *sharding* for coordinates\.
@@ -87,6 +87,12 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 *Cross\-cutting concern*
 : a functionality that should be present in multiple *components*\.
 
+*Data store*
+: anything where data can be placed or retrieved\. Includes *databases*, file systems, and cloud storage\.
+
+*Database*
+: a service for storing, retrieving, and analyzing data\.
+
 *Debugging*
 : trying to force the *system* to behave correctly from the user’s point of view\.
 
@@ -121,7 +127,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 : the ability of a *system* to remain \(at least partially\) operational if one or more of its *components* fail \(become inaccessible due to a hang, crash or a hardware failure\)\.
 
 *Forces*
-: expected properties of a *system* \(such as its stability or response time\) which are crucial for the *system* to be built, *deployed* and used successfully\.
+: restrictions on the design and development of a system based on the *qualities* it should meet \(see *non\-functional requirements*\) and organizational limitations \(such as time, budget and skills\)\.
 
 *Functional requirements*
 : the *requirements* that describe *inputs* and *outputs* of a *system*, but not its *performance* or stability\.
@@ -172,7 +178,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 : a *colocated* \(in\-process\) *component*\.
 
 *Non\-functional requirements* \(*NFR*s\)
-: see *forces*\.
+: expected properties of a *system* \(such as its stability or response time\) which are crucial for the *system* to be built, *deployed*, and used successfully\. Closely related to *qualities* and *forces*\.
 
 *Notification*
 : an *event* that one *component* sends to another *component*\(s\) to inform them of some change\.

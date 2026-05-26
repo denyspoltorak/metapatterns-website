@@ -40,7 +40,7 @@ In a backend which serves client requests an *Orchestrator* takes the role of [*
 </a>
 </figure>
 
-A *Facade* also supports querying the services in parallel and collecting the data returned into a single message through the *Splitter* and *Aggregator* patterns of \[[EIP]({{< relref "../../appendices/books-referenced.md#eip" >}})\]\. That reduces latency \(and resource consumption as the whole task is completed faster\) for [scatter or gather](https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/scatter-gather.html) requests when compared to sequential execution\.
+A *Facade* also supports querying the services in parallel and collecting the data returned into a single message through the *Splitter* and *Aggregator* patterns of \[[EIP]({{< relref "../../appendices/books-referenced.md#eip" >}})\]\. That reduces latency \(and resource consumption as the whole task is completed faster\) for [scatter\-gather](https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/scatter-gather.html) requests when compared to sequential execution\.
 
 <figure>
 <a href="/diagrams/Communication/Facade%20-%20Parallel.png">
@@ -52,7 +52,7 @@ A *Facade* also supports querying the services in parallel and collecting the da
 </a>
 </figure>
 
-Embedded and system programming – the areas that deal with automating [*control*]({{< relref "../../foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}}) of hardware or distributed software – employ *Orchestrators* as [*Mediators*](https://refactoring.guru/design-patterns/mediator) \[[GoF]({{< relref "../../appendices/books-referenced.md#gof" >}})\]  – components that keep the state of the whole system \(and, by implication, any hardware it may manage\) consistent by enacting a system\-wide reaction to any observable change in any of the system’s constituents\. A mediator operates in non\-blocking, fire\-and\-forget mode which is more characteristic of choreography, to be discussed [below]({{< relref "../../foundations-of-software-architecture/arranging-communication/choreography.md" >}})\. This also means that you will not be able to debug a use case as a thread – because [there are no predefined scenarios in control software](https://medium.com/itnext/control-and-processing-software-9011fee8bc66)\!
+Embedded and systems programming – the areas that deal with automating [*control*]({{< relref "../../foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}}) of hardware or distributed software – employ *Orchestrators* as [*Mediators*](https://refactoring.guru/design-patterns/mediator) \[[GoF]({{< relref "../../appendices/books-referenced.md#gof" >}})\]  – components that keep the state of the whole system \(and, by implication, any hardware it may manage\) consistent by enacting a system\-wide reaction to any observable change in any of the system’s constituents\. A mediator operates in non\-blocking, fire\-and\-forget mode which is more characteristic of choreography, to be discussed [below]({{< relref "../../foundations-of-software-architecture/arranging-communication/choreography.md" >}})\. This also means that you will not be able to debug a use case as a thread – because [there are no predefined scenarios in control software](https://medium.com/itnext/control-and-processing-software-9011fee8bc66)\!
 
 <figure>
 <a href="/diagrams/Communication/Mediator.png">
@@ -64,11 +64,11 @@ Embedded and system programming – the areas that deal with automating [*contro
 </a>
 </figure>
 
-Such a difference may be rooted in the direction of the control and information flow: in a backend it comes as a high\-level command while control systems react to low\-level events\.
+Such a difference may be rooted in the direction of the control and information flow: in a backend it comes as a complex, high\-level request while a control system reacts to a flood of low\-level events\.
 
 ## Dependencies
 
-By default an *Orchestrator* depends on each service which it manages – that means that a change in a service’s interface or contract – caused by fixing a bug, adding a feature, or optimizing performance – requires corresponding changes in the *Orchestrator*\. That is acceptable as the *Orchestrator*’s client\-facing, high\-level logic tends to evolve much faster than the business rules of the lower layer of services, therefore the team behind the orchestrator, unrestricted by other components depending on it, will likely release way more often than any other team\. However, as the number of the managed services and the lengths of their APIs increase, so does the amount of information that the *Orchestrator*’s team must remember and the influx of changes they must integrate in their code\. For a large project the workload of supporting the *orchestration layer* may paralyze its development – that was a major reason behind the decline of [*Enterprise SOA*]({{< relref "../../fragmented-metapatterns/service-oriented-architecture--soa-.md#enterprise-soa" >}}) where [*ESB*]({{< relref "../../extension-metapatterns/orchestrator.md#enterprise-service-bus-esb" >}}) used to orchestrate all the interactions in the system, including those between domain\-level services and components of the utility layer\.
+By default an *Orchestrator* depends on each service which it manages – that means that a change in a service’s interface or contract – caused by fixing a bug, adding a feature, or optimizing performance – requires corresponding changes in the *Orchestrator*\. That is acceptable as the *Orchestrator*’s client\-facing, high\-level logic tends to evolve much faster than the business rules of the lower layer of services, therefore the team behind the *Orchestrator*, unrestricted by other components depending on it, will likely release way more often than any other team\. However, as the number of the managed services and the lengths of their APIs increase, so does the amount of information that the *Orchestrator*’s team must remember and the influx of changes which they must integrate in their code\. For a large project the workload of supporting the *orchestration layer* may paralyze its development – that was a major reason behind the decline of [*Enterprise SOA*]({{< relref "../../fragmented-metapatterns/service-oriented-architecture--soa-.md#enterprise-soa" >}}) where [*ESB*]({{< relref "../../extension-metapatterns/orchestrator.md#enterprise-service-bus-esb" >}}) used to orchestrate all the interactions in the system, including those between domain\-level services and components of the utility layer\.
 
 <figure>
 <a href="/diagrams/Communication/Orchestrator%20-%20Dependencies.png">
@@ -80,7 +80,7 @@ By default an *Orchestrator* depends on each service which it manages – that m
 </a>
 </figure>
 
-Another option, which appears in [*Plugins*]({{< relref "../../implementation-metapatterns/plugins.md" >}}) and develops in [*Microkernel*]({{< relref "../../implementation-metapatterns/microkernel.md" >}}) and [*Hexagonal Architecture*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md" >}}) stems from [*dependency inversion*](https://en.wikipedia.org/wiki/Dependency_inversion_principle): the *Orchestrator* defines an [*SPI*](https://en.wikipedia.org/wiki/Service_provider_interface) \(*service provider interface*\) for every service\. That makes each service depend on the *Orchestrator* so that a single *Orchestrator*’s team does not need to follow updates of the multiple services’ APIs – instead it initiates the changes at its own pace\. However, with that approach the design of an SPI requires coordination from the teams on both sides of it and the once settled interface becomes hard to change\. The most famous example of modules that implement SPIs are OS drivers\.
+Another option, which appears in [*Plugins*]({{< relref "../../implementation-metapatterns/plugins.md" >}}) and develops in [*Microkernel*]({{< relref "../../implementation-metapatterns/microkernel.md" >}}) and [*Hexagonal Architecture*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md" >}}), stems from [*dependency inversion*](https://en.wikipedia.org/wiki/Dependency_inversion_principle): the *Orchestrator* defines an [*SPI*](https://en.wikipedia.org/wiki/Service_provider_interface) \(*service provider interface*\) for every service\. That makes each service depend on the *Orchestrator* so that a single *Orchestrator*’s team does not need to follow updates of the multiple services’ APIs – instead it initiates the changes at its own pace\. However, with that approach the design of an SPI requires coordination from the teams on both sides of it and the once settled interface becomes hard to change\. The most famous example of modules that implement SPIs are OS drivers\.
 
 <figure>
 <a href="/diagrams/Communication/Microkernel%20-%20Dependencies.png">
@@ -92,7 +92,7 @@ Another option, which appears in [*Plugins*]({{< relref "../../implementation-me
 </a>
 </figure>
 
-Furthermore, some domains develop that idea into a [*Hierarchy*]({{< relref "../../fragmented-metapatterns/hierarchy.md" >}}): when services implement related concepts, they may match a single SPI, making the *Orchestrator* simpler \(as there is no more need to remember multiple interfaces\)\. That is the case with telecom or payment gateways and it may also be found with trees of product categories in online marketplaces\.
+Furthermore, some domains develop that idea into a [*Hierarchy*]({{< relref "../../fragmented-metapatterns/hierarchy.md" >}}): when services implement related concepts, they may match a single SPI, making the *Orchestrator* simpler \(as there is no further need for its developers to remember multiple interfaces\)\. That is the case with telecom or payment gateways and it may also be found with trees of product categories in online marketplaces\.
 
 <figure>
 <a href="/diagrams/Communication/Hierarchy%20-%20Dependencies.png">
@@ -142,7 +142,7 @@ As each of the services depends on the APIs of the others, any change to any int
 </a>
 </figure>
 
-In real life services are likely to be layered, with their upper layers acting as both internal and external *Orchestrators*\. Layering isolates interdependencies to the relatively small [application\-level]({{< relref "../../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) components and resolves, to an extent, the seemingly counterintuitive case of mutual orchestration as now there is an explicit, though fragmented, system\-wide orchestration layer\.
+In real life [services are likely to be layered]({{< relref "../../fragmented-metapatterns/layered-services.md#orchestrated-three-layered-services" >}}), with their upper layers acting as both internal and external *Orchestrators*\. Layering isolates interdependencies to the relatively small [application\-level]({{< relref "../../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) components and resolves, to an extent, the seemingly counterintuitive case of mutual orchestration as now there is an explicit, though fragmented, system\-wide orchestration layer\.
 
 <figure>
 <a href="/diagrams/Communication/Mutual%20Orchestration%20-%203.png">

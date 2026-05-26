@@ -9,12 +9,12 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 # Evolutions of Services that restructure services {anchor=false}
 
-[*Services*]({{< relref "../../basic-metapatterns/services.md" >}}) work well when each service matches a subdomain and is developed by a single team\. If those premises change, you’ll need to restructure the system:
+[*Services*]({{< relref "../../basic-metapatterns/services.md" >}}) work well when each service matches a subdomain and is developed by a dedicated team\. If those premises change, you’ll need to restructure the system:
 
 - A new feature request may emerge outside of any of the existing subdomains, creating a new service\.
 - A service may grow too large to be developed by a single team, calling for division\.
 - Two services may become so strongly coupled that they fare better when merged together\.
-- The entire system may need to be glued back into a [*Monolith*]({{< relref "../../basic-metapatterns/monolith.md" >}}) if domain knowledge changes or interservice communication strongly degrades performance\.
+- The entire system may need to be glued back into a [*Monolith*]({{< relref "../../basic-metapatterns/monolith.md" >}}) if the domain knowledge changes or interservice communication strongly degrades performance\.
 - Alternatively, coupled services may be clustered into co\-deployed [*Cells*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}}) to reduce operational complexity\.
 
 
@@ -36,7 +36,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 <ins>Prerequisite</ins>: there is a loosely coupled \(new or existing\) subdomain that does not have a dedicated service \(yet\)\.
 
-If you need to add a new functionality that does not naturally fit into one of the existing services, you may create a new service and maybe get a new team for it\.
+If you need to add a new functionality that does not naturally fit into one of the existing services, you may create a new service and, maybe, get a new team for it\.
 
 If one of your services has grown too large, you should look for a way to subdivide it \(likely through a [*Sandwich*]({{< relref "../../extension-metapatterns/sandwich.md" >}}) stage with a shared [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) and [*database*]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}})\) to decrease the size and, correspondingly, complexity of its code and get multiple teams to work on the resulting \(sub\)services\. However, that makes sense only if the old service is not highly cohesive – otherwise [the resulting subsystem may be more complex]({{< relref "../../foundations-of-software-architecture/modules-and-complexity.md#coupling-and-cohesion" >}}) than the original service\.
 
@@ -51,7 +51,7 @@ If one of your services has grown too large, you should look for a way to subdiv
 
 - You add to the operations complexity by creating a new system component and several inter\-component dependencies\.
 - There is a new point of failure, which means that bugs and outages become more likely\.
-- Performance \(or at least latency and cost efficiency\) of the system will deteriorate because interservice communication is slow\.
+- Performance \(or at least the latency and cost efficiency\) of the system will deteriorate because interservice communication is slow\.
 - You may have a hard time debugging use cases that involve both the old and new service\.
 
 
@@ -73,11 +73,11 @@ If one of your services has grown too large, you should look for a way to subdiv
 
 <ins>Prerequisite</ins>: the services use compatible technologies\.
 
-If you see that several services communicate with each other almost as intensely as they call their internal methods, they probably belong together\.
+If you see that several services communicate with each other almost as intensely as they call their internal methods, then they probably belong together\.
 
-If your use cases have too high a latency or you pay too much for CPU and traffic, the issue may originate with the interservice communication and merging the services should help\. No services, no pain\.
+If your use cases have too high a latency or you pay too much for CPU and traffic, the issue may originate with the interservice communication, and merging the services should help\. No services, no headache\.
 
-Alternatively, as domain knowledge changes \[[DDD]({{< relref "../../appendices/books-referenced.md#ddd" >}})\], you may have to merge much of the code together only to subdivide it later along updated subdomain boundaries\. Which means you face [lots of work for no reason](https://martinfowler.com/bliki/MonolithFirst.html)\.
+Alternatively, as the domain knowledge changes \[[DDD]({{< relref "../../appendices/books-referenced.md#ddd" >}})\], you may have to merge much of the code together only to subdivide it later along the updated subdomain boundaries\. Which means that you face [lots of work for no reason](https://martinfowler.com/bliki/MonolithFirst.html)\.
 
 <ins>Pros</ins>: 
 
@@ -113,17 +113,17 @@ Alternatively, as domain knowledge changes \[[DDD]({{< relref "../../appendices/
 
 <ins>Prerequisite</ins>: there are distinct subdomains\.
 
-When there are too many services, none sees the big picture: which components are involved in a use case and why the system world the way it does\. Moreover, managing tens to hundreds of different services and databases is hard and error\-prone\.
+When there are too many services, none sees the big picture: which components are involved in a use case and why the system works the way it does\. Moreover, managing tens to hundreds of different services with their databases is hard and error\-prone\.
 
-Therefore cluster services that share a subdomain into a co\-deployed cohesive *Cell*\.
+Therefore, cluster the services which share a subdomain into a co\-deployed cohesive *Cell*\.
 
 <ins>Pros</ins>: 
 
-- Managing ten *Cells* is much easier than a hundred services\.
+- Managing ten *Cells* is much easier than managing a hundred services\.
 - More clear and independent subdomains as their interdependencies become explicit\.
-- Lower traffic as closely communicating services are now co\-located\. 
-- Lower data storage requirements as the contents of a *Cell* may [share a database]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}})\.
-- No boilerplate code for versioning or [data views]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) inside a *Cell*\.
+- Lower traffic because the closely communicating services are now co\-located\. 
+- Lower data storage requirements as the contents of the *Cell* may [share a database]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}})\.
+- No boilerplate code for versioning or [data views]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) inside the *Cell*\.
 
 
 <ins>Cons</ins>: 
@@ -134,5 +134,5 @@ Therefore cluster services that share a subdomain into a co\-deployed cohesive *
 
 <ins>Further steps</ins>:
 
-- Complete *Cell* encapsulation through the use of [*Adapters*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) and [*Ambassador Plugins*]({{< relref "../../implementation-metapatterns/plugins.md#ambassador-plugin-logic-extension" >}})\.
+- Complete the *Cell* encapsulation through the use of [*Adapters*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) and [*Ambassador Plugins*]({{< relref "../../implementation-metapatterns/plugins.md#ambassador-plugin-logic-extension" >}})\.
 - Transform any strongly coupled *Cells* into [*Sandwiches*]({{< relref "../../extension-metapatterns/sandwich.md" >}})\.

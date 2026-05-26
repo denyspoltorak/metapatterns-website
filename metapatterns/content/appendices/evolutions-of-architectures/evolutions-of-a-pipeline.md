@@ -9,12 +9,12 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 # Evolutions of a Pipeline {anchor=false}
 
-[*Pipeline*]({{< relref "../../basic-metapatterns/pipeline.md" >}}) [inherits its set of evolutions from *Services*]({{< relref "../../basic-metapatterns/services.md#evolutions" >}})\. Components can be added, split in two, merged or replaced\. Many systems employ a [*Middleware*]({{< relref "../../extension-metapatterns/middleware.md" >}}) \(pub/sub or pipeline framework\), [*Shared Repository*]({{< relref "../../extension-metapatterns/shared-repository.md" >}}) \(which may be a database or file system\) or [*Proxies*]({{< relref "../../extension-metapatterns/proxy.md" >}})\.
+[*Pipeline*]({{< relref "../../basic-metapatterns/pipeline.md" >}}) [inherits its set of evolutions from *Services*]({{< relref "../../basic-metapatterns/services.md#evolutions" >}})\. Components can be added, split in two, merged or replaced\. Many systems employ a [*Middleware*]({{< relref "../../extension-metapatterns/middleware.md" >}}) \(pub/sub or pipeline framework\), [*Shared Repository*]({{< relref "../../extension-metapatterns/shared-repository.md" >}}) \(which may be a database or file system\), or [*Proxies*]({{< relref "../../extension-metapatterns/proxy.md" >}})\.
 
 There are a couple of *Pipeline*\-specific evolutions:
 
 - The first service of the *Pipeline* can be promoted to [*Front Controller*]({{< relref "../../extension-metapatterns/orchestrator.md#inexact-front-controller" >}}) which tracks status updates for every request it handles\.
-- Adding an [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) turns a [*Pipeline*]({{< relref "../../basic-metapatterns/pipeline.md" >}}) into [*Services*]({{< relref "../../basic-metapatterns/services.md" >}})\. As the high\-level business logic moves to the orchestration layer, the services don’t need to interact directly, the interservice communication channels disappear and the system becomes identical to [*Orchestrated Services*]({{< relref "../../extension-metapatterns/orchestrator.md" >}})\.
+- Adding an [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) turns a [*Pipeline*]({{< relref "../../basic-metapatterns/pipeline.md" >}}) into [*Services*]({{< relref "../../basic-metapatterns/services.md" >}})\. As the high\-level business logic moves to the [orchestration layer]({{< relref "../../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}), the services don’t need to interact directly anymore, the interservice communication channels disappear, and the system turns into ordinary [*Orchestrated Services*]({{< relref "../../extension-metapatterns/orchestrator.md" >}})\.
 
 
 ## Promote a service to Front Controller
@@ -35,7 +35,7 @@ There are a couple of *Pipeline*\-specific evolutions:
 
 <ins>Prerequisite</ins>: request processing steps are slow \(may depend on human action\)\.
 
-If request processing steps require heavy calculations or manual action, clients may want to query the status of their requests and analysts may want to see bottlenecks in the *Pipeline*\. Let the first service in the *Pipeline* track the state of all the running requests by subscribing to status notifications from other services\.
+If the request processing steps require heavy calculations or manual action, then clients may want to query the status of their requests, and analysts may want to see bottlenecks in the *Pipeline*\. Let the first service in the *Pipeline* track the state of all the running requests by subscribing to status notifications from other services\.
 
 <ins>Pros</ins>: 
 
@@ -44,7 +44,7 @@ If request processing steps require heavy calculations or manual action, clients
 
 <ins>Cons</ins>: 
 
-- The first service in the pipeline depends on every other service\.
+- The first service in the pipeline becomes more complex and starts depending on every other service\.
 
 
 <ins>Further steps</ins>:
@@ -70,12 +70,13 @@ If request processing steps require heavy calculations or manual action, clients
 
 <ins>Prerequisite</ins>: performance degradation is acceptable\.
 
-When a [*choreographed*]({{< relref "../../foundations-of-software-architecture/arranging-communication/choreography.md" >}}) system is extended with more and more use cases, it is very likely to fall into integration hell where nobody understands how its components interrelate\. Extract the workflow logic into a dedicated service\.
+When a [*choreographed*]({{< relref "../../foundations-of-software-architecture/arranging-communication/choreography.md" >}}) system is gradually extended with more and more use cases, it is very likely to fall into integration hell where nobody understands how its components interrelate\. Extract the [workflow logic]({{< relref "../../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) into a dedicated service\.
 
 <ins>Pros</ins>: 
 
 - New use cases are easy to add\.
 - Complex scenarios are supported\.
+- Error handling becomes trivial\.
 - The services don’t depend on each other\.
 - There is a single client\-facing team, other teams are not under pressure from the business\.
 - It is easier to run actions in parallel\.
@@ -86,11 +87,11 @@ When a [*choreographed*]({{< relref "../../foundations-of-software-architecture/
 <ins>Cons</ins>: 
 
 - The number of messages in the system doubles, thus its performance may degrade\.
-- The *Orchestrator* may become a development and performance bottleneck or a single point of failure\.
+- The *Orchestrator* may become a development and performance bottleneck, or a single point of failure\.
 
 
 <ins>Further steps</ins>:
 
-- If there are several clients that strongly vary in workflows, you can apply [*Backends for Frontends*]({{< relref "../../fragmented-metapatterns/backends-for-frontends--bff-.md" >}}) with an *Orchestrator* per client\.
-- If the *Orchestrator* grows too large, it can be [divided]({{< relref "../../extension-metapatterns/orchestrator.md#variants-by-structure-can-be-combined" >}}) into layers, services or both, the latter option resulting in a [*Top\-Down Hierarchy*]({{< relref "../../fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}})\.
+- If there are several clients that strongly vary in their workflows, you can apply [*Backends for Frontends*]({{< relref "../../fragmented-metapatterns/backends-for-frontends--bff-.md" >}}) with an *Orchestrator* per client\.
+- If the *Orchestrator* grows too large, it can be [divided]({{< relref "../../extension-metapatterns/orchestrator.md#variants-by-structure-can-be-combined" >}}) into layers, services, or both, with the latter option resulting in a [*Top\-Down Hierarchy*]({{< relref "../../fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}})\.
 - The *Orchestrator* can be [scaled]({{< relref "../../extension-metapatterns/orchestrator.md#scaled" >}}) and can have its own database\.

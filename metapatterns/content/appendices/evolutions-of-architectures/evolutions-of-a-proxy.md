@@ -9,7 +9,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 # Evolutions of a Proxy {anchor=false}
 
-It usually makes little sense to get rid of a [*Proxy*]({{< relref "../../extension-metapatterns/proxy.md" >}}) once it is integrated into a system\. Its only real drawback is a slight increase in latency for user requests which may be helped through creation of [bypass channels]({{< relref "../../extension-metapatterns/proxy.md#half-proxy" >}}) between the clients and a service that needs low latency\. The other drawback of the pattern, the *Proxy*’s being a single point of failure, is countered by deploying multiple instances of the *Proxy*\.
+It usually makes little sense to get rid of a [*Proxy*]({{< relref "../../extension-metapatterns/proxy.md" >}}) once it is integrated into the system\. Its only real drawback is a slight increase in latency for user requests which may be helped through creation of [bypass channels]({{< relref "../../extension-metapatterns/proxy.md#half-proxy" >}}) between the clients and a service which needs low latency\. The other drawback of the pattern, namely the *Proxy*’s being a single point of failure, is countered by deploying multiple instances of the *Proxy*\.
 
 As *Proxies* are usually third\-party products, there is very little we can change about them:
 
@@ -69,7 +69,7 @@ It often makes sense to colocate software *Proxies* or use a multifunctional *Pr
 
 <ins>Prerequisite</ins>: your system serves several kinds of clients\.
 
-If you have internal and external clients, or admins and users, you may want to vary the setup of *Proxies* for each kind of client, sometimes to the extent of physically separating network communication paths, so that each kind of client is treated according to its bandwidth, priority and permissions\.
+If you have internal and external clients, or admins and users, you may want to vary the setup of *Proxies* for each kind of client, sometimes to the extent of physically separating network communication paths, so that each kind of client is treated according to its bandwidth, priority, and permissions\.
 
 <ins>Pros</ins>: 
 
