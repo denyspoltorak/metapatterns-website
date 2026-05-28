@@ -769,7 +769,7 @@ Index of patterns
 
 <hr>
 
-<h2 style="text-align: center;">The book</h2>
+<h2 id="book" style="text-align: center;">The book</h2>
 
 <img src="cover.png" alt="Cover of Architectural Metapatterns" class="cover-img" loading="lazy" width="1240" height="1755" sizes="auto" srcset="cover_6.png 207w, cover_5.png 248w, cover_4.png 310w, cover_3.png 413w, cover.png 1240w">
 
