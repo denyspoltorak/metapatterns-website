@@ -766,3 +766,19 @@ Index of patterns
 <a href="/basic-metapatterns/layers/#data-persistence" aria-label="Data" style="position: absolute; top: 96.5%; left: 73%; width: 10.5%; height: 3.5%;"></a>
 
 </nav>
+
+<hr>
+
+<h2 style="text-align: center;">The book</h2>
+
+<img src="cover.png" alt="Cover of Architectural Metapatterns" class="cover-img" loading="lazy" width="1240" height="1755" sizes="auto" srcset="cover_6.png 207w, cover_5.png 248w, cover_4.png 310w, cover_3.png 413w, cover.png 1240w">
+
+This website is an online version of my book _Architectural Metapatterns: The Pattern Language of Software Architecture_ which can be downloaded from [GitHub](https://github.com/denyspoltorak/metapatterns) or [Leanpub](https://leanpub.com/metapatterns).
+
+It is a compendium of architectural patterns which sorts them out into a tree-like hierarchy based on the pattern's structure and function. This [allows for grouping](/introduction/metapatterns/) hundreds of patterns into less then 20 classes and exploring the common features, applicability, and performance of each class.
+
+It also includes supplementary topics that range from the [discussion on the nature of complexity](/foundations-of-software-architecture/modules-and-complexity/) to the comparison of [orchestration](/foundations-of-software-architecture/arranging-communication/orchestration/), [choreography](/foundations-of-software-architecture/arranging-communication/choreography/), and [integration through shared data](/foundations-of-software-architecture/arranging-communication/shared-data/). Aside of that, there is a wide range of [evolutions](/appendices/evolutions-of-architectures/) which show how a system may change under different forces.
+
+_Architectural Metapatterns_ is AI-free, 440 pages long, and includes hundreds of [box-and-arrow diagrams](/introduction/about-this-book/#diagrams).
+
+If you like the book or website, please tell your friends about them. _Knowledge must be free!_
