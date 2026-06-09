@@ -3,7 +3,8 @@ weight = 1
 layout = "landing"
 title = "The pattern language of software architecture"
 description = "This is an online version of the Architectural Metapatterns book which explores system topologies and arranges architectural patterns into a pattern language."
-images = ["/diagrams/Web/og/Favicon-plain.png"]
+images = ["/cover.png"]
+primary_image = "/cover.png"
 bookCollapseSection = true
 [sitemap]
   priority = 0.5
