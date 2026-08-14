@@ -84,7 +84,7 @@ Thus, here we have two architectural patterns of arguably similar structure \([*
 </a>
 </figure>
 
-I was told that [*Domain Services*]({{< relref "../basic-metapatterns/services.md#whole-subdomain-sub-domain-services-macroservices" >}}) of \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] are an incorrect term – because a *domain service* is always limited to the [*domain* layer]({{< relref "../basic-metapatterns/layers.md#domain-driven-design-ddd-layers" >}}) of \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] while those of \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] also cover the [*application*]({{< relref "../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) and, maybe, *infrastructure*\.
+I was told that [*Domain Services*]({{< relref "../basic-metapatterns/services.md#whole-subdomain-subdomain-services-macroservices" >}}) of \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] are an incorrect term – because a *domain service* is always limited to the [*domain* layer]({{< relref "../basic-metapatterns/layers.md#domain-driven-design-ddd-layers" >}}) of \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] while those of \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] also cover the [*application*]({{< relref "../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) and, maybe, *infrastructure*\.
 
 I believe that both definitions are technically correct, if the difference in the meaning of *domain* is accounted for\. In \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] *domain* is almost synonymous with a *bounded context* of \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\], while \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] more often uses that word for the name of its [middle layer]({{< relref "../basic-metapatterns/layers.md#domain-business-rules-or-model" >}}) which contains *business rules*\.
 
@@ -102,7 +102,7 @@ I believe that both definitions are technically correct, if the difference in th
 
 \[[DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\] calls anything made of services a *service\-based architecture*\.
 
-\[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] differentiates [*Microservices*]({{< relref "../basic-metapatterns/services.md#microservices" >}}) and [*Service\-Oriented Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}), leaving whatever remains \(large [subdomain\-scale services]({{< relref "../basic-metapatterns/services.md#whole-subdomain-sub-domain-services-macroservices" >}})\) under the name of [*Service\-Based Architecture*]({{< relref "../basic-metapatterns/services.md#service-based-architecture-sba-macroservices" >}})\.
+\[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] differentiates [*Microservices*]({{< relref "../basic-metapatterns/services.md#microservices" >}}) and [*Service\-Oriented Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}), leaving whatever remains \(large [subdomain\-scale services]({{< relref "../basic-metapatterns/services.md#whole-subdomain-subdomain-services-macroservices" >}})\) under the name of [*Service\-Based Architecture*]({{< relref "../basic-metapatterns/services.md#service-based-architecture-sba-macroservices" >}})\.
 
 Both definitions are technically correct\. One is wider than the other\.
 

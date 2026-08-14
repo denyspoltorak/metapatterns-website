@@ -136,7 +136,7 @@ You may use two or three *orchestration frameworks* \(engines\) which differ in 
 
 <ins>Further steps</ins>:
 
-- Subdivide one or more of the resulting *orchestration layers* to form [*Layered Services*]({{< relref "../../fragmented-metapatterns/layered-services.md" >}}), [*Backends for Frontends*]({{< relref "../../fragmented-metapatterns/backends-for-frontends--bff-.md" >}}), [*Hierarchy*]({{< relref "../../fragmented-metapatterns/hierarchy.md" >}}), or [*Cell\-Based Architecture*]({{< relref "../../fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services" >}})\.
+- Subdivide one or more of the resulting *orchestration layers* to form [*Layered Services*]({{< relref "../../fragmented-metapatterns/layered-services.md" >}}), [*Backends for Frontends*]({{< relref "../../fragmented-metapatterns/backends-for-frontends--bff-.md" >}}), [*Hierarchy*]({{< relref "../../fragmented-metapatterns/hierarchy.md" >}}), or [*Cell\-Based Architecture*]({{< relref "../../fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services-vertical-slice-architecture-vsa" >}})\.
 
 
 ## Form a Hierarchy

@@ -133,8 +133,9 @@ Though most real\-world *Sandwiches* stay beneath the radar as non\-standard arc
 - [*Blackboard System*]({{< relref "#blackboard-system" >}}) describes how specialized algorithms cooperate to try solving a non\-deterministic problem\.
 - [*Space\-Based Architecture*]({{< relref "#space-based-architecture" >}}) runs multiple instances of services co\-located with a distributed in\-memory data store\.
 - [*Service\-Based Architecture*]({{< relref "#service-based-architecture" >}}) comprises large services that often share a database\.
-- [*Nanoservices*]({{< relref "#nanoservices" >}}) is a system of functions deployed to a cloud\.
 - [*Command Query Responsibility Segregation*]({{< relref "#command-query-responsibility-segregation-cqrs" >}}) uses different models for read\-write and read\-only scenarios\. 
+- [*Vertical Slice Architecture*]({{< relref "#vertical-slice-architecture-vsa" >}}) dedicates a component to each use case\.
+- [*Nanoservices*]({{< relref "#nanoservices" >}}) are a system of single\-purpose functions deployed to a cloud\.
 - [*Replicated Load\-Balanced Services*]({{< relref "#inexact-replicated-load-balanced-services-lambdas" >}}) are identical instances of a stateless service that access a shared database\.
 
 
@@ -204,7 +205,7 @@ As *Space\-Based Architecture* runs every component in a [*Mesh*]({{< relref "..
 </a>
 </figure>
 
-*Service\-Based Architecture* \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}}) [but not]({{< relref "../analytics/ambiguous-patterns.md#service-based-architecture" >}}) [DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\] is the most pragmatic and loosely defined of topologies based on *Services* \(hence the name\)\. In a basic *Service\-Based Architecture* the [*subdomain services*]({{< relref "../basic-metapatterns/services.md#whole-subdomain-sub-domain-services-macroservices" >}}) are integrated by a [*User Interface*]({{< relref "../extension-metapatterns/proxy.md#user-interface-presentation-layer-separated-presentation-command-line-interface-cli-graphical-user-interface-gui-frontend-human-machine-interface-hmi-man-machine-interface-mmi-operator-interface" >}}) layer, usually a *Frontend*, and there is a single [*Shared Database*]({{< relref "../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}})\. However, as there are no written rules for *Service\-Based Architecture*, multiple databases or finer\-grained *GUI*s may be used for programmers’ convenience, disintegrating the *Sandwich* topology for the sake of less coupled [*Layered Service*s]({{< relref "../fragmented-metapatterns/layered-services.md" >}})\.
+*Service\-Based Architecture* \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}}) [but not]({{< relref "../analytics/ambiguous-patterns.md#service-based-architecture" >}}) [DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\] is the most pragmatic and loosely defined of topologies based on *Services* \(hence the name\)\. In a basic *Service\-Based Architecture* the [*subdomain services*]({{< relref "../basic-metapatterns/services.md#whole-subdomain-subdomain-services-macroservices" >}}) are integrated by a [*User Interface*]({{< relref "../extension-metapatterns/proxy.md#user-interface-presentation-layer-separated-presentation-command-line-interface-cli-graphical-user-interface-gui-frontend-human-machine-interface-hmi-man-machine-interface-mmi-operator-interface" >}}) layer, usually a *Frontend*, and there is a single [*Shared Database*]({{< relref "../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}})\. However, as there are no written rules for *Service\-Based Architecture*, multiple databases or finer\-grained *GUI*s may be used for programmers’ convenience, disintegrating the *Sandwich* topology for the sake of less coupled [*Layered Service*s]({{< relref "../fragmented-metapatterns/layered-services.md" >}})\.
 
 <figure>
 <a href="/diagrams/Variants/2/Service-Based%20to%20Layered%20Services.png">
@@ -215,26 +216,6 @@ As *Space\-Based Architecture* runs every component in a [*Mesh*]({{< relref "..
 </picture>
 </a>
 </figure>
-
-### [Nanoservices]({{< relref "../basic-metapatterns/services.md#inexact-nanoservices-api-layer" >}})
-
-<figure>
-<a href="/diagrams/Variants/2/Nanoservices.png">
-<picture>
-<source srcset="/diagrams/Variants/2/Nanoservices.svg" media="(prefers-color-scheme: light)"/>
-<source srcset="/diagrams/Variants/2/Nanoservices.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/2/Nanoservices.png" alt="Nanoservices form a Sandwich-shaped architecture. The upper layer is an API Gateway for an orchestrated system or a gateway for pipelined Nanoservices. The lower layer is a shared datastore." loading="lazy" width="1243" height="363" style="width:100%"/>
-</picture>
-</a>
-</figure>
-
-*Nanoservices* is another loosely defined architecture built of single\-purpose *functions* \([FaaS](https://en.wikipedia.org/wiki/Function_as_a_service)\) individually deployed to the cloud\. It is highly elastic and relies on a cloud provider for operational support, saving costs for small businesses\.
-
-As a single *nanoservice* is too small to implement a use case, there must be an [*integration layer*]({{< relref "../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) that receives client or user requests, runs several *nasoservices* to execute it, and returns a response\. The integration layer may be a [*Frontend*]({{< relref "../extension-metapatterns/proxy.md#user-interface-presentation-layer-separated-presentation-command-line-interface-cli-graphical-user-interface-gui-frontend-human-machine-interface-hmi-man-machine-interface-mmi-operator-interface" >}}), [*API Gateway*]({{< relref "../extension-metapatterns/orchestrator.md#api-gateway" >}}), an [*Event Mediator*]({{< relref "../extension-metapatterns/orchestrator.md#event-mediator" >}}) for [*orchestrated Nanoservices*]({{< relref "../basic-metapatterns/services.md#inexact-nanoservices-api-layer" >}}), or an ordinary [*Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) that initiates a [*pipelined*]({{< relref "../basic-metapatterns/pipeline.md" >}}) scenario and receives its response from a [*choreographed* system]({{< relref "../basic-metapatterns/pipeline.md#function-as-a-service-faas-nanoservices-pipelined" >}})\.
-
-As each *nanoservice* is stateless, for the system to be stateful there must be a *data store*\. And as each *nanoservice* can do only one thing \(either read, write, or search\), the *data store* must be [*shared*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) to be of any use\.
-
-Please note how a fine\-grained decomposition of business logic necessarily results in a *Sandwich* architecture\.
 
 ### [Command Query Responsibility Segregation]({{< relref "../fragmented-metapatterns/layered-services.md#command-query-responsibility-segregation-cqrs" >}}) \(CQRS\)
 
@@ -261,6 +242,60 @@ Please note how a fine\-grained decomposition of business logic necessarily resu
 </picture>
 </a>
 </figure>
+
+### Vertical Slice Architecture \(VSA\)
+
+<figure>
+<a href="/diagrams/Variants/2/Vertical%20Slice%20Architecture%20-%20Basic.png">
+<picture>
+<source srcset="/diagrams/Variants/2/Vertical%20Slice%20Architecture%20-%20Basic.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/2/Vertical%20Slice%20Architecture%20-%20Basic.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/2/Vertical%20Slice%20Architecture%20-%20Basic.png" alt="Each screen is connected to several backend slices, all of which share a database." loading="lazy" width="983" height="323" style="width:100%"/>
+</picture>
+</a>
+</figure>
+
+[*Vertical Slice Architecture*](https://www.architecture-weekly.com/p/my-thoughts-on-vertical-slices-cqrs) \(*VSA*\) dedicates a component \(*slice*\) to each use case\. These components usually comprise two layers:
+
+- An [*Application*]({{< relref "../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) layer which checks permissions, pre\-processes input, and accesses the database, calls the domain layer, and handles possible errors\.
+- A [*Domain*]({{< relref "../basic-metapatterns/layers.md#domain-business-rules-or-model" >}}) layer which implements business rules, typically in pure functional style\.
+
+
+The slices are co\-located and can be grouped into *features*, which are further grouped into *modules*, resulting in a kind of [*In\-Depth Hierarchy*]({{< relref "../fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services-vertical-slice-architecture-vsa" >}})\.
+
+Ideally, the slices, though co\-located, [should be independent of each other](https://www.jimmybogard.com/vertical-slice-architecture/) so that they may diverge in code style and database access techniques\. That [is said](https://www.reddit.com/r/dotnet/comments/1o155gd/comment/nif69qh/) to allow for a new programmer to quickly become productive because there is very little to learn about the project – to add a new feature you merely copy\-paste an existing slice and edit its code until it implements the new use case\.
+
+While this works well with loosely coupled domains, in most cases we cannot will the domain\-level coupling out of existence\. That coupling causes the slices to send domain events to each other and call or inherit shared code\. Another common sense restriction is that any cohesive data, such as a database table, [should be written or edited by a single feature](https://www.reddit.com/r/dotnet/comments/1o155gd/comment/nigkmd0/) to avoid inconsistencies which are prone to occur because *VSA* lacks the *entities* of \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\] which encapsulate data access and preserve invariants\.
+
+<figure>
+<a href="/diagrams/Variants/2/Vertical%20Slice%20Architecture%20-%20Real.png">
+<picture>
+<source srcset="/diagrams/Variants/2/Vertical%20Slice%20Architecture%20-%20Real.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/2/Vertical%20Slice%20Architecture%20-%20Real.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/2/Vertical%20Slice%20Architecture%20-%20Real.png" alt="In complex systems slices are grouped into features which are further composed into services. Each feature or service is encapsulated with an API. There are shared components." loading="lazy" width="1483" height="463" style="width:100%"/>
+</picture>
+</a>
+</figure>
+
+### [Nanoservices]({{< relref "../basic-metapatterns/services.md#inexact-nanoservices-api-layer" >}})
+
+<figure>
+<a href="/diagrams/Variants/2/Nanoservices.png">
+<picture>
+<source srcset="/diagrams/Variants/2/Nanoservices.svg" media="(prefers-color-scheme: light)"/>
+<source srcset="/diagrams/Variants/2/Nanoservices.dark.svg" media="(prefers-color-scheme: dark)"/>
+<img src="/diagrams/Variants/2/Nanoservices.png" alt="Nanoservices form a Sandwich-shaped architecture. The upper layer is an API Gateway for an orchestrated system or a gateway for pipelined Nanoservices. The lower layer is a shared datastore." loading="lazy" width="1243" height="363" style="width:100%"/>
+</picture>
+</a>
+</figure>
+
+*Nanoservices* is another loosely defined architecture built of single\-purpose *functions* \([FaaS](https://en.wikipedia.org/wiki/Function_as_a_service)\) individually deployed to the cloud\. It is highly elastic and relies on a cloud provider for operational support, saving costs for small businesses\.
+
+As a single *nanoservice* is too small to implement a use case, there must be an [*integration layer*]({{< relref "../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) that receives client or user requests, runs several *nasoservices* to execute it, and returns a response\. The integration layer may be a [*Frontend*]({{< relref "../extension-metapatterns/proxy.md#user-interface-presentation-layer-separated-presentation-command-line-interface-cli-graphical-user-interface-gui-frontend-human-machine-interface-hmi-man-machine-interface-mmi-operator-interface" >}}), [*API Gateway*]({{< relref "../extension-metapatterns/orchestrator.md#api-gateway" >}}), an [*Event Mediator*]({{< relref "../extension-metapatterns/orchestrator.md#event-mediator" >}}) for [*orchestrated Nanoservices*]({{< relref "../basic-metapatterns/services.md#inexact-nanoservices-api-layer" >}}) \(which resemble the [*Vertical Slice Architecture*]({{< relref "#vertical-slice-architecture-vsa" >}})\), or an ordinary [*Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) that initiates a [*pipelined*]({{< relref "../basic-metapatterns/pipeline.md" >}}) scenario and receives its response from a [*choreographed* system]({{< relref "../basic-metapatterns/pipeline.md#function-as-a-service-faas-nanoservices-pipelined" >}})\.
+
+As each *nanoservice* is stateless, for the system to be stateful there must be a *data store*\. And as each *nanoservice* can do only one thing \(either read, write, or search\), the *data store* must be [*shared*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) to be of any use\.
+
+Please note how a fine\-grained decomposition of business logic necessarily results in a *Sandwich* architecture\.
 
 ### \(inexact\) [Replicated Load\-Balanced Services]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}}), Lambdas
 
