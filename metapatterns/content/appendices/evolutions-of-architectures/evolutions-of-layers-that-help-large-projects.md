@@ -76,7 +76,7 @@ It is very common for a system’s domain to comprise weakly interacting *bounde
 
 <ins>Prerequisite</ins>: the use cases are trivial sequences of loosely coupled, coarse\-grained steps\.
 
-If your system features well\-defined and simple workflows for processing every kind of input request, then it can be divided into several [*subdomain services*]({{< relref "../../basic-metapatterns/services.md#whole-subdomain-sub-domain-services-macroservices" >}}), each hosting a few related steps of multiple use cases\. Each service subscribes to inputs from other services and/or system’s clients and publishes output events\.
+If your system features well\-defined and simple workflows for processing every kind of input request, then it can be divided into several [*subdomain services*]({{< relref "../../basic-metapatterns/services.md#whole-subdomain-subdomain-services-macroservices" >}}), each hosting a few related steps of multiple use cases\. Each service subscribes to inputs from other services and/or system’s clients and publishes output events\.
 
 <ins>Pros</ins>: 
 

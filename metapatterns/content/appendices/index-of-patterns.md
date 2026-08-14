@@ -101,9 +101,9 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Cell Router]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) \(Amazon Cell\-Based Architecture\)
 
-[Cell\-Based Architecture]({{< relref "../fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services" >}}) \(WSO2 version\)
+[Cell\-Based Architecture]({{< relref "../fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services-vertical-slice-architecture-vsa" >}}) \(WSO2 version\)
 
-[Cell\-Based Microservice Architecture]({{< relref "../fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services" >}}) \(WSO2 version\)
+[Cell\-Based Microservice Architecture]({{< relref "../fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services-vertical-slice-architecture-vsa" >}}) \(WSO2 version\)
 
 [Cells]({{< relref "../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-multitenancy-cells-amazon-definition" >}}) \(Amazon definition\)
 
@@ -185,7 +185,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Domain\-Oriented Microservice Architecture]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#domain-oriented-microservice-architecture-doma" >}}) \(DOMA\)
 
-[Domain Services]({{< relref "../basic-metapatterns/services.md#whole-subdomain-sub-domain-services-macroservices" >}}) \(scope\)
+[Domain Services]({{< relref "../basic-metapatterns/services.md#whole-subdomain-subdomain-services-macroservices" >}}) \(scope\)
 
 [Domain\-Specific Language]({{< relref "../implementation-metapatterns/microkernel.md#interpreter-script-domain-specific-language-dsl" >}}) \(DSL\)
 
@@ -271,7 +271,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Hypervisor]({{< relref "../implementation-metapatterns/microkernel.md#virtualizer-hypervisor-container-orchestrator-distributed-runtime" >}})
 
-[In\-Depth Hierarchy]({{< relref "../fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services" >}})
+[In\-Depth Hierarchy]({{< relref "../fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services-vertical-slice-architecture-vsa" >}})
 
 [Ingress Controller]({{< relref "../extension-metapatterns/proxy.md#dispatcher-reverse-proxy-ingress-controller-edge-service-microgateway" >}})
 
@@ -517,7 +517,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Script]({{< relref "../implementation-metapatterns/microkernel.md#interpreter-script-domain-specific-language-dsl" >}})
 
-[Segmented Microservice Architecture]({{< relref "../fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services" >}})
+[Segmented Microservice Architecture]({{< relref "../fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services-vertical-slice-architecture-vsa" >}})
 
 [Separated Presentation]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#upper-half-separated-presentation-open-host-service" >}})
 
@@ -537,7 +537,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 [Services]({{< relref "../basic-metapatterns/services.md" >}})
 
-[Services of Services]({{< relref "../fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services" >}})
+[Services of Services]({{< relref "../fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services-vertical-slice-architecture-vsa" >}})
 
 [Sharding]({{< relref "../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-multitenancy-cells-amazon-definition" >}}) \(persistent slices of data\)
 
@@ -588,6 +588,8 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 [Transaction Script]({{< relref "../extension-metapatterns/orchestrator.md#orchestrated-saga-saga-orchestrator-saga-execution-component-transaction-script-coordinator" >}})
 
 [User Interface]({{< relref "../extension-metapatterns/proxy.md#user-interface-presentation-layer-separated-presentation-command-line-interface-cli-graphical-user-interface-gui-frontend-human-machine-interface-hmi-man-machine-interface-mmi-operator-interface" >}})
+
+[Vertical Slice Architecture]({{< relref "../extension-metapatterns/sandwich.md#vertical-slice-architecture-vsa" >}}) \(VSA\)
 
 [Virtualizer]({{< relref "../implementation-metapatterns/microkernel.md#virtualizer-hypervisor-container-orchestrator-distributed-runtime" >}})
 

@@ -137,7 +137,7 @@ Example: an intrusion alarm logic may need to discern between cat\-affected IR s
 
 ## Variants by direction
 
-A *Hierarchy* may have its root [at the top]({{< relref "#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}}) \(client side\), [at the bottom]({{< relref "#bottom-up-hierarchy-bus-of-buses-network-of-networks-hierarchical-middleware" >}}) \(deep infrastructure\), or [no root at all]({{< relref "#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services" >}}) \(recursive decomposition\):
+A *Hierarchy* may have its root [at the top]({{< relref "#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}}) \(client side\), [at the bottom]({{< relref "#bottom-up-hierarchy-bus-of-buses-network-of-networks-hierarchical-middleware" >}}) \(deep infrastructure\), or [no root at all]({{< relref "#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services-vertical-slice-architecture-vsa" >}}) \(recursive decomposition\):
 
 ### Top\-Down Hierarchy: [Orchestrator]({{< relref "../extension-metapatterns/orchestrator.md" >}}) of Orchestrators, Presentation\-Abstraction\-Control \(PAC\), Hierarchical [Model\-View\-Controller]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}}) \(HMVC\)
 
@@ -183,7 +183,7 @@ Other cases require building a common base for intercommunication between severa
 
 Example: [Automotive networks](https://www.mdpi.com/1424-8220/21/23/7917), integration of corporate networks, [the Internet](https://en.wikipedia.org/wiki/Internet_service_provider)\.
 
-### In\-Depth Hierarchy: [Cell]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}})\-Based \(Microservice\) Architecture \(WSO2 version\), Segmented Microservice Architecture, [Services]({{< relref "../basic-metapatterns/services.md" >}}) of Services, Clusters of Services
+### In\-Depth Hierarchy: [Cell]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}})\-Based \(Microservice\) Architecture \(WSO2 version\), Segmented Microservice Architecture, [Services]({{< relref "../basic-metapatterns/services.md" >}}) of Services, Clusters of Services, [Vertical Slice Architecture]({{< relref "../extension-metapatterns/sandwich.md#vertical-slice-architecture-vsa" >}}) \(VSA\)
 
 <figure>
 <a href="/diagrams/Variants/3/Cell-Based%20Architecture.png">
@@ -200,6 +200,8 @@ When several [*services*]({{< relref "../basic-metapatterns/services.md" >}}) in
 The [*Cell\-Based Architecture*](https://github.com/wso2/reference-architecture/blob/master/reference-architecture-cell-based.md) \([*Segmented Microservice Architecture*](https://github.com/wso2/reference-architecture/blob/master/api-driven-microservice-architecture.md)\) may be seen as a combination of an *Orchestrator of Orchestrators* and a *Bus of Buses* where the subservices are leaf nodes of both *hierarchies* while the [*API Gateways*]({{< relref "../extension-metapatterns/proxy.md#api-gateway" >}}) of the *Cells* are their internal nodes\.
 
 Uber [compacted](https://www.uber.com/blog/microservice-architecture/) 2200 [*Microservices*]({{< relref "../basic-metapatterns/services.md#microservices" >}}) into 70 *Cells* arranged in a [*SOA*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}})\-style topology called [*Domain\-Oriented Microservice Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#domain-oriented-microservice-architecture-doma" >}})\.
+
+[*Vertical Slice Architecture*](https://www.architecture-weekly.com/p/my-thoughts-on-vertical-slices-cqrs) \(*VSA*\) dedicates one component \(*slice*\) to each use case\. The slices can be grouped into features, and those into modules, each accessible only though its public API\. The entire system is usually co\-located as a kind of [*Modular Monolith*]({{< relref "../basic-metapatterns/services.md#asynchronous-modules-modular-monolith-modulith-embedded-actors" >}}) though [advanced versions of the pattern](https://leanpub.com/process-first-design) may rely on a [distributed runtime]({{< relref "../implementation-metapatterns/microkernel.md#virtualizer-hypervisor-container-orchestrator-distributed-runtime" >}})\.
 
 ## Evolutions
 

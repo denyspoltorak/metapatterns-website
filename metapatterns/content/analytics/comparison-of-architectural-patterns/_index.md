@@ -80,4 +80,20 @@ Indirection in commands and queries
 
 </a>
 
+<a href="{{< relref "analytics/comparison-of-architectural-patterns/the-multiform-read-write-separation.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Read-write.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Read-write.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Read-write.png" alt="Read and write requests go to different databases." loading="lazy" width="263" height="263"/>
+
+</picture>
+
+The multiform read-write separation
+
+</a>
+
 </nav>

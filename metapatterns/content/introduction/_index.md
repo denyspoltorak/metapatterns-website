@@ -17,7 +17,7 @@ bookCollapseSection = true
 
 *of Software Architecture*
 
-*v 1\.2 \(05\-2026\)*
+*v 1\.2\.1 \(xx\-2026\)*
 
 Denys Poltorak \(author\)
 

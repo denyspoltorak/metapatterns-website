@@ -256,7 +256,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 : data that a *component* keeps between processing its *inputs*\.
 
 *Structural diagram*
-: a graphical representation of the structure of a \(sub\-\)*system* that shows *components* and their *interactions*\.
+: a graphical representation of the structure of a \(sub\)*system* that shows *components* and their *interactions*\.
 
 *Stub*
 : a very simple *implementation* of a *module* that allows other *components* that use it to run without starting the original *module*\. *Stubs* are used to *implement modules* concurrently or *test* them in isolation\.

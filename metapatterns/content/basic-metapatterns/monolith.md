@@ -306,7 +306,7 @@ Moreover, people [often call]({{< relref "../analytics/ambiguous-patterns.md#rea
 <picture>
 <source srcset="/diagrams/Variants/1/Reactor%20with%20Extractors.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Reactor%20with%20Extractors.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Reactor%20with%20Extractors.png" alt="In the extraction phase components call each other and add actions to their queues. In the reaction phase they execute the actions from their queues but don't interact. The phases alternate." loading="lazy" width="783" height="583" style="width:100%"/>
+<img src="/diagrams/Variants/1/Reactor%20with%20Extractors.png" alt="In the extraction phase components call each other and add actions to their queues. In the reaction phase they execute the actions from their queues but don't interact. The phases alternate." loading="lazy" width="707" height="483" style="width:100%"/>
 </picture>
 </a>
 </figure>

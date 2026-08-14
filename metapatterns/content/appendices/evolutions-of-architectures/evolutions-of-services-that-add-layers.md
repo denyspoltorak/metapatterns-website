@@ -183,7 +183,7 @@ Putting a generic component between the system and its clients helps the program
 
 <ins>Goal</ins>: have the high\-level logic of use cases distilled as intelligible code\.
 
-<ins>Prerequisite</ins>: the use cases comprise sequences of high\-level steps \(which is very likely to be true for a system of [*subdomain services*]({{< relref "../../basic-metapatterns/services.md#whole-subdomain-sub-domain-services-macroservices" >}})\)\.
+<ins>Prerequisite</ins>: the use cases comprise sequences of high\-level steps \(which is very likely to be true for a system of [*subdomain services*]({{< relref "../../basic-metapatterns/services.md#whole-subdomain-subdomain-services-macroservices" >}})\)\.
 
 When a use case jumps over several services in a dance of [*choreography*]({{< relref "../../foundations-of-software-architecture/arranging-communication/choreography.md" >}}), there is no easy way to understand it as there is no single place to see it in the code\. It may be even worse with [*Pipelined*]({{< relref "../../basic-metapatterns/pipeline.md" >}}) systems where the use cases are embodied in the structure of event channels between the components\.
 
