@@ -63,7 +63,7 @@ A [*Response Cache*]({{< relref "../../extension-metapatterns/proxy.md#response-
 
 One or two of the system’s layers may serve commands and queries with functionally different components\.
 
-[*Command Query Response Segregation*]({{< relref "../../extension-metapatterns/sandwich.md#command-query-responsibility-segregation-cqrs" >}}) \(*CQRS*\) processes the commands and queries in separate modules or services\. That can be beneficial because one of the main concerns with commands is keeping the edited record’s data self\-consistent while queries often focus on aggregating multiple records\. These two activities have very little in common and even differ in the optimal representation of the data they process, therefore they are easy to separate\.
+[*Command Query Responsibility Segregation*]({{< relref "../../extension-metapatterns/sandwich.md#command-query-responsibility-segregation-cqrs" >}}) \(*CQRS*\) processes the commands and queries in separate modules or services\. That can be beneficial because one of the main concerns with commands is keeping the edited record’s data self\-consistent while queries often focus on aggregating multiple records\. These two activities have very little in common and even differ in the optimal representation of the data they process, therefore they are easy to separate\.
 
 <figure>
 <a href="/diagrams/Variants/2/CQRS.png">

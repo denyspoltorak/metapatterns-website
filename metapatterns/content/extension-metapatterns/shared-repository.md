@@ -53,7 +53,7 @@ A shared database with consistency guarantees \([ACID](https://en.wikipedia.org/
 
 Another danger lies with locking records inside the database\. Different services may use different order of tables in transactions, hitting deadlocks in the database engine which show up as transaction timeouts\.
 
-Non\-transactional distributed data stores may be very fast when colocated with the services \(see [*Space\-Based Architecture*]({{< relref "../implementation-metapatterns/mesh.md#space-based-architecture" >}})\) but the resource consumption becomes very high because of the associated data duplication \(as every instance of each service gets a copy of the entire dataset\) and simultaneous writes may corrupt the data \(cause inconsistencies or merge conflicts\)\.
+Non\-transactional distributed data stores may be very fast when co\-located with the services \(see [*Space\-Based Architecture*]({{< relref "../implementation-metapatterns/mesh.md#space-based-architecture" >}})\) but the resource consumption becomes very high because of the associated data duplication \(as every instance of each service gets a copy of the entire dataset\) and simultaneous writes may corrupt the data \(cause inconsistencies or merge conflicts\)\.
 
 ### Dependencies
 

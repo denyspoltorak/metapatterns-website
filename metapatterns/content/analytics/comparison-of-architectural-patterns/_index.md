@@ -96,4 +96,20 @@ The multiform read-write separation
 
 </a>
 
+<a href="{{< relref "analytics/comparison-of-architectural-patterns/latency-optimizations-on-the-system-level.md" >}}">
+
+<picture>
+
+<source srcset="/diagrams/Web/Latency.svg" media="(prefers-color-scheme: light)"/>
+
+<source srcset="/diagrams/Web/Latency.dark.svg" media="(prefers-color-scheme: dark)"/>
+
+<img src="/diagrams/Web/Latency.png" alt="The first component of a pipeline immediately responds to the client." loading="lazy" width="263" height="262"/>
+
+</picture>
+
+Latency optimizations on the system level
+
+</a>
+
 </nav>
