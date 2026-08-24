@@ -47,7 +47,7 @@ A *Sandwich*, named after the shape of its diagram, includes the following compo
 
 ### Performance
 
-As [*domain*\-level]({{< relref "../basic-metapatterns/layers.md#domain-business-rules-or-model" >}}) services rarely interact among themselves, the performance of a *Sandwich* is similar to that of [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}) with the same kind of deployment \(components of a *Sandwich* may or may not be colocated\)\.
+As [*domain*\-level]({{< relref "../basic-metapatterns/layers.md#domain-business-rules-or-model" >}}) services rarely interact among themselves, the performance of a *Sandwich* is similar to that of [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}) with the same kind of deployment \(components of a *Sandwich* may or may not be co\-located\)\.
 
 <figure>
 <a href="/diagrams/Performance/Sandwich.png">

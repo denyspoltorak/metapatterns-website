@@ -170,4 +170,4 @@ If an *Orchestrator* becomes too complex, some domains \(e\.g\. IIoT or telecom\
 <ins>Cons</ins>:
 
 - Hard to debug\.
-- Poor latency in global scenarios unless several layers of the *hierarchy* are colocated\.
+- Poor latency in global scenarios unless several layers of the *hierarchy* are co\-located\.

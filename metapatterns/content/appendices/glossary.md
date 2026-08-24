@@ -60,7 +60,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 *Cohesion*
 : the density of logical connections between entities inside a *component*\.
 
-*Colocated*
+*Co\-located*
 : running in the same address space \(process\) on the same hardware\.
 
 *Communication*
@@ -175,7 +175,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 : a cluster of *patterns* that have similar *topologies* and address related issues\.
 
 *Module*
-: a *colocated* \(in\-process\) *component*\.
+: a *co\-located* \(in\-process\) *component*\.
 
 *Non\-functional requirements* \(*NFR*s\)
 : expected properties of a *system* \(such as its stability or response time\) which are crucial for the *system* to be built, *deployed*, and used successfully\. Closely related to *qualities* and *forces*\.

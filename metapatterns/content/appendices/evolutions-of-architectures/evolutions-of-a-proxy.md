@@ -37,7 +37,7 @@ As *Proxies* are usually third\-party products, there is very little we can chan
 
 A system is not limited to a single kind of *Proxies*\. As a *Proxy* represents your system without changing its function, *Proxies* are transparent, thus they are stackable\.
 
-It often makes sense to colocate software *Proxies* or use a multifunctional *Proxy* to reduce the number of network hops between the clients and the system\. However, in a highly loaded system *Proxies* may be resource\-hungry, thus in some cases colocation strikes back\.
+It often makes sense to co\-locate software *Proxies* or use a multifunctional *Proxy* to reduce the number of network hops between the clients and the system\. However, in a highly loaded system *Proxies* may be resource\-hungry, thus in some cases colocation strikes back\.
 
 <ins>Pros</ins>: 
 

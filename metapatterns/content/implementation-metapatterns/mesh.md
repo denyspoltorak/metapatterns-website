@@ -43,7 +43,7 @@ Most *Meshes* support adding and removing parts of their networks dynamically, w
 
 ### Performance
 
-In most \(all?\) implementations the user *application* is colocated with a *node* of the *Mesh*, thus communicating through the *Mesh* does not add an extra network hop \(which would strongly degrade performance\)\. However, that holds true only when the *Mesh node* knows the destination of the message it should send – when it has already established a communication channel towards it\. Finding a new destination may not always be easy and would often require consulting registries, and sometimes waiting for the network topology to stabilize, which may involve timeouts \(like the ones you could have experienced with torrents\)\. On the other hand, no other architecture is known to seamlessly support huge networks\.
+In most \(all?\) implementations the user *application* is co\-located with a *node* of the *Mesh*, thus communicating through the *Mesh* does not add an extra network hop \(which would strongly degrade performance\)\. However, that holds true only when the *Mesh node* knows the destination of the message it should send – when it has already established a communication channel towards it\. Finding a new destination may not always be easy and would often require consulting registries, and sometimes waiting for the network topology to stabilize, which may involve timeouts \(like the ones you could have experienced with torrents\)\. On the other hand, no other architecture is known to seamlessly support huge networks\.
 
 ### Dependencies
 
@@ -173,7 +173,7 @@ A system of *Actors* may be classified as a *fully connected Mesh* with the acto
 </a>
 </figure>
 
-A [*Service Mesh*](https://buoyant.io/service-mesh-manifesto) \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}}), [MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] is a distributed [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) for running [*Microservices*]({{< relref "../basic-metapatterns/services.md#microservices" >}})\. It is a 2\-layer *Mesh* which contains one or a few management nodes \(*control plane*\) and many user nodes \(*data plane*\)\. Each data plane node colocates:
+A [*Service Mesh*](https://buoyant.io/service-mesh-manifesto) \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}}), [MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] is a distributed [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) for running [*Microservices*]({{< relref "../basic-metapatterns/services.md#microservices" >}})\. It is a 2\-layer *Mesh* which contains one or a few management nodes \(*control plane*\) and many user nodes \(*data plane*\)\. Each data plane node co\-locates:
 
 - A *mesh engine node* that deals with connectivity,
 - One or more [*Sidecars*]({{< relref "../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) \([*Proxies*]({{< relref "../extension-metapatterns/proxy.md" >}}) where the support of *cross\-cutting concerns* – the identical code in use by every service, e\.g\. logging or encryption – resides\),

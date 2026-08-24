@@ -54,7 +54,7 @@ Most kinds of proxies trade latency \(the extra network hop\) for some other qua
 - An [*Adapter*]({{< relref "#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) adds *compatibility* but its latency cost is higher than with other *Proxies* as it not only forwards the original message but also changes its payload – an activity which involves data processing and serialization\.
 
 
-A [*Cache*]({{< relref "#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}}) is a bit weird in that respect\. It improves latency and throughput for repeated requests but degrades latency for unique ones\. Furthermore, it is often colocated with some other kind of *Proxy* to avoid the extra network hop between the *Proxies*, which makes caching almost free in terms of latency\.
+A [*Cache*]({{< relref "#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}}) is a bit weird in that respect\. It improves latency and throughput for repeated requests but degrades latency for unique ones\. Furthermore, it is often co\-located with some other kind of *Proxy* to avoid the extra network hop between the *Proxies*, which makes caching almost free in terms of latency\.
 
 ### Dependencies
 
@@ -148,7 +148,7 @@ As a *Proxy* stands between a \(sub\)system and its client\(s\), we can imagine 
 
 We can deploy a *Proxy* as a separate system component\. This has the downside of an extra network hop \(higher latency\) in the way of every client request to the system and back but that is unavoidable in the following cases:
 
-- The *Proxy* uses a lot of system resources, thus it cannot be colocated with another component\. This mostly affects [*Firewall*]({{< relref "#firewall-api-rate-limiter-api-throttling" >}}) and [*Cache*]({{< relref "#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}})\.
+- The *Proxy* uses a lot of system resources, thus it cannot be co\-located with another component\. This mostly affects [*Firewall*]({{< relref "#firewall-api-rate-limiter-api-throttling" >}}) and [*Cache*]({{< relref "#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}})\.
 - The *Proxy* is stateful and deals with multiple services, which is true for a [*Load Balancer*]({{< relref "#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}), [*Reverse Proxy*]({{< relref "#dispatcher-reverse-proxy-ingress-controller-edge-service-microgateway" >}}), or [*API Gateway*]({{< relref "#api-gateway" >}})\.
 
 
@@ -166,7 +166,7 @@ We can deploy a *Proxy* as a separate system component\. This has the downside o
 
 We can often co\-locate a *Proxy* with our system when the latter is not distributed\. That avoids the extra network delay, traffic, and operational complexity and does not add any new hardware which can fail at the most untimely moments\. Such a placement is called *Sidecar* \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] \(after the motorcycle add\-on\) and it is mostly applicable to [*Adapters*]({{< relref "#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}})\.
 
-It should be noted that *Sidecar* – co\-locating a generic component and business logic – is more of a DevOps approach than an architectural pattern, thus we can see it used in a variety of ways \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\]:
+It should be noted that *Sidecar* – colocating a generic component and business logic – is more of a DevOps approach than an architectural pattern, thus we can see it used in a variety of ways \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\]:
 
 - As a *Proxy* between a component and its clients\.
 - As an extra [*service*]({{< relref "../basic-metapatterns/services.md" >}}) that provides observability or configures the main service\.
@@ -184,7 +184,7 @@ It should be noted that *Sidecar* – co\-locating a generic component and busin
 </a>
 </figure>
 
-[*Service Mesh*]({{< relref "../implementation-metapatterns/mesh.md#service-mesh" >}}) \(the [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) for [*Microservices*]({{< relref "../basic-metapatterns/services.md#microservices" >}})\) makes heavy use of *Sidecars* for co\-locating any kind of generic code with every instance of a *Microservice*\.
+[*Service Mesh*]({{< relref "../implementation-metapatterns/mesh.md#service-mesh" >}}) \(the [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) for [*Microservices*]({{< relref "../basic-metapatterns/services.md#microservices" >}})\) makes heavy use of *Sidecars* for colocating any kind of generic code with every instance of a *Microservice*\.
 
 ### On the client side: Ambassador
 
@@ -244,7 +244,7 @@ As *Proxies* are used for many purposes, there are a variety of their specializa
 <picture>
 <source srcset="/diagrams/Variants/2/Firewall.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Firewall.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/2/Firewall.png" alt="A firewall lets a request from a good client pass through while requests from a malicious client are blocked." loading="lazy" width="923" height="423" style="width:92%"/>
+<img src="/diagrams/Variants/2/Firewall.png" alt="A firewall lets a request from a good client pass through while requests from a malicious client are blocked." loading="lazy" width="1163" height="343" style="width:100%"/>
 </picture>
 </a>
 </figure>
