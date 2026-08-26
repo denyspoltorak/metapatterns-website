@@ -23,7 +23,7 @@ The main drawback \(and benefit\) of [*Layers*]({{< relref "../../basic-metapatt
 <picture>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.png" alt="The domain layer is split into subdomain components, making a Sandwich." loading="lazy" width="1083" height="243" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.png" alt="The domain layer is split into subdomain components, making a sandwich." loading="lazy" width="1083" height="243" style="width:100%"/>
 </picture>
 </a>
 </figure>

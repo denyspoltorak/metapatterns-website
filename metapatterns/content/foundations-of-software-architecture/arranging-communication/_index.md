@@ -1,7 +1,7 @@
 +++
 weight = 4
 title = "Arranging communication"
-description = "This chapter discusses communication paradigms: orchestration, choreography, or shared data. It shows their applicability, benefits, and drawbacks."
+description = "The components of a software system can be integrated through orchestration, choreography, or shared data. Each approach has benefits and drawbacks."
 images = ["/diagrams/Web/og/Communication.png"]
 primary_image = "/diagrams/Communication/Monolith%20to%20Services.png"
 bookCollapseSection = true
@@ -18,7 +18,7 @@ As a project grows, it tends to become subdivided into services, modules, or wha
 <picture>
 <source srcset="/diagrams/Communication/Monolith%20to%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Monolith%20to%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Monolith%20to%20Services.png" alt="A monolithic system is subdivided into several services but it is an open question how the resulting components should be integrated." loading="lazy" width="1062" height="227" style="width:100%"/>
+<img src="/diagrams/Communication/Monolith%20to%20Services.png" alt="A monolithic system is subdivided into several services but it is an open question how the resulting components interact." loading="lazy" width="1062" height="227" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -43,7 +43,7 @@ Programming and architectural paradigms
 
 <source srcset="/diagrams/Web/Orchestration.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Orchestration.png" alt="A diagram of a client that calls an orchestrator which calls three services one by one." loading="lazy" width="263" height="286"/>
+<img src="/diagrams/Web/Orchestration.png" alt="A client that calls an orchestrator which calls three services one by one." loading="lazy" width="263" height="286"/>
 
 </picture>
 
@@ -59,7 +59,7 @@ Orchestration
 
 <source srcset="/diagrams/Web/Choreography.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Choreography.png" alt="A diagram of a client passing a request to a pipeline of three services and receiving a response from it." loading="lazy" width="263" height="284"/>
+<img src="/diagrams/Web/Choreography.png" alt="A client passing a request to a pipeline of three services and receiving a response from it." loading="lazy" width="263" height="284"/>
 
 </picture>
 
@@ -75,7 +75,7 @@ Choreography
 
 <source srcset="/diagrams/Web/Shared%20data.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Shared%20data.png" alt="A diagram of a client communicating with a service which writes to a shared data layer, causing data processing by two other services." loading="lazy" width="263" height="287"/>
+<img src="/diagrams/Web/Shared%20data.png" alt="A client communicating with a service which writes to a shared data layer, causing data processing by two other services." loading="lazy" width="263" height="287"/>
 
 </picture>
 

@@ -1,7 +1,7 @@
 +++
 weight = 7
 title = "Analytics"
-description = "This part of the book compares architectural patterns, highlights ambiguous cases, shows how a system evolves over time, and revisits coupling and cohesion."
+description = "We will compare architectural patterns, highlight ambiguous pattern names, show how a system evolves over time, and revisit coupling and cohesion."
 images = ["/diagrams/Web/og/Favicon-plain.png"]
 bookCollapseSection = true
 [sitemap]
@@ -43,7 +43,7 @@ Other smaller topics that I was able to look into made the following chapters:
 
 <source srcset="/diagrams/Web/Comparison.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Comparison.png" alt="Diagrams of services sharing a dataset, a pipeline, dependency inversion in an operating system with device drivers, and an adapter between a client and a service." loading="lazy" width="665" height="645"/>
+<img src="/diagrams/Web/Comparison.png" alt="Services sharing a dataset, a pipeline, dependency inversion in an operating system with device drivers, and an adapter between a client and a service." loading="lazy" width="665" height="645"/>
 
 </picture>
 
@@ -59,7 +59,7 @@ Comparison of architectural patterns
 
 <source srcset="/diagrams/Web/Ambiguous.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Ambiguous.png" alt="Five diagrams of various systems called monoliths." loading="lazy" width="1003" height="983"/>
+<img src="/diagrams/Web/Ambiguous.png" alt="Various systems called monoliths." loading="lazy" width="1003" height="983"/>
 
 </picture>
 
@@ -75,7 +75,7 @@ Ambiguous patterns
 
 <source srcset="/diagrams/Web/Life%20cycle.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Life%20cycle.png" alt="A diagram that shows a cycle with the following architectures: Monolith, Layers, Layered Services, a Sandwich Cell interacting with orchestrated layered services, and Layers with two databases." loading="lazy" width="1185" height="1123"/>
+<img src="/diagrams/Web/Life%20cycle.png" alt="A cycle with the following architectures: monolith, layers, layered services, a sandwich cell interacting with orchestrated layered services, and layers with two databases." loading="lazy" width="1185" height="1123"/>
 
 </picture>
 
@@ -91,7 +91,7 @@ Architecture and product life cycle
 
 <source srcset="/diagrams/Web/Real-world.negated.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Real-world.png" alt="A diagram of three services with queues of people and luggage above a transport layer with train stations and trains." loading="lazy" width="483" height="463"/>
+<img src="/diagrams/Web/Real-world.png" alt="Three services with queues of people and luggage above a transport layer with train stations and trains." loading="lazy" width="483" height="463"/>
 
 </picture>
 
@@ -107,7 +107,7 @@ Real-world inspirations for architectural patterns
 
 <source srcset="/diagrams/Web/Heart.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Heart.png" alt="A plot of pain level of maintaining a project against the project's size, with different architectures being optimal for different project sizes." loading="lazy" width="403" height="384"/>
+<img src="/diagrams/Web/Heart.png" alt="The pain level of maintaining a project depends on the project's size, with different architectures being optimal for different project sizes." loading="lazy" width="403" height="384"/>
 
 </picture>
 

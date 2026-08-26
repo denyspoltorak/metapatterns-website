@@ -1,7 +1,7 @@
 +++
 weight = 10
 title = "Pipeline"
-description = "This chapter explores pipelined architectures that process streams: Pipes and Filters, Choreographed Event-Driven Architecture, Data Mesh, and Nanoservices."
+description = "Pipelines are good for building highly scalable systems. They include Pipes and Filters, Choreographed Event-Driven Architecture, Data Mesh, and Nanoservices."
 images = ["/diagrams/Web/og/Pipeline.png"]
 primary_image = "/diagrams/Main/Pipeline.png"
 [sitemap]
@@ -15,7 +15,7 @@ primary_image = "/diagrams/Main/Pipeline.png"
 <picture>
 <source srcset="/diagrams/Main/Pipeline.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Pipeline.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Pipeline.png" alt="A diagram for Pipeline, in abstractness-subdomain-sharding coordinates." loading="lazy" width="1182" height="434" style="width:100%"/>
+<img src="/diagrams/Main/Pipeline.png" alt="Pipeline." loading="lazy" width="1182" height="434" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -60,7 +60,7 @@ There are three ways to build communication in a pipeline, each with different d
 <picture>
 <source srcset="/diagrams/Dependencies/Pipeline.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Dependencies/Pipeline.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Dependencies/Pipeline.png" alt="Commands cause downstream dependencies. Notifications cause upstream dependencies. If a shared message schema is used, every component depends on the shared message." loading="lazy" width="1243" height="325" style="width:100%"/>
+<img src="/diagrams/Dependencies/Pipeline.png" alt="Commands cause downstream dependencies. Notifications cause upstream dependencies. Every component depends on a shared message." loading="lazy" width="1243" height="325" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -180,7 +180,7 @@ Examples: high performance web services\.
 <picture>
 <source srcset="/diagrams/Variants/1/Data%20Mesh.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Data%20Mesh.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Data%20Mesh.png" alt="Data Mesh builds an extra graph of services that stream and process analytical data." loading="lazy" width="1094" height="264" style="width:100%"/>
+<img src="/diagrams/Variants/1/Data%20Mesh.png" alt="A data mesh builds an extra graph of services that stream and process analytical data." loading="lazy" width="1094" height="264" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -205,7 +205,7 @@ There is a pragmatic option to allow an operational service to resort to the ana
 <picture>
 <source srcset="/diagrams/Variants/1/Nanoservices.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Nanoservices.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Nanoservices.png" alt="Many Nanoservices access a shared database to implement CRUD functionality." loading="lazy" width="2223" height="484" style="width:100%"/>
+<img src="/diagrams/Variants/1/Nanoservices.png" alt="Many nanoservices access a shared database to implement CRUD functionality." loading="lazy" width="2223" height="484" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -228,7 +228,7 @@ There are a couple of [pipeline\-specific evolutions]({{< relref "../appendices/
 <picture>
 <source srcset="/diagrams/Evolutions/Services/Pipeline%20promote%20Front%20Controller.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Services/Pipeline%20promote%20Front%20Controller.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png" alt="The first service of a pipeline subscribes to notifications from other services and thus becomes a Front Controller." loading="lazy" width="1299" height="347" style="width:100%"/>
+<img src="/diagrams/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png" alt="The first service of a pipeline subscribes to notifications from other services and thus becomes a front controller." loading="lazy" width="1299" height="347" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -241,7 +241,7 @@ There are a couple of [pipeline\-specific evolutions]({{< relref "../appendices/
 <picture>
 <source srcset="/diagrams/Evolutions/Services/Pipeline%20use%20Orchestrator.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Services/Pipeline%20use%20Orchestrator.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Services/Pipeline%20use%20Orchestrator.png" alt="Adding an orchestrator transforms a pipeline into Orchestrated Services." loading="lazy" width="1303" height="384" style="width:100%"/>
+<img src="/diagrams/Evolutions/Services/Pipeline%20use%20Orchestrator.png" alt="Adding an orchestrator transforms a pipeline into orchestrated services." loading="lazy" width="1303" height="384" style="width:100%"/>
 </picture>
 </a>
 </figure>

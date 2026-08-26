@@ -1,7 +1,7 @@
 +++
 weight = 7
 title = "Shared Repository"
-description = "This chapter discusses Shared Repository and its variants: Integration Database, Blackboard, Data Grid, shared memory, shared file system, and Stamp Coupling."
+description = "Shared Repository is about persistence and communication through data. It covers: Integration Database, Blackboard, and Data Grid of Space-Based Architecture."
 images = ["/diagrams/Web/og/Shared%20Repository.png"]
 primary_image = "/diagrams/Main/Shared%20Repository.png"
 [sitemap]
@@ -15,7 +15,7 @@ primary_image = "/diagrams/Main/Shared%20Repository.png"
 <picture>
 <source srcset="/diagrams/Main/Shared%20Repository.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Shared%20Repository.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Shared%20Repository.png" alt="A diagram for Services with a shared repository, in abstractness-subdomain-sharding coordinates." loading="lazy" width="1062" height="500" style="width:100%"/>
+<img src="/diagrams/Main/Shared%20Repository.png" alt="Services with a shared repository." loading="lazy" width="1062" height="500" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -107,7 +107,7 @@ Still, the DAL does not remove shared dependencies and only adds some flexibilit
 <picture>
 <source srcset="/diagrams/Relations/Shared%20Repository.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Relations/Shared%20Repository.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Relations/Shared%20Repository.png" alt="A shared repository for Services, Shards, and Service-Oriented Architecture." loading="lazy" width="1226" height="462" style="width:100%"/>
+<img src="/diagrams/Relations/Shared%20Repository.png" alt="A shared repository for services, shards, and Service-Oriented Architecture." loading="lazy" width="1226" height="462" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -279,7 +279,7 @@ Once a database appears, it is unlikely to go away\. I see the [following evolut
 <picture>
 <source srcset="/diagrams/Evolutions/2/Shared%20Database%20to%20Space-Based%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Shared%20Database%20to%20Space-Based%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/2/Shared%20Database%20to%20Space-Based%20Architecture.png" alt="The shared database is migrated to a Data Grid, resulting in Space-Based Architecture" loading="lazy" width="1323" height="385" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Shared%20Database%20to%20Space-Based%20Architecture.png" alt="The shared database is migrated to a data grid, resulting in Space-Based Architecture" loading="lazy" width="1323" height="385" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -292,7 +292,7 @@ Once a database appears, it is unlikely to go away\. I see the [following evolut
 <picture>
 <source srcset="/diagrams/Evolutions/2/Shared%20Database%20to%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Shared%20Database%20to%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/2/Shared%20Database%20to%20Services.png" alt="The shared database is split into databases dedicated to subdomains, resulting in Layered Services." loading="lazy" width="1323" height="289" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Shared%20Database%20to%20Services.png" alt="The shared database is split into databases dedicated to subdomains, resulting in layered services." loading="lazy" width="1323" height="289" style="width:100%"/>
 </picture>
 </a>
 </figure>

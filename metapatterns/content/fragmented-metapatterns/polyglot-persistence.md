@@ -1,7 +1,7 @@
 +++
 weight = 7
 title = "Polyglot Persistence"
-description = "This chapter discusses Polyglot Persistence and its variants: read-only replicas, Cache-Aside, Memory Image, Reporting Database, CQRS View, and Query Service."
+description = "Polyglot Persistence is about using multiple databases, which may be of different kinds (SQL vs NoSQL), or dedicated to read and write requests (as in CQRS)."
 images = ["/diagrams/Web/og/Polyglot%20Persistence.png"]
 primary_image = "/diagrams/Main/Polyglot%20Persistence.png"
 [sitemap]
@@ -15,7 +15,7 @@ primary_image = "/diagrams/Main/Polyglot%20Persistence.png"
 <picture>
 <source srcset="/diagrams/Main/Polyglot%20Persistence.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Polyglot%20Persistence.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Polyglot%20Persistence.png" alt="A diagram for Services with Polyglot Persistence, in abstractness-subdomain-sharding coordinates." loading="lazy" width="944" height="514" style="width:100%"/>
+<img src="/diagrams/Main/Polyglot%20Persistence.png" alt="Services with polyglot persistence." loading="lazy" width="944" height="514" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -97,7 +97,7 @@ In general, each service depends on all of the data stores which it uses\. There
 <picture>
 <source srcset="/diagrams/Relations/Polyglot%20Persistence.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Relations/Polyglot%20Persistence.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Relations/Polyglot%20Persistence.png" alt="Polyglot Persistence for Monolith, Layers, Shards, and Services." loading="lazy" width="1343" height="463" style="width:100%"/>
+<img src="/diagrams/Relations/Polyglot%20Persistence.png" alt="Polyglot persistence for a monolith, layers, shards, and services." loading="lazy" width="1343" height="463" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -302,7 +302,7 @@ It is common to store the history of sales in a database\. However, once a month
 <picture>
 <source srcset="/diagrams/Evolutions/3/Polyglor%20Persistence%20-%201.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/3/Polyglor%20Persistence%20-%201.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/3/Polyglor%20Persistence%20-%201.png" alt="The backend layer that uses OLAP and OLTP databases is subdivided into command and query backends, resulting in full-featured Command-Query Responsibility Segregation." loading="lazy" width="1123" height="264" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/Polyglor%20Persistence%20-%201.png" alt="The backend layer that uses OLAP and OLTP databases is subdivided into a CQRS system." loading="lazy" width="1123" height="264" style="width:100%"/>
 </picture>
 </a>
 </figure>

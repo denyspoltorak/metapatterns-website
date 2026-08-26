@@ -1,7 +1,7 @@
 +++
 weight = 10
 title = "Sandwich"
-description = "This chapter explores sandwiched architectures: Blackboard System, Space-Based Architecture, Service-Based Architecture, CQRS, Nanoservices, and Lambdas."
+description = "A Sandwich is a system midway between Layers and Services. Its examples include: Blackboard System, Space-Based Architecture, and Vertical Slice Architecture."
 images = ["/diagrams/Web/og/Sandwich.png"]
 primary_image = "/diagrams/Main/Sandwich.png"
 [sitemap]
@@ -15,7 +15,7 @@ primary_image = "/diagrams/Main/Sandwich.png"
 <picture>
 <source srcset="/diagrams/Main/Sandwich.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Sandwich.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Sandwich.png" alt="A diagram for Sandwich Architecture, in abstractness-subdomain-sharding coordinates." loading="lazy" width="1002" height="474" style="width:100%"/>
+<img src="/diagrams/Main/Sandwich.png" alt="Sandwich Architecture." loading="lazy" width="1002" height="474" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -54,7 +54,7 @@ As [*domain*\-level]({{< relref "../basic-metapatterns/layers.md#domain-business
 <picture>
 <source srcset="/diagrams/Performance/Sandwich.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Performance/Sandwich.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Performance/Sandwich.png" alt="Control and data flow is identical in Sandwich and Layers." loading="lazy" width="1103" height="264" style="width:100%"/>
+<img src="/diagrams/Performance/Sandwich.png" alt="Control and data flow is identical in sandwich and layers." loading="lazy" width="1103" height="264" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -106,7 +106,7 @@ Having two shared layers provides three options for invoking the [*domain*]({{< 
 <picture>
 <source srcset="/diagrams/Relations/Sandwich.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Relations/Sandwich.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Relations/Sandwich.png" alt="Transitions between Layers, a Sandwich, a Service-Based Architecture, and Layered Services." loading="lazy" width="1787" height="523" style="width:100%"/>
+<img src="/diagrams/Relations/Sandwich.png" alt="Transitions between layers, a sandwich, a Service-Based Architecture, and layered services." loading="lazy" width="1787" height="523" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -200,7 +200,7 @@ As *Space\-Based Architecture* runs every component in a [*Mesh*]({{< relref "..
 <picture>
 <source srcset="/diagrams/Variants/2/Service-Based%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Service-Based%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/2/Service-Based%20Architecture.png" alt="A Sandwich-like topology with user interface, a layer of domain services, and a shared database." loading="lazy" width="923" height="263" style="width:95%"/>
+<img src="/diagrams/Variants/2/Service-Based%20Architecture.png" alt="A sandwich-like topology with user interface, a layer of domain services, and a shared database." loading="lazy" width="923" height="263" style="width:95%"/>
 </picture>
 </a>
 </figure>
@@ -212,7 +212,7 @@ As *Space\-Based Architecture* runs every component in a [*Mesh*]({{< relref "..
 <picture>
 <source srcset="/diagrams/Variants/2/Service-Based%20to%20Layered%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Service-Based%20to%20Layered%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/2/Service-Based%20to%20Layered%20Services.png" alt="A Sandwich-like topology with shared user interface and database is gradually transformed into layered services." loading="lazy" width="1543" height="286" style="width:100%"/>
+<img src="/diagrams/Variants/2/Service-Based%20to%20Layered%20Services.png" alt="A sandwich-like topology with shared user interface and database is gradually transformed into layered services." loading="lazy" width="1543" height="286" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -224,7 +224,7 @@ As *Space\-Based Architecture* runs every component in a [*Mesh*]({{< relref "..
 <picture>
 <source srcset="/diagrams/Variants/2/CQRS.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/CQRS.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/2/CQRS.png" alt="A large read and smaller write models between a user interface and database." loading="lazy" width="883" height="263" style="width:84%"/>
+<img src="/diagrams/Variants/2/CQRS.png" alt="A large read and smaller write model between a user interface and database." loading="lazy" width="883" height="263" style="width:84%"/>
 </picture>
 </a>
 </figure>
@@ -238,7 +238,7 @@ As *Space\-Based Architecture* runs every component in a [*Mesh*]({{< relref "..
 <picture>
 <source srcset="/diagrams/Variants/2/CQRS%20to%20Layered%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/CQRS%20to%20Layered%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/2/CQRS%20to%20Layered%20Services.png" alt="The single database of a Sandwich-like CQRS with a shared database is subdivided into OLTP and OLAP databases, forming Layered Services." loading="lazy" width="1023" height="323" style="width:100%"/>
+<img src="/diagrams/Variants/2/CQRS%20to%20Layered%20Services.png" alt="The single database of a sandwich-like CQRS with a shared database is subdivided into OLTP and OLAP databases, forming layered services." loading="lazy" width="1023" height="323" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -284,7 +284,7 @@ While this works well with loosely coupled domains, in most cases we cannot will
 <picture>
 <source srcset="/diagrams/Variants/2/Nanoservices.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Nanoservices.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/2/Nanoservices.png" alt="Nanoservices form a Sandwich-shaped architecture. The upper layer is an API Gateway for an orchestrated system or a gateway for pipelined Nanoservices. The lower layer is a shared datastore." loading="lazy" width="1243" height="363" style="width:100%"/>
+<img src="/diagrams/Variants/2/Nanoservices.png" alt="Nanoservices form a sandwich-shaped architecture. The upper layer is an API Gateway for an orchestrated system or a gateway for pipelined nanoservices. The lower layer is a shared datastore." loading="lazy" width="1243" height="363" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -355,7 +355,7 @@ The components of a *Sandwich* provide plenty of ways to alter the system, with 
 <picture>
 <source srcset="/diagrams/Evolutions/2/Sandwich%20to%20Layers.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Sandwich%20to%20Layers.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/2/Sandwich%20to%20Layers.png" alt="The entire domain layer is merged, resulting in Layers." loading="lazy" width="1104" height="243" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Sandwich%20to%20Layers.png" alt="The entire domain layer is merged, resulting in a Layered Architecture." loading="lazy" width="1104" height="243" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -368,7 +368,7 @@ The components of a *Sandwich* provide plenty of ways to alter the system, with 
 <picture>
 <source srcset="/diagrams/Evolutions/2/Sandwich%20to%20Layered%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Sandwich%20to%20Layered%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/2/Sandwich%20to%20Layered%20Services.png" alt="The integration and data layers are divided into subdomains, producing Three-Layered Services." loading="lazy" width="1343" height="263" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Sandwich%20to%20Layered%20Services.png" alt="The integration and data layers are divided into subdomains, producing three-layered services." loading="lazy" width="1343" height="263" style="width:100%"/>
 </picture>
 </a>
 </figure>

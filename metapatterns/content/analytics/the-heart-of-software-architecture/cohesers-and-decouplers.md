@@ -1,7 +1,7 @@
 +++
 weight = 1
 title = "Cohesers and decouplers"
-description = "This section discusses hierarchical decomposition, the influence of a project's modularity on its properties, and lists common cohesers and decouplers."
+description = "We tackle complexity through hierarchical decomposition. Cohesers push you to merge all the code together while decouplers favor fine-grained components."
 images = ["/diagrams/Web/og/Heart.png"]
 [sitemap]
   priority = 0.5
@@ -87,7 +87,7 @@ And there can be forces which try to keep your code fragmented:
 <picture>
 <source srcset="/diagrams/Heart/Lifecycle.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Heart/Lifecycle.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Heart/Lifecycle.png" alt="A monolith transforming into Layered Services, whose application layers partially merge and domain layers split, only to finally glue into Layers with multiple databases." loading="lazy" width="1803" height="303" style="width:100%"/>
+<img src="/diagrams/Heart/Lifecycle.png" alt="A monolith transforming into layered services, whose application layers partially merge and domain layers split, only to finally glue into layers with multiple databases." loading="lazy" width="1803" height="303" style="width:100%"/>
 </picture>
 </a>
 </figure>

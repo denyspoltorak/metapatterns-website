@@ -67,7 +67,7 @@ Modern distributed databases support sharding out of the box, but an overgrown t
 <picture>
 <source srcset="/diagrams/Evolutions/2/Shared%20Database%20to%20Space-Based%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Shared%20Database%20to%20Space-Based%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/2/Shared%20Database%20to%20Space-Based%20Architecture.png" alt="The shared database is migrated to a Data Grid, resulting in Space-Based Architecture" loading="lazy" width="1323" height="385" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Shared%20Database%20to%20Space-Based%20Architecture.png" alt="The shared database is migrated to a data grid, resulting in Space-Based Architecture" loading="lazy" width="1323" height="385" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -102,7 +102,7 @@ Modern distributed databases support sharding out of the box, but an overgrown t
 <picture>
 <source srcset="/diagrams/Evolutions/2/Shared%20Database%20to%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Shared%20Database%20to%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/2/Shared%20Database%20to%20Services.png" alt="The shared database is split into databases dedicated to subdomains, resulting in Layered Services." loading="lazy" width="1323" height="289" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Shared%20Database%20to%20Services.png" alt="The shared database is split into databases dedicated to subdomains, resulting in layered services." loading="lazy" width="1323" height="289" style="width:100%"/>
 </picture>
 </a>
 </figure>

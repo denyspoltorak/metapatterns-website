@@ -1,7 +1,7 @@
 +++
 weight = 6
 title = "Layered Services"
-description = "This chapter discusses layered services, their orchestrated and choreographed variants, and Command-Query Responsibility Segregation (CQRS) systems."
+description = "Layered Services are about the internals of systems of services. They include: orchestrated 3-layered services, choreographed 2-layered services, and CQRS."
 images = ["/diagrams/Web/og/Layered%20Services.png"]
 primary_image = "/diagrams/Main/Layered%20Services.png"
 [sitemap]
@@ -15,7 +15,7 @@ primary_image = "/diagrams/Main/Layered%20Services.png"
 <picture>
 <source srcset="/diagrams/Main/Layered%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Layered%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Layered%20Services.png" alt="A diagram for Layered Services, in abstractness-subdomain-sharding coordinates." loading="lazy" width="1122" height="534" style="width:100%"/>
+<img src="/diagrams/Main/Layered%20Services.png" alt="Layered services." loading="lazy" width="1122" height="534" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -42,7 +42,7 @@ Remarkable features of *Layered Services* include:
 <picture>
 <source srcset="/diagrams/Performance/Layered%20Services%20-%20sharding.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Performance/Layered%20Services%20-%20sharding.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Performance/Layered%20Services%20-%20sharding.png" alt="The use of scaled stateless services and load balancers in Layered Services." loading="lazy" width="1003" height="423" style="width:100%"/>
+<img src="/diagrams/Performance/Layered%20Services%20-%20sharding.png" alt="The use of scaled stateless services and load balancers in layered services." loading="lazy" width="1003" height="423" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -55,7 +55,7 @@ Remarkable features of *Layered Services* include:
 <picture>
 <source srcset="/diagrams/Performance/Layered%20Services%20-%20channels.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Performance/Layered%20Services%20-%20channels.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Performance/Layered%20Services%20-%20channels.png" alt="Data streams in Three-Layered Services: from data layer to data layer, from domain layer to data layer, and between two domain-level components." loading="lazy" width="1123" height="403" style="width:100%"/>
+<img src="/diagrams/Performance/Layered%20Services%20-%20channels.png" alt="Data streams in three-layered services: from data layer to data layer, from domain layer to data layer, and between two domain-level components." loading="lazy" width="1123" height="403" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -94,7 +94,7 @@ The upper \([*application*]({{< relref "../basic-metapatterns/layers.md#applicat
 <picture>
 <source srcset="/diagrams/Communication/Mutual%20Orchestration%20-%204.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Mutual%20Orchestration%20-%204.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Mutual%20Orchestration%20-%204.png" alt="In Layered Services only the application layers of the services are interdependent." loading="lazy" width="1023" height="294" style="width:100%"/>
+<img src="/diagrams/Communication/Mutual%20Orchestration%20-%204.png" alt="In layered services only the application layers of the services are interdependent." loading="lazy" width="1023" height="294" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -124,7 +124,7 @@ The good thing is that the majority of the code belongs to the domain layer whic
 <picture>
 <source srcset="/diagrams/Evolutions/3/Three-Layered%20Services%20-%201.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/3/Three-Layered%20Services%20-%201.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/3/Three-Layered%20Services%20-%201.png" alt="Diagrams for Three-Layered Services with partially merged application layer, partially merged databases and shared databases, and a Sandwich." loading="lazy" width="1004" height="814" style="width:84%"/>
+<img src="/diagrams/Evolutions/3/Three-Layered%20Services%20-%201.png" alt="Three-layered services with partially merged application layer, partially merged databases and shared databases, and a Sandwich Architecture." loading="lazy" width="1004" height="814" style="width:84%"/>
 </picture>
 </a>
 </figure>
@@ -140,7 +140,7 @@ or by building derived datasets:
 <picture>
 <source srcset="/diagrams/Evolutions/3/Three-Layered%20Services%20-%202.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/3/Three-Layered%20Services%20-%202.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/3/Three-Layered%20Services%20-%202.png" alt="Diagrams for Three-Layered Services employing CQRS views and a Query Service." loading="lazy" width="1143" height="494" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/Three-Layered%20Services%20-%202.png" alt="Three-layered services employing CQRS views and a query service." loading="lazy" width="1143" height="494" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -155,7 +155,7 @@ If a service becomes too large:
 <picture>
 <source srcset="/diagrams/Evolutions/3/Three-Layered%20Services%20-%203.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/3/Three-Layered%20Services%20-%203.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/3/Three-Layered%20Services%20-%203.png" alt="The domain layer of a large three-layered service is split into sub-subdomain components, resulting in a Sandwich Cell." loading="lazy" width="1503" height="334" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/Three-Layered%20Services%20-%203.png" alt="The domain layer of a large three-layered service is split into sub-subdomain components, resulting in a sandwich cell." loading="lazy" width="1503" height="334" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -199,7 +199,7 @@ If *Choreographed Layered Services* become coupled:
 <picture>
 <source srcset="/diagrams/Evolutions/3/Two-Layered%20Services%20-%201.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/3/Two-Layered%20Services%20-%201.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/3/Two-Layered%20Services%20-%201.png" alt="Diagrams for Two-Layered Services with partially merged domain layer, partially merged databases, and shared databases." loading="lazy" width="1324" height="324" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/Two-Layered%20Services%20-%201.png" alt="Two-layered services with partially merged domain layer, partially merged databases, and shared databases." loading="lazy" width="1324" height="324" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -211,7 +211,7 @@ If *Choreographed Layered Services* become coupled:
 <picture>
 <source srcset="/diagrams/Evolutions/3/Two-Layered%20Services%20-%202.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/3/Two-Layered%20Services%20-%202.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/3/Two-Layered%20Services%20-%202.png" alt="Diagrams for Two-Layered Services employing CQRS views and a Query Service." loading="lazy" width="1104" height="404" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/Two-Layered%20Services%20-%202.png" alt="Two-layered services employing CQRS views and a query service." loading="lazy" width="1104" height="404" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -314,7 +314,7 @@ Each backend depends on its database \(its technology and schema\)\. The OLTP to
 <picture>
 <source srcset="/diagrams/Evolutions/3/CQRS.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/3/CQRS.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/3/CQRS.png" alt="Diagrams of CQRS behind an API Gateway, with a single backend, with multiple OLAP databases, with layered backends, Cells for backends, and Data Grid for a database." loading="lazy" width="1284" height="1023" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/CQRS.png" alt="CQRS behind an API Gateway, with a single backend, multiple OLAP databases, layered backends, cells for backends, and data grid for a database." loading="lazy" width="1284" height="1023" style="width:100%"/>
 </picture>
 </a>
 </figure>

@@ -1,7 +1,7 @@
 +++
 weight = 3
 title = "Dependency inversion in architectural patterns"
-description = "This section discusses dependency inversion in Plugins, Hexagonal Architecture, Microkernel, Hierarchy, Layers, and Services."
+description = "Dependency inversion on the system level is used in Plugins, Hexagonal Architecture, Microkernel, Hierarchy, and, to a certain extent, in Layers or Services."
 images = ["/diagrams/Web/og/DI.png"]
 [sitemap]
   priority = 0.5
@@ -20,7 +20,7 @@ Let’s see how dependency inversion is used at the system level\.
 <picture>
 <source srcset="/diagrams/Conclusion/DI-1.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/DI-1.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/DI-1.png" alt="Plugins depend on the core's SPIs. There are multiple versions of plugins. Adapters of Hexagonal Architecture depend on both the core's SPIs and APIs of the adapted components." loading="lazy" width="1253" height="264" style="width:100%"/>
+<img src="/diagrams/Conclusion/DI-1.png" alt="Plugins depend on the core's SPIs while adapters of Hexagonal Architecture depend on both the core's SPIs and APIs of the adapted components." loading="lazy" width="1253" height="264" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -40,7 +40,7 @@ It is the nature of the polymorphic components that distinguishes those patterns
 <picture>
 <source srcset="/diagrams/Conclusion/DI-2.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/DI-2.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/DI-2.png" alt="In an operating system, device drivers depend on the kernel's SPIs. In a hierarchy, child nodes depend on their parent's SPI. Cell-Based Architecture uses adapters to break dependencies between Cells." loading="lazy" width="1323" height="703" style="width:100%"/>
+<img src="/diagrams/Conclusion/DI-2.png" alt="Dependencies in an operating system, hierarchy, and Cell-Based Architecture." loading="lazy" width="1323" height="703" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -59,7 +59,7 @@ A few more patterns tend to use this approach to earn its benefits, even though 
 <picture>
 <source srcset="/diagrams/Conclusion/DI-3.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/DI-3.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/DI-3.png" alt="Standard APIs are used between frontend and backend, and backend and database. CQRS views and adapters protect a service from dependencies on other services." loading="lazy" width="1323" height="372" style="width:100%"/>
+<img src="/diagrams/Conclusion/DI-3.png" alt="Standard APIs separate frontend and backend, and backend and database. CQRS views or adapters protect a service from dependencies on other services." loading="lazy" width="1323" height="372" style="width:100%"/>
 </picture>
 </a>
 </figure>

@@ -70,7 +70,7 @@ One or two of the system’s layers may serve commands and queries with function
 <picture>
 <source srcset="/diagrams/Variants/2/CQRS.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/CQRS.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/2/CQRS.png" alt="A large read and smaller write models between a user interface and database." loading="lazy" width="883" height="263" style="width:100%"/>
+<img src="/diagrams/Variants/2/CQRS.png" alt="A large read and smaller write model between a user interface and database." loading="lazy" width="883" height="263" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -136,7 +136,7 @@ A [*Data Mesh*]({{< relref "../../basic-metapatterns/pipeline.md#data-mesh" >}})
 <picture>
 <source srcset="/diagrams/Variants/1/Data%20Mesh.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Data%20Mesh.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Data%20Mesh.png" alt="Data Mesh builds an extra graph of services that stream and process analytical data." loading="lazy" width="1094" height="264" style="width:100%"/>
+<img src="/diagrams/Variants/1/Data%20Mesh.png" alt="A data mesh builds an extra graph of services that stream and process analytical data." loading="lazy" width="1094" height="264" style="width:100%"/>
 </picture>
 </a>
 </figure>

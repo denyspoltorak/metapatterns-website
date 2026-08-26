@@ -1,7 +1,7 @@
 +++
 weight = 5
 title = "System topologies"
-description = "This chapter explores common system topologies arranged according to the measure of their partitioning into layers or subdomains."
+description = "System and software architectures are organized by their partitioning into monolithic, layered, service-based, fragmented, and plugins topologies."
 images = ["/diagrams/Web/og/Topologies.png"]
 primary_image = "/diagrams/Topologies/Topologies%20Map.png"
 [sitemap]
@@ -26,7 +26,7 @@ We will rely on our finding that any system has a characteristic representation 
 <picture>
 <source srcset="/diagrams/Topologies/Partitioning.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Topologies/Partitioning.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Topologies/Partitioning.png" alt="Technical partitioning into Layers, domain partitioning into Services, and multiple instances of a system." loading="lazy" width="1221" height="423" style="width:100%"/>
+<img src="/diagrams/Topologies/Partitioning.png" alt="Technical partitioning into layers, domain partitioning into services, and multiple instances of a system." loading="lazy" width="1221" height="423" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -86,7 +86,7 @@ In the simplest cases a project is too small for any internal structure to be ju
 <picture>
 <source srcset="/diagrams/Topologies/True%20Monoliths.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Topologies/True%20Monoliths.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Topologies/True%20Monoliths.png" alt="Diagrams of Monolith, Shards, and Replicas." loading="lazy" width="968" height="503" style="width:100%"/>
+<img src="/diagrams/Topologies/True%20Monoliths.png" alt="A monolith, shards, and replicas." loading="lazy" width="968" height="503" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -110,7 +110,7 @@ Few system topologies are truly monolithic with one kind of system components:
 <picture>
 <source srcset="/diagrams/Topologies/Monoliths%20with%20Layers.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Topologies/Monoliths%20with%20Layers.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Topologies/Monoliths%20with%20Layers.png" alt="Diagrams of Monolith with Backends for Frontends, Managed Shards, Peer-to-Peer Mesh, Monolith with a database, and Monolith with Polyglot Persistence." loading="lazy" width="943" height="1003" style="width:100%"/>
+<img src="/diagrams/Topologies/Monoliths%20with%20Layers.png" alt="A monolith with backends for frontends, managed shards, peer-to-peer mesh, a monolith with a database, and a monolith with polyglot persistence." loading="lazy" width="943" height="1003" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -131,7 +131,7 @@ In other kinds of systems, common in server\-side programming, some functionalit
 <picture>
 <source srcset="/diagrams/Topologies/Monoliths%20with%20Plugins.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Topologies/Monoliths%20with%20Plugins.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Topologies/Monoliths%20with%20Plugins.png" alt="Diagrams of Monolith with Plugins, Model-View-Controller, and Hexagonal Architecture." loading="lazy" width="1103" height="543" style="width:100%"/>
+<img src="/diagrams/Topologies/Monoliths%20with%20Plugins.png" alt="A monolith with plugins, Model-View-Controller, and Hexagonal Architecture." loading="lazy" width="1103" height="543" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -150,7 +150,7 @@ A monolithic core can be extended with disposable additions:
 <picture>
 <source srcset="/diagrams/Topologies/Underdeveloped%20Moduliths.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Topologies/Underdeveloped%20Moduliths.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Topologies/Underdeveloped%20Moduliths.png" alt="Diagrams of Monolith with libraries and Modulith with shared code." loading="lazy" width="723" height="283" style="width:72%"/>
+<img src="/diagrams/Topologies/Underdeveloped%20Moduliths.png" alt="A Monolith with libraries and modulith with shared code." loading="lazy" width="723" height="283" style="width:72%"/>
 </picture>
 </a>
 </figure>
@@ -172,7 +172,7 @@ Layering enables the use of specialized technologies and third\-party components
 <picture>
 <source srcset="/diagrams/Topologies/Ordinary%20Layers.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Topologies/Ordinary%20Layers.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Topologies/Ordinary%20Layers.png" alt="Diagrams of DDD-Style Layers, Layers with Polyglot Persistence, Layers with Backends for Frontends, and Monolith with a database." loading="lazy" width="1003" height="443" style="width:100%"/>
+<img src="/diagrams/Topologies/Ordinary%20Layers.png" alt="DDD-style layers, layers with polyglot persistence, layers with backends for frontends, and a monolith with a database." loading="lazy" width="1003" height="443" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -195,7 +195,7 @@ Typical layered architectures include:
 <picture>
 <source srcset="/diagrams/Topologies/Scaled%20Layers.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Topologies/Scaled%20Layers.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Topologies/Scaled%20Layers.png" alt="Diagrams of Three-Tier System, MapReduce, Managed Shards, Scaled Service, and Peer-to-Peer Mesh." loading="lazy" width="843" height="883" style="width:87%"/>
+<img src="/diagrams/Topologies/Scaled%20Layers.png" alt="A three-tier system, MapReduce, managed shards, scaled service, and a peer-to-peer mesh." loading="lazy" width="843" height="883" style="width:87%"/>
 </picture>
 </a>
 </figure>
@@ -216,7 +216,7 @@ Several layered architectures build around scalability:
 <picture>
 <source srcset="/diagrams/Topologies/Other%20Layered.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Topologies/Other%20Layered.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Topologies/Other%20Layered.png" alt="Diagrams of Model-View-Presenter, Onion Architecture, and Sandwich." loading="lazy" width="1003" height="483" style="width:100%"/>
+<img src="/diagrams/Topologies/Other%20Layered.png" alt="Model-View-Presenter, Onion Architecture, and Sandwich Architecture." loading="lazy" width="1003" height="483" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -253,7 +253,7 @@ Some architectures specialize in separating complex core logic from miscellaneou
 <picture>
 <source srcset="/diagrams/Topologies/Separated%20Presentation.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Topologies/Separated%20Presentation.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Topologies/Separated%20Presentation.png" alt="Diagrams of Model-View-Presenter and Model-View-Controller." loading="lazy" width="959" height="443" style="width:100%"/>
+<img src="/diagrams/Topologies/Separated%20Presentation.png" alt="Model-View-Presenter and Model-View-Controller." loading="lazy" width="959" height="443" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -271,7 +271,7 @@ Some architectures specialize in separating complex core logic from miscellaneou
 <picture>
 <source srcset="/diagrams/Topologies/Control%20Patterns.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Topologies/Control%20Patterns.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Topologies/Control%20Patterns.png" alt="Diagrams of Pedestal and Microkernel." loading="lazy" width="883" height="383" style="width:100%"/>
+<img src="/diagrams/Topologies/Control%20Patterns.png" alt="A pedestal and microkernel." loading="lazy" width="883" height="383" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -293,7 +293,7 @@ A couple of topologies originate with embedded or systems programming where it i
 <picture>
 <source srcset="/diagrams/Topologies/Hexagonal%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Topologies/Hexagonal%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Topologies/Hexagonal%20Architecture.png" alt="Diagrams of Ports and Adapters and Onion Architecture." loading="lazy" width="923" height="483" style="width:100%"/>
+<img src="/diagrams/Topologies/Hexagonal%20Architecture.png" alt="Ports and Adapters and Onion Architecture." loading="lazy" width="923" height="483" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -331,7 +331,7 @@ However, full domain partitioning \[[FSA]({{< relref "../appendices/books-refere
 <picture>
 <source srcset="/diagrams/Topologies/Barebone%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Topologies/Barebone%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Topologies/Barebone%20Services.png" alt="Diagrams of Services, Three-Layered Services, Pipeline, and Two-Layered Services." loading="lazy" width="1163" height="663" style="width:100%"/>
+<img src="/diagrams/Topologies/Barebone%20Services.png" alt="Services, three-layered services, a pipeline, and two-layered services." loading="lazy" width="1163" height="663" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -358,7 +358,7 @@ A few architectures are completely segmented into subdomains:
 <picture>
 <source srcset="/diagrams/Topologies/Services%20with%20Extensions.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Topologies/Services%20with%20Extensions.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Topologies/Services%20with%20Extensions.png" alt="Diagrams of Services with a Gateway; Orchestrated Services; Services with: an API Gateway, Backends for Frontends, Shared Repository, Middleware, and Pplyglot Persistence; and of Service Mesh." loading="lazy" width="1132" height="1523" style="width:100%"/>
+<img src="/diagrams/Topologies/Services%20with%20Extensions.png" alt="Services with a gateway; orchestrated services; services with: an API gateway, backends for frontends, a shared repository, middleware, and polyglot persistence; and of a service mesh." loading="lazy" width="1132" height="1523" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -389,7 +389,7 @@ A few architectures are completely segmented into subdomains:
 <picture>
 <source srcset="/diagrams/Topologies/Hierarchies%20of%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Topologies/Hierarchies%20of%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Topologies/Hierarchies%20of%20Services.png" alt="Diagrams of Cell-Based Architecture and Hierarchical Middleware." loading="lazy" width="1103" height="924" style="width:100%"/>
+<img src="/diagrams/Topologies/Hierarchies%20of%20Services.png" alt="A Cell-Based Architecture and hierarchical middleware." loading="lazy" width="1103" height="924" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -407,7 +407,7 @@ Services are building blocks for a couple of hierarchical architectures used in 
 <picture>
 <source srcset="/diagrams/Topologies/Partially%20Merged%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Topologies/Partially%20Merged%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Topologies/Partially%20Merged%20Services.png" alt="Diagrams of Sandwich and Modulith with shared code." loading="lazy" width="723" height="283" style="width:73%"/>
+<img src="/diagrams/Topologies/Partially%20Merged%20Services.png" alt="A sandwich and modulith with shared code." loading="lazy" width="723" height="283" style="width:73%"/>
 </picture>
 </a>
 </figure>
@@ -433,7 +433,7 @@ Finally, some architectures are subdivided into both layers of abstraction and s
 <picture>
 <source srcset="/diagrams/Topologies/Layers%20of%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Topologies/Layers%20of%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Topologies/Layers%20of%20Services.png" alt="Diagrams of Services with Polyglot Persistence, Services with Backends for Frontends, and Service-Oriented Architecture." loading="lazy" width="1203" height="443" style="width:100%"/>
+<img src="/diagrams/Topologies/Layers%20of%20Services.png" alt="Services with polyglot persistence, services with backends for frontends, and Service-Oriented Architecture." loading="lazy" width="1203" height="443" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -452,7 +452,7 @@ A few topologies are made of layers, each of which is subdivided into services:
 <picture>
 <source srcset="/diagrams/Topologies/Layered%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Topologies/Layered%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Topologies/Layered%20Services.png" alt="Diagrams of Orchestrated Three-Layered Services and Choreographed Two-Layered Services." loading="lazy" width="1123" height="343" style="width:100%"/>
+<img src="/diagrams/Topologies/Layered%20Services.png" alt="Orchestrated three-layered services and choreographed two-layered services." loading="lazy" width="1123" height="343" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -470,7 +470,7 @@ More often than not, services are layered internally:
 <picture>
 <source srcset="/diagrams/Relations/Hierarchy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Relations/Hierarchy.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Relations/Hierarchy.png" alt="Diagrams of Orchestrator of Orchestrators, Middleware of Middlewares, and Services of Services." loading="lazy" width="1463" height="426" style="width:100%"/>
+<img src="/diagrams/Relations/Hierarchy.png" alt="Orchestrator of orchestrators, middleware of middlewares, and services of services." loading="lazy" width="1463" height="426" style="width:100%"/>
 </picture>
 </a>
 </figure>

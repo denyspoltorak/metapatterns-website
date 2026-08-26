@@ -1,7 +1,7 @@
 +++
 weight = 2
 title = "Orchestration"
-description = "This section discusses orchestration, where a single component coordinates the entire system, and mutual orchestration, where components call each other."
+description = "Orchestration relies on a facade or mediator to integrate the entire system. It sacrifices performance for support of a high number of complex scenarios."
 images = ["/diagrams/Web/og/Orchestration.png"]
 primary_image = "/diagrams/Communication/Services%20to%20Orchestrator.png"
 [sitemap]
@@ -87,7 +87,7 @@ Another option, which appears in [*Plugins*]({{< relref "../../implementation-me
 <picture>
 <source srcset="/diagrams/Communication/Microkernel%20-%20Dependencies.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Microkernel%20-%20Dependencies.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Microkernel%20-%20Dependencies.png" alt="In a Microkernel each managed service depends on a dedicated Service Provider Interface of the microkernel." loading="lazy" width="963" height="205" style="width:100%"/>
+<img src="/diagrams/Communication/Microkernel%20-%20Dependencies.png" alt="In a Microkernel each managed service depends on a dedicated SPI of the microkernel." loading="lazy" width="963" height="205" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -99,7 +99,7 @@ Furthermore, some domains develop that idea into a [*Hierarchy*]({{< relref "../
 <picture>
 <source srcset="/diagrams/Communication/Hierarchy%20-%20Dependencies.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Hierarchy%20-%20Dependencies.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Hierarchy%20-%20Dependencies.png" alt="In a hierarchy each child component depends on the same Service Provider Interface of their parent component." loading="lazy" width="903" height="243" style="width:100%"/>
+<img src="/diagrams/Communication/Hierarchy%20-%20Dependencies.png" alt="In a hierarchy each child component depends on the SPI of their parent." loading="lazy" width="903" height="243" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -149,7 +149,7 @@ In real life [services are likely to be layered]({{< relref "../../fragmented-me
 <picture>
 <source srcset="/diagrams/Communication/Mutual%20Orchestration%20-%203.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Mutual%20Orchestration%20-%203.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Mutual%20Orchestration%20-%203.png" alt="In Layered Services only the application layers of the services call each other." loading="lazy" width="1023" height="363" style="width:100%"/>
+<img src="/diagrams/Communication/Mutual%20Orchestration%20-%203.png" alt="In layered services only the application layers of the services call each other." loading="lazy" width="1023" height="363" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -159,7 +159,7 @@ In real life [services are likely to be layered]({{< relref "../../fragmented-me
 <picture>
 <source srcset="/diagrams/Communication/Mutual%20Orchestration%20-%204.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Mutual%20Orchestration%20-%204.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Mutual%20Orchestration%20-%204.png" alt="In Layered Services only the application layers of the services are interdependent." loading="lazy" width="1023" height="294" style="width:100%"/>
+<img src="/diagrams/Communication/Mutual%20Orchestration%20-%204.png" alt="In layered services only the application layers of the services are interdependent." loading="lazy" width="1023" height="294" style="width:100%"/>
 </picture>
 </a>
 </figure>

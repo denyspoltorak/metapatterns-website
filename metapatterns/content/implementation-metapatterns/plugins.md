@@ -1,7 +1,7 @@
 +++
 weight = 5
 title = "Plugins"
-description = "This chapter explores the highly customizable Plugins architecture and its subtypes: Plugin, Ambassador Plugin, Extension, Addin, and Addon."
+description = "Plugins, Addons, and Addins provide for customization of an application. An Ambassador Plugin injects the business logic of one service into another service."
 images = ["/diagrams/Web/og/Plugins.png"]
 primary_image = "/diagrams/Main/Plugins.png"
 [sitemap]
@@ -15,7 +15,7 @@ primary_image = "/diagrams/Main/Plugins.png"
 <picture>
 <source srcset="/diagrams/Main/Plugins.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Plugins.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Plugins.png" alt="A diagram for Plugins Architecture, in abstractness-subdomain-sharding coordinates." loading="lazy" width="942" height="554" style="width:100%"/>
+<img src="/diagrams/Main/Plugins.png" alt="Plugin Architecture." loading="lazy" width="942" height="554" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -55,7 +55,7 @@ The only case for a plugin to improve performance of a system that I can think o
 <picture>
 <source srcset="/diagrams/Performance/Plugins-injection.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Performance/Plugins-injection.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Performance/Plugins-injection.png" alt="Business logic injection in Layers and Services." loading="lazy" width="1043" height="623" style="width:100%"/>
+<img src="/diagrams/Performance/Plugins-injection.png" alt="Business logic injection in layers and services." loading="lazy" width="1043" height="623" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -95,7 +95,7 @@ Each *plugin* depends on the *core*’s *API* \(for *Addons*\) or *SPI* \(for *P
 <picture>
 <source srcset="/diagrams/Relations/Plugins.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Relations/Plugins.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Relations/Plugins.png" alt="A monolith with plugins; layers with plugins; a Cell with a plugin." loading="lazy" width="1063" height="603" style="width:100%"/>
+<img src="/diagrams/Relations/Plugins.png" alt="A monolith with plugins; layers with plugins; a cell with a plugin." loading="lazy" width="1063" height="603" style="width:100%"/>
 </picture>
 </a>
 </figure>

@@ -1,7 +1,7 @@
 +++
 weight = 8
 title = "Proxy"
-description = "This chapter discusses proxies such as: Firewall, Response Cache, Load Balancer, Sharding Proxy, Reverse Proxy, Adapter, API Gateway, and even User Interface."
+description = "A Proxy represents a system to its clients and implements an aspect of its behavior. Proxies include: Firewall, Load Balancer, Adapter, and Response Cache."
 images = ["/diagrams/Web/og/Proxy.png"]
 primary_image = "/diagrams/Main/Proxy.png"
 [sitemap]
@@ -15,7 +15,7 @@ primary_image = "/diagrams/Main/Proxy.png"
 <picture>
 <source srcset="/diagrams/Main/Proxy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Proxy.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Proxy.png" alt="A diagram for Services with a proxy, in abstractness-subdomain-sharding coordinates." loading="lazy" width="1082" height="574" style="width:100%"/>
+<img src="/diagrams/Main/Proxy.png" alt="Services with a proxy." loading="lazy" width="1082" height="574" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -244,7 +244,7 @@ As *Proxies* are used for many purposes, there are a variety of their specializa
 <picture>
 <source srcset="/diagrams/Variants/2/Firewall.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Firewall.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/2/Firewall.png" alt="A firewall lets a request from a good client pass through while requests from a malicious client are blocked." loading="lazy" width="1163" height="343" style="width:100%"/>
+<img src="/diagrams/Variants/2/Firewall.png" alt="A firewall lets a request from a good client pass through while requests from a malicious client are blocked. A rate limiter blocks some client requests." loading="lazy" width="1163" height="343" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -372,7 +372,7 @@ There is also a whole bunch of *Abstraction Layers* that aim to protect the busi
 <picture>
 <source srcset="/diagrams/Variants/2/API%20Gateway.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/API%20Gateway.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/2/API%20Gateway.png" alt="An API Gateway both translates from the client's to the system's protocol and calls services in parallel." loading="lazy" width="923" height="365" style="width:100%"/>
+<img src="/diagrams/Variants/2/API%20Gateway.png" alt="An API gateway both translates from the client's to the system's protocol and calls services in parallel." loading="lazy" width="923" height="365" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -431,7 +431,7 @@ As *Proxies* are usually third\-party products, there is not much that [we can c
 <picture>
 <source srcset="/diagrams/Evolutions/2/Proxy%20to%20Backends%20for%20Frontends.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Proxy%20to%20Backends%20for%20Frontends.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/2/Proxy%20to%20Backends%20for%20Frontends.png" alt="A proxy is subdivided into Backends for Frontends." loading="lazy" width="1283" height="384" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Proxy%20to%20Backends%20for%20Frontends.png" alt="A proxy is subdivided into backends for frontends." loading="lazy" width="1283" height="384" style="width:100%"/>
 </picture>
 </a>
 </figure>

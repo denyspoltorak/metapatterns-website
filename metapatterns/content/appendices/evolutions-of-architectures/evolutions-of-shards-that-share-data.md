@@ -66,7 +66,7 @@ In case a shard needs to access data owned by any other shard, the prerequisite 
 <picture>
 <source srcset="/diagrams/Evolutions/Shards/Shards%20to%20Space-Based%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Shards/Shards%20to%20Space-Based%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Shards/Shards%20to%20Space-Based%20Architecture.png" alt="The data of the shards moves to a Data Grid, resulting in a Space-Based Architecture." loading="lazy" width="1107" height="264" style="width:100%"/>
+<img src="/diagrams/Evolutions/Shards/Shards%20to%20Space-Based%20Architecture.png" alt="The data of the shards moves to a data grid, resulting in a Space-Based Architecture." loading="lazy" width="1107" height="264" style="width:100%"/>
 </picture>
 </a>
 </figure>

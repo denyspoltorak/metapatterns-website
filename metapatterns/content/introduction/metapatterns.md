@@ -1,7 +1,7 @@
 +++
 weight = 4
 title = "Metapatterns"
-description = "This chapter explores metapatterns (clusters of closely related patterns), design space, and the abstractness-subdomain-sharding system of coordinates."
+description = "Architectural patterns can be organized according to their structure and function, which reveals relations between the patterns and creates a pattern language."
 images = ["/diagrams/Web/og/Metapatterns.png"]
 [sitemap]
   priority = 0.8
@@ -65,7 +65,7 @@ We’ll draw the abstractness axis vertically with higher\-level components posi
 <picture>
 <source srcset="/diagrams/Intro/CQRS%20with%20notes.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Intro/CQRS%20with%20notes.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Intro/CQRS%20with%20notes.png" alt="A diagram of a CQRS system in abstractness-subdomain-sharding coordinates with a detailed legend." loading="lazy" width="981" height="674" style="width:100%"/>
+<img src="/diagrams/Intro/CQRS%20with%20notes.png" alt="A CQRS system in abstractness-subdomain-sharding coordinates with a detailed legend." loading="lazy" width="981" height="674" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -112,7 +112,7 @@ It features two \(or more in real life\) high\-level modules that communicate wi
 <picture>
 <source srcset="/diagrams/Intro/Example-Defined.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Intro/Example-Defined.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Intro/Example-Defined.png" alt="Diagrams for Services with a Middleware, Services with a shared database and Model-View-Controller." loading="lazy" width="863" height="223" style="width:100%"/>
+<img src="/diagrams/Intro/Example-Defined.png" alt="Services with a middleware, services with a shared database, and Model-View-Controller." loading="lazy" width="863" height="223" style="width:100%"/>
 </picture>
 </a>
 </figure>

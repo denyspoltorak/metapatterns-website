@@ -1,7 +1,7 @@
 +++
 weight = 3
 title = "About this book"
-description = "This is the introduction to the Architectural Metapatterns book. It discusses the book's rationale, structure, and the types of diagrams used in the text."
+description = "Architectural Metapatterns contains introductory topics, 19 chapters each dedicated to a cluster of closely related patterns, analytics, and pattern evolutions."
 images = ["/diagrams/Web/og/About.png"]
 [sitemap]
   priority = 0.5
@@ -42,7 +42,7 @@ The diagrams are *NoUML* \(boxes and arrows\) and most of them belong to one of 
 <picture>
 <source srcset="/diagrams/Misc/Diagrams.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Misc/Diagrams.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Misc/Diagrams.png" alt="A structural, sequence, and dependency diagrams in NoSQL notation as used throughout the Architectural Metapatterns book." loading="lazy" width="1043" height="463" style="width:100%"/>
+<img src="/diagrams/Misc/Diagrams.png" alt="A structural, sequence, and dependency diagram in NoSQL notation as used throughout the Architectural Metapatterns book." loading="lazy" width="1043" height="463" style="width:100%"/>
 </picture>
 </a>
 </figure>

@@ -23,7 +23,7 @@ The final major drawback of [*Monolith*]({{< relref "../../basic-metapatterns/mo
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith_%20Services%20and%20Pipeline.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith_%20Services%20and%20Pipeline.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith_%20Services%20and%20Pipeline.png" alt="In Services a single component executes a client request while in Pipeline there is no use case owner." loading="lazy" width="1263" height="323" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith_%20Services%20and%20Pipeline.png" alt="In services a single component executes a client request while in a pipeline there is no use case owner." loading="lazy" width="1263" height="323" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -118,7 +118,7 @@ If you are not adding a new feature but need to change an old one – use the ch
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Pipeline.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Pipeline.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Pipeline.png" alt="A Monolith is transformed into a pipeline." loading="lazy" width="1147" height="247" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Pipeline.png" alt="A monolith is transformed into a pipeline." loading="lazy" width="1147" height="247" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -164,7 +164,7 @@ Systems of [*Services*]({{< relref "../../basic-metapatterns/services.md" >}}) o
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Services%20-%20Further%201.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Services%20-%20Further%201.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Services%20-%20Further%201.png" alt="Diagrams of Services with a proxy, Services with an orchestrator, Services with a middleware, and Services with a shared database." loading="lazy" width="1543" height="844" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Services%20-%20Further%201.png" alt="Services with a proxy, orchestrator, middleware, and a shared database." loading="lazy" width="1543" height="844" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -182,7 +182,7 @@ Each service, being a smaller *Monolith*, may evolve on its own\. Most of the ev
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Services%20-%20Further%202.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Services%20-%20Further%202.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Services%20-%20Further%202.png" alt="Diagrams of a scaled service, layered service, Cell, and a service that implements Hexagonal Architecture." loading="lazy" width="1403" height="489" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Services%20-%20Further%202.png" alt="A scaled service, layered service, cell, and a service that implements Hexagonal Architecture." loading="lazy" width="1403" height="489" style="width:100%"/>
 </picture>
 </a>
 </figure>

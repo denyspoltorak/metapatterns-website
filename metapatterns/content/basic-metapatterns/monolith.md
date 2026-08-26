@@ -1,7 +1,7 @@
 +++
 weight = 6
 title = "Monolith"
-description = "This chapter explores monolithic architectures: Reactor, Proactor, Half-Sync/Half-Async (coroutines), and (Re)Actor-with-Extractors (phased simulation)."
+description = "The monolithic architecture is good for tiny projects. It may act as a Reactor, Proactor, Half-Sync/Half-Async (coroutines), or (Re)Actor-with-Extractors."
 images = ["/diagrams/Web/og/Monolith.png"]
 primary_image = "/diagrams/Main/Monolith.png"
 [sitemap]
@@ -17,7 +17,7 @@ Let’s take a look at the simplest possible [metapattern]({{< relref "../introd
 <picture>
 <source srcset="/diagrams/Main/Monolith.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Monolith.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Monolith.png" alt="A diagram for Monolith, in abstractness-subdomain-sharding coordinates." loading="lazy" width="942" height="474" style="width:100%"/>
+<img src="/diagrams/Main/Monolith.png" alt="Monolith." loading="lazy" width="942" height="474" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -89,7 +89,7 @@ Even though a *Monolith* is a single module, meaning that there are no dependenc
 <picture>
 <source srcset="/diagrams/Relations/Monolith.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Relations/Monolith.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Relations/Monolith.png" alt="Intermediary architectures between Monolith and distributed Shards, Layers, and Services." loading="lazy" width="1623" height="1620" style="width:100%"/>
+<img src="/diagrams/Relations/Monolith.png" alt="Intermediary architectures between the monolith and distributed shards, layers, and services." loading="lazy" width="1623" height="1620" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -214,7 +214,7 @@ Any software module reacts to incoming events or data and produces outgoing even
 <picture>
 <source srcset="/diagrams/Variants/1/Subtypes%20of%20Monolith.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Subtypes%20of%20Monolith.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Subtypes%20of%20Monolith.png" alt="Control flow diagrams for Reactor, Proactor, and Half-Sync/Half-Async." loading="lazy" width="848" height="366" style="width:100%"/>
+<img src="/diagrams/Variants/1/Subtypes%20of%20Monolith.png" alt="Control flow for a reactor, proactor, and Half-Sync/Half-Async." loading="lazy" width="848" height="366" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -485,7 +485,7 @@ The final major drawback of *Monolith* is the cohesiveness of its code\. The rap
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Pipeline.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Pipeline.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Pipeline.png" alt="A Monolith is transformed into a pipeline." loading="lazy" width="1147" height="247" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Pipeline.png" alt="A monolith is transformed into a pipeline." loading="lazy" width="1147" height="247" style="width:100%"/>
 </picture>
 </a>
 </figure>

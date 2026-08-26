@@ -1,7 +1,7 @@
 +++
 weight = 6
 title = "Middleware"
-description = "This chapter discusses Middleware and its variants: Message Bus, Event Mediator, Service Mesh, Enterprise Service Bus, and Persistent Event Log."
+description = "Middleware takes care of messaging, scalability, and error recovery. Its examples include Message Bus, Event Mediator, Service Mesh, and Enterprise Service Bus."
 images = ["/diagrams/Web/og/Middleware.png"]
 primary_image = "/diagrams/Main/Middleware.png"
 [sitemap]
@@ -15,7 +15,7 @@ primary_image = "/diagrams/Main/Middleware.png"
 <picture>
 <source srcset="/diagrams/Main/Middleware.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Middleware.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Middleware.png" alt="A diagram for Services with a middleware, in abstractness-subdomain-sharding coordinates." loading="lazy" width="1062" height="494" style="width:100%"/>
+<img src="/diagrams/Main/Middleware.png" alt="Services with a middleware." loading="lazy" width="1062" height="494" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -90,7 +90,7 @@ You may decide to use an [*Anticorruption Layer*]({{< relref "../extension-metap
 <picture>
 <source srcset="/diagrams/Relations/Middleware.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Relations/Middleware.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Relations/Middleware.png" alt="Middleware for Services, Shards, and Service-Oriented Architecture." loading="lazy" width="1226" height="463" style="width:100%"/>
+<img src="/diagrams/Relations/Middleware.png" alt="Middleware for services, shards, and Service-Oriented Architecture." loading="lazy" width="1226" height="463" style="width:100%"/>
 </picture>
 </a>
 </figure>
