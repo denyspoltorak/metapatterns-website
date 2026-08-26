@@ -1,7 +1,7 @@
 +++
 weight = 2
 title = "Pipelines in architectural patterns"
-description = "This section discusses architectural patterns that involve pipelined data processing, namely Pipes and Filters, Event-Driven Architecture, MVC, and CQRS."
+description = "A data or event stream may or may not preserve the data type, order, and identity, as seen in Pipes and Filters, EDA, CQRS, and MVC."
 images = ["/diagrams/Web/og/Pipelineliness.png"]
 [sitemap]
   priority = 0.5
@@ -62,7 +62,7 @@ This architecture covers way more complex use cases than [*Pipes and Filters*]({
 <picture>
 <source srcset="/diagrams/Conclusion/Pipelineliness-CQRS.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Pipelineliness-CQRS.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Pipelineliness-CQRS.png" alt="In CQRS data passes through a pipeline formed of the command backend, OLTP database, OLAP database, and the query backend." loading="lazy" width="863" height="403" style="width:100%"/>
+<img src="/diagrams/Conclusion/Pipelineliness-CQRS.png" alt="A CQRS system makes a data pipeline." loading="lazy" width="863" height="403" style="width:100%"/>
 </picture>
 </a>
 </figure>

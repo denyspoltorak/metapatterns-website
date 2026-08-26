@@ -20,7 +20,7 @@ There are several ways to improve the performance of a [*layered system*]({{< re
 <picture>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.png" alt="The database is migrated to a Data Grid, resulting in a scalable Space-Based Architecture." loading="lazy" width="1051" height="264" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.png" alt="The database is migrated to a data grid, resulting in a scalable Space-Based Architecture." loading="lazy" width="1051" height="264" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -114,7 +114,7 @@ Multiple instances or layers can be created, with their number and deployment [v
 <picture>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.png" alt="The database layer is subdivided into specialized databases, resulting in Polyglot Persistence." loading="lazy" width="1023" height="248" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.png" alt="The database layer is subdivided into specialized databases, resulting in polyglot persistence." loading="lazy" width="1023" height="248" style="width:100%"/>
 </picture>
 </a>
 </figure>

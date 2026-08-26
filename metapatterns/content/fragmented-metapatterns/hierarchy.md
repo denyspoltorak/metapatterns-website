@@ -1,7 +1,7 @@
 +++
 weight = 10
 title = "Hierarchy"
-description = "This chapter explores hierarchical architectures: Cell-Based Architecture, Presentation-Abstraction-Control (PAC), HMVC, and Network of Networks."
+description = "Hierarchy distributes complexity over a tree of components. Examples include Cell-Based Architecture, Vertical Slice Architecture, HMVC, and Bus of Buses."
 images = ["/diagrams/Web/og/Hierarchy.png"]
 primary_image = "/diagrams/Main/Hierarchy.png"
 [sitemap]
@@ -15,7 +15,7 @@ primary_image = "/diagrams/Main/Hierarchy.png"
 <picture>
 <source srcset="/diagrams/Main/Hierarchy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Hierarchy.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Hierarchy.png" alt="A diagram for Hierarchy, in abstractness-subdomain-sharding coordinates." loading="lazy" width="1082" height="534" style="width:100%"/>
+<img src="/diagrams/Main/Hierarchy.png" alt="Top-down hierarchy." loading="lazy" width="1082" height="534" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -66,7 +66,7 @@ Maintaining high throughput usually requires deployment of multiple instances of
 <picture>
 <source srcset="/diagrams/Performance/Hierarchy%20-%20optimizations.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Performance/Hierarchy%20-%20optimizations.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Performance/Hierarchy%20-%20optimizations.png" alt="Aggregation of data in mid-level nodes; autonomous decision-making by mid-level nodes; direct communication between low-level nodes of a hierarchy." loading="lazy" width="1483" height="483" style="width:100%"/>
+<img src="/diagrams/Performance/Hierarchy%20-%20optimizations.png" alt="Aggregation of data in mid-level nodes, autonomous decision-making by mid-level nodes, and direct communication between low-level nodes of a hierarchy." loading="lazy" width="1483" height="483" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -80,7 +80,7 @@ A parent node would usually define one \(for polymorphic children\) or more \(ot
 <picture>
 <source srcset="/diagrams/Dependencies/Hierarchy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Dependencies/Hierarchy.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Dependencies/Hierarchy.png" alt="In Hierarchy a child component depends on an SPI of its parent component. If the children are polymorphic, their parent has a single SPI." loading="lazy" width="1103" height="423" style="width:100%"/>
+<img src="/diagrams/Dependencies/Hierarchy.png" alt="In a hierarchy a child component depends on an SPI of its parent component. If the children are polymorphic, their parent has a single SPI." loading="lazy" width="1103" height="423" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -109,7 +109,7 @@ A parent node would usually define one \(for polymorphic children\) or more \(ot
 <picture>
 <source srcset="/diagrams/Relations/Hierarchy.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Relations/Hierarchy.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Relations/Hierarchy.png" alt="Diagrams of Orchestrator of Orchestrators, Middleware of Middlewares, and Services of Services." loading="lazy" width="1463" height="426" style="width:100%"/>
+<img src="/diagrams/Relations/Hierarchy.png" alt="Orchestrator of orchestrators, middleware of middlewares, and services of services." loading="lazy" width="1463" height="426" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -213,7 +213,7 @@ Uber [compacted](https://www.uber.com/blog/microservice-architecture/) 2200 [*Mi
 <picture>
 <source srcset="/diagrams/Evolutions/3/Hierarchy%20-%201.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/3/Hierarchy%20-%201.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/3/Hierarchy%20-%201.png" alt="The upper layer of a top-down hierarchy is subdivided into Backends for Frontends." loading="lazy" width="1223" height="384" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/Hierarchy%20-%201.png" alt="The upper layer of a top-down hierarchy is subdivided into backends for frontends." loading="lazy" width="1223" height="384" style="width:100%"/>
 </picture>
 </a>
 </figure>

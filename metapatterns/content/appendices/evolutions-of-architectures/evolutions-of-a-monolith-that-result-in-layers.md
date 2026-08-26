@@ -205,7 +205,7 @@ Another set of evolutions stems from splitting one or more *layers* into [*Servi
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%201.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%201.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%201.png" alt="Diagrams of Backends for Frontends over Layers, Service-Oriented Architecture, Sandwich, Layered Services, Hierarchy, and Layers with Polyglot Persistence." loading="lazy" width="1126" height="826" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%201.png" alt="Backends for frontends over layers, Service-Oriented Architecture, sandwich, layered services, hierarchy, and layers with polyglot persistence." loading="lazy" width="1126" height="826" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -223,7 +223,7 @@ In addition,
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png" alt="Diagrams of Layers with plugins, Layers with scripts, and Hexagonal Architecture with a layered core." loading="lazy" width="983" height="503" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png" alt="Layers with plugins, layers with scripts, and Hexagonal Architecture with a layered core." loading="lazy" width="983" height="503" style="width:100%"/>
 </picture>
 </a>
 </figure>

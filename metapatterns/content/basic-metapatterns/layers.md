@@ -1,7 +1,7 @@
 +++
 weight = 8
 title = "Layers"
-description = "This chapter explores layered architectures (Layers and Tiers) and individual layers: interface, application, domain, utilities, middleware, and persistence."
+description = "Layers or tiers subdivide a system into high-level and low-level components such as: interface, application, domain, utilities, middleware, and persistence."
 images = ["/diagrams/Web/og/Layers.png"]
 primary_image = "/diagrams/Main/Layers.png"
 [sitemap]
@@ -15,7 +15,7 @@ primary_image = "/diagrams/Main/Layers.png"
 <picture>
 <source srcset="/diagrams/Main/Layers.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Layers.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Layers.png" alt="A diagram for Layered Architecture, in abstractness-subdomain-sharding coordinates." loading="lazy" width="942" height="494" style="width:100%"/>
+<img src="/diagrams/Main/Layers.png" alt="Layered architecture." loading="lazy" width="942" height="494" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -52,7 +52,7 @@ Many patterns have one or more of their layers split into subdomains, resulting 
 <picture>
 <source srcset="/diagrams/Misc/Layers%20of%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Misc/Layers%20of%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Misc/Layers%20of%20Services.png" alt="Diagrams of Backends for Frontends and Services with Polyglot Persistence." loading="lazy" width="1643" height="477" style="width:100%"/>
+<img src="/diagrams/Misc/Layers%20of%20Services.png" alt="Backends for frontends and services with polyglot persistence." loading="lazy" width="1643" height="477" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -166,7 +166,7 @@ If you ever need to *scale* \(run multiple instances of\) a layer, you may notic
 <picture>
 <source srcset="/diagrams/Dependencies/Layers-3.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Dependencies/Layers-3.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Dependencies/Layers-3.png" alt="A load balancer helps access multiple instances of a layer directly below it." loading="lazy" width="823" height="363" style="width:93%"/>
+<img src="/diagrams/Dependencies/Layers-3.png" alt="A load balancer helps access multiple instances of a component directly below it." loading="lazy" width="823" height="363" style="width:93%"/>
 </picture>
 </a>
 </figure>
@@ -308,7 +308,7 @@ There are also other kinds of *Proxies* which adapt a system to foreign interfac
 <picture>
 <source srcset="/diagrams/Variants/1/Interface%20-%20Kinds.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Interface%20-%20Kinds.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Interface%20-%20Kinds.png" alt="A service wrapped with: a gateway with its API, a user interface, an Anticorruption Layer, a plugin and an Open Host Service with a Published Language." loading="lazy" width="1083" height="444" style="width:100%"/>
+<img src="/diagrams/Variants/1/Interface%20-%20Kinds.png" alt="A service wrapped with: a gateway with its API, a user interface, an anticorruption layer, a plugin, and an open host service with a published language." loading="lazy" width="1083" height="444" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -322,7 +322,7 @@ An interface layer can contain multiple components \(services, modules, or high\
 <picture>
 <source srcset="/diagrams/Variants/1/Interface%20-%20Derived.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Interface%20-%20Derived.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Interface%20-%20Derived.png" alt="Diagrams of an API Gateway and Backends for Frontends." loading="lazy" width="1505" height="388" style="width:100%"/>
+<img src="/diagrams/Variants/1/Interface%20-%20Derived.png" alt="An API gateway and backends for frontends." loading="lazy" width="1505" height="388" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -353,7 +353,7 @@ Some systems lack the application role – they are structured as [*Pipelines*](
 <picture>
 <source srcset="/diagrams/Variants/1/Application%20-%20Derived.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Application%20-%20Derived.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Application%20-%20Derived.png" alt="Backends for Frontends between a gateway and a monolithic service; a pipeline with use case logic hardwired into the graph of connections." loading="lazy" width="1323" height="403" style="width:100%"/>
+<img src="/diagrams/Variants/1/Application%20-%20Derived.png" alt="Backends for frontends between a gateway and a monolithic service; a pipeline with use case logic hardwired into the graph of connections." loading="lazy" width="1323" height="403" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -386,7 +386,7 @@ As the largest layer, the domain is often the first among them to be subdivided:
 <picture>
 <source srcset="/diagrams/Variants/1/Domain%20-%20Derived.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Domain%20-%20Derived.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Domain%20-%20Derived.png" alt="Diagrams of Services, Sandwich, Hierarchy, and Command-Query Responsibility Segregation." loading="lazy" width="863" height="783" style="width:74%"/>
+<img src="/diagrams/Variants/1/Domain%20-%20Derived.png" alt="Services, a sandwich, hierarchy, and Command-Query Responsibility Segregation." loading="lazy" width="863" height="783" style="width:74%"/>
 </picture>
 </a>
 </figure>
@@ -409,7 +409,7 @@ In most cases generic code stays together with the [*domain*\-level code]({{< re
 <picture>
 <source srcset="/diagrams/Variants/1/Generic%20Code%20-%20Derived.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Generic%20Code%20-%20Derived.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Generic%20Code%20-%20Derived.png" alt="Diagrams of Services, Service-Oriented Architecture, and Microservices with sidecars, with components that carry generic code highlighted." loading="lazy" width="1363" height="483" style="width:100%"/>
+<img src="/diagrams/Variants/1/Generic%20Code%20-%20Derived.png" alt="Services, Service-Oriented Architecture, and microservices with sidecars, with components that carry generic code highlighted." loading="lazy" width="1363" height="483" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -442,7 +442,7 @@ Most systems but the simplest [*Pipelines*]({{< relref "../basic-metapatterns/pi
 <picture>
 <source srcset="/diagrams/Variants/1/Data%20-%20Derived.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Data%20-%20Derived.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Data%20-%20Derived.png" alt="Diagrams of a three-tier system, hierarchical control system, and Space-Based Architecture." loading="lazy" width="1063" height="449" style="width:100%"/>
+<img src="/diagrams/Variants/1/Data%20-%20Derived.png" alt="A three-tier system, hierarchical control system, and Space-Based Architecture." loading="lazy" width="1063" height="449" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -470,7 +470,7 @@ Integrating multiple pieces of hardware into an intelligently behaving system is
 <picture>
 <source srcset="/diagrams/4Kinds/Control%20-%20variants.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/4Kinds/Control%20-%20variants.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/4Kinds/Control%20-%20variants.png" alt="Diagrams of control systems with the following architectures: monolithic, actors, Pedestal, hierarchical." loading="lazy" width="1224" height="664" style="width:100%"/>
+<img src="/diagrams/4Kinds/Control%20-%20variants.png" alt="A control system can be monolithic or actor-based, or make a pedestal or hierarchy." loading="lazy" width="1224" height="664" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -617,7 +617,7 @@ Not all the layered architectures are equally layered\. A [*Monolith*]({{< relre
 <picture>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Layers.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Layers.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Layers/Layers%20to%20Layers.png" alt="A diagram of calls in a layered system. A single request from a client is translated by an Orchestrator into multiple calls to lower layers." loading="lazy" width="943" height="424" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20to%20Layers.png" alt="Communication between lower layers is more fine-grained than between higher layers." loading="lazy" width="943" height="424" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -649,7 +649,7 @@ The main drawback \(and benefit as well\) of *Layers* is that much or all of the
 <picture>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.png" alt="The domain layer is split into subdomain components, making a Sandwich." loading="lazy" width="1083" height="243" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20Split%20Domain%20to%20Services.png" alt="The domain layer is split into subdomain components, making a sandwich." loading="lazy" width="1083" height="243" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -692,7 +692,7 @@ There are several ways to improve the performance of a layered system\. One we h
 <picture>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.png" alt="The database is migrated to a Data Grid, resulting in a scalable Space-Based Architecture." loading="lazy" width="1051" height="264" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20to%20Space-Based%20Architecture.png" alt="The database is migrated to a data grid, resulting in a scalable Space-Based Architecture." loading="lazy" width="1051" height="264" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -733,7 +733,7 @@ Others are new:
 <picture>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.png" alt="The database layer is subdivided into specialized databases, resulting in Polyglot Persistence." loading="lazy" width="1023" height="248" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20to%20Polyglot%20Persistence.png" alt="The database layer is subdivided into specialized databases, resulting in polyglot persistence." loading="lazy" width="1023" height="248" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -752,7 +752,7 @@ The last group of evolutions to consider is about making the system more adaptab
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png" alt="Diagrams of Layers with plugins, Layers with scripts, and Hexagonal Architecture with a layered core." loading="lazy" width="983" height="503" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png" alt="Layers with plugins, layers with scripts, and Hexagonal Architecture with a layered core." loading="lazy" width="983" height="503" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -767,7 +767,7 @@ There is also one new evolution which modifies the upper \(*orchestration*\) lay
 <picture>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.png" alt="The application layer is split into Backends for Frontends." loading="lazy" width="1003" height="323" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.png" alt="The application layer is split into backends for frontends." loading="lazy" width="1003" height="323" style="width:100%"/>
 </picture>
 </a>
 </figure>

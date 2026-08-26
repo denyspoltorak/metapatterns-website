@@ -1,7 +1,7 @@
 +++
 weight = 6
 title = "Hexagonal Architecture"
-description = "This chapter explores Hexagonal Architecture and its subtypes: Ports and Adapters, Onion Architecture, MVC, MVP and MVVM, Pedestal, and Cell (Cluster)."
+description = "Hexagonal Architecture (Ports and Adapters) and the derived Model-View-Controller (MVC) and Cell aim to protect business logic from external dependencies."
 images = ["/diagrams/Web/og/Hexagonal%20Architecture.png"]
 primary_image = "/diagrams/Main/Hexagonal%20Architecture.png"
 [sitemap]
@@ -15,7 +15,7 @@ primary_image = "/diagrams/Main/Hexagonal%20Architecture.png"
 <picture>
 <source srcset="/diagrams/Main/Hexagonal%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Hexagonal%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Hexagonal%20Architecture.png" alt="A diagram for Hexagonal Architecture, in abstractness-subdomain-sharding coordinates." loading="lazy" width="962" height="642" style="width:100%"/>
+<img src="/diagrams/Main/Hexagonal%20Architecture.png" alt="Hexagonal Architecture." loading="lazy" width="962" height="642" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -52,7 +52,7 @@ Occasionally, the system may benefit from direct communication between the *adap
 <picture>
 <source srcset="/diagrams/Performance/Hexagonal%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Performance/Hexagonal%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Performance/Hexagonal%20Architecture.png" alt="A data stream between adapters of Hexagonal Architecture." loading="lazy" width="703" height="421" style="width:92%"/>
+<img src="/diagrams/Performance/Hexagonal%20Architecture.png" alt="A data stream between the adapters of Hexagonal Architecture." loading="lazy" width="703" height="421" style="width:92%"/>
 </picture>
 </a>
 </figure>
@@ -100,7 +100,7 @@ Still, there is a hidden pitfall of designing a [*leaky abstraction*](https://en
 <picture>
 <source srcset="/diagrams/Relations/Hexagonal%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Relations/Hexagonal%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Relations/Hexagonal%20Architecture.png" alt="Diagrams of Hexagonal Architecture with a monolithic core, with a layered core, and Cell." loading="lazy" width="1144" height="621" style="width:100%"/>
+<img src="/diagrams/Relations/Hexagonal%20Architecture.png" alt="Hexagonal Architecture with a monolithic core, layered core, and a cell." loading="lazy" width="1144" height="621" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -303,7 +303,7 @@ All those patterns exploit modern OS or GUI frameworks’ widgets which handle a
 <picture>
 <source srcset="/diagrams/Variants/4/MVP%20-%20subtypes.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/MVP%20-%20subtypes.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/4/MVP%20-%20subtypes.png" alt="Diagrams of MVP with a view-presenter pair for each screen, MVA with different adapters for different kinds of users, MVVM with data in ViewModel, and simple Document-View and Model 1." loading="lazy" width="1284" height="903" style="width:100%"/>
+<img src="/diagrams/Variants/4/MVP%20-%20subtypes.png" alt="MVP with a view-presenter pair for each screen, MVA with different adapters for different kinds of users, MVVM with data in ViewModel, and simple Document-View and Model 1." loading="lazy" width="1284" height="903" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -348,7 +348,7 @@ Another difference is that while *MVC* provides for changing target platforms by
 <picture>
 <source srcset="/diagrams/Variants/4/MVC%20-%20subtypes.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/MVC%20-%20subtypes.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/4/MVC%20-%20subtypes.png" alt="Diagrams of MVC with a dedicated view-controller pair for each widget, ADR and RMR where the action calls the responder, Model 2 with an orchestrating controller, and a game development engine." loading="lazy" width="1303" height="824" style="width:100%"/>
+<img src="/diagrams/Variants/4/MVC%20-%20subtypes.png" alt="MVC with a dedicated view-controller pair for each widget, ADR and RMR where the action calls the responder, Model 2 with an orchestrating controller, and a game development engine." loading="lazy" width="1303" height="824" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -360,7 +360,7 @@ Another difference is that while *MVC* provides for changing target platforms by
 <picture>
 <source srcset="/diagrams/Variants/4/Pedestal.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/Pedestal.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/4/Pedestal.png" alt="A Pedestal has a control layer mediating hardware drivers which wrap each hardware component. An operating system adds a kernel between the drivers and an application that uses them." loading="lazy" width="1303" height="384" style="width:100%"/>
+<img src="/diagrams/Variants/4/Pedestal.png" alt="A pedestal has a control layer mediating hardware drivers which wrap each hardware component. An operating system adds a kernel between the drivers and an application that uses them." loading="lazy" width="1303" height="384" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -426,7 +426,7 @@ A [*Cell*](https://github.com/wso2/reference-architecture/blob/master/reference-
 <picture>
 <source srcset="/diagrams/Variants/4/Cell%20-%20Basic%20-%20Subtypes.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/Cell%20-%20Basic%20-%20Subtypes.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/4/Cell%20-%20Basic%20-%20Subtypes.png" alt="Diagrams for: a Cell with a Sandwich, a Cell with services, and a Cell with a pipeline." loading="lazy" width="883" height="384" style="width:88%"/>
+<img src="/diagrams/Variants/4/Cell%20-%20Basic%20-%20Subtypes.png" alt="A Cell with a sandwich, services, and a pipeline." loading="lazy" width="883" height="384" style="width:88%"/>
 </picture>
 </a>
 </figure>
@@ -443,7 +443,7 @@ Another way a *Cell* can arise is when architects have overcommitted themselves 
 <picture>
 <source srcset="/diagrams/Variants/4/Cell%20-%20Basic%20-%20Evolutions.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/Cell%20-%20Basic%20-%20Evolutions.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/4/Cell%20-%20Basic%20-%20Evolutions.png" alt="A layered system transforms into a Sandwich-based Cell. A group of stand-alone services is aggregated into a cell behind a Cell gateway." loading="lazy" width="1283" height="343" style="width:100%"/>
+<img src="/diagrams/Variants/4/Cell%20-%20Basic%20-%20Evolutions.png" alt="A layered system transforms into a sandwich-based cell. A group of stand-alone services is aggregated into a cell behind a cell gateway." loading="lazy" width="1283" height="343" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -465,7 +465,7 @@ Another improvement, popularized by Uber’s [*Domains*](https://www.uber.com/en
 <picture>
 <source srcset="/diagrams/Variants/4/Cell%20-%20Full-Featured%20-%20Plugins.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/Cell%20-%20Full-Featured%20-%20Plugins.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/4/Cell%20-%20Full-Featured%20-%20Plugins.png" alt="Injecting a part of a Cell's business logic into another Cell as an ambassador plugin improves performance by avoiding expensive intercell calls." loading="lazy" width="1063" height="284" style="width:100%"/>
+<img src="/diagrams/Variants/4/Cell%20-%20Full-Featured%20-%20Plugins.png" alt="Injecting a part of a cell's business logic into another cell as an ambassador plugin improves performance by avoiding expensive intercell calls." loading="lazy" width="1063" height="284" style="width:100%"/>
 </picture>
 </a>
 </figure>

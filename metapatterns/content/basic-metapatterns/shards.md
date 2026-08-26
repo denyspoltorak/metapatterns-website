@@ -1,7 +1,7 @@
 +++
 weight = 7
 title = "Shards"
-description = "This chapter explores sharded systems that run multiple instances of a component: partitions, replicas, replicated load-balanced services, lambdas, and actors."
+description = "Shards are instances of a component or subsystem. They can be stateful, stateless (form a pool), or created on demand. The main issue is data synchronization."
 images = ["/diagrams/Web/og/Shards.png"]
 primary_image = "/diagrams/Main/Shards.png"
 [sitemap]
@@ -15,7 +15,7 @@ primary_image = "/diagrams/Main/Shards.png"
 <picture>
 <source srcset="/diagrams/Main/Shards.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Shards.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Shards.png" alt="A diagram for Shards, in abstractness-subdomain-sharding coordinates." loading="lazy" width="942" height="474" style="width:100%"/>
+<img src="/diagrams/Main/Shards.png" alt="Shards." loading="lazy" width="942" height="474" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -53,7 +53,7 @@ A *shard* retains the performance of the original subsystem \(a [*Monolith*]({{<
 <picture>
 <source srcset="/diagrams/Performance/Shards.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Performance/Shards.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Performance/Shards.png" alt="Performance of Shards is the best when the request is limited to a single shard and the worst when the state of several shards needs to be synchronized." loading="lazy" width="1273" height="483" style="width:100%"/>
+<img src="/diagrams/Performance/Shards.png" alt="The performance of shards is the best when the request is limited to a single shard and the worst when the state of several shards needs to be synchronized." loading="lazy" width="1273" height="483" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -255,7 +255,7 @@ When *Shards* are applied to a single component, which is a [*Monolith*]({{< rel
 <picture>
 <source srcset="/diagrams/Evolutions/Shards/Shards%20-%20General.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Shards/Shards%20-%20General.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Shards/Shards%20-%20General.png" alt="Diagrams of scaled Layers, Services with a middleware, Pipeline, Plugins, Hexagonal Architecture, and Scripts." loading="lazy" width="1244" height="885" style="width:100%"/>
+<img src="/diagrams/Evolutions/Shards/Shards%20-%20General.png" alt="Scaled layers, services with a middleware, pipeline, plugins, Hexagonal Architecture, and scripts." loading="lazy" width="1244" height="885" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -287,7 +287,7 @@ The issue peculiar to *Shards* is that of coordinating deployed instances, espec
 <picture>
 <source srcset="/diagrams/Evolutions/Shards/Shards%20to%20Space-Based%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Shards/Shards%20to%20Space-Based%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Shards/Shards%20to%20Space-Based%20Architecture.png" alt="The data of the shards moves to a Data Grid, resulting in a Space-Based Architecture." loading="lazy" width="1107" height="264" style="width:100%"/>
+<img src="/diagrams/Evolutions/Shards/Shards%20to%20Space-Based%20Architecture.png" alt="The data of the shards moves to a data grid, resulting in a Space-Based Architecture." loading="lazy" width="1107" height="264" style="width:100%"/>
 </picture>
 </a>
 </figure>

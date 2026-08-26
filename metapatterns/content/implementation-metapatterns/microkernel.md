@@ -1,7 +1,7 @@
 +++
 weight = 7
 title = "Microkernel"
-description = "This chapter explores Microkernel architecture and its variants: Interpreter, Virtualizer, Configurator, Saga engine, AUTOSAR Classic, and operating system."
+description = "Microkernel shares resources of providers among consumers. It is the pattern for operating systems, interpreters, hypervisors, and software frameworks."
 images = ["/diagrams/Web/og/Microkernel.png"]
 primary_image = "/diagrams/Main/Microkernel.png"
 [sitemap]
@@ -15,7 +15,7 @@ primary_image = "/diagrams/Main/Microkernel.png"
 <picture>
 <source srcset="/diagrams/Main/Microkernel.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Microkernel.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Microkernel.png" alt="A diagram for Microkernel, in abstractness-subdomain-sharding coordinates." loading="lazy" width="844" height="534" style="width:100%"/>
+<img src="/diagrams/Main/Microkernel.png" alt="Microkernel." loading="lazy" width="844" height="534" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -84,7 +84,7 @@ The *applications* depend on the *API* of the *microkernel* while the *providers
 <picture>
 <source srcset="/diagrams/Relations/Microkernel.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Relations/Microkernel.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Relations/Microkernel.png" alt="Microkernel as a middleware and as an orchestrator; applications of Microkernel Architecture as Backends for Frontends." loading="lazy" width="1143" height="523" style="width:100%"/>
+<img src="/diagrams/Relations/Microkernel.png" alt="Microkernel as a middleware and as an orchestrator; applications of Microkernel Architecture as backends for frontends." loading="lazy" width="1143" height="523" style="width:100%"/>
 </picture>
 </a>
 </figure>

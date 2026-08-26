@@ -22,7 +22,7 @@ The last group of evolutions to consider is about making the system more adaptab
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png" alt="Diagrams of Layers with plugins, Layers with scripts, and Hexagonal Architecture with a layered core." loading="lazy" width="983" height="503" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Layers%20-%20Further%202.png" alt="Layers with plugins, layers with scripts, and Hexagonal Architecture with a layered core." loading="lazy" width="983" height="503" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -39,7 +39,7 @@ There is also a new evolution that modifies the upper \(orchestration\) layer:
 <picture>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.png" alt="The application layer is split into Backends for Frontends." loading="lazy" width="1003" height="323" style="width:100%"/>
+<img src="/diagrams/Evolutions/Layers/Layers%20to%20Backends%20for%20Frontends.png" alt="The application layer is split into backends for frontends." loading="lazy" width="1003" height="323" style="width:100%"/>
 </picture>
 </a>
 </figure>

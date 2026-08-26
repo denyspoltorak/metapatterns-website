@@ -102,7 +102,7 @@ Alternatively, as the domain knowledge changes \[[DDD]({{< relref "../../appendi
 <picture>
 <source srcset="/diagrams/Evolutions/Services/Services_%20Cluster.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Services/Services_%20Cluster.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Services/Services_%20Cluster.png" alt="Services are grouped into Cells, reducing their interdependencies." loading="lazy" width="1567" height="387" style="width:100%"/>
+<img src="/diagrams/Evolutions/Services/Services_%20Cluster.png" alt="Services are grouped into cells, reducing their interdependencies." loading="lazy" width="1567" height="387" style="width:100%"/>
 </picture>
 </a>
 </figure>

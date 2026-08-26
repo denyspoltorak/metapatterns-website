@@ -1,7 +1,7 @@
 +++
 weight = 8
 title = "Backends for Frontends (BFF)"
-description = "This chapter discusses Backends for Frontends (BFF) which dedicates a component (proxy, orchestrator, or an API Gateway) to each kind of a system's client."
+description = "Backends for Frontends (BFF) dedicates a Proxy, Orchestrator, or an API Gateway to each kind of a system's client, allowing for drastically different clients."
 images = ["/diagrams/Web/og/Backends%20for%20Frontends.png"]
 primary_image = "/diagrams/Main/Backends%20for%20Frontends.png"
 [sitemap]
@@ -15,7 +15,7 @@ primary_image = "/diagrams/Main/Backends%20for%20Frontends.png"
 <picture>
 <source srcset="/diagrams/Main/Backends%20for%20Frontends.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Backends%20for%20Frontends.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Backends%20for%20Frontends.png" alt="A diagram for Services with Backends for Frontends, in abstractness-subdomain-sharding coordinates." loading="lazy" width="904" height="634" style="width:100%"/>
+<img src="/diagrams/Main/Backends%20for%20Frontends.png" alt="Services with backends for frontends." loading="lazy" width="904" height="634" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -51,7 +51,7 @@ Each *BFF* depends on all the services which it uses \(usually every service in 
 <picture>
 <source srcset="/diagrams/Dependencies/Backends%20for%20Frontends.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Dependencies/Backends%20for%20Frontends.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Dependencies/Backends%20for%20Frontends.png" alt="Each Backend for Frontend depends on every service which it calls." loading="lazy" width="963" height="323" style="width:91%"/>
+<img src="/diagrams/Dependencies/Backends%20for%20Frontends.png" alt="Each backend for frontend depends on every service which it calls." loading="lazy" width="963" height="323" style="width:91%"/>
 </picture>
 </a>
 </figure>
@@ -77,7 +77,7 @@ Each *BFF* depends on all the services which it uses \(usually every service in 
 <picture>
 <source srcset="/diagrams/Relations/BFF.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Relations/BFF.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Relations/BFF.png" alt="Diagrams of Backends for Frontends over a monolith, layers, shards, and services." loading="lazy" width="1343" height="422" style="width:100%"/>
+<img src="/diagrams/Relations/BFF.png" alt="Backends for frontends over a monolith, layers, shards, and services." loading="lazy" width="1343" height="422" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -104,7 +104,7 @@ Each *BFF* depends on all the services which it uses \(usually every service in 
 <picture>
 <source srcset="/diagrams/Variants/3/BFF%20-%20Gateways.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/BFF%20-%20Gateways.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/BFF%20-%20Gateways.png" alt="Each gateway in the Backends for Frontends layer adapts its client's protocol and calls the services of the domain layer." loading="lazy" width="843" height="403" style="width:100%"/>
+<img src="/diagrams/Variants/3/BFF%20-%20Gateways.png" alt="Each gateway in the backends for frontends layer adapts its client's protocol and calls the services of the domain layer." loading="lazy" width="843" height="403" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -118,7 +118,7 @@ Dedicating a [*Gateway*]({{< relref "../extension-metapatterns/proxy.md#adapter-
 <picture>
 <source srcset="/diagrams/Variants/3/BFF%20-%20Orchestrators.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/BFF%20-%20Orchestrators.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/BFF%20-%20Orchestrators.png" alt="Each orchestrator in the Backends for Frontends layer calls the services of the domain layer." loading="lazy" width="833" height="403" style="width:100%"/>
+<img src="/diagrams/Variants/3/BFF%20-%20Orchestrators.png" alt="Each orchestrator in the backends for frontends layer calls the services of the domain layer." loading="lazy" width="833" height="403" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -132,7 +132,7 @@ An [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) 
 <picture>
 <source srcset="/diagrams/Variants/3/BFF%20-%20Gateways%20+%20Orchestrators.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/BFF%20-%20Gateways%20+%20Orchestrators.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/BFF%20-%20Gateways%20+%20Orchestrators.png" alt="In each pair in the Backends for Frontends layer the gateway adapts its client's protocol while the orchestrator calls the services of the domain layer." loading="lazy" width="803" height="503" style="width:100%"/>
+<img src="/diagrams/Variants/3/BFF%20-%20Gateways%20+%20Orchestrators.png" alt="In each pair in the backends for frontends layer the gateway adapts its client's protocol while the orchestrator calls the services of the domain layer." loading="lazy" width="803" height="503" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -146,7 +146,7 @@ Clients vary in both access mode \(protocol\) and workflow\. [*Orchestrators*]({
 <picture>
 <source srcset="/diagrams/Variants/3/BFF%20-%20API%20gateways.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/BFF%20-%20API%20gateways.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/BFF%20-%20API%20gateways.png" alt="Each API Gateway in the Backends for Frontends layer both adapts its client's protocol and orchestrates the services of the domain layer." loading="lazy" width="823" height="463" style="width:100%"/>
+<img src="/diagrams/Variants/3/BFF%20-%20API%20gateways.png" alt="Each API gateway in the backends for frontends layer both adapts its client's protocol and orchestrates the services of the domain layer." loading="lazy" width="823" height="463" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -162,7 +162,7 @@ Multiple *API Gateways* match the literal meaning of *Backends for Frontends* â€
 <picture>
 <source srcset="/diagrams/Variants/3/BFF%20-%20Event%20mediators.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/BFF%20-%20Event%20mediators.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/BFF%20-%20Event%20mediators.png" alt="Each event mediator in the Backends for Frontends layer orchestrates the services of the domain layer." loading="lazy" width="923" height="443" style="width:100%"/>
+<img src="/diagrams/Variants/3/BFF%20-%20Event%20mediators.png" alt="Each event mediator in the backends for frontends layer orchestrates the services of the domain layer." loading="lazy" width="923" height="443" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -184,7 +184,7 @@ Multiple *API Gateways* match the literal meaning of *Backends for Frontends* â€
 <picture>
 <source srcset="/diagrams/Evolutions/3/BFF.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/3/BFF.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/3/BFF.png" alt="Backends for Frontends can be merged into an Orchestrator, can share code via sidecars, or put shared functionality into a dedicated orchestration layer or into Cell gateways." loading="lazy" width="1543" height="1165" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/BFF.png" alt="Backends for frontends can be merged into an orchestrator, can share code via sidecars, or put shared functionality into a dedicated orchestration layer or into cell gateways." loading="lazy" width="1543" height="1165" style="width:100%"/>
 </picture>
 </a>
 </figure>

@@ -1,7 +1,7 @@
 +++
 weight = 1
 title = "Introduction"
-description = "This part of the book covers introductory topics that range from the book's structure to the underlying theory that enabled the research presented in the book."
+description = "Architectural Metapatterns is a compendium of architectural patterns, an atlas of system topologies, and one of the largest pattern languages."
 images = ["/diagrams/Web/og/Favicon-plain.png"]
 bookCollapseSection = true
 [sitemap]
@@ -29,7 +29,7 @@ bookCollapseSection = true
 
 <source srcset="/diagrams/Web/About.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/About.png" alt="A text: there are too many patterns!" loading="lazy" width="720" height="680"/>
+<img src="/diagrams/Web/About.png" alt="There are too many patterns!" loading="lazy" width="720" height="680"/>
 
 </picture>
 
@@ -61,7 +61,7 @@ Metapatterns
 
 <source srcset="/diagrams/Web/Topologies.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Topologies.png" alt="Diagrams of Monolith, Layers, Plugins, Hierarchy, and Services in a system of coordinates that shows partitioning into layers and subdomains." loading="lazy" width="764" height="744"/>
+<img src="/diagrams/Web/Topologies.png" alt="A monolith, layers, plugins, a hierarchy, and services in a system of coordinates that shows partitioning into layers and subdomains." loading="lazy" width="764" height="744"/>
 
 </picture>
 

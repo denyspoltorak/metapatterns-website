@@ -1,7 +1,7 @@
 +++
 weight = 3
 title = "Choreography"
-description = "This section discusses choreography, where a system component processes inputs and produces outputs without any knowledge about other components."
+description = "Choreography builds a pipeline to process requests. It may work through commands, publish/subscribe, or shared message format. Early response is preferred."
 images = ["/diagrams/Web/og/Choreography.png"]
 primary_image = "/diagrams/Communication/Services%20to%20Pipeline.png"
 [sitemap]
@@ -43,7 +43,7 @@ Latency may also be suboptimal as parallelizing execution of a request is easier
 <picture>
 <source srcset="/diagrams/Communication/Pipeline%20Not%20Parallel.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Pipeline%20Not%20Parallel.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Pipeline%20Not%20Parallel.png" alt="An Orchestrator can run subrequests in parallel which is impossible for a sequential pipeline." loading="lazy" width="1103" height="283" style="width:100%"/>
+<img src="/diagrams/Communication/Pipeline%20Not%20Parallel.png" alt="An orchestrator can run subrequests in parallel which is impossible for a pipeline." loading="lazy" width="1103" height="283" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -71,7 +71,7 @@ The ordinary mode of action for a pipeline – sending the final results of proc
 <picture>
 <source srcset="/diagrams/Communication/Pipeline%20Gateway.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Pipeline%20Gateway.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Pipeline%20Gateway.png" alt="The component that receives a client request should send back the response. It can be a dedicated Gateway or the first service of a looped pipeline." loading="lazy" width="1123" height="323" style="width:100%"/>
+<img src="/diagrams/Communication/Pipeline%20Gateway.png" alt="The very component that receives a client request must send back the response." loading="lazy" width="1123" height="323" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -83,7 +83,7 @@ The gateway, if used, may parallelize processing of [scatter\-gather](https://do
 <picture>
 <source srcset="/diagrams/Communication/Gateway%20to%20API%20Gateway.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Gateway%20to%20API%20Gateway.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Gateway%20to%20API%20Gateway.png" alt="An API Gateway runs subrequests in parallel while a pipeline runs them consecutively by passing a message through a chain of services." loading="lazy" width="1123" height="324" style="width:100%"/>
+<img src="/diagrams/Communication/Gateway%20to%20API%20Gateway.png" alt="An API Gateway runs subrequests in parallel while a pipeline runs them consecutively." loading="lazy" width="1123" height="324" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -95,7 +95,7 @@ It is possible to avoid both adding a *Gateway* and having the cyclic dependency
 <picture>
 <source srcset="/diagrams/Communication/Pipeline%20Early%20Response.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Pipeline%20Early%20Response.negated.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Pipeline%20Early%20Response.png" alt="The first service of a pipeline responds to the client immediately while forwarding the client's request to other services, which will eventually produce the result." loading="lazy" width="823" height="265" style="width:100%"/>
+<img src="/diagrams/Communication/Pipeline%20Early%20Response.png" alt="The first service of a pipeline responds to the client immediately while forwarding the client's request to other services." loading="lazy" width="823" height="265" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -147,7 +147,7 @@ The final option is for the entire pipeline to use a uniform message format \([*
 <picture>
 <source srcset="/diagrams/Communication/Add%20Remove%20with%20Shared%20Message.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Add%20Remove%20with%20Shared%20Message.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Add%20Remove%20with%20Shared%20Message.png" alt="A service in a pipeline with a shared message format can be replaced with another service if the message fields which it uses are also replaced." loading="lazy" width="1043" height="223" style="width:100%"/>
+<img src="/diagrams/Communication/Add%20Remove%20with%20Shared%20Message.png" alt="Adding and removing services in a pipeline with shared message format." loading="lazy" width="1043" height="223" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -159,7 +159,7 @@ A peculiar feature of choreography is the ability to cut and cross\-link pipelin
 <picture>
 <source srcset="/diagrams/Communication/Cross-link%20Pipeline.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Cross-link%20Pipeline.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Cross-link%20Pipeline.png" alt="Cross-linking independent pipelines by establishing new data or event streams." loading="lazy" width="1243" height="226" style="width:100%"/>
+<img src="/diagrams/Communication/Cross-link%20Pipeline.png" alt="Cross-linking independent pipelines." loading="lazy" width="1243" height="226" style="width:100%"/>
 </picture>
 </a>
 </figure>

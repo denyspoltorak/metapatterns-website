@@ -1,7 +1,7 @@
 +++
 weight = 4
 title = "Indirection in commands and queries"
-description = "This section discusses indirection as implemented with Anticorruption Layer or Open Host Service in OLTP and with CQRS View or Reporting Database in OLAP."
+description = "OLTP systems use Anticorruption Layer, Open Host Service, and Orchestrator as adapters. Data Mesh relies on CQRS View, Reporting Database, or Query Service."
 images = ["/diagrams/Web/og/Indirection.png"]
 [sitemap]
   priority = 0.5
@@ -28,7 +28,7 @@ If we want for each module or service to continue with a model that fits its nee
 <picture>
 <source srcset="/diagrams/Conclusion/Indirection-Command.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Indirection-Command.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Indirection-Command.png" alt="Dependency diagrams for Anticorruption Layer, Open Host Service, and Orchestrated Services." loading="lazy" width="1052" height="424" style="width:100%"/>
+<img src="/diagrams/Conclusion/Indirection-Command.png" alt="Dependencies for an anticorruption layer, open host service, and orchestrated services." loading="lazy" width="1052" height="424" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -49,7 +49,7 @@ In such a case we employ an [*Adapter*]({{< relref "../../extension-metapatterns
 <picture>
 <source srcset="/diagrams/Conclusion/Indirection-Query.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Indirection-Query.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Indirection-Query.png" alt="Dependency diagrams for CQRS View, Reporting Database, and Query Service." loading="lazy" width="1043" height="426" style="width:100%"/>
+<img src="/diagrams/Conclusion/Indirection-Query.png" alt="Dependencies for a CQRS view, reporting database, and query service." loading="lazy" width="1043" height="426" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -72,7 +72,7 @@ The solution employs an intermediate database as a translator from the providerâ
 <picture>
 <source srcset="/diagrams/Conclusion/Indirection-Plugin.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Indirection-Plugin.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Indirection-Plugin.png" alt="A service which injects a plugin into another service and streams data for use by the plugin." loading="lazy" width="783" height="283" style="width:93%"/>
+<img src="/diagrams/Conclusion/Indirection-Plugin.png" alt="A service injects a plugin into another service and streams data for use by the plugin." loading="lazy" width="783" height="283" style="width:93%"/>
 </picture>
 </a>
 </figure>

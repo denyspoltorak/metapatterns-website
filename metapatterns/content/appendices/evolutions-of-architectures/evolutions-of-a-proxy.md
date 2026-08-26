@@ -58,7 +58,7 @@ It often makes sense to co\-locate software *Proxies* or use a multifunctional *
 <picture>
 <source srcset="/diagrams/Evolutions/2/Proxy%20to%20Backends%20for%20Frontends.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Proxy%20to%20Backends%20for%20Frontends.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/2/Proxy%20to%20Backends%20for%20Frontends.png" alt="A proxy is subdivided into Backends for Frontends." loading="lazy" width="1283" height="384" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Proxy%20to%20Backends%20for%20Frontends.png" alt="A proxy is subdivided into backends for frontends." loading="lazy" width="1283" height="384" style="width:100%"/>
 </picture>
 </a>
 </figure>

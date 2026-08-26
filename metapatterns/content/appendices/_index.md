@@ -1,7 +1,7 @@
 +++
 weight = 8
 title = "Appendices"
-description = "This part of the book contains miscellaneous information which ranges from marginally useful (e.g. pattern evolutions) to copyright and revision history."
+description = "Miscellaneous information which ranges from marginally useful (e.g. pattern evolutions) to copyright and revision history."
 images = ["/diagrams/Web/og/Favicon-plain.png"]
 bookCollapseSection = true
 [sitemap]

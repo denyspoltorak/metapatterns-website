@@ -1,7 +1,7 @@
 +++
 weight = 3
 title = "Architecture and product life cycle"
-description = "This chapter explores how the architecture of a software project expands from Monolith through Layers to Layered Services and contracts back over its lifetime."
+description = "Software architecture changes as a project grows, matures, and dies. It starts small, then expands into fragments, then collapses back to a monolithic state."
 images = ["/diagrams/Web/og/Life%20cycle.png"]
 [sitemap]
   priority = 0.5
@@ -18,7 +18,7 @@ In my practice, a product’s architecture changes over its lifetime\. For a R&D
 <picture>
 <source srcset="/diagrams/Conclusion/Lifecycle-1.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Lifecycle-1.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Lifecycle-1.png" alt="A diagram of a monolith." loading="lazy" width="802" height="228" style="width:100%"/>
+<img src="/diagrams/Conclusion/Lifecycle-1.png" alt="A monolith." loading="lazy" width="802" height="228" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -32,7 +32,7 @@ A project in an unknown domain starts humble and small, likely as a proof of con
 <picture>
 <source srcset="/diagrams/Conclusion/Lifecycle-2.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Lifecycle-2.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Lifecycle-2.png" alt="Diagrams of Layers and Hexagonal Architecture." loading="lazy" width="683" height="523" style="width:78%"/>
+<img src="/diagrams/Conclusion/Lifecycle-2.png" alt="Layers and Hexagonal Architecture." loading="lazy" width="683" height="523" style="width:78%"/>
 </picture>
 </a>
 </figure>
@@ -46,7 +46,7 @@ When you have the thing working, you may start reflecting on the rules and the c
 <picture>
 <source srcset="/diagrams/Conclusion/Lifecycle-3.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Lifecycle-3.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Lifecycle-3.png" alt="Diagrams of Layered Services, Orchestrated Services, and Top-Down Hierarchy." loading="lazy" width="1323" height="434" style="width:100%"/>
+<img src="/diagrams/Conclusion/Lifecycle-3.png" alt="Layered services, orchestrated services, and a top-down hierarchy." loading="lazy" width="1323" height="434" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -60,7 +60,7 @@ As you acquire domain experience, you start discerning subdomains \(or *bounded 
 <picture>
 <source srcset="/diagrams/Conclusion/Lifecycle-4.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Lifecycle-4.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Lifecycle-4.png" alt="Layered Services evolve into a pragmatic architecture where the application layers of some services are merged while the domain layer of another service is subdivided." loading="lazy" width="1123" height="414" style="width:100%"/>
+<img src="/diagrams/Conclusion/Lifecycle-4.png" alt="Layered Services evolve into a pragmatic architecture." loading="lazy" width="1123" height="414" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -74,7 +74,7 @@ As the product enters the market, its development tends to slow down with more a
 <picture>
 <source srcset="/diagrams/Conclusion/Lifecycle-5.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Lifecycle-5.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Lifecycle-5.png" alt="A diagram of Layers with multiple databases." loading="lazy" width="463" height="323" style="width:54%"/>
+<img src="/diagrams/Conclusion/Lifecycle-5.png" alt="Layers with multiple databases." loading="lazy" width="463" height="323" style="width:54%"/>
 </picture>
 </a>
 </figure>
@@ -88,7 +88,7 @@ When active development ceases, you lose even more people and funding as you dri
 <picture>
 <source srcset="/diagrams/Conclusion/Lifecycle-6.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Lifecycle-6.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Lifecycle-6.png" alt="A diagram of a monolith with multiple databases." loading="lazy" width="463" height="283" style="width:55%"/>
+<img src="/diagrams/Conclusion/Lifecycle-6.png" alt="A monolith with multiple databases." loading="lazy" width="463" height="283" style="width:55%"/>
 </picture>
 </a>
 </figure>

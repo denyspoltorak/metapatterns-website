@@ -1,7 +1,7 @@
 +++
 weight = 4
 title = "Shared data"
-description = "This section illustrates the use of shared data for integration of system components with an example of a ticketing service."
+description = "Communication through shared data allows for the services that operate the data to be independent. The data layer is used for persistence, messaging, or both."
 images = ["/diagrams/Web/og/Shared%20data.png"]
 primary_image = "/diagrams/Communication/Services%20to%20Shared%20Data.png"
 [sitemap]
@@ -17,7 +17,7 @@ The final approach is integration through shared data \([*Shared Repository*]({{
 <picture>
 <source srcset="/diagrams/Communication/Services%20to%20Shared%20Data.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Services%20to%20Shared%20Data.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Services%20to%20Shared%20Data.png" alt="After a monolith is subdivided into services, a shared database is used to integrate the services." loading="lazy" width="1043" height="284" style="width:100%"/>
+<img src="/diagrams/Communication/Services%20to%20Shared%20Data.png" alt="After a monolith is subdivided into services, a shared database is used to integrate them." loading="lazy" width="1043" height="284" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -35,7 +35,7 @@ The most common case of shared data is persistent storage \(usually a database, 
 <picture>
 <source srcset="/diagrams/Communication/Purchase%20and%20Return.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Purchase%20and%20Return.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Purchase%20and%20Return.png" alt="Both purchase and refund services see and edit the entire system's data." loading="lazy" width="923" height="323" style="width:100%"/>
+<img src="/diagrams/Communication/Purchase%20and%20Return.png" alt="Both purchase and refund services read and write the entire system's data." loading="lazy" width="923" height="323" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -69,7 +69,7 @@ Services usually need to coordinate their actions\. Commonly, services with a sh
 <picture>
 <source srcset="/diagrams/Communication/Notification%20to%20Notification.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Notification%20to%20Notification.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Notification%20to%20Notification.png" alt="A diagram of a ticketing service whose components use direct messaging to intercommunicate." loading="lazy" width="983" height="323" style="width:100%"/>
+<img src="/diagrams/Communication/Notification%20to%20Notification.png" alt="A ticketing service whose components use direct messaging." loading="lazy" width="983" height="323" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -93,7 +93,7 @@ Finally, there is the rarely used option of an external [*Scheduler*]({{< relref
 <picture>
 <source srcset="/diagrams/Communication/Blackboard.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Blackboard.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Blackboard.png" alt="Components of the Blackboard Architecture." loading="lazy" width="803" height="283" style="width:100%"/>
+<img src="/diagrams/Communication/Blackboard.png" alt="Blackboard Architecture contains a scheduler, services, and the blackboard." loading="lazy" width="803" height="283" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -113,7 +113,7 @@ The other, not as obvious, use case for shared data is messaging, which is imple
 <picture>
 <source srcset="/diagrams/Communication/Queues.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Queues.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Queues.png" alt="Diagrams for: a queue per service, separate input and output queues, a queue per channel, and a single system queue." loading="lazy" width="803" height="603" style="width:100%"/>
+<img src="/diagrams/Communication/Queues.png" alt="A queue per service, separate input and output queues, a queue per channel, and a single system queue." loading="lazy" width="803" height="603" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -131,7 +131,7 @@ Finally, some \(usually distributed\) data stores implement data change notifica
 <picture>
 <source srcset="/diagrams/Communication/Notification%20inside%20the%20DB.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Notification%20inside%20the%20DB.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Notification%20inside%20the%20DB.png" alt="A diagram of a ticketing service whose components rely on database notifications." loading="lazy" width="1123" height="323" style="width:100%"/>
+<img src="/diagrams/Communication/Notification%20inside%20the%20DB.png" alt="A ticketing service whose components rely on database notifications." loading="lazy" width="1123" height="323" style="width:100%"/>
 </picture>
 </a>
 </figure>

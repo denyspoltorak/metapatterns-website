@@ -96,7 +96,7 @@ Though the *Sandwich* architecture allows for subdomains to be pretty independen
 <picture>
 <source srcset="/diagrams/Evolutions/2/Sandwich%20to%20Layers.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Sandwich%20to%20Layers.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/2/Sandwich%20to%20Layers.png" alt="The entire domain layer is merged, resulting in Layers." loading="lazy" width="1104" height="243" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Sandwich%20to%20Layers.png" alt="The entire domain layer is merged, resulting in a Layered Architecture." loading="lazy" width="1104" height="243" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -128,7 +128,7 @@ Often the project grows in an unexpected manner\. If you see that the domain\-le
 <picture>
 <source srcset="/diagrams/Evolutions/2/Sandwich%20to%20Layered%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Sandwich%20to%20Layered%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/2/Sandwich%20to%20Layered%20Services.png" alt="The integration and data layers are divided into subdomains, producing Three-Layered Services." loading="lazy" width="1343" height="263" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Sandwich%20to%20Layered%20Services.png" alt="The integration and data layers are divided into subdomains, producing three-layered services." loading="lazy" width="1343" height="263" style="width:100%"/>
 </picture>
 </a>
 </figure>

@@ -1,7 +1,7 @@
 +++
 weight = 3
 title = "Four kinds of software"
-description = "This chapter discusses the internal structure and architectural patterns for control, interactive, streaming, and computational software."
+description = "There are four kinds of software with different architectures: control, interactive, streaming and computational. Let's discuss their code and patterns."
 images = ["/diagrams/Web/og/4Kinds.png"]
 [sitemap]
   priority = 0.5
@@ -30,7 +30,7 @@ Those dimensions make four corner cases that vary in architectural styles:
 <picture>
 <source srcset="/diagrams/4Kinds/4%20Kinds.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/4Kinds/4%20Kinds.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/4Kinds/4%20Kinds.png" alt="Diagrams of control, interactive, streaming, and computational systems." loading="lazy" width="1341" height="683" style="width:100%"/>
+<img src="/diagrams/4Kinds/4%20Kinds.png" alt="Control, interactive, streaming, and computational systems." loading="lazy" width="1341" height="683" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -42,7 +42,7 @@ Those dimensions make four corner cases that vary in architectural styles:
 <picture>
 <source srcset="/diagrams/4Kinds/Control%20-%20main.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/4Kinds/Control%20-%20main.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/4Kinds/Control%20-%20main.png" alt="A control system receives an event from a hardware component, processes it with a hardware driver, passes the result to a mediator, which calls another driver, which activates another hardware." loading="lazy" width="972" height="423" style="width:100%"/>
+<img src="/diagrams/4Kinds/Control%20-%20main.png" alt="Event processing in a control system." loading="lazy" width="972" height="423" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -92,7 +92,7 @@ At the architectural level, control systems are [event\-driven](https://en.wikip
 <picture>
 <source srcset="/diagrams/4Kinds/Control%20-%20variants.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/4Kinds/Control%20-%20variants.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/4Kinds/Control%20-%20variants.png" alt="Diagrams of control systems with the following architectures: monolithic, actors, Pedestal, hierarchical." loading="lazy" width="1224" height="664" style="width:100%"/>
+<img src="/diagrams/4Kinds/Control%20-%20variants.png" alt="A control system can be monolithic or actor-based, or make a pedestal or hierarchy." loading="lazy" width="1224" height="664" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -155,7 +155,7 @@ Interactive systems vary in a couple of ways:
 <picture>
 <source srcset="/diagrams/4Kinds/Interactive%20-%20variants%201.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/4Kinds/Interactive%20-%20variants%201.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/4Kinds/Interactive%20-%20variants%201.png" alt="With blocking interaction between the presentation and model layers the user interface is frozen for the duration of processing. With non-blocking it is mostly active." loading="lazy" width="1143" height="311" style="width:100%"/>
+<img src="/diagrams/4Kinds/Interactive%20-%20variants%201.png" alt="Event processing may be blocking or non-blocking." loading="lazy" width="1143" height="311" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -168,7 +168,7 @@ Interactive systems vary in a couple of ways:
 <picture>
 <source srcset="/diagrams/4Kinds/Interactive%20-%20variants%202.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/4Kinds/Interactive%20-%20variants%202.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/4Kinds/Interactive%20-%20variants%202.png" alt="Model-View-Controller features separate components for input and output. In Model-View-Presenter both layers above its model participate in both input and output." loading="lazy" width="1103" height="367" style="width:100%"/>
+<img src="/diagrams/4Kinds/Interactive%20-%20variants%202.png" alt="Model-View-Controller and Model-View-Presenter." loading="lazy" width="1103" height="367" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -308,7 +308,7 @@ A digital camera incorporates subsystems of different kinds:
 <picture>
 <source srcset="/diagrams/4Kinds/3D%20action.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/4Kinds/3D%20action.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/4Kinds/3D%20action.png" alt="A game framework receives data from hardware and sends an event to the business logic which updates multiple game objects. Finally, the framework sends updates to the hardware." loading="lazy" width="1033" height="322" style="width:100%"/>
+<img src="/diagrams/4Kinds/3D%20action.png" alt="Architecture of a 3D game." loading="lazy" width="1033" height="322" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -322,7 +322,7 @@ Games with 3D graphics often bypass the host OS’ [desktop environment](https:/
 <picture>
 <source srcset="/diagrams/4Kinds/Database.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/4Kinds/Database.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/4Kinds/Database.png" alt="Internals of a database with the following groups of components: session, parser, task, metadata manager, and tables." loading="lazy" width="1101" height="703" style="width:100%"/>
+<img src="/diagrams/4Kinds/Database.png" alt="Internals of a database with client sessions, a parser, task, metadata manager, and tables." loading="lazy" width="1101" height="703" style="width:100%"/>
 </picture>
 </a>
 </figure>

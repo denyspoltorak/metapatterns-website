@@ -24,7 +24,7 @@ There are a couple of *Pipeline*\-specific evolutions:
 <picture>
 <source srcset="/diagrams/Evolutions/Services/Pipeline%20promote%20Front%20Controller.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Services/Pipeline%20promote%20Front%20Controller.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png" alt="The first service of a pipeline subscribes to notifications from other services and thus becomes a Front Controller." loading="lazy" width="1299" height="347" style="width:100%"/>
+<img src="/diagrams/Evolutions/Services/Pipeline%20promote%20Front%20Controller.png" alt="The first service of a pipeline subscribes to notifications from other services and thus becomes a front controller." loading="lazy" width="1299" height="347" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -59,7 +59,7 @@ If the request processing steps require heavy calculations or manual action, the
 <picture>
 <source srcset="/diagrams/Evolutions/Services/Pipeline%20use%20Orchestrator.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Services/Pipeline%20use%20Orchestrator.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Services/Pipeline%20use%20Orchestrator.png" alt="Adding an orchestrator transforms a pipeline into Orchestrated Services." loading="lazy" width="1303" height="384" style="width:100%"/>
+<img src="/diagrams/Evolutions/Services/Pipeline%20use%20Orchestrator.png" alt="Adding an orchestrator transforms a pipeline into orchestrated services." loading="lazy" width="1303" height="384" style="width:100%"/>
 </picture>
 </a>
 </figure>

@@ -219,7 +219,7 @@ Extract the [high\-level business logic]({{< relref "../../basic-metapatterns/la
 <picture>
 <source srcset="/diagrams/Evolutions/Services/Services%20to%20Sandwich.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Services/Services%20to%20Sandwich.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Services/Services%20to%20Sandwich.png" alt="The application and data parts of services are separated from the domain logic and merged into system-wide layers, resulting in a Sandwich." loading="lazy" width="1307" height="323" style="width:100%"/>
+<img src="/diagrams/Evolutions/Services/Services%20to%20Sandwich.png" alt="The application and data parts of services are separated from the domain logic and merged into system-wide layers, resulting in a sandwich." loading="lazy" width="1307" height="323" style="width:100%"/>
 </picture>
 </a>
 </figure>

@@ -1,7 +1,7 @@
 +++
 weight = 2
 title = "Ambiguous patterns"
-description = "This chapter explores ambiguous patterns: Monolith, Reactor, Microkernel, Domain Services, Service-Based Architecture, Cell, and Nanoservices."
+description = "The meaning of Monolith, Reactor, Microkernel, Domain Services, Service-Based Architecture, Cell, or Nanoservices varies depending on which book you read."
 images = ["/diagrams/Web/og/Ambiguous.png"]
 [sitemap]
   priority = 0.5
@@ -18,7 +18,7 @@ We’ve seen a single pattern come under many names, as happens with [*Orchestra
 <picture>
 <source srcset="/diagrams/Conclusion/Ambiguous-Monolith.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Ambiguous-Monolith.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Ambiguous-Monolith.png" alt="Diagrams of a Monolith as a single component, a co-deployed system, a synchronous distributed system, a Layered Architecture, and modules with a shared database." loading="lazy" width="1083" height="763" style="width:100%"/>
+<img src="/diagrams/Conclusion/Ambiguous-Monolith.png" alt="Monolith as a single component, a co-deployed system, a synchronous distributed system, a Layered Architecture, and modules with a shared database." loading="lazy" width="1083" height="763" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -38,7 +38,7 @@ The novel misnomers, [*Layered Monolith*]({{< relref "../basic-metapatterns/laye
 <picture>
 <source srcset="/diagrams/Variants/1/Subtypes%20of%20Monolith.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Subtypes%20of%20Monolith.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Subtypes%20of%20Monolith.png" alt="Control flow diagrams for Reactor, Proactor, and Half-Sync/Half-Async." loading="lazy" width="848" height="366" style="width:100%"/>
+<img src="/diagrams/Variants/1/Subtypes%20of%20Monolith.png" alt="Control flow for a reactor, proactor, and Half-Sync/Half-Async." loading="lazy" width="848" height="366" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -59,7 +59,7 @@ In most cases we’ll hear of *Proactor* being called *Reactor* – probably bec
 <picture>
 <source srcset="/diagrams/Conclusion/Ambiguous-Microkernel.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Ambiguous-Microkernel.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Ambiguous-Microkernel.png" alt="Diagrams of Microkernel according to Pattern-Oriented Software Architecture and of Plugins Architecture" loading="lazy" width="663" height="607" style="width:80%"/>
+<img src="/diagrams/Conclusion/Ambiguous-Microkernel.png" alt="Microkernel according to Pattern-Oriented Software Architecture and Plugins Architecture" loading="lazy" width="663" height="607" style="width:80%"/>
 </picture>
 </a>
 </figure>
@@ -79,7 +79,7 @@ Thus, here we have two architectural patterns of arguably similar structure \([*
 <picture>
 <source srcset="/diagrams/Conclusion/Ambiguous-DomainServices.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Ambiguous-DomainServices.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Ambiguous-DomainServices.png" alt="Diagrams of domain services according to Domain-Driven Design and Fundamentals of Software Architecture." loading="lazy" width="663" height="443" style="width:74%"/>
+<img src="/diagrams/Conclusion/Ambiguous-DomainServices.png" alt="Domain services according to Domain-Driven Design and Fundamentals of Software Architecture." loading="lazy" width="663" height="443" style="width:74%"/>
 </picture>
 </a>
 </figure>
@@ -95,7 +95,7 @@ I believe that both definitions are technically correct, if the difference in th
 <picture>
 <source srcset="/diagrams/Conclusion/Ambiguous-ServiceBasedArchitecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Ambiguous-ServiceBasedArchitecture.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Ambiguous-ServiceBasedArchitecture.png" alt="Diagrams of Service-Based Architecture, Microservices, and Service-Oriented Architecture." loading="lazy" width="1401" height="442" style="width:100%"/>
+<img src="/diagrams/Conclusion/Ambiguous-ServiceBasedArchitecture.png" alt="Service-Based Architecture, microservices, and Service-Oriented Architecture." loading="lazy" width="1401" height="442" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -113,7 +113,7 @@ Both definitions are technically correct\. One is wider than the other\.
 <picture>
 <source srcset="/diagrams/Conclusion/Ambiguous-FrontController.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Ambiguous-FrontController.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Ambiguous-FrontController.png" alt="Diagrams of Front Controller according to Patterns of Enterprise Application Architecture and Software Architecture: the Hard Parts." loading="lazy" width="668" height="383" style="width:70%"/>
+<img src="/diagrams/Conclusion/Ambiguous-FrontController.png" alt="Front Controller according to Patterns of Enterprise Application Architecture and Software Architecture: the Hard Parts." loading="lazy" width="668" height="383" style="width:70%"/>
 </picture>
 </a>
 </figure>
@@ -129,7 +129,7 @@ The definition from \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp"
 <picture>
 <source srcset="/diagrams/Conclusion/Ambiguous-Cells.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Ambiguous-Cells.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Ambiguous-Cells.png" alt="Diagrams of WSO2 Cells and Amazon Cells." loading="lazy" width="1203" height="444" style="width:100%"/>
+<img src="/diagrams/Conclusion/Ambiguous-Cells.png" alt="WSO2 Cells and Amazon Cells." loading="lazy" width="1203" height="444" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -149,7 +149,7 @@ This case looks like Amazon’s hijacking and redefining a popular emerging tech
 <picture>
 <source srcset="/diagrams/Conclusion/Ambiguous-Nanoservices.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Ambiguous-Nanoservices.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Ambiguous-Nanoservices.png" alt="Diagrams of Nanoservices as an API layer over a shared database, a pipeline, a Space-Based Architecture, actors, and a Service-Based Architecture." loading="lazy" width="1263" height="883" style="width:100%"/>
+<img src="/diagrams/Conclusion/Ambiguous-Nanoservices.png" alt="Nanoservices as an API layer over a shared database, a pipeline, a Space-Based Architecture, actors, and a Service-Based Architecture." loading="lazy" width="1263" height="883" style="width:100%"/>
 </picture>
 </a>
 </figure>

@@ -1,7 +1,7 @@
 +++
 weight = 9
 title = "Services"
-description = "This chapter explores architectures with subdomain modules or services: Modulith, Actors, Service-Based Architecture, Microservices, and Nanoservices."
+description = "Services dedicate a component and a team to each subdomain. Examples include Service-Based Architecture, Microservices, Modulith, Actors, and Nanoservices."
 images = ["/diagrams/Web/og/Services.png"]
 primary_image = "/diagrams/Main/Services.png"
 [sitemap]
@@ -15,7 +15,7 @@ primary_image = "/diagrams/Main/Services.png"
 <picture>
 <source srcset="/diagrams/Main/Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Services.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Services.png" alt="A diagram for Services, in abstractness-subdomain-sharding coordinates." loading="lazy" width="1062" height="454" style="width:100%"/>
+<img src="/diagrams/Main/Services.png" alt="Services Architecture." loading="lazy" width="1062" height="454" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -55,7 +55,7 @@ Interservice communication is relatively slow and resource\-consuming, therefore
 <picture>
 <source srcset="/diagrams/Performance/Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Performance/Services.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Performance/Services.png" alt="Performance of Services is the best when the request is limited to a single service and the worst when the state of several services needs to be synchronized." loading="lazy" width="1463" height="742" style="width:100%"/>
+<img src="/diagrams/Performance/Services.png" alt="The performance of services is the best when the request is limited to a single service and the worst when the state of several services needs to be synchronized." loading="lazy" width="1463" height="742" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -143,7 +143,7 @@ In general, a large service should wrap its dependencies with an [*Anticorruptio
 <picture>
 <source srcset="/diagrams/Relations/Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Relations/Services.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Relations/Services.png" alt="Splitting an Orchestrator into Backends for Frontends." loading="lazy" width="1063" height="303" style="width:100%"/>
+<img src="/diagrams/Relations/Services.png" alt="Splitting an orchestrator into backends for frontends." loading="lazy" width="1063" height="303" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -290,7 +290,7 @@ A service is not necessarily monolithic inside\. Because a service is encapsulat
 <picture>
 <source srcset="/diagrams/Variants/1/Subtypes%20of%20Services.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Subtypes%20of%20Services.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Subtypes%20of%20Services.png" alt="A monolithic service, layered service, hexagonal services, scaled service, and a Cell interconnected into a single system." loading="lazy" width="1271" height="506" style="width:100%"/>
+<img src="/diagrams/Variants/1/Subtypes%20of%20Services.png" alt="A monolithic service, layered service, hexagonal services, scaled service, and a cell interconnected into a single system." loading="lazy" width="1271" height="506" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -302,7 +302,7 @@ A service is not necessarily monolithic inside\. Because a service is encapsulat
 <picture>
 <source srcset="/diagrams/Variants/1/Service%20-%20Monolithic.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Service%20-%20Monolithic.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Service%20-%20Monolithic.png" alt="A diagram of a monolithic component." loading="lazy" width="243" height="304" style="width:27%"/>
+<img src="/diagrams/Variants/1/Service%20-%20Monolithic.png" alt="A monolithic component." loading="lazy" width="243" height="304" style="width:27%"/>
 </picture>
 </a>
 </figure>
@@ -316,7 +316,7 @@ A *monolithic service* is a service with no definite internal structure, probabl
 <picture>
 <source srcset="/diagrams/Variants/1/Service%20-%20Hexagonal.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Service%20-%20Hexagonal.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Service%20-%20Hexagonal.png" alt="A core connected to: a protocol adapter, a Database Abstraction Layer with a database behind it, and an adapter with a library behind it." loading="lazy" width="903" height="424" style="width:100%"/>
+<img src="/diagrams/Variants/1/Service%20-%20Hexagonal.png" alt="A core connected to: a protocol adapter, a database abstraction layer with a database behind it, and an adapter with a library behind it." loading="lazy" width="903" height="424" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -364,7 +364,7 @@ Another benefit comes from the existence of the upper integration layer which ma
 <picture>
 <source srcset="/diagrams/Variants/1/Service%20-%20Cell.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/1/Service%20-%20Cell.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/1/Service%20-%20Cell.png" alt="Three subservices behind a Cell gateway. Two of them share a database." loading="lazy" width="903" height="425" style="width:100%"/>
+<img src="/diagrams/Variants/1/Service%20-%20Cell.png" alt="Three subservices behind a cell gateway. Two of them share a database." loading="lazy" width="903" height="425" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -529,7 +529,7 @@ The whole system of kernel, drivers, and user applications comprises the [*Micro
 <picture>
 <source srcset="/diagrams/Evolutions/Services/Services_%20Cluster.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Services/Services_%20Cluster.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Services/Services_%20Cluster.png" alt="Services are grouped into Cells, reducing their interdependencies." loading="lazy" width="1567" height="387" style="width:100%"/>
+<img src="/diagrams/Evolutions/Services/Services_%20Cluster.png" alt="Services are grouped into cells, reducing their interdependencies." loading="lazy" width="1567" height="387" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -611,7 +611,7 @@ The most common modifications of a system of *Services* involve supplementary sy
 <picture>
 <source srcset="/diagrams/Evolutions/Services/Services%20to%20Sandwich.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Services/Services%20to%20Sandwich.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Services/Services%20to%20Sandwich.png" alt="The application and data parts of services are separated from the domain logic and merged into system-wide layers, resulting in a Sandwich." loading="lazy" width="1307" height="323" style="width:100%"/>
+<img src="/diagrams/Evolutions/Services/Services%20to%20Sandwich.png" alt="The application and data parts of services are separated from the domain logic and merged into system-wide layers, resulting in a sandwich." loading="lazy" width="1307" height="323" style="width:100%"/>
 </picture>
 </a>
 </figure>

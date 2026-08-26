@@ -1,7 +1,7 @@
 +++
 weight = 1
 title = "Programming and architectural paradigms"
-description = "This section discusses the object-oriented, functional, and procedural programming paradigms and their relation to common architectural styles."
+description = "The object-oriented, functional, and procedural paradigms re-emerge at the system level as microservices, pipelines, and Space-Based Architecture."
 images = ["/diagrams/Web/og/Paradigms.png"]
 [sitemap]
   priority = 0.5
@@ -43,7 +43,7 @@ Adding *control* to the blend is more subtle, but no less crucial than the encap
 <picture>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Object-oriented.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Object-oriented.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Paradigms%20-%20Object-oriented.png" alt="A diagram of an object-oriented system built through composition." loading="lazy" width="1084" height="543" style="width:100%"/>
+<img src="/diagrams/Communication/Paradigms%20-%20Object-oriented.png" alt="An object-oriented system built through composition." loading="lazy" width="1084" height="543" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -55,7 +55,7 @@ The ability to address complex domains by reducing the whole to self\-contained 
 <picture>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Object-oriented%20-%20Variants.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Object-oriented%20-%20Variants.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Paradigms%20-%20Object-oriented%20-%20Variants.png" alt="Diagrams of: Microservices, Orchestrated Services, and Service-Oriented Architecture." loading="lazy" width="1303" height="483" style="width:100%"/>
+<img src="/diagrams/Communication/Paradigms%20-%20Object-oriented%20-%20Variants.png" alt="Microservices, orchestrated services, and Service-Oriented Architecture." loading="lazy" width="1303" height="483" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -69,7 +69,7 @@ Sometimes you don’t need that level of fine\-tuning for the behavior of the sy
 <picture>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Functional.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Functional.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Paradigms%20-%20Functional.png" alt="A diagram of a pipeline with components implementing steps of data processing." loading="lazy" width="994" height="362" style="width:100%"/>
+<img src="/diagrams/Communication/Paradigms%20-%20Functional.png" alt="A pipeline with components transforming the data that passes through them." loading="lazy" width="994" height="362" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -83,7 +83,7 @@ In distributed systems the functional paradigm is disguised as [*Choreographed E
 <picture>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Functional%20-%20Variants.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Functional%20-%20Variants.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Paradigms%20-%20Functional%20-%20Variants.png" alt="Diagrams of Event-Driven Architecture and Data Mesh." loading="lazy" width="1124" height="345" style="width:100%"/>
+<img src="/diagrams/Communication/Paradigms%20-%20Functional%20-%20Variants.png" alt="Event-Driven Architecture and Data Mesh." loading="lazy" width="1124" height="345" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -97,7 +97,7 @@ The final approach is integration through data\. There are cases where the domai
 <picture>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Data-centric.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Data-centric.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Paradigms%20-%20Data-centric.png" alt="A diagram of a procedural system where logic and data make independent hierarchies." loading="lazy" width="944" height="501" style="width:100%"/>
+<img src="/diagrams/Communication/Paradigms%20-%20Data-centric.png" alt="In a procedural system logic and data make independent hierarchies." loading="lazy" width="944" height="501" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -125,7 +125,7 @@ The data\-centric approach works well for moderately\-sized projects with a stab
 <picture>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Data-centric%20-%20Variants.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Communication/Paradigms%20-%20Data-centric%20-%20Variants.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Communication/Paradigms%20-%20Data-centric%20-%20Variants.png" alt="Diagrams for Services with a shared database and Space-Based Architecture." loading="lazy" width="943" height="463" style="width:100%"/>
+<img src="/diagrams/Communication/Paradigms%20-%20Data-centric%20-%20Variants.png" alt="Services with a shared database and a Space-Based Architecture." loading="lazy" width="943" height="463" style="width:100%"/>
 </picture>
 </a>
 </figure>

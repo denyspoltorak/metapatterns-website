@@ -1,7 +1,7 @@
 +++
 weight = 9
 title = "Orchestrator"
-description = "This chapter discusses Orchestrator and its variants: API Composer, MapReduce, Process Manager, Saga, Coordinator, Integration Service, and Front Controller."
+description = "An Orchestrator integrates the underlying components. It combines the aspects of facade and mediator and is known as API Composer, Process Manager, or Saga."
 images = ["/diagrams/Web/og/Orchestrator.png"]
 primary_image = "/diagrams/Main/Orchestrator.png"
 [sitemap]
@@ -15,7 +15,7 @@ primary_image = "/diagrams/Main/Orchestrator.png"
 <picture>
 <source srcset="/diagrams/Main/Orchestrator.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Orchestrator.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Orchestrator.png" alt="A diagram for Services with an orchestrator, in abstractness-subdomain-sharding coordinates." loading="lazy" width="1062" height="520" style="width:100%"/>
+<img src="/diagrams/Main/Orchestrator.png" alt="Services with an orchestrator." loading="lazy" width="1062" height="520" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -71,7 +71,7 @@ When compared to [*choreography*]({{< relref "../foundations-of-software-archite
 <picture>
 <source srcset="/diagrams/Performance/Orchestrator.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Performance/Orchestrator.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Performance/Orchestrator.png" alt="Caching, early response, parallel execution, and direct communication between services as optimization techniques for Orchestrated Services." loading="lazy" width="1423" height="823" style="width:100%"/>
+<img src="/diagrams/Performance/Orchestrator.png" alt="Caching, early response, parallel execution, and direct communication between services as optimization techniques for orchestrated services." loading="lazy" width="1423" height="823" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -304,7 +304,7 @@ There are also several patterns that have other functions in addition to orchest
 <picture>
 <source srcset="/diagrams/Variants/2/API%20Composer.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/API%20Composer.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/2/API%20Composer.png" alt="An API Composer calls services in parallel. A Scatter/Gather or MapReduce calls shards in parallel." loading="lazy" width="1263" height="445" style="width:100%"/>
+<img src="/diagrams/Variants/2/API%20Composer.png" alt="An API composer calls services in parallel. A Scatter/Gather or MapReduce calls shards in parallel." loading="lazy" width="1263" height="445" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -390,7 +390,7 @@ Example: Order Service in \[[MP]({{< relref "../appendices/books-referenced.md#m
 <picture>
 <source srcset="/diagrams/Variants/2/Front%20Controller.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/Front%20Controller.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/2/Front%20Controller.png" alt="A Front Controller is the first service of a pipeline which receives status notifications from every other service and responds to the client's get status query." loading="lazy" width="883" height="283" style="width:100%"/>
+<img src="/diagrams/Variants/2/Front%20Controller.png" alt="A front controller is the first service of a pipeline which receives status notifications from every other service and responds to the client's get status query." loading="lazy" width="883" height="283" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -404,7 +404,7 @@ Example: Order Service in \[[MP]({{< relref "../appendices/books-referenced.md#m
 <picture>
 <source srcset="/diagrams/Variants/2/API%20Gateway.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/API%20Gateway.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/2/API%20Gateway.png" alt="An API Gateway both translates from the client's to the system's protocol and calls services in parallel." loading="lazy" width="923" height="365" style="width:100%"/>
+<img src="/diagrams/Variants/2/API%20Gateway.png" alt="An API gateway both translates from the client's to the system's protocol and calls services in parallel." loading="lazy" width="923" height="365" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -476,7 +476,7 @@ There is [one way to counter the first point and more than one to solve the seco
 <picture>
 <source srcset="/diagrams/Evolutions/2/Orchestrator%20to%20Backends%20for%20Frontends.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/2/Orchestrator%20to%20Backends%20for%20Frontends.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/2/Orchestrator%20to%20Backends%20for%20Frontends.png" alt="An orchestrator is subdivided into Backends for Frontends." loading="lazy" width="1283" height="384" style="width:100%"/>
+<img src="/diagrams/Evolutions/2/Orchestrator%20to%20Backends%20for%20Frontends.png" alt="An orchestrator is subdivided into backends for brontends." loading="lazy" width="1283" height="384" style="width:100%"/>
 </picture>
 </a>
 </figure>

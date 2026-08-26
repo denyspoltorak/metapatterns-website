@@ -1,7 +1,7 @@
 +++
 weight = 1
 title = "Modules and complexity"
-description = "This chapter graphically explores the basic concepts of software architecture: complexity, modularity, encapsulation, bounded contexts, coupling, and cohesion."
+description = "The basic concepts of software architecture: complexity, modularity, encapsulation, bounded contexts, coupling, and cohesion are explored with diagrams."
 images = ["/diagrams/Web/og/Complexity.png"]
 [sitemap]
   priority = 0.5

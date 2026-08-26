@@ -166,7 +166,7 @@ In most cases *sharding* does not change much inside the application, thus the c
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%201.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%201.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%201.png" alt="Diagrams of Layers with individual scaling, Services with a middleware and individual scaling, and pipeline scaled as a whole." loading="lazy" width="1244" height="363" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%201.png" alt="Layers with individual scaling, services with a middleware and individual scaling, and pipeline scaled as a whole." loading="lazy" width="1244" height="363" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -182,7 +182,7 @@ A few specific evolutions of [*Shards*]({{< relref "../../basic-metapatterns/sha
 <picture>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%202.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%202.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%202.png" alt="Diagrams of Space-Based Architecture that replicates data and Shards with multiple orchestrators." loading="lazy" width="1243" height="346" style="width:100%"/>
+<img src="/diagrams/Evolutions/Monolith/Monolith%20to%20Shards%20-%20Further%202.png" alt="Space-Based Architecture with replicated data and Shards with multiple orchestrators." loading="lazy" width="1243" height="346" style="width:100%"/>
 </picture>
 </a>
 </figure>

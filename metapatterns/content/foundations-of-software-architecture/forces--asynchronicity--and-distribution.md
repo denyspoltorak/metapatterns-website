@@ -1,7 +1,7 @@
 +++
 weight = 2
 title = "Forces, asynchronicity, and distribution"
-description = "This chapter explores non-functional requirements (forces), their conflicts, and the ways to address them in modular, asynchronous, or distributed systems."
+description = "Modularity, asynchronous communication and distribution allow a system to meet conflicting forces. However, that impairs debugging and performance."
 images = ["/diagrams/Web/og/Forces.png"]
 [sitemap]
   priority = 0.5

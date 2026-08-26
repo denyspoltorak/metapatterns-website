@@ -1,7 +1,7 @@
 +++
 weight = 6
 title = "Format of a metapattern"
-description = "This section formalizes the format of each of the metapattern chapters."
+description = "The formal description of the format of each of the metapattern chapters."
 images = ["/diagrams/Web/og/Favicon-plain.png"]
 [sitemap]
   priority = 0.1

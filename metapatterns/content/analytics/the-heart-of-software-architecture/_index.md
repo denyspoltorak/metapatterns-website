@@ -1,7 +1,7 @@
 +++
 weight = 5
 title = "The heart of software architecture"
-description = "This chapter explores how cohesion and decoupling make the entirety of software architecture: its principles, patterns, and guidelines."
+description = "The interplay of cohesion and decoupling gives birth to the entirety of software architecture: its principles, patterns, and guidelines."
 images = ["/diagrams/Web/og/Heart.png"]
 bookCollapseSection = true
 [sitemap]
@@ -24,7 +24,7 @@ As the visible world boils down to protons and neutrons which stick together in 
 
 <source srcset="/diagrams/Web/Heart.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Heart.png" alt="A plot of pain level of maintaining a project against the project's size, with different architectures being optimal for different project sizes." loading="lazy" width="403" height="384"/>
+<img src="/diagrams/Web/Heart.png" alt="The pain level of maintaining a project depends on the project's size, with different architectures being optimal for different project sizes." loading="lazy" width="403" height="384"/>
 
 </picture>
 
@@ -40,7 +40,7 @@ Cohesers and decouplers
 
 <source srcset="/diagrams/Web/Heart2.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Heart2.png" alt="A diagram that shows decoupling between internally cohesive services." loading="lazy" width="363" height="340"/>
+<img src="/diagrams/Web/Heart2.png" alt="Decoupling between internally cohesive services." loading="lazy" width="363" height="340"/>
 
 </picture>
 
@@ -56,7 +56,7 @@ Deconstructing patterns
 
 <source srcset="/diagrams/Web/Heart3.dark.svg" media="(prefers-color-scheme: dark)"/>
 
-<img src="/diagrams/Web/Heart3.png" alt="Diagrams of Layers, Services, Hierarchy, and Pipeline." loading="lazy" width="763" height="703"/>
+<img src="/diagrams/Web/Heart3.png" alt="Layers, services, a hierarchy, and a pipeline." loading="lazy" width="763" height="703"/>
 
 </picture>
 

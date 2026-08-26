@@ -40,7 +40,7 @@ It’s hard to imagine anything that responds faster than such systems\.
 <picture>
 <source srcset="/diagrams/Conclusion/Latency-Bypass.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Latency-Bypass.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Latency-Bypass.png" alt="A hierarchical control system, Model-View-Controller, and and an OS with kernel bypass featuring early response." loading="lazy" width="1183" height="403" style="width:100%"/>
+<img src="/diagrams/Conclusion/Latency-Bypass.png" alt="A hierarchical control system, Model-View-Controller, and an OS with kernel bypass featuring early response." loading="lazy" width="1183" height="403" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -127,7 +127,7 @@ If your system does not allow for any one of the individual optimizations listed
 <picture>
 <source srcset="/diagrams/Performance/Plugins-injection.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Performance/Plugins-injection.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Performance/Plugins-injection.png" alt="Business logic injection in Layers and Services." loading="lazy" width="1043" height="623" style="width:100%"/>
+<img src="/diagrams/Performance/Plugins-injection.png" alt="Business logic injection in layers and services." loading="lazy" width="1043" height="623" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -165,7 +165,7 @@ There are also several optimizations which don’t fit into wider categories:
 <picture>
 <source srcset="/diagrams/Variants/2/API%20Composer.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/2/API%20Composer.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/2/API%20Composer.png" alt="An API Composer calls services in parallel. A Scatter/Gather or MapReduce calls shards in parallel." loading="lazy" width="1263" height="445" style="width:100%"/>
+<img src="/diagrams/Variants/2/API%20Composer.png" alt="An API composer calls services in parallel. A Scatter/Gather or MapReduce calls shards in parallel." loading="lazy" width="1263" height="445" style="width:100%"/>
 </picture>
 </a>
 </figure>

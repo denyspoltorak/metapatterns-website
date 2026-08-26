@@ -1,7 +1,7 @@
 +++
 weight = 9
 title = "Service-Oriented Architecture (SOA)"
-description = "This chapter explores Service-Oriented Architecture (SOA) and its variants: Distributed Monolith, Domain-Oriented Microservice Architecture, and Nanoservices."
+description = "Service-Oriented Architecture (SOA) employs 3 or 4 layers of reusable services. It fits huge projects but the naive implementation may be slow and error-prone."
 images = ["/diagrams/Web/og/Service-Oriented%20Architecture.png"]
 primary_image = "/diagrams/Main/Service-Oriented%20Architecture.png"
 [sitemap]
@@ -15,7 +15,7 @@ primary_image = "/diagrams/Main/Service-Oriented%20Architecture.png"
 <picture>
 <source srcset="/diagrams/Main/Service-Oriented%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Main/Service-Oriented%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Main/Service-Oriented%20Architecture.png" alt="A diagram for Service-Oriented Architecture, in abstractness-subdomain-sharding coordinates." loading="lazy" width="924" height="722" style="width:100%"/>
+<img src="/diagrams/Main/Service-Oriented%20Architecture.png" alt="Service-Oriented Architecture." loading="lazy" width="924" height="722" style="width:100%"/>
 </picture>
 </a>
 </figure>
@@ -57,7 +57,7 @@ Each service of each layer depends on everything it uses\. As a result, developm
 <picture>
 <source srcset="/diagrams/Dependencies/Service-Oriented%20Architecture.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Dependencies/Service-Oriented%20Architecture.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Dependencies/Service-Oriented%20Architecture.png" alt="Tasks depend on entities. Entities depend on utilities and libraries. The many dependencies make it hard to change almost any component." loading="lazy" width="983" height="403" style="width:88%"/>
+<img src="/diagrams/Dependencies/Service-Oriented%20Architecture.png" alt="Tasks depend on entities. Entities depend on utilities and libraries." loading="lazy" width="983" height="403" style="width:88%"/>
 </picture>
 </a>
 </figure>
@@ -216,7 +216,7 @@ Afterwards you may deal with the remaining orchestration\. The idea is to move t
 <picture>
 <source srcset="/diagrams/Evolutions/3/SOA%20-%203.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Evolutions/3/SOA%20-%203.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Evolutions/3/SOA%20-%203.png" alt="Diagrams for Services with an orchestrator, Backends for Frontends, and Cell-Based Architecture." loading="lazy" width="1363" height="446" style="width:100%"/>
+<img src="/diagrams/Evolutions/3/SOA%20-%203.png" alt="Services with an orchestrator, backends for frontends, and Cell-Based Architecture." loading="lazy" width="1363" height="446" style="width:100%"/>
 </picture>
 </a>
 </figure>
