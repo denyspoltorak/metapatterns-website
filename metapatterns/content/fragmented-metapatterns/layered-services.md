@@ -83,7 +83,7 @@ Remarkable features of *Layered Services* include:
 
 Likely the most common backend architecture has [three layers]({{< relref "../basic-metapatterns/layers.md#domain-driven-design-ddd-layers" >}}): [*application*]({{< relref "../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}), [*domain*]({{< relref "../basic-metapatterns/layers.md#domain-business-rules-or-model" >}}), and *infrastructure* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\. The application layer [*orchestrates*]({{< relref "../foundations-of-software-architecture/arranging-communication/orchestration.md" >}}) the domain layer\.
 
-If such an architecture is divided into [services]({{< relref "../basic-metapatterns/services.md" >}}), each of them receives a part of every layer, including application, which means that now there are as many *Orchestrators* as services\. Each *Orchestrator* implements the API of its service by integrating \(calling or messaging into\) the domain layer of its service and the APIs of other services, which makes all the *Orchestrators* interdependent:
+If such an architecture is divided into [services]({{< relref "../basic-metapatterns/services.md" >}}), each of them receives a part of every layer, including application, which means that now there are as many *Orchestrators* as services\. Each orchestrator implements the API of its service by integrating \(calling or messaging into\) the domain layer of its service and the APIs of other services, which makes all the orchestrators interdependent:
 
 ### Dependencies
 
@@ -103,7 +103,7 @@ The good thing is that the majority of the code belongs to the domain layer whic
 
 ### Relations
 
-*Three\-layered services*:
+*Three\-Layered Services*:
 
 - Implement [*Services*]({{< relref "../basic-metapatterns/services.md" >}})\.
 - Are derived from [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}) and [*Services*]({{< relref "../basic-metapatterns/services.md" >}})\.
@@ -172,7 +172,7 @@ If a service becomes too large:
 </a>
 </figure>
 
-If there is no [*orchestration*]({{< relref "../foundations-of-software-architecture/arranging-communication/orchestration.md" >}}), there is no role for the [*application* layer]({{< relref "../basic-metapatterns/layers.md#application-use-cases-or-integration" >}})\. [*Choreographed*]({{< relref "../foundations-of-software-architecture/arranging-communication/choreography.md" >}}) systems are made up of services that implement individual steps of request processing\. The sequence of actions \(*integration logic*\) which three\-layered systems put in the [*Orchestrators*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) now moves to the graph of *event channels* between the services\. This means that with choreography the high\-level part of the business logic \(use cases\) exists outside of the code for the system’s constituent services\.
+If there is no [*orchestration*]({{< relref "../foundations-of-software-architecture/arranging-communication/orchestration.md" >}}), there is no role for the [*application* layer]({{< relref "../basic-metapatterns/layers.md#application-use-cases-or-integration" >}})\. [*Choreographed*]({{< relref "../foundations-of-software-architecture/arranging-communication/choreography.md" >}}) systems are made up of services that implement individual steps of request processing\. The sequence of actions \(*integration logic*\) which three\-layered systems put in the [orchestrators]({{< relref "../extension-metapatterns/orchestrator.md" >}}) now moves to the graph of *event channels* between the services\. This means that with choreography the high\-level part of the business logic \(use cases\) exists outside of the code for the system’s constituent services\.
 
 ### Dependencies
 
@@ -180,7 +180,7 @@ Dependencies are identical to those of a [*Pipeline*]({{< relref "../basic-metap
 
 ### Relations
 
-*Two\-layered services*:
+*Two\-Layered Services*:
 
 - Implement [*Pipeline*]({{< relref "../basic-metapatterns/pipeline.md" >}})\.
 - Are derived from [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}) and [*Pipeline*]({{< relref "../basic-metapatterns/pipeline.md" >}})\.

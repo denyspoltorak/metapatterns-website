@@ -10,7 +10,7 @@ bookCollapseSection = true
 
 # Extension metapatterns {anchor=false}
 
-These patterns extend [*Services*]({{< relref "../basic-metapatterns/services.md" >}}), [*Shards*]({{< relref "../basic-metapatterns/shards.md" >}}), or even a [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) with a layer that provides an aspect or two of the system’s behavior and often glues other components together\.
+These patterns extend [*Services*]({{< relref "../basic-metapatterns/services.md" >}}), [*Shards*]({{< relref "../basic-metapatterns/shards.md" >}}), or even a [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) with a layer that provides an aspect or two of the system’s behavior and often glues the other components together\.
 
 ### [Middleware]({{< relref "../extension-metapatterns/middleware.md" >}})
 
@@ -58,7 +58,7 @@ A [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.
 
 A [*Proxy*]({{< relref "../extension-metapatterns/proxy.md" >}}) mediates between a system and its clients, transparently taking care of some generic functionality\.
 
-*<ins>Includes</ins>*: Full Proxy and Half\-Proxy; Sidecar and Ambassador; Firewall, Response Cache, Load Balancer, Reverse Proxy and various Adapters, e\.g\. Anticorruption Layer, Open Host Service, many Abstraction Layers, Repository, and even User Interface\.
+*<ins>Includes</ins>*: Full Proxy and Half\-Proxy; Sidecar and Ambassador; Firewall, Response Cache, Load Balancer, Reverse Proxy, and various Adapters, e\.g\. Anticorruption Layer, Open Host Service, many Abstraction Layers, Repository, and even User Interface\.
 
 ### [Orchestrator]({{< relref "../extension-metapatterns/orchestrator.md" >}})
 
@@ -90,4 +90,4 @@ An [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) 
 
 [*Sandwich*]({{< relref "../extension-metapatterns/sandwich.md" >}}) subdivides the largest and loosely coupled [*domain* layer]({{< relref "../basic-metapatterns/layers.md#domain-business-rules-or-model" >}}) into modules or services while the other layers remain monolithic\.
 
-*<ins>Includes</ins>*: Service\-Based Architecture, Space\-Based Architecture, Blackboard Architecture, Nanoservices, and Command Query Responsibility Segregation \(CQRS\)\.
+*<ins>Includes</ins>*: Service\-Based Architecture, Space\-Based Architecture, Vertical Slice Architecture, Blackboard Architecture, Nanoservices, and Command Query Responsibility Segregation \(CQRS\)\.

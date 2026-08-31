@@ -12,7 +12,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 The most common modifications to a [system of *Services*]({{< relref "../../basic-metapatterns/services.md" >}}) involve supplementary system\-wide *layers* which compensate for the inability of the *services* to share anything among themselves:
 
 - A [*Middleware*]({{< relref "../../extension-metapatterns/middleware.md" >}}) knows of all the deployed service [instances]({{< relref "../../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}})\. It mediates [communication]({{< relref "../../basic-metapatterns/layers.md#communication-middleware" >}}) between them and may manage their scaling and failure recovery\.
-- The [*Sidecars*]({{< relref "../../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) of a [*Service Mesh*]({{< relref "../../implementation-metapatterns/mesh.md#service-mesh" >}}) make a virtual layer of [shared libraries]({{< relref "../../analytics/comparison-of-architectural-patterns/sharing-functionality-or-data-among-services.md" >}}) for the [*Microservices*]({{< relref "../../basic-metapatterns/services.md#microservices" >}}) it hosts\.
+- The [*sidecars*]({{< relref "../../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) of a [*Service Mesh*]({{< relref "../../implementation-metapatterns/mesh.md#service-mesh" >}}) make a virtual layer of [shared libraries]({{< relref "../../analytics/comparison-of-architectural-patterns/sharing-functionality-or-data-among-services.md" >}}) for the [*microservices*]({{< relref "../../basic-metapatterns/services.md#microservices" >}}) it hosts\.
 - A [*Shared Database*]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) simplifies the initial phases of development and provides data consistency and [interservice communication]({{< relref "../../foundations-of-software-architecture/arranging-communication/shared-data.md" >}})\.
 - [*Proxies*]({{< relref "../../extension-metapatterns/proxy.md" >}}) stand between the system and its clients and take care of shared aspects that otherwise would need to be implemented by every service\.
 - An [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) is the single place for the high\-level logic of every [use case]({{< relref "../../basic-metapatterns/layers.md#application-use-cases-or-integration" >}})\.
@@ -48,7 +48,7 @@ Distributed systems may fail in a zillion ways\. You want to ruminate neither on
 <ins>Cons</ins>: 
 
 - There may be a performance penalty which becomes worse for uncommon patterns of communication\.
-- The *Middleware* may become a single point of failure\.
+- The middleware may become a single point of failure\.
 
 
 <ins>Further steps</ins>:
@@ -74,7 +74,7 @@ Distributed systems may fail in a zillion ways\. You want to ruminate neither on
 
 <ins>Prerequisite</ins>: service instances are mostly [stateless]({{< relref "../../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}})\.
 
-The [*Microservices*]({{< relref "../../basic-metapatterns/services.md#microservices" >}}) architecture boasts dynamic scaling under load thanks to its *Mesh*\-based *Middleware*\. It also allows for the services to share libraries via their *Sidecars* – additional containers co\-located with each service instance – to avoid duplication of [generic code]({{< relref "../../basic-metapatterns/layers.md#generic-code-libraries-and-utilities" >}}) among the services\.
+The [*Microservices*]({{< relref "../../basic-metapatterns/services.md#microservices" >}}) architecture boasts dynamic scaling under load thanks to its *Mesh*\-based *Middleware*\. It also allows for the services to share libraries via their *sidecars* – additional containers co\-located with each service instance – to avoid duplication of [generic code]({{< relref "../../basic-metapatterns/layers.md#generic-code-libraries-and-utilities" >}}) among the services\.
 
 <ins>Pros</ins>: 
 
@@ -158,7 +158,7 @@ Putting a generic component between the system and its clients helps the program
 <ins>Cons</ins>: 
 
 - There is a latency penalty caused by the extra network hop\.
-- Each *Proxy* may be a single point of failure, or at least needs some admin oversight\.
+- Each proxy may be a single point of failure, or at least needs some admin oversight\.
 
 
 <ins>Further steps</ins>:
@@ -201,15 +201,15 @@ Extract the [high\-level business logic]({{< relref "../../basic-metapatterns/la
 <ins>Cons</ins>: 
 
 - There is a performance penalty because the number of messages per use case doubles\.
-- The *Orchestrator* may become a single point of failure\.
-- Some flexibility is lost as the *Orchestrator* couples the services’ qualities\.
+- The orchestrator may become a single point of failure\.
+- Some flexibility is lost as the orchestrator couples the services’ qualities\.
 
 
 <ins>Further steps</ins>:
 
 - If there are several clients that strongly vary in workflows, you can apply [*Backends for Frontends*]({{< relref "../../fragmented-metapatterns/backends-for-frontends--bff-.md" >}}) with an *Orchestrator* per client\.
-- If the *Orchestrator* grows too large, it [can be divided]({{< relref "../../extension-metapatterns/orchestrator.md#variants-by-structure-can-be-combined" >}}) into layers, services, or both; the latter option resulting in a [*Top\-Down Hierarchy*]({{< relref "../../fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}})\.
-- The *Orchestrator* can be [scaled]({{< relref "../../extension-metapatterns/orchestrator.md#scaled" >}}) and can have its own database\.
+- If the orchestrator grows too large, it [can be divided]({{< relref "../../extension-metapatterns/orchestrator.md#variants-by-structure-can-be-combined" >}}) into layers, services, or both; the latter option resulting in a [*Top\-Down Hierarchy*]({{< relref "../../fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}})\.
+- The orchestrator can be [scaled]({{< relref "../../extension-metapatterns/orchestrator.md#scaled" >}}) and can have its own database\.
 
 
 ## Make a Sandwich
@@ -247,7 +247,7 @@ Try merging only the [*use cases*]({{< relref "../../basic-metapatterns/layers.m
 
 - The services are coupled in their properties\.
 - There are now single points of failure that leave the system totally inoperational\.
-- The *Shared Database* limits the system’s performance\.
+- The shared database limits the system’s performance\.
 
 
 <ins>Further steps</ins>:

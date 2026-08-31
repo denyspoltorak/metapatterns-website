@@ -60,10 +60,10 @@ It is possible that your system has different kinds of users, e\.g\. buyers, sel
 
 <ins>Cons</ins>: 
 
-- There is no good way to share code between the *BFFs* \(in the [naive implementation]({{< relref "../../extension-metapatterns/orchestrator.md#monolithic" >}})\)\.
+- There is no good way to share code between the BFFs \(in the [naive implementation]({{< relref "../../extension-metapatterns/orchestrator.md#monolithic" >}})\)\.
 - There are new components to administer\.
 
 
 <ins>Further steps</ins>:
 
-- [Evolve the *BFFs*]({{< relref "../../fragmented-metapatterns/backends-for-frontends--bff-.md#evolutions" >}}) through adding a shared *layer* or [*Sidecars*]({{< relref "../../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) for the common functionality\.
+- [Evolve the BFFs]({{< relref "../../fragmented-metapatterns/backends-for-frontends--bff-.md#evolutions" >}}) through adding a shared *layer* or [*Sidecars*]({{< relref "../../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) for the common functionality\.

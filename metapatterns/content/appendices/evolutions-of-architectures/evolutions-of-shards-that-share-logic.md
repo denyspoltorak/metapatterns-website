@@ -46,7 +46,7 @@ A *Middleware* transports messages between shards, checks their health, and reco
 <ins>Cons</ins>: 
 
 - Performance may degrade\.
-- The components of the *Middleware* are new points of failure\.
+- The components of the middleware are new points of failure\.
 
 
 ## Add a Sharding Proxy
@@ -72,14 +72,14 @@ The client application may know the address of the shard which serves it and con
 <ins>Pros</ins>: 
 
 - Your system becomes isolated from its clients\.
-- You can put generic aspects into the *Proxy* instead of implementing them in the shards\.
-- *Proxies* are readily available\.
+- You can put generic aspects into the proxy instead of implementing them in the shards\.
+- Proxies are readily available\.
 
 
 <ins>Cons</ins>: 
 
-- The extra network hop increases latency unless you deploy the *Sharding Proxy* as an [*Ambassador*]({{< relref "../../extension-metapatterns/proxy.md#on-the-client-side-ambassador" >}}) co\-located with every client which, however, brings back the issue of client software updates\.
-- The *Sharding Proxy* is a single point of failure unless [*replicated*]({{< relref "../../basic-metapatterns/shards.md#persistent-copy-replica" >}})\.
+- The extra network hop increases latency unless you deploy the sharding proxy as an [*Ambassador*]({{< relref "../../extension-metapatterns/proxy.md#on-the-client-side-ambassador" >}}) co\-located with every client which, however, brings back the issue of client software updates\.
+- The sharding proxy is a single point of failure unless [*replicated*]({{< relref "../../basic-metapatterns/shards.md#persistent-copy-replica" >}})\.
 
 
 ## Move the integration logic into an Orchestrator
@@ -113,11 +113,11 @@ When a high\-level scenario uses multiple shards \([*Scatter\-Gather* and *MapRe
 <ins>Cons</ins>: 
 
 - Latency will increase\.
-- The *Orchestrator* becomes a single point of failure which has a good chance to corrupt your data\.
+- The orchestrator becomes a single point of failure which has a good chance to corrupt your data\.
 
 
 <ins>Further steps</ins>:
 
-- [*Shard* or *replicate* the *Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md#scaled" >}}) to support higher load and to remain online if it fails\.
-- *Persist* the *Orchestrator* \(give it a dedicated database\) to make sure that it does not leave half\-committed transactions upon failure\.
-- *Divide* the *Orchestrator* [into *Backends for Frontends*]({{< relref "../../appendices/evolutions-of-architectures/evolutions-of-layers-to-gain-flexibility.md#divide-the-orchestration-layer-into-backends-for-frontends" >}}) or a [*SOA*\-style layer]({{< relref "../../extension-metapatterns/orchestrator.md#a-service-per-use-case-soa-style" >}}) if you have multiple kinds of clients or workflows, respectively\.
+- [*Shard* or *replicate* the orchestrator]({{< relref "../../extension-metapatterns/orchestrator.md#scaled" >}}) to support higher load and to remain online if it fails\.
+- *Persist* the orchestrator \(give it a dedicated database\) to make sure that it does not leave half\-committed transactions upon failure\.
+- *Divide* the orchestrator [into *Backends for Frontends*]({{< relref "../../appendices/evolutions-of-architectures/evolutions-of-layers-to-gain-flexibility.md#divide-the-orchestration-layer-into-backends-for-frontends" >}}) or a [*SOA*\-style layer]({{< relref "../../extension-metapatterns/orchestrator.md#a-service-per-use-case-soa-style" >}}) if you have multiple kinds of clients or workflows, respectively\.

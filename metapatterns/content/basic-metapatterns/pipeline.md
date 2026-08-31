@@ -65,7 +65,7 @@ There are three ways to build communication in a pipeline, each with different d
 </a>
 </figure>
 
-See the [*Choreography* chapter]({{< relref "../foundations-of-software-architecture/arranging-communication/choreography.md" >}}) for a more detailed discussion\.
+See the [*choreography* chapter]({{< relref "../foundations-of-software-architecture/arranging-communication/choreography.md" >}}) for a more detailed discussion\.
 
 ### Applicability
 
@@ -94,7 +94,7 @@ See the [*Choreography* chapter]({{< relref "../foundations-of-software-architec
 
 ## Variants by scheduling
 
-A pipeline may be either always active or run once in a while:
+A *Pipeline* may be either always active or run once in a while:
 
 ### Stream processing, Nearline system
 
@@ -189,14 +189,14 @@ First and foremost, [*Data Mesh*](https://martinfowler.com/articles/data-mesh-pr
 
 The *operational system* is an ordinary [*Microservices*]({{< relref "../basic-metapatterns/services.md#microservices" >}}) or [*Event\-Driven Architecture*]({{< relref "#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}})\. 
 
-The *analytical system* contains *Data Product Quanta* \(*DPQ*\) – services that provide convenient access \(streaming, replaying, and possibly querying\) to parts of the system’s data\. The *DPQs* are assembled into a graph akin to *Event\-Driven Architecture*\. There are three kinds of *DPQs* \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\]:
+The *analytical system* contains *Data Product Quanta* \(*DPQ*\) – services that provide convenient access \(streaming, replaying, and possibly querying\) to parts of the system’s data\. The DPQs are assembled into a graph akin to *Event\-Driven Architecture*\. There are three kinds of DPQs \[[SAHP]({{< relref "../appendices/books-referenced.md#sahp" >}})\]:
 
 - A *source\-aligned \(native\) DPQ* \(*sDPQ*\) is coupled to an operational service and streams \(or provides queries into\) its data\. It is likely to be implemented as a [*Reporting Database*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}})\.
-- An *aggregate DPQ* \(*aDPQ*\) merges and transforms inputs from several sources \(*sDPQs* or other *aDPQs*\)\. It is similar to a [*Query Service*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#query-service-front-controller-data-warehouse-data-lake-aggregate-data-product-quantum-dpq-of-data-mesh" >}})\.
-- A *fit\-for\-purpose \(custom\-made\) DPQ* \(*fDPQ*\) is an end\-user \(leaf application\) of the *Data Mesh*’s data\. It may collect a dataset for machine learning or let a business analyst do their research\. *fDPQs* tend to be short\-lived one\-off components\.
+- An *aggregate DPQ* \(*aDPQ*\) merges and transforms inputs from several sources \(sDPQs or other aDPQs\)\. It is similar to a [*Query Service*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#query-service-front-controller-data-warehouse-data-lake-aggregate-data-product-quantum-dpq-of-data-mesh" >}})\.
+- A *fit\-for\-purpose \(custom\-made\) DPQ* \(*fDPQ*\) is an end\-user \(leaf application\) of the *Data Mesh*’s data\. It may collect a dataset for machine learning or let a business analyst do their research\. fDPQs tend to be short\-lived one\-off components\.
 
 
-There is a pragmatic option to allow an operational service to resort to the analytical system’s *DPQs* to query other services’ data instead of messaging them directly or implementing a [*CQRS View*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) and subscribing it to events that flow in the operational system\.
+There is a pragmatic option to allow an operational service to resort to the analytical system’s DPQs to query other services’ data instead of messaging them directly or implementing a [*CQRS View*]({{< relref "../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) and subscribing it to events that flow in the operational system\.
 
 ### Function as a Service \(FaaS\), [Nanoservices]({{< relref "../extension-metapatterns/sandwich.md#nanoservices" >}}) \(pipelined\)
 
@@ -210,17 +210,17 @@ There is a pragmatic option to allow an operational service to resort to the ana
 </a>
 </figure>
 
-A [*nanoservice*]({{< relref "../basic-metapatterns/services.md#single-function-faas-nanoservices" >}}) is literally a [function as a service](https://en.wikipedia.org/wiki/Function_as_a_service) \(*FaaS*\) \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] – a stateless \(thus perfectly scalable\) component whose API comprises a single input method\. *Nanoservices* run in proprietary cloud [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) over a [*Shared Database*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) and are [chained into pipelines](https://increment.com/software-architecture/the-rise-of-nanoservices/) dedicated to specific use cases\. The code complexity stays low, but as the project grows, the integration will quickly turn into a nightmare of hundreds or thousands of interconnected nanoservices\.
+A [*nanoservice*]({{< relref "../basic-metapatterns/services.md#single-function-faas-nanoservices" >}}) is literally a [function as a service](https://en.wikipedia.org/wiki/Function_as_a_service) \(*FaaS*\) \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] – a stateless \(thus perfectly scalable\) component whose API comprises a single input method\. *Nanoservices* run in a proprietary cloud [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) over a [*Shared Database*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) and are [chained into pipelines](https://increment.com/software-architecture/the-rise-of-nanoservices/) dedicated to specific use cases\. The code complexity stays low, but as the project grows, the integration will quickly turn into a nightmare of hundreds or thousands of interconnected nanoservices\.
 
-*Nanoservices* are good for rapid development of small elastic \(dynamically scalable\) applications\. The supported load is limited by the *Shared Database*, and the project evolvability is limited by the complexity of scenarios\. As any use case is going to involve many asynchronous steps, latency is not a strong side of *Nanoservices*\.
+*Nanoservices* are good for rapid development of small elastic \(dynamically scalable\) applications\. The supported load is limited by the *shared database*, and the project evolvability is limited by the complexity of scenarios\. As any use case is going to involve many asynchronous steps, latency is not a strong side of *Nanoservices*\.
 
 ## [Evolutions]({{< relref "../appendices/evolutions-of-architectures/evolutions-of-a-pipeline.md" >}})
 
-*Pipeline* [inherits its set of evolutions from *Services*]({{< relref "../basic-metapatterns/services.md#evolutions" >}})\. Filters can be added, split in two, merged, or replaced\. Many systems employ a [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) \(a pub/sub or pipeline framework\), a [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) \(which may be a database or a file system\), or [*Proxies*]({{< relref "../extension-metapatterns/proxy.md" >}})\.
+*Pipeline* [inherits its set of evolutions from *Services*]({{< relref "../basic-metapatterns/services.md#evolutions" >}})\. Its components can be added, split in two, merged, or replaced\. Many systems employ a [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}) \(a pub/sub or pipeline framework\), a [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) \(which may be a database or a file system\), or [*Proxies*]({{< relref "../extension-metapatterns/proxy.md" >}})\.
 
 There are a couple of [pipeline\-specific evolutions]({{< relref "../appendices/evolutions-of-architectures/evolutions-of-a-pipeline.md" >}}), with more details provided in [Appendix E]({{< relref "../appendices/evolutions-of-architectures/_index.md" >}}):
 
-- The first service of the *Pipeline* can be promoted to a [*Front Controller*]({{< relref "../extension-metapatterns/orchestrator.md#inexact-front-controller" >}}) which tracks the status updates for every request it handles\.
+- The first service of the pipeline can be promoted to a [*Front Controller*]({{< relref "../extension-metapatterns/orchestrator.md#inexact-front-controller" >}}) which tracks the status updates for every request it handles\.
 
 
 <figure>

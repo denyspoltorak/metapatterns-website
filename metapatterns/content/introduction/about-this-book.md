@@ -13,7 +13,7 @@ When I was learning programming, there was [*Gang of Four*](https://en.wikipedia
 
 Now, having leisure thanks to the war, burnout, unemployment, and depression I have had a chance to collect architectural patterns from multiple sources and build a taxonomy of architectures\. My goal was to write the very book I lacked in those early years: a shallow but intuitive overview of all the software and systems architectures as used in practice, their properties and relations\. I hope that it will be of some help both to novice programmers as a kind of a primer on the principles of high\-level software design and to adept architects by reminding them of the big picture outside of their areas of expertise\.
 
-The book is mostly technology\-agnostic\. It does not answer practical questions like “Which database should I use?” Instead it inclines towards the understanding of “When should I use a shared database?” Any specific technologies ~are easy to google~ can be found ~over the Internet~ somewhere in the Noosphere\.
+The book is mostly technology\-agnostic\. It does not answer practical questions like “Which database should I use?” Instead, it inclines towards the understanding of “When should I use a shared database?” Any specific technologies ~are easy to google~ can be found ~over the Internet~ somewhere in the Noosphere\.
 
 This book started as a rather small project to prove that patterns can be intuitively classified \(*These nightmarish creatures* can *be felled\! They* can *be beaten\!*\) but grew into a multifaceted compendium of a hundred or so architectures and architectural patterns\. It is grounded in the idea that software and systems architecture evolves naturally, as opposed to being scientifically planned\. Thus, the architectures may exhibit [fractal features]({{< relref "../foundations-of-software-architecture/arranging-communication/programming-and-architectural-paradigms.md" >}}), just like those in biology – merely because the [set of guidelines and forces]({{< relref "../analytics/the-heart-of-software-architecture/cohesers-and-decouplers.md" >}}) remains the same for most systems that range from low\-end embedded devices to world\-wide financial networks\. Moreover, in some cases we can see the same patterns applied to hardware design\.
 
@@ -25,7 +25,7 @@ The latest version of the book is available for free on [GitHub](https://github.
 
 The [first chapter]({{< relref "../introduction/metapatterns.md" >}}) explains the main idea which makes this book different from others\. The [second chapter]({{< relref "../introduction/system-topologies.md" >}}) outlines the scope of the book’s content\. The following chapters in the [first part]({{< relref "../foundations-of-software-architecture/_index.md" >}}) touch on several general topics that are referenced throughout the book\.
 
-The next [four parts]({{< relref "../basic-metapatterns/_index.md" >}}) iterate over *metapatterns* \(clusters of closely related architectural patterns\), starting with the simplest one, namely [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}), then heading towards more complex systems that may be derived from *Monolith* by recursively dissecting it with interfaces\. Each chapter describes a group of related patterns that share benefits and drawbacks, adds in a few references to books and websites, and summarizes the ways those patterns can be transformed into other architectures\. The format of these chapters is described in [Appendix F]({{< relref "../appendices/format-of-a-metapattern.md" >}})\.
+The next [four parts]({{< relref "../basic-metapatterns/_index.md" >}}) iterate over *metapatterns* \(clusters of closely related architectural patterns\), starting with the simplest one, namely [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}), then heading towards more complex systems that may be derived from a *Monolith* by recursively dissecting it with interfaces\. Each chapter describes a group of related patterns that share benefits and drawbacks, adds in a few references to books and websites, and summarizes the ways those patterns can be transformed into other architectures\. The format of these chapters is described in [Appendix F]({{< relref "../appendices/format-of-a-metapattern.md" >}})\.
 
 The [sixth part]({{< relref "../analytics/_index.md" >}}) of the book is analytics – the fruits of the pattern classification explored in the earlier parts\.
 
@@ -68,7 +68,7 @@ Please refer to the [following chapter]({{< relref "../introduction/metapatterns
 - Pattern names are given in [*Title Case Italics*]({{< relref "../appendices/index-of-patterns.md" >}}) and usually link to the pattern’s definition\.
 - The first mention of a term or a name of a pattern component is *italicized*\.
 - *Quotes and puns are in full italics*\.
-- Book references are \[[BRACKETED]({{< relref "../appendices/books-referenced.md" >}})\] and link to the list of the books in Appendix B\.
+- Book references are \[[BRACKETED]({{< relref "../appendices/books-referenced.md" >}})\] and link to the list of the books in [Appendix B]({{< relref "../appendices/books-referenced.md" >}})\.
 - > Supplementary explanations are grayed\-out\.
 
 

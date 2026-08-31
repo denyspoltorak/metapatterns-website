@@ -38,7 +38,7 @@ Let’s take a look at the simplest possible [metapattern]({{< relref "../introd
 | Low resource consumption | Lacks support for conflicting forces |
 | The system’s state is self\-consistent | Any failure crashes the entire system |
 
-<ins>References:</ins> [Big Ball of Mud](http://www.laputan.org/mud/) for a philosophical discussion, [my article](https://itnext.io/introduction-to-software-architecture-with-actors-part-2-on-handling-messages-940c62cb06dc) and \[[POSA2]({{< relref "../appendices/books-referenced.md#posa2" >}})\] for subtypes of *Monolith*, Martin Fowler’s discussion on [starting development with *Monolith*](https://martinfowler.com/bliki/MonolithFirst.html), \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] for the [definition of *monolithic hell*](https://livebook.manning.com/book/microservices-patterns/chapter-1/25) and a post describing the [first\-hand experience of it](https://news.ycombinator.com/item?id=18442941)\.
+<ins>References:</ins> [Big Ball of Mud](http://www.laputan.org/mud/) for a philosophical discussion, [my article](https://itnext.io/introduction-to-software-architecture-with-actors-part-2-on-handling-messages-940c62cb06dc) and \[[POSA2]({{< relref "../appendices/books-referenced.md#posa2" >}})\] for subtypes of *Monolith*, Martin Fowler’s discussion on [starting development with a *Monolith*](https://martinfowler.com/bliki/MonolithFirst.html), \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] for the [definition of *monolithic hell*](https://livebook.manning.com/book/microservices-patterns/chapter-1/25) and a post describing the [first\-hand experience of it](https://news.ycombinator.com/item?id=18442941)\.
 
 We distance ourselves from the [systems architecture’s definition]({{< relref "../analytics/ambiguous-patterns.md#monolith" >}}) of *Monolith* as a single unit of deployment because our main focus lies with the internal structure of systems\. Instead, we will use the old definition of a *monolithic* application as a cohesive lump of code which does not contain any discernible components \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}}), [POSA1]({{< relref "../appendices/books-referenced.md#posa1" >}})\]\.
 
@@ -58,7 +58,7 @@ Overall, tiny *Monoliths* provide the best latency and throughput per CPU core\.
 
 ### Dependencies
 
-Even though a *Monolith* is a single module, meaning that there are no dependencies among its parts \(in fact, everything depends on everything\), it still may depend on some external components or services which it uses\. Those dependencies tend to cause [*vendor lock\-in*](https://en.wikipedia.org/wiki/Vendor_lock-in) or make the software OS\- or hardware\-dependent\. [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) \(including [*MVP*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-presenter-mvp-model-view-adapter-mva-model-view-viewmodel-mvvm-model-1-mvc1-document-view" >}}) and [*MVC*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}})\) decouples a monolithic system from its dependencies by isolating the latter behind [*Adapters*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}})\.
+Even though a *Monolith* is a single module, meaning that there are no dependencies among its parts \(in fact, everything depends on everything\), it still may depend on some external components or services which it uses\. Those dependencies tend to cause [*vendor lock\-in*](https://en.wikipedia.org/wiki/Vendor_lock-in) or make the software OS\- or hardware\-dependent\. [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}}) \(including [*MVP*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-presenter-mvp-model-view-adapter-mva-model-view-viewmodel-mvvm-model-1-mvc1-document-view" >}}) and [*MVC*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}})\) decouples a monolithic system from its dependencies by isolating the latter behind [*adapters*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}})\.
 
 ### Applicability
 
@@ -255,7 +255,7 @@ That makes sense when the module wraps a hardware component which cannot do seve
 </a>
 </figure>
 
-A [*Reactor*](https://www.dre.vanderbilt.edu/~schmidt/PDF/reactor-siemens.pdf) \[[POSA2]({{< relref "../appendices/books-referenced.md#posa2" >}})\] may employ multiple threads by having a [*pool*]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}}) of them waiting for a request or data to arrive\. The incoming event activates one of the waiting threads, which thereby becomes dedicated to processing it, makes several blocking calls and, finally, sends back a response\. When the request processing is complete, the thread returns to the pool of idle threads to wait for the next event to process\.
+A [*Reactor*](https://www.dre.vanderbilt.edu/~schmidt/PDF/reactor-siemens.pdf) \[[POSA2]({{< relref "../appendices/books-referenced.md#posa2" >}})\] may employ multiple threads by having a [*Pool*]({{< relref "../basic-metapatterns/shards.md#stateless-pool-instances-replicated-load-balanced-services-work-queue-lambdas" >}}) of them waiting for a request or data to arrive\. The incoming event activates one of the waiting threads, which thereby becomes dedicated to processing it, makes several blocking calls and, finally, sends back a response\. When the request processing is complete, the thread returns to the pool of idle threads to wait for the next event to process\.
 
 This is the default [simple & stupid](https://en.wikipedia.org/wiki/KISS_principle) implementation of backend services\. Its pitfalls include contention for shared resources, deadlocks, and high memory consumption by OS\-level threads\.
 
@@ -295,7 +295,7 @@ This makes programming and debugging feel as easy as they are with [*Reactor*]({
 
 ### The state of the art
 
-These patterns are not widely recognized and programmers tend to mix them together, for better or for worse\. One is likely to encounter a heavily multithreaded [big ball of mud](https://www.laputan.org/mud/) where some threads serve user requests while others are dedicated to periodic service routines\.
+These patterns are not widely recognized and programmers tend to mix them together, for better or for worse\. One is likely to encounter a heavily multithreaded [*Big Ball of Mud*](https://www.laputan.org/mud/) where some threads serve user requests while others are dedicated to periodic service routines\.
 
 Moreover, people [often call]({{< relref "../analytics/ambiguous-patterns.md#reactor" >}}) any event\-driven service a *Reactor*, causing confusion among those who distinguish between the three patterns\.
 
@@ -464,7 +464,7 @@ The final major drawback of *Monolith* is the cohesiveness of its code\. The rap
 </a>
 </figure>
 
-- A feature may be added or a weakly coupled part of the Monolith separated into a new service\.
+- A feature may be added or a weakly coupled part of the monolith separated into a new service\.
 
 
 <figure>
@@ -492,7 +492,7 @@ The final major drawback of *Monolith* is the cohesiveness of its code\. The rap
 
 ### [Evolutions with Plugins]({{< relref "../appendices/evolutions-of-architectures/evolutions-of-a-monolith-that-rely-on-plugins.md" >}})
 
-The last group of evolutions does not really change the monolithic nature of the application\. Instead, its goal is to improve the customizability of the *Monolith*:
+The last group of evolutions does not really change the monolithic nature of the application\. Instead, its goal is to improve the customizability of the monolith:
 
 - Vanilla [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) is the most direct approach which relies on replaceable bits of logic\.
 

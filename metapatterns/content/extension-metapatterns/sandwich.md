@@ -122,7 +122,7 @@ Having two shared layers provides three options for invoking the [*domain*]({{< 
 
 <aside>
 
-> A [*Cell*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}}) encapsulates several services so that they can be treated as a single entity with the goal of reducing the number of top\-level system components\. Typically, interdependent and closely communicating services are clustered into a single *Cell*, predisposing the *Cell*’s internals for further merging to reduce the communication overhead and the amount of boilerplate code\. Such a scenario often results in a *Sandwich* trapped inside a *Cell*\.
+> A [*Cell*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}}) encapsulates several services so that they can be treated as a single entity with the goal of reducing the number of top\-level system components\. Typically, interdependent and closely communicating services are clustered into a single *Cell*, predisposing the cell’s internals for further merging to reduce the communication overhead and the amount of boilerplate code\. Such a scenario often results in a *Sandwich* trapped inside a *Cell*\.
 
 </aside>
 
@@ -159,7 +159,7 @@ The system consists of:
 
 - A [*blackboard*]({{< relref "../extension-metapatterns/shared-repository.md#blackboard" >}}) – a [*shared data store*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) that contains all the current knowledge about the problem, namely inputs and hypotheses\. It is subdivided into abstraction levels which range from the original inputs through multiple intermediate representations to the output data structure\. Each level usually contains multiple solution attempts\. 
 - *Knowledge sources* – independent, specialized components that process data from a lower level to create a higher\-level hypothesis\. For example, in voice recognition, a knowledge source may read a sound wave and write a letter which that wave encodes\. Another knowledge source may read letters and output English words, while another one tries to find French words\. And the final one collects words into sentences\.
-- A [*control*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) – a [*scheduler*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) that assigns processor time to knowledge sources\. It balances the quality and speed of the solution attempts based on the current progress and remaining time\.
+- A [*control*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) – a [*Scheduler*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) that assigns processor time to knowledge sources\. It balances the quality and speed of the solution attempts based on the current progress and remaining time\.
 
 
 This architecture makes best use of every system layer:
@@ -205,7 +205,7 @@ As *Space\-Based Architecture* runs every component in a [*Mesh*]({{< relref "..
 </a>
 </figure>
 
-*Service\-Based Architecture* \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}}) [but not]({{< relref "../analytics/ambiguous-patterns.md#service-based-architecture" >}}) [DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\] is the most pragmatic and loosely defined of topologies based on *Services* \(hence the name\)\. In a basic *Service\-Based Architecture* the [*subdomain services*]({{< relref "../basic-metapatterns/services.md#whole-subdomain-subdomain-services-macroservices" >}}) are integrated by a [*User Interface*]({{< relref "../extension-metapatterns/proxy.md#user-interface-presentation-layer-separated-presentation-command-line-interface-cli-graphical-user-interface-gui-frontend-human-machine-interface-hmi-man-machine-interface-mmi-operator-interface" >}}) layer, usually a *Frontend*, and there is a single [*Shared Database*]({{< relref "../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}})\. However, as there are no written rules for *Service\-Based Architecture*, multiple databases or finer\-grained *GUI*s may be used for programmers’ convenience, disintegrating the *Sandwich* topology for the sake of less coupled [*Layered Service*s]({{< relref "../fragmented-metapatterns/layered-services.md" >}})\.
+*Service\-Based Architecture* \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}}) [but not]({{< relref "../analytics/ambiguous-patterns.md#service-based-architecture" >}}) [DEDS]({{< relref "../appendices/books-referenced.md#deds" >}})\] is the most pragmatic and loosely defined of topologies based on *Services* \(hence the name\)\. In a basic *Service\-Based Architecture* the [*subdomain services*]({{< relref "../basic-metapatterns/services.md#whole-subdomain-subdomain-services-macroservices" >}}) are integrated by a [*User Interface*]({{< relref "../extension-metapatterns/proxy.md#user-interface-presentation-layer-separated-presentation-command-line-interface-cli-graphical-user-interface-gui-frontend-human-machine-interface-hmi-man-machine-interface-mmi-operator-interface" >}}) layer, usually a *Frontend*, and there is a single [*Shared Database*]({{< relref "../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}})\. However, as there are no written rules for *Service\-Based Architecture*, multiple databases or finer\-grained GUIs may be used for programmers’ convenience, disintegrating the *Sandwich* topology for the sake of less coupled [*Layered Service*s]({{< relref "../fragmented-metapatterns/layered-services.md" >}})\.
 
 <figure>
 <a href="/diagrams/Variants/2/Service-Based%20to%20Layered%20Services.png">
@@ -257,8 +257,8 @@ As *Space\-Based Architecture* runs every component in a [*Mesh*]({{< relref "..
 
 [*Vertical Slice Architecture*](https://www.architecture-weekly.com/p/my-thoughts-on-vertical-slices-cqrs) \(*VSA*\) dedicates a component \(*slice*\) to each use case\. These components usually comprise two layers:
 
-- An [*Application*]({{< relref "../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) layer which checks permissions, pre\-processes input, and accesses the database, calls the domain layer, and handles possible errors\.
-- A [*Domain*]({{< relref "../basic-metapatterns/layers.md#domain-business-rules-or-model" >}}) layer which implements business rules, typically in pure functional style\.
+- An [*application*]({{< relref "../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) layer which checks permissions, pre\-processes input, and accesses the database, calls the domain layer, and handles possible errors\.
+- A [*domain*]({{< relref "../basic-metapatterns/layers.md#domain-business-rules-or-model" >}}) layer which implements business rules, typically in pure functional style\.
 
 
 The slices are co\-located and can be grouped into *features*, which are further grouped into *modules*, resulting in a kind of [*In\-Depth Hierarchy*]({{< relref "../fragmented-metapatterns/hierarchy.md#in-depth-hierarchy-cell-based-microservice-architecture-wso2-version-segmented-microservice-architecture-services-of-services-clusters-of-services-vertical-slice-architecture-vsa" >}})\.

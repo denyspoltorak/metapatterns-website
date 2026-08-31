@@ -47,7 +47,7 @@ If not all the teams are available from day one, it is still preferable to initi
 
 We have already seen above that hierarchical or pipelined domains enable the use of corresponding architectures\. There is more to it\.
 
-Sometimes you expect to have many complex use cases which cannot be matched to your subdomains because every scenario involves multiple components, thus spreading over the entire system\. You would usually collect the global use cases into a dedicated component – an [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}})\. And if the *Orchestrator* grows out of control, it is [subdivided]({{< relref "../../extension-metapatterns/orchestrator.md#variants-by-structure-can-be-combined" >}}) into layers or services\.
+Sometimes you expect to have many complex use cases which cannot be matched to your subdomains because every scenario involves multiple components, thus spreading over the entire system\. You would usually collect the global use cases into a dedicated component – an [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}})\. And if the orchestrator grows out of control, it is [subdivided]({{< relref "../../extension-metapatterns/orchestrator.md#variants-by-structure-can-be-combined" >}}) into layers or services\.
 
 <figure>
 <a href="/diagrams/Heart/Features-1.png">
@@ -135,7 +135,7 @@ Fault tolerance requires you to have [*replicas*]({{< relref "../../basic-metapa
 </a>
 </figure>
 
-Low latency makes you place simplified first response logic close to your input, leading to:
+[Low latency]({{< relref "../../analytics/comparison-of-architectural-patterns/latency-optimizations-on-the-system-level.md" >}}) makes you place simplified first response logic close to your input, leading to:
 
 - [*Model\-View\-Presenter*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md#model-view-presenter-mvp-model-view-adapter-mva-model-view-viewmodel-mvvm-model-1-mvc1-document-view" >}}) or [*Model\-View\-Controller*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}}) pattern families for user interaction\.
 - [*Layers*]({{< relref "../../basic-metapatterns/layers.md" >}}) with [*strategy injection*]({{< relref "../../basic-metapatterns/layers.md#performance" >}}) for single hardware input\.

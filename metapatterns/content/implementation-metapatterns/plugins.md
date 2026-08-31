@@ -37,7 +37,7 @@ primary_image = "/diagrams/Main/Plugins.png"
 
 <ins>References:</ins> \[[SAP]({{< relref "../appendices/books-referenced.md#sap" >}})\] and \[[FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] [mistakenly]({{< relref "../analytics/ambiguous-patterns.md#microkernel" >}}) call this pattern *Microkernel* and dedicate chapters to it\.
 
-Most systems require some extent of customizability that may range from the basic codec selection by a video player to the screens full of tools and wizards unlocked once you upgrade your subscription plan\. This is achieved by keeping the *core* functionality separate from its extensions, which are developed by either your team or external enthusiasts to fine\-tune the behavior of the system\. The cost of flexibility is paid in complexity of design – the need to predict which aspects should be customizable and which *SPI*s \([*Service Provider Interfaces*](https://en.wikipedia.org/wiki/Service_provider_interface)\) are good for both known and still unknown uses by the extensions\. If the communication between the core and *plugins* is heavy, performance may suffer\.
+Most systems require some extent of customizability that may range from the basic codec selection by a video player to the screens full of tools and wizards unlocked once you upgrade your subscription plan\. This is achieved by keeping the *core* functionality separate from its extensions, which are developed by either your team or external enthusiasts to fine\-tune the behavior of the system\. The cost of flexibility is paid in complexity of design – the need to predict which aspects should be customizable and which *SPI*s \([*Service Provider Interfaces*](https://en.wikipedia.org/wiki/Service_provider_interface)\) are good for both known and still unknown uses by the extensions\. If the communication between the core and plugins is heavy, performance may suffer\.
 
 ### Performance
 
@@ -47,7 +47,7 @@ The only case for a plugin to improve performance of a system that I can think o
 
 - The use of *stored procedures* in databases,
 - HFT rules and price tables [uploaded](https://www.youtube.com/watch?v=sX2nF1fW7kI) to a network card or FPGA,
-- Customization of a supplier [*Cell*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}}) for varying needs of its client *Cells* in [*Domain\-Oriented Microservice Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#domain-oriented-microservice-architecture-doma" >}})\.
+- Customization of a supplier [*Cell*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}}) for varying needs of its client cells in [*Domain\-Oriented Microservice Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#domain-oriented-microservice-architecture-doma" >}})\.
 
 
 <figure>
@@ -103,7 +103,7 @@ Each *plugin* depends on the *core*’s *API* \(for *Addons*\) or *SPI* \(for *P
 *Plugins*:
 
 - Implement [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}), [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}), or [*Cell*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}})\.
-- Extend [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}), [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}), or [*Cell*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}}) with one or two layers of services\.
+- Extend a [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}), [*Layers*]({{< relref "../basic-metapatterns/layers.md" >}}), or [*Cell*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}}) with one or two layers of services\.
 
 
 ## Variants
@@ -159,7 +159,7 @@ Plugins may be:
 
 ## Examples
 
-*Plugins* can take different roles and places in the system\. Though their classification and naming has never been well established, we can discern the following kinds of *plugins*, which are non\-exclusive, meaning that a single application may support some or all of them at once:
+Plugins can take different roles and places in the system\. Though their classification and naming has never been well established, we can discern the following kinds of plugins, which are non\-exclusive, meaning that a single application may support some or all of them at once:
 
 - A [true *Plugin*]({{< relref "#true-plugin-or-plug-in" >}}) provides custom low\-level functionality\.
 - An [*Ambassador Plugin*]({{< relref "#ambassador-plugin-logic-extension" >}}) injects a part of a given service’s business logic into another service\.
@@ -180,9 +180,9 @@ Plugins may be:
 </a>
 </figure>
 
-A true *Plugin* is registered with and called by the system’s *core* to provide \(as an algorithm\) or extend \(as a custom step\) a specific low\-level functionality\. It is usually made by a third party\.
+A true plugin is registered with and called by the system’s *core* to provide \(as an algorithm\) or extend \(as a custom step\) a specific low\-level functionality\. It is usually made by a third party\.
 
-Customizable software often exposes multiple interfaces for different kinds of *Plugins*, some of which are *optional* \(0 or 1 instance\) or *subscriptional* \(multiple instances\) as explained [earlier]({{< relref "#by-the-number-of-instances" >}})\.
+Customizable software often exposes multiple interfaces for different kinds of plugins, some of which are *optional* \(0 or 1 instance\) or *subscriptional* \(multiple instances\) as explained [earlier]({{< relref "#by-the-number-of-instances" >}})\.
 
 Examples: codecs in a video player, country\-specific tax calculation rules in accounting software, or filters in a traffic sniffer\.
 
@@ -198,9 +198,9 @@ Examples: codecs in a video player, country\-specific tax calculation rules in a
 </a>
 </figure>
 
-A service may accept *Plugins* that [act on behalf of peer services](https://www.uber.com/en-UA/blog/microservice-architecture/) \(are are their [*Ambassadors*]({{< relref "../extension-metapatterns/proxy.md#on-the-client-side-ambassador" >}})\) and are implemented by their teams\. That [inverts dependencies]({{< relref "../analytics/comparison-of-architectural-patterns/dependency-inversion-in-architectural-patterns.md" >}}): whoever wants to affect the behavior of your service uses your SPI to inject their code into your service which apart from that remains self\-contained\. As a result, whatever used to be a system\-wide workflow becomes limited to a single subdomain\.
+A service may accept plugins that [act on behalf of peer services](https://www.uber.com/en-UA/blog/microservice-architecture/) \(are are their [*Ambassadors*]({{< relref "../extension-metapatterns/proxy.md#on-the-client-side-ambassador" >}})\) and are implemented by their teams\. That [inverts dependencies]({{< relref "../analytics/comparison-of-architectural-patterns/dependency-inversion-in-architectural-patterns.md" >}}): whoever wants to affect the behavior of your service uses your SPI to inject their code into your service which apart from that remains self\-contained\. As a result, whatever used to be a system\-wide workflow becomes limited to a single subdomain\.
 
-Though an *Ambassador Plugin* \(aka Uber’s [*Logic Extension*](https://www.uber.com/en-UA/blog/microservice-architecture/)\) may call the service on whose behalf it acts, it is preferable performance\-wise for it to make independent decisions without cross\-service calls \(it works as a smart [*Cache*]({{< relref "../extension-metapatterns/proxy.md#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}}) that provides decisions instead of data\)\. For data\-driven decisions the *Ambassador* may need to opaquely receive and store data \([*Data Extension*](https://www.uber.com/en-UA/blog/microservice-architecture/)\) in its host’s data store\.
+Though an *Ambassador Plugin* \(aka Uber’s [*Logic Extension*](https://www.uber.com/en-UA/blog/microservice-architecture/)\) may call the service on whose behalf it acts, it is preferable performance\-wise for it to make independent decisions without cross\-service calls \(it works as a smart [*Cache*]({{< relref "../extension-metapatterns/proxy.md#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}}) that provides decisions instead of data\)\. For data\-driven decisions the ambassador may need to opaquely receive and store data \([*Data Extension*](https://www.uber.com/en-UA/blog/microservice-architecture/)\) in its host’s data store\.
 
 *Ambassador Plugins* are widely used in Uber’s [*Domain\-Oriented Microservice Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md#domain-oriented-microservice-architecture-doma" >}}) to decouple its [*Cells*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#cell-cluster-domain" >}})\.
 
@@ -216,7 +216,7 @@ Though an *Ambassador Plugin* \(aka Uber’s [*Logic Extension*](https://www.ube
 </a>
 </figure>
 
-An *Extension* changes use cases by modifying the application’s business logic, but it is still called by the application’s *core*\. An *Extension* may install a group of low\-level *Plugins* which add to the system’s low\-level functionality whatever tools the *Extension* relies on\.
+An *Extension* changes use cases by modifying the application’s business logic, but it is still called by the application’s *core*\. An *Extension* may install a group of low\-level plugins which add to the system’s low\-level functionality whatever tools the extension relies on\.
 
 Examples: IDE customization\.
 
@@ -232,7 +232,7 @@ Examples: IDE customization\.
 </a>
 </figure>
 
-An *Add\-in* is deeply integrated with the *core* – the system has been originally designed to provide it thorough access to its internals\. It comes from the system’s creators or external teams that commit to the system *core*’s codebase\.
+An *Add\-in* is deeply integrated with the *core* – the system has been originally designed to provide it thorough access to its internals\. It comes from the system’s creators or external teams that commit to the system core’s codebase\.
 
 Examples: complex extensions for web browsers or static website generators\.
 

@@ -9,7 +9,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 # Evolutions of a Monolith that rely on Plugins {anchor=false}
 
-The last group of evolutions which we will review does not really change the monolithic nature of the application\. Instead, its goal is to improve the *customizability* of the [*Monolith*]({{< relref "../../basic-metapatterns/monolith.md" >}}):
+The last group of evolutions which we will review does not really change the monolithic nature of the application\. Instead, its goal is to improve the *customizability* of the [monolith]({{< relref "../../basic-metapatterns/monolith.md" >}}):
 
 - Vanilla [*Plugins*]({{< relref "../../implementation-metapatterns/plugins.md" >}}) are the most direct approach which relies on tailorable bits of logic\.
 - [*Hexagonal Architecture*]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md" >}}) is a subtype of *Plugins* which is all about isolating the main code from any third\-party components which it uses\.

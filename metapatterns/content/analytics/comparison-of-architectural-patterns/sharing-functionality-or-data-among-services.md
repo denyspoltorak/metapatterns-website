@@ -15,7 +15,7 @@ Architectural patterns manifest several ways of sharing functionality or data am
 
 The simplest way to use a shared functionality \(an *aspect*\) is to call the module which implements it directly\. This is possible if the users and the provider of the aspect reside in the same process, as in a [*Monolith*]({{< relref "../../basic-metapatterns/monolith.md" >}}) or module\-based \(single application\) [*Layers*]({{< relref "../../basic-metapatterns/layers.md" >}})\.
 
-Sharing data inside a process is similar, but usually requires some kind of protection, such as an [Readers\-writer lock](https://en.wikipedia.org/wiki/Readers%E2%80%93writer_lock), around it to serialize access from multiple threads\.
+Sharing data inside a process is similar, but usually requires some kind of protection, such as a [readers\-writer lock](https://en.wikipedia.org/wiki/Readers%E2%80%93writer_lock), around it to serialize access from multiple threads\.
 
 <figure>
 <a href="/diagrams/Conclusion/Sharing-DirectCall.png">
@@ -29,7 +29,7 @@ Sharing data inside a process is similar, but usually requires some kind of prot
 
 ## Make a dedicated service
 
-In a distributed system you can place the functionality or data to share into a separate service to be accessed over the network, yielding [*Service\-Oriented Architecture*]({{< relref "../../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}) for shared utilities or a [*Shared Repository*]({{< relref "../../extension-metapatterns/shared-repository.md" >}}) / [*Polyglot Persistence*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md" >}}) for shared data\.
+In a distributed system you can place the functionality or data to share into a separate service to be accessed over the network, yielding a [*Service\-Oriented Architecture*]({{< relref "../../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}) for shared utilities or a [*Shared Repository*]({{< relref "../../extension-metapatterns/shared-repository.md" >}}) / [*Polyglot Persistence*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md" >}}) for shared data\.
 
 <figure>
 <a href="/diagrams/Conclusion/Sharing-DedicatedService.png">
@@ -68,7 +68,7 @@ Another case of replication is importing the same code in multiple services, whi
 <picture>
 <source srcset="/diagrams/Conclusion/Sharing-Duplicate.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Sharing-Duplicate.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Sharing-Duplicate.png" alt="Replicated loggers in each instance of a service in shards, in code imported by every nanoservice, and in sidecars of microservices. A replicated counter in a data grid." loading="lazy" width="1363" height="644" style="width:100%"/>
+<img src="/diagrams/Conclusion/Sharing-Duplicate.png" alt="Replicated loggers in each instance of a service in shards, in code imported by every nanoservice, and in sidecars of microservices. A replicated counter in a data grid." loading="lazy" width="1343" height="644" style="width:100%"/>
 </picture>
 </a>
 </figure>

@@ -50,7 +50,7 @@ Others are new and thus deserve more attention:
 
 <ins>Prerequisite</ins>: the layers share programming language, hardware setup, and qualities\.
 
-If your system’s development [is finished]({{< relref "../../analytics/architecture-and-product-life-cycle.md#death-the-ultimate-release--monolith" >}}) \(no changes are expected\) and you really need that extra 5% performance improvement, then you can try merging everything back into a *Monolith* or a [*3\-Tier*]({{< relref "../../basic-metapatterns/layers.md#three-tier-architecture" >}}) system \(front, back, data\)\.
+If your system’s development [is finished]({{< relref "../../analytics/architecture-and-product-life-cycle.md#death-the-ultimate-release--monolith" >}}) \(no changes are expected\) and you really need that extra 5% performance improvement, then you can try merging everything back into a *Monolith* or a [*Three\-Tier*]({{< relref "../../basic-metapatterns/layers.md#three-tier-architecture" >}}) system \(frontend, backend, database\)\.
 
 <ins>Pros</ins>: 
 

@@ -62,7 +62,7 @@ This architecture covers way more complex use cases than [*Pipes and Filters*]({
 <picture>
 <source srcset="/diagrams/Conclusion/Pipelineliness-CQRS.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/Pipelineliness-CQRS.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/Pipelineliness-CQRS.png" alt="A CQRS system makes a data pipeline." loading="lazy" width="863" height="403" style="width:100%"/>
+<img src="/diagrams/Conclusion/Pipelineliness-CQRS.png" alt="A CQRS system makes a data pipeline." loading="lazy" width="863" height="403" style="width:91%"/>
 </picture>
 </a>
 </figure>
@@ -85,7 +85,7 @@ When data from events is stored for a future use \(as with the aggregation above
 
 ## Summary
 
-There are four architectures with unidirectional data flow, which is characteristic of [*pipelines*]({{< relref "../../basic-metapatterns/pipeline.md" >}}):
+There are four architectures with unidirectional data flow, which is characteristic of [*Pipelines*]({{< relref "../../basic-metapatterns/pipeline.md" >}}):
 
 - [*Pipes and Filters*]({{< relref "../../basic-metapatterns/pipeline.md#pipes-and-filters-workflow-system" >}}),
 - [*Choreographed Event\-Driven Architecture* \(*EDA*\)]({{< relref "../../basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}}),
@@ -93,4 +93,4 @@ There are four architectures with unidirectional data flow, which is characteris
 - [*Model\-View\-Controller* \(*MVC*\)]({{< relref "../../implementation-metapatterns/hexagonal-architecture.md#model-view-controller-mvc-action-domain-responder-adr-resource-method-representation-rmr-model-2-mvc2-game-development-engine" >}})\.
 
 
-The first two, being true pipelines, are built around data processing and transformation, while for the others it is just an aspect of implementation – their separation of input and output yields pairs of streams\.
+The first two, being true *Pipelines*, are built around data processing and transformation, while for the others it is just an aspect of implementation – their separation of input and output yields pairs of streams\.

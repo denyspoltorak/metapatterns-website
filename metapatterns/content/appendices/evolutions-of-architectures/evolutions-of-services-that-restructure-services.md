@@ -38,7 +38,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 If you need to add a new functionality that does not naturally fit into one of the existing services, you may create a new service and, maybe, get a new team for it\.
 
-If one of your services has grown too large, you should look for a way to subdivide it \(likely through a [*Sandwich*]({{< relref "../../extension-metapatterns/sandwich.md" >}}) stage with a shared [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) and [*database*]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}})\) to decrease the size and, correspondingly, complexity of its code and get multiple teams to work on the resulting \(sub\)services\. However, that makes sense only if the old service is not highly cohesive – otherwise [the resulting subsystem may be more complex]({{< relref "../../foundations-of-software-architecture/modules-and-complexity.md#coupling-and-cohesion" >}}) than the original service\.
+If one of your services has grown too large, you should look for a way to subdivide it \(likely through a [*Sandwich*]({{< relref "../../extension-metapatterns/sandwich.md" >}}) stage with a shared [*orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) and [*database*]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}})\) to decrease the size and, correspondingly, complexity of its code and get multiple teams to work on the resulting \(sub\)services\. However, that makes sense only if the old service is not highly cohesive – otherwise [the resulting subsystem may be more complex]({{< relref "../../foundations-of-software-architecture/modules-and-complexity.md#coupling-and-cohesion" >}}) than the original service\.
 
 <ins>Pros</ins>: 
 
@@ -119,11 +119,11 @@ Therefore, cluster the services which share a subdomain into a co\-deployed cohe
 
 <ins>Pros</ins>: 
 
-- Managing ten *Cells* is much easier than managing a hundred services\.
+- Managing ten cells is much easier than managing a hundred services\.
 - More clear and independent subdomains as their interdependencies become explicit\.
 - Lower traffic because the closely communicating services are now co\-located\. 
-- Lower data storage requirements as the contents of the *Cell* may [share a database]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}})\.
-- No boilerplate code for versioning or [data views]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) inside the *Cell*\.
+- Lower data storage requirements as the contents of the cell may [share a database]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}})\.
+- No boilerplate code for versioning or [data views]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#reporting-database-cqrs-view-database-event-sourced-view-source-aligned-native-data-product-quantum-dpq-of-data-mesh" >}}) inside the cell\.
 
 
 <ins>Cons</ins>: 
@@ -134,5 +134,5 @@ Therefore, cluster the services which share a subdomain into a co\-deployed cohe
 
 <ins>Further steps</ins>:
 
-- Complete the *Cell* encapsulation through the use of [*Adapters*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) and [*Ambassador Plugins*]({{< relref "../../implementation-metapatterns/plugins.md#ambassador-plugin-logic-extension" >}})\.
+- Complete the cell encapsulation through the use of [*Adapters*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) and [*Ambassador Plugins*]({{< relref "../../implementation-metapatterns/plugins.md#ambassador-plugin-logic-extension" >}})\.
 - Transform any strongly coupled *Cells* into [*Sandwiches*]({{< relref "../../extension-metapatterns/sandwich.md" >}})\.

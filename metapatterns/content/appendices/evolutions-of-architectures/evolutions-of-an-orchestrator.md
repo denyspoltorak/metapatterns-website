@@ -17,8 +17,8 @@ Employing an [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestra
 
 There is one way to counter the first point and more ways to solve the second one:
 
-- Subdivide the *Orchestrator* by the system’s subdomains, forming [*Layered Services*]({{< relref "../../fragmented-metapatterns/layered-services.md" >}}) and minimizing network communication\.
-- Subdivide the *Orchestrator* by the type of client, forming [*Backends for Frontends*]({{< relref "../../fragmented-metapatterns/backends-for-frontends--bff-.md" >}})\.
+- Subdivide the orchestrator by the system’s subdomains, forming [*Layered Services*]({{< relref "../../fragmented-metapatterns/layered-services.md" >}}) and minimizing network communication\.
+- Subdivide the orchestrator by the type of client, forming [*Backends for Frontends*]({{< relref "../../fragmented-metapatterns/backends-for-frontends--bff-.md" >}})\.
 - Add another [*layer*]({{< relref "../../basic-metapatterns/layers.md" >}}) of orchestration\.
 - Build a [*Top\-Down Hierarchy*]({{< relref "../../fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}})\.
 
@@ -37,15 +37,15 @@ There is one way to counter the first point and more ways to solve the second on
 
 <ins>Patterns</ins>: [Orchestrated Three\-Layered Services]({{< relref "../../fragmented-metapatterns/layered-services.md#orchestrated-three-layered-services" >}}) \([Layered Services]({{< relref "../../fragmented-metapatterns/layered-services.md" >}}) \([Services]({{< relref "../../basic-metapatterns/services.md" >}}), [Layers]({{< relref "../../basic-metapatterns/layers.md" >}})\)\)\.
 
-<ins>Goal</ins>: simplify the *Orchestrator*, let the service teams own orchestration, decouple forces for the services, and improve performance\.
+<ins>Goal</ins>: simplify the orchestrator, let the service teams own orchestration, decouple forces for the services, and improve performance\.
 
 <ins>Prerequisite</ins>: the high\-level \([orchestration]({{< relref "../../foundations-of-software-architecture/arranging-communication/orchestration.md" >}})\) logic is weakly coupled between the subdomains\.
 
-If the [*orchestration* logic]({{< relref "../../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) mostly follows the subdomains, it may be possible to partition it accordingly\. Each service gets a part of the *Orchestrator* that mostly deals with its subdomain but may call other services when needed\. As a result, [each service orchestrates every other service]({{< relref "../../foundations-of-software-architecture/arranging-communication/orchestration.md#mutual-orchestration" >}})\. Still, a large part of orchestration becomes internal to each service, meaning that fewer calls over the network are involved\.
+If the [*orchestration* logic]({{< relref "../../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}) mostly follows the subdomains, it may be possible to partition it accordingly\. Each service gets a part of the orchestrator that mostly deals with its subdomain but may call other services when needed\. As a result, [each service orchestrates every other service]({{< relref "../../foundations-of-software-architecture/arranging-communication/orchestration.md#mutual-orchestration" >}})\. Still, a large part of orchestration becomes internal to each service, meaning that fewer calls over the network are involved\.
 
 <ins>Pros</ins>:
 
-- You subdivide the large *Orchestrator* codebase\.
+- You subdivide the large orchestrator codebase\.
 - Performance is improved\.
 - The services become more independent in their quality attributes\.
 
@@ -76,7 +76,7 @@ If the [*orchestration* logic]({{< relref "../../basic-metapatterns/layers.md#ap
 
 <ins>Patterns</ins>: [Backends for Frontends]({{< relref "../../fragmented-metapatterns/backends-for-frontends--bff-.md" >}}), [Orchestrator]({{< relref "../../extension-metapatterns/orchestrator.md" >}})\.
 
-<ins>Goal</ins>: simplify the *Orchestrator*, employ a team per client type, and decouple the quality attributes for clients\.
+<ins>Goal</ins>: simplify the orchestrator, employ a team per client type, and decouple the quality attributes for clients\.
 
 <ins>Prerequisite</ins>: clients vary in workflows and forces\.
 
@@ -84,20 +84,20 @@ When use cases for clients vary, it makes sense for each kind of client to have 
 
 <ins>Pros</ins>: 
 
-- The smaller *Orchestrators* are independent in qualities, technologies, and teams\.
-- The smaller *Orchestrators* are … well, smaller\.
+- The smaller orchestrators are independent in qualities, technologies, and teams\.
+- The smaller orchestrators are … well, smaller\.
 
 
 <ins>Cons</ins>: 
 
-- There is no good way to [share code]({{< relref "../../analytics/comparison-of-architectural-patterns/sharing-functionality-or-data-among-services.md" >}}) between the *Orchestrators*\.
+- There is no good way to [share code]({{< relref "../../analytics/comparison-of-architectural-patterns/sharing-functionality-or-data-among-services.md" >}}) between the orchestrators\.
 - There are more system components\.
 
 
 <ins>Further steps</ins>:
 
-- You may want to add client\-specific [*Proxies*]({{< relref "../../extension-metapatterns/proxy.md" >}}) and, maybe, co\-locate them with the *Orchestrators* to avoid the extra network hop\.
-- Adding another shared [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) below the ones dedicated to clients creates a place for sharing functionality among the *Orchestrators*\.
+- You may want to add client\-specific [*Proxies*]({{< relref "../../extension-metapatterns/proxy.md" >}}) and, maybe, co\-locate them with the orchestrators to avoid the extra network hop\.
+- Adding another shared [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) below the ones dedicated to clients creates a place for sharing functionality among the orchestrators\.
 - If you are running [*Microservices*]({{< relref "../../basic-metapatterns/services.md#microservices" >}}) over a [*Service Mesh*]({{< relref "../../implementation-metapatterns/mesh.md#service-mesh" >}}), [*Sidecars*]({{< relref "../../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) may help to share [generic code]({{< relref "../../basic-metapatterns/layers.md#generic-code-libraries-and-utilities" >}})\.
 
 
@@ -153,7 +153,7 @@ You may use two or three *orchestration frameworks* \(engines\) which differ in 
 
 <ins>Patterns</ins>: [Top\-Down Hierarchy]({{< relref "../../fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}}) \([Hierarchy]({{< relref "../../fragmented-metapatterns/hierarchy.md" >}})\)\.
 
-<ins>Goal</ins>: simplify the *Orchestrator* and, if possible, the services\.
+<ins>Goal</ins>: simplify the orchestrator and, if possible, the services\.
 
 <ins>Prerequisite</ins>: the domain is hierarchical\.
 

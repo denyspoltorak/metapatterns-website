@@ -47,7 +47,7 @@ On one hand, the pattern is very specific and feels esoteric\. On the other – 
 
 The *microkernel*, being an extra layer of indirection, degrades performance\. The actual extent varies from a few percent for *OSes* and *virtualizers* to an order of magnitude for *scripts*\. There is also a more grievous aspect of performance degradation, namely that latency becomes unpredictable as soon as the system runs short of one of the shared resources: memory, disk space, CPU time, or even storage for deleted objects\. That is why [real\-time systems]({{< relref "../foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}}) rely on extremely minimalistic [real\-time OS](https://en.wikipedia.org/wiki/Real-time_operating_system)es or even run on bare metal\.
 
-It is common to see system components communicate directly via shared memory or sockets bypassing the *microkernel* to alleviate the performance penalty which it introduces\.
+It is common to see system components communicate directly via shared memory or sockets bypassing the microkernel to alleviate the performance penalty which it introduces\.
 
 ### Dependencies
 
@@ -123,7 +123,7 @@ The *applications* depend on the *API* of the *microkernel* while the *providers
 </a>
 </figure>
 
-The original inspiration for *Microkernel*, namely *operating systems*, provides an almost perfect example of the pattern, even though their kernels are not that “micro\-” \(unless you are running [MINIX](https://en.wikipedia.org/wiki/Minix_3#Architecture) or [QNX](https://en.wikipedia.org/wiki/QNX#Technology)\)\. [Device *drivers*]({{< relref "../basic-metapatterns/services.md#inexact-device-drivers-pedestal" >}}) \(*internal services*\) encapsulate available hardware resources \(see [*Pedestal*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#pedestal" >}})\) and make them accessible to user\-space *applications* \(*external services*\) via an OS *kernel*\. *Drivers* for a given kind of subsystem \(e\.g\. network adapter or disk drive\) are polymorphic towards the kernel and match the hardware installed\. 
+The original inspiration for *Microkernel*, namely *operating systems*, provides an almost perfect example of the pattern, even though their kernels are not that “micro\-” \(unless you are running [MINIX](https://en.wikipedia.org/wiki/Minix_3#Architecture) or [QNX](https://en.wikipedia.org/wiki/QNX#Technology)\)\. [Device *drivers*]({{< relref "../basic-metapatterns/services.md#inexact-device-drivers-pedestal" >}}) \(*internal services*\) encapsulate available hardware resources \(see [*Pedestal*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#pedestal" >}})\) and make them accessible to user\-space *applications* \(*external services*\) via an OS *kernel*\. Drivers for a given kind of subsystem \(e\.g\. network adapter or disk drive\) are polymorphic towards the kernel and match the hardware installed\. 
 
 ### Software Framework, Pluggable Component Framework
 
@@ -160,12 +160,12 @@ In a *Software Framework* or *Pluggable Component Framework* \[[DDD]({{< relref 
 <picture>
 <source srcset="/diagrams/Variants/4/Interpreter.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/4/Interpreter.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/4/Interpreter.png" alt="Each script runs over its instance of an interprester. All the interpreters share a set of libraries." loading="lazy" width="902" height="303" style="width:100%"/>
+<img src="/diagrams/Variants/4/Interpreter.png" alt="Each script runs over its instance of an interprester. All the interpreters share a set of libraries." loading="lazy" width="912" height="303" style="width:100%"/>
 </picture>
 </a>
 </figure>
 
-User\-provided *scripts* are run by an *Interpreter* \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] which also allows them to access a set of installed libraries\. The *Interpreter* is a microkernel, and the syntax of the script or [*DSL*](https://en.wikipedia.org/wiki/Domain-specific_language) which it interprets is the microkernel’s API\.
+User\-provided *scripts* are run by an *Interpreter* \[[GoF]({{< relref "../appendices/books-referenced.md#gof" >}})\] which also allows them to access a set of installed libraries\. The interpreter is a *microkernel*, and the syntax of the script or [*DSL*](https://en.wikipedia.org/wiki/Domain-specific_language) which it interprets is the microkernel’s API\.
 
 ### Configurator, Configuration File
 
@@ -193,7 +193,7 @@ User\-provided *scripts* are run by an *Interpreter* \[[GoF]({{< relref "../appe
 </a>
 </figure>
 
-A [*Saga*]({{< relref "../extension-metapatterns/orchestrator.md#orchestrated-saga-saga-orchestrator-saga-execution-component-transaction-script-coordinator" >}}) \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] orchestrates distributed transactions\. It may be written in a [*DSL*](https://en.wikipedia.org/wiki/Domain-specific_language) which requires a compiler or [interpreter]({{< relref "#interpreter-script-domain-specific-language-dsl" >}}), which is a *microkernel*, to execute\.
+A [*Saga*]({{< relref "../extension-metapatterns/orchestrator.md#orchestrated-saga-saga-orchestrator-saga-execution-component-transaction-script-coordinator" >}}) \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\] orchestrates distributed transactions\. It may be written in a [*DSL*](https://en.wikipedia.org/wiki/Domain-specific_language) which requires a *compiler* or [*interpreter*]({{< relref "#interpreter-script-domain-specific-language-dsl" >}}), which is a *microkernel*, to execute\.
 
 ### AUTOSAR Classic Platform
 

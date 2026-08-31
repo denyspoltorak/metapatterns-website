@@ -40,7 +40,7 @@ primary_image = "/diagrams/Main/Shards.png"
 
 <aside>
 
-> There is a sibling metapattern, namely [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}}), in which instances of a component closely communicate among themselves\. The difference between the patterns lies in the strength of interactions: while each *shard* exists primarily to serve its clients, a *Mesh node*’s priority is preserving the *Mesh* itself from falling prey to entropy, making the *Mesh* into a reliable distributed \(virtual\) layer\. Some systems, such as distributed databases, hold the middle ground – their shards or nodes both intercommunicate intensely and execute a variety of client requests\. 
+> There is a sibling metapattern, namely [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}}), in which instances of a component closely communicate among themselves\. The difference between the patterns lies in the strength of interactions: while each *shard* exists primarily to serve its clients, a *Mesh node*’s priority is preserving the mesh itself from falling prey to entropy, making the mesh into a reliable distributed \(virtual\) layer\. Some systems, such as distributed databases, hold the middle ground – their shards or nodes both intercommunicate intensely and execute a variety of client requests\. 
 
 </aside>
 
@@ -97,7 +97,7 @@ A *sharded* system features properties of the pattern it replicates \(a single\-
 *Shards*:
 
 - Applies to a [*Monolith*]({{< relref "../basic-metapatterns/monolith.md" >}}) or any kind of subsystem\.
-- Can be extended with [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}), [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}}), [*Proxies*]({{< relref "../extension-metapatterns/proxy.md" >}}) or [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}})\.
+- Can be extended with a [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}), [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}}), [*Proxies*]({{< relref "../extension-metapatterns/proxy.md" >}}), or an [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}})\.
 - Is the foundation for [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}})\.
 
 
@@ -170,13 +170,13 @@ There are several subtypes of sharding that differ in the way they handle state:
 
 Another use of *Shards* is when a service provider allocates a whole shard to each of its clients to grant them data isolation, stable performance, and security\. This approach is contrasted against a cheaper option of [*Multitenancy*](https://en.wikipedia.org/wiki/Multitenancy) where several client organizations \(tenants\) share a shard\. In that case different shards may be customized to vary in functionality, available resources, and [SLA](https://en.wikipedia.org/wiki/Service-level_agreement) to provide better service to higher\-paying tenants\.
 
-*Cells*, according to the [Amazon terminology](https://docs.aws.amazon.com/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/what-is-a-cell-based-architecture.html), are copies of a whole system deployed to several data centers, each serving local users\. The locality improves latency and saves on Internet traffic while having multiple instances of the system up and running provides availability\. The downside of this approach is its complexity and the amount of global traffic needed to keep the *Cells* in sync\.
+*Cells*, according to the [Amazon terminology](https://docs.aws.amazon.com/wellarchitected/latest/reducing-scope-of-impact-with-cell-based-architecture/what-is-a-cell-based-architecture.html), are copies of a whole system deployed to several data centers, each serving local users\. The locality improves latency and saves on Internet traffic while having multiple instances of the system up and running provides availability\. The downside of this approach is its complexity and the amount of global traffic needed to keep the cells in sync\.
 
 It usually takes a stand\-alone [*Sharding Proxy*]({{< relref "../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) – a kind of *Load Balancer* – to route a client’s requests to the shard that owns its data\. However, there are other options \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\]:
 
-- The *Sharding Proxy* may be deployed to each client as a client\-side [*Ambassador*]({{< relref "../extension-metapatterns/proxy.md#on-the-client-side-ambassador" >}}) to avoid the extra network hop\. This approach requires a means for keeping the *Ambassadors* up\-to\-date with your system’s code\.
+- The sharding proxy may be deployed to each client as a client\-side [*Ambassador*]({{< relref "../extension-metapatterns/proxy.md#on-the-client-side-ambassador" >}}) to avoid the extra network hop\. This approach requires a means for keeping the ambassadors up\-to\-date with your system’s code\.
 - You can publish your *sharding function* \[[DDS]({{< relref "../appendices/books-referenced.md#dds" >}})\] and the number of shards in your public API to let your clients choose which shard to access without your help\. That may work for internal clients implemented by your own or a neighbor team\.
-- Finally, each shard may be able to forward client requests to any other shard – making each shard into a kind of *Sharding Proxy* and an entry point into the resulting [*Mesh*]({{< relref "../implementation-metapatterns/mesh.md" >}})\. If your client accesses a wrong shard, the request is still served, though a little slower, through being forwarded between the shards \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\]\.
+- Finally, each shard may be able to forward client requests to any other shard – making each shard into a kind of *Sharding Proxy* and an entry point into the resulting [mesh]({{< relref "../implementation-metapatterns/mesh.md" >}})\. If your client accesses a wrong shard, the request is still served, though a little slower, through being forwarded between the shards \[[DDIA]({{< relref "../appendices/books-referenced.md#ddia" >}})\]\.
 
 
 *Sharding* solves scaling of an application both in regard to the number of its clients and to the size of its data\. However, it works well only if each client’s data is independent from other clients\. Moreover, if one of the shards crashes, the information it owns becomes unavailable unless [*replication*]({{< relref "#persistent-copy-replica" >}}) \(see below\) has been set up as well\.

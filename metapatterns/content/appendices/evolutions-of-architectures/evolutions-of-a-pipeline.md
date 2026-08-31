@@ -13,7 +13,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 There are a couple of *Pipeline*\-specific evolutions:
 
-- The first service of the *Pipeline* can be promoted to [*Front Controller*]({{< relref "../../extension-metapatterns/orchestrator.md#inexact-front-controller" >}}) which tracks status updates for every request it handles\.
+- The first service of the pipeline can be promoted to [*Front Controller*]({{< relref "../../extension-metapatterns/orchestrator.md#inexact-front-controller" >}}) which tracks status updates for every request it handles\.
 - Adding an [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) turns a [*Pipeline*]({{< relref "../../basic-metapatterns/pipeline.md" >}}) into [*Services*]({{< relref "../../basic-metapatterns/services.md" >}})\. As the high\-level business logic moves to the [orchestration layer]({{< relref "../../basic-metapatterns/layers.md#application-use-cases-or-integration" >}}), the services don’t need to interact directly anymore, the interservice communication channels disappear, and the system turns into ordinary [*Orchestrated Services*]({{< relref "../../extension-metapatterns/orchestrator.md" >}})\.
 
 
@@ -35,7 +35,7 @@ There are a couple of *Pipeline*\-specific evolutions:
 
 <ins>Prerequisite</ins>: request processing steps are slow \(may depend on human action\)\.
 
-If the request processing steps require heavy calculations or manual action, then clients may want to query the status of their requests, and analysts may want to see bottlenecks in the *Pipeline*\. Let the first service in the *Pipeline* track the state of all the running requests by subscribing to status notifications from other services\.
+If the request processing steps require heavy calculations or manual action, then clients may want to query the status of their requests, and analysts may want to see bottlenecks in the pipeline\. Let the first service in the pipeline track the state of all the running requests by subscribing to status notifications from other services\.
 
 <ins>Pros</ins>: 
 
@@ -49,7 +49,7 @@ If the request processing steps require heavy calculations or manual action, the
 
 <ins>Further steps</ins>:
 
-- The *Front Controller* may be further promoted to [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) if there is a need to support many complex scenarios\.
+- The front controller may be further promoted to [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) if there is a need to support many complex scenarios\.
 
 
 ## Add an Orchestrator
@@ -87,11 +87,11 @@ When a [*choreographed*]({{< relref "../../foundations-of-software-architecture/
 <ins>Cons</ins>: 
 
 - The number of messages in the system doubles, thus its performance may degrade\.
-- The *Orchestrator* may become a development and performance bottleneck, or a single point of failure\.
+- The orchestrator may become a development and performance bottleneck, or a single point of failure\.
 
 
 <ins>Further steps</ins>:
 
 - If there are several clients that strongly vary in their workflows, you can apply [*Backends for Frontends*]({{< relref "../../fragmented-metapatterns/backends-for-frontends--bff-.md" >}}) with an *Orchestrator* per client\.
-- If the *Orchestrator* grows too large, it can be [divided]({{< relref "../../extension-metapatterns/orchestrator.md#variants-by-structure-can-be-combined" >}}) into layers, services, or both, with the latter option resulting in a [*Top\-Down Hierarchy*]({{< relref "../../fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}})\.
-- The *Orchestrator* can be [scaled]({{< relref "../../extension-metapatterns/orchestrator.md#scaled" >}}) and can have its own database\.
+- If the orchestrator grows too large, it can be [divided]({{< relref "../../extension-metapatterns/orchestrator.md#variants-by-structure-can-be-combined" >}}) into layers, services, or both, with the latter option resulting in a [*Top\-Down Hierarchy*]({{< relref "../../fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}})\.
+- The orchestrator can be [scaled]({{< relref "../../extension-metapatterns/orchestrator.md#scaled" >}}) and can have its own database\.
