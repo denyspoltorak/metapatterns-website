@@ -9,7 +9,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 # Evolutions of a Monolith that lead to Shards {anchor=false}
 
-One of the main drawbacks of the monolithic architecture is its lack of scalability – a single running instance of your system may not be enough to serve all its clients no matter how many resources you add in\. If that is the case, you should consider [*Shards*]({{< relref "../../basic-metapatterns/shards.md" >}}) – *multiple instances* of a monolith\. There are following options:
+One of the main drawbacks of the monolithic architecture is its lack of scalability – a single running instance of your system may not be enough to serve all its clients no matter how many resources you add in\. If that is the case, you should consider [*Shards*]({{< relref "../../basic-metapatterns/shards.md" >}}) – *multiple instances* of a *Monolith*\. There are following options:
 
 - Self\-managed [*Shards*]({{< relref "../../basic-metapatterns/shards.md#persistent-slice-sharding-shards-partitions-multitenancy-cells-amazon-definition" >}}) – each instance owns a part of the system’s data and may communicate with every other instance \(forming a [*Mesh*]({{< relref "../../implementation-metapatterns/mesh.md" >}})\)\.
 - *Shards* with a [*Sharding Proxy*]({{< relref "../../extension-metapatterns/proxy.md#load-balancer-sharding-proxy-cell-router-messaging-grid-scheduler" >}}) – each instance owns a part of the system’s data and relies on the external component to choose the right shard for the client\.
@@ -80,7 +80,7 @@ If all the data a user operates on, directly or indirectly, is never accessed by
 
 <ins>Cons</ins>: 
 
-- The *Sharding Proxy* is a single point of failure unless [*replicated*]({{< relref "../../basic-metapatterns/shards.md#persistent-copy-replica" >}}), and it also increases latency unless deployed as an [*Ambassador*]({{< relref "../../extension-metapatterns/proxy.md#on-the-client-side-ambassador" >}})\.
+- The *sharding proxy* is a single point of failure unless [*replicated*]({{< relref "../../basic-metapatterns/shards.md#persistent-copy-replica" >}}), and it also increases latency unless deployed as an [*Ambassador*]({{< relref "../../extension-metapatterns/proxy.md#on-the-client-side-ambassador" >}})\.
 
 
 ## Separate the data layer and add a Load Balancer
@@ -101,7 +101,7 @@ If all the data a user operates on, directly or indirectly, is never accessed by
 
 <ins>Prerequisite</ins>: the persistent data is of manageable size\.
 
-As data moves into a dedicated layer \([*Shared Database*]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) or [*Shared File System*]({{< relref "../../extension-metapatterns/shared-repository.md#shared-file-system" >}})\), the application becomes stateless and instances of it can be created and destroyed dynamically depending on the system’s load\. However, the *Shared Repository* becomes the system’s bottleneck unless [*Space\-Based Architecture*]({{< relref "../../extension-metapatterns/shared-repository.md#data-grid-of-space-based-architecture-sba-replicated-cache-distributed-cache" >}}) is used\.
+As data moves into a dedicated layer \([*Shared Database*]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) or [*Shared File System*]({{< relref "../../extension-metapatterns/shared-repository.md#shared-file-system" >}})\), the application becomes stateless and instances of it can be created and destroyed dynamically depending on the system’s load\. However, the shared repository becomes the system’s bottleneck unless [*Space\-Based Architecture*]({{< relref "../../extension-metapatterns/shared-repository.md#data-grid-of-space-based-architecture-sba-replicated-cache-distributed-cache" >}}) is used\.
 
 <ins>Pros</ins>: 
 
@@ -114,7 +114,7 @@ As data moves into a dedicated layer \([*Shared Database*]({{< relref "../../ext
 <ins>Cons</ins>: 
 
 - The database limits the system’s scalability and performance\.
-- The *Load Balancer* and *Shared Repository* increase latency and are single points of failure\.
+- The *load balancer* and *shared repository* increase latency and are single points of failure\.
 
 
 ## Dedicate an instance to each client

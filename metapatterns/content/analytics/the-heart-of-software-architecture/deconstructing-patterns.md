@@ -35,7 +35,7 @@ Let’s now discuss something more practical, namely the \[[GoF]({{< relref "../
 
 Some patterns provide a basic decoupling:
 
-- [*Adapter*](https://refactoring.guru/design-patterns/adapter) translates between two interacting components so that they may evolve independently\.
+- An [*Adapter*](https://refactoring.guru/design-patterns/adapter) translates between two interacting components so that they may evolve independently\.
 - [*Observer*](https://refactoring.guru/design-patterns/observer) decouples an event from the reactions which it causes by registering the event handlers at runtime\.
 - [*Chain of Responsibility*](https://refactoring.guru/design-patterns/chain-of-responsibility) separates the method invocation from the method execution\. A client’s calling a method of an object runs the corresponding method of another object\.
 
@@ -53,8 +53,8 @@ Others break the functionality or data of a class into two or more parts, juggli
 
 On the other hand, several patterns gather separate components together:
 
-- [*Command*](https://refactoring.guru/design-patterns/command) collects all the data required to call a method\.
-- [*Mediator*](https://refactoring.guru/design-patterns/mediator) is a cohesive implementation of multi\-object use cases\.
+- A [*Command*](https://refactoring.guru/design-patterns/command) collects all the data required to call a method\.
+- A [*Mediator*](https://refactoring.guru/design-patterns/mediator) is a cohesive implementation of multi\-object use cases\.
 - [*Composite*](https://refactoring.guru/design-patterns/composite) and [*Facade*](https://refactoring.guru/design-patterns/facade) represent multiple objects as a cohesive entity\. A *Composite* broadcasts a call made to its interface to every object which it contains, while a *Facade* [orchestrates]({{< relref "../../foundations-of-software-architecture/arranging-communication/orchestration.md" >}}) the subsystem which it wraps\.
 - [*Abstract Factory*](https://refactoring.guru/design-patterns/abstract-factory) and [*Builder*](https://refactoring.guru/design-patterns/builder) encapsulate *type selection* and *initialization* for several related hierarchies, so that the client code gets objects from a consistent set of types\. On top of that, a *Builder* cross\-links the objects it creates into a cohesive subsystem, which is then returned to the *builder*’s client as a whole\.
 
@@ -119,7 +119,7 @@ Finally, let’s close the book by iterating over the metapatterns and looking i
 - [*Shared Repository*]({{< relref "../../extension-metapatterns/shared-repository.md" >}}) dissociates data from code, enabling [data\-centric programming]({{< relref "../../foundations-of-software-architecture/arranging-communication/shared-data.md" >}}):
   - *Cohesive* data is consistent and easy to handle\.
   - *Decoupled* business logic can be scaled or subdivided [independently]({{< relref "../../foundations-of-software-architecture/arranging-communication/programming-and-architectural-paradigms.md#procedural-data-centric-paradigm--shared-data" >}}) of the data\.
-- [*Proxy*]({{< relref "../../extension-metapatterns/proxy.md" >}}) mediates between a system and its clients, taking care of some aspects of their communication:
+- A [*Proxy*]({{< relref "../../extension-metapatterns/proxy.md" >}}) mediates between a system and its clients, taking care of some aspects of their communication:
   - A *cohesive* edge component is easier to manage and secure\.
   - *Decoupling* generic aspects simplifies the business logic but usually increases latency\.
 - [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) collects a multitude of complex use cases into a dedicated layer:

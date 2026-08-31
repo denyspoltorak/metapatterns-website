@@ -9,7 +9,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 # Evolutions of a Proxy {anchor=false}
 
-It usually makes little sense to get rid of a [*Proxy*]({{< relref "../../extension-metapatterns/proxy.md" >}}) once it is integrated into the system\. Its only real drawback is a slight increase in latency for user requests which may be helped through creation of [bypass channels]({{< relref "../../extension-metapatterns/proxy.md#half-proxy" >}}) between the clients and a service which needs low latency\. The other drawback of the pattern, namely the *Proxy*’s being a single point of failure, is countered by deploying multiple instances of the *Proxy*\.
+It usually makes little sense to get rid of a [*Proxy*]({{< relref "../../extension-metapatterns/proxy.md" >}}) once it is integrated into the system\. Its only real drawback is a slight increase in latency for user requests which may be helped through creation of [bypass channels]({{< relref "../../extension-metapatterns/proxy.md#half-proxy" >}}) between the clients and a service which needs low latency\. The other drawback of the pattern, namely the proxy’s being a single point of failure, is countered by deploying multiple instances of the proxy\.
 
 As *Proxies* are usually third\-party products, there is very little we can change about them:
 
@@ -35,9 +35,9 @@ As *Proxies* are usually third\-party products, there is very little we can chan
 
 <ins>Prerequisite</ins>: you don't have this kind of *Proxy* yet\.
 
-A system is not limited to a single kind of *Proxies*\. As a *Proxy* represents your system without changing its function, *Proxies* are transparent, thus they are stackable\.
+A system is not limited to a single kind of *Proxies*\. As a *Proxy* represents your system without changing its function, proxies are transparent, thus they are stackable\.
 
-It often makes sense to co\-locate software *Proxies* or use a multifunctional *Proxy* to reduce the number of network hops between the clients and the system\. However, in a highly loaded system *Proxies* may be resource\-hungry, thus in some cases colocation strikes back\.
+It often makes sense to co\-locate software *Proxies* or use a multifunctional *Proxy* to reduce the number of network hops between the clients and the system\. However, in a highly loaded system proxies may be resource\-hungry, thus in some cases colocation strikes back\.
 
 <ins>Pros</ins>: 
 
@@ -78,4 +78,4 @@ If you have internal and external clients, or admins and users, you may want to 
 
 <ins>Cons</ins>: 
 
-- More work for admins as the *Proxies* are duplicated\.
+- More work for admins as the proxies are duplicated\.

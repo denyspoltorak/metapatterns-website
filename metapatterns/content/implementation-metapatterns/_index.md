@@ -26,7 +26,7 @@ A few architectures focus on implementation of components:
 
 The [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) family of patterns is about separating a system’s main logic from the customizable details of its behavior\. That allows for the same codebase to be used for multiple flavors or customers\.
 
-*<ins>Includes</ins>*: Plug\-In Architecture, Addons, Strategy, Hooks\.
+*<ins>Includes</ins>*: Plug\-In Architecture, Addons, Addins, Strategy, Hooks\.
 
 ### [Hexagonal Architecture]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}})
 

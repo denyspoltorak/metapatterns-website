@@ -135,7 +135,7 @@ Usually an upper layer depends on the *API* \(*application programming interface
 
 Some domains, including embedded systems and telecom, require their lower layers to be polymorphic as they deal with varied hardware or communication protocols\. In that case an upper layer \(e\.g\. OS kernel\) defines a *service provider interface* \(*SPI*\) which is implemented by every variant of the lower layer \(e\.g\. a device driver\)\. That allows for a single implementation of the upper layer to be interoperable with any subclass of the lower layer\. Such an approach enables [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}), [*Microkernel*]({{< relref "../implementation-metapatterns/microkernel.md" >}}), and [*Hexagonal Architecture*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md" >}})\. 
 
-There may also be an [*Adapter*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) layer between your system’s SPI and an external API\. It is called *Anticorruption Layer* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\], [*Database Abstraction Layer*](https://en.wikipedia.org/wiki/Database_abstraction_layer) / *Database Access Layer* \[[POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\] / *Data Mapper* \[[PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\], *OS Abstraction Layer*, or *Platform Abstraction Layer / Hardware Abstraction Layer*, depending on what kind of component it adapts\.
+There may also be an [*Adapter*]({{< relref "../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}}) layer between your system’s SPI and an external API\. It is called [*Anticorruption Layer*](https://ddd-practitioners.com/home/glossary/bounded-context/bounded-context-relationship/anticorruption-layer/) \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\], [*Database Abstraction Layer*](https://en.wikipedia.org/wiki/Database_abstraction_layer) / *Database Access Layer* \[[POSA4]({{< relref "../appendices/books-referenced.md#posa4" >}})\] / *Data Mapper* \[[PEAA]({{< relref "../appendices/books-referenced.md#peaa" >}})\], *OS Abstraction Layer*, or *Platform Abstraction Layer / Hardware Abstraction Layer*, depending on what kind of component it adapts\.
 
 <figure>
 <a href="/diagrams/Dependencies/Layers-1.png">
@@ -275,7 +275,7 @@ That clarity of design, which separates technically different pieces, is opposed
 - The more components you have, the harder it is to deploy them and keep them consistent, not to mention error recovery\. Moreover, as the number of system components increases, the big picture becomes elusive, and soon there is nobody who knows how to change the system if need arises\.
 
 
-Balancing the [cohesers and decouplers]({{< relref "../analytics/the-heart-of-software-architecture/cohesers-and-decouplers.md" >}}) listed above usually results in coarse\-grained system components each of which covers several concerns, with some real\-world system compositions shown in the [Examples section]({{< relref "#examples" >}}) later in this chapter\. However, first we need to see which kinds of roles a system layer may incorporate:
+Balancing the [cohesers and decouplers]({{< relref "../analytics/the-heart-of-software-architecture/cohesers-and-decouplers.md" >}}) listed above usually results in coarse\-grained system components each of which covers several concerns, with some real\-world system compositions shown in the [examples section]({{< relref "#examples" >}}) later in this chapter\. However, first we need to see which kinds of roles a system layer may incorporate:
 
 <figure>
 <a href="/diagrams/Variants/1/Layer%20Roles.png">
@@ -295,7 +295,7 @@ As an interface represents the system to its clients, it is a kind of [*Proxy*](
 
 When a system interacts with a human, it exposes another kind of interface – [*Human\-Machine Interface* \(*HMI*\) or *User Interface* \(*UI*\)]({{< relref "../extension-metapatterns/proxy.md#user-interface-presentation-layer-separated-presentation-command-line-interface-cli-graphical-user-interface-gui-frontend-human-machine-interface-hmi-man-machine-interface-mmi-operator-interface" >}})\. The basics of its action are similar to the case of software\-to\-software interaction described above save that humans prefer visual or textual information instead of a highly structured Internet protocol\.
 
-Another, less common kind of interface is called *Service Provider Interface* \(*SPI*\)\. It is declared by a system that relies on an external component and is implemented by that component’s authors to make it pluggable into the system\. *SPI*s are in use by [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) and [*Microkernel*]({{< relref "../implementation-metapatterns/microkernel.md" >}}) architectures, with *device drivers* being the best known example of pluggable components\.
+Another, less common kind of interface is called *Service Provider Interface* \(*SPI*\)\. It is declared by a system that relies on an external component and is implemented by that component’s authors to make it pluggable into the system\. SPIs are in use by [*Plugins*]({{< relref "../implementation-metapatterns/plugins.md" >}}) and [*Microkernel*]({{< relref "../implementation-metapatterns/microkernel.md" >}}) architectures, with *device drivers* being the best known example of pluggable components\.
 
 There are also other kinds of *Proxies* which adapt a system to foreign interfaces:
 
@@ -313,7 +313,7 @@ There are also other kinds of *Proxies* which adapt a system to foreign interfac
 </a>
 </figure>
 
-A *Proxy* that implements an interface may reside in a dedicated layer \(and there may be multiple *Proxies* stacked together, for example, a *Gateway* behind a [*Firewall*]({{< relref "../extension-metapatterns/proxy.md#firewall-api-rate-limiter-api-throttling" >}})\) or be merged with a neighboring layer: for example, an [*API Gateway*]({{< relref "../extension-metapatterns/proxy.md#api-gateway" >}}) fills the roles of both interface and [*application*]({{< relref "#application-use-cases-or-integration" >}})\.
+A *Proxy* that implements an interface may reside in a dedicated layer \(and there may be multiple proxies stacked together, for example, a *Gateway* behind a [*Firewall*]({{< relref "../extension-metapatterns/proxy.md#firewall-api-rate-limiter-api-throttling" >}})\) or be merged with a neighboring layer: for example, an [*API Gateway*]({{< relref "../extension-metapatterns/proxy.md#api-gateway" >}}) fills the roles of both interface and [*application*]({{< relref "#application-use-cases-or-integration" >}})\.
 
 An interface layer can contain multiple components \(services, modules, or high\-level classes\) when the system below it supports several kinds of clients: a bank is likely to provide a web interface, a mobile application, and a SWIFT endpoint\. See [*Backends for Frontends*]({{< relref "../fragmented-metapatterns/backends-for-frontends--bff-.md" >}}) for a detailed description\.
 
@@ -401,7 +401,7 @@ In most cases generic code stays together with the [*domain*\-level code]({{< re
 - If it needs to be shared, it can be:
   - Extracted into a dedicated service, as in [*Service\-Oriented Architecture*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}})\.
   - Replicated as a [*Sidecar*]({{< relref "../extension-metapatterns/proxy.md#on-the-system-side-sidecar" >}}) attached to every instance of each service that uses it\.
-  - Copied into the codebases of the services to allow each team to change it independently from other teams – see *Separate Ways* in \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\.
+  - Copied into the codebases of the services to allow each team to change it independently from other teams – see [*Separate Ways*](https://ddd-practitioners.com/home/glossary/bounded-context/bounded-context-relationship/separate-ways/) in \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\.
 
 
 <figure>
@@ -528,7 +528,7 @@ A closer look at an *ECB* system may reveal a finer\-grained structure that rese
 </a>
 </figure>
 
-*Domain\-Driven Design* \(*DDD*\), as given in \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\], is a methodology for enterprise\-scale backend development which extends the more generic [*Entity\-Control\-Boundary*]({{< relref "#entity-control-boundary-ecb-entity-boundary-control-ebc-boundary-control-entity-bce" >}}) with a new *Infrastructure* layer responsible for [*communication*]({{< relref "#communication-middleware" >}}) and [*persistence*]({{< relref "#data-persistence" >}}) roles which don’t exist in most desktop applications\. Its layers are called:
+*Domain\-Driven Design* \(*DDD*\), as given in \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\], is a methodology for enterprise\-scale backend development which extends the more generic [*Entity\-Control\-Boundary*]({{< relref "#entity-control-boundary-ecb-entity-boundary-control-ebc-boundary-control-entity-bce" >}}) with a new *infrastructure* layer responsible for [*communication*]({{< relref "#communication-middleware" >}}) and [*persistence*]({{< relref "#data-persistence" >}}) roles which don’t exist in most desktop applications\. Its layers are called:
 
 - *Presentation* \([*User Interface*]({{< relref "../extension-metapatterns/proxy.md#user-interface-presentation-layer-separated-presentation-command-line-interface-cli-graphical-user-interface-gui-frontend-human-machine-interface-hmi-man-machine-interface-mmi-operator-interface" >}})\) – the user\-facing component \(frontend, UI\)\. It should be highly responsive to the user's input\. See [*Separated Presentation*]({{< relref "../implementation-metapatterns/hexagonal-architecture.md#upper-half-separated-presentation-open-host-service" >}})\.
 - *Application* \([*Integration*]({{< relref "#application-use-cases-or-integration" >}}), *Service*\) – the high\-level scenarios which build upon the API of the *domain* layer\. It should be easy to change and to deploy\. See [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}})\.
@@ -641,7 +641,7 @@ It is also common to:
 
 The main drawback \(and benefit as well\) of *Layers* is that much or all of the business logic is kept together in one or two components\. That allows for easy debugging and fast development in the initial stages of the project but slows down and complicates work as the project grows in size \[[MP]({{< relref "../appendices/books-referenced.md#mp" >}})\]\. The only way for a growing project to survive and continue evolving at a reasonable speed is to subdivide its business logic into several smaller, [thus less complex]({{< relref "../foundations-of-software-architecture/modules-and-complexity.md" >}}), components that match subdomains \(*bounded contexts* \[[DDD]({{< relref "../appendices/books-referenced.md#ddd" >}})\]\)\. There are several options for such a change, with their applicability depending on the domain:
 
-- In a [*Sandwich*]({{< relref "../extension-metapatterns/sandwich.md" >}}) the middle layer with the main business logic is divided into [*Services*]({{< relref "../basic-metapatterns/services.md" >}}), leaving the upper [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) and lower [*database*]({{< relref "../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) layers intact for future evolutions\.
+- In a [*Sandwich*]({{< relref "../extension-metapatterns/sandwich.md" >}}), the middle layer with the main business logic is divided into [*Services*]({{< relref "../basic-metapatterns/services.md" >}}), leaving the upper [*orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) and lower [*database*]({{< relref "../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) layers intact for future evolutions\.
 
 
 <figure>
@@ -774,4 +774,4 @@ There is also one new evolution which modifies the upper \(*orchestration*\) lay
 
 ## Summary
 
-*Layered architecture* separates the high\-level logic from the low\-level details\. It is superior for medium\-sized projects as it supports rapid development by two or three teams, is flexible enough to resolve conflicting forces, and provides many options for further evolution, which will come in handy when the project grows in size and complexity\.
+*Layered Architecture* separates the high\-level logic from the low\-level details\. It is superior for medium\-sized projects as it supports rapid development by two or three teams, is flexible enough to resolve conflicting forces, and provides many options for further evolution, which will come in handy when the project grows in size and complexity\.

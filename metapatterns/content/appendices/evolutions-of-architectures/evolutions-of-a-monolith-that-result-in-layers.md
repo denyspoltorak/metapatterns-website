@@ -11,9 +11,9 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 Another drawback of [*Monolith*]({{< relref "../../basic-metapatterns/monolith.md" >}}) is its … er … monolithism\. The entire application exposes a single set of qualities and all its parts \(if they ever emerge\) are deployed together\. However, life awards flexibility: parts of a system may benefit from being written in varying languages and styles, and deployed with different frequency and amount of testing, sometimes to specific hardware or end users’ devices\. They may need to [vary in security and scalability]({{< relref "../../foundations-of-software-architecture/forces--asynchronicity--and-distribution.md#distribution" >}}) as well\. Enter [*Layers*]({{< relref "../../basic-metapatterns/layers.md" >}}) – the subdivision by the *level of abstractness*:
 
-- Most *Monoliths* can be divided into three or four [*layers*]({{< relref "../../basic-metapatterns/layers.md" >}})\.
+- Most monoliths can be divided into three or four [*layers*]({{< relref "../../basic-metapatterns/layers.md" >}})\.
 - It is common to see the database separated from the main application\.
-- [*Proxies*]({{< relref "../../extension-metapatterns/proxy.md" >}}) \(e\.g\. [*Firewall*]({{< relref "../../extension-metapatterns/proxy.md#firewall-api-rate-limiter-api-throttling" >}}), [*Cache*]({{< relref "../../extension-metapatterns/proxy.md#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}}), and [*Reverse Proxy*]({{< relref "../../extension-metapatterns/proxy.md#dispatcher-reverse-proxy-ingress-controller-edge-service-microgateway" >}})\) are common additions to the system\.
+- [*Proxies*]({{< relref "../../extension-metapatterns/proxy.md" >}}) \(e\.g\. a [*Firewall*]({{< relref "../../extension-metapatterns/proxy.md#firewall-api-rate-limiter-api-throttling" >}}), [*Cache*]({{< relref "../../extension-metapatterns/proxy.md#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}}), or [*Reverse Proxy*]({{< relref "../../extension-metapatterns/proxy.md#dispatcher-reverse-proxy-ingress-controller-edge-service-microgateway" >}})\) are common additions to the system\.
 - An [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) adds a layer of indirection to simplify the system’s API for its clients\.
 
 
@@ -51,7 +51,7 @@ Most systems apply *layering* by default as it grants a lot of flexibility at ve
 
 <ins>Cons</ins>: 
 
-- Dividing an existing application into *Layers* may take some effort\.
+- Dividing an existing application into layers may take some effort\.
 - There is a small performance penalty\.
 
 
@@ -119,19 +119,19 @@ A database is non\-trivial to implement\. While ordinary files are good for smal
 
 <ins>Prerequisite</ins>: Your system serves clients \(as opposed to [controlling hardware]({{< relref "../../foundations-of-software-architecture/four-kinds-of-software.md#control-real-time-hardware-input" >}})\)\.
 
-A *Proxy* is placed between your system and its clients to provide generic functionality that otherwise would have to be implemented by the system\. The kinds of *Proxy* to use with [*Monolith*]({{< relref "../../basic-metapatterns/monolith.md" >}}) are: [*Firewall*]({{< relref "../../extension-metapatterns/proxy.md#firewall-api-rate-limiter-api-throttling" >}}), [*Cache*]({{< relref "../../extension-metapatterns/proxy.md#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}}), [*Reverse Proxy*]({{< relref "../../extension-metapatterns/proxy.md#dispatcher-reverse-proxy-ingress-controller-edge-service-microgateway" >}}), and [*Adapter*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}})\. Multiple *Proxies* can be deployed\.
+A *Proxy* is placed between your system and its clients to provide generic functionality that otherwise would have to be implemented by the system\. The kinds of *Proxy* to use with [*Monolith*]({{< relref "../../basic-metapatterns/monolith.md" >}}) are: [*Firewall*]({{< relref "../../extension-metapatterns/proxy.md#firewall-api-rate-limiter-api-throttling" >}}), [*Cache*]({{< relref "../../extension-metapatterns/proxy.md#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}}), [*Reverse Proxy*]({{< relref "../../extension-metapatterns/proxy.md#dispatcher-reverse-proxy-ingress-controller-edge-service-microgateway" >}}), and [*Adapter*]({{< relref "../../extension-metapatterns/proxy.md#adapter-anticorruption-layer-abstraction-layer-open-host-service-gateway-message-translator-api-service-cell-gateway-inexact-backend-for-frontend-database-access-layer-data-mapper-repository-driver" >}})\. Multiple proxies can be deployed\.
 
 <ins>Pros</ins>: 
 
 - You save some time \(and money\) on development\.
-- A well\-known *Proxy* is likely to be more secure and reliable than an in\-house implementation\.
-- You can choose the hardware to deploy the *Proxy* to\.
+- A well\-known proxy is likely to be more secure and reliable than an in\-house implementation\.
+- You can choose the hardware to deploy the proxy to\.
 
 
 <ins>Cons</ins>: 
 
 - Latency degrades, except for [*Response Cache*]({{< relref "../../extension-metapatterns/proxy.md#response-cache-read-through-cache-write-through-cache-write-behind-cache-cache-caching-layer-distributed-cache-replicated-cache" >}}) where it depends on frequency of identical requests\.
-- The *Proxy* may fail, which increases the chance of total failure of your system\.
+- The proxy may fail, which increases the chance of total failure of your system\.
 - Beware of [vendor lock\-in](https://en.wikipedia.org/wiki/Vendor_lock-in)\.
 
 

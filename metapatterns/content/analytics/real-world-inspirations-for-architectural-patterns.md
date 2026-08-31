@@ -224,9 +224,9 @@ An [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) 
 </a>
 </figure>
 
-In [*Sandwich*]({{< relref "../extension-metapatterns/sandwich.md" >}}) a varied and segmented layer with the most valuable code is operated and held in place by other, cohesive layers:
+In [*Sandwich*]({{< relref "../extension-metapatterns/sandwich.md" >}}), a varied and segmented layer with the most valuable code is operated and held in place by other, cohesive layers:
 
-- A sandwich is an obvious example\.  
+- A sandwich is an obvious example\.
 - This is how we make down jackets and thermal insulation in general\.
 - A [cell membrane](https://en.wikipedia.org/wiki/Cell_membrane) which includes many transporters and receptors looks exactly like that\.
 

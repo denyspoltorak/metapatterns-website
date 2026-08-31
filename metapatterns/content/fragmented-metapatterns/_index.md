@@ -56,7 +56,7 @@ There are several [topologies]({{< relref "../introduction/system-topologies.md"
 </a>
 </figure>
 
-[*Backends for Frontends*]({{< relref "../fragmented-metapatterns/backends-for-frontends--bff-.md" >}}) feature a service \(*BFF*\) for each kind of the system’s client\. A *BFF* may be a [*Proxy*]({{< relref "../extension-metapatterns/proxy.md" >}}), [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}), or both\. Each *BFF* communicates with all the components below it\. The pattern looks like multiple *Proxies* or *Orchestrators* deployed in parallel\.
+[*Backends for Frontends*]({{< relref "../fragmented-metapatterns/backends-for-frontends--bff-.md" >}}) feature a service \(*BFF*\) for each kind of the system’s client\. A *BFF* may be a [*Proxy*]({{< relref "../extension-metapatterns/proxy.md" >}}), [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}), or both\. Each BFF communicates with all the components below it\. The pattern looks like multiple *Proxies* or *Orchestrators* deployed in parallel\.
 
 *<ins>Includes</ins>*: Layered Microservice Architecture\.
 
@@ -74,7 +74,7 @@ There are several [topologies]({{< relref "../introduction/system-topologies.md"
 
 [*SOA*]({{< relref "../fragmented-metapatterns/service-oriented-architecture--soa-.md" >}}) comprises three or four layers of services, with each layer making a domain\. The upper layer contains [*Orchestrators*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) which are often client\-specific, just like [*BFF*]({{< relref "../fragmented-metapatterns/backends-for-frontends--bff-.md" >}})*s*\. The second layer incorporates business rules and is divided into business subdomains\. The lower layer\(s\) are libraries and utilities, grouped by functionality and technologies\. Any component may use \(orchestrate\) anything below it\.
 
-*<ins>Includes</ins>*: distributed monolith, enterprise SOA, and Domain\-Oriented Microservice Architecture \(DOMA\)\.
+*<ins>Includes</ins>*: Distributed Monolith, Enterprise SOA, and Domain\-Oriented Microservice Architecture \(DOMA\)\.
 
 ### [Hierarchy]({{< relref "../fragmented-metapatterns/hierarchy.md" >}})
 
@@ -90,4 +90,4 @@ There are several [topologies]({{< relref "../introduction/system-topologies.md"
 
 Some domains allow for [hierarchical composition]({{< relref "../fragmented-metapatterns/hierarchy.md" >}}) where the functionality is spread over a tree of components\.
 
-*<ins>Includes</ins>*: Orchestrator of Orchestrators, Presentation\-Abstraction\-Control \(PAC\) and Hierarchical Model\-View\-Controller \(HMVC\), Bus of Buses, and the WSO2 version of Cell\-Based \(Microservice\) Architecture \(Services of Services\)\.
+*<ins>Includes</ins>*: Orchestrator of Orchestrators, Presentation\-Abstraction\-Control \(PAC\) and Hierarchical Model\-View\-Controller \(HMVC\), Bus of Buses, Vertical Slice Architecture, and the WSO2 version of Cell\-Based \(Microservice\) Architecture \(Services of Services\)\.

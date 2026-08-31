@@ -83,11 +83,11 @@ Splitting a [*Monolith*]({{< relref "../../basic-metapatterns/monolith.md" >}}) 
 
 <ins>Goal</ins>: [stop digging](https://en.wikipedia.org/wiki/Law_of_holes), get some work for novices who don’t know the entire project\.
 
-<ins>Prerequisite</ins>: the new functionality you are adding or the part you are splitting is weakly coupled to the bulk of the existing *Monolith*\.
+<ins>Prerequisite</ins>: the new functionality you are adding or the part you are splitting is weakly coupled to the bulk of the existing monolith\.
 
-If your [*Monolith*]({{< relref "../../basic-metapatterns/monolith.md" >}}) is already hard to manage, but a new functionality is needed, you can try dedicating a separate service to the new feature\(s\)\. This way the *Monolith* does not become larger – it is even possible that you will move a part of its code to the newly established service\.
+If your [monolith]({{< relref "../../basic-metapatterns/monolith.md" >}}) is already hard to manage, but a new functionality is needed, you can try dedicating a separate service to the new feature\(s\)\. This way the monolith does not become larger – it is even possible that you will move a part of its code to the newly established service\.
 
-If you are not adding a new feature but need to change an old one – use the chance to make the existing *Monolith* smaller by first separating the functionality which you are going to change from its bulk\. At the very minimum this two\-step process lowers the probability of breaking something unrelated to the required changes of behavior\.
+If you are not adding a new feature but need to change an old one – use the chance to make the existing monolith smaller by first separating the functionality which you are going to change from its bulk\. At the very minimum this two\-step process lowers the probability of breaking something unrelated to the required changes of behavior\.
 
 <ins>Pros</ins>: 
 
@@ -108,7 +108,7 @@ If you are not adding a new feature but need to change an old one – use the ch
 
 <ins>Further steps</ins>:
 
-- [Continue disassembling](https://martinfowler.com/bliki/StranglerFigApplication.html) the *Monolith*\.
+- [Continue disassembling](https://martinfowler.com/bliki/StranglerFigApplication.html) the monolith\.
 
 
 ## Divide into a Pipeline
@@ -144,7 +144,7 @@ If you can treat your application as a chain of independent steps that transform
 <ins>Cons</ins>: 
 
 - Latency may skyrocket\.
-- As the number of supported scenarios grows, so does the number of components and *pipelines*\. Soon there’ll be nobody who understands the system as a whole\.
+- As the number of supported scenarios grows, so does the number of components and pipelines\. Soon there’ll be nobody who understands the system as a whole\.
 
 
 ## Further steps

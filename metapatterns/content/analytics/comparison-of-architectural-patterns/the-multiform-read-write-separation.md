@@ -20,7 +20,7 @@ We can deploy [*read\-only replicas*]({{< relref "../../fragmented-metapatterns/
 <picture>
 <source srcset="/diagrams/Variants/3/Read-only%20Replica.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Variants/3/Read-only%20Replica.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Variants/3/Read-only%20Replica.png" alt="An instance of a backend writes to a leader database which streams updates to database replicas. Other backend instances read from the replicas." loading="lazy" width="713" height="425" style="width:79%"/>
+<img src="/diagrams/Variants/3/Read-only%20Replica.png" alt="An instance of a backend writes to a leader database which streams updates to database replicas. Other backend instances read from the replicas." loading="lazy" width="713" height="425" style="width:76%"/>
 </picture>
 </a>
 </figure>
@@ -54,7 +54,7 @@ A [*Response Cache*]({{< relref "../../extension-metapatterns/proxy.md#response-
 <picture>
 <source srcset="/diagrams/Conclusion/RW-Control.svg" media="(prefers-color-scheme: light)"/>
 <source srcset="/diagrams/Conclusion/RW-Control.dark.svg" media="(prefers-color-scheme: dark)"/>
-<img src="/diagrams/Conclusion/RW-Control.png" alt="The control layer repeatedly queries the model layer and finally decides to send a request which is propagated down to the hardware components." loading="lazy" width="823" height="323" style="width:100%"/>
+<img src="/diagrams/Conclusion/RW-Control.png" alt="The control layer repeatedly queries the model layer and finally decides to send a request which is propagated down to the hardware components." loading="lazy" width="823" height="323" style="width:92%"/>
 </picture>
 </a>
 </figure>
@@ -129,7 +129,7 @@ In [*\(Re\)Actor\-with\-Extractors*]({{< relref "../../basic-metapatterns/monoli
 
 ## Interleaving subsystems
 
-A [*Data Mesh*]({{< relref "../../basic-metapatterns/pipeline.md#data-mesh" >}}) builds a graph of analytical datastores, called *Data Product Quanta* \(*DPQ*\), which exists in parallel to and is co\-located with the system it extracts data from\. That almost completely decouples the transactional and analytical data flows\.
+A [*Data Mesh*]({{< relref "../../basic-metapatterns/pipeline.md#data-mesh" >}}) builds a graph of analytical data stores, called *Data Product Quanta* \(*DPQ*\), which exists in parallel to and is co\-located with the system it extracts data from\. That almost completely decouples the transactional and analytical data flows\.
 
 <figure>
 <a href="/diagrams/Variants/1/Data%20Mesh.png">

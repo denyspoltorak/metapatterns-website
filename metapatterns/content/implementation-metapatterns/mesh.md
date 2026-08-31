@@ -43,14 +43,14 @@ Most *Meshes* support adding and removing parts of their networks dynamically, w
 
 ### Performance
 
-In most \(all?\) implementations the user *application* is co\-located with a *node* of the *Mesh*, thus communicating through the *Mesh* does not add an extra network hop \(which would strongly degrade performance\)\. However, that holds true only when the *Mesh node* knows the destination of the message it should send – when it has already established a communication channel towards it\. Finding a new destination may not always be easy and would often require consulting registries, and sometimes waiting for the network topology to stabilize, which may involve timeouts \(like the ones you could have experienced with torrents\)\. On the other hand, no other architecture is known to seamlessly support huge networks\.
+In most \(all?\) implementations the user *application* is co\-located with a *node* of the mesh, thus communicating through the mesh does not add an extra network hop \(which would strongly degrade performance\)\. However, that holds true only when the mesh node knows the destination of the message it should send – when it has already established a communication channel towards it\. Finding a new destination may not always be easy and would often require consulting registries, and sometimes waiting for the network topology to stabilize, which may involve timeouts \(like the ones you could have experienced with torrents\)\. On the other hand, no other architecture is known to seamlessly support huge networks\.
 
 ### Dependencies
 
 *Mesh*, being a *sharded Middleware*, inherits dependencies from both of its parent metapatterns:
 
-- As with [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}), the services that run over a *Mesh* depend both on the *Mesh’s API* and on each other \(or on a shared message format, aka [*Stamp Coupling*]({{< relref "../extension-metapatterns/shared-repository.md#inexact-stamp-coupling" >}}), or a [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) if they [use one for communication]({{< relref "../foundations-of-software-architecture/arranging-communication/shared-data.md" >}})\)\.
-- As with [*Shards*]({{< relref "../basic-metapatterns/shards.md" >}}), the nodes of the *Mesh* should communicate through a backward\- and forward\-compatible protocol as there will likely be periods of time when multiple versions of the *Mesh* nodes coexist\.
+- As with [*Middleware*]({{< relref "../extension-metapatterns/middleware.md" >}}), the services that run over a *Mesh* depend both on the mesh’s *API* and on each other \(or on a shared message format, aka [*Stamp Coupling*]({{< relref "../extension-metapatterns/shared-repository.md#inexact-stamp-coupling" >}}), or a [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) if they [use one for communication]({{< relref "../foundations-of-software-architecture/arranging-communication/shared-data.md" >}})\)\.
+- As with [*Shards*]({{< relref "../basic-metapatterns/shards.md" >}}), the nodes of the mesh should communicate through a backward\- and forward\-compatible protocol as there will likely be periods of time when multiple versions of the mesh nodes coexist\.
 
 
 ### Applicability
@@ -86,8 +86,8 @@ In most \(all?\) implementations the user *application* is co\-located with a *n
 
 The connections in a *Mesh* can be:
 
-- *Structured* or *pre\-defined* – the *Mesh* is pre\-designed and hard\-wired\. This kind of topology provides redundancy but not scalability\.
-- *Unstructured* or *ad\-hoc* – *nodes* can be added or removed at runtime, restructuring the *Mesh*\.
+- *Structured* or *pre\-defined* – the mesh is pre\-designed and hard\-wired\. This kind of topology provides redundancy but not scalability\.
+- *Unstructured* or *ad\-hoc* – *nodes* can be added or removed at runtime, restructuring the mesh\.
 
 
 ### By connectivity
@@ -145,7 +145,7 @@ Examples: torrent, onion routing \(Tor\), blockchain\.
 </a>
 </figure>
 
-This [datacenter network architecture](https://www.geeksforgeeks.org/spine-leaf-architecture/) is a rare example of a *structured fully connected Mesh*\. It consists of client\-facing \(*leaf*\) and internal \(*spine*\) network switches\. Each *leaf* is connected to every *spine*, allowing for very high bandwidth \(by distributing the traffic over multiple routes\) that is almost insensitive to failures of individual hardware as there are always many parallel connections\.
+This [datacenter network architecture](https://www.geeksforgeeks.org/spine-leaf-architecture/) is a rare example of a *structured fully connected Mesh*\. It consists of client\-facing \(*leaf*\) and internal \(*spine*\) network switches\. Each leaf is connected to every spine, allowing for very high bandwidth \(by distributing the traffic over multiple routes\) that is almost insensitive to failures of individual hardware as there are always many parallel connections\.
 
 ### [Actors]({{< relref "../basic-metapatterns/shards.md#temporary-state-create-on-demand-actors" >}})
 
@@ -159,7 +159,7 @@ This [datacenter network architecture](https://www.geeksforgeeks.org/spine-leaf-
 </a>
 </figure>
 
-A system of *Actors* may be classified as a *fully connected Mesh* with the actors’ message queues being the nodes of the *Mesh*\. Any actor can post messages to the queue of any other actor which it knows about, as all the actors share a virtual namespace or physical address space\.
+A system of *Actors* may be classified as a *fully connected Mesh* with the actors’ message queues being the nodes of the mesh\. Any actor can post messages to the queue of any other actor which it knows about, as all the actors share a virtual namespace or physical address space\.
 
 ### [Service Mesh]({{< relref "../extension-metapatterns/middleware.md#service-mesh" >}})
 
@@ -201,19 +201,19 @@ Ready\-to\-use *Service Mesh* frameworks are popular with the [*Microservices*](
 [*Space\-Based Architecture*](https://en.wikipedia.org/wiki/Space-based_architecture) \[[SAP]({{< relref "../appendices/books-referenced.md#sap" >}}), [FSA]({{< relref "../appendices/books-referenced.md#fsa" >}})\] is a kind of [*Service Mesh*]({{< relref "#service-mesh" >}}) with an integrated [*Shared Repository*]({{< relref "../extension-metapatterns/shared-repository.md" >}}) \(a [*tuple space*](https://en.wikipedia.org/wiki/Tuple_space) – shared dictionary – called [*Data Grid*]({{< relref "../extension-metapatterns/shared-repository.md#data-grid-of-space-based-architecture-sba-replicated-cache-distributed-cache" >}})\) and an [*Orchestrator*]({{< relref "../extension-metapatterns/orchestrator.md" >}}) \(called *Processing Grid*\)\. The user services are called *Processing Units*\. They may be identical \(making [*Shards*]({{< relref "../basic-metapatterns/shards.md" >}})\) or different \(resulting in [*Services*]({{< relref "../basic-metapatterns/services.md" >}})\)\. This architecture is used for:
 
 - Highly scalable systems with relatively small datasets, in which case the entire database contents are replicated in the memory of each node\. This works around the throughput and latency limits of an ordinary database\.
-- Huge datasets, with each node owning a part of the total data\. This hacks around the storage capacity and latency limits of a database, which may even be kept out of the loop, leaving the *Mesh* as the only data storage\.
+- Huge datasets, with each node owning a part of the total data\. This hacks around the storage capacity and latency limits of a database, which may even be kept out of the loop, leaving the mesh as the only data storage\.
 
 
-There are multiple instances of the same data in *Processing Units*\. Any change to the data in one unit must propagate to other units\. That can be done in several ways:
+There are multiple instances of the same data in processing units\. Any change to the data in one unit must propagate to other units\. That can be done in several ways:
 
 - Asynchronously, causing conflicts if the same data is changed elsewhere at the same time\. 
 - Synchronously, waiting for the propagation results and conflict resolution – a kind of distributed transaction which has poor latency\.
-- The unit takes write ownership of the data before the write\. That is not good for latency as well, but it may be a good choice for an evenly distributed load if the *Mesh* engine provides temporary locality of requests, i\.e\. it forwards requests that touch the same data to the same node\.
+- The unit takes write ownership of the data before the write\. That is not good for latency as well, but it may be a good choice for an evenly distributed load if the mesh engine provides temporary locality of requests, i\.e\. it forwards requests that touch the same data to the same node\.
 
 
 The choice of the strategy depends on your domain\.
 
-The in\-memory data in the nodes is usually loaded from a *Persistent Database* on initialization of the system, and any change to the data is replicated asynchronously back to the *Persistent Database*, which serves as a means of fault recovery in the unlikely case the entire *Mesh* goes down\.
+The in\-memory data in the nodes is usually loaded from a *persistent database* on initialization of the system, and any change to the data is replicated asynchronously back to the persistent database, which serves as a means of fault recovery in the unlikely case the entire mesh goes down\.
 
 ## Summary
 

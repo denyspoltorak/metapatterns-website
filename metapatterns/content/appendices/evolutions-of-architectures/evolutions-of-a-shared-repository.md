@@ -78,7 +78,7 @@ Modern distributed databases support sharding out of the box, but an overgrown t
 
 <ins>Prerequisite</ins>: data collisions are acceptable\.
 
-*Space\-Based Architecture* \(SBA\) duplicates the contents of a persistent database to a distributed in\-memory *cache* co\-located with the services managed by the *SBA*’s *Middleware*\. That makes most data access operations very fast unless one needs to avoid write collisions\. The [*Mesh Middleware*]({{< relref "../../implementation-metapatterns/mesh.md#space-based-architecture" >}}) autoscales both the services and the associated data cache under load, granting nearly perfect scalability\. However, this architecture is costly because of the amount of traffic and CPU time spent on replicating the data between the *Mesh nodes*\.
+*Space\-Based Architecture* \(SBA\) duplicates the contents of a persistent database to a distributed in\-memory *cache* co\-located with the services managed by the *SBA*’s middleware\. That makes most data access operations very fast unless one needs to avoid write collisions\. The [*mesh middleware*]({{< relref "../../implementation-metapatterns/mesh.md#space-based-architecture" >}}) autoscales both the services and the associated data cache under load, granting nearly perfect scalability\. However, this architecture is costly because of the amount of traffic and CPU time spent on replicating the data between the *mesh nodes*\.
 
 <ins>Pros</ins>: 
 

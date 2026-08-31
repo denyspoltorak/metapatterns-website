@@ -11,7 +11,7 @@ images = ["/diagrams/Web/og/Favicon-plain.png"]
 
 The main drawback \(and benefit\) of [*Layers*]({{< relref "../../basic-metapatterns/layers.md" >}}) is that much or all of the business logic is kept together in one or two components\. That allows for easy debugging and fast development in the initial stages of the project but slows down and complicates work as the project [grows in size]({{< relref "../../analytics/architecture-and-product-life-cycle.md#youth-development-of-features--fragmented-architectures" >}})\. The only way for a growing project to continue evolving at a reasonable speed is to subdivide its business logic into several smaller, thus less [complex]({{< relref "../../foundations-of-software-architecture/modules-and-complexity.md" >}}), components that match subdomains \(*bounded contexts* \[[DDD]({{< relref "../../appendices/books-referenced.md#ddd" >}})\]\)\. There are several options for such a change with their applicability depending on the domain:
 
-- In a [*Sandwich*]({{< relref "../../extension-metapatterns/sandwich.md" >}}) the middle layer with the bulk of business logic is divided into [*Services*]({{< relref "../../basic-metapatterns/services.md" >}}), leaving the upper [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) and lower [*database*]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) layers intact for possible future evolutions\.
+- In a [*Sandwich*]({{< relref "../../extension-metapatterns/sandwich.md" >}}) the middle layer with the bulk of business logic is divided into [*Services*]({{< relref "../../basic-metapatterns/services.md" >}}), leaving the upper [*orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}}) and lower [*database*]({{< relref "../../extension-metapatterns/shared-repository.md#shared-database-integration-database-data-domain-database-of-service-based-architecture" >}}) layers intact for possible future evolutions\.
 - Sometimes the business logic can be represented as a set of directed graphs which is known as [*Event\-Driven Architecture*]({{< relref "../../basic-metapatterns/pipeline.md#choreographed-broker-topology-event-driven-architecture-eda-event-collaboration" >}})\.
 - If you are lucky, your domain is naturally a [*Top\-Down Hierarchy*]({{< relref "../../fragmented-metapatterns/hierarchy.md#top-down-hierarchy-orchestrator-of-orchestrators-presentation-abstraction-control-pac-hierarchical-model-view-controller-hmvc" >}})\.
 
@@ -47,13 +47,13 @@ It is very common for a system’s domain to comprise weakly interacting *bounde
 
 - Future changes in the overall structure of the domain will be harder to implement\.
 - System\-wide use cases become somewhat harder to debug as they span over many components\.
-- Performance will degrade as soon as the *Services* and their *Orchestrator* become distributed\.
+- Performance will degrade as soon as the services and their orchestrator become distributed\.
 
 
 <ins>Further steps</ins>:
 
-- Continue by subdividing the *Orchestrator* and *database*, turning the system into [*Orchestrated Three\-Layered Services*]({{< relref "../../fragmented-metapatterns/layered-services.md#orchestrated-three-layered-services" >}})\.
-- Divide the *Orchestrator* \(by type of client\) into [*Backends for Frontends*]({{< relref "../../fragmented-metapatterns/backends-for-frontends--bff-.md" >}})\.
+- Continue by subdividing the orchestrator and database, turning the system into [*Orchestrated Three\-Layered Services*]({{< relref "../../fragmented-metapatterns/layered-services.md#orchestrated-three-layered-services" >}})\.
+- Divide the orchestrator \(by type of client\) into [*Backends for Frontends*]({{< relref "../../fragmented-metapatterns/backends-for-frontends--bff-.md" >}})\.
 - Use multiple databases \([*Polyglot Persistence*]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md" >}})\)\.
 - Scale well with [*Space\-Based Architecture*]({{< relref "../../implementation-metapatterns/mesh.md#space-based-architecture" >}})\.
 
@@ -98,7 +98,7 @@ If your system features well\-defined and simple workflows for processing every 
 <ins>Further steps</ins>:
 
 - Add a [*Middleware*]({{< relref "../../extension-metapatterns/middleware.md" >}}) that supports scaling and failure recovery\.
-- Split the *Shared Database* by subdomain, yielding [*Choreographed Two\-Layered Services*]({{< relref "../../fragmented-metapatterns/layered-services.md#choreographed-two-layered-services" >}})\.
+- Split the shared database by subdomain, yielding [*Choreographed Two\-Layered Services*]({{< relref "../../fragmented-metapatterns/layered-services.md#choreographed-two-layered-services" >}})\.
 - Scale with [*Space\-Based Architecture*]({{< relref "../../implementation-metapatterns/mesh.md#space-based-architecture" >}})\.
 - Extract the logic of use cases into an [*Orchestrator*]({{< relref "../../extension-metapatterns/orchestrator.md" >}})\.
 

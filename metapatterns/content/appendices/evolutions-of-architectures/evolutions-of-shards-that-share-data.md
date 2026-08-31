@@ -48,7 +48,7 @@ In case a shard needs to access data owned by any other shard, the prerequisite 
 <ins>Cons</ins>: 
 
 - The database limits the system’s scalability and performance\.
-- The *Load Balancer* and *Shared Database* increase latency and are single points of failure\.
+- The load balancer and shared database increase latency and are single points of failure\.
 
 
 <ins>Further steps</ins>:
@@ -77,7 +77,7 @@ In case a shard needs to access data owned by any other shard, the prerequisite 
 
 <ins>Prerequisite</ins>: data collisions are acceptable\.
 
-*Space\-Based Architecture* is a *Mesh* of nodes which comprise the application and a cached subset of the system’s data\. A node broadcasts any changes to its data to other nodes, and it may request any data that it needs from the other nodes\. Collectively, the nodes of the *Mesh* keep the entire system’s data cached in memory\.
+*Space\-Based Architecture* is a *Mesh* of nodes which comprise the application and a cached subset of the system’s data\. A node broadcasts any changes to its data to other nodes, and it may request any data that it needs from the other nodes\. Collectively, the nodes of the mesh keep the entire system’s data cached in memory\.
 
 Though *Space\-Based Architecture* may provide several modes of action, including [single write / multiple read]({{< relref "../../fragmented-metapatterns/polyglot-persistence.md#read-only-replicas" >}}) replicas, it is most efficient when there is no write synchronization between its nodes, in which case data consistency is sacrificed for performance and scalability\.
 
@@ -125,7 +125,7 @@ This approach resembles [*Shared Kernel*](https://ddd-practitioners.com/home/glo
 
 <ins>Cons</ins>: 
 
-- The *Shared Database* increases latency and is the single point of failure\.
+- The shared database increases latency and is the single point of failure\.
 
 
 ## Split a service with the coupled data
